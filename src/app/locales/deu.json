@@ -10,5 +10,6 @@
   "practice": "Üben",
   "settingsTitle": "Einstellungen",
   "autoAdvance": "Automatisch weiter",
-  "autoAdvanceHint": "Nach der Antwort automatisch zur nächsten Aufgabe wechseln."
+  "autoAdvanceHint": "Nach der Antwort automatisch zur nächsten Aufgabe wechseln.",
+  "language": "Sprache"
 }

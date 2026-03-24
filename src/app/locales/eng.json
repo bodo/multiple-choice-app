@@ -10,5 +10,6 @@
   "practice": "Practice",
   "settingsTitle": "Settings",
   "autoAdvance": "Auto-advance",
-  "autoAdvanceHint": "Automatically move to the next question after answering."
+  "autoAdvanceHint": "Automatically move to the next question after answering.",
+  "language": "Language"
 }

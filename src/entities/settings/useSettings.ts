@@ -2,23 +2,41 @@ import { ref, watch } from 'vue'
 
 const STORAGE_KEY = 'bodo-mc-settings'
 
-function loadAutoAdvance(): boolean {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (raw === null) return true
-    return JSON.parse(raw)?.autoAdvance ?? true
-  } catch {
-    return true
-  }
+interface StoredSettings {
+  autoAdvance: boolean
+  language: string
 }
 
-// Module-level singleton — all callers share the same ref
-const autoAdvance = ref<boolean>(loadAutoAdvance())
+function load(): StoredSettings {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY)
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      return {
+        autoAdvance: parsed.autoAdvance ?? true,
+        language: parsed.language ?? 'eng',
+      }
+    }
+  } catch { /* ignore */ }
+  return { autoAdvance: true, language: 'eng' }
+}
 
-watch(autoAdvance, (val) => {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify({ autoAdvance: val }))
-})
+function save() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({
+    autoAdvance: autoAdvance.value,
+    language: language.value,
+  }))
+}
+
+const stored = load()
+
+// Module-level singletons — all callers share the same refs
+const autoAdvance = ref<boolean>(stored.autoAdvance)
+const language = ref<string>(stored.language)
+
+watch(autoAdvance, save)
+watch(language, save)
 
 export function useSettings() {
-  return { autoAdvance }
+  return { autoAdvance, language }
 }
