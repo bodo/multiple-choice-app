@@ -1,6 +1,7 @@
 import { ref, computed, watch } from 'vue'
 import type { Ref } from 'vue'
 import type { Exercise, AnswerResult } from '../../entities/exercise/exercise'
+import { useSettings } from '../../entities/settings/useSettings'
 import { useAutoAdvance, ADVANCE_DELAY_CORRECT, ADVANCE_DELAY_INCORRECT } from './useAutoAdvance'
 
 export type FlowPhase = 'loading' | 'answering' | 'submitted' | 'advancing'
@@ -10,14 +11,17 @@ export function useExerciseFlow(exercises: Ref<Exercise[]>) {
   const currentIndex = ref(0)
   const lastResult = ref<AnswerResult | null>(null)
   const { schedule } = useAutoAdvance()
+  const { autoAdvance } = useSettings()
 
   const currentExercise = computed(() => exercises.value[currentIndex.value] ?? null)
 
   function submitAnswer(result: AnswerResult) {
     lastResult.value = result
     phase.value = 'submitted'
-    const delay = result.isCorrect ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_INCORRECT
-    schedule(delay, advance)
+    if (autoAdvance.value) {
+      const delay = result.isCorrect ? ADVANCE_DELAY_CORRECT : ADVANCE_DELAY_INCORRECT
+      schedule(delay, advance)
+    }
   }
 
   function advance() {

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { marked } from 'marked'
 
-const props = defineProps<{ content: string }>()
+const props = defineProps<{ content: string; large?: boolean }>()
 
 const html = computed(() => marked.parse(props.content) as string)
 </script>
@@ -10,7 +10,7 @@ const html = computed(() => marked.parse(props.content) as string)
 <template>
   <!-- eslint-disable vue/no-v-html -->
   <div
-    class="prose prose-sm max-w-none"
+    :class="large ? 'prose prose-xl max-w-none' : 'prose prose-sm max-w-none'"
     v-html="html"
   />
   <!-- eslint-enable vue/no-v-html -->

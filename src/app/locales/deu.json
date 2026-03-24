@@ -1,9 +1,14 @@
 {
+  "appName": "Übungen",
   "submit": "Abgeben",
   "next": "Weiter",
   "correct": "Richtig",
   "incorrect": "Falsch",
   "loading": "Übungen werden geladen…",
   "noExercises": "Keine Übungen gefunden.",
-  "yourAnswer": "Deine Antwort"
+  "yourAnswer": "Deine Antwort",
+  "practice": "Üben",
+  "settingsTitle": "Einstellungen",
+  "autoAdvance": "Automatisch weiter",
+  "autoAdvanceHint": "Nach der Antwort automatisch zur nächsten Aufgabe wechseln."
 }

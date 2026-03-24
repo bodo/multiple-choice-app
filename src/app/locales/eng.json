@@ -1,9 +1,14 @@
 {
+  "appName": "Practice",
   "submit": "Submit",
   "next": "Next",
   "correct": "Correct",
   "incorrect": "Incorrect",
   "loading": "Loading exercises…",
   "noExercises": "No exercises found.",
-  "yourAnswer": "Your answer"
+  "yourAnswer": "Your answer",
+  "practice": "Practice",
+  "settingsTitle": "Settings",
+  "autoAdvance": "Auto-advance",
+  "autoAdvanceHint": "Automatically move to the next question after answering."
 }
