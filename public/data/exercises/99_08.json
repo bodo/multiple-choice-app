@@ -1,11 +1,11 @@
 {
     "instruction": "Welche der nachstehenden Aussagen über den Betriebsrat treffen zu?",
     "answerOptions": [
-        "    1. Der Betriebsrat setzt sich aus Arbeitnehmern und außerbetrieblichen Beratern (z.B. Gewerkschaftsfunktionären) zusammen.",
-        "    2. Die Bildung eines Betriebsrats ist von der Zustimmung des Arbeitgebers abhängig. ",
-        "    3. Der Betriebsrat kann laut Betriebsverfassungsgesetz in allen Betrieben, die ständig mindestens fünf Arbeitnehmer beschäftigen, gewählt werden. ",
-        "    4. Auch jugendliche Arbeitnehmer haben das aktive Wahlrecht bei Betriebsratswahlen. ",
-        "    5. Die regelmäßige Amtszeit eines Betriebsrats beträgt für eine Wahlperiode vier Jahre."
+        "1. Der Betriebsrat setzt sich aus Arbeitnehmern und außerbetrieblichen Beratern (z.B. Gewerkschaftsfunktionären) zusammen.",
+        "2. Die Bildung eines Betriebsrats ist von der Zustimmung des Arbeitgebers abhängig. ",
+        "3. Der Betriebsrat kann laut Betriebsverfassungsgesetz in allen Betrieben, die ständig mindestens fünf Arbeitnehmer beschäftigen, gewählt werden. ",
+        "4. Auch jugendliche Arbeitnehmer haben das aktive Wahlrecht bei Betriebsratswahlen. ",
+        "5. Die regelmäßige Amtszeit eines Betriebsrats beträgt für eine Wahlperiode vier Jahre."
     ],
     "correct": [0, 1, 4],
     "inputMode": "MULTIPLE_CHOICE"

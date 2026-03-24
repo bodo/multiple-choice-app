@@ -16,19 +16,21 @@ const { t } = useI18n()
 
 const selected = ref<number | null>(null)
 const isInteractive = computed(() => props.phase === 'answering')
+const showSubmit = computed(() => props.exercise.submitButton !== false)
 
 watch(() => props.exercise, () => { selected.value = null })
-const showSubmit = computed(() => props.exercise.submitButton !== false)
 
 function optionClass(idx: number): string {
   if (isInteractive.value) {
-    return selected.value === idx ? 'btn-primary' : ''
+    return selected.value === idx
+      ? 'border-blue-600 bg-blue-50 text-blue-900 shadow-sm'
+      : 'border-gray-300 bg-white text-gray-800 shadow-sm hover:border-gray-400 hover:bg-gray-50'
   }
   const correctIdx = props.exercise.correct as number
-  if (idx === correctIdx && selected.value === idx) return 'btn-success'
-  if (idx !== correctIdx && selected.value === idx) return 'btn-error'
-  if (idx === correctIdx && selected.value !== idx) return 'btn-warning'
-  return ''
+  if (idx === correctIdx && selected.value === idx) return 'border-green-600 bg-green-100 text-green-900'
+  if (idx !== correctIdx && selected.value === idx) return 'border-red-500 bg-red-100 text-red-900'
+  if (idx === correctIdx) return 'border-amber-400 bg-amber-50 text-amber-800'
+  return 'border-gray-200 bg-gray-50 text-gray-400'
 }
 
 function select(idx: number) {
@@ -49,16 +51,19 @@ function submit() {
     <button
       v-for="(option, idx) in exercise.answerOptions"
       :key="idx"
-      class="btn whitespace-normal h-auto text-left justify-start"
+      type="button"
+      class="w-full rounded-lg border-2 px-4 py-3 text-left transition-colors duration-150 break-words focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1"
       :class="optionClass(idx)"
       :disabled="!isInteractive"
+      :aria-pressed="selected === idx"
       @click="select(idx)"
     >
       <MarkdownRenderer :content="option" />
     </button>
     <button
       v-if="showSubmit && isInteractive"
-      class="btn btn-primary self-end mt-2"
+      type="button"
+      class="mt-2 rounded-lg border-2 border-blue-600 bg-blue-600 px-6 py-2 font-medium text-white transition-colors hover:bg-blue-700 hover:border-blue-700 disabled:opacity-40 disabled:cursor-not-allowed"
       :disabled="selected === null"
       @click="submit"
     >
