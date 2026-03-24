@@ -1,0 +1,15 @@
+{
+    "images": [
+        "2012_2.png"
+    ],
+    "inputMode": "SINGLE_CHOICE",
+    "submitButton": false,
+    "answerOptions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    ],
+    "correct": 3
+}

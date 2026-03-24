@@ -1,0 +1,7 @@
+{
+    "images": ["2012_25.png"],
+    "inputMode": "NUMBER",
+    "answerOptions": ["1", "2", "3", "4", "5"],
+    "correct": 250000,
+    "instruction": "Beantworten Sie nur Aufgabe (a)."
+}

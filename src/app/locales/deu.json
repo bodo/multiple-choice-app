@@ -1,0 +1,9 @@
+{
+  "submit": "Abgeben",
+  "next": "Weiter",
+  "correct": "Richtig",
+  "incorrect": "Falsch",
+  "loading": "Übungen werden geladen…",
+  "noExercises": "Keine Übungen gefunden.",
+  "yourAnswer": "Deine Antwort"
+}

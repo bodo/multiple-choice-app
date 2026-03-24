@@ -1,0 +1,9 @@
+{
+    "images": ["2012_1.png"],
+    "inputMode": "SINGLE_CHOICE",
+    "submitButton": true,
+    "answerOptions": ["1", "2", "3", "4", "5"],
+    "correct": 3,
+    "adminComment": "Thema Arbeitsvertrag",
+    "adminTags": ["check-legal-validity"]
+}
