@@ -30,15 +30,15 @@ function toggle(idx: number) {
 function rowClass(idx: number): string {
   if (isInteractive.value) {
     return selected.value.has(idx)
-      ? 'border-blue-600 bg-blue-50 shadow-sm'
-      : 'border-gray-300 bg-white shadow-sm hover:border-gray-400 hover:bg-gray-50'
+      ? 'border-primary bg-primary/10 shadow-sm'
+      : 'border-base-300 bg-base-100 shadow-sm hover:border-base-content/30 hover:bg-base-200'
   }
   const isCorrect = correctSet.value.has(idx)
   const isSelected = selected.value.has(idx)
-  if (isCorrect && isSelected) return 'border-green-600 bg-green-100'
-  if (!isCorrect && isSelected) return 'border-red-500 bg-red-100'
-  if (isCorrect) return 'border-amber-400 bg-amber-50'
-  return 'border-gray-200 bg-gray-50 opacity-60'
+  if (isCorrect && isSelected) return 'border-success bg-success/10'
+  if (!isCorrect && isSelected) return 'border-error bg-error/10'
+  if (isCorrect) return 'border-warning bg-warning/10'
+  return 'border-base-300 bg-base-200 opacity-60'
 }
 
 function submit() {
@@ -66,7 +66,7 @@ function submit() {
       </div>
       <input
         type="checkbox"
-        class="mt-1 shrink-0 h-4 w-4 rounded border-gray-400 accent-blue-600"
+        class="mt-1 shrink-0 h-4 w-4 rounded border-base-300 accent-primary"
         :checked="selected.has(idx)"
         :disabled="!isInteractive"
         tabindex="-1"
@@ -75,7 +75,7 @@ function submit() {
     </div>
     <button
       type="button"
-      class="mt-2 rounded-lg border-2 border-blue-600 bg-blue-600 px-6 py-2 font-medium text-white transition-colors hover:bg-blue-700 hover:border-blue-700 disabled:opacity-40 disabled:cursor-not-allowed"
+      class="btn btn-primary mt-2"
       :disabled="!isInteractive || selected.size === 0"
       @click="submit"
     >

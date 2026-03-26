@@ -24,6 +24,7 @@
     "vue-router": "^5.0.4"
   },
   "devDependencies": {
+    "@abschluss/theme": "file:../packages/theme-abschluss",
     "@eslint/js": "^10.0.1",
     "@intlify/eslint-plugin-vue-i18n": "^4.3.0",
     "@tailwindcss/typography": "^0.5.19",

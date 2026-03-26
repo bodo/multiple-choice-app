@@ -1,6 +1,21 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { BookOpen, Settings } from 'lucide-vue-next'
+import { BookOpen, Settings, Sun, Moon } from 'lucide-vue-next'
+import { useSettings } from '../entities/settings/useSettings'
+
+const { theme } = useSettings()
+
+const isDark = computed(() => {
+  if (theme.value === 'auto') {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+  return theme.value === 'abschluss-dark'
+})
+
+function toggleTheme() {
+  theme.value = isDark.value ? 'abschluss-light' : 'abschluss-dark'
+}
 </script>
 
 <template>
@@ -21,5 +36,15 @@ import { BookOpen, Settings } from 'lucide-vue-next'
       <Settings :size="16" />
       {{ $t('settingsTitle') }}
     </RouterLink>
+    <div class="flex-1" />
+    <button
+      type="button"
+      class="p-2 rounded-lg text-base-content/60 hover:text-base-content hover:bg-base-200 transition-colors"
+      :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+      @click="toggleTheme"
+    >
+      <Moon v-if="!isDark" :size="16" />
+      <Sun v-else :size="16" />
+    </button>
   </header>
 </template>
