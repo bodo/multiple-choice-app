@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../../entities/exercise/exercise'
 import type { FlowPhase } from '../useExerciseFlow'
@@ -17,6 +17,14 @@ const { t } = useI18n()
 const selected = ref<Set<number>>(new Set())
 const isInteractive = computed(() => props.phase === 'answering')
 const correctSet = computed(() => new Set(props.exercise.correct as number[]))
+const optionCount = computed(() => props.exercise.answerOptions?.length ?? 0)
+const selectedDisplay = computed(() => {
+  if (selected.value.size === 0) return ''
+  return Array.from(selected.value)
+    .sort((a, b) => a - b)
+    .map(i => i + 1)
+    .join(', ')
+})
 
 watch(() => props.exercise, () => { selected.value = new Set() })
 
@@ -48,10 +56,39 @@ function submit() {
     sel.length === correct.length && sel.every((i) => correctSet.value.has(i))
   emit('submitted', { isCorrect, selectedIndices: sel })
 }
+
+function handleKeyDown(e: KeyboardEvent) {
+  if (!isInteractive.value) return
+
+  const num = parseInt(e.key)
+  // Number 1-4: toggle option
+  if (num >= 1 && num <= optionCount.value) {
+    e.preventDefault()
+    toggle(num - 1)
+    return
+  }
+
+  // Enter or Space: submit
+  if ((e.key === 'Enter' || e.key === ' ') && selected.value.size > 0) {
+    e.preventDefault()
+    submit()
+    return
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyDown)
+})
 </script>
 
 <template>
   <div class="flex flex-col gap-2 items-end w-full">
+    <!-- Selected display -->
+    <div v-if="selected.size > 0 && isInteractive" class="w-full text-sm font-medium text-primary">
+      Selected: {{ selectedDisplay }}
+    </div>
+
+    <!-- Options -->
     <div
       v-for="(option, idx) in exercise.answerOptions"
       :key="idx"
@@ -59,8 +96,10 @@ function submit() {
       :class="[rowClass(idx), isInteractive ? 'cursor-pointer' : 'cursor-default']"
       :role="isInteractive ? 'checkbox' : undefined"
       :aria-checked="selected.has(idx)"
+      :aria-label="`Option ${idx + 1} of ${optionCount}`"
       @click="toggle(idx)"
     >
+      <span class="font-semibold text-primary mt-0.5" aria-label="keyboard shortcut">[{{ idx + 1 }}]</span>
       <div class="flex-1 min-w-0 break-words">
         <MarkdownRenderer :content="option" />
       </div>
@@ -73,10 +112,13 @@ function submit() {
         @click.stop="toggle(idx)"
       >
     </div>
+
+    <!-- Submit button -->
     <button
       type="button"
       class="btn btn-primary mt-2"
       :disabled="!isInteractive || selected.size === 0"
+      aria-label="Submit answer (press Enter)"
       @click="submit"
     >
       {{ t('submit') }}

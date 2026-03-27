@@ -14,14 +14,30 @@ const emit = defineEmits<{ submitted: [result: AnswerResult] }>()
 const { t } = useI18n()
 
 const input = ref<number | null>(null)
+const inputEl = ref<HTMLInputElement>()
 const isInteractive = computed(() => props.phase === 'answering')
 
 watch(() => props.exercise, () => { input.value = null })
+
+// Auto-focus when entering answering phase
+watch(isInteractive, (interactive) => {
+  if (interactive) {
+    setTimeout(() => inputEl.value?.focus(), 0)
+  }
+})
 
 function submit() {
   if (input.value === null) return
   const isCorrect = input.value === (props.exercise.correct as number)
   emit('submitted', { isCorrect, submittedValue: String(input.value) })
+}
+
+function handleKeyDown(e: KeyboardEvent) {
+  if (!isInteractive.value) return
+  if (e.key === 'Enter') {
+    e.preventDefault()
+    submit()
+  }
 }
 </script>
 
@@ -44,16 +60,21 @@ function submit() {
     </template>
     <template v-else>
       <input
-        v-model="input"
+        ref="inputEl"
+        v-model.number="input"
         type="number"
         class="input input-bordered w-full"
         :placeholder="t('yourAnswer')"
         :disabled="!isInteractive"
+        inputmode="numeric"
+        :aria-label="`Number input for answer`"
         @keyup.enter="submit"
+        @keydown="handleKeyDown"
       >
       <button
         class="btn btn-primary self-end"
         :disabled="!isInteractive || input === null"
+        aria-label="Submit answer (or press Enter)"
         @click="submit"
       >
         {{ t('submit') }}

@@ -15,9 +15,17 @@ const emit = defineEmits<{ submitted: [result: AnswerResult] }>()
 const { t } = useI18n()
 
 const input = ref('')
+const inputEl = ref<HTMLInputElement>()
 const isInteractive = computed(() => props.phase === 'answering')
 
 watch(() => props.exercise, () => { input.value = '' })
+
+// Auto-focus when entering answering phase
+watch(isInteractive, (interactive) => {
+  if (interactive) {
+    setTimeout(() => inputEl.value?.focus(), 0)
+  }
+})
 
 function checkCorrect(value: string): boolean {
   const correct = props.exercise.correct as string
@@ -31,6 +39,14 @@ function submit() {
   if (!input.value.trim()) return
   const isCorrect = checkCorrect(input.value)
   emit('submitted', { isCorrect, submittedValue: input.value })
+}
+
+function handleKeyDown(e: KeyboardEvent) {
+  if (!isInteractive.value) return
+  if (e.key === 'Enter') {
+    e.preventDefault()
+    submit()
+  }
 }
 </script>
 
@@ -53,16 +69,20 @@ function submit() {
     </template>
     <template v-else>
       <input
+        ref="inputEl"
         v-model="input"
         type="text"
         class="input input-bordered w-full"
         :placeholder="t('yourAnswer')"
         :disabled="!isInteractive"
+        :aria-label="`Text input for answer`"
         @keyup.enter="submit"
+        @keydown="handleKeyDown"
       >
       <button
         class="btn btn-primary self-end"
         :disabled="!isInteractive || !input.trim()"
+        aria-label="Submit answer (or press Enter)"
         @click="submit"
       >
         {{ t('submit') }}

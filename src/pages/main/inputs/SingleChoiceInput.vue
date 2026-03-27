@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../../entities/exercise/exercise'
 import type { FlowPhase } from '../useExerciseFlow'
@@ -17,6 +17,7 @@ const { t } = useI18n()
 const selected = ref<number | null>(null)
 const isInteractive = computed(() => props.phase === 'answering')
 const showSubmit = computed(() => props.exercise.submitButton !== false)
+const optionCount = computed(() => props.exercise.answerOptions?.length ?? 0)
 
 watch(() => props.exercise, () => { selected.value = null })
 
@@ -35,6 +36,11 @@ function optionClass(idx: number): string {
 
 function select(idx: number) {
   if (!isInteractive.value) return
+  // Undo: if clicking same option, deselect
+  if (selected.value === idx) {
+    selected.value = null
+    return
+  }
   selected.value = idx
   if (!showSubmit.value) submit()
 }
@@ -44,6 +50,29 @@ function submit() {
   const isCorrect = selected.value === (props.exercise.correct as number)
   emit('submitted', { isCorrect, selectedIndices: [selected.value] })
 }
+
+function handleKeyDown(e: KeyboardEvent) {
+  if (!isInteractive.value) return
+
+  const num = parseInt(e.key)
+  // Number 1-4: select/undo
+  if (num >= 1 && num <= optionCount.value) {
+    e.preventDefault()
+    select(num - 1)
+    return
+  }
+
+  // Enter or Space: submit
+  if ((e.key === 'Enter' || e.key === ' ') && showSubmit.value) {
+    e.preventDefault()
+    submit()
+    return
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyDown)
+})
 </script>
 
 <template>
@@ -56,8 +85,10 @@ function submit() {
       :class="optionClass(idx)"
       :disabled="!isInteractive"
       :aria-pressed="selected === idx"
+      :aria-label="`Option ${idx + 1} of ${optionCount}`"
       @click="select(idx)"
     >
+      <span class="inline-block mr-2 font-semibold text-primary" aria-label="keyboard shortcut">[{{ idx + 1 }}]</span>
       <MarkdownRenderer :content="option" />
     </button>
     <button
@@ -65,6 +96,7 @@ function submit() {
       type="button"
       class="btn btn-primary mt-2"
       :disabled="selected === null"
+      aria-label="Submit answer (press Enter)"
       @click="submit"
     >
       {{ t('submit') }}
