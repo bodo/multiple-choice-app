@@ -17,5 +17,7 @@
   "autoAdvanceHint": "Automatically move to the next question after answering.",
   "timeoutCorrect": "Correct answer delay",
   "timeoutIncorrect": "Wrong answer delay",
-  "language": "Language"
+  "language": "Language",
+  "question": "Question",
+  "of": "of"
 }

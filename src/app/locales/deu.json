@@ -17,5 +17,7 @@
   "autoAdvanceHint": "Nach der Antwort automatisch zur nächsten Aufgabe wechseln.",
   "timeoutCorrect": "Verzögerung korrekte Antwort",
   "timeoutIncorrect": "Verzögerung falsche Antwort",
-  "language": "Sprache"
+  "language": "Sprache",
+  "question": "Aufgabe",
+  "of": "von"
 }

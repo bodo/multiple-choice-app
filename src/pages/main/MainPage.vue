@@ -7,7 +7,7 @@ import AnswerSection from './AnswerSection.vue'
 
 const { t } = useI18n()
 const { exercises, isLoading } = useExercises()
-const { phase, currentExercise, lastResult, submitAnswer, advance } = useExerciseFlow(exercises)
+const { phase, currentExercise, currentIndex, totalExercises, lastResult, submitAnswer, advance } = useExerciseFlow(exercises)
 </script>
 
 <template>
@@ -23,6 +23,15 @@ const { phase, currentExercise, lastResult, submitAnswer, advance } = useExercis
     v-else
     class="flex flex-col landscape:flex-row h-full overflow-hidden"
   >
+    <!-- Progress bar (above both columns in portrait, above left column in landscape) -->
+    <div class="w-full landscape:w-1/2 px-4 pt-4 pb-2 flex-shrink-0">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-sm font-medium text-base-content/70">{{ t('question') }} {{ currentIndex.value + 1 }} {{ t('of') }} {{ totalExercises.value }}</span>
+        <span class="text-xs text-base-content/50">{{ Math.round((currentIndex.value + 1) / totalExercises.value * 100) }}%</span>
+      </div>
+      <progress class="progress progress-primary w-full" :value="currentIndex.value + 1" :max="totalExercises.value" />
+    </div>
+
     <div class="landscape:w-1/2 overflow-y-auto p-4">
       <QuestionSection :exercise="currentExercise" />
     </div>

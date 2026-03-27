@@ -37,5 +37,7 @@ export function useExerciseFlow(exercises: Ref<Exercise[]>) {
     }
   })
 
-  return { phase, currentExercise, lastResult, submitAnswer, advance }
+  const totalExercises = computed(() => exercises.value.length)
+
+  return { phase, currentExercise, currentIndex, totalExercises, lastResult, submitAnswer, advance }
 }
