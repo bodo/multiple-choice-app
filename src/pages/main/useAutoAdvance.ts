@@ -1,7 +1,7 @@
 import { onUnmounted } from 'vue'
 
-export const ADVANCE_DELAY_CORRECT = 500
-export const ADVANCE_DELAY_INCORRECT = 1000
+export const ADVANCE_DELAY_CORRECT = 1500
+export const ADVANCE_DELAY_INCORRECT = 3000
 
 export function useAutoAdvance() {
   let timer: ReturnType<typeof setTimeout> | null = null

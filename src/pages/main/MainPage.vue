@@ -2,14 +2,12 @@
 import { useI18n } from 'vue-i18n'
 import { useExercises } from '../../entities/exercise/useExercises'
 import { useExerciseFlow } from './useExerciseFlow'
-import { useSettings } from '../../entities/settings/useSettings'
 import QuestionSection from './QuestionSection.vue'
 import AnswerSection from './AnswerSection.vue'
 
 const { t } = useI18n()
 const { exercises, isLoading } = useExercises()
 const { phase, currentExercise, lastResult, submitAnswer, advance } = useExerciseFlow(exercises)
-const { autoAdvance } = useSettings()
 </script>
 
 <template>
@@ -36,9 +34,9 @@ const { autoAdvance } = useSettings()
         @submitted="submitAnswer"
       />
       <button
-        v-if="phase === 'submitted' && !autoAdvance"
+        v-if="phase === 'submitted'"
         type="button"
-        class="rounded-lg border-2 border-blue-600 bg-blue-600 px-6 py-2 font-medium text-white transition-colors hover:bg-blue-700 hover:border-blue-700"
+        class="btn btn-primary"
         @click="advance"
       >
         {{ t('next') }}
