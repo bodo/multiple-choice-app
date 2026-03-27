@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../../entities/exercise/exercise'
 import type { FlowPhase } from '../useExerciseFlow'
@@ -10,19 +10,24 @@ const props = defineProps<{
   result: AnswerResult | null
 }>()
 
-const emit = defineEmits<{ submitted: [result: AnswerResult] }>()
+const emit = defineEmits<{
+  submitted: [result: AnswerResult]
+  advance: []
+}>()
 const { t } = useI18n()
 
 const input = ref<number | null>(null)
 const inputEl = ref<HTMLInputElement>()
 const isInteractive = computed(() => props.phase === 'answering')
+const isSubmitted = computed(() => props.phase === 'submitted')
 
 watch(() => props.exercise, () => { input.value = null })
 
 // Auto-focus when entering answering phase
-watch(isInteractive, (interactive) => {
+watch(isInteractive, async (interactive) => {
   if (interactive) {
-    setTimeout(() => inputEl.value?.focus(), 0)
+    await nextTick()
+    inputEl.value?.focus()
   }
 })
 
@@ -33,10 +38,14 @@ function submit() {
 }
 
 function handleKeyDown(e: KeyboardEvent) {
-  if (!isInteractive.value) return
   if (e.key === 'Enter') {
     e.preventDefault()
-    submit()
+    if (isInteractive.value && input.value !== null) {
+      submit()
+    } else if (isSubmitted.value) {
+      // After submit, allow pressing Enter to continue
+      emit('advance')
+    }
   }
 }
 </script>
@@ -68,7 +77,6 @@ function handleKeyDown(e: KeyboardEvent) {
         :disabled="!isInteractive"
         inputmode="numeric"
         :aria-label="`Number input for answer`"
-        @keyup.enter="submit"
         @keydown="handleKeyDown"
       >
       <button

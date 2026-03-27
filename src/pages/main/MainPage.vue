@@ -32,6 +32,7 @@ const { phase, currentExercise, lastResult, submitAnswer, advance } = useExercis
         :phase="phase"
         :result="lastResult"
         @submitted="submitAnswer"
+        @advance="advance"
       />
       <button
         v-if="phase === 'submitted'"

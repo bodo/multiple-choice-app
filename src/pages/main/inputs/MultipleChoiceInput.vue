@@ -11,7 +11,10 @@ const props = defineProps<{
   result: AnswerResult | null
 }>()
 
-const emit = defineEmits<{ submitted: [result: AnswerResult] }>()
+const emit = defineEmits<{
+  submitted: [result: AnswerResult]
+  advance: []
+}>()
 const { t } = useI18n()
 
 const selected = ref<Set<number>>(new Set())
@@ -58,21 +61,28 @@ function submit() {
 }
 
 function handleKeyDown(e: KeyboardEvent) {
-  if (!isInteractive.value) return
+  if (!isInteractive.value && props.phase !== 'submitted') return
 
   const num = parseInt(e.key)
-  // Number 1-4: toggle option
-  if (num >= 1 && num <= optionCount.value) {
+  // Number 1-4: toggle option (only during answering)
+  if (isInteractive.value && num >= 1 && num <= optionCount.value) {
     e.preventDefault()
     toggle(num - 1)
     return
   }
 
-  // Enter or Space: submit
-  if ((e.key === 'Enter' || e.key === ' ') && selected.value.size > 0) {
-    e.preventDefault()
-    submit()
-    return
+  // Enter or Space: submit (while answering) or advance (after submitted)
+  if (e.key === 'Enter' || e.key === ' ') {
+    if (isInteractive.value && selected.value.size > 0) {
+      e.preventDefault()
+      submit()
+      return
+    }
+    if (props.phase === 'submitted') {
+      e.preventDefault()
+      emit('advance')
+      return
+    }
   }
 }
 

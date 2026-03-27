@@ -13,7 +13,10 @@ const props = defineProps<{
   result: AnswerResult | null
 }>()
 
-const emit = defineEmits<{ submitted: [result: AnswerResult] }>()
+const emit = defineEmits<{
+  submitted: [result: AnswerResult]
+  advance: []
+}>()
 
 const inputComponents: Record<string, Component> = {
   SINGLE_CHOICE: SingleChoiceInput,
@@ -30,5 +33,6 @@ const inputComponents: Record<string, Component> = {
     :phase="props.phase"
     :result="props.result"
     @submitted="emit('submitted', $event)"
+    @advance="emit('advance')"
   />
 </template>
