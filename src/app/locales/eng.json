@@ -9,7 +9,13 @@
   "yourAnswer": "Your answer",
   "practice": "Practice",
   "settingsTitle": "Settings",
+  "mode": "Mode",
+  "trainMode": "Train",
+  "examMode": "Exam",
+  "examModeInfo": "Exam mode enables auto-advance and timing constraints.",
   "autoAdvance": "Auto-advance",
   "autoAdvanceHint": "Automatically move to the next question after answering.",
+  "timeoutCorrect": "Correct answer delay",
+  "timeoutIncorrect": "Wrong answer delay",
   "language": "Language"
 }

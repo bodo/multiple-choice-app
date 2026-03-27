@@ -9,7 +9,13 @@
   "yourAnswer": "Deine Antwort",
   "practice": "Üben",
   "settingsTitle": "Einstellungen",
+  "mode": "Modus",
+  "trainMode": "Trainieren",
+  "examMode": "Examen",
+  "examModeInfo": "Examen-Modus aktiviert Auto-Weiter und Zeitvorgaben.",
   "autoAdvance": "Automatisch weiter",
   "autoAdvanceHint": "Nach der Antwort automatisch zur nächsten Aufgabe wechseln.",
+  "timeoutCorrect": "Verzögerung korrekte Antwort",
+  "timeoutIncorrect": "Verzögerung falsche Antwort",
   "language": "Sprache"
 }
