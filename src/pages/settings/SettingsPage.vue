@@ -17,14 +17,6 @@ const modes = [
 ]
 
 const autoAdvanceDisabled = computed(() => mode.value === 'exam')
-
-function incrementTimeout(ref: any, max: number = 5000) {
-  ref.value = Math.min(ref.value + 250, max)
-}
-
-function decrementTimeout(ref: any, min: number = 250) {
-  ref.value = Math.max(ref.value - 250, min)
-}
 </script>
 
 <template>
@@ -78,55 +70,43 @@ function decrementTimeout(ref: any, min: number = 250) {
     <!-- Timeout Settings (only show if auto advance enabled) -->
     <template v-if="autoAdvance">
       <!-- Correct Answer Timeout -->
-      <div class="flex flex-col gap-2">
-        <p class="font-medium">
-          {{ t('timeoutCorrect') }}
-        </p>
-        <p class="text-sm text-base-content/60">
-          {{ (timeoutCorrect / 1000).toFixed(1) }}s
-        </p>
-        <div class="flex gap-2">
-          <button
-            type="button"
-            class="btn btn-sm btn-outline flex-1"
-            @click="decrementTimeout(timeoutCorrect)"
-          >
-            −
-          </button>
-          <button
-            type="button"
-            class="btn btn-sm btn-outline flex-1"
-            @click="incrementTimeout(timeoutCorrect)"
-          >
-            +
-          </button>
+      <div class="flex flex-col gap-3">
+        <div class="flex justify-between items-baseline">
+          <p class="font-medium">
+            {{ t('timeoutCorrect') }}
+          </p>
+          <p class="text-sm font-semibold text-primary">
+            {{ (timeoutCorrect / 1000).toFixed(1) }}s
+          </p>
         </div>
+        <input
+          v-model.number="timeoutCorrect"
+          type="range"
+          min="500"
+          max="10000"
+          step="500"
+          class="range range-primary w-full"
+        >
       </div>
 
       <!-- Incorrect Answer Timeout -->
-      <div class="flex flex-col gap-2">
-        <p class="font-medium">
-          {{ t('timeoutIncorrect') }}
-        </p>
-        <p class="text-sm text-base-content/60">
-          {{ (timeoutIncorrect / 1000).toFixed(1) }}s
-        </p>
-        <div class="flex gap-2">
-          <button
-            type="button"
-            class="btn btn-sm btn-outline flex-1"
-            @click="decrementTimeout(timeoutIncorrect)"
-          >
-            −
-          </button>
-          <button
-            type="button"
-            class="btn btn-sm btn-outline flex-1"
-            @click="incrementTimeout(timeoutIncorrect)"
-          >
-            +
-          </button>
+      <div class="flex flex-col gap-3">
+        <div class="flex justify-between items-baseline">
+          <p class="font-medium">
+            {{ t('timeoutIncorrect') }}
+          </p>
+          <p class="text-sm font-semibold text-primary">
+            {{ (timeoutIncorrect / 1000).toFixed(1) }}s
+          </p>
         </div>
+        <input
+          v-model.number="timeoutIncorrect"
+          type="range"
+          min="500"
+          max="10000"
+          step="500"
+          class="range range-primary w-full"
+        >
       </div>
     </template>
 
