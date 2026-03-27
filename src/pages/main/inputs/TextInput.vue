@@ -28,7 +28,9 @@ watch(() => props.exercise, () => { input.value = '' })
 watch(isInteractive, async (interactive) => {
   if (interactive) {
     await nextTick()
+    await new Promise(resolve => requestAnimationFrame(resolve))
     inputEl.value?.focus()
+    inputEl.value?.select()
   }
 })
 
@@ -52,7 +54,6 @@ function handleKeyDown(e: KeyboardEvent) {
     if (isInteractive.value && input.value.trim()) {
       submit()
     } else if (isSubmitted.value) {
-      // After submit, allow pressing Enter to continue
       emit('advance')
     }
   }
@@ -84,6 +85,7 @@ function handleKeyDown(e: KeyboardEvent) {
         class="input input-bordered w-full"
         :placeholder="t('yourAnswer')"
         :disabled="!isInteractive"
+        :autofocus="isInteractive"
         :aria-label="`Text input for answer`"
         @keydown="handleKeyDown"
       >
