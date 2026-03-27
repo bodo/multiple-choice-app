@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch, nextTick } from 'vue'
+import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../../entities/exercise/exercise'
 import type { FlowPhase } from '../useExerciseFlow'
@@ -47,8 +47,19 @@ function handleKeyDown(e: KeyboardEvent) {
     } else if (isSubmitted.value) {
       emit('advance')
     }
+  } else if (e.key === 'Escape' && isSubmitted.value) {
+    e.preventDefault()
+    emit('advance')
   }
 }
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyDown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeyDown)
+})
 </script>
 
 <template>
@@ -79,7 +90,6 @@ function handleKeyDown(e: KeyboardEvent) {
         :autofocus="isInteractive"
         inputmode="numeric"
         :aria-label="`Number input for answer`"
-        @keydown="handleKeyDown"
       >
       <button
         class="btn btn-primary self-end"
