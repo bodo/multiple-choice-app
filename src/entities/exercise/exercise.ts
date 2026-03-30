@@ -1,6 +1,7 @@
 export type InputMode = 'SINGLE_CHOICE' | 'MULTIPLE_CHOICE' | 'TEXT' | 'NUMBER'
 
 export interface Exercise {
+  id: string
   inputMode: InputMode
   correct: number | number[] | string
   instruction?: string
@@ -15,6 +16,7 @@ export interface Exercise {
 
 export interface AnswerResult {
   isCorrect: boolean
+  isCloseMatch?: boolean
   selectedIndices?: number[]
   submittedValue?: string
 }

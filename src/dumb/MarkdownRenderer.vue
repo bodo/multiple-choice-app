@@ -2,6 +2,8 @@
 import { computed } from 'vue'
 import { marked } from 'marked'
 
+marked.setOptions({ breaks: true })
+
 const props = defineProps<{ content: string; large?: boolean }>()
 
 const html = computed(() => marked.parse(props.content) as string)

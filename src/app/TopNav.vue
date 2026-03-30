@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { BookOpen, Settings, Sun, Moon } from 'lucide-vue-next'
+import { BookOpen, BarChart3, Bookmark, Settings, Sun, Moon } from 'lucide-vue-next'
 import { useSettings } from '../entities/settings/useSettings'
 
 const { theme } = useSettings()
@@ -27,6 +27,22 @@ function toggleTheme() {
     >
       <BookOpen :size="16" />
       {{ $t('practice') }}
+    </RouterLink>
+    <RouterLink
+      to="/stats"
+      class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
+      :class="useRoute().path === '/stats' ? 'bg-primary/10 text-primary' : 'text-base-content/60 hover:text-base-content hover:bg-base-200'"
+    >
+      <BarChart3 :size="16" />
+      {{ $t('statsTitle') }}
+    </RouterLink>
+    <RouterLink
+      to="/bookmarks"
+      class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
+      :class="useRoute().path === '/bookmarks' ? 'bg-primary/10 text-primary' : 'text-base-content/60 hover:text-base-content hover:bg-base-200'"
+    >
+      <Bookmark :size="16" />
+      {{ $t('bookmarksTitle') }}
     </RouterLink>
     <RouterLink
       to="/settings"

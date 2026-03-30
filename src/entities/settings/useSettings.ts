@@ -9,6 +9,8 @@ interface StoredSettings {
   timeoutCorrect: number
   timeoutIncorrect: number
   mode: 'train' | 'exam'
+  soundEnabled: boolean
+  hapticEnabled: boolean
 }
 
 function load(): StoredSettings {
@@ -23,10 +25,12 @@ function load(): StoredSettings {
         timeoutCorrect: parsed.timeoutCorrect ?? 1500,
         timeoutIncorrect: parsed.timeoutIncorrect ?? 3000,
         mode: parsed.mode ?? 'train',
+        soundEnabled: parsed.soundEnabled ?? true,
+        hapticEnabled: parsed.hapticEnabled ?? true,
       }
     }
   } catch { /* ignore */ }
-  return { autoAdvance: true, language: 'eng', theme: 'auto', timeoutCorrect: 1500, timeoutIncorrect: 3000, mode: 'train' }
+  return { autoAdvance: true, language: 'eng', theme: 'auto', timeoutCorrect: 1500, timeoutIncorrect: 3000, mode: 'train', soundEnabled: true, hapticEnabled: true }
 }
 
 function save() {
@@ -37,6 +41,8 @@ function save() {
     timeoutCorrect: timeoutCorrect.value,
     timeoutIncorrect: timeoutIncorrect.value,
     mode: mode.value,
+    soundEnabled: soundEnabled.value,
+    hapticEnabled: hapticEnabled.value,
   }))
 }
 
@@ -49,12 +55,16 @@ const theme = ref<string>(stored.theme)
 const timeoutCorrect = ref<number>(stored.timeoutCorrect)
 const timeoutIncorrect = ref<number>(stored.timeoutIncorrect)
 const mode = ref<'train' | 'exam'>(stored.mode)
+const soundEnabled = ref<boolean>(stored.soundEnabled)
+const hapticEnabled = ref<boolean>(stored.hapticEnabled)
 
 watch(autoAdvance, save)
 watch(language, save)
 watch(theme, save)
 watch(timeoutCorrect, save)
 watch(timeoutIncorrect, save)
+watch(soundEnabled, save)
+watch(hapticEnabled, save)
 watch(mode, (newMode) => {
   // Exam mode auto-enables auto-advance
   if (newMode === 'exam') {
@@ -64,5 +74,5 @@ watch(mode, (newMode) => {
 })
 
 export function useSettings() {
-  return { autoAdvance, language, theme, timeoutCorrect, timeoutIncorrect, mode }
+  return { autoAdvance, language, theme, timeoutCorrect, timeoutIncorrect, mode, soundEnabled, hapticEnabled }
 }

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../../entities/exercise/exercise'
 import type { FlowPhase } from '../useExerciseFlow'
 import MarkdownRenderer from '../../../dumb/MarkdownRenderer.vue'
+import { shuffledIndices } from '../../../utils/shuffle'
 
 const props = defineProps<{
   exercise: Exercise
@@ -22,29 +23,50 @@ const isInteractive = computed(() => props.phase === 'answering')
 const showSubmit = computed(() => props.exercise.submitButton !== false)
 const optionCount = computed(() => props.exercise.answerOptions?.length ?? 0)
 
-watch(() => props.exercise, () => { selected.value = null })
+// Shuffled display order: order[displayIdx] = originalIdx
+const order = ref<number[]>(shuffledIndices(optionCount.value))
+watch(() => props.exercise, () => {
+  selected.value = null
+  order.value = shuffledIndices(props.exercise.answerOptions?.length ?? 0)
+})
 
-function optionClass(idx: number): string {
+function optionClass(originalIdx: number): string {
   if (isInteractive.value) {
-    return selected.value === idx
+    return selected.value === originalIdx
       ? 'border-primary bg-primary/10 text-primary shadow-sm'
       : 'border-base-300 bg-base-100 text-base-content shadow-sm hover:border-base-content/30 hover:bg-base-200'
   }
   const correctIdx = props.exercise.correct as number
-  if (idx === correctIdx && selected.value === idx) return 'border-success bg-success/10 text-success'
-  if (idx !== correctIdx && selected.value === idx) return 'border-error bg-error/10 text-error'
-  if (idx === correctIdx) return 'border-warning bg-warning/10 text-warning'
+  const isCorrect = originalIdx === correctIdx
+  const isSelected = selected.value === originalIdx
+  // Correct + selected: solid green
+  if (isCorrect && isSelected) return 'border-success bg-success/10 text-success'
+  // Wrong + selected: red, blink to draw attention
+  if (!isCorrect && isSelected) return 'border-error bg-error/10 text-error blink-attention'
+  // Correct + not selected: green, blink to show what was missed
+  if (isCorrect) return 'border-success bg-success/10 text-success blink-attention'
+  // Everything else: muted
   return 'border-base-300 bg-base-200 text-base-content/40'
 }
 
-function select(idx: number) {
+function optionIcon(originalIdx: number): string {
+  if (isInteractive.value) return ''
+  const correctIdx = props.exercise.correct as number
+  const isCorrect = originalIdx === correctIdx
+  const isSelected = selected.value === originalIdx
+  if (isCorrect && isSelected) return '\u2713'   // ✓ user got it right
+  if (isCorrect && !isSelected) return '\u2717'  // ✗ user missed the correct answer
+  if (!isCorrect && isSelected) return '\u2717'  // ✗ user selected wrong
+  return ''
+}
+
+function select(originalIdx: number) {
   if (!isInteractive.value) return
-  // Undo: if clicking same option, deselect
-  if (selected.value === idx) {
+  if (selected.value === originalIdx) {
     selected.value = null
     return
   }
-  selected.value = idx
+  selected.value = originalIdx
   if (!showSubmit.value) submit()
 }
 
@@ -58,10 +80,10 @@ function handleKeyDown(e: KeyboardEvent) {
   if (!isInteractive.value && props.phase !== 'submitted') return
 
   const num = parseInt(e.key)
-  // Number 1-4: select/undo (only during answering)
+  // Number 1-4: select/undo by display position (only during answering)
   if (isInteractive.value && num >= 1 && num <= optionCount.value) {
     e.preventDefault()
-    select(num - 1)
+    select(order.value[num - 1])
     return
   }
 
@@ -83,23 +105,27 @@ function handleKeyDown(e: KeyboardEvent) {
 onMounted(() => {
   window.addEventListener('keydown', handleKeyDown)
 })
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeyDown)
+})
 </script>
 
 <template>
   <div class="flex flex-col gap-2 items-end w-full">
     <button
-      v-for="(option, idx) in exercise.answerOptions"
-      :key="idx"
+      v-for="(originalIdx, displayIdx) in order"
+      :key="originalIdx"
       type="button"
       class="w-full rounded-lg border-2 px-4 py-3 text-left transition-colors duration-150 break-words focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
-      :class="optionClass(idx)"
+      :class="optionClass(originalIdx)"
       :disabled="!isInteractive"
-      :aria-pressed="selected === idx"
-      :aria-label="`Option ${idx + 1} of ${optionCount}`"
-      @click="select(idx)"
+      :aria-pressed="selected === originalIdx"
+      :aria-label="`Option ${displayIdx + 1} of ${optionCount}`"
+      @click="select(originalIdx)"
     >
-      <span class="inline-block mr-2 font-semibold text-primary" aria-label="keyboard shortcut">[{{ idx + 1 }}]</span>
-      <MarkdownRenderer :content="option" />
+      <span class="inline-block mr-2 font-semibold text-primary shrink-0" aria-label="keyboard shortcut">[{{ displayIdx + 1 }}]</span>
+      <span class="flex-1 min-w-0 break-words"><MarkdownRenderer :content="exercise.answerOptions?.[originalIdx] ?? ''" /></span>
+      <span v-if="optionIcon(originalIdx)" class="shrink-0 text-lg font-bold" :class="optionIcon(originalIdx) === '\u2713' ? 'text-success' : 'text-error'">{{ optionIcon(originalIdx) }}</span>
     </button>
     <button
       v-if="showSubmit && isInteractive"

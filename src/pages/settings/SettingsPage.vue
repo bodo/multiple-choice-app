@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useSettings } from '../../entities/settings/useSettings'
 
 const { t } = useI18n()
-const { autoAdvance, language, mode, timeoutCorrect, timeoutIncorrect } = useSettings()
+const { autoAdvance, language, mode, timeoutCorrect, timeoutIncorrect, soundEnabled, hapticEnabled } = useSettings()
 
 const languages = [
   { code: 'eng', label: 'English' },
@@ -109,6 +109,40 @@ const autoAdvanceDisabled = computed(() => mode.value === 'exam')
         >
       </div>
     </template>
+
+    <!-- Sound Toggle -->
+    <label class="flex items-start gap-4 cursor-pointer">
+      <div class="flex-1">
+        <p class="font-medium">
+          {{ t('soundEnabled') }}
+        </p>
+        <p class="text-sm text-base-content/60 mt-0.5">
+          {{ t('soundEnabledHint') }}
+        </p>
+      </div>
+      <input
+        v-model="soundEnabled"
+        type="checkbox"
+        class="toggle toggle-primary mt-0.5 shrink-0"
+      >
+    </label>
+
+    <!-- Haptic Feedback Toggle -->
+    <label class="flex items-start gap-4 cursor-pointer">
+      <div class="flex-1">
+        <p class="font-medium">
+          {{ t('hapticEnabled') }}
+        </p>
+        <p class="text-sm text-base-content/60 mt-0.5">
+          {{ t('hapticEnabledHint') }}
+        </p>
+      </div>
+      <input
+        v-model="hapticEnabled"
+        type="checkbox"
+        class="toggle toggle-primary mt-0.5 shrink-0"
+      >
+    </label>
 
     <!-- Language Selection -->
     <div class="flex flex-col gap-2">

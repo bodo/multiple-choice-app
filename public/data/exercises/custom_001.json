@@ -1,7 +1,6 @@
 {
     "inputMode": "TEXT",
-    "caseSensitive": true,
-    "maximumStringDistance": 0,
+    "caseSensitive": false,
     "correct": "GmbH",
     "instruction": "Was ist die Abkürzung für die Rechtsform *Gesellschaft mit beschränkter Haftung*?"
 }

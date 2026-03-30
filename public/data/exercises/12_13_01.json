@@ -2,7 +2,14 @@
     "images": ["2012_1.png"],
     "inputMode": "SINGLE_CHOICE",
     "submitButton": true,
-    "answerOptions": ["1", "2", "3", "4", "5"],
+    "instruction": "Ihr Arbeitsverhältnis mit der YUHU GmbH ist in einem schriftlichen Arbeitsvertrag geregelt. \nBei welchem der folgenden Bestandteile Ihres Arbeitsvertrags ist der Arbeitgeber an kollektives Arbeitsrecht gebunden?",
+    "answerOptions": [
+        "Das monatliche Bruttogehalt beträgt 2.000,00 EUR.",
+        "Der/die Angestellte arbeitet als Sachbearbeiter/-in im Kundenservice.",
+        "Das Arbeitsverhältnis beginnt am 2. Mai 2008.",
+        "Die reguläre wöchentliche Arbeitszeit beträgt gemäß Betriebsvereinbarung 38,5 Stunden.",
+        "Die YUHU GmbH gewährt einen monatlichen Fahrtkostenzuschuss von 100,00 EUR."
+    ],
     "correct": 3,
     "adminComment": "Thema Arbeitsvertrag",
     "adminTags": ["check-legal-validity"]

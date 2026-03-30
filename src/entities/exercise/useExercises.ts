@@ -1,14 +1,6 @@
 import { ref, onMounted } from 'vue'
 import type { Exercise } from './exercise'
-
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
+import { useExerciseCatalog } from './useExerciseCatalog'
 
 export function useExercises() {
   const exercises = ref<Exercise[]>([])
@@ -23,14 +15,17 @@ export function useExercises() {
         filenames.map(async (f) => {
           try {
             const res = await fetch(`/data/exercises/${f}`)
-            return (await res.json()) as Exercise
+            const data = await res.json()
+            data.id = f.replace(/\.json$/, '')
+            return data as Exercise
           } catch {
             console.warn(`Failed to load exercise: ${f}`)
             return null
           }
         }),
       )
-      exercises.value = shuffle(loaded.filter((e): e is Exercise => e !== null))
+      exercises.value = loaded.filter((e): e is Exercise => e !== null)
+      useExerciseCatalog().buildFromExercises(exercises.value)
     } catch (e) {
       error.value = String(e)
     } finally {

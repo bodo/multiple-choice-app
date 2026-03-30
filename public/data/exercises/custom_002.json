@@ -1,7 +1,6 @@
 {
     "inputMode": "TEXT",
     "caseSensitive": false,
-    "maximumStringDistance": 2,
     "correct": "Hypertext Markup Language",
     "instruction": "Wofür steht *HTML*?"
 }

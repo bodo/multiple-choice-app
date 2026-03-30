@@ -1,45 +1,153 @@
-You see here vite+vue+ts boilerplate, or rather, a copied over app from some other productivity tracking app.
-Remove the traces of the productivity app and please implement the following prototype:
+# Multiple Choice Practice App — Specification
 
-This should be a multiple/single choice practice app.
+A Vue 3 + TypeScript practice app with spaced repetition, optimized for mobile landscape.
 
-The source of truth for the exercise data is `public/data/exercises`, which refers sometimes to images in `public/data/img`.
+## Tech Stack
 
-For now, build just a single page, the "main" view, which loads random exercises and goes through a Q/A flow with it.
+- **Framework**: Vue 3.5, TypeScript 5.9, Vite 8
+- **Styling**: Tailwind CSS 4 + DaisyUI 5 + `@abschluss/theme`
+- **Libraries**: vue-i18n, vue-router, marked (markdown), OpenSeadragon (image zoom), fastest-levenshtein (typo tolerance)
+- **PWA**: vite-plugin-pwa with auto-update and offline caching
 
-The app should first and foremost be optimized for mobile devices in landscape mode.
-In that case, the question has a column on the left (max 50%), and answer stuff is in a column on the right (max 50%).
-On desktop and portrait mobile, use instead a single column layout.
+## Layout
 
-The question section is always the same:
-Show the `instruction` (if any), then referred images (if any).
-Wrap any image in an openseadragon container for easy zoom (some of the images are quite finicky to read otherwise).
+- **Mobile landscape**: Two columns — question left (50%), answer right (50%)
+- **Desktop / portrait**: Progress bar full width on top, question and answer side-by-side below
+- All interaction elements positioned at the right edge for thumb-friendly access
 
-On the right, on the answer section, stuff varies based on `inputMode`.
-In general, since the user is holding a mobile device in landscape, we want all interaction element at the right edge, for easy thumb interaction.
+## Exercise Data
 
-We have the following modes:
+Source of truth: `public/data/exercises/`, with images in `public/data/img/`.
+An `index.json` lists all exercise filenames. Each exercise gets an `id` derived from its filename (minus `.json`).
 
-- `SINGLE_CHOICE`: show each of the options as buttons. Tapping a button sets it to primary color (and all other buttons to standard color, since it's single choice). If `submitButton` property is `true` or doesn't exist, show a submit button on the bottom below the options. Once submitted, make all buttons non-interactible and color buttons appropriately according to *was correct and selected*, *was not correct but selected*, and *was correct but not selected*, following accepted standard. After 0.5 seconds go to next question. If `submitButton` `false`, immediately trigger this procedure when any button is clicked
-- `MULTIPLE_CHOICE`: similar as above, only instead of making the options buttons, make a checkbox to the right of each option, putting the options in subtle daisy cards (since it's multiple choice). There is always a submit button here.
-- `TEXT`: Simple text input, with submit button. Note that there are optional props here to ignore casing, and a maximum string distance allowed to tolerate small typos (add a library for this). Once submitted, if within is-correct parameters, simply replace the input with a green box with the correct answer (possibly correcting minor typos). If considered incorrect, show the user answer as strike through and the correct answer below it. If correct, go to next after 0.5 seconds. If incorrect, go to next after 1s.
-- `NUMBER`: Like text, only with a number input
+### Exercise Format
 
-Architect this cleanly, following solid patterns. We will likely add more such types in the future. 
+```typescript
+interface Exercise {
+  id: string                          // Auto-assigned from filename
+  inputMode: 'SINGLE_CHOICE' | 'MULTIPLE_CHOICE' | 'TEXT' | 'NUMBER'
+  correct: number | number[] | string // Correct answer(s)
+  instruction?: string                // Markdown-rendered question text
+  images?: string[]                   // Filenames in /data/img/
+  answerOptions?: string[]            // Options for choice-based inputs
+  submitButton?: boolean              // Default true; false = auto-submit on select
+  caseSensitive?: boolean             // TEXT only; default false
+  maximumStringDistance?: number       // TEXT only; auto-calculated if omitted
+  adminComment?: string               // Internal notes (not displayed)
+  adminTags?: string[]                // Categories for filtering
+}
+```
 
-I may want to make the 0.5 second-auto-next-card function optional later. Architect in such a way it can be easily toggled with a manual "Next exercise" button later.
+## Input Modes
 
-Interpret all strings in exercises as proper markdown, full feature support (instructions, answeroptions). Get a library for this.
+### SINGLE_CHOICE
+- Options displayed as buttons in shuffled order
+- Keyboard shortcuts: number keys 1–N to select, Enter/Space to submit
+- If `submitButton: false`, submits immediately on selection
+- After submit: ✓ green for correct+selected, ✗ red for wrong+selected or correct+missed
+- Wrong selections and missed correct answers blink 3 times
 
+### MULTIPLE_CHOICE
+- Checkboxes with card-style options in shuffled order
+- Keyboard shortcuts: number keys toggle, Enter submits
+- Always has a submit button
+- Same visual feedback as single choice (per-option ✓/✗ with blink)
 
+### TEXT
+- Text input with submit button (Enter to submit)
+- **Word-by-word validation**: splits answer by spaces, checks each word with Levenshtein distance ≤ 1
+- **Auto-calculated tolerance** when `maximumStringDistance` is not set:
+  - Answer ≤ 3 chars: exact match
+  - Answer 4–6 chars: 1 typo allowed
+  - Answer 7+ chars: 2 typos allowed
+- After submit: correct words in green, wrong words in red strikethrough with correct word in brackets
+- **Close match**: if all words pass but not exact, shows warning: "Close! The exact answer is: **X**"
+- Supports HTML in close-match message via `v-html`
 
-Do not persist any practice/progress data yet, that comes later.
-Ignore any dexie stuff for now.
+### NUMBER
+- Numeric input with submit button (Enter to submit)
+- Exact match required
+- Shows strikethrough user answer + correct answer if wrong
 
-Add i18n for German and English, following latest best practices.
-Make the language files for deu and eng. 
-Add eslint, and as a rule disallow plain (non-i18n) strings in the app.
+## Spaced Repetition
 
-Stick to `agents.md`!!!!!!!!!
+Per-exercise stats stored in localStorage (`bodo-mc-history`):
+- Tracks correct/wrong counts and last-seen timestamp per exercise ID
 
-Feel free to WEB!!! search recommendations for patterns etc.
+**Weighted selection algorithm** (`getWeight`):
+- Never seen → weight 10 (highest priority)
+- Seen before → `(1 + errorRate × 9) × (1 + hoursSinceLastSeen / 24)`
+- Time decay capped at 168 hours (1 week)
+- Current exercise excluded from selection (no immediate repeats)
+- Exercises outside active tag filter excluded
+
+## Exercise Catalog
+
+Separate module (`useExerciseCatalog`) that builds a tag index from loaded exercises:
+- Provides `allTags` (unique sorted tags), `filteredIds` (exercises matching active filter)
+- Designed to be swappable with a server-provided index later
+- Integrated with exercise flow — weighted selection respects active filter
+
+## Settings
+
+Stored in localStorage (`bodo-mc-settings`), auto-saved via Vue watchers.
+
+| Setting | Type | Default | Description |
+|---------|------|---------|-------------|
+| `mode` | `'train' \| 'exam'` | `'train'` | Exam mode forces auto-advance |
+| `autoAdvance` | boolean | `true` | Auto-advance to next question after answering |
+| `timeoutCorrect` | number (ms) | `1500` | Delay after correct answer (500–10000) |
+| `timeoutIncorrect` | number (ms) | `3000` | Delay after incorrect answer (500–10000) |
+| `soundEnabled` | boolean | `true` | Play sound effects |
+| `hapticEnabled` | boolean | `true` | Vibrate on answer (mobile) |
+| `language` | string | `'eng'` | `'eng'` or `'deu'` |
+| `theme` | string | `'auto'` | `'auto'`, `'abschluss-light'`, `'abschluss-dark'` |
+
+## Sound & Haptics
+
+- **Sound effects** via Web Audio API (no external files):
+  - Correct: ascending sine tones (C5→E5→G5→C6), 30% volume
+  - Incorrect: descending sawtooth buzz (F4→C4→G3), 20% volume
+- **Haptic feedback** via Vibration API:
+  - Correct: single 100ms pulse
+  - Incorrect: double pulse (100ms–50ms pause–100ms)
+  - Silent no-op on unsupported devices
+
+## Accessibility
+
+- **aria-live** region announces correct/incorrect results to screen readers
+- **Keyboard navigation**: number keys for options, Enter/Space to submit/advance, Escape to advance
+- **Focus management**: auto-focus on text/number inputs with `requestAnimationFrame`
+- **Reduced motion**: `prefers-reduced-motion` media query disables all animations/transitions
+- **Touch**: swipe left to advance after submitting
+
+## Progress & Stats
+
+- **Progress bar**: "Question X of Y" with percentage, displayed full-width above content
+- **Session stats**: accuracy % and average time per answer, shown below progress bar after first answer
+
+## Routing
+
+| Path | Component | Description |
+|------|-----------|-------------|
+| `/` | MainPage | Exercise practice flow |
+| `/settings` | SettingsPage | User preferences |
+
+## i18n
+
+- vue-i18n with `legacy: false`
+- Languages: English (`eng`), German (`deu`)
+- Locale files in `src/app/locales/`
+- Markdown rendering uses `marked` with `breaks: true` (single newlines → `<br>`)
+
+## PWA
+
+- `registerType: 'autoUpdate'` — service worker auto-updates
+- `display: 'standalone'` — installable on mobile home screen
+- Precaches all built assets for offline use
+
+## Deployment
+
+- CI via Forgejo/GitHub Actions on push to `main`
+- Build: `vue-tsc -b && vite build`
+- Deploy: rsync to VPS (`/var/www/wiso.abschluss.jetzt/httpdocs/`)
