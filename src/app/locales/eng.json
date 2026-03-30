@@ -50,6 +50,11 @@
   "removeBookmark": "Remove bookmark",
   "noBookmarks": "No bookmarked questions yet. Tap the bookmark icon on any question to save it here.",
   "allCategories": "All topics",
+  "explanation": "Explanation",
+  "examQuestion": "Exam question",
+  "examFinished": "Exam finished!",
+  "restartExam": "Restart exam",
+  "examQuestionCount": "Number of questions",
   "categoryDisabledExam": "Topic filter is disabled in exam mode — all topics are included.",
   "examModeCategoryHint": "The topic filter is disabled in exam mode. All topics will be included."
 }

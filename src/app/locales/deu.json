@@ -50,6 +50,11 @@
   "removeBookmark": "Lesezeichen entfernen",
   "noBookmarks": "Noch keine Lesezeichen. Tippe auf das Lesezeichen-Symbol bei einer Frage, um sie hier zu speichern.",
   "allCategories": "Alle Themen",
+  "explanation": "Erklärung",
+  "examQuestion": "Prüfungsfrage",
+  "examFinished": "Prüfung abgeschlossen!",
+  "restartExam": "Prüfung neu starten",
+  "examQuestionCount": "Anzahl Fragen",
   "categoryDisabledExam": "Themenfilter ist im Examen-Modus deaktiviert — alle Themen sind enthalten.",
   "examModeCategoryHint": "Der Themenfilter ist im Examen-Modus deaktiviert. Alle Themen werden abgefragt."
 }

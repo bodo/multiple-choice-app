@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useSettings } from '../../entities/settings/useSettings'
 
 const { t } = useI18n()
-const { autoAdvance, language, mode, timeoutCorrect, timeoutIncorrect, soundEnabled, hapticEnabled } = useSettings()
+const { autoAdvance, language, mode, timeoutCorrect, timeoutIncorrect, soundEnabled, hapticEnabled, examQuestionCount } = useSettings()
 
 const languages = [
   { code: 'eng', label: 'English' },
@@ -50,6 +50,26 @@ const autoAdvanceDisabled = computed(() => mode.value === 'exam')
       <p v-if="mode === 'exam'" class="text-sm text-base-content/60">
         {{ t('examModeCategoryHint') }}
       </p>
+    </div>
+
+    <!-- Exam Question Count (only in exam mode) -->
+    <div v-if="mode === 'exam'" class="flex flex-col gap-3">
+      <div class="flex justify-between items-baseline">
+        <p class="font-medium">
+          {{ t('examQuestionCount') }}
+        </p>
+        <p class="text-sm font-semibold text-accent">
+          {{ examQuestionCount }}
+        </p>
+      </div>
+      <input
+        v-model.number="examQuestionCount"
+        type="range"
+        min="5"
+        max="100"
+        step="5"
+        class="range range-accent w-full"
+      >
     </div>
 
     <!-- Auto Advance Toggle -->

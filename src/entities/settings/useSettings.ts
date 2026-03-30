@@ -11,6 +11,7 @@ interface StoredSettings {
   mode: 'train' | 'exam'
   soundEnabled: boolean
   hapticEnabled: boolean
+  examQuestionCount: number
 }
 
 function load(): StoredSettings {
@@ -27,10 +28,11 @@ function load(): StoredSettings {
         mode: parsed.mode ?? 'train',
         soundEnabled: parsed.soundEnabled ?? true,
         hapticEnabled: parsed.hapticEnabled ?? true,
+        examQuestionCount: parsed.examQuestionCount ?? 5,
       }
     }
   } catch { /* ignore */ }
-  return { autoAdvance: true, language: 'eng', theme: 'auto', timeoutCorrect: 1500, timeoutIncorrect: 3000, mode: 'train', soundEnabled: true, hapticEnabled: true }
+  return { autoAdvance: true, language: 'eng', theme: 'auto', timeoutCorrect: 1500, timeoutIncorrect: 3000, mode: 'train', soundEnabled: true, hapticEnabled: true, examQuestionCount: 5 }
 }
 
 function save() {
@@ -43,6 +45,7 @@ function save() {
     mode: mode.value,
     soundEnabled: soundEnabled.value,
     hapticEnabled: hapticEnabled.value,
+    examQuestionCount: examQuestionCount.value,
   }))
 }
 
@@ -57,6 +60,7 @@ const timeoutIncorrect = ref<number>(stored.timeoutIncorrect)
 const mode = ref<'train' | 'exam'>(stored.mode)
 const soundEnabled = ref<boolean>(stored.soundEnabled)
 const hapticEnabled = ref<boolean>(stored.hapticEnabled)
+const examQuestionCount = ref<number>(stored.examQuestionCount)
 
 watch(autoAdvance, save)
 watch(language, save)
@@ -65,6 +69,7 @@ watch(timeoutCorrect, save)
 watch(timeoutIncorrect, save)
 watch(soundEnabled, save)
 watch(hapticEnabled, save)
+watch(examQuestionCount, save)
 watch(mode, (newMode) => {
   // Exam mode auto-enables auto-advance
   if (newMode === 'exam') {
@@ -74,5 +79,5 @@ watch(mode, (newMode) => {
 })
 
 export function useSettings() {
-  return { autoAdvance, language, theme, timeoutCorrect, timeoutIncorrect, mode, soundEnabled, hapticEnabled }
+  return { autoAdvance, language, theme, timeoutCorrect, timeoutIncorrect, mode, soundEnabled, hapticEnabled, examQuestionCount }
 }
