@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import copy
 from collections.abc import Callable
+from functools import partial
 
 from PIL import Image
 from PySide6.QtCore import QPointF, QRectF, QTimer, Qt, Signal
@@ -34,6 +35,11 @@ from pdf_render import (
 from render_tasks import PreviewRunnable
 
 GRID_CANVAS_W = 880
+
+
+def _box_matches_ex_sub(box: dict, ex: str, sub: str) -> bool:
+    """JSON may store exercise as int; UI always uses str keys."""
+    return str(box.get("exercise", "")) == str(ex) and box.get("sub") == sub
 
 
 def _pil_to_qpixmap(img: Image.Image) -> QPixmap:
@@ -297,12 +303,12 @@ class AnnotationCanvas(QGraphicsView):
         cur = [
             b
             for b in page_boxes
-            if b["exercise"] == self._ex and b["sub"] == self._sub
+            if _box_matches_ex_sub(b, self._ex, self._sub)
         ]
         others = [
             b
             for b in page_boxes
-            if not (b["exercise"] == self._ex and b["sub"] == self._sub)
+            if not _box_matches_ex_sub(b, self._ex, self._sub)
         ]
         for box in others:
             it = StaticBoxItem(box, self._scene_w, self._scene_h, self._ann)
@@ -512,6 +518,7 @@ class PageCellWidget(QFrame):
         if self._canvas is not None and sel_ex and sel_sub:
             self._canvas.set_ex_sub(sel_ex, sel_sub)
         self.schedule_preview(self._preview_pool)
+        self._rebuild_remove_buttons()
 
     def schedule_preview(self, pool) -> None:
         """Request async preview; pool may be None to run sync (fallback)."""
@@ -618,23 +625,21 @@ class PageCellWidget(QFrame):
             for b in self._ann["boxes"]
             if b["pdf"] == self._pdf_name
             and b["page"] == self._page_num
-            and b["exercise"] == self._sel_ex
-            and b["sub"] == self._sel_sub
+            and _box_matches_ex_sub(b, self._sel_ex, self._sel_sub)
         ]
         for idx, box in enumerate(page_boxes):
             lbl = box_label(self._ann, self._sel_ex, self._sel_sub)
             rm = QPushButton(f"Remove {lbl}.{idx + 1}")
-
-            def remove_one(b: dict = box) -> None:
-                try:
-                    self._ann["boxes"].remove(b)
-                except ValueError:
-                    pass
-                if self._canvas:
-                    self._canvas.sync_overlay_items()
-                else:
-                    self.schedule_preview(self._preview_pool)
-                self._on_local_changed()
-
-            rm.clicked.connect(lambda checked=False, fn=remove_one: fn())
+            rm.clicked.connect(partial(self._on_remove_box_clicked, box))
             self._remove_layout.addWidget(rm)
+
+    def _on_remove_box_clicked(self, box: dict, checked: bool = False) -> None:
+        try:
+            self._ann["boxes"].remove(box)
+        except ValueError:
+            return
+        if self._canvas:
+            self._canvas.sync_overlay_items()
+        else:
+            self.schedule_preview(self._preview_pool)
+        self._on_local_changed()
