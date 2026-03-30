@@ -27,8 +27,10 @@ from page_cell import PageCellWidget
 
 DEBOUNCE_MS = 500
 IDLE_SCREENSHOT_MS = 5000
-# Reserved sub name for answer regions (separate screenshot category via sub index).
-ANSWER_SUB = "Answer"
+# Reserved subs after Main (separate screenshot categories via sub index).
+ANSWER_KEY_SUB = "Answer Key"
+ANSWER_OPTIONS_SUB = "Answer Options"
+LEGACY_ANSWER_SUB = "Answer"
 
 
 class MainWindow(QMainWindow):
@@ -153,13 +155,15 @@ class MainWindow(QMainWindow):
         self._exam = exam
         self._ann = load_annotations(exam)
         if not self._ann["exercises"]:
-            self._ann["exercises"]["1"] = {"subs": ["Main", ANSWER_SUB]}
+            self._ann["exercises"]["1"] = {
+                "subs": ["Main", ANSWER_KEY_SUB, ANSWER_OPTIONS_SUB],
+            }
         self._sel_ex = sorted(self._ann["exercises"].keys(), key=lambda x: int(x))[0]
         subs = self._ann["exercises"][self._sel_ex].get("subs", [])
         if not subs:
-            subs = ["Main", ANSWER_SUB]
+            subs = ["Main", ANSWER_KEY_SUB, ANSWER_OPTIONS_SUB]
             self._ann["exercises"][self._sel_ex]["subs"] = subs
-        if self._normalize_all_answer_subs():
+        if self._normalize_all_reserved_subs():
             self._on_annotation_changed()
         self._sel_sub = self._ann["exercises"][self._sel_ex]["subs"][0]
         self._pending_screenshots = False
@@ -219,7 +223,9 @@ class MainWindow(QMainWindow):
     def _add_exercise(self) -> None:
         n = len(self._ann["exercises"])
         new_ex = str(n + 1)
-        self._ann["exercises"][new_ex] = {"subs": ["Main", ANSWER_SUB]}
+        self._ann["exercises"][new_ex] = {
+            "subs": ["Main", ANSWER_KEY_SUB, ANSWER_OPTIONS_SUB],
+        }
         self._sel_ex = new_ex
         self._sel_sub = "Main"
         self._on_annotation_changed()
@@ -227,37 +233,60 @@ class MainWindow(QMainWindow):
         self._rebuild_sub_bar()
         self._refresh_grid()
 
-    def _normalize_all_answer_subs(self) -> bool:
+    def _migrate_legacy_answer_in_boxes(self) -> bool:
         changed = False
-        for ex in self._ann["exercises"]:
-            if self._ensure_answer_sub_for_ex(ex):
+        for b in self._ann.get("boxes", []):
+            if b.get("sub") == LEGACY_ANSWER_SUB:
+                b["sub"] = ANSWER_KEY_SUB
                 changed = True
         return changed
 
-    def _ensure_answer_sub_for_ex(self, ex: str) -> bool:
-        """Insert Answer after Main if missing. Returns True if ann was mutated."""
-        subs = self._ann["exercises"].get(ex, {}).get("subs", [])
+    def _normalize_all_reserved_subs(self) -> bool:
+        changed = self._migrate_legacy_answer_in_boxes()
+        for ex in self._ann["exercises"]:
+            if self._ensure_reserved_subs_for_ex(ex):
+                changed = True
+        return changed
+
+    def _ensure_reserved_subs_for_ex(self, ex: str) -> bool:
+        """Main, Answer Key, Answer Options, then custom subs. Migrates legacy Answer."""
+        entry = self._ann["exercises"].setdefault(ex, {})
+        subs = entry.get("subs")
+        if subs is None:
+            subs = []
+        changed = False
+        for i, s in enumerate(subs):
+            if s == LEGACY_ANSWER_SUB:
+                subs[i] = ANSWER_KEY_SUB
+                changed = True
         if not subs:
-            self._ann["exercises"][ex] = {"subs": ["Main", ANSWER_SUB]}
+            entry["subs"] = ["Main", ANSWER_KEY_SUB, ANSWER_OPTIONS_SUB]
             return True
-        if ANSWER_SUB in subs:
-            return False
-        try:
-            mi = subs.index("Main")
-            subs.insert(mi + 1, ANSWER_SUB)
-        except ValueError:
-            subs.insert(0, "Main")
-            subs.insert(1, ANSWER_SUB)
-        return True
+        tail = [
+            s
+            for s in subs
+            if s not in ("Main", ANSWER_KEY_SUB, ANSWER_OPTIONS_SUB)
+        ]
+        new_subs = ["Main", ANSWER_KEY_SUB, ANSWER_OPTIONS_SUB] + tail
+        if new_subs != subs:
+            entry["subs"] = new_subs
+            return True
+        return changed
 
     def _sub_bar_button_order(self, subs: list[str]) -> list[str]:
-        """Main, Answer, then remaining subs (custom exercises after that)."""
-        rest = [s for s in subs if s not in ("Main", ANSWER_SUB)]
+        """Main, Answer Key, Answer Options, then remaining subs."""
+        rest = [
+            s
+            for s in subs
+            if s not in ("Main", ANSWER_KEY_SUB, ANSWER_OPTIONS_SUB)
+        ]
         out: list[str] = []
         if "Main" in subs:
             out.append("Main")
-        if ANSWER_SUB in subs:
-            out.append(ANSWER_SUB)
+        if ANSWER_KEY_SUB in subs:
+            out.append(ANSWER_KEY_SUB)
+        if ANSWER_OPTIONS_SUB in subs:
+            out.append(ANSWER_OPTIONS_SUB)
         out.extend(rest)
         if not out and subs:
             out = list(subs)
@@ -273,13 +302,12 @@ class MainWindow(QMainWindow):
             self._sub_container.hide()
             return
         self._sub_container.show()
-        if self._ensure_answer_sub_for_ex(ex):
+        if self._ensure_reserved_subs_for_ex(ex):
             self._on_annotation_changed()
         subs = self._ann["exercises"].get(ex, {}).get("subs", [])
         for sub in self._sub_bar_button_order(subs):
             active = self._sel_sub == sub
-            label = "Answer" if sub == ANSWER_SUB else sub
-            b = QPushButton(label)
+            b = QPushButton(sub)
             if active:
                 b.setStyleSheet("font-weight: bold;")
             b.clicked.connect(lambda checked=False, s=sub: self._select_sub(s))

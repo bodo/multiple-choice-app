@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 import io
+from collections.abc import Callable
 
 from PIL import Image
 from PySide6.QtCore import QPointF, QRectF, Qt, Signal
-from PySide6.QtGui import QColor, QImage, QMouseEvent, QPainter, QPen, QPixmap
+from PySide6.QtGui import QColor, QFont, QImage, QMouseEvent, QPainter, QPen, QPixmap
 from PySide6.QtWidgets import (
     QFrame,
     QGraphicsItem,
@@ -21,7 +22,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from colors import box_label, ex_color
+from colors import box_caption, box_label, ex_sub_rgb
 from pdf_render import (
     ANNOTATE_BG_SCALE,
     PREVIEW_RENDER_SCALE,
@@ -78,23 +79,47 @@ class EditableBoxItem(QGraphicsRectItem):
         box: dict,
         scene_w: int,
         scene_h: int,
-        color: QColor,
+        ann: dict,
         on_changed: Callable[[], None],
     ):
         super().__init__()
         self._box = box
         self._scene_w = scene_w
         self._scene_h = scene_h
+        self._ann = ann
         self._on_changed = on_changed
+        ex, sub = box["exercise"], box["sub"]
+        r, g, b = ex_sub_rgb(ann, ex, sub)
+        self._label_color = QColor(r, g, b)
+        self._caption = box_caption(ann, ex, sub)
+        self._font_px = max(11, int(round(scene_h * 0.022)))
         r = box["rect"]
         x0, y0 = r[0] * scene_w, r[1] * scene_h
         x1, y1 = r[2] * scene_w, r[3] * scene_h
         self.setRect(QRectF(x0, y0, x1 - x0, y1 - y0).normalized())
-        self.setPen(QPen(color, 2))
+        self.setPen(QPen(self._label_color, 2))
         self.setBrush(QColor(0, 0, 0, 0))
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsMovable, True)
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsSelectable, True)
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemSendsGeometryChanges, True)
+
+    def paint(self, painter: QPainter, option, widget=None) -> None:
+        super().paint(painter, option, widget)
+        painter.save()
+        f = QFont()
+        f.setPixelSize(self._font_px)
+        painter.setFont(f)
+        rect = self.rect()
+        fm = painter.fontMetrics()
+        pad = max(2, self._font_px // 5)
+        tx = rect.left() + pad
+        ty = rect.top() + fm.ascent() + pad
+        for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+            painter.setPen(QColor(255, 255, 255, 220))
+            painter.drawText(int(tx + dx), int(ty + dy), self._caption)
+        painter.setPen(self._label_color)
+        painter.drawText(int(tx), int(ty), self._caption)
+        painter.restore()
 
     def itemChange(self, change, value):
         if change == QGraphicsItem.GraphicsItemChange.ItemPositionHasChanged:
@@ -141,7 +166,8 @@ class AnnotationCanvas(QGraphicsView):
         self._rubber: QGraphicsRectItem | None = None
         self._origin: QPointF | None = None
         self._bg_item: QGraphicsPixmapItem | None = None
-        self._draw_color = QColor(ex_color(ex))
+        r0, g0, b0 = ex_sub_rgb(ann, ex, sub)
+        self._draw_color = QColor(r0, g0, b0)
 
         self._scene = QGraphicsScene(self)
         self.setScene(self._scene)
@@ -197,6 +223,8 @@ class AnnotationCanvas(QGraphicsView):
         self._scene_w = cw
         self._scene_h = canvas_h
         self._scene.setSceneRect(0, 0, self._scene_w, self._scene_h)
+        r0, g0, b0 = ex_sub_rgb(self._ann, self._ex, self._sub)
+        self._draw_color = QColor(r0, g0, b0)
 
         pm = _pil_to_qpixmap(bg_img)
         self._bg_item = self._scene.addPixmap(pm)
@@ -204,7 +232,7 @@ class AnnotationCanvas(QGraphicsView):
 
         for box in cur:
             item = EditableBoxItem(
-                box, self._scene_w, self._scene_h, self._draw_color, self._emit_changed
+                box, self._scene_w, self._scene_h, self._ann, self._emit_changed
             )
             item.setZValue(1)
             self._scene.addItem(item)

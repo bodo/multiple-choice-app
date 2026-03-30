@@ -8,7 +8,7 @@ from pathlib import Path
 import fitz
 from PIL import Image, ImageDraw, ImageFont
 
-from colors import box_label, ex_color, hex_rgb
+from colors import box_caption, ex_sub_rgb
 
 RENDER_SCALE = 2.75
 ANNOTATE_BG_SCALE = 4.0
@@ -61,14 +61,14 @@ def render_with_boxes(
         r = box["rect"]
         x0, y0 = r[0] * pw, r[1] * ph
         x1, y1 = r[2] * pw, r[3] * ph
-        rgb = hex_rgb(ex_color(box["exercise"]))
+        rgb = ex_sub_rgb(ann, box["exercise"], box["sub"])
         draw.rectangle(
             [x0, y0, x1, y1],
             fill=(*rgb, 50),
             outline=(*rgb, 220),
             width=outline_w,
         )
-        lbl = box_label(ann, box["exercise"], box["sub"])
+        lbl = box_caption(ann, box["exercise"], box["sub"])
         tx, ty = x0 + pad, y0 + max(2, pad // 2)
         # Light halo so labels stay legible on busy PDF backgrounds.
         for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
