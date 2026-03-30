@@ -1,7 +1,10 @@
 {
     "images": ["2012_25.png"],
     "inputMode": "NUMBER",
-    "answerOptions": ["1", "2", "3", "4", "5"],
     "correct": 160000,
-    "instruction": "Beantworten Sie nur Aufgabe (c)."
+    "instruction": "Die folgende Grafik zeigt die Marktsituation auf dem Markt für ein IT-Produkt, das auch die YUHU GmbH anbietet. \nEine Umfrage ergab, dass die Käufer dieses IT-Produkts von einer Verschlechterung der wirtschaftlichen Entwicklung ausgehen. Es wird daher nur noch eine Absatzmenge von 4.000 Stück erwartet. \na) Ermitteln Sie den derzeitigen Gesamtumsatz der Branche für dieses IT-Produkt. \nc) Ermitteln Sie den Gesamtumsatz in EUR, der bei dem neuen Marktgleichgewicht erzielt wird.",
+    "explainInstruction": "Die richtige Antwort ist 160.000. Der Gesamtumsatz in der Modellbetrachtung im neuen Marktgleichgewicht wird berechnet, indem man die erwartete Absatzmenge mit dem neuen Preis multipliziert.",
+    "explainAnswerOptions": [
+        "Die richtige Antwort ist 160.000. In diesem Fall beträgt die erwartete Absatzmenge 4.000 Stück und der neue Preis beträgt 40 EUR pro Stück. Daher ergibt sich der Gesamtumsatz als 4.000 Stück * 40 EUR/Stück = 160.000 EUR."
+    ]
 }
