@@ -3,13 +3,22 @@
         "2012_2.png"
     ],
     "inputMode": "SINGLE_CHOICE",
+    "instruction": "Die YUHU GmbH hat mit Ihnen einen Einzelarbeitsvertrag geschlossen. \nWelche der folgenden Aussagen ist in diesem Zusammenhang zutreffend?",
     "submitButton": false,
     "answerOptions": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
+        "kann nur abgeschlossen werden, wenn für die YUHU GmbH kein gültiger Tarifvertrag vorliegt.",
+        "kann nur mit Zustimmung des Betriebsrats geschlossen werden.",
+        "ohne Urlaubsregelung ist ungültig.",
+        "ist auch dann gültig, wenn das vereinbarte Arbeitsentgelt über dem tarifvertraglich geregelten liegt.",
+        "darf für höchstens zwei Jahre geschlossen werden."
     ],
-    "correct": 3
+    "correct": 3,
+    "explainInstruction": "Die richtige Antwort ist die 4. Ein Einzelarbeitsvertrag ist auch dann gültig, wenn das vereinbarte Arbeitsentgelt über dem tarifvertraglich geregelten liegt. Es gibt keine gesetzliche Vorschrift, die besagt, dass ein Arbeitsvertrag nur abgeschlossen werden kann, wenn kein gültiger Tarifvertrag vorliegt. Ein Arbeitsvertrag kann auch ohne Zustimmung des Betriebsrats geschlossen werden, es sei denn, es handelt sich um bestimmte Regelungen, die der Mitbestimmung des Betriebsrats unterliegen. Ein Arbeitsvertrag ohne Urlaubsregelung ist nicht automatisch ungültig, da das Bundesurlaubsgesetz die Mindesturlaubstage regelt. Es gibt auch keine gesetzliche Begrenzung für die Dauer eines Arbeitsvertrags auf höchstens zwei Jahre.",
+    "explainAnswerOptions": [
+        "Falsch. Ein Einzelarbeitsvertrag kann auch dann abgeschlossen werden, wenn für die YUHU GmbH ein gültiger Tarifvertrag vorliegt. Es gibt keine gesetzliche Vorschrift, die besagt, dass ein Arbeitsvertrag nur abgeschlossen werden kann, wenn kein gültiger Tarifvertrag vorliegt.",
+        "Falsch. Ein Arbeitsvertrag kann auch ohne Zustimmung des Betriebsrats geschlossen werden, es sei denn, es handelt sich um bestimmte Regelungen, die der Mitbestimmung des Betriebsrats unterliegen.",
+        "Falsch. Ein Arbeitsvertrag ohne Urlaubsregelung ist nicht automatisch ungültig, da das Bundesurlaubsgesetz die Mindesturlaubstage regelt.",
+        "Richtig. Ein Einzelarbeitsvertrag ist auch dann gültig, wenn das vereinbarte Arbeitsentgelt über dem tarifvertraglich geregelten liegt.",
+        "Falsch. Es gibt keine gesetzliche Begrenzung für die Dauer eines Arbeitsvertrags auf höchstens zwei Jahre."
+    ]
 }

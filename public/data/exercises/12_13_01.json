@@ -12,5 +12,14 @@
     ],
     "correct": 3,
     "adminComment": "Thema Arbeitsvertrag",
-    "adminTags": ["check-legal-validity"]
+    "adminTags": ["check-legal-validity"],
+    "explainInstruction": "Die richtige Antwort ist die 4. Die reguläre wöchentliche Arbeitszeit ist ein Bestandteil des Arbeitsvertrags, der durch kollektives Arbeitsrecht geregelt wird, insbesondere durch Tarifverträge oder Betriebsvereinbarungen. Die anderen Bestandteile (Gehalt, Tätigkeit, Beginn des Arbeitsverhältnisses, Fahrtkostenzuschuss) sind individuelle Vertragsbestandteile, die nicht zwingend an kollektives Arbeitsrecht gebunden sind.",
+    "explainAnswerOptions": [
+        "Das monatliche Bruttogehalt ist ein individueller Vertragsbestandteil, der nicht zwingend an kollektives Arbeitsrecht gebunden ist.",
+        "Die Tätigkeit als Sachbearbeiter/-in im Kundenservice ist ein individueller Vertragsbestandteil, der nicht zwingend an kollektives Arbeitsrecht gebunden ist.",
+        "Der Beginn des Arbeitsverhältnisses ist ein individueller Vertragsbestandteil, der nicht zwingend an kollektives Arbeitsrecht gebunden ist.",
+        "Die reguläre wöchentliche Arbeitszeit ist ein Bestandteil des Arbeitsvertrags, der durch kollektives Arbeitsrecht geregelt wird, insbesondere durch Tarifverträge oder Betriebsvereinbarungen.",
+        "Der monatliche Fahrtkostenzuschuss ist ein individueller Vertragsbestandteil, der nicht zwingend an kollektives Arbeitsrecht gebunden ist."
+    ]
+
 }

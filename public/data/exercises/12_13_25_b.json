@@ -1,7 +1,10 @@
 {
     "images": ["2012_25.png"],
     "inputMode": "NUMBER",
-    "answerOptions": ["1", "2", "3", "4", "5"],
     "correct": 40,
-    "instruction": "Beantworten Sie nur Aufgabe (b)."
+    "instruction": "Die folgende Grafik zeigt die Marktsituation auf dem Markt für ein IT-Produkt, das auch die YUHU GmbH anbietet. \nEine Umfrage ergab, dass die Käufer dieses IT-Produkts von einer Verschlechterung der wirtschaftlichen Entwicklung ausgehen. Es wird daher nur noch eine Absatzmenge von 4.000 Stück erwartet. \na) Ermitteln Sie den derzeitigen Gesamtumsatz der Branche für dieses IT-Produkt. \nb) Ermitteln Sie den Stückpreis, den das IT-Produkt in der Modellbetrachtung im neuen Marktgleichgewicht erzielt.",
+    "explainInstruction": "Die richtige Antwort ist 40. Die Anzahl der möglichen Kombinationen von 4 aus 49 wird durch die Formel für Kombinationen ohne Wiederholung berechnet: C(n, k) = n! / (k! * (n - k)!). In diesem Fall ist n = 49 und k = 4, also C(49, 4) = 49! / (4! * (49 - 4)!) = 211.876. Da es nur eine Gewinnkombination gibt, beträgt die Wahrscheinlichkeit, den Jackpot zu gewinnen, 1 zu 211.876, was ungefähr 0,00000472 oder etwa 1 zu 200.000 entspricht.",
+    "explainAnswerOptions": [
+        "Die richtige Antwort ist 40."
+    ]
 }

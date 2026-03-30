@@ -8,5 +8,14 @@
         "5. Die regelmäßige Amtszeit eines Betriebsrats beträgt für eine Wahlperiode vier Jahre."
     ],
     "correct": [0, 1, 4],
-    "inputMode": "MULTIPLE_CHOICE"
+    "inputMode": "MULTIPLE_CHOICE",
+    "explainInstruction": "Die richtigen Antworten sind 1, 2 und 5. Der Betriebsrat setzt sich aus Arbeitnehmern zusammen, die in der Regel von den Arbeitnehmern des Betriebs gewählt werden. Außerbetriebliche Berater, wie Gewerkschaftsfunktionäre, können den Betriebsrat unterstützen, sind aber keine Mitglieder. Die Bildung eines Betriebsrats ist nicht von der Zustimmung des Arbeitgebers abhängig, sondern kann von den Arbeitnehmern initiiert werden. Der Betriebsrat kann in Betrieben mit mindestens fünf ständigen Arbeitnehmern gewählt werden. Jugendliche Arbeitnehmer haben das aktive Wahlrecht bei Betriebsratswahlen, wenn sie das 18. Lebensjahr vollendet haben. Die regelmäßige Amtszeit eines Betriebsrats beträgt vier Jahre.",
+    "explainAnswerOptions": [
+        "Richtig. Der Betriebsrat setzt sich aus Arbeitnehmern zusammen, die in der Regel von den Arbeitnehmern des Betriebs gewählt werden. Außerbetriebliche Berater, wie Gewerkschaftsfunktionäre, können den Betriebsrat unterstützen, sind aber keine Mitglieder.",
+        "Richtig. Die Bildung eines Betriebsrats ist nicht von der Zustimmung des Arbeitgebers abhängig, sondern kann von den Arbeitnehmern initiiert werden.",
+        "Falsch. Der Betriebsrat kann in Betrieben mit mindestens fünf ständigen Arbeitnehmern gewählt werden, nicht erst ab zehn.",
+        "Richtig. Jugendliche Arbeitnehmer haben das aktive Wahlrecht bei Betriebsratswahlen, wenn sie das 18. Lebensjahr vollendet haben.",
+        "Richtig. Die regelmäßige Amtszeit eines Betriebsrats beträgt vier Jahre."
+    ]
+
 }

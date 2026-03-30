@@ -1,7 +1,11 @@
 {
     "images": ["2012_25.png"],
     "inputMode": "NUMBER",
-    "answerOptions": ["1", "2", "3", "4", "5"],
     "correct": 250000,
-    "instruction": "Beantworten Sie nur Aufgabe (a)."
+    "instruction": "Die folgende Grafik zeigt die Marktsituation auf dem Markt für ein IT-Produkt, das auch die YUHU GmbH anbietet. \nEine Umfrage ergab, dass die Käufer dieses IT-Produkts von einer Verschlechterung der wirtschaftlichen Entwicklung ausgehen. Es wird daher nur noch eine Absatzmenge von 4.000 Stück erwartet. \na) Ermitteln Sie den derzeitigen Gesamtumsatz der Branche für dieses IT-Produkt.",
+    "explainInstruction": "Die richtige Antwort ist 250.000. Der Gesamtumsatz der Branche wird berechnet, indem man die aktuelle Absatzmenge mit dem aktuellen Preis multipliziert.",
+    "explainAnswerOptions": [
+        "In diesem Fall beträgt die aktuelle Absatzmenge 5.000 Stück und der aktuelle Preis beträgt 50 EUR pro Stück. Daher ergibt sich der Gesamtumsatz als 5.000 Stück * 50 EUR/Stück = 250.000 EUR."
+    ]
+
 }
