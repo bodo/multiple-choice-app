@@ -2,5 +2,9 @@
     "inputMode": "TEXT",
     "caseSensitive": false,
     "correct": "Hypertext Markup Language",
-    "instruction": "Wofür steht *HTML*?"
+    "instruction": "Wofür steht *HTML*?",
+    "explainInstruction": "Die richtige Antwort ist Hypertext Markup Language.",
+    "explainAnswerOptions": [
+        "HTML ist die Standard-Auszeichnungssprache für Dokumente, die im Web angezeigt werden. Es wird verwendet, um die Struktur von Webseiten zu definieren und Inhalte wie Text, Bilder und Links zu formatieren. HTML ermöglicht es Webbrowsern, die Inhalte korrekt darzustellen und interaktive Elemente auf Webseiten zu erstellen."
+    ]
 }
