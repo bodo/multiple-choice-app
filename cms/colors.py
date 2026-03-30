@@ -23,14 +23,41 @@ def sub_idx(subs: list[str], sub: str) -> int:
     return subs.index(sub) if sub in subs else 0
 
 
+# No sub-index in canvas labels; custom subs use 1-based numbering among non-reserved only.
+RESERVED_SUBS = frozenset({"Main", "Answer Key", "Answer Options", "Answer"})
+
+
+def custom_sub_index_1based(subs: list[str], sub: str) -> int | None:
+    """1-based index among subs that are not Main/Answer Key/Answer Options."""
+    if sub not in subs or sub in RESERVED_SUBS:
+        return None
+    customs = [s for s in subs if s not in RESERVED_SUBS]
+    try:
+        return customs.index(sub) + 1
+    except ValueError:
+        return None
+
+
 def box_label(ann: dict, ex: str, sub: str) -> str:
+    """Compact id for buttons (no numeric sub-index for reserved categories)."""
     subs = ann["exercises"].get(ex, {}).get("subs", ["Main"])
-    return f"{ex}.{sub_idx(subs, sub)}"
+    if sub in RESERVED_SUBS:
+        return f"{ex} · {sub}"
+    n = custom_sub_index_1based(subs, sub)
+    if n is None:
+        return f"{ex} · {sub}"
+    return f"{ex}.{n}"
 
 
 def box_caption(ann: dict, ex: str, sub: str) -> str:
-    """Label shown on boxes: numeric id plus sub-category name."""
-    return f"{box_label(ann, ex, sub)} · {sub}"
+    """Canvas label: always includes exercise number. Reserved subs have no extra sub-index; custom use ex.N."""
+    subs = ann["exercises"].get(ex, {}).get("subs", ["Main"])
+    if sub in RESERVED_SUBS:
+        return f"{ex} · {sub}"
+    n = custom_sub_index_1based(subs, sub)
+    if n is None:
+        return f"{ex} · {sub}"
+    return f"{ex}.{n} · {sub}"
 
 
 def ex_sub_rgb(ann: dict, ex: str, sub: str) -> tuple[int, int, int]:

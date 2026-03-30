@@ -212,8 +212,19 @@ def render_with_boxes(
         )
         lbl = box_caption(ann, box["exercise"], box["sub"])
         tx, ty = x0 + pad, y0 + max(2, pad // 2)
-        for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
-            draw.text((tx + dx, ty + dy), lbl, fill=(255, 255, 255, 220), font=font)
+        bbox = draw.textbbox((tx, ty), lbl, font=font)
+        pad_bg = max(2, int(round(1.5 * scale)))
+        bg_box = [
+            bbox[0] - pad_bg,
+            bbox[1] - pad_bg,
+            bbox[2] + pad_bg,
+            bbox[3] + pad_bg,
+        ]
+        rad = max(3, pad_bg)
+        if hasattr(draw, "rounded_rectangle"):
+            draw.rounded_rectangle(bg_box, radius=rad, fill=(255, 255, 255, 128))
+        else:
+            draw.rectangle(bg_box, fill=(255, 255, 255, 128))
         draw.text((tx, ty), lbl, fill=(*rgb, 255), font=font)
 
     return Image.alpha_composite(img, overlay).convert("RGB")

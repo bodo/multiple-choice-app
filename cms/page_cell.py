@@ -102,11 +102,13 @@ class StaticBoxItem(QGraphicsRectItem):
         rect = self.rect()
         fm = painter.fontMetrics()
         pad = max(2, self._font_px // 5)
-        tx = rect.left() + pad
-        ty = rect.top() + fm.ascent() + pad
-        for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
-            painter.setPen(QColor(255, 255, 255, 220))
-            painter.drawText(int(tx + dx), int(ty + dy), self._caption)
+        tx = float(rect.left() + pad)
+        ty = float(rect.top() + fm.ascent() + pad)
+        tw = float(fm.horizontalAdvance(self._caption))
+        th = float(fm.height())
+        ascent = float(fm.ascent())
+        bg = QRectF(tx - pad, ty - ascent - pad, tw + 2 * pad, th + 2 * pad)
+        painter.fillRect(bg, QColor(255, 255, 255, 128))
         painter.setPen(self._label_color)
         painter.drawText(int(tx), int(ty), self._caption)
         painter.restore()
@@ -168,11 +170,13 @@ class EditableBoxItem(QGraphicsRectItem):
         rect = self.rect()
         fm = painter.fontMetrics()
         pad = max(2, self._font_px // 5)
-        tx = rect.left() + pad
-        ty = rect.top() + fm.ascent() + pad
-        for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
-            painter.setPen(QColor(255, 255, 255, 220))
-            painter.drawText(int(tx + dx), int(ty + dy), self._caption)
+        tx = float(rect.left() + pad)
+        ty = float(rect.top() + fm.ascent() + pad)
+        tw = float(fm.horizontalAdvance(self._caption))
+        th = float(fm.height())
+        ascent = float(fm.ascent())
+        bg = QRectF(tx - pad, ty - ascent - pad, tw + 2 * pad, th + 2 * pad)
+        painter.fillRect(bg, QColor(255, 255, 255, 128))
         painter.setPen(self._label_color)
         painter.drawText(int(tx), int(ty), self._caption)
         painter.restore()
