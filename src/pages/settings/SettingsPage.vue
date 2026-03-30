@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useSettings } from '../../entities/settings/useSettings'
 
 const { t } = useI18n()
-const { autoAdvance, language, mode, timeoutCorrect, timeoutIncorrect, soundEnabled, hapticEnabled, examQuestionCount } = useSettings()
+const { autoAdvance, language, theme, mode, timeoutCorrect, timeoutIncorrect, soundEnabled, hapticEnabled, examQuestionCount } = useSettings()
 
 const languages = [
   { code: 'eng', label: 'English' },
@@ -184,6 +184,27 @@ const autoAdvanceDisabled = computed(() => mode.value === 'exam')
           @click="language = lang.code"
         >
           {{ lang.label }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Theme Selection -->
+    <div class="flex flex-col gap-2">
+      <p class="font-medium">
+        {{ t('theme') }}
+      </p>
+      <div class="flex gap-2">
+        <button
+          v-for="th in [{ code: 'auto', label: t('themeAuto') }, { code: 'abschluss-light', label: t('themeLight') }, { code: 'abschluss-dark', label: t('themeDark') }]"
+          :key="th.code"
+          type="button"
+          class="px-4 py-2 rounded-lg border-2 text-sm font-medium transition-colors flex-1"
+          :class="theme === th.code
+            ? 'border-primary bg-primary/10 text-primary'
+            : 'border-base-300 hover:border-base-content/30'"
+          @click="theme = th.code"
+        >
+          {{ th.label }}
         </button>
       </div>
     </div>
