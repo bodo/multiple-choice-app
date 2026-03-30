@@ -47,3 +47,15 @@ Adds an invisible Tesseract OCR text layer to every PDF in `processed_data/`, in
 ```bash
 uv run python 001_add_ocr_layer_to_flat_pdfs.py
 ```
+
+### 002 — group-pdfs-by-exam
+
+Agentic script (Ollama / qwen3.5:4b) that groups all PDFs in `processed_data/flat_pdfs/` into exam sessions. The agent receives all filenames upfront and can call `read_pdf_text()` for disambiguation. It terminates by calling `save_groupings()`.
+
+Output: `processed_data/exam_groups.json`
+
+**Requires** Ollama running locally with `qwen3.5:4b` pulled.
+
+```bash
+uv run python 002_group_pdfs_by_exam.py
+```
