@@ -24,15 +24,16 @@ const isSubmitted = computed(() => props.phase === 'submitted')
 
 watch(() => props.exercise, () => { input.value = ''; wordChecks.value = [] })
 
-// Auto-focus when entering answering phase
-watch(isInteractive, async (interactive) => {
-  if (interactive) {
-    await nextTick()
-    await new Promise(resolve => requestAnimationFrame(resolve))
-    inputEl.value?.focus()
-    inputEl.value?.select()
-  }
-})
+// Auto-focus when entering answering phase or when exercise changes
+async function focusInput() {
+  await nextTick()
+  await new Promise(resolve => requestAnimationFrame(resolve))
+  inputEl.value?.focus()
+  inputEl.value?.select()
+}
+watch(isInteractive, (interactive) => { if (interactive) focusInput() })
+watch(() => props.exercise, () => { if (isInteractive.value) focusInput() })
+onMounted(() => { if (isInteractive.value) focusInput() })
 
 function normalize(s: string): string {
   return props.exercise.caseSensitive ? s : s.toLowerCase()
@@ -70,12 +71,15 @@ function submit() {
   emit('submitted', { isCorrect: allCorrect, isCloseMatch: allCorrect && !isExact, submittedValue: input.value })
 }
 
+let submitTime = 0
 function handleKeyDown(e: KeyboardEvent) {
   if (e.key === 'Enter') {
     e.preventDefault()
+    if (e.repeat) return
     if (isInteractive.value && input.value.trim()) {
       submit()
-    } else if (isSubmitted.value) {
+      submitTime = Date.now()
+    } else if (isSubmitted.value && Date.now() - submitTime > 500) {
       emit('advance')
     }
   } else if (e.key === 'Escape' && isSubmitted.value) {

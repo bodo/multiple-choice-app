@@ -49,6 +49,24 @@ function optionBgClass(idx: number): string {
   return 'border-base-300 bg-base-200/50 opacity-60'
 }
 
+const isPartlyIncorrect = computed(() => {
+  if (props.result.isCorrect || props.exercise.inputMode !== 'MULTIPLE_CHOICE') return false
+  const selected = selectedSet.value
+  return [...selected].some(i => correctSet.value.has(i))
+})
+
+const resultLabel = computed(() => {
+  if (props.result.isCorrect) return t('correct')
+  if (isPartlyIncorrect.value) return t('partlyIncorrect')
+  return t('incorrect')
+})
+
+const resultClass = computed(() => {
+  if (props.result.isCorrect) return 'bg-success/20 text-success'
+  if (isPartlyIncorrect.value) return 'bg-error/20 text-error'
+  return 'bg-error/20 text-error'
+})
+
 const hasExplanation = computed(() =>
   !!props.exercise.explainInstruction || (props.exercise.explainAnswerOptions?.some(e => !!e) ?? false),
 )
@@ -59,9 +77,9 @@ const hasExplanation = computed(() =>
     <!-- Result banner -->
     <div
       class="rounded-lg px-4 py-3 font-bold text-center text-lg"
-      :class="result.isCorrect ? 'bg-success/20 text-success' : 'bg-error/20 text-error'"
+      :class="resultClass"
     >
-      {{ result.isCorrect ? t('correct') : t('incorrect') }}
+      {{ resultLabel }}
     </div>
 
     <!-- Choice-based: options with icons + explanations -->

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Bookmark } from 'lucide-vue-next'
 import { useExercises } from '../../entities/exercise/useExercises'
@@ -33,6 +33,28 @@ const liveAnnouncement = computed(() => {
   if (!lastResult.value) return ''
   return lastResult.value.isCorrect ? t('correct') : t('incorrect')
 })
+
+// Detect landscape vs portrait to avoid mounting duplicate input components
+const isLandscape = ref(window.matchMedia('(orientation: landscape)').matches)
+let mql: MediaQueryList
+onMounted(() => {
+  mql = window.matchMedia('(orientation: landscape)')
+  const handler = (e: MediaQueryListEvent) => { isLandscape.value = e.matches }
+  mql.addEventListener('change', handler)
+  onUnmounted(() => mql.removeEventListener('change', handler))
+})
+
+// Global Enter to advance when submitted (input components unmount on desktop)
+let submitTime = 0
+watch(phase, (p) => { if (p === 'submitted') submitTime = Date.now() })
+function handleGlobalKeyDown(e: KeyboardEvent) {
+  if (e.key === 'Enter' && !e.repeat && phase.value === 'submitted' && Date.now() - submitTime > 500) {
+    e.preventDefault()
+    advance()
+  }
+}
+onMounted(() => window.addEventListener('keydown', handleGlobalKeyDown))
+onUnmounted(() => window.removeEventListener('keydown', handleGlobalKeyDown))
 
 // Swipe left to advance after submitting
 useSwipe((dir) => {
@@ -122,22 +144,21 @@ useSwipe((dir) => {
     </div>
 
     <!-- Landscape/desktop: side-by-side, right column swaps on submit -->
-    <div v-if="!isExamFinished" class="hidden landscape:flex flex-row flex-1 overflow-hidden">
+    <div v-if="!isExamFinished && isLandscape" class="flex flex-row flex-1 overflow-hidden">
       <div class="w-1/2 overflow-y-auto p-4">
         <QuestionSection :exercise="currentExercise" />
       </div>
       <div class="w-1/2 overflow-y-auto flex flex-col items-end p-4 gap-3">
-        <template v-if="phase !== 'submitted'">
-          <AnswerSection
-            :exercise="currentExercise"
-            :phase="phase"
-            :result="lastResult"
-            @submitted="submitAnswer"
-            @advance="advance"
-          />
-        </template>
-        <template v-else>
-          <ExplainBack v-if="lastResult" :exercise="currentExercise" :result="lastResult" />
+        <AnswerSection
+          v-if="phase !== 'submitted'"
+          :exercise="currentExercise"
+          :phase="phase"
+          :result="lastResult"
+          @submitted="submitAnswer"
+          @advance="advance"
+        />
+        <template v-else-if="lastResult">
+          <ExplainBack :exercise="currentExercise" :result="lastResult" />
           <button type="button" class="btn btn-primary" @click="advance">
             {{ t('next') }}
           </button>
@@ -146,7 +167,7 @@ useSwipe((dir) => {
     </div>
 
     <!-- Portrait/mobile: flashcard flip -->
-    <FlashCard v-if="!isExamFinished" class="landscape:hidden flex-1 overflow-hidden" :flipped="phase === 'submitted'">
+    <FlashCard v-if="!isExamFinished && !isLandscape" class="flex-1 overflow-hidden" :flipped="phase === 'submitted'">
       <template #front>
         <div class="flex flex-col h-full overflow-y-auto">
           <div class="p-4">
