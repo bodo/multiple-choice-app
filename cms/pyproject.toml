@@ -8,9 +8,10 @@ dependencies = [
     "img2pdf",
     "ocrmypdf",
     "ollama",
+    "pillow",
     "pypdf",
     "pydantic",
-    "streamlit",
     "pymupdf",
+    "pyside6",
 ]
 
