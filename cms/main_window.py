@@ -22,7 +22,7 @@ from PySide6.QtWidgets import (
 )
 
 from annotation_store import FLAT_PDFS, extract_screenshots, load_annotations, save_json
-from pdf_render import get_page_list
+from pdf_render import get_page_list, page_raster_cache_clear
 from page_cell import PageCellWidget
 
 DEBOUNCE_MS = 500
@@ -46,6 +46,9 @@ class MainWindow(QMainWindow):
         self._pending_screenshots = False
         self._screenshot_busy = False
         self._page_cells: list[PageCellWidget] = []
+        self._grid_sig: tuple[str, tuple[tuple[str, int], ...]] | None = None
+        self._preview_pool = QThreadPool(self)
+        self._preview_pool.setMaxThreadCount(3)
 
         self._debounce = QTimer(self)
         self._debounce.setSingleShot(True)
@@ -189,6 +192,7 @@ class MainWindow(QMainWindow):
                 self._pending_screenshots = False
         self._exam = None
         self._idle.stop()
+        page_raster_cache_clear()
         self._stack.setCurrentWidget(self._list_panel)
         self._refresh_exam_list()
         self._status.setText("")
@@ -341,6 +345,7 @@ class MainWindow(QMainWindow):
 
     def _clear_grid(self) -> None:
         self._page_cells.clear()
+        self._grid_sig = None
         while self._grid_layout.count():
             item = self._grid_layout.takeAt(0)
             w = item.widget()
@@ -348,11 +353,27 @@ class MainWindow(QMainWindow):
                 w.deleteLater()
 
     def _refresh_grid(self) -> None:
-        self._clear_grid()
         if not self._exam:
+            self._clear_grid()
             return
         exam_dir = FLAT_PDFS / self._exam
         pages = get_page_list(exam_dir)
+        sig: tuple[str, tuple[tuple[str, int], ...]] = (
+            self._exam,
+            tuple((name, num) for _path, name, num in pages),
+        )
+        if (
+            sig == self._grid_sig
+            and len(self._page_cells) == len(pages)
+            and self._page_cells
+        ):
+            for cell, _tri in zip(self._page_cells, pages):
+                cell.set_selection(self._sel_ex, self._sel_sub)
+            QTimer.singleShot(0, self._after_grid_layout)
+            return
+
+        self._clear_grid()
+        self._grid_sig = sig
         for i, (path, pdf_name, page_num) in enumerate(pages):
             row, col = divmod(i, 2)
             cell = PageCellWidget(
@@ -362,11 +383,18 @@ class MainWindow(QMainWindow):
                 self._ann,
                 self._sel_ex,
                 self._sel_sub,
+                preview_pool=self._preview_pool,
             )
             cell.annotation_changed.connect(self._on_annotation_changed)
             self._page_cells.append(cell)
             self._grid_layout.addWidget(cell, row, col)
-        QTimer.singleShot(0, self._update_lazy_cells)
+        QTimer.singleShot(0, self._after_grid_layout)
+
+    def _after_grid_layout(self) -> None:
+        self._update_lazy_cells()
+        for cell in self._page_cells:
+            if cell.ann_eligible() and not cell.is_interactive():
+                cell.schedule_preview(self._preview_pool)
 
     def _update_lazy_cells(self) -> None:
         """Only pages near the scroll viewport keep a full QGraphicsView; others use a light preview."""
@@ -462,6 +490,7 @@ class MainWindow(QMainWindow):
     def closeEvent(self, event) -> None:
         self._debounce.stop()
         self._idle.stop()
+        page_raster_cache_clear()
         if self._exam:
             try:
                 save_json(self._exam, self._ann)

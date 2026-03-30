@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 
-import io
+import copy
 from collections.abc import Callable
 
 from PIL import Image
-from PySide6.QtCore import QPointF, QRectF, Qt, Signal
+from PySide6.QtCore import QPointF, QRectF, QTimer, Qt, Signal
 from PySide6.QtGui import QColor, QFont, QImage, QMouseEvent, QPainter, QPen, QPixmap
 from PySide6.QtWidgets import (
     QFrame,
@@ -24,20 +24,20 @@ from PySide6.QtWidgets import (
 
 from colors import box_caption, box_label, ex_sub_rgb
 from pdf_render import (
-    ANNOTATE_BG_SCALE,
     PREVIEW_RENDER_SCALE,
     RENDER_SCALE,
+    estimate_page_height_for_width,
+    pil_rgb_to_qimage,
+    render_pdf_page_qimage,
     render_with_boxes,
 )
+from render_tasks import PreviewRunnable
 
-# Fallback width before layout knows viewport size; after show, actual column width is used.
 GRID_CANVAS_W = 880
 
 
 def _pil_to_qpixmap(img: Image.Image) -> QPixmap:
-    buf = io.BytesIO()
-    img.save(buf, format="PNG")
-    return QPixmap.fromImage(QImage.fromData(buf.getvalue()))
+    return QPixmap.fromImage(pil_rgb_to_qimage(img))
 
 
 class ScaledPageLabel(QLabel):
@@ -71,6 +71,47 @@ class ScaledPageLabel(QLabel):
         super().setPixmap(scaled)
 
 
+class StaticBoxItem(QGraphicsRectItem):
+    """Non-interactive box overlay (other exercises / subs on same page)."""
+
+    def __init__(
+        self, box: dict, scene_w: int, scene_h: int, ann: dict
+    ) -> None:
+        super().__init__()
+        self._box = box
+        self._scene_w = scene_w
+        self._scene_h = scene_h
+        ex, sub = box["exercise"], box["sub"]
+        red, green, blue = ex_sub_rgb(ann, ex, sub)
+        self._label_color = QColor(red, green, blue)
+        self._caption = box_caption(ann, ex, sub)
+        self._font_px = max(11, int(round(scene_h * 0.022)))
+        rn = box["rect"]
+        x0, y0 = rn[0] * scene_w, rn[1] * scene_h
+        x1, y1 = rn[2] * scene_w, rn[3] * scene_h
+        self.setRect(QRectF(x0, y0, x1 - x0, y1 - y0).normalized())
+        self.setPen(QPen(self._label_color, 2))
+        self.setBrush(QColor(red, green, blue, 50))
+
+    def paint(self, painter: QPainter, option, widget=None) -> None:
+        super().paint(painter, option, widget)
+        painter.save()
+        f = QFont()
+        f.setPixelSize(self._font_px)
+        painter.setFont(f)
+        rect = self.rect()
+        fm = painter.fontMetrics()
+        pad = max(2, self._font_px // 5)
+        tx = rect.left() + pad
+        ty = rect.top() + fm.ascent() + pad
+        for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+            painter.setPen(QColor(255, 255, 255, 220))
+            painter.drawText(int(tx + dx), int(ty + dy), self._caption)
+        painter.setPen(self._label_color)
+        painter.drawText(int(tx), int(ty), self._caption)
+        painter.restore()
+
+
 class EditableBoxItem(QGraphicsRectItem):
     """Movable rectangle synced to box['rect'] in normalized coordinates."""
 
@@ -88,20 +129,35 @@ class EditableBoxItem(QGraphicsRectItem):
         self._scene_h = scene_h
         self._ann = ann
         self._on_changed = on_changed
+        self._notify_timer = QTimer()
+        self._notify_timer.setSingleShot(True)
+        self._notify_timer.setInterval(180)
+        self._notify_timer.timeout.connect(self._flush_notify)
         ex, sub = box["exercise"], box["sub"]
-        r, g, b = ex_sub_rgb(ann, ex, sub)
-        self._label_color = QColor(r, g, b)
+        red, green, blue = ex_sub_rgb(ann, ex, sub)
+        self._label_color = QColor(red, green, blue)
         self._caption = box_caption(ann, ex, sub)
         self._font_px = max(11, int(round(scene_h * 0.022)))
-        r = box["rect"]
-        x0, y0 = r[0] * scene_w, r[1] * scene_h
-        x1, y1 = r[2] * scene_w, r[3] * scene_h
+        rn = box["rect"]
+        x0, y0 = rn[0] * scene_w, rn[1] * scene_h
+        x1, y1 = rn[2] * scene_w, rn[3] * scene_h
         self.setRect(QRectF(x0, y0, x1 - x0, y1 - y0).normalized())
         self.setPen(QPen(self._label_color, 2))
         self.setBrush(QColor(0, 0, 0, 0))
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsMovable, True)
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsSelectable, True)
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemSendsGeometryChanges, True)
+
+    def _schedule_notify(self) -> None:
+        self._notify_timer.start()
+
+    def _flush_notify(self) -> None:
+        self._on_changed()
+
+    def flush_notify_pending(self) -> None:
+        if self._notify_timer.isActive():
+            self._notify_timer.stop()
+        self._on_changed()
 
     def paint(self, painter: QPainter, option, widget=None) -> None:
         super().paint(painter, option, widget)
@@ -124,7 +180,7 @@ class EditableBoxItem(QGraphicsRectItem):
     def itemChange(self, change, value):
         if change == QGraphicsItem.GraphicsItemChange.ItemPositionHasChanged:
             self._sync_from_scene()
-            self._on_changed()
+            self._schedule_notify()
         return super().itemChange(change, value)
 
     def _sync_from_scene(self) -> None:
@@ -166,6 +222,11 @@ class AnnotationCanvas(QGraphicsView):
         self._rubber: QGraphicsRectItem | None = None
         self._origin: QPointF | None = None
         self._bg_item: QGraphicsPixmapItem | None = None
+        self._resize_timer = QTimer(self)
+        self._resize_timer.setSingleShot(True)
+        self._resize_timer.setInterval(120)
+        self._resize_timer.timeout.connect(self._on_resize_debounce)
+        self._pending_resize_width: int | None = None
         r0, g0, b0 = ex_sub_rgb(ann, ex, sub)
         self._draw_color = QColor(r0, g0, b0)
 
@@ -181,6 +242,13 @@ class AnnotationCanvas(QGraphicsView):
 
         self.rebuild_scene()
 
+    def set_ex_sub(self, ex: str, sub: str) -> None:
+        self._ex = ex
+        self._sub = sub
+        r0, g0, b0 = ex_sub_rgb(self._ann, ex, sub)
+        self._draw_color = QColor(r0, g0, b0)
+        self.rebuild_scene()
+
     def _effective_canvas_width(self) -> int:
         vw = self.viewport().width()
         if vw > 320:
@@ -191,53 +259,74 @@ class AnnotationCanvas(QGraphicsView):
         super().resizeEvent(event)
         nw = self._effective_canvas_width()
         if self._scene_w > 1 and abs(nw - self._scene_w) > 32:
-            self.rebuild_scene()
+            self._pending_resize_width = nw
+            self._resize_timer.start()
 
-    def rebuild_scene(self) -> None:
-        self._scene.clear()
-        self._bg_item = None
-        cw = self._effective_canvas_width()
+    def _on_resize_debounce(self) -> None:
+        self.rebuild_scene()
+
+    def _remove_overlay_items(self) -> None:
+        for it in list(self._scene.items()):
+            if isinstance(it, QGraphicsPixmapItem):
+                continue
+            self._scene.removeItem(it)
+
+    def _rebuild_pdf_layer(self, cw: int) -> None:
+        q = render_pdf_page_qimage(self._pdf_path, self._page_num, cw)
+        self._scene_w = cw
+        self._scene_h = q.height()
+        self._scene.setSceneRect(0, 0, self._scene_w, self._scene_h)
+        if self._bg_item is not None:
+            self._scene.removeItem(self._bg_item)
+            self._bg_item = None
+        pm = QPixmap.fromImage(q)
+        self._bg_item = self._scene.addPixmap(pm)
+        self._bg_item.setZValue(0)
+
+    def _rebuild_overlay_items(self) -> None:
+        self._remove_overlay_items()
         page_boxes = [
             b
             for b in self._ann["boxes"]
             if b["pdf"] == self._pdf_name and b["page"] == self._page_num
         ]
-        # Show every box on the page in the pixmap except the active (ex, sub),
-        # which are drawn as interactive EditableBoxItem on top (avoids double-draw).
         cur = [
             b
             for b in page_boxes
             if b["exercise"] == self._ex and b["sub"] == self._sub
         ]
-        bg_boxes = [
+        others = [
             b
             for b in page_boxes
             if not (b["exercise"] == self._ex and b["sub"] == self._sub)
         ]
-        bg_img = render_with_boxes(
-            self._pdf_path, self._page_num, bg_boxes, self._ann, scale=ANNOTATE_BG_SCALE
-        )
-        ow, oh = bg_img.size
-        canvas_h = int(oh * cw / ow)
-        bg_img = bg_img.resize((cw, canvas_h), Image.Resampling.LANCZOS)
-        self._scene_w = cw
-        self._scene_h = canvas_h
-        self._scene.setSceneRect(0, 0, self._scene_w, self._scene_h)
-        r0, g0, b0 = ex_sub_rgb(self._ann, self._ex, self._sub)
-        self._draw_color = QColor(r0, g0, b0)
-
-        pm = _pil_to_qpixmap(bg_img)
-        self._bg_item = self._scene.addPixmap(pm)
-        self._bg_item.setZValue(0)
-
+        for box in others:
+            it = StaticBoxItem(box, self._scene_w, self._scene_h, self._ann)
+            it.setZValue(1)
+            self._scene.addItem(it)
         for box in cur:
             item = EditableBoxItem(
                 box, self._scene_w, self._scene_h, self._ann, self._emit_changed
             )
-            item.setZValue(1)
+            item.setZValue(2)
             self._scene.addItem(item)
-
+        r0, g0, b0 = ex_sub_rgb(self._ann, self._ex, self._sub)
+        self._draw_color = QColor(r0, g0, b0)
         self.setFixedSize(self._scene_w, self._scene_h)
+
+    def rebuild_scene(self) -> None:
+        cw = self._effective_canvas_width()
+        self._rebuild_pdf_layer(cw)
+        self._rebuild_overlay_items()
+
+    def sync_overlay_items(self) -> None:
+        """Update box items only (no PDF reraster)."""
+        self._rebuild_overlay_items()
+
+    def _flush_editable_notifications(self) -> None:
+        for it in self._scene.items():
+            if isinstance(it, EditableBoxItem):
+                it.flush_notify_pending()
 
     def _emit_changed(self) -> None:
         self.changed.emit()
@@ -255,7 +344,7 @@ class AnnotationCanvas(QGraphicsView):
             self._rubber = QGraphicsRectItem()
             self._rubber.setPen(QPen(self._draw_color, 2, Qt.PenStyle.DashLine))
             self._rubber.setBrush(QColor(0, 0, 0, 0))
-            self._rubber.setZValue(2)
+            self._rubber.setZValue(3)
             self._scene.addItem(self._rubber)
             self._rubber.setRect(QRectF(sp, sp))
             return
@@ -297,8 +386,9 @@ class AnnotationCanvas(QGraphicsView):
                 }
             )
             self._emit_changed()
-            self.rebuild_scene()
+            self.sync_overlay_items()
             return
+        self._flush_editable_notifications()
         super().mouseReleaseEvent(event)
 
     def keyPressEvent(self, event) -> None:
@@ -314,8 +404,9 @@ class AnnotationCanvas(QGraphicsView):
                 except ValueError:
                     pass
             if to_remove:
+                self._flush_editable_notifications()
                 self._emit_changed()
-                self.rebuild_scene()
+                self.sync_overlay_items()
             return
         super().keyPressEvent(event)
 
@@ -333,6 +424,7 @@ class PageCellWidget(QFrame):
         ann: dict,
         sel_ex: str | None,
         sel_sub: str | None,
+        preview_pool=None,
         parent: QWidget | None = None,
     ):
         super().__init__(parent)
@@ -348,7 +440,10 @@ class PageCellWidget(QFrame):
         self._body: QWidget | None = None
         self._body_layout: QVBoxLayout | None = None
         self._hint: QLabel | None = None
+        self._cap: QLabel | None = None
         self._interactive = False
+        self._preview_seq = 0
+        self._preview_pool = preview_pool
 
         lay = QVBoxLayout(self)
         lay.setContentsMargins(4, 4, 4, 4)
@@ -357,15 +452,17 @@ class PageCellWidget(QFrame):
 
         if can:
             assert sel_ex is not None and sel_sub is not None
-            cap = QLabel(
+            self._cap = QLabel(
                 f"✏ {pdf_name}  p.{page_num + 1}  —  Exercise {sel_ex} / {sel_sub}"
             )
-            lay.addWidget(cap)
+            lay.addWidget(self._cap)
 
             self._body = QWidget()
             self._body_layout = QVBoxLayout(self._body)
             self._body_layout.setContentsMargins(0, 0, 0, 0)
             self._preview = ScaledPageLabel()
+            ph = estimate_page_height_for_width(pdf_path, page_num, GRID_CANVAS_W)
+            self._preview.setMinimumHeight(min(max(ph, 120), 3600))
             self._body_layout.addWidget(self._preview)
             lay.addWidget(self._body)
 
@@ -378,7 +475,6 @@ class PageCellWidget(QFrame):
             self._remove_layout = QVBoxLayout(rm_wrap)
             self._remove_layout.setContentsMargins(0, 0, 0, 0)
             lay.addWidget(rm_wrap)
-            self._refresh_preview()
             self._rebuild_remove_buttons()
         else:
             page_boxes = [
@@ -398,6 +494,62 @@ class PageCellWidget(QFrame):
 
     def ann_eligible(self) -> bool:
         return bool(self._sel_ex and self._sel_sub)
+
+    def is_interactive(self) -> bool:
+        return self._interactive
+
+    def set_selection(self, sel_ex: str | None, sel_sub: str | None) -> None:
+        self._sel_ex = sel_ex
+        self._sel_sub = sel_sub
+        if self._cap and sel_ex and sel_sub:
+            self._cap.setText(
+                f"✏ {self._pdf_name}  p.{self._page_num + 1}  —  Exercise {sel_ex} / {sel_sub}"
+            )
+        if self._canvas is not None and sel_ex and sel_sub:
+            self._canvas.set_ex_sub(sel_ex, sel_sub)
+        self.schedule_preview(self._preview_pool)
+
+    def schedule_preview(self, pool) -> None:
+        """Request async preview; pool may be None to run sync (fallback)."""
+        if self._preview is None:
+            return
+        self._preview_seq += 1
+        rid = self._preview_seq
+        page_boxes = [
+            b
+            for b in self._ann["boxes"]
+            if b["pdf"] == self._pdf_name and b["page"] == self._page_num
+        ]
+        if pool is None:
+            self._apply_preview_sync(page_boxes)
+            return
+        task = PreviewRunnable(
+            rid,
+            self._pdf_path,
+            self._page_num,
+            copy.deepcopy(page_boxes),
+            copy.deepcopy(self._ann.get("exercises", {})),
+            PREVIEW_RENDER_SCALE,
+            self._on_preview_ready,
+        )
+        pool.start(task)
+
+    def _on_preview_ready(self, rid: int, qim: QImage) -> None:
+        if rid != self._preview_seq or self._preview is None:
+            return
+        self._preview.set_source_pixmap(QPixmap.fromImage(qim))
+
+    def _apply_preview_sync(self, page_boxes: list[dict]) -> None:
+        if self._preview is None:
+            return
+        img = render_with_boxes(
+            self._pdf_path,
+            self._page_num,
+            page_boxes,
+            self._ann,
+            scale=PREVIEW_RENDER_SCALE,
+        )
+        self._preview.set_source_pixmap(_pil_to_qpixmap(img))
 
     def set_interactive(self, on: bool) -> None:
         if not self.ann_eligible() or self._body_layout is None or self._preview is None:
@@ -436,33 +588,16 @@ class PageCellWidget(QFrame):
                 self._canvas = None
             self._body_layout.addWidget(self._preview)
             self._preview.show()
-            self._refresh_preview()
+            self.schedule_preview(self._preview_pool)
             if self._hint:
                 self._hint.setText(
                     "Preview — scroll this page into view to draw."
                 )
         self._rebuild_remove_buttons()
 
-    def _refresh_preview(self) -> None:
-        if self._preview is None:
-            return
-        page_boxes = [
-            b
-            for b in self._ann["boxes"]
-            if b["pdf"] == self._pdf_name and b["page"] == self._page_num
-        ]
-        img = render_with_boxes(
-            self._pdf_path,
-            self._page_num,
-            page_boxes,
-            self._ann,
-            scale=PREVIEW_RENDER_SCALE,
-        )
-        self._preview.set_source_pixmap(_pil_to_qpixmap(img))
-
     def _on_local_changed(self) -> None:
         if not self._interactive and self._preview is not None:
-            self._refresh_preview()
+            self.schedule_preview(self._preview_pool)
         self._rebuild_remove_buttons()
         self.annotation_changed.emit()
 
@@ -492,9 +627,9 @@ class PageCellWidget(QFrame):
                 except ValueError:
                     pass
                 if self._canvas:
-                    self._canvas.rebuild_scene()
+                    self._canvas.sync_overlay_items()
                 else:
-                    self._refresh_preview()
+                    self.schedule_preview(self._preview_pool)
                 self._on_local_changed()
 
             rm.clicked.connect(lambda checked=False, fn=remove_one: fn())
