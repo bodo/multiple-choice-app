@@ -17,9 +17,9 @@ PROCESSED = Path(__file__).parent / "processed_data/flat_pdfs"
 
 
 def main() -> None:
-    pdfs = sorted(PROCESSED.glob("*.pdf"))
+    pdfs = sorted(PROCESSED.rglob("*.pdf"))
     if not pdfs:
-        print("No PDFs found in processed_data/")
+        print("No PDFs found in processed_data/flat_pdfs/")
         return
 
     ok = failed = 0

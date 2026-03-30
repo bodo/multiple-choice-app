@@ -10,5 +10,7 @@ dependencies = [
     "ollama",
     "pypdf",
     "pydantic",
+    "streamlit",
+    "pymupdf",
 ]
 

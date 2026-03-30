@@ -1,9 +1,9 @@
 """
-Flatten input_data/ into processed_data/ as a flat list of PDFs.
+Convert everything in input_data/ to PDF, preserving the first folder level.
 
-Output filenames encode the full folder path:
-    input_data/2012_13 Winter/AP W2012 IT WiSo.pdf
-    → processed_data/2012_13 Winter_AP W2012 IT WiSo.pdf
+    input_data/2012_13 Winter/AP W2012 IT WiSo.pdf  →  2012_13 Winter/AP W2012 IT WiSo.pdf
+    input_data/2004_Sommer/alte Version/FISI.pdf     →  2004_Sommer/alte Version_FISI.pdf
+    input_data/notenschluessel.pdf                   →  notenschluessel.pdf
 
 Conversions:
 - .pdf              → copied directly
@@ -33,11 +33,19 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png"}
 ALL_HANDLED = {".pdf"} | LIBREOFFICE_EXTS | IMAGE_EXTS
 
 
-def output_name(rel: Path) -> str:
-    """Join all path parts with '_', replacing the original extension with .pdf."""
-    parts = list(rel.parts)
-    parts[-1] = rel.stem  # drop extension from filename part
-    return "_".join(parts) + ".pdf"
+def output_path(rel: Path) -> Path:
+    """
+    Keep the first folder level; flatten everything deeper with '_'.
+      a/b.doc          →  a/b.pdf
+      a/sub/b.doc      →  a/sub_b.pdf
+      b.doc            →  b.pdf
+    """
+    parts = rel.parts
+    if len(parts) == 1:
+        return Path(rel.stem + ".pdf")
+    folder = parts[0]
+    inner  = list(parts[1:-1]) + [Path(parts[-1]).stem]
+    return Path(folder) / ("_".join(inner) + ".pdf")
 
 
 def convert_with_libreoffice(src: Path, dest: Path) -> None:
@@ -58,7 +66,7 @@ def convert_image(src: Path, dest: Path) -> None:
 
 
 def main() -> None:
-    OUTPUT.mkdir(exist_ok=True)
+    OUTPUT.mkdir(parents=True, exist_ok=True)
 
     skipped: list[str] = []
     ok = failed = 0
@@ -74,7 +82,8 @@ def main() -> None:
             skipped.append(str(rel))
             continue
 
-        dest = OUTPUT / output_name(rel)
+        dest = OUTPUT / output_path(rel)
+        dest.parent.mkdir(parents=True, exist_ok=True)
         print(f"  {rel} → {dest.name}", end=" ... ", flush=True)
 
         try:
