@@ -37,3 +37,13 @@ input_data/2012_13 Winter/AP W2012 IT WiSo.pdf
 ```bash
 uv run python flatten_pdfs.py
 ```
+
+### 001 — add-ocr-layer
+
+Adds an invisible Tesseract OCR text layer to every PDF in `processed_data/`, in-place. Pages that already contain selectable text are skipped automatically, so already-digital PDFs are not re-processed.
+
+**Requires** Tesseract and Ghostscript installed on the system.
+
+```bash
+uv run python 001_add_ocr_layer_to_flat_pdfs.py
+```
