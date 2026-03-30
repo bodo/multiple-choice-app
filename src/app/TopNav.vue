@@ -1,10 +1,24 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { BookOpen, BarChart3, Bookmark, Settings, Sun, Moon } from 'lucide-vue-next'
 import { useSettings } from '../entities/settings/useSettings'
+import { useExerciseCatalog } from '../entities/exercise/useExerciseCatalog'
 
-const { theme } = useSettings()
+const { theme, mode } = useSettings()
+const { allTags, activeTagFilter, setTagFilter } = useExerciseCatalog()
+
+const isExam = computed(() => mode.value === 'exam')
+
+// Force "All" in exam mode
+watch(isExam, (exam) => {
+  if (exam) setTagFilter(null)
+})
+
+function onTagChange(e: Event) {
+  const val = (e.target as HTMLSelectElement).value
+  setTagFilter(val || null)
+}
 
 const isDark = computed(() => {
   if (theme.value === 'auto') {
@@ -53,6 +67,21 @@ function toggleTheme() {
       {{ $t('settingsTitle') }}
     </RouterLink>
     <div class="flex-1" />
+    <select
+      v-if="allTags.length > 0"
+      class="select select-sm select-bordered text-xs max-w-32"
+      :value="activeTagFilter ?? ''"
+      :disabled="isExam"
+      :title="isExam ? $t('categoryDisabledExam') : ''"
+      @change="onTagChange"
+    >
+      <option value="">
+        {{ $t('allCategories') }}
+      </option>
+      <option v-for="tag in allTags" :key="tag" :value="tag">
+        {{ tag }}
+      </option>
+    </select>
     <button
       type="button"
       class="p-2 rounded-lg text-base-content/60 hover:text-base-content hover:bg-base-200 transition-colors"

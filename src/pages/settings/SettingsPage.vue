@@ -47,6 +47,9 @@ const autoAdvanceDisabled = computed(() => mode.value === 'exam')
       <p v-if="mode === 'exam'" class="text-sm text-accent font-medium">
         {{ t('examModeInfo') }}
       </p>
+      <p v-if="mode === 'exam'" class="text-sm text-base-content/60">
+        {{ t('examModeCategoryHint') }}
+      </p>
     </div>
 
     <!-- Auto Advance Toggle -->

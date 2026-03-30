@@ -11,8 +11,8 @@ import QuestionSection from './QuestionSection.vue'
 import AnswerSection from './AnswerSection.vue'
 
 const { t } = useI18n()
-const { exercises, isLoading } = useExercises()
-const { phase, currentExercise, currentIndex, totalExercises, lastResult, submitAnswer, advance, totalAnswered, accuracy, averageTimeSeconds } = useExerciseFlow(exercises)
+const { isLoading } = useExercises()
+const { phase, currentExercise, currentIndex, totalExercises, lastResult, submitAnswer, advance, totalAnswered, accuracy, averageTimeSeconds } = useExerciseFlow()
 
 const { bookmarks, toggleBookmark } = useBookmarks()
 const isCurrentBookmarked = computed(() => currentExercise.value ? bookmarks.value.has(currentExercise.value.id) : false)

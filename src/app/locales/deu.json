@@ -48,5 +48,8 @@
   "bookmarksTitle": "Lesezeichen",
   "addBookmark": "Frage merken",
   "removeBookmark": "Lesezeichen entfernen",
-  "noBookmarks": "Noch keine Lesezeichen. Tippe auf das Lesezeichen-Symbol bei einer Frage, um sie hier zu speichern."
+  "noBookmarks": "Noch keine Lesezeichen. Tippe auf das Lesezeichen-Symbol bei einer Frage, um sie hier zu speichern.",
+  "allCategories": "Alle Themen",
+  "categoryDisabledExam": "Themenfilter ist im Examen-Modus deaktiviert — alle Themen sind enthalten.",
+  "examModeCategoryHint": "Der Themenfilter ist im Examen-Modus deaktiviert. Alle Themen werden abgefragt."
 }
