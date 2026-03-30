@@ -10,6 +10,8 @@ export interface Exercise {
   submitButton?: boolean
   caseSensitive?: boolean
   maximumStringDistance?: number
+  explainInstruction?: string
+  explainAnswerOptions?: string[]
   adminComment?: string
   adminTags?: string[]
 }

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "exercise.schema.json",
+  "title": "Exercise",
+  "description": "A single practice exercise (flashcard) for the multiple choice app.",
+  "type": "object",
+  "required": ["inputMode", "correct"],
+  "properties": {
+    "inputMode": {
+      "type": "string",
+      "enum": ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TEXT", "NUMBER"],
+      "description": "Determines the input UI and validation logic."
+    },
+    "instruction": {
+      "type": "string",
+      "description": "Question text shown above the answer area. Supports Markdown."
+    },
+    "images": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Filenames of images in /data/img/ to display alongside the instruction."
+    },
+    "answerOptions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of answer options for SINGLE_CHOICE and MULTIPLE_CHOICE modes. Supports Markdown."
+    },
+    "correct": {
+      "description": "The correct answer. Type depends on inputMode: number index for SINGLE_CHOICE, array of indices for MULTIPLE_CHOICE, string for TEXT, number for NUMBER.",
+      "oneOf": [
+        { "type": "number" },
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      ]
+    },
+    "submitButton": {
+      "type": "boolean",
+      "default": true,
+      "description": "If false, submission is triggered immediately on selection (SINGLE_CHOICE only)."
+    },
+    "caseSensitive": {
+      "type": "boolean",
+      "default": false,
+      "description": "TEXT mode only. Whether the comparison is case-sensitive."
+    },
+    "maximumStringDistance": {
+      "type": "number",
+      "minimum": 0,
+      "description": "TEXT mode only. Maximum Levenshtein distance to accept as correct. If omitted, auto-calculated from answer length (0 for ≤3 chars, 1 for 4–6, 2 for 7+)."
+    },
+    "explainInstruction": {
+      "type": "string",
+      "description": "Explanation text shown after answering. Explains the correct answer in context. Supports Markdown."
+    },
+    "explainAnswerOptions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Per-option explanations, one per entry in answerOptions. Shown after answering to explain why each option is correct or incorrect. Supports Markdown."
+    },
+    "adminComment": {
+      "type": "string",
+      "description": "Internal note for exercise authors. Not displayed to users."
+    },
+    "adminTags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Tags for categorization and filtering (e.g. topic, difficulty)."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "inputMode": { "const": "SINGLE_CHOICE" } }
+      },
+      "then": {
+        "required": ["answerOptions"],
+        "properties": {
+          "correct": { "type": "number" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "inputMode": { "const": "MULTIPLE_CHOICE" } }
+      },
+      "then": {
+        "required": ["answerOptions"],
+        "properties": {
+          "correct": {
+            "type": "array",
+            "items": { "type": "number" }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "inputMode": { "const": "TEXT" } }
+      },
+      "then": {
+        "properties": {
+          "correct": { "type": "string" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "inputMode": { "const": "NUMBER" } }
+      },
+      "then": {
+        "properties": {
+          "correct": { "type": "number" }
+        }
+      }
+    }
+  ]
+}
