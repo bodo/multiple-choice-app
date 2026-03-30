@@ -1,0 +1,1 @@
+- [Keep data structures minimal](feedback_data_structures.md) — only include fields explicitly requested; no unsolicited metadata
