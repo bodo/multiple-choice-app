@@ -2,5 +2,9 @@
     "inputMode": "TEXT",
     "caseSensitive": false,
     "correct": "GmbH",
-    "instruction": "Was ist die Abkürzung für die Rechtsform *Gesellschaft mit beschränkter Haftung*?"
+    "instruction": "Was ist die Abkürzung für die Rechtsform *Gesellschaft mit beschränkter Haftung*?",
+    "explainInstruction": "Die richtige Antwort ist GmbH.",
+    "explainAnswerOptions": [
+        "Die Abkürzung GmbH steht für Gesellschaft mit beschränkter Haftung, eine in Deutschland und anderen deutschsprachigen Ländern verbreitete Rechtsform für Unternehmen. Sie zeichnet sich durch die Beschränkung der Haftung der Gesellschafter auf ihre Einlagen aus, was bedeutet, dass die Gesellschafter im Falle von Verbindlichkeiten des Unternehmens nicht mit ihrem persönlichen Vermögen haften, sondern nur mit dem Kapital, das sie in die Gesellschaft eingebracht haben."
+    ]
 }
