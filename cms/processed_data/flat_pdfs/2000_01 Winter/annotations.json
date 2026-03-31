@@ -1,0 +1,1093 @@
+{
+  "exercises": {
+    "1": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "2": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "3": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "4": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "5": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "6": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "7": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "8": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "9": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options",
+        "Sub-Exercise 3",
+        "Sub-Exercise 4",
+        "Sub-Exercise 5",
+        "Sub-Exercise 6"
+      ]
+    },
+    "10": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "11": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "12": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options",
+        "Sub-Exercise 3",
+        "Sub-Exercise 4",
+        "Sub-Exercise 5"
+      ]
+    },
+    "13": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "14": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "15": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "16": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options",
+        "Sub-Exercise 3",
+        "Sub-Exercise 4"
+      ]
+    },
+    "17": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "18": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options",
+        "Sub-Exercise 3",
+        "Sub-Exercise 4"
+      ]
+    },
+    "19": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    },
+    "20": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options"
+      ]
+    }
+  },
+  "boxes": [
+    {
+      "exercise": "1",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 2,
+      "rect": [
+        0.06477272727272727,
+        0.020883534136546186,
+        0.9329545454545455,
+        0.06345381526104418
+      ]
+    },
+    {
+      "exercise": "1",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 1,
+      "rect": [
+        0.02847380410022779,
+        0.02574416733708769,
+        0.7790432801822323,
+        0.16251005631536605
+      ]
+    },
+    {
+      "exercise": "1",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.15945330296127563,
+        0.13687600644122383,
+        0.6161731207289294,
+        0.17310789049919484
+      ]
+    },
+    {
+      "exercise": "2",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 2,
+      "rect": [
+        0.06492027334851937,
+        0.26548672566371684,
+        0.9009111617312073,
+        0.32180209171359614
+      ]
+    },
+    {
+      "exercise": "2",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 1,
+      "rect": [
+        0.03424657534246575,
+        0.2725806451612903,
+        0.3127853881278539,
+        0.3758064516129032
+      ]
+    },
+    {
+      "exercise": "3",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 1,
+      "rect": [
+        0.027586206896551724,
+        0.4431818181818182,
+        0.7471264367816092,
+        0.5592532467532467
+      ]
+    },
+    {
+      "exercise": "4",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 1,
+      "rect": [
+        0.018475750577367205,
+        0.6615008156606852,
+        0.6801385681293303,
+        0.7822185970636215
+      ]
+    },
+    {
+      "exercise": "3",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 2,
+      "rect": [
+        0.06597222222222222,
+        0.44071954210956665,
+        0.6203703703703703,
+        0.4922322158626329
+      ]
+    },
+    {
+      "exercise": "4",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 2,
+      "rect": [
+        0.05336426914153132,
+        0.6573770491803279,
+        0.8236658932714617,
+        0.7204918032786886
+      ]
+    },
+    {
+      "exercise": "5",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 3,
+      "rect": [
+        0.03496503496503497,
+        0.023868312757201648,
+        0.7074592074592074,
+        0.14814814814814814
+      ]
+    },
+    {
+      "exercise": "6",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 3,
+      "rect": [
+        0.040983606557377046,
+        0.22746071133167908,
+        0.6908665105386417,
+        0.3490488006617039
+      ]
+    },
+    {
+      "exercise": "7",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 3,
+      "rect": [
+        0.03529411764705882,
+        0.44970906068162925,
+        0.691764705882353,
+        0.6126350789692435
+      ]
+    },
+    {
+      "exercise": "8",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 3,
+      "rect": [
+        0.028368794326241134,
+        0.666110183639399,
+        0.6855791962174941,
+        0.7946577629382304
+      ]
+    },
+    {
+      "exercise": "5",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 4,
+      "rect": [
+        0.06666666666666667,
+        0.01948051948051948,
+        0.8471264367816091,
+        0.08116883116883117
+      ]
+    },
+    {
+      "exercise": "6",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 4,
+      "rect": [
+        0.06682027649769585,
+        0.2229454841334418,
+        0.8594470046082949,
+        0.28315703824247357
+      ]
+    },
+    {
+      "exercise": "7",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 4,
+      "rect": [
+        0.057736720554272515,
+        0.4469820554649266,
+        0.6466512702078522,
+        0.49184339314845027
+      ]
+    },
+    {
+      "exercise": "8",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 4,
+      "rect": [
+        0.0625,
+        0.6573998364677024,
+        0.7997685185185185,
+        0.7277187244480785
+      ]
+    },
+    {
+      "exercise": "9",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 5,
+      "rect": [
+        0.03944315545243619,
+        0.028688524590163935,
+        0.777262180974478,
+        0.6336065573770492
+      ]
+    },
+    {
+      "exercise": "9",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 6,
+      "rect": [
+        0.06378132118451026,
+        0.016090104585679808,
+        0.6492027334851936,
+        0.03781174577634755
+      ]
+    },
+    {
+      "exercise": "9",
+      "sub": "Sub-Exercise 3",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 6,
+      "rect": [
+        0.06278538812785388,
+        0.03467741935483871,
+        0.6997716894977168,
+        0.2806451612903226
+      ]
+    },
+    {
+      "exercise": "9",
+      "sub": "Sub-Exercise 4",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 6,
+      "rect": [
+        0.08466819221967964,
+        0.2827140549273021,
+        0.6178489702517163,
+        0.3546042003231018
+      ]
+    },
+    {
+      "exercise": "9",
+      "sub": "Sub-Exercise 5",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 6,
+      "rect": [
+        0.08486238532110092,
+        0.2834008097165992,
+        0.6422018348623854,
+        0.30526315789473685
+      ]
+    },
+    {
+      "exercise": "9",
+      "sub": "Sub-Exercise 5",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 6,
+      "rect": [
+        0.0779816513761468,
+        0.3700404858299595,
+        0.31077981651376146,
+        0.39838056680161943
+      ]
+    },
+    {
+      "exercise": "9",
+      "sub": "Sub-Exercise 6",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 6,
+      "rect": [
+        0.08160919540229886,
+        0.2784090909090909,
+        0.6735632183908046,
+        0.3092532467532468
+      ]
+    },
+    {
+      "exercise": "9",
+      "sub": "Sub-Exercise 6",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 6,
+      "rect": [
+        0.0735632183908046,
+        0.411525974025974,
+        0.49195402298850577,
+        0.44155844155844154
+      ]
+    },
+    {
+      "exercise": "10",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 6,
+      "rect": [
+        0.052995391705069124,
+        0.5215622457282343,
+        0.5599078341013825,
+        0.5834011391375101
+      ]
+    },
+    {
+      "exercise": "10",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 6,
+      "rect": [
+        0.053117782909930716,
+        0.6223491027732463,
+        0.6916859122401847,
+        0.7920065252854812
+      ]
+    },
+    {
+      "exercise": "11",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 8,
+      "rect": [
+        0.05922551252847381,
+        0.02091713596138375,
+        0.7107061503416856,
+        0.09493161705551086
+      ]
+    },
+    {
+      "exercise": "11",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 8,
+      "rect": [
+        0.06164383561643835,
+        0.14596774193548387,
+        0.684931506849315,
+        0.2620967741935484
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 8,
+      "rect": [
+        0.04919908466819222,
+        0.31179321486268174,
+        0.665903890160183,
+        0.3465266558966074
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Sub-Exercise 3",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 8,
+      "rect": [
+        0.05733944954128441,
+        0.35060728744939273,
+        0.6846330275229358,
+        0.38704453441295544
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Sub-Exercise 3",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 8,
+      "rect": [
+        0.0860091743119266,
+        0.48663967611336034,
+        0.7190366972477065,
+        0.6453441295546559
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Sub-Exercise 4",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 8,
+      "rect": [
+        0.0896551724137931,
+        0.6777597402597403,
+        0.5793103448275863,
+        0.7061688311688312
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Sub-Exercise 4",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 8,
+      "rect": [
+        0.07586206896551724,
+        0.7159090909090909,
+        0.2908045977011494,
+        0.75
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Sub-Exercise 4",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 7,
+      "rect": [
+        0.04088785046728972,
+        0.6905940594059405,
+        0.697429906542056,
+        0.8052805280528053
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Sub-Exercise 5",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 8,
+      "rect": [
+        0.07142857142857142,
+        0.6688364524003255,
+        0.5944700460829493,
+        0.7127746135069162
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Sub-Exercise 5",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 8,
+      "rect": [
+        0.0748847926267281,
+        0.7534580960130187,
+        0.45161290322580644,
+        0.8006509357200976
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Sub-Exercise 5",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 7,
+      "rect": [
+        0.02576112412177986,
+        0.684863523573201,
+        0.7131147540983607,
+        0.8246484698097601
+      ]
+    },
+    {
+      "exercise": "13",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 10,
+      "rect": [
+        0.05922551252847381,
+        0.019308125502815767,
+        0.7118451025056948,
+        0.05631536604987932
+      ]
+    },
+    {
+      "exercise": "13",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 10,
+      "rect": [
+        0.06164383561643835,
+        0.1,
+        0.6986301369863014,
+        0.2645161290322581
+      ]
+    },
+    {
+      "exercise": "14",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 10,
+      "rect": [
+        0.06292906178489703,
+        0.31017770597738287,
+        0.6739130434782609,
+        0.4579967689822294
+      ]
+    },
+    {
+      "exercise": "14",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 9,
+      "rect": [
+        0.027906976744186046,
+        0.30895645028759244,
+        0.23837209302325582,
+        0.41659819227608874
+      ]
+    },
+    {
+      "exercise": "15",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 10,
+      "rect": [
+        0.06091954022988506,
+        0.5698051948051948,
+        0.7206896551724138,
+        0.627435064935065
+      ]
+    },
+    {
+      "exercise": "15",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 10,
+      "rect": [
+        0.04608294930875576,
+        0.6688364524003255,
+        0.6762672811059908,
+        0.8242473555736372
+      ]
+    },
+    {
+      "exercise": "16",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 12,
+      "rect": [
+        0.0489749430523918,
+        0.016894609814963796,
+        0.662870159453303,
+        0.04102976669348351
+      ]
+    },
+    {
+      "exercise": "16",
+      "sub": "Sub-Exercise 3",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 12,
+      "rect": [
+        0.04452054794520548,
+        0.08709677419354839,
+        0.613013698630137,
+        0.14112903225806453
+      ]
+    },
+    {
+      "exercise": "16",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 11,
+      "rect": [
+        0.058004640371229696,
+        0.023770491803278688,
+        0.302784222737819,
+        0.15
+      ]
+    },
+    {
+      "exercise": "16",
+      "sub": "Sub-Exercise 4",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 12,
+      "rect": [
+        0.05922551252847381,
+        0.13837489943684633,
+        0.6116173120728929,
+        0.18664521319388577
+      ]
+    },
+    {
+      "exercise": "17",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 12,
+      "rect": [
+        0.05125284738041002,
+        0.26387771520514886,
+        0.6662870159453302,
+        0.3475462590506838
+      ]
+    },
+    {
+      "exercise": "17",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 11,
+      "rect": [
+        0.038551401869158876,
+        0.26897689768976896,
+        0.5455607476635514,
+        0.44224422442244227
+      ]
+    },
+    {
+      "exercise": "18",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 12,
+      "rect": [
+        0.05263157894736842,
+        0.48546042003231016,
+        0.6533180778032036,
+        0.5476575121163166
+      ]
+    },
+    {
+      "exercise": "18",
+      "sub": "Sub-Exercise 3",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 12,
+      "rect": [
+        0.08486238532110092,
+        0.5506072874493927,
+        0.3853211009174312,
+        0.5740890688259109
+      ]
+    },
+    {
+      "exercise": "18",
+      "sub": "Sub-Exercise 3",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 11,
+      "rect": [
+        0.04107981220657277,
+        0.5232172470978441,
+        0.2511737089201878,
+        0.6169154228855721
+      ]
+    },
+    {
+      "exercise": "18",
+      "sub": "Sub-Exercise 4",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 12,
+      "rect": [
+        0.05057471264367816,
+        0.6258116883116883,
+        0.6425287356321839,
+        0.7077922077922078
+      ]
+    },
+    {
+      "exercise": "18",
+      "sub": "Sub-Exercise 4",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 11,
+      "rect": [
+        0.04431818181818182,
+        0.6757624398073836,
+        0.5477272727272727,
+        0.8459069020866774
+      ]
+    },
+    {
+      "exercise": "19",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 13,
+      "rect": [
+        0.10599078341013825,
+        0.05695687550854353,
+        0.6762672811059908,
+        0.13913751017087062
+      ]
+    },
+    {
+      "exercise": "19",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 13,
+      "rect": [
+        0.10277136258660508,
+        0.17781402936378465,
+        0.684757505773672,
+        0.3474714518760196
+      ]
+    },
+    {
+      "exercise": "20",
+      "sub": "Main",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 13,
+      "rect": [
+        0.11458333333333333,
+        0.39165985282093213,
+        0.6990740740740741,
+        0.43417825020441536
+      ]
+    },
+    {
+      "exercise": "20",
+      "sub": "Answer Options",
+      "pdf": "IT-Berufe_Abschlusspruefung_WISO_Winter2000.pdf",
+      "page": 13,
+      "rect": [
+        0.11136890951276102,
+        0.4778688524590164,
+        0.4408352668213457,
+        0.6139344262295082
+      ]
+    },
+    {
+      "exercise": "2",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.16704805491990846,
+        0.1713823767178658,
+        0.3340961098398169,
+        0.19805982215036377
+      ]
+    },
+    {
+      "exercise": "3",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.17471264367816092,
+        0.20146222583265638,
+        0.5942528735632184,
+        0.2331437855402112
+      ]
+    },
+    {
+      "exercise": "4",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.1628175519630485,
+        0.23346938775510204,
+        0.8036951501154734,
+        0.2587755102040816
+      ]
+    },
+    {
+      "exercise": "5",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.16705336426914152,
+        0.2871205906480722,
+        0.8225058004640371,
+        0.3166529942575882
+      ]
+    },
+    {
+      "exercise": "6",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.16783216783216784,
+        0.3187808896210873,
+        0.8228438228438228,
+        0.3443163097199341
+      ]
+    },
+    {
+      "exercise": "7",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.16042154566744732,
+        0.347682119205298,
+        0.8126463700234192,
+        0.37748344370860926
+      ]
+    },
+    {
+      "exercise": "8",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.16588235294117648,
+        0.3785357737104825,
+        0.8047058823529412,
+        0.41098169717138106
+      ]
+    },
+    {
+      "exercise": "9",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.16784869976359337,
+        0.4377610693400167,
+        0.8108747044917257,
+        0.48203842940685043
+      ]
+    },
+    {
+      "exercise": "10",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.16033254156769597,
+        0.4878253568429891,
+        0.8016627078384798,
+        0.5104953820319059
+      ]
+    },
+    {
+      "exercise": "11",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.1658711217183771,
+        0.5139240506329114,
+        0.7923627684964201,
+        0.5392405063291139
+      ]
+    },
+    {
+      "exercise": "12",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.15827338129496402,
+        0.5483050847457627,
+        0.8141486810551559,
+        0.5847457627118644
+      ]
+    },
+    {
+      "exercise": "13",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.1614457831325301,
+        0.6115843270868825,
+        0.7927710843373494,
+        0.6439522998296422
+      ]
+    },
+    {
+      "exercise": "14",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.1694915254237288,
+        0.6484174508126604,
+        0.7893462469733656,
+        0.6723695466210436
+      ]
+    },
+    {
+      "exercise": "15",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.1630170316301703,
+        0.6818572656921754,
+        0.7895377128953771,
+        0.704213241616509
+      ]
+    },
+    {
+      "exercise": "16",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.16625916870415647,
+        0.7113223854796888,
+        0.7995110024449877,
+        0.7502160760587727
+      ]
+    },
+    {
+      "exercise": "17",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.16339066339066338,
+        0.7777777777777778,
+        0.8071253071253072,
+        0.8142361111111112
+      ]
+    },
+    {
+      "exercise": "18",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.15753424657534246,
+        0.814366424535916,
+        0.795662100456621,
+        0.8490718321226796
+      ]
+    },
+    {
+      "exercise": "20",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.15789473684210525,
+        0.889248181083266,
+        0.8009153318077803,
+        0.9159256265157639
+      ]
+    },
+    {
+      "exercise": "19",
+      "sub": "Answer Key",
+      "pdf": "Lösung_WiSo.pdf",
+      "page": 0,
+      "rect": [
+        0.1598173515981735,
+        0.8611783696529459,
+        0.797945205479452,
+        0.8797417271993543
+      ]
+    }
+  ]
+}
