@@ -62,12 +62,13 @@ function submitAnswer(result: AnswerResult) {
   phase.value = 'submitted'
 
   // Timer stops here — time between question shown and answer submitted
+  const answerTimeMs = Date.now() - questionStartTime.value
   totalAnswered.value++
   if (result.isCorrect) totalCorrect.value++
-  totalTimeMs.value += Date.now() - questionStartTime.value
+  totalTimeMs.value += answerTimeMs
 
   if (currentExercise.value) {
-    recordAnswer(currentExercise.value.id, result.isCorrect)
+    recordAnswer(currentExercise.value.id, result.isCorrect, answerTimeMs)
   }
   if (soundEnabled.value) {
     if (result.isCorrect) {
