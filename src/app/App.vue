@@ -27,8 +27,10 @@ watch(resolvedTheme, (val) => {
 <template>
   <div class="flex flex-col h-dvh">
     <TopNav />
-    <main class="flex-1 min-h-0 overflow-hidden max-w-5xl w-full mx-auto">
-      <RouterView />
+    <main class="flex-1 min-h-0 overflow-y-auto">
+      <div class="max-w-5xl w-full mx-auto h-full">
+        <RouterView />
+      </div>
     </main>
   </div>
 </template>

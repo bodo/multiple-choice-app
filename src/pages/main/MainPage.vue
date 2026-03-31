@@ -75,7 +75,7 @@ useSwipe((dir) => {
 
   <div
     v-else
-    class="flex flex-col h-full overflow-hidden"
+    class="flex flex-col h-full"
   >
     <!-- Screen reader announcements -->
     <div class="sr-only" aria-live="assertive" aria-atomic="true">
@@ -166,32 +166,28 @@ useSwipe((dir) => {
       </div>
     </div>
 
-    <!-- Portrait/mobile: flashcard flip -->
-    <FlashCard v-if="!isExamFinished && !isLandscape" class="flex-1 overflow-hidden" :flipped="phase === 'submitted'">
+    <!-- Portrait/mobile: swap front/back -->
+    <FlashCard v-if="!isExamFinished && !isLandscape" :flipped="phase === 'submitted'">
       <template #front>
-        <div class="flex flex-col h-full overflow-y-auto">
-          <div class="p-4">
-            <QuestionSection :exercise="currentExercise" />
-          </div>
-          <div class="flex flex-col items-end p-4 gap-3">
-            <AnswerSection
-              :exercise="currentExercise"
-              :phase="phase"
-              :result="lastResult"
-              @submitted="submitAnswer"
-              @advance="advance"
-            />
-          </div>
+        <div class="p-4">
+          <QuestionSection :exercise="currentExercise" />
+        </div>
+        <div class="flex flex-col items-end p-4 gap-3">
+          <AnswerSection
+            :exercise="currentExercise"
+            :phase="phase"
+            :result="lastResult"
+            @submitted="submitAnswer"
+            @advance="advance"
+          />
         </div>
       </template>
       <template #back>
-        <div class="flex flex-col h-full overflow-y-auto">
-          <ExplainBack v-if="lastResult" :exercise="currentExercise" :result="lastResult" />
-          <div class="p-4 flex justify-end">
-            <button type="button" class="btn btn-primary" @click="advance">
-              {{ t('next') }}
-            </button>
-          </div>
+        <ExplainBack v-if="lastResult" :exercise="currentExercise" :result="lastResult" />
+        <div class="p-4 flex justify-end">
+          <button type="button" class="btn btn-primary" @click="advance">
+            {{ t('next') }}
+          </button>
         </div>
       </template>
     </FlashCard>
