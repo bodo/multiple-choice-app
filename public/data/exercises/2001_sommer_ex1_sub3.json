@@ -1,0 +1,29 @@
+{
+    "inputMode": "MATCH",
+    "instruction": "1. Aufgabe: Betriebliche Leistungsprozesse und Arbeitsorganisation\n\nDie Waldstein AG mit Hauptsitz in Zirndorf bei Fürth ist Herstellerin verschiedener DV-Peripheriegeräte mit Schwerpunkt im Bereich der Produktion von Laserprintern (LP). Circa 90 Prozent ihrer LP-Produktion verkauft die AG an andere Unternehmen, welche die Drucker unter Ihren eigenen Markennamen verkaufen. Nur 10 Prozent der Produktion werden direkt unter der Marke \"Eusebina” im Niedrigpreissegment durch den Fachhandel vermarktet.\n\nDie Waldstein AG unterhält Produktionsstätten in Lützen/Sachsen, Stralsund, Cheb (Tschechische Republik) und Mantua (Italien).\n\nDie Unternehmung hat eine Arbeitsgruppe “Waldstein 2002” eingerichtet, in der interdisziplinär Ideen für die weitere Unternehmensentwicklung gefunden und diskutiert werden sollen. Als Datenmaterial steht Ihnen eine Studie vom Marktforschungsinstitut “Keppler” über die Struktur des Marktes für Laserdrucker in Deutschland zur Verfügung, deren Ergebnis nebenstehend in Tabelle 1 dargestellt ist. Sie können im Rahmen Ihrer Berufsausbildung an einigen Sitzungen der Arbeitsgruppe teilnehmen.\n\n1.1. Die Arbeitsaufteilung im Unternehmen soll optimiert werden. Daher wird eine veränderte Organisationstruktur diskutiert, bei der möglichst viele Funktionen zentralisiert sein sollen. Ordnen Sie zu, indem Sie die eingerahmten Kennziffern der 5 Funktionen in die Kästchen bei den 5 offenen Positionen gemäß dem nebenstehend abgebildeten Organigramm eintragen!",
+    "images": [
+        "ex1_sub0__ZP_2001_Frueh_p0_b0.png",
+        "ex1_sub0__ZP_2001_Frueh_p0_b1.png"
+    ],
+    "answerOptions": [
+        "Controlling",
+        "Revision",
+        "Marktforschung",
+        "Marketing",
+        "Lagerwesen"
+    ],
+    "matchOptions": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+    ],
+    "correct": [
+        4,
+        0,
+        3,
+        1,
+        2
+    ]
+}

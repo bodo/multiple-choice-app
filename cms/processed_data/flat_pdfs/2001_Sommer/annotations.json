@@ -1,0 +1,94 @@
+{
+  "exercises": {
+    "1": {
+      "subs": [
+        "Main",
+        "Answer Key",
+        "Answer Options",
+        "Sub-Exercise 3"
+      ]
+    }
+  },
+  "boxes": [
+    {
+      "exercise": "1",
+      "sub": "Main",
+      "pdf": "ZP_2001_Frueh.pdf",
+      "page": 1,
+      "rect": [
+        0.05466970387243736,
+        0.10539018503620273,
+        0.9601366742596811,
+        0.24376508447304907
+      ]
+    },
+    {
+      "exercise": "1",
+      "sub": "Main",
+      "pdf": "ZP_2001_Frueh.pdf",
+      "page": 0,
+      "rect": [
+        0.09681093394077449,
+        0.16009654062751408,
+        0.6594533029612756,
+        0.3893805309734513
+      ]
+    },
+    {
+      "exercise": "1",
+      "sub": "Main",
+      "pdf": "ZP_2001_Frueh.pdf",
+      "page": 0,
+      "rect": [
+        0.10933940774487472,
+        0.42880128720836685,
+        0.8496583143507973,
+        0.8093322606596943
+      ]
+    },
+    {
+      "exercise": "1",
+      "sub": "Sub-Exercise 3",
+      "pdf": "ZP_2001_Frueh.pdf",
+      "page": 1,
+      "rect": [
+        0.05136986301369863,
+        0.2524193548387097,
+        0.954337899543379,
+        0.3
+      ]
+    },
+    {
+      "exercise": "1",
+      "sub": "Sub-Exercise 3",
+      "pdf": "ZP_2001_Frueh.pdf",
+      "page": 1,
+      "rect": [
+        0.08237986270022883,
+        0.3045234248788368,
+        0.2379862700228833,
+        0.4063004846526656
+      ]
+    },
+    {
+      "exercise": "1",
+      "sub": "Sub-Exercise 3",
+      "pdf": "ZP_2001_Frueh.pdf",
+      "page": 1,
+      "rect": [
+        0.3695652173913043,
+        0.30210016155088854,
+        0.9622425629290617,
+        0.5444264943457189
+      ]
+    }
+  ],
+  "ocr": {
+    "ex1_sub0__ZP_2001_Frueh_p0_b0.png": "Tabelle 1 zur !. Aufgabe\n\nVerkäufe von Laserdruckern aller Preissegmente in Deutschland im 2. Halbjahr 2000\nAnbieter Marktanteil nach Menge\nSister 14,2%\n\nKlexquark 13,6 %\nHeppion 123%\nHa 9,8%\nVuch 6,7%\nShark 44%\nEusebina 39%\nOP! 28%\nSonstige 32,3%\nGesamt 1000 %",
+    "ex1_sub0__ZP_2001_Frueh_p0_b1.png": "Organigramm zu 1.1\n\nVorstand\n\n=\n\nBeschaffung Produktion B Personal Rechnungswesen\nBesteliweseri + Werk Lützen H1Geschäftskunden] Inland P1 Debitoren/Kreditoren\n4 C LH Werk Stralsund [Endverbraucher Ausland H Finanzen\n141 Werk Cheb H D = E\nLJ Werk Mantua t+ Werbung/PR LY Steuern\n[Logistik",
+    "ex1_sub0__ZP_2001_Frueh_p1_b0.png": "1. Aufgabe: Betriebliche Leistungsprozesse und Arbeitsorganisation\n\nDie Waldstein AG mit Hauptsitz in Zirndorf bei Fürth ist Herstellerin verschiedener DV-Peripheriegeräte mit Schwerpunkt im Bereich der Pro-\nduktion von Laserprintern (LP). Circa 90 Prozent ihrer LP-Produktion verkauft die AG an andere Unternehmen, welche die Drucker unter Ihren\neigenen Markennamen verkaufen. Nur 10 Prozent der Produktion werden direkt unter der Marke \"Eusebina” im Niedrigpreissegment durch den\nFachhandel verinarktet.\n\nDie Waldstein AG unterhält Produktionsstätten in Lützen/Sachsen, Stralsund, Cheb (Tschechische Republik) und Mantua (Italien).\n\nDie Unternehmung hat eine Arbeitsgruppe “Waldstein 2002” eingerichtet, in der interdisziplinär Ideen für die weitere Unternehmensentwicklung\ngefunden und diskutiert werden sollen. Als Datenmaterial steht Ihnen eine Studie vom Marktforschungsinstitut “Keppler” über die Struktur des\nMarktes für Laserdrucker in Deutschland zur Verfügung, deren Ergebnis nebenstehend in Tabelle 1 dargestellt ist. Sie können im Rahmen\nIhrer Berufsausbildung an einigen Sitzungen der Arbeitsgruppe teilnehmen.",
+    "ex1_sub3__ZP_2001_Frueh_p1_b0.png": "1.1. Die Arbeitsaufteilung im Unternehmen soll optimiert werden. Daher wird eine veränderte Organisalonsetuktur diskutiert, bei der mög-\nlichst viele Funktionen zentralisiert sein sollen. Ordnen Sie zu, indem Sie die eingerahmten Kennziffern der 5 Funktionen in die Kästchen\nbei den 5 offenen Positionen gemäß dem nebenstehend abgebildeten Organigramm eintragen!",
+    "ex1_sub3__ZP_2001_Frueh_p1_b1.png": "- Funktionen\n\n[1] Controlling\n\n[2] Revision\n\n3} Marktforschung\n[4] Marketing\n\n[5] Lagerwesen",
+    "ex1_sub3__ZP_2001_Frueh_p1_b2.png": "ition maB dem Organigr:"
+  }
+}
