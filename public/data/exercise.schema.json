@@ -8,7 +8,7 @@
   "properties": {
     "inputMode": {
       "type": "string",
-      "enum": ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TEXT", "NUMBER"],
+      "enum": ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TEXT", "NUMBER", "MATCH"],
       "description": "Determines the input UI and validation logic."
     },
     "instruction": {
@@ -54,6 +54,11 @@
     "explainInstruction": {
       "type": "string",
       "description": "Explanation text shown after answering. Explains the correct answer in context. Supports Markdown."
+    },
+    "matchOptions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Right-side items for MATCH mode. Each entry pairs with the corresponding index in answerOptions as defined by correct. Supports Markdown."
     },
     "explainAnswerOptions": {
       "type": "array",
@@ -113,6 +118,21 @@
       "then": {
         "properties": {
           "correct": { "type": "number" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "inputMode": { "const": "MATCH" } }
+      },
+      "then": {
+        "required": ["answerOptions", "matchOptions"],
+        "properties": {
+          "correct": {
+            "type": "array",
+            "items": { "type": "number" },
+            "description": "Permutation array: correct[i] is the index into matchOptions that pairs with answerOptions[i]."
+          }
         }
       }
     }
