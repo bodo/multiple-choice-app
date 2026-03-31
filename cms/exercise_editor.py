@@ -137,6 +137,7 @@ def init_form_state(exam: str, ex: str, sub_idx: int, screenshot_files: list[Pat
         "ef_admin_tags":         ", ".join(data.get("adminTags", [])),
         "ef_selected_screenshots": sel_shots,
         "ef_save_message":       None,
+        "ef_confirm_delete":     False,
     })
 
     # Pad explain_options to match answer_options length
@@ -163,6 +164,20 @@ def _grow_correct_state() -> None:
     _ss()["ef_correct_multiple"].append(False)
     _ss()["ef_correct_match"].append(0)
 
+def all_exercises() -> list[tuple[str, str, int]]:
+    """Ordered list of (exam, ex, sub_idx) matching the list view."""
+    result = []
+    for exam, ann in annotated_exams():
+        for ex, meta in ann.get("exercises", {}).items():
+            subs = meta.get("subs", [])
+            real_subs = real_sub_exercises(subs)
+            if not real_subs:
+                result.append((exam, ex, -1))
+            else:
+                for sub_idx, _ in real_subs:
+                    result.append((exam, ex, sub_idx))
+    return result
+
 def _remove_match_option(j: int) -> None:
     ss = _ss()
     ss["ef_match_options"].pop(j)
@@ -170,6 +185,29 @@ def _remove_match_option(j: int) -> None:
         0 if v == j else (v - 1 if v > j else v)
         for v in ss["ef_correct_match"]
     ]
+
+# ---------------------------------------------------------------------------
+# Delete annotation
+# ---------------------------------------------------------------------------
+
+def delete_annotation() -> None:
+    """Delete all screenshots and annotation entry for the current exercise."""
+    ss = _ss()
+    exam = ss["sel_exam"]
+    ex   = ss["sel_ex"]
+
+    ann = load_annotations(exam)
+    exs = ann.get("exercises", {})
+    if ex in exs:
+        subs = exs[ex].get("subs", [])
+        for i in range(len(subs)):
+            for f in screenshots_for_sub(exam, ex, i):
+                f.unlink(missing_ok=True)
+        del exs[ex]
+        ann_path = FLAT_PDFS / exam / "annotations.json"
+        ann_path.write_text(json.dumps(ann, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    ss.update(sel_exam=None, sel_ex=None, sel_sub_idx=None, ef_confirm_delete=False)
 
 # ---------------------------------------------------------------------------
 # Save
@@ -240,6 +278,22 @@ def save_exercise(screenshot_files: list[Path]) -> None:
     save_index(entries)
 
     ss["ef_save_message"] = f"ok:Saved → {entry}"
+
+def _save_and_next(screenshot_files: list[Path]) -> None:
+    save_exercise(screenshot_files)
+    ss = _ss()
+    if ss.get("ef_save_message", "").startswith("error:"):
+        return
+    exercises = all_exercises()
+    current = (ss["sel_exam"], ss["sel_ex"], ss["sel_sub_idx"])
+    try:
+        idx = exercises.index(current)
+        if idx + 1 < len(exercises):
+            _open(*exercises[idx + 1])
+        else:
+            ss["ef_save_message"] = "ok:Saved. No more exercises."
+    except ValueError:
+        pass
 
 # ---------------------------------------------------------------------------
 # Form renderers
@@ -419,7 +473,28 @@ def render_exercise_form(screenshot_files: list[Path]) -> None:
                       placeholder="comma-separated, e.g. wiso, arbeitsrecht")
 
     st.divider()
-    _save_btn("save_bottom", screenshot_files)
+    col_save, col_next, col_del = st.columns([2, 2, 3])
+    with col_save:
+        _save_btn("save_bottom", screenshot_files)
+    with col_next:
+        if st.button("💾 Save and Next", key="save_next"):
+            _save_and_next(screenshot_files)
+    with col_del:
+        if st.button("🗑 Annotation invalid, delete", key="ef_del_btn"):
+            ss["ef_confirm_delete"] = True
+            st.rerun()
+
+    if ss.get("ef_confirm_delete"):
+        st.warning("Delete all screenshots and annotation for this exercise? This cannot be undone.")
+        c1, c2, _ = st.columns([2, 2, 5])
+        with c1:
+            if st.button("Yes, delete", key="ef_confirm_yes", type="primary"):
+                delete_annotation()
+                st.rerun()
+        with c2:
+            if st.button("Cancel", key="ef_confirm_no"):
+                ss["ef_confirm_delete"] = False
+                st.rerun()
 
     msg = ss.get("ef_save_message")
     if msg:
