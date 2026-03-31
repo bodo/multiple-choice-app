@@ -132,7 +132,6 @@ def init_form_state(exam: str, ex: str, sub_idx: int, screenshot_files: list[Pat
         "ef_correct_single":     correct_single,
         "ef_correct_multiple":   correct_multiple,
         "ef_correct_match":      correct_match,
-        "ef_submit_button":      data.get("submitButton", True),
         "ef_explain_instruction":data.get("explainInstruction", ""),
         "ef_explain_options":    list(data.get("explainAnswerOptions", [""] * n_opts)),
         "ef_admin_comment":      data.get("adminComment", ""),
@@ -250,7 +249,6 @@ def save_exercise(screenshot_files: list[Path]) -> None:
 
     if mode == "SINGLE_CHOICE":
         data["correct"] = ss["ef_correct_single"]
-        data["submitButton"] = ss["ef_submit_button"]
     elif mode == "MULTIPLE_CHOICE":
         data["correct"] = [i for i, v in enumerate(ss["ef_correct_multiple"]) if v]
     elif mode == "MATCH":
@@ -411,7 +409,6 @@ def render_correct_answer() -> None:
             label_visibility="collapsed",
         )
         ss["ef_correct_single"] = idx
-        ss["ef_submit_button"] = st.checkbox("Show submit button", value=ss["ef_submit_button"], key="ef_submit_btn")
 
     elif mode == "MULTIPLE_CHOICE":
         # Ensure parallel list length
