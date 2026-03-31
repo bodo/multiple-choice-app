@@ -70,6 +70,21 @@ def load_exercise_json(stem: str) -> dict | None:
     p = EXERCISES_DIR / f"{stem}.json"
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
 
+def completion_pct(stem: str) -> int:
+    """Rough % of key text fields that are filled in the saved exercise JSON."""
+    data = load_exercise_json(stem)
+    if data is None:
+        return 0
+    checks: list[bool] = []
+    checks.append(bool(data.get("instruction", "").strip()))
+    checks.append(bool(data.get("explainInstruction", "").strip()))
+    opts = data.get("answerOptions", [])
+    if opts:
+        checks.append(all(o.strip() for o in opts))
+        exp = data.get("explainAnswerOptions", [])
+        checks.append(bool(exp) and all(e.strip() for e in exp))
+    return round(100 * sum(checks) / len(checks))
+
 def load_index() -> list[str]:
     return json.loads(INDEX_PATH.read_text(encoding="utf-8")) if INDEX_PATH.exists() else []
 
@@ -604,11 +619,13 @@ def list_view() -> None:
                 real_subs = real_sub_exercises(subs)
 
                 if not real_subs:
-                    if st.button(f"Exercise {ex}", key=f"open_{exam}_{ex}"):
+                    pct = completion_pct(suggested_filename(exam, ex, -1))
+                    if st.button(f"Exercise {ex}  —  {pct}%", key=f"open_{exam}_{ex}"):
                         _open(exam, ex, -1)
                 else:
                     for sub_idx, _ in real_subs:
-                        if st.button(f"Exercise {ex}.{sub_idx}", key=f"open_{exam}_{ex}_{sub_idx}"):
+                        pct = completion_pct(suggested_filename(exam, ex, sub_idx))
+                        if st.button(f"Exercise {ex}.{sub_idx}  —  {pct}%", key=f"open_{exam}_{ex}_{sub_idx}"):
                             _open(exam, ex, sub_idx)
 
 # ---------------------------------------------------------------------------

@@ -1,0 +1,12 @@
+{
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Die ZAPP AG bietet Ihnen eine Stelle im Vertrieb an. Sie wollen u. a. herausfinden, wie viel Urlaubstage Ihnen zustehen.\n\nWelche der nebenstehenden Rechtsgrundlagen ist maßgebend, wenn die ZAPP AG dem zuständigen Arbeitgeber-\nverband angehört?",
+    "answerOptions": [
+        "Manteltarifvertrag",
+        "Bundesangestelitentarifvertrag",
+        "Bürgerliches Gesetzbuch (BGB)",
+        "Haustarifvertrag",
+        "Betriebsvereinbarung"
+    ],
+    "correct": 0
+}

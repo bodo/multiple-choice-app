@@ -1,12 +1,5 @@
 {
-  "exercises": {
-    "1": {
-      "subs": [
-        "Main",
-        "Sub-Exercise 1"
-      ]
-    }
-  },
+  "exercises": {},
   "boxes": [
     {
       "exercise": "1",

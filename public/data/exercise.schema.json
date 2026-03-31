@@ -36,11 +36,6 @@
         }
       ]
     },
-    "submitButton": {
-      "type": "boolean",
-      "default": true,
-      "description": "If false, submission is triggered immediately on selection (SINGLE_CHOICE only)."
-    },
     "caseSensitive": {
       "type": "boolean",
       "default": false,
