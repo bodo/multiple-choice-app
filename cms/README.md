@@ -60,6 +60,16 @@ Output: `processed_data/exam_groups.json`
 uv run python 002_group_pdfs_by_exam.py
 ```
 
+### 003 — ocr-annotation-screenshots
+
+Runs Tesseract OCR on every screenshot in each exam's `screenshots/` folder and stores the extracted text in `annotations.json` under a top-level `"ocr"` key, mapping filename → text. Already-processed screenshots are skipped.
+
+**Requires** Tesseract installed on the system (already needed for step 001).
+
+```bash
+uv run python 003_ocr_annotation_screenshots.py
+```
+
 ## Apps
 
 ### Annotation tool (`app.py`) — PySide6 desktop app

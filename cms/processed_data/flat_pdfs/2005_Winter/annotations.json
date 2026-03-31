@@ -47,5 +47,10 @@
         0.3514376996805112
       ]
     }
-  ]
+  ],
+  "ocr": {
+    "ex1_sub0__FISI_2005_Herbst_p4.png": "2. Aufgabe: Informations- und telekommunikationstechnische Systeme *\nDie Schlossfabrik Schloss & Riegel GmbH, die sich mit der Entwicklung und Produktion von Schlössern und Beschlagen für Zimmer- und Haustüren\nsowie von Kfz-Schlössern beschäftigt, plant die Einführung eines neuen IT-Systems zur Verbesserung der Arbeitsabläufe im Vertrieb. Neben der\nNeuausstattung mit Hardware sollen zeitgleich mit der Einführung verschiedene Abteilungen in einen Neubau umziehen. Auch sollen deren\nGeschäftsprozesse optimiert werden. Das Beratungshaus Nirvana AG erhält den Auftrag, die Umstellung auf das neue System zu planen und\nauszuführen. Als Auszubildendel-er der Nirvana IT-Abteilung sind Sie Mitglied in der eigens zusammengestellten Projektgruppe.",
+    "ex1_sub1__FISI_2005_Herbst_p4.png": "Die Außendienstmitarbeiter von Schloss & Riegel GmbH müssen von ihren Kunden aus einen Zugriff auf die Artikelverwaltung erhalten. Zur Auswahl\nsteht der Zugang zum Unternehmen über Telefonleitung mittels Modem oder mittels moderner DSL-Technik. Geben Sie an, welches Merkmal speziell\nnur für eine Wählverbindung spricht!\n\n1. Kostengünstiger Datentransfer\n\n2. Flächendeckende Verfügbarkeit .\n3. 128-Bit Verschlüsselung des Datenverkehrs\n\n4. Sicherheit durch Authentifizierung\n\n5. Giinstige Anschaffung der Hardware",
+    "ex1_sub2__FISI_2005_Herbst_p4.png": "Nach einem Brainstorming der Projektgruppe über die zu beschaffenden IT-Produkte wollen Sie Ihre Aufzeichnungen ordnen.\nBei welchen 2 Produkten handelt es sich um Software!\n\n1. USV 2. CRT-Monitor 3, Druckertreiber 4. Streamer 5. Modem 6. CRM-Tool"
+  }
 }
