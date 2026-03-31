@@ -20,7 +20,7 @@ const autoAdvanceDisabled = computed(() => mode.value === 'exam')
 </script>
 
 <template>
-  <div class="p-6 max-w-md flex flex-col gap-6">
+  <div class="p-6 max-w-md flex flex-col gap-6 h-full overflow-y-auto">
     <h1 class="text-xl font-semibold">
       {{ t('settingsTitle') }}
     </h1>

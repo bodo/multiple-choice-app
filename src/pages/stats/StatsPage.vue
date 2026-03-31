@@ -27,7 +27,7 @@ function formatDuration(ms: number): string {
 </script>
 
 <template>
-  <div class="p-6 max-w-lg flex flex-col gap-6">
+  <div class="p-6 max-w-lg flex flex-col gap-6 h-full overflow-y-auto">
     <h1 class="text-xl font-semibold">
       {{ t('statsTitle') }}
     </h1>
