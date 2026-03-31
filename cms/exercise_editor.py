@@ -12,9 +12,11 @@ Usage (from cms/):
 """
 
 import json
+import re
 import shutil
 from pathlib import Path
 
+import fitz  # PyMuPDF
 import streamlit as st
 
 FLAT_PDFS     = Path(__file__).parent / "processed_data" / "flat_pdfs"
@@ -504,6 +506,69 @@ def render_exercise_form(screenshot_files: list[Path]) -> None:
             st.error(msg[6:] if msg.startswith("error:") else msg)
 
 # ---------------------------------------------------------------------------
+# OCR reference panel
+# ---------------------------------------------------------------------------
+
+def _parse_screenshot_source(exam: str, filename: str) -> tuple[Path, int] | None:
+    """Parse 'ex1_sub0__stem_p3.png' → (pdf_path, page_index)."""
+    parts = filename.split("__", 1)
+    if len(parts) != 2:
+        return None
+    m = re.match(r"^(.+)_p(\d+)(?:_b\d+)?\.png$", parts[1])
+    if not m:
+        return None
+    stem, page = m.group(1), int(m.group(2))
+    pdf_path = FLAT_PDFS / exam / f"{stem}.pdf"
+    return (pdf_path, page) if pdf_path.exists() else None
+
+
+def render_ocr_reference(exam: str, files: list[Path]) -> None:
+    if not files:
+        return
+
+    ann = load_annotations(exam)
+    ocr_map: dict[str, str] = ann.get("ocr", {})
+
+    shot_ocr = [(f.name, ocr_map[f.name]) for f in files if f.name in ocr_map]
+
+    # Collect unique (pdf_path, page) pairs, preserving order
+    seen: set[tuple[Path, int]] = set()
+    pdf_pages: list[tuple[Path, int]] = []
+    for f in files:
+        parsed = _parse_screenshot_source(exam, f.name)
+        if parsed and parsed not in seen:
+            seen.add(parsed)
+            pdf_pages.append(parsed)
+
+    page_texts: list[tuple[str, int, str]] = []
+    for pdf_path, page_idx in pdf_pages:
+        try:
+            doc = fitz.open(str(pdf_path))
+            text = doc[page_idx].get_text().strip()
+            doc.close()
+            if text:
+                page_texts.append((pdf_path.name, page_idx, text))
+        except Exception:
+            pass
+
+    if not shot_ocr and not page_texts:
+        return
+
+    with st.expander("📋 OCR reference", expanded=False):
+        if shot_ocr:
+            st.markdown("**Screenshot OCR**")
+            for name, text in shot_ocr:
+                st.caption(name)
+                st.code(text, language=None)
+
+        if page_texts:
+            st.markdown("**Source PDF pages**")
+            for pdf_name, page_idx, text in page_texts:
+                st.caption(f"{pdf_name}  —  page {page_idx + 1}")
+                st.code(text, language=None)
+
+
+# ---------------------------------------------------------------------------
 # Navigation
 # ---------------------------------------------------------------------------
 
@@ -595,6 +660,8 @@ def detail_view() -> None:
             st.warning("No screenshots found. Make sure annotations have been saved.")
     with right_col:
         render_exercise_form(files)
+
+    render_ocr_reference(exam, files)
 
 # ---------------------------------------------------------------------------
 # Router

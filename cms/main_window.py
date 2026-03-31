@@ -1,11 +1,10 @@
-"""Main window: exam list, exercise/sub bars, grid, autosave, screenshots."""
+"""Main window: exam list, exercise/sub bars, grid, autosave."""
 
 from __future__ import annotations
 
-import copy
 from typing import Any
 
-from PySide6.QtCore import QRunnable, QRect, QThreadPool, QTimer, Qt
+from PySide6.QtCore import QRect, QThreadPool, QTimer, Qt
 from PySide6.QtWidgets import (
     QGridLayout,
     QHBoxLayout,
@@ -21,12 +20,11 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from annotation_store import FLAT_PDFS, extract_screenshots, load_annotations, save_json
+from annotation_store import FLAT_PDFS, load_annotations, save_json
 from pdf_render import get_page_list, page_raster_cache_clear
 from page_cell import PageCellWidget
 
 DEBOUNCE_MS = 500
-IDLE_SCREENSHOT_MS = 5000
 # Reserved subs after Main (separate screenshot categories via sub index).
 ANSWER_KEY_SUB = "Answer Key"
 ANSWER_OPTIONS_SUB = "Answer Options"
@@ -43,8 +41,6 @@ class MainWindow(QMainWindow):
         self._ann: dict[str, Any] = {"exercises": {}, "boxes": []}
         self._sel_ex: str | None = None
         self._sel_sub: str | None = None
-        self._pending_screenshots = False
-        self._screenshot_busy = False
         self._page_cells: list[PageCellWidget] = []
         self._grid_sig: tuple[str, tuple[tuple[str, int], ...]] | None = None
         self._preview_pool = QThreadPool(self)
@@ -54,10 +50,6 @@ class MainWindow(QMainWindow):
         self._debounce.setSingleShot(True)
         self._debounce.setInterval(DEBOUNCE_MS)
         self._debounce.timeout.connect(self._flush_json)
-
-        self._idle = QTimer(self)
-        self._idle.setInterval(IDLE_SCREENSHOT_MS)
-        self._idle.timeout.connect(self._maybe_idle_screenshots)
 
         root = QWidget()
         self.setCentralWidget(root)
@@ -169,10 +161,8 @@ class MainWindow(QMainWindow):
         if self._normalize_all_reserved_subs():
             self._on_annotation_changed()
         self._sel_sub = self._ann["exercises"][self._sel_ex]["subs"][0]
-        self._pending_screenshots = False
         self._stack.setCurrentWidget(self._detail)
         self._title.setText(exam)
-        self._idle.start()
         self._rebuild_exercise_bar()
         self._rebuild_sub_bar()
         self._refresh_grid()
@@ -184,14 +174,7 @@ class MainWindow(QMainWindow):
                 save_json(self._exam, self._ann)
             except OSError as e:
                 QMessageBox.warning(self, "Save", str(e))
-            if self._pending_screenshots:
-                try:
-                    extract_screenshots(self._exam, self._ann)
-                except Exception as e:
-                    QMessageBox.warning(self, "Screenshots", str(e))
-                self._pending_screenshots = False
         self._exam = None
-        self._idle.stop()
         page_raster_cache_clear()
         self._stack.setCurrentWidget(self._list_panel)
         self._refresh_exam_list()
@@ -417,7 +400,6 @@ class MainWindow(QMainWindow):
             QTimer.singleShot(0, self._update_lazy_cells)
 
     def _on_annotation_changed(self) -> None:
-        self._pending_screenshots = True
         self._status.setText("Unsaved changes…")
         self._debounce.start()
 
@@ -439,67 +421,18 @@ class MainWindow(QMainWindow):
         self._status.setText("Saving…")
         try:
             save_json(self._exam, self._ann)
-            extract_screenshots(self._exam, self._ann)
         except Exception as e:
             self._status.setText(f"Error: {e}")
             QMessageBox.warning(self, "Save", str(e))
             return
-        self._pending_screenshots = False
         self._status.setText("Saved")
-
-    def _maybe_idle_screenshots(self) -> None:
-        if not self._exam or not self._pending_screenshots or self._screenshot_busy:
-            return
-        self._screenshot_busy = True
-        self._status.setText("Saving screenshots…")
-        exam = self._exam
-        snapshot = copy.deepcopy(self._ann)
-
-        def done() -> None:
-            self._screenshot_busy = False
-            if snapshot == self._ann:
-                self._pending_screenshots = False
-                self._status.setText("Saved (screenshots)")
-            else:
-                self._pending_screenshots = True
-                self._status.setText("Unsaved changes…")
-
-        def err(msg: str) -> None:
-            self._screenshot_busy = False
-            self._status.setText(f"Screenshot error: {msg}")
-
-        class Task(QRunnable):
-            def __init__(self, e: str, a: dict, on_ok, on_err):
-                super().__init__()
-                self.e = e
-                self.a = a
-                self.on_ok = on_ok
-                self.on_err = on_err
-
-            def run(self) -> None:
-                try:
-                    extract_screenshots(self.e, self.a)
-                except Exception as ex:
-                    msg = str(ex)
-                    QTimer.singleShot(0, lambda m=msg: self.on_err(m))
-                else:
-                    QTimer.singleShot(0, self.on_ok)
-
-        QThreadPool.globalInstance().start(Task(exam, snapshot, done, err))
 
     def closeEvent(self, event) -> None:
         self._debounce.stop()
-        self._idle.stop()
         page_raster_cache_clear()
         if self._exam:
             try:
                 save_json(self._exam, self._ann)
             except OSError:
                 pass
-            if self._pending_screenshots:
-                try:
-                    extract_screenshots(self._exam, copy.deepcopy(self._ann))
-                except Exception:
-                    pass
-                self._pending_screenshots = False
         event.accept()
