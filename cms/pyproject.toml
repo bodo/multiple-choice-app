@@ -13,5 +13,6 @@ dependencies = [
     "pydantic",
     "pymupdf",
     "pyside6",
+    "streamlit",
 ]
 

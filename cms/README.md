@@ -59,3 +59,22 @@ Output: `processed_data/exam_groups.json`
 ```bash
 uv run python 002_group_pdfs_by_exam.py
 ```
+
+## Apps
+
+### Annotation tool (`app.py`) — PySide6 desktop app
+
+Browse exams, draw bounding boxes to mark exercise regions, save screenshots.
+
+```bash
+uv run python app.py
+```
+
+### Exercise editor (`exercise_editor.py`) — Streamlit
+
+View annotated exercises and their screenshots as a starting point for building exercise JSON files.
+Use `python -m streamlit` — direct `uv run streamlit` does not work without a build backend.
+
+```bash
+uv run python -m streamlit run exercise_editor.py
+```
