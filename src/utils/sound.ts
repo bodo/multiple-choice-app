@@ -7,7 +7,14 @@ let audioContext: AudioContext | null = null
 
 export function getAudioContext(): AudioContext {
   if (!audioContext) {
-    audioContext = new (window.AudioContext || (window as any).webkitAudioContext)()
+    const audioWindow = window as Window & {
+      webkitAudioContext?: typeof AudioContext
+    }
+    const AudioContextConstructor = window.AudioContext || audioWindow.webkitAudioContext
+    if (!AudioContextConstructor) {
+      throw new Error('Web Audio API is not supported in this browser')
+    }
+    audioContext = new AudioContextConstructor()
   }
   return audioContext
 }

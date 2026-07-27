@@ -91,7 +91,11 @@ const hasExplanation = computed(() =>
         :class="optionBgClass(idx)"
       >
         <div class="flex items-start gap-2">
-          <span v-if="optionIcon(idx)" class="shrink-0 font-bold" :class="optionIconClass(idx)">
+          <span
+            v-if="optionIcon(idx)"
+            class="shrink-0 font-bold"
+            :class="optionIconClass(idx)"
+          >
             {{ optionIcon(idx) }}
           </span>
           <div class="flex-1 min-w-0 text-sm break-words">
@@ -109,16 +113,28 @@ const hasExplanation = computed(() =>
 
     <!-- Text-based result -->
     <template v-else-if="exercise.inputMode === 'TEXT'">
-      <div class="rounded-lg border px-3 py-2" :class="result.isCorrect ? 'border-success bg-success/10' : 'border-error bg-error/10'">
-        <span v-if="!result.isCorrect" class="text-error line-through">{{ result.submittedValue }}</span>
+      <div
+        class="rounded-lg border px-3 py-2"
+        :class="result.isCorrect ? 'border-success bg-success/10' : 'border-error bg-error/10'"
+      >
+        <span
+          v-if="!result.isCorrect"
+          class="text-error line-through"
+        >{{ result.submittedValue }}</span>
         <span :class="result.isCorrect ? 'text-success font-medium' : 'text-success font-medium block mt-1'">{{ exercise.correct }}</span>
       </div>
     </template>
 
     <!-- Number result -->
     <template v-else-if="exercise.inputMode === 'NUMBER'">
-      <div class="rounded-lg border px-3 py-2" :class="result.isCorrect ? 'border-success bg-success/10' : 'border-error bg-error/10'">
-        <span v-if="!result.isCorrect" class="text-error line-through">{{ result.submittedValue }}</span>
+      <div
+        class="rounded-lg border px-3 py-2"
+        :class="result.isCorrect ? 'border-success bg-success/10' : 'border-error bg-error/10'"
+      >
+        <span
+          v-if="!result.isCorrect"
+          class="text-error line-through"
+        >{{ result.submittedValue }}</span>
         <span :class="result.isCorrect ? 'text-success font-medium' : 'text-success font-medium block mt-1'">{{ exercise.correct }}</span>
       </div>
     </template>
@@ -128,7 +144,9 @@ const hasExplanation = computed(() =>
       v-if="exercise.explainInstruction"
       class="rounded-lg border border-base-300 bg-base-200/50 p-3"
     >
-      <p class="text-xs font-semibold text-base-content/50 mb-1">{{ t('explanation') }}</p>
+      <p class="text-xs font-semibold text-base-content/50 mb-1">
+        {{ t('explanation') }}
+      </p>
       <div class="text-sm">
         <MarkdownRenderer :content="exercise.explainInstruction" />
       </div>
@@ -136,7 +154,9 @@ const hasExplanation = computed(() =>
 
     <!-- Fallback: no explanation data -->
     <template v-if="!hasExplanation && !isChoiceMode">
-      <p class="text-sm text-base-content/40 text-center">{{ result.isCorrect ? t('correct') : t('incorrect') }}</p>
+      <p class="text-sm text-base-content/40 text-center">
+        {{ result.isCorrect ? t('correct') : t('incorrect') }}
+      </p>
     </template>
   </div>
 </template>

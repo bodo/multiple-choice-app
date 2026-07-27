@@ -323,7 +323,7 @@ function saveSessions() {
 }
 
 const sessions = loadSessions()
-let sessionStart = Date.now()
+const sessionStart = Date.now()
 let sessionQuestions = 0
 let sessionCorrect = 0
 

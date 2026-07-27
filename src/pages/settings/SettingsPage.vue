@@ -17,6 +17,10 @@ const modes = [
 ]
 
 const autoAdvanceDisabled = computed(() => mode.value === 'exam')
+
+function formatSeconds(value: number): string {
+  return `${value.toFixed(1)}s`
+}
 </script>
 
 <template>
@@ -44,16 +48,25 @@ const autoAdvanceDisabled = computed(() => mode.value === 'exam')
           {{ m.label }}
         </button>
       </div>
-      <p v-if="mode === 'exam'" class="text-sm text-accent font-medium">
+      <p
+        v-if="mode === 'exam'"
+        class="text-sm text-accent font-medium"
+      >
         {{ t('examModeInfo') }}
       </p>
-      <p v-if="mode === 'exam'" class="text-sm text-base-content/60">
+      <p
+        v-if="mode === 'exam'"
+        class="text-sm text-base-content/60"
+      >
         {{ t('examModeCategoryHint') }}
       </p>
     </div>
 
     <!-- Exam Question Count (only in exam mode) -->
-    <div v-if="mode === 'exam'" class="flex flex-col gap-3">
+    <div
+      v-if="mode === 'exam'"
+      class="flex flex-col gap-3"
+    >
       <div class="flex justify-between items-baseline">
         <p class="font-medium">
           {{ t('examQuestionCount') }}
@@ -73,7 +86,10 @@ const autoAdvanceDisabled = computed(() => mode.value === 'exam')
     </div>
 
     <!-- Auto Advance Toggle -->
-    <label class="flex items-start gap-4 cursor-pointer" :class="{ 'opacity-50 cursor-not-allowed': autoAdvanceDisabled }">
+    <label
+      class="flex items-start gap-4 cursor-pointer"
+      :class="{ 'opacity-50 cursor-not-allowed': autoAdvanceDisabled }"
+    >
       <div class="flex-1">
         <p class="font-medium">
           {{ t('autoAdvance') }}
@@ -99,7 +115,7 @@ const autoAdvanceDisabled = computed(() => mode.value === 'exam')
             {{ t('timeoutCorrect') }}
           </p>
           <p class="text-sm font-semibold text-primary">
-            {{ (timeoutCorrect / 1000).toFixed(1) }}s
+            {{ formatSeconds(timeoutCorrect / 1000) }}
           </p>
         </div>
         <input
@@ -119,7 +135,7 @@ const autoAdvanceDisabled = computed(() => mode.value === 'exam')
             {{ t('timeoutIncorrect') }}
           </p>
           <p class="text-sm font-semibold text-primary">
-            {{ (timeoutIncorrect / 1000).toFixed(1) }}s
+            {{ formatSeconds(timeoutIncorrect / 1000) }}
           </p>
         </div>
         <input

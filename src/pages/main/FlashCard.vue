@@ -4,7 +4,13 @@ defineProps<{ flipped: boolean }>()
 
 <template>
   <div>
-    <slot v-if="!flipped" name="front" />
-    <slot v-else name="back" />
+    <slot
+      v-if="!flipped"
+      name="front"
+    />
+    <slot
+      v-else
+      name="back"
+    />
   </div>
 </template>

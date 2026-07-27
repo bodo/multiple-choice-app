@@ -41,6 +41,10 @@ const selectedDisplay = computed(() => {
     .join(', ')
 })
 
+function formatShortcut(value: number): string {
+  return `[${value}]`
+}
+
 watch(() => props.exercise, () => {
   selected.value = new Set()
   order.value = shuffledIndices(props.exercise.answerOptions?.length ?? 0)
@@ -126,8 +130,11 @@ onUnmounted(() => {
 <template>
   <div class="flex flex-col gap-2 items-end w-full">
     <!-- Selected display -->
-    <div v-if="selected.size > 0 && isInteractive" class="w-full text-sm font-medium text-primary">
-      Selected: {{ selectedDisplay }}
+    <div
+      v-if="selected.size > 0 && isInteractive"
+      class="w-full text-sm font-medium text-primary"
+    >
+      {{ t('selectedValues', { values: selectedDisplay }) }}
     </div>
 
     <!-- Options -->
@@ -141,7 +148,10 @@ onUnmounted(() => {
       :aria-label="`Option ${displayIdx + 1} of ${optionCount}`"
       @click="toggle(originalIdx)"
     >
-      <span class="font-semibold text-primary mt-0.5" aria-label="keyboard shortcut">[{{ displayIdx + 1 }}]</span>
+      <span
+        class="font-semibold text-primary mt-0.5"
+        aria-label="keyboard shortcut"
+      >{{ formatShortcut(displayIdx + 1) }}</span>
       <div class="flex-1 min-w-0 break-words">
         <MarkdownRenderer :content="exercise.answerOptions?.[originalIdx] ?? ''" />
       </div>
@@ -153,7 +163,11 @@ onUnmounted(() => {
         tabindex="-1"
         @click.stop="toggle(originalIdx)"
       >
-      <span v-else-if="rowIcon(originalIdx)" class="shrink-0 text-lg font-bold" :class="rowIcon(originalIdx) === '\u2713' ? 'text-success' : 'text-error'">{{ rowIcon(originalIdx) }}</span>
+      <span
+        v-else-if="rowIcon(originalIdx)"
+        class="shrink-0 text-lg font-bold"
+        :class="rowIcon(originalIdx) === '\u2713' ? 'text-success' : 'text-error'"
+      >{{ rowIcon(originalIdx) }}</span>
     </div>
 
     <!-- Submit button -->

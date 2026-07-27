@@ -1,6 +1,7 @@
 {
   "appName": "Practice",
   "submit": "Submit",
+  "selectedValues": "Selected: {values}",
   "next": "Next",
   "correct": "Correct",
   "incorrect": "Incorrect",
@@ -26,7 +27,8 @@
   "hapticEnabledHint": "Vibrate on correct and incorrect answers (mobile devices).",
   "accuracy": "Accuracy",
   "avgTime": "Avg. time",
-  "closeMatch": "Close!<br/>The exact answer is: <b>{answer}</b>",
+  "closeMatch": "Close!",
+  "exactAnswer": "The exact answer is:",
   "statsTitle": "Stats",
   "currentStreak": "Current streak",
   "longestStreak": "Longest streak",

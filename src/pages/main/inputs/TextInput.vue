@@ -22,6 +22,10 @@ const inputEl = ref<HTMLInputElement>()
 const isInteractive = computed(() => props.phase === 'answering')
 const isSubmitted = computed(() => props.phase === 'submitted')
 
+function formatCorrection(value: string): string {
+  return `[${value}]`
+}
+
 watch(() => props.exercise, () => { input.value = ''; wordChecks.value = [] })
 
 // Auto-focus when entering answering phase or when exercise changes
@@ -101,18 +105,28 @@ onUnmounted(() => {
   <div class="flex flex-col gap-3 w-full">
     <template v-if="result">
       <!-- User's answer with per-word feedback -->
-      <div class="rounded p-3 border font-medium" :class="result.isCorrect ? 'bg-success/20 border-success' : 'bg-error/20 border-error'">
+      <div
+        class="rounded p-3 border font-medium"
+        :class="result.isCorrect ? 'bg-success/20 border-success' : 'bg-error/20 border-error'"
+      >
         <span
           v-for="(w, i) in wordChecks"
           :key="i"
-        ><span :class="w.ok ? 'text-success' : 'text-error line-through'">{{ w.given }}</span><span v-if="!w.ok && w.correct" class="text-success ml-1">[{{ w.correct }}]</span>{{ ' ' }}</span>
+        ><span :class="w.ok ? 'text-success' : 'text-error line-through'">{{ w.given }}</span><span
+          v-if="!w.ok && w.correct"
+          class="text-success ml-1"
+        >{{ formatCorrection(w.correct) }}</span>{{ ' ' }}</span>
       </div>
       <!-- Close match hint -->
       <div
         v-if="result.isCorrect && result.isCloseMatch"
         class="rounded p-3 bg-warning/20 border border-warning text-warning font-medium"
-        v-html="t('closeMatch', { answer: exercise.correct })"
-      />
+      >
+        <p>{{ t('closeMatch') }}</p>
+        <p>
+          {{ t('exactAnswer') }} <strong>{{ exercise.correct }}</strong>
+        </p>
+      </div>
     </template>
     <template v-else>
       <input

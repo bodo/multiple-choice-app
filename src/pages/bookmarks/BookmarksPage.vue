@@ -22,7 +22,10 @@ const bookmarkedExercises = computed(() =>
       {{ t('bookmarksTitle') }}
     </h1>
 
-    <p v-if="bookmarkedExercises.length === 0" class="text-base-content/50 text-sm">
+    <p
+      v-if="bookmarkedExercises.length === 0"
+      class="text-base-content/50 text-sm"
+    >
       {{ t('noBookmarks') }}
     </p>
 
@@ -33,7 +36,10 @@ const bookmarkedExercises = computed(() =>
     >
       <div class="flex-1 min-w-0">
         <span class="text-xs text-base-content/40 font-mono">{{ ex.id }}</span>
-        <div v-if="ex.instruction" class="mt-1 text-sm line-clamp-3">
+        <div
+          v-if="ex.instruction"
+          class="mt-1 text-sm line-clamp-3"
+        >
           <MarkdownRenderer :content="ex.instruction" />
         </div>
         <span class="text-xs mt-1 inline-block rounded bg-base-200 px-1.5 py-0.5 text-base-content/50">{{ ex.inputMode }}</span>

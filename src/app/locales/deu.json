@@ -1,6 +1,7 @@
 {
   "appName": "Übungen",
   "submit": "Abgeben",
+  "selectedValues": "Ausgewählt: {values}",
   "next": "Weiter",
   "correct": "Richtig",
   "incorrect": "Falsch",
@@ -26,7 +27,8 @@
   "hapticEnabledHint": "Bei richtigen und falschen Antworten vibrieren (mobile Geräte).",
   "accuracy": "Genauigkeit",
   "avgTime": "Ø Zeit",
-  "closeMatch": "Fast!<br/>Die genaue Antwort ist: <b>{answer}</b>",
+  "closeMatch": "Fast!",
+  "exactAnswer": "Die genaue Antwort ist:",
   "statsTitle": "Statistik",
   "currentStreak": "Aktuelle Serie",
   "longestStreak": "Längste Serie",

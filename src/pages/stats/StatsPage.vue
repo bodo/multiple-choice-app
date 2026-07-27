@@ -7,7 +7,7 @@ import {
 } from '../../entities/exercise/useExerciseHistory'
 import { useExercises } from '../../entities/exercise/useExercises'
 
-useI18n()
+const { t } = useI18n()
 const { exercises } = useExercises()
 
 const tab = ref<'scorecard' | 'weakspots' | 'mastery'>('scorecard')
@@ -59,6 +59,18 @@ function formatDuration(ms: number): string {
   return `${seconds}s`
 }
 
+function formatPercent(value: number): string {
+  return `${value}%`
+}
+
+function formatXp(value: number): string {
+  return `${value} XP`
+}
+
+function formatWeakSpotSummary(accuracy: number, total: number, averageTimeMs: number): string {
+  return `${formatPercent(Math.round(accuracy * 100))} · ${total} ${t('statsAnswers')} · ${(averageTimeMs / 1000).toFixed(1)}s`
+}
+
 function exerciseLabel(id: string): string {
   const ex = exercises.value.find(e => e.id === id)
   if (ex?.instruction) {
@@ -103,56 +115,85 @@ function trendClass(trend: number): string {
       <div class="rounded-2xl bg-gradient-to-br from-primary/20 via-base-200 to-success/20 border border-primary/30 p-6 flex flex-col items-center gap-4">
         <!-- Rank title -->
         <div class="text-center">
-          <p class="text-xs text-base-content/50 uppercase tracking-widest">{{ $t('rankLabel') }}</p>
-          <p class="text-3xl font-black text-primary mt-1">{{ rank.title }}</p>
-          <p class="text-sm text-base-content/60 mt-1">{{ $t('level') }} {{ rank.level }}</p>
+          <p class="text-xs text-base-content/50 uppercase tracking-widest">
+            {{ $t('rankLabel') }}
+          </p>
+          <p class="text-3xl font-black text-primary mt-1">
+            {{ rank.title }}
+          </p>
+          <p class="text-sm text-base-content/60 mt-1">
+            {{ $t('level') }} {{ rank.level }}
+          </p>
         </div>
 
         <!-- XP bar -->
         <div class="w-full max-w-xs">
           <div class="flex justify-between text-xs text-base-content/50 mb-1">
-            <span>{{ rank.xp }} XP</span>
-            <span v-if="rank.level < 10">{{ rank.nextLevelXp }} XP</span>
+            <span>{{ formatXp(rank.xp) }}</span>
+            <span v-if="rank.level < 10">{{ formatXp(rank.nextLevelXp) }}</span>
           </div>
           <div class="w-full bg-base-300 rounded-full h-2.5 overflow-hidden">
-            <div class="h-full rounded-full bg-primary transition-all" :style="{ width: xpProgress + '%' }" />
+            <div
+              class="h-full rounded-full bg-primary transition-all"
+              :style="{ width: xpProgress + '%' }"
+            />
           </div>
         </div>
 
         <!-- Big accuracy -->
         <div class="text-center">
-          <p class="text-6xl font-black" :class="stats.totalAccuracy >= 70 ? 'text-success' : stats.totalAccuracy >= 40 ? 'text-warning' : 'text-error'">
-            {{ stats.totalAccuracy }}%
+          <p
+            class="text-6xl font-black"
+            :class="stats.totalAccuracy >= 70 ? 'text-success' : stats.totalAccuracy >= 40 ? 'text-warning' : 'text-error'"
+          >
+            {{ formatPercent(stats.totalAccuracy) }}
           </p>
-          <p class="text-sm text-base-content/60">{{ $t('statsOverallAccuracy') }}</p>
+          <p class="text-sm text-base-content/60">
+            {{ $t('statsOverallAccuracy') }}
+          </p>
         </div>
 
         <!-- Key stats row -->
         <div class="flex gap-6 text-center">
           <div>
-            <p class="text-2xl font-bold text-primary">{{ current }}</p>
-            <p class="text-xs text-base-content/50">{{ $t('currentStreak') }}</p>
+            <p class="text-2xl font-bold text-primary">
+              {{ current }}
+            </p>
+            <p class="text-xs text-base-content/50">
+              {{ $t('currentStreak') }}
+            </p>
           </div>
           <div>
-            <p class="text-2xl font-bold text-success">{{ longest }}</p>
-            <p class="text-xs text-base-content/50">{{ $t('longestStreak') }}</p>
+            <p class="text-2xl font-bold text-success">
+              {{ longest }}
+            </p>
+            <p class="text-xs text-base-content/50">
+              {{ $t('longestStreak') }}
+            </p>
           </div>
           <div>
-            <p class="text-2xl font-bold">{{ stats.totalQuestions }}</p>
-            <p class="text-xs text-base-content/50">{{ $t('statsTotalAnswered') }}</p>
+            <p class="text-2xl font-bold">
+              {{ stats.totalQuestions }}
+            </p>
+            <p class="text-xs text-base-content/50">
+              {{ $t('statsTotalAnswered') }}
+            </p>
           </div>
         </div>
 
         <!-- Mastery mini bar -->
-        <div v-if="masteryTotal > 0" class="w-full max-w-xs">
+        <div
+          v-if="masteryTotal > 0"
+          class="w-full max-w-xs"
+        >
           <p class="text-xs text-base-content/50 mb-1 text-center">
             {{ masteredCount }}/{{ masteryTotal }} {{ $t('statsMastered') }}
           </p>
           <div class="flex gap-0.5 h-3 rounded overflow-hidden">
             <div
               v-for="(count, box) in mastery"
-              :key="box"
               v-show="count > 0"
+              :key="box"
               class="h-full"
               :class="boxColors[box]"
               :style="{ width: (count / masteryTotal * 100) + '%', minWidth: count > 0 ? '4px' : '0' }"
@@ -169,20 +210,36 @@ function trendClass(trend: number): string {
       <!-- Quick stats grid -->
       <div class="grid grid-cols-2 gap-3">
         <div class="rounded-lg bg-base-200 p-3">
-          <p class="text-xl font-bold">{{ stats.totalCorrect }}</p>
-          <p class="text-xs text-base-content/60">{{ $t('statsTotalCorrect') }}</p>
+          <p class="text-xl font-bold">
+            {{ stats.totalCorrect }}
+          </p>
+          <p class="text-xs text-base-content/60">
+            {{ $t('statsTotalCorrect') }}
+          </p>
         </div>
         <div class="rounded-lg bg-base-200 p-3">
-          <p class="text-xl font-bold">{{ stats.totalQuestions - stats.totalCorrect }}</p>
-          <p class="text-xs text-base-content/60">{{ $t('statsTotalWrong') }}</p>
+          <p class="text-xl font-bold">
+            {{ stats.totalQuestions - stats.totalCorrect }}
+          </p>
+          <p class="text-xs text-base-content/60">
+            {{ $t('statsTotalWrong') }}
+          </p>
         </div>
         <div class="rounded-lg bg-base-200 p-3">
-          <p class="text-xl font-bold">{{ stats.totalSessions }}</p>
-          <p class="text-xs text-base-content/60">{{ $t('statsTotalSessions') }}</p>
+          <p class="text-xl font-bold">
+            {{ stats.totalSessions }}
+          </p>
+          <p class="text-xs text-base-content/60">
+            {{ $t('statsTotalSessions') }}
+          </p>
         </div>
         <div class="rounded-lg bg-base-200 p-3">
-          <p class="text-xl font-bold">{{ stats.averageStreak }}</p>
-          <p class="text-xs text-base-content/60">{{ $t('statsAvgStreak') }}</p>
+          <p class="text-xl font-bold">
+            {{ stats.averageStreak }}
+          </p>
+          <p class="text-xs text-base-content/60">
+            {{ $t('statsAvgStreak') }}
+          </p>
         </div>
       </div>
     </template>
@@ -190,8 +247,13 @@ function trendClass(trend: number): string {
     <!-- ==================== WEAK SPOTS ==================== -->
     <template v-if="tab === 'weakspots'">
       <!-- Category Accuracy -->
-      <div v-if="categoryAcc.length > 0" class="flex flex-col gap-3">
-        <h2 class="text-lg font-medium">{{ $t('statsByCategory') }}</h2>
+      <div
+        v-if="categoryAcc.length > 0"
+        class="flex flex-col gap-3"
+      >
+        <h2 class="text-lg font-medium">
+          {{ $t('statsByCategory') }}
+        </h2>
         <div
           v-for="cat in categoryAcc"
           :key="cat.tag"
@@ -205,14 +267,19 @@ function trendClass(trend: number): string {
               :style="{ width: cat.accuracy + '%' }"
             />
           </div>
-          <span class="text-xs font-mono w-10 text-right">{{ cat.accuracy }}%</span>
+          <span class="text-xs font-mono w-10 text-right">{{ formatPercent(cat.accuracy) }}</span>
         </div>
       </div>
 
       <!-- Weakest Exercises -->
       <div class="flex flex-col gap-3">
-        <h2 class="text-lg font-medium">{{ $t('statsWeakest') }}</h2>
-        <p v-if="weakest.length === 0" class="text-sm text-base-content/40">
+        <h2 class="text-lg font-medium">
+          {{ $t('statsWeakest') }}
+        </h2>
+        <p
+          v-if="weakest.length === 0"
+          class="text-sm text-base-content/40"
+        >
           {{ $t('statsNoWeakSpots') }}
         </p>
         <div
@@ -221,12 +288,17 @@ function trendClass(trend: number): string {
           class="rounded-lg border border-base-300 bg-base-200/50 px-3 py-2 flex items-center gap-3"
         >
           <div class="flex-1 min-w-0">
-            <p class="text-sm truncate">{{ exerciseLabel(w.id) }}</p>
+            <p class="text-sm truncate">
+              {{ exerciseLabel(w.id) }}
+            </p>
             <p class="text-xs text-base-content/50">
-              {{ Math.round(w.accuracy * 100) }}% · {{ w.total }} {{ $t('statsAnswers') }} · {{ (w.avgTimeMs / 1000).toFixed(1) }}s
+              {{ formatWeakSpotSummary(w.accuracy, w.total, w.avgTimeMs) }}
             </p>
           </div>
-          <span class="text-lg font-bold" :class="trendClass(w.recentTrend)">
+          <span
+            class="text-lg font-bold"
+            :class="trendClass(w.recentTrend)"
+          >
             {{ trendArrow(w.recentTrend) }}
           </span>
           <span class="text-xs font-mono bg-base-300 rounded px-1.5 py-0.5">
@@ -240,8 +312,13 @@ function trendClass(trend: number): string {
     <template v-if="tab === 'mastery'">
       <!-- Mastery Distribution -->
       <div class="flex flex-col gap-3">
-        <h2 class="text-lg font-medium">{{ $t('statsMastery') }}</h2>
-        <p v-if="masteryTotal === 0" class="text-sm text-base-content/40">
+        <h2 class="text-lg font-medium">
+          {{ $t('statsMastery') }}
+        </h2>
+        <p
+          v-if="masteryTotal === 0"
+          class="text-sm text-base-content/40"
+        >
           {{ $t('statsNoMastery') }}
         </p>
         <template v-else>
@@ -265,16 +342,28 @@ function trendClass(trend: number): string {
           <!-- Summary -->
           <div class="grid grid-cols-3 gap-3 mt-2">
             <div class="rounded-lg bg-error/10 border border-error/30 p-3 text-center">
-              <p class="text-xl font-bold text-error">{{ mastery[0] + mastery[1] }}</p>
-              <p class="text-xs text-base-content/60">{{ $t('statsLearning') }}</p>
+              <p class="text-xl font-bold text-error">
+                {{ mastery[0] + mastery[1] }}
+              </p>
+              <p class="text-xs text-base-content/60">
+                {{ $t('statsLearning') }}
+              </p>
             </div>
             <div class="rounded-lg bg-warning/10 border border-warning/30 p-3 text-center">
-              <p class="text-xl font-bold text-warning">{{ mastery[2] + mastery[3] }}</p>
-              <p class="text-xs text-base-content/60">{{ $t('statsReviewing') }}</p>
+              <p class="text-xl font-bold text-warning">
+                {{ mastery[2] + mastery[3] }}
+              </p>
+              <p class="text-xs text-base-content/60">
+                {{ $t('statsReviewing') }}
+              </p>
             </div>
             <div class="rounded-lg bg-success/10 border border-success/30 p-3 text-center">
-              <p class="text-xl font-bold text-success">{{ masteredCount }}</p>
-              <p class="text-xs text-base-content/60">{{ $t('statsMasteredLabel') }}</p>
+              <p class="text-xl font-bold text-success">
+                {{ masteredCount }}
+              </p>
+              <p class="text-xs text-base-content/60">
+                {{ $t('statsMasteredLabel') }}
+              </p>
             </div>
           </div>
         </template>
@@ -282,23 +371,41 @@ function trendClass(trend: number): string {
 
       <!-- Streaks detail -->
       <div class="flex flex-col gap-2">
-        <h2 class="text-lg font-medium">{{ $t('statsStreaks') }}</h2>
+        <h2 class="text-lg font-medium">
+          {{ $t('statsStreaks') }}
+        </h2>
         <div class="grid grid-cols-2 gap-3">
           <div class="rounded-lg bg-base-200 p-3">
-            <p class="text-xl font-bold">{{ stats.totalStreaks }}</p>
-            <p class="text-xs text-base-content/60">{{ $t('statsTotalStreaks') }}</p>
+            <p class="text-xl font-bold">
+              {{ stats.totalStreaks }}
+            </p>
+            <p class="text-xs text-base-content/60">
+              {{ $t('statsTotalStreaks') }}
+            </p>
           </div>
           <div class="rounded-lg bg-base-200 p-3">
-            <p class="text-xl font-bold">{{ stats.averageStreak }}</p>
-            <p class="text-xs text-base-content/60">{{ $t('statsAvgStreak') }}</p>
+            <p class="text-xl font-bold">
+              {{ stats.averageStreak }}
+            </p>
+            <p class="text-xs text-base-content/60">
+              {{ $t('statsAvgStreak') }}
+            </p>
           </div>
           <div class="rounded-lg bg-base-200 p-3">
-            <p class="text-xl font-bold">{{ stats.shortestStreak }}</p>
-            <p class="text-xs text-base-content/60">{{ $t('statsShortestStreak') }}</p>
+            <p class="text-xl font-bold">
+              {{ stats.shortestStreak }}
+            </p>
+            <p class="text-xs text-base-content/60">
+              {{ $t('statsShortestStreak') }}
+            </p>
           </div>
           <div class="rounded-lg bg-base-200 p-3">
-            <p class="text-xl font-bold">{{ stats.longestStreak }}</p>
-            <p class="text-xs text-base-content/60">{{ $t('statsLongestStreak') }}</p>
+            <p class="text-xl font-bold">
+              {{ stats.longestStreak }}
+            </p>
+            <p class="text-xs text-base-content/60">
+              {{ $t('statsLongestStreak') }}
+            </p>
           </div>
         </div>
       </div>

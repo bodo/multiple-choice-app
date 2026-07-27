@@ -34,6 +34,22 @@ const liveAnnouncement = computed(() => {
   return lastResult.value.isCorrect ? t('correct') : t('incorrect')
 })
 
+function formatPercent(value: number): string {
+  return `${value}%`
+}
+
+function formatSeconds(value: number): string {
+  return `${value.toFixed(1)}s`
+}
+
+function formatLabeledValue(label: string, value: string | number): string {
+  return `${label}: ${value}`
+}
+
+function formatParenthetical(value: string): string {
+  return `(${value})`
+}
+
 // Detect landscape vs portrait to avoid mounting duplicate input components
 const isLandscape = ref(window.matchMedia('(orientation: landscape)').matches)
 let mql: MediaQueryList
@@ -78,17 +94,27 @@ useSwipe((dir) => {
     class="flex flex-col h-full"
   >
     <!-- Screen reader announcements -->
-    <div class="sr-only" aria-live="assertive" aria-atomic="true">
+    <div
+      class="sr-only"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
       {{ liveAnnouncement }}
     </div>
 
     <!-- Progress bar (always full width on top) -->
     <div class="w-full px-4 pt-4 pb-2 flex-shrink-0">
       <div class="flex items-center justify-between mb-2">
-        <span v-if="mode === 'exam'" class="text-sm font-medium text-accent">
+        <span
+          v-if="mode === 'exam'"
+          class="text-sm font-medium text-accent"
+        >
           {{ t('examQuestion') }} {{ totalAnswered + (phase === 'submitted' ? 0 : 1) }} {{ t('of') }} {{ examTotal }}
         </span>
-        <span v-else class="text-sm font-medium text-base-content/70">
+        <span
+          v-else
+          class="text-sm font-medium text-base-content/70"
+        >
           {{ t('question') }} {{ currentIndex + 1 }} {{ t('of') }} {{ totalExercises }}
         </span>
         <div class="flex items-center gap-2">
@@ -99,9 +125,15 @@ useSwipe((dir) => {
             :aria-label="isCurrentBookmarked ? t('removeBookmark') : t('addBookmark')"
             @click="currentExercise && toggleBookmark(currentExercise.id)"
           >
-            <Bookmark :size="16" :fill="isCurrentBookmarked ? 'currentColor' : 'none'" />
+            <Bookmark
+              :size="16"
+              :fill="isCurrentBookmarked ? 'currentColor' : 'none'"
+            />
           </button>
-          <span v-if="mode !== 'exam'" class="text-xs text-base-content/50">{{ Math.round((currentIndex + 1) / totalExercises * 100) }}%</span>
+          <span
+            v-if="mode !== 'exam'"
+            class="text-xs text-base-content/50"
+          >{{ formatPercent(Math.round((currentIndex + 1) / totalExercises * 100)) }}</span>
         </div>
       </div>
       <progress
@@ -110,41 +142,75 @@ useSwipe((dir) => {
         :value="mode === 'exam' ? totalAnswered + (phase === 'submitted' ? 0 : 1) : currentIndex + 1"
         :max="mode === 'exam' ? examTotal : totalExercises"
       />
-      <div v-if="totalAnswered > 0" class="flex gap-4 mt-2 text-xs text-base-content/50">
-        <span>{{ t('accuracy') }}: {{ accuracy }}%</span>
-        <span>{{ t('avgTime') }}: {{ averageTimeSeconds.toFixed(1) }}s</span>
-        <span v-if="mode !== 'exam'">{{ t('streak') }}: {{ currentStreakDisplay }} <span v-if="longestStreakDisplay > 0" class="text-base-content/30">({{ t('longestStreak') }}: {{ longestStreakDisplay }})</span></span>
+      <div
+        v-if="totalAnswered > 0"
+        class="flex gap-4 mt-2 text-xs text-base-content/50"
+      >
+        <span>{{ formatLabeledValue(t('accuracy'), formatPercent(accuracy)) }}</span>
+        <span>{{ formatLabeledValue(t('avgTime'), formatSeconds(averageTimeSeconds)) }}</span>
+        <span v-if="mode !== 'exam'">{{ formatLabeledValue(t('streak'), currentStreakDisplay) }} <span
+          v-if="longestStreakDisplay > 0"
+          class="text-base-content/30"
+        >{{ formatParenthetical(formatLabeledValue(t('longestStreak'), longestStreakDisplay)) }}</span></span>
       </div>
     </div>
 
     <!-- Exam finished screen -->
-    <div v-if="isExamFinished" class="flex-1 flex flex-col items-center justify-center gap-4 p-6">
-      <h2 class="text-2xl font-bold">{{ t('examFinished') }}</h2>
+    <div
+      v-if="isExamFinished"
+      class="flex-1 flex flex-col items-center justify-center gap-4 p-6"
+    >
+      <h2 class="text-2xl font-bold">
+        {{ t('examFinished') }}
+      </h2>
       <div class="grid grid-cols-2 gap-4 max-w-xs w-full">
         <div class="rounded-lg bg-success/10 border border-success p-4 text-center">
-          <p class="text-3xl font-bold text-success">{{ totalCorrect }}</p>
-          <p class="text-xs text-base-content/60">{{ t('statsTotalCorrect') }}</p>
+          <p class="text-3xl font-bold text-success">
+            {{ totalCorrect }}
+          </p>
+          <p class="text-xs text-base-content/60">
+            {{ t('statsTotalCorrect') }}
+          </p>
         </div>
         <div class="rounded-lg bg-error/10 border border-error p-4 text-center">
-          <p class="text-3xl font-bold text-error">{{ totalAnswered - totalCorrect }}</p>
-          <p class="text-xs text-base-content/60">{{ t('statsTotalWrong') }}</p>
+          <p class="text-3xl font-bold text-error">
+            {{ totalAnswered - totalCorrect }}
+          </p>
+          <p class="text-xs text-base-content/60">
+            {{ t('statsTotalWrong') }}
+          </p>
         </div>
         <div class="rounded-lg bg-base-200 p-4 text-center">
-          <p class="text-3xl font-bold">{{ accuracy }}%</p>
-          <p class="text-xs text-base-content/60">{{ t('accuracy') }}</p>
+          <p class="text-3xl font-bold">
+            {{ formatPercent(accuracy) }}
+          </p>
+          <p class="text-xs text-base-content/60">
+            {{ t('accuracy') }}
+          </p>
         </div>
         <div class="rounded-lg bg-base-200 p-4 text-center">
-          <p class="text-3xl font-bold">{{ averageTimeSeconds.toFixed(1) }}s</p>
-          <p class="text-xs text-base-content/60">{{ t('avgTime') }}</p>
+          <p class="text-3xl font-bold">
+            {{ formatSeconds(averageTimeSeconds) }}
+          </p>
+          <p class="text-xs text-base-content/60">
+            {{ t('avgTime') }}
+          </p>
         </div>
       </div>
-      <button type="button" class="btn btn-primary mt-4" @click="startExam">
+      <button
+        type="button"
+        class="btn btn-primary mt-4"
+        @click="startExam"
+      >
         {{ t('restartExam') }}
       </button>
     </div>
 
     <!-- Landscape/desktop: side-by-side, right column swaps on submit -->
-    <div v-if="!isExamFinished && isLandscape" class="flex flex-row flex-1 overflow-hidden">
+    <div
+      v-if="!isExamFinished && isLandscape"
+      class="flex flex-row flex-1 overflow-hidden"
+    >
       <div class="w-1/2 overflow-y-auto p-4">
         <QuestionSection :exercise="currentExercise" />
       </div>
@@ -158,8 +224,15 @@ useSwipe((dir) => {
           @advance="advance"
         />
         <template v-else-if="lastResult">
-          <ExplainBack :exercise="currentExercise" :result="lastResult" />
-          <button type="button" class="btn btn-primary" @click="advance">
+          <ExplainBack
+            :exercise="currentExercise"
+            :result="lastResult"
+          />
+          <button
+            type="button"
+            class="btn btn-primary"
+            @click="advance"
+          >
             {{ t('next') }}
           </button>
         </template>
@@ -167,7 +240,10 @@ useSwipe((dir) => {
     </div>
 
     <!-- Portrait/mobile: swap front/back -->
-    <FlashCard v-if="!isExamFinished && !isLandscape" :flipped="phase === 'submitted'">
+    <FlashCard
+      v-if="!isExamFinished && !isLandscape"
+      :flipped="phase === 'submitted'"
+    >
       <template #front>
         <div class="p-4">
           <QuestionSection :exercise="currentExercise" />
@@ -183,9 +259,17 @@ useSwipe((dir) => {
         </div>
       </template>
       <template #back>
-        <ExplainBack v-if="lastResult" :exercise="currentExercise" :result="lastResult" />
+        <ExplainBack
+          v-if="lastResult"
+          :exercise="currentExercise"
+          :result="lastResult"
+        />
         <div class="p-4 flex justify-end">
-          <button type="button" class="btn btn-primary" @click="advance">
+          <button
+            type="button"
+            class="btn btn-primary"
+            @click="advance"
+          >
             {{ t('next') }}
           </button>
         </div>

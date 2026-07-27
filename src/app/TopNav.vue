@@ -78,7 +78,11 @@ function toggleTheme() {
       <option value="">
         {{ $t('allCategories') }}
       </option>
-      <option v-for="tag in allTags" :key="tag" :value="tag">
+      <option
+        v-for="tag in allTags"
+        :key="tag"
+        :value="tag"
+      >
         {{ tag }}
       </option>
     </select>
@@ -88,8 +92,14 @@ function toggleTheme() {
       :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
       @click="toggleTheme"
     >
-      <Moon v-if="!isDark" :size="16" />
-      <Sun v-else :size="16" />
+      <Moon
+        v-if="!isDark"
+        :size="16"
+      />
+      <Sun
+        v-else
+        :size="16"
+      />
     </button>
   </header>
 </template>

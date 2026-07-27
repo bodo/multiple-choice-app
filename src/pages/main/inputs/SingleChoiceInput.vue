@@ -23,6 +23,10 @@ const isInteractive = computed(() => props.phase === 'answering')
 const showSubmit = computed(() => props.exercise.submitButton !== false)
 const optionCount = computed(() => props.exercise.answerOptions?.length ?? 0)
 
+function formatShortcut(value: number): string {
+  return `[${value}]`
+}
+
 // Shuffled display order: order[displayIdx] = originalIdx
 const order = ref<number[]>(shuffledIndices(optionCount.value))
 watch(() => props.exercise, () => {
@@ -123,9 +127,16 @@ onUnmounted(() => {
       :aria-label="`Option ${displayIdx + 1} of ${optionCount}`"
       @click="select(originalIdx)"
     >
-      <span class="inline-block mr-2 font-semibold text-primary shrink-0" aria-label="keyboard shortcut">[{{ displayIdx + 1 }}]</span>
+      <span
+        class="inline-block mr-2 font-semibold text-primary shrink-0"
+        aria-label="keyboard shortcut"
+      >{{ formatShortcut(displayIdx + 1) }}</span>
       <span class="flex-1 min-w-0 break-words"><MarkdownRenderer :content="exercise.answerOptions?.[originalIdx] ?? ''" /></span>
-      <span v-if="optionIcon(originalIdx)" class="shrink-0 text-lg font-bold" :class="optionIcon(originalIdx) === '\u2713' ? 'text-success' : 'text-error'">{{ optionIcon(originalIdx) }}</span>
+      <span
+        v-if="optionIcon(originalIdx)"
+        class="shrink-0 text-lg font-bold"
+        :class="optionIcon(originalIdx) === '\u2713' ? 'text-success' : 'text-error'"
+      >{{ optionIcon(originalIdx) }}</span>
     </button>
     <button
       v-if="showSubmit && isInteractive"

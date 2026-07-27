@@ -5,7 +5,7 @@ import globals from 'globals'
 import vueI18n from '@intlify/eslint-plugin-vue-i18n'
 
 export default tseslint.config(
-  { ignores: ['dist/**', 'node_modules/**'] },
+  { ignores: ['dist/**', 'node_modules/**', 'cms/.venv/**'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
