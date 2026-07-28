@@ -141,6 +141,7 @@ def init_form_state(exam: str, ex: str, sub_idx: int, screenshot_files: list[Pat
         "ef_loaded_for":         guard,
         "ef_filename":           stem,
         "ef_input_mode":         mode,
+        "ef_mobile_solvable":    data.get("mobileSolvable", False),
         "ef_instruction":        data.get("instruction", ""),
         "ef_answer_options":     list(opts),
         "ef_match_options":      list(mopts),
@@ -236,7 +237,10 @@ def save_exercise(screenshot_files: list[Path]) -> None:
         ss["ef_save_message"] = "error:Filename cannot be empty."
         return
 
-    data: dict = {"inputMode": ss["ef_input_mode"]}
+    data: dict = {
+        "inputMode": ss["ef_input_mode"],
+        "mobileSolvable": ss["ef_mobile_solvable"],
+    }
 
     if ss["ef_instruction"].strip():
         data["instruction"] = ss["ef_instruction"]
@@ -333,6 +337,10 @@ def render_screenshot_selector(files: list[Path]) -> None:
 def render_mode_and_filename() -> None:
     st.text_input("Filename (without .json)", key="ef_filename")
     st.selectbox("Input mode", MODES, key="ef_input_mode")
+    st.checkbox(
+        "Solvable on a small screen without external tools",
+        key="ef_mobile_solvable",
+    )
 
 def render_answer_options() -> None:
     ss = _ss()

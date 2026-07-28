@@ -1,4 +1,5 @@
 {
+    "mobileSolvable": true,
     "inputMode": "SINGLE_CHOICE",
     "instruction": "Um welche der nachstehenden Vertragsarten handelt es sich?\n\nEine Computergroßhandlung stellt einen Mitarbeiter für das Larger ein.",
     "answerOptions": [

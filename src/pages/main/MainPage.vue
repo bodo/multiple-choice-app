@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Bookmark } from 'lucide-vue-next'
+import { Bookmark, CircleAlert } from 'lucide-vue-next'
 import { useExercises } from '../../entities/exercise/useExercises'
 import { useExerciseFlow } from './useExerciseFlow'
 import { useSettings } from '../../entities/settings/useSettings'
@@ -14,7 +14,7 @@ import FlashCard from './FlashCard.vue'
 import ExplainBack from './ExplainBack.vue'
 
 const { t } = useI18n()
-const { isLoading } = useExercises()
+const { isLoading, error } = useExercises()
 const { phase, currentExercise, currentIndex, totalExercises, lastResult, submitAnswer, advance, startExam, totalAnswered, totalCorrect, accuracy, averageTimeSeconds, isExamFinished, examTotal } = useExerciseFlow()
 const { mode } = useSettings()
 
@@ -82,11 +82,38 @@ useSwipe((dir) => {
 
 <template>
   <div
-    v-if="isLoading || !currentExercise"
+    v-if="isLoading"
     class="h-full flex items-center justify-center"
   >
     <span class="loading loading-spinner loading-lg" />
     <span class="ml-3">{{ t('loading') }}</span>
+  </div>
+
+  <div
+    v-else-if="error && !currentExercise"
+    class="h-full p-6 flex items-center justify-center"
+  >
+    <div
+      role="alert"
+      class="alert alert-error max-w-lg"
+    >
+      <CircleAlert :size="20" />
+      <div>
+        <p class="font-medium">
+          {{ t('exerciseLoadFailed') }}
+        </p>
+        <p class="text-sm">
+          {{ error }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    v-else-if="!currentExercise"
+    class="h-full flex items-center justify-center text-base-content/60"
+  >
+    {{ t('noExercises') }}
   </div>
 
   <div

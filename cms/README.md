@@ -104,6 +104,7 @@ Features:
 - SINGLE_CHOICE, MULTIPLE_CHOICE, and MATCH input modes
 - Dynamic answer options and match items
 - Per-option explanations
+- `mobileSolvable` checkbox for small-screen exercises that need no external tools
 - Screenshot selection (copies to `public/data/img/`)
 - Save / Save and Next navigation
 - OCR reference panel (screenshot crops + full source PDF pages) for copy-pasting content

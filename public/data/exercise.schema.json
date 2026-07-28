@@ -4,12 +4,16 @@
   "title": "Exercise",
   "description": "A single practice exercise (flashcard) for the multiple choice app.",
   "type": "object",
-  "required": ["inputMode", "correct"],
+  "required": ["inputMode", "mobileSolvable", "correct"],
   "properties": {
     "inputMode": {
       "type": "string",
       "enum": ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "TEXT", "NUMBER", "MATCH"],
       "description": "Determines the input UI and validation logic."
+    },
+    "mobileSolvable": {
+      "type": "boolean",
+      "description": "Whether the exercise can be completed comfortably on a small screen without external tools such as a calculator."
     },
     "instruction": {
       "type": "string",

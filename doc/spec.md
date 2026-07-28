@@ -17,8 +17,17 @@ A Vue 3 + TypeScript practice app with spaced repetition, optimized for mobile l
 
 ## Exercise Data
 
-Source of truth: `public/data/exercises/`, with images in `public/data/img/`.
-An `index.json` lists all exercise filenames. Each exercise gets an `id` derived from its filename (minus `.json`).
+Dexie is the runtime source of truth for exercises. A selected loading service
+refreshes its exercise set in Dexie:
+
+- `json`: `public/data/exercises/index.json` lists the JSON files. Each exercise
+  gets an `id` derived from its filename (minus `.json`).
+- `api`: draft `GET /api/v1/exercises` adapter expecting
+  `{ "items": Exercise[] }`. `VITE_EXERCISE_API_URL` overrides `/api/v1`.
+
+Images used by the current JSON source remain in `public/data/img/`.
+See [Exercise loading and API migration](exercise-loading.md) for the service
+boundary, runtime data flow, draft API response, and remaining migration work.
 
 ### Exercise Format
 
@@ -26,6 +35,7 @@ An `index.json` lists all exercise filenames. Each exercise gets an `id` derived
 interface Exercise {
   id: string                          // Auto-assigned from filename
   inputMode: 'SINGLE_CHOICE' | 'MULTIPLE_CHOICE' | 'TEXT' | 'NUMBER'
+  mobileSolvable: boolean             // Small screen, no external tools required
   correct: number | number[] | string // Correct answer(s)
   instruction?: string                // Markdown-rendered question text
   images?: string[]                   // Filenames in /data/img/
@@ -80,17 +90,25 @@ Per-exercise stats stored in localStorage (`bodo-mc-history`):
 - Time decay capped at 168 hours (1 week)
 - Current exercise excluded from selection (no immediate repeats)
 - Exercises outside active tag filter excluded
+- If `mobileSolvableOnly` is enabled, exercises with `mobileSolvable: false` are excluded
+- An empty filtered pool shows the existing no-exercises state instead of falling back to an excluded exercise
 
 ## Exercise Catalog
 
 Separate module (`useExerciseCatalog`) that builds a tag index from loaded exercises:
 - Provides `allTags` (unique sorted tags), `filteredIds` (exercises matching active filter)
 - Designed to be swappable with a server-provided index later
-- Integrated with exercise flow — weighted selection respects active filter
+- Integrated with exercise flow — tag and mobile filters are combined before weighted selection
 
 ## Settings
 
 Stored in localStorage (`bodo-mc-settings`), auto-saved via Vue watchers.
+`mobileSolvableOnly` is inferred once when the stored settings are first
+created or migrated from an older object without that field. The guess uses
+`navigator.userAgentData.mobile` when available; otherwise it requires touch or
+a coarse pointer and a shortest screen side of at most 1024 CSS pixels. The
+result is stored immediately. The GUI toggle writes the same field, and that
+stored manual value is authoritative on later visits.
 
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
@@ -102,6 +120,8 @@ Stored in localStorage (`bodo-mc-settings`), auto-saved via Vue watchers.
 | `hapticEnabled` | boolean | `true` | Vibrate on answer (mobile) |
 | `language` | string | `'eng'` | `'eng'` or `'deu'` |
 | `theme` | string | `'auto'` | `'auto'`, `'abschluss-light'`, `'abschluss-dark'` |
+| `exerciseSource` | `'json' \| 'api'` | `'json'` | Active exercise loading service |
+| `mobileSolvableOnly` | boolean | One-time device guess | Exclude exercises where `mobileSolvable` is false; manually configurable |
 
 ## Sound & Haptics
 

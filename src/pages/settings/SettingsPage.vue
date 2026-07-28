@@ -4,19 +4,37 @@ import { useI18n } from 'vue-i18n'
 import { useSettings } from '../../entities/settings/useSettings'
 
 const { t } = useI18n()
-const { autoAdvance, language, theme, mode, timeoutCorrect, timeoutIncorrect, soundEnabled, hapticEnabled, examQuestionCount } = useSettings()
+const {
+  autoAdvance,
+  language,
+  theme,
+  mode,
+  timeoutCorrect,
+  timeoutIncorrect,
+  soundEnabled,
+  hapticEnabled,
+  examQuestionCount,
+  exerciseSource,
+  mobileSolvableOnly,
+} = useSettings()
 
 const languages = [
   { code: 'eng', label: 'English' },
   { code: 'deu', label: 'Deutsch' },
 ]
 
-const modes = [
+const modes: Array<{ code: 'train' | 'exam', label: string }> = [
   { code: 'train', label: t('trainMode') },
   { code: 'exam', label: t('examMode') },
 ]
 
 const autoAdvanceDisabled = computed(() => mode.value === 'exam')
+const apiExerciseSourceEnabled = computed({
+  get: () => exerciseSource.value === 'api',
+  set: enabled => {
+    exerciseSource.value = enabled ? 'api' : 'json'
+  },
+})
 
 function formatSeconds(value: number): string {
   return `${value.toFixed(1)}s`
@@ -28,6 +46,61 @@ function formatSeconds(value: number): string {
     <h1 class="text-xl font-semibold">
       {{ t('settingsTitle') }}
     </h1>
+
+    <!-- Exercise Source -->
+    <div class="flex flex-col gap-2">
+      <div>
+        <p class="font-medium">
+          {{ t('exerciseSource') }}
+        </p>
+        <p class="text-sm text-base-content/60 mt-0.5">
+          {{ t('exerciseSourceHint') }}
+        </p>
+      </div>
+      <label class="flex items-center gap-3">
+        <span
+          class="text-sm"
+          :class="{ 'font-medium text-primary': exerciseSource === 'json' }"
+        >
+          {{ t('exerciseSourceJson') }}
+        </span>
+        <input
+          v-model="apiExerciseSourceEnabled"
+          type="checkbox"
+          class="toggle toggle-primary"
+          :aria-label="t('exerciseSource')"
+        >
+        <span
+          class="text-sm"
+          :class="{ 'font-medium text-primary': exerciseSource === 'api' }"
+        >
+          {{ t('exerciseSourceApi') }}
+        </span>
+      </label>
+      <p
+        v-if="exerciseSource === 'api'"
+        class="text-xs text-warning"
+      >
+        {{ t('exerciseSourceApiHint') }}
+      </p>
+    </div>
+
+    <!-- Mobile-solvable Exercise Filter -->
+    <label class="flex items-start gap-4 cursor-pointer">
+      <div class="flex-1">
+        <p class="font-medium">
+          {{ t('mobileSolvableOnly') }}
+        </p>
+        <p class="text-sm text-base-content/60 mt-0.5">
+          {{ t('mobileSolvableOnlyHint') }}
+        </p>
+      </div>
+      <input
+        v-model="mobileSolvableOnly"
+        type="checkbox"
+        class="toggle toggle-primary mt-0.5 shrink-0"
+      >
+    </label>
 
     <!-- Mode Selection -->
     <div class="flex flex-col gap-2">
@@ -43,7 +116,7 @@ function formatSeconds(value: number): string {
           :class="mode === m.code
             ? 'border-primary bg-primary/10 text-primary'
             : 'border-base-300 hover:border-base-content/30'"
-          @click="mode = m.code as any"
+          @click="mode = m.code"
         >
           {{ m.label }}
         </button>

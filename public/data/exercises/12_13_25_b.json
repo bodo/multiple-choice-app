@@ -1,4 +1,5 @@
 {
+    "mobileSolvable": true,
     "images": ["2012_25.png"],
     "inputMode": "NUMBER",
     "correct": 40,

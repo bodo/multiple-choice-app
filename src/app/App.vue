@@ -2,10 +2,13 @@
 import { watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useSettings } from '../entities/settings/useSettings'
+import { initializeExerciseLoading } from '../entities/exercise/useExercises'
 import TopNav from './TopNav.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
-const { language, theme } = useSettings()
+const { language, theme, exerciseSource } = useSettings()
+
+initializeExerciseLoading(exerciseSource)
 
 watch(language, (val) => { locale.value = val }, { immediate: true })
 

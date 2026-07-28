@@ -1,4 +1,5 @@
 {
+    "mobileSolvable": true,
     "inputMode": "TEXT",
     "caseSensitive": false,
     "correct": "GmbH",

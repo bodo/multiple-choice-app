@@ -3,6 +3,7 @@ export type InputMode = 'SINGLE_CHOICE' | 'MULTIPLE_CHOICE' | 'TEXT' | 'NUMBER'
 export interface Exercise {
   id: string
   inputMode: InputMode
+  mobileSolvable: boolean
   correct: number | number[] | string
   instruction?: string
   images?: string[]

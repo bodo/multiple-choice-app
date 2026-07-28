@@ -7,12 +7,17 @@ import { vibrateCorrect, vibrateIncorrect } from '../../utils/haptics'
 import { recordAnswer, getWeight } from '../../entities/exercise/useExerciseHistory'
 import { useExerciseCatalog } from '../../entities/exercise/useExerciseCatalog'
 import { useExercises } from '../../entities/exercise/useExercises'
+import {
+  loadTrainingSessionState,
+  saveTrainingSessionState,
+  type TrainingSessionState,
+} from './trainingSessionState'
 
 export type FlowPhase = 'loading' | 'answering' | 'submitted' | 'finished'
 
 // Module-level singletons — persist across route changes
 const phase = ref<FlowPhase>('loading')
-const currentIndex = ref(0)
+const currentExerciseId = ref<string | null>(null)
 const lastResult = ref<AnswerResult | null>(null)
 
 // Session stats (reset per exam, running in train)
@@ -24,12 +29,39 @@ const totalTimeMs = ref(0)
 // Exam state
 const examQuestionsRemaining = ref(0)
 
-const { exercises } = useExercises()
+const { exercises, activeSource } = useExercises()
 const { schedule, cancel } = useAutoAdvance()
-const { autoAdvance, timeoutCorrect, timeoutIncorrect, soundEnabled, hapticEnabled, mode, examQuestionCount } = useSettings()
+const {
+  autoAdvance,
+  timeoutCorrect,
+  timeoutIncorrect,
+  soundEnabled,
+  hapticEnabled,
+  mode,
+  examQuestionCount,
+  mobileSolvableOnly,
+} = useSettings()
 const { filteredIds } = useExerciseCatalog()
 
-const currentExercise = computed(() => exercises.value[currentIndex.value] ?? null)
+let initializationVersion = 0
+
+const currentIndex = computed(() =>
+  exercises.value.findIndex(exercise => exercise.id === currentExerciseId.value),
+)
+const currentExercise = computed(() =>
+  exercises.value.find(exercise => exercise.id === currentExerciseId.value) ?? null,
+)
+const selectableIds = computed(() => {
+  const tagFilteredIds = filteredIds.value
+  return new Set(
+    exercises.value
+      .filter(exercise =>
+        tagFilteredIds.has(exercise.id)
+        && (!mobileSolvableOnly.value || exercise.mobileSolvable !== false),
+      )
+      .map(exercise => exercise.id),
+  )
+})
 const totalExercises = computed(() => exercises.value.length)
 const accuracy = computed(() => totalAnswered.value === 0 ? 0 : Math.round((totalCorrect.value / totalAnswered.value) * 100))
 const averageTimeSeconds = computed(() => totalAnswered.value === 0 ? 0 : totalTimeMs.value / totalAnswered.value / 1000)
@@ -37,24 +69,64 @@ const isExamActive = computed(() => mode.value === 'exam' && phase.value !== 'fi
 const isExamFinished = computed(() => mode.value === 'exam' && phase.value === 'finished')
 const examTotal = computed(() => examQuestionCount.value)
 
-/** Pick a random exercise index weighted by spaced repetition, respecting catalog filter */
+/** Pick a random exercise index weighted by spaced repetition and active filters. */
 function pickNextIndex(): number {
   const list = exercises.value
-  if (list.length <= 1) return 0
-  const ids = filteredIds.value
-  const weights = list.map((ex, i) => {
-    if (i === currentIndex.value) return 0
-    if (!ids.has(ex.id)) return 0
-    return getWeight(ex.id)
-  })
-  const totalWeight = weights.reduce((sum, w) => sum + w, 0)
-  if (totalWeight === 0) return (currentIndex.value + 1) % list.length
+  const eligibleIndices = list
+    .map((exercise, index) => ({ exercise, index }))
+    .filter(({ exercise }) => selectableIds.value.has(exercise.id))
+    .map(({ index }) => index)
+  if (eligibleIndices.length === 0) return -1
+
+  const alternatives = eligibleIndices.filter(index => index !== currentIndex.value)
+  const candidates = alternatives.length > 0 ? alternatives : eligibleIndices
+  const weights = candidates.map(index => getWeight(list[index].id))
+  const totalWeight = weights.reduce((sum, weight) => sum + weight, 0)
+  if (totalWeight === 0) return candidates[0]
+
   let roll = Math.random() * totalWeight
   for (let i = 0; i < weights.length; i++) {
     roll -= weights[i]
-    if (roll <= 0) return i
+    if (roll <= 0) return candidates[i]
   }
-  return 0
+  return candidates[0]
+}
+
+function setCurrentIndex(index: number) {
+  currentExerciseId.value = exercises.value[index]?.id ?? null
+}
+
+function getTrainingSessionState(): TrainingSessionState | null {
+  const exercise = currentExercise.value
+  if (
+    mode.value !== 'train'
+    || !exercise
+    || (phase.value !== 'answering' && phase.value !== 'submitted')
+  ) return null
+
+  return {
+    exerciseId: exercise.id,
+    phase: phase.value,
+    lastResult: lastResult.value,
+    totalAnswered: totalAnswered.value,
+    totalCorrect: totalCorrect.value,
+    totalTimeMs: totalTimeMs.value,
+    questionStartedAt: questionStartTime.value,
+  }
+}
+
+function persistTrainingSession() {
+  const state = getTrainingSessionState()
+  if (state) {
+    void saveTrainingSessionState(activeSource.value, state)
+  }
+}
+
+function scheduleAutoAdvance(result: AnswerResult) {
+  if (!autoAdvance.value || mode.value !== 'train') return
+
+  const delay = result.isCorrect ? timeoutCorrect.value : timeoutIncorrect.value
+  schedule(delay, advance)
 }
 
 function submitAnswer(result: AnswerResult) {
@@ -90,11 +162,8 @@ function submitAnswer(result: AnswerResult) {
     examQuestionsRemaining.value--
   }
 
-  // Auto-advance only in train mode — in exam, user reviews explanation then clicks Next
-  if (autoAdvance.value && mode.value === 'train') {
-    const delay = result.isCorrect ? timeoutCorrect.value : timeoutIncorrect.value
-    schedule(delay, advance)
-  }
+  persistTrainingSession()
+  scheduleAutoAdvance(result)
 }
 
 function advance() {
@@ -107,10 +176,11 @@ function advance() {
     return
   }
 
-  currentIndex.value = pickNextIndex()
+  setCurrentIndex(pickNextIndex())
   lastResult.value = null
   phase.value = 'answering'
   questionStartTime.value = Date.now()
+  persistTrainingSession()
 }
 
 /** Start or restart an exam */
@@ -119,39 +189,120 @@ function startExam() {
   totalCorrect.value = 0
   totalTimeMs.value = 0
   examQuestionsRemaining.value = examQuestionCount.value
-  currentIndex.value = pickNextIndex()
+  setCurrentIndex(pickNextIndex())
   lastResult.value = null
   phase.value = 'answering'
   questionStartTime.value = Date.now()
 }
 
+function restoreTrainingStats(state: TrainingSessionState | null) {
+  totalAnswered.value = state?.totalAnswered ?? 0
+  totalCorrect.value = state?.totalCorrect ?? 0
+  totalTimeMs.value = state?.totalTimeMs ?? 0
+}
+
+async function initializeTraining(list: typeof exercises.value) {
+  const source = activeSource.value
+  const requestVersion = ++initializationVersion
+  cancel()
+  phase.value = 'loading'
+
+  const stored = await loadTrainingSessionState(source)
+  if (
+    requestVersion !== initializationVersion
+    || mode.value !== 'train'
+    || activeSource.value !== source
+    || exercises.value !== list
+  ) return
+
+  restoreTrainingStats(stored)
+  const storedExerciseIndex = stored
+    ? list.findIndex(exercise =>
+        exercise.id === stored.exerciseId && selectableIds.value.has(exercise.id))
+    : -1
+
+  if (stored && storedExerciseIndex >= 0) {
+    setCurrentIndex(storedExerciseIndex)
+    lastResult.value = stored.lastResult
+    questionStartTime.value = stored.questionStartedAt
+    phase.value = stored.phase
+    if (stored.lastResult) scheduleAutoAdvance(stored.lastResult)
+    return
+  }
+
+  setCurrentIndex(pickNextIndex())
+  lastResult.value = null
+  questionStartTime.value = Date.now()
+  phase.value = 'answering'
+  persistTrainingSession()
+}
+
 // Initialize on first exercise load
 watch(exercises, (list) => {
-  if (list.length > 0 && phase.value === 'loading') {
-    if (mode.value === 'exam') {
-      startExam()
-    } else {
-      currentIndex.value = pickNextIndex()
-      phase.value = 'answering'
-    }
+  if (list.length === 0) {
+    initializationVersion++
+    currentExerciseId.value = null
+    phase.value = 'loading'
+    return
+  }
+
+  if (
+    phase.value !== 'loading'
+    && currentExercise.value
+    && selectableIds.value.has(currentExercise.value.id)
+  ) return
+
+  if (mode.value === 'exam') {
+    startExam()
+  } else {
+    void initializeTraining(list)
   }
 }, { immediate: true })
 
-// When tag filter changes, check if current exercise is still in the pool
-watch(filteredIds, (ids) => {
+watch(activeSource, () => {
+  initializationVersion++
+  cancel()
+  currentExerciseId.value = null
+  lastResult.value = null
+  phase.value = 'loading'
+})
+
+// When a selection filter changes, keep the current exercise inside the pool.
+watch(selectableIds, (ids) => {
   const ex = currentExercise.value
-  if (ex && !ids.has(ex.id) && phase.value !== 'finished') {
-    currentIndex.value = pickNextIndex()
+  if (
+    phase.value === 'loading'
+    || phase.value === 'finished'
+    || (ex && ids.has(ex.id))
+  ) return
+
+  cancel()
+  if (ids.size === 0) {
+    currentExerciseId.value = null
+    lastResult.value = null
+    phase.value = 'answering'
+  } else {
+    setCurrentIndex(pickNextIndex())
     lastResult.value = null
     phase.value = 'answering'
     questionStartTime.value = Date.now()
+    persistTrainingSession()
   }
 })
 
-// When mode changes to exam, start a new exam
 watch(mode, (newMode) => {
-  if (newMode === 'exam' && exercises.value.length > 0) {
+  initializationVersion++
+  cancel()
+  if (exercises.value.length === 0) {
+    currentExerciseId.value = null
+    lastResult.value = null
+    phase.value = 'loading'
+  } else if (newMode === 'exam') {
     startExam()
+  } else {
+    currentExerciseId.value = null
+    lastResult.value = null
+    void initializeTraining(exercises.value)
   }
 })
 

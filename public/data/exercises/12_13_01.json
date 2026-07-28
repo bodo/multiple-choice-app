@@ -1,4 +1,5 @@
 {
+    "mobileSolvable": false,
     "images": ["2012_1.png"],
     "inputMode": "SINGLE_CHOICE",
     "submitButton": true,

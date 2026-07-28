@@ -12,6 +12,24 @@ interface StoredSettings {
   soundEnabled: boolean
   hapticEnabled: boolean
   examQuestionCount: number
+  exerciseSource: 'json' | 'api'
+  mobileSolvableOnly: boolean
+}
+
+interface NavigatorWithUserAgentData extends Navigator {
+  userAgentData?: {
+    mobile?: boolean
+  }
+}
+
+function guessMobileSolvableOnly(): boolean {
+  const mobileHint = (navigator as NavigatorWithUserAgentData).userAgentData?.mobile
+  if (typeof mobileHint === 'boolean') return mobileHint
+
+  const hasTouchInput = navigator.maxTouchPoints > 0
+    || window.matchMedia('(pointer: coarse)').matches
+  const shortestScreenSide = Math.min(window.screen.width, window.screen.height)
+  return hasTouchInput && shortestScreenSide <= 1024
 }
 
 function load(): StoredSettings {
@@ -29,24 +47,44 @@ function load(): StoredSettings {
         soundEnabled: parsed.soundEnabled ?? true,
         hapticEnabled: parsed.hapticEnabled ?? true,
         examQuestionCount: parsed.examQuestionCount ?? 5,
+        exerciseSource: parsed.exerciseSource === 'api' ? 'api' : 'json',
+        mobileSolvableOnly: typeof parsed.mobileSolvableOnly === 'boolean'
+          ? parsed.mobileSolvableOnly
+          : guessMobileSolvableOnly(),
       }
     }
   } catch { /* ignore */ }
-  return { autoAdvance: true, language: 'eng', theme: 'auto', timeoutCorrect: 1500, timeoutIncorrect: 3000, mode: 'train', soundEnabled: true, hapticEnabled: true, examQuestionCount: 5 }
+  return {
+    autoAdvance: true,
+    language: 'eng',
+    theme: 'auto',
+    timeoutCorrect: 1500,
+    timeoutIncorrect: 3000,
+    mode: 'train',
+    soundEnabled: true,
+    hapticEnabled: true,
+    examQuestionCount: 5,
+    exerciseSource: 'json',
+    mobileSolvableOnly: guessMobileSolvableOnly(),
+  }
 }
 
 function save() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify({
-    autoAdvance: autoAdvance.value,
-    language: language.value,
-    theme: theme.value,
-    timeoutCorrect: timeoutCorrect.value,
-    timeoutIncorrect: timeoutIncorrect.value,
-    mode: mode.value,
-    soundEnabled: soundEnabled.value,
-    hapticEnabled: hapticEnabled.value,
-    examQuestionCount: examQuestionCount.value,
-  }))
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      autoAdvance: autoAdvance.value,
+      language: language.value,
+      theme: theme.value,
+      timeoutCorrect: timeoutCorrect.value,
+      timeoutIncorrect: timeoutIncorrect.value,
+      mode: mode.value,
+      soundEnabled: soundEnabled.value,
+      hapticEnabled: hapticEnabled.value,
+      examQuestionCount: examQuestionCount.value,
+      exerciseSource: exerciseSource.value,
+      mobileSolvableOnly: mobileSolvableOnly.value,
+    }))
+  } catch { /* keep settings in memory when storage is unavailable */ }
 }
 
 const stored = load()
@@ -61,7 +99,10 @@ const mode = ref<'train' | 'exam'>(stored.mode)
 const soundEnabled = ref<boolean>(stored.soundEnabled)
 const hapticEnabled = ref<boolean>(stored.hapticEnabled)
 const examQuestionCount = ref<number>(stored.examQuestionCount)
+const exerciseSource = ref<'json' | 'api'>(stored.exerciseSource)
+const mobileSolvableOnly = ref<boolean>(stored.mobileSolvableOnly)
 
+save()
 watch(autoAdvance, save)
 watch(language, save)
 watch(theme, save)
@@ -70,6 +111,8 @@ watch(timeoutIncorrect, save)
 watch(soundEnabled, save)
 watch(hapticEnabled, save)
 watch(examQuestionCount, save)
+watch(exerciseSource, save)
+watch(mobileSolvableOnly, save)
 watch(mode, (newMode) => {
   // Exam mode auto-enables auto-advance
   if (newMode === 'exam') {
@@ -79,5 +122,17 @@ watch(mode, (newMode) => {
 })
 
 export function useSettings() {
-  return { autoAdvance, language, theme, timeoutCorrect, timeoutIncorrect, mode, soundEnabled, hapticEnabled, examQuestionCount }
+  return {
+    autoAdvance,
+    language,
+    theme,
+    timeoutCorrect,
+    timeoutIncorrect,
+    mode,
+    soundEnabled,
+    hapticEnabled,
+    examQuestionCount,
+    exerciseSource,
+    mobileSolvableOnly,
+  }
 }
