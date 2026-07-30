@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Staat, Verträge und Verbraucher"
+  ],
+  "instruction": "Was ist das vorrangige Ziel des Eurosystems?",
+  "answerOptions": [
+    "Preisstabilität gewährleisten",
+    "Gewinne einzelner Unternehmen garantieren",
+    "Tariflöhne festlegen",
+    "Alle Staatshaushalte direkt finanzieren"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Europäische Zentralbank und die nationalen Zentralbanken des Euroraums sind vorrangig der Preisstabilität verpflichtet.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

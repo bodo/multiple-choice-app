@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Wann gelten Daten als wirksam anonymisiert?",
+  "answerOptions": [
+    "Wenn eine Person mit vernünftigerweise verfügbaren Mitteln nicht mehr identifiziert werden kann",
+    "Sobald der Name durch eine Kundennummer ersetzt wurde",
+    "Wenn die Zuordnungstabelle in derselben Datei gespeichert ist",
+    "Sobald die Datei mit einem Passwort geschützt wurde"
+  ],
+  "correct": [0],
+  "explainInstruction": "Das bloße Entfernen direkter Merkmale genügt nicht, wenn eine Reidentifikation weiterhin realistisch möglich ist."
+}

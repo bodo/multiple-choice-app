@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Wie verändert sich die nachgefragte Menge eines normalen Gutes typischerweise, wenn nur sein Preis steigt?",
+  "answerOptions": [
+    "Sie sinkt.",
+    "Sie steigt unbegrenzt.",
+    "Sie wird automatisch zum Angebot.",
+    "Sie ist immer gesetzlich fixiert."
+  ],
+  "correct": [0],
+  "explainInstruction": "Entlang einer normalen Nachfragekurve sinkt die nachgefragte Menge bei steigendem Preis.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

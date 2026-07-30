@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Mitbestimmung und Tarifrecht"
+  ],
+  "instruction": "Was ist eine Aussperrung im Arbeitskampf?",
+  "answerOptions": [
+    "Arbeitgeber verweigern betroffenen Beschäftigten vorübergehend Beschäftigung und Entgelt.",
+    "Beschäftigte wählen einen Betriebsrat.",
+    "Der Staat senkt Steuern.",
+    "Ein Unternehmen sperrt nur ein Benutzerkonto."
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Aussperrung ist ein Arbeitskampfmittel der Arbeitgeberseite und unterliegt rechtlichen Grenzen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

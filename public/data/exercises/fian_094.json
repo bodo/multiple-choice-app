@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Versionsverwaltung und DevOps"
+  ],
+  "instruction": "Was unterscheidet Continuous Delivery von Continuous Deployment?",
+  "answerOptions": [
+    "Bei Delivery ist jede Änderung auslieferbar; die Produktivsetzung kann bewusst freigegeben werden. Deployment setzt erfolgreiche Änderungen automatisch produktiv.",
+    "Delivery verwendet keine Tests, Deployment schon.",
+    "Deployment ist ausschließlich manuelles Kopieren.",
+    "Es gibt keinen Unterschied."
+  ],
+  "correct": [0],
+  "explainInstruction": "Continuous Delivery automatisiert bis zu einem freigabefähigen Stand. Continuous Deployment automatisiert zusätzlich die Ausbringung in Produktion.",
+  "specializations": [
+    "FIAN"
+  ]
+}

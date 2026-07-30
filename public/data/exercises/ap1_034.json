@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Was ist ein Hypervisor?",
+  "answerOptions": [
+    "Eine Softwareschicht zum Erstellen und Ausführen virtueller Maschinen",
+    "Ein Protokoll zur Namensauflösung",
+    "Ein mechanischer Festplattenkopf",
+    "Ein Dateiformat für Tabellenkalkulation"
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Hypervisor teilt physische Ressourcen kontrolliert zwischen virtuellen Maschinen auf.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

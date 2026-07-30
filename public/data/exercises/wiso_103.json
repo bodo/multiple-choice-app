@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Staat, Verträge und Verbraucher"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was unterscheidet einen Werkvertrag typischerweise von einem Dienstvertrag?",
+  "answerOptions": [
+    "Beim Werkvertrag wird ein bestimmter Erfolg geschuldet",
+    "Beim Dienstvertrag wird immer eine Sache übereignet",
+    "Beim Werkvertrag ist keine Vergütung möglich",
+    "Beim Dienstvertrag ist stets ein konkreter Erfolg garantiert"
+  ],
+  "correct": [0],
+  "explainInstruction": "Beim Werkvertrag steht ein vereinbarter Erfolg im Vordergrund, beim Dienstvertrag grundsätzlich die geschuldete Tätigkeit."
+}

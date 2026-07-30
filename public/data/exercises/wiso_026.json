@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Mitbestimmung und Tarifrecht"
+  ],
+  "instruction": "Was besagt das Günstigkeitsprinzip im Verhältnis von Tarifvertrag und Arbeitsvertrag?",
+  "answerOptions": [
+    "Eine für Beschäftigte günstigere einzelvertragliche Regelung kann grundsätzlich vorgehen.",
+    "Immer gilt die für den Arbeitgeber billigste Regelung.",
+    "Der Arbeitsvertrag darf nie vom Tarifvertrag abweichen.",
+    "Mündliche Aussagen heben jedes Gesetz auf."
+  ],
+  "correct": [0],
+  "explainInstruction": "Tarifnormen dürfen grundsätzlich nicht zum Nachteil tarifgebundener Beschäftigter unterschritten werden; günstigere Regelungen bleiben möglich.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

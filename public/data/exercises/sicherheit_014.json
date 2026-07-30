@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was unterscheidet Spear-Phishing von breit gestreutem Phishing?",
+  "answerOptions": [
+    "Die Nachricht ist gezielt auf eine Person oder Organisation zugeschnitten",
+    "Spear-Phishing wird ausschließlich per SMS versendet",
+    "Spear-Phishing enthält grundsätzlich keine Links",
+    "Die Nachricht stammt immer von einem bereits kompromittierten Server"
+  ],
+  "correct": [0],
+  "explainInstruction": "Spear-Phishing nutzt Informationen über ein konkretes Ziel, um glaubwürdiger zu wirken."
+}

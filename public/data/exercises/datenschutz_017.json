@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welche Wirkung hat der Widerruf einer Einwilligung?",
+  "answerOptions": [
+    "Die auf Einwilligung gestützte künftige Verarbeitung muss beendet werden, sofern keine andere Rechtsgrundlage besteht",
+    "Alle bisherigen Verarbeitungen werden rückwirkend automatisch rechtswidrig",
+    "Der Widerruf ist nur mit Zustimmung des Verantwortlichen möglich",
+    "Der Widerruf gilt automatisch für jeden anderen Verantwortlichen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Widerruf wirkt für die Zukunft und berührt die Rechtmäßigkeit der Verarbeitung vor dem Widerruf nicht."
+}

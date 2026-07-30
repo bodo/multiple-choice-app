@@ -1,0 +1,24 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Projektmanagement und Wirtschaftlichkeit"
+  ],
+  "instruction": "Welche Faktoren gehören in eine Make-or-Buy-Entscheidung für eine Softwarekomponente?",
+  "answerOptions": [
+    "Gesamtkosten über den Nutzungszeitraum",
+    "Strategische Bedeutung und vorhandenes Know-how",
+    "Anpassbarkeit, Abhängigkeiten und Risiken",
+    "Nur der Anschaffungspreis im ersten Monat"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Eine belastbare Entscheidung betrachtet Total Cost of Ownership, Fähigkeiten, strategische Relevanz, Anpassbarkeit und Lieferantenrisiken statt nur den Einstiegspreis.",
+  "specializations": [
+    "FIAN"
+  ]
+}

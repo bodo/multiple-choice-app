@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Was kann eine auszubildende Person nach nicht bestandener Abschlussprüfung verlangen?",
+  "answerOptions": [
+    "Verlängerung bis zur nächsten Wiederholungsprüfung, höchstens um ein Jahr",
+    "Automatische Bewertung mit ausreichend",
+    "Unbefristete Verlängerung ohne weitere Prüfung",
+    "Sofortige Übernahme in ein Arbeitsverhältnis"
+  ],
+  "correct": [0],
+  "explainInstruction": "Auf Verlangen verlängert sich die Ausbildung bis zur nächstmöglichen Wiederholungsprüfung, insgesamt höchstens um ein Jahr.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

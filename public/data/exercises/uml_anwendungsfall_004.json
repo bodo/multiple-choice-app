@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Bedeutung hat die Systemgrenze in einem Anwendungsfalldiagramm?",
+  "answerOptions": [
+    "Sie trennt die zum betrachteten System gehörenden Anwendungsfälle von externen Akteuren",
+    "Sie bestimmt die maximale Antwortzeit des Systems",
+    "Sie verbindet Ober- und Unterklassen",
+    "Sie kennzeichnet verschlüsselte Nachrichten"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Systemgrenze macht den betrachteten Umfang sichtbar: Anwendungsfälle liegen innerhalb, externe Akteure außerhalb.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Anwendungsfalldiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

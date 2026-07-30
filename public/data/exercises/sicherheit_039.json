@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Wie sollte mit einem unbekannten gefundenen USB-Stick umgegangen werden?",
+  "answerOptions": [
+    "Nicht an ein Produktivgerät anschließen und nach dem Sicherheitsprozess abgeben",
+    "An mehreren Geräten testen, um den Eigentümer zu finden",
+    "Den Autostart aktivieren und die Dateien öffnen",
+    "Den Inhalt in eine öffentliche Cloud kopieren"
+  ],
+  "correct": [0],
+  "explainInstruction": "Unbekannte Datenträger können Schadsoftware oder manipulierte Hardware enthalten und gehören in einen kontrollierten Prüfprozess."
+}

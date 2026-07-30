@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Server und Speicher"
+  ],
+  "instruction": "Welche Zuordnung ist richtig?",
+  "answerOptions": [
+    "RPO beschreibt den tolerierbaren Datenverlustzeitraum; RTO die angestrebte Wiederherstellungsdauer.",
+    "RPO ist die CPU-Taktfrequenz; RTO die RAM-Größe.",
+    "RPO und RTO sind RAID-Level.",
+    "RPO beschreibt nur Kosten; RTO nur Energieverbrauch."
+  ],
+  "correct": [0],
+  "explainInstruction": "RPO beantwortet, wie aktuell wiederhergestellte Daten sein müssen. RTO legt fest, wie schnell der Dienst wieder verfügbar sein soll.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

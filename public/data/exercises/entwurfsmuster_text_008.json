@@ -1,0 +1,20 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Eine Abstraktion und ihre Implementierung sollen getrennte Hierarchien bilden, damit beide unabhängig voneinander variieren können. Nenne das passende Entwurfsmuster. Die deutsche oder englische Bezeichnung genügt; der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Brücke (Bridge)",
+    "/(?:Br(?:ü|ue)cke|Bridge)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Brücke (Bridge) entkoppelt Abstraktion und Implementierung.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Strukturmuster"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

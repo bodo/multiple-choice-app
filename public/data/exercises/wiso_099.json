@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Staat, Verträge und Verbraucher"
+  ],
+  "instruction": "Welches Recht kann ein Käufer bei einem Sachmangel grundsätzlich zuerst verlangen?",
+  "answerOptions": [
+    "Nacherfüllung durch Nachbesserung oder Ersatzlieferung",
+    "Sofortige Verdopplung des Kaufpreises",
+    "Automatische strafrechtliche Verurteilung des Verkäufers",
+    "Kostenlose Nutzung für immer"
+  ],
+  "correct": [0],
+  "explainInstruction": "Das Kaufrecht gibt der Nacherfüllung grundsätzlich Vorrang. Rücktritt, Minderung oder Schadensersatz folgen bei ihren jeweiligen Voraussetzungen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

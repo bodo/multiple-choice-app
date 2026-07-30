@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "instruction": "Wie haftet ein Einzelunternehmer grundsätzlich für betriebliche Verbindlichkeiten?",
+  "answerOptions": [
+    "Unbeschränkt auch mit seinem Privatvermögen",
+    "Nur mit einem gesetzlich festgelegten Aktienpaket",
+    "Überhaupt nicht",
+    "Ausschließlich die Kunden haften"
+  ],
+  "correct": [0],
+  "explainInstruction": "Beim Einzelunternehmen gibt es grundsätzlich keine Haftungstrennung zwischen Betriebs- und Privatvermögen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

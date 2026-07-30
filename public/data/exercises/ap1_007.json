@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Welche Aufgabe erfüllt DNS?",
+  "answerOptions": [
+    "Namen in Ressourceneinträge wie IP-Adressen auflösen",
+    "IP-Adressen automatisch an Clients vermieten",
+    "Festplatten redundant spiegeln",
+    "Benutzerkonten lokal anlegen"
+  ],
+  "correct": [0],
+  "explainInstruction": "DNS ist ein verteiltes Namenssystem. A- und AAAA-Einträge ordnen Namen beispielsweise IPv4- und IPv6-Adressen zu.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

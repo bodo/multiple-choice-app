@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was ist beim Einsatz eines externen Dienstleisters als Auftragsverarbeiter erforderlich?",
+  "answerOptions": [
+    "Eine den Anforderungen des Art. 28 DSGVO entsprechende Vereinbarung",
+    "Nur eine mündliche Zusage zur Geheimhaltung",
+    "Die vollständige Übertragung jeder Verantwortung an den Dienstleister",
+    "Ein Verzicht der Betroffenen auf ihre Rechte"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Auftragsverarbeitung muss vertraglich oder durch ein anderes Rechtsinstrument geregelt werden; der Verantwortliche bleibt verantwortlich."
+}

@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welches Muster benachrichtigt mehrere abhängige Objekte automatisch, wenn ein Subjekt seinen Zustand ändert?",
+  "answerOptions": [
+    "Beobachter (Observer)",
+    "Vermittler (Mediator)",
+    "Zustand (State)",
+    "Zuständigkeitskette (Chain of Responsibility)"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Beobachter (Observer) modelliert eine lose gekoppelte Eins-zu-viele-Abhängigkeit.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Verhaltensmuster"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

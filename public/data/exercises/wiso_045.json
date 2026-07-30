@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Was verlangt das Maximalprinzip?",
+  "answerOptions": [
+    "Mit einem festgelegten Mitteleinsatz das größtmögliche Ergebnis erzielen",
+    "Ein festes Ziel mit unbegrenzten Mitteln erreichen",
+    "Jeden Mitteleinsatz vermeiden",
+    "Nur den Preis maximieren"
+  ],
+  "correct": [0],
+  "explainInstruction": "Beim Maximalprinzip ist der Input vorgegeben; daraus soll der größtmögliche Output entstehen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

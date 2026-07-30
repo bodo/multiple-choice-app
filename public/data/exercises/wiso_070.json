@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "instruction": "Was bedeutet funktionale Organisation?",
+  "answerOptions": [
+    "Stellen werden nach Verrichtungen wie Einkauf, Produktion und Vertrieb gegliedert.",
+    "Jedes Produkt bildet zwingend ein eigenes rechtliches Unternehmen.",
+    "Alle Aufgaben werden zufällig verteilt.",
+    "Es gibt keine Arbeitsteilung."
+  ],
+  "correct": [0],
+  "explainInstruction": "Die funktionale Organisation bündelt gleichartige Tätigkeiten und fördert Spezialisierung.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

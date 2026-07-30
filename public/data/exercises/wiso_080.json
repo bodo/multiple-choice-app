@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Was unterscheidet Aufwand und Auszahlung?",
+  "answerOptions": [
+    "Aufwand mindert das Eigenkapital; eine Auszahlung mindert den Zahlungsmittelbestand.",
+    "Aufwand erhöht immer das Bankguthaben.",
+    "Eine Auszahlung ist immer ein Ertrag.",
+    "Beide Begriffe haben keinen Unternehmensbezug."
+  ],
+  "correct": [0],
+  "explainInstruction": "Aufwand und Auszahlung können zu unterschiedlichen Zeitpunkten entstehen, etwa bei Abschreibung eines früher bezahlten Vermögensgegenstands.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Neue Operationen sollen häufig zu einer stabilen Objektstruktur hinzukommen, ohne die Klassen ihrer Elemente jeweils zu ändern. Nenne das passende Entwurfsmuster. Die deutsche oder englische Bezeichnung genügt; der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Besucher (Visitor)",
+    "/(?:Besucher|Visitor)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Besucher (Visitor) kapselt Operationen in Besucherobjekten; neue Elementtypen sind dafür vergleichsweise aufwendig.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Verhaltensmuster"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

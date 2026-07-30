@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Web, APIs und Sicherheit"
+  ],
+  "instruction": "Welche Maßnahme schützt bei der Ausgabe nicht vertrauenswürdiger Texte im HTML-Kontext vor Cross-Site Scripting?",
+  "answerOptions": [
+    "Kontextgerechtes Escaping beziehungsweise sichere Text-APIs verwenden",
+    "Den Text direkt mit `innerHTML` einsetzen",
+    "Nur die URL kürzen",
+    "Die Datenbank alphabetisch sortieren"
+  ],
+  "correct": [0],
+  "explainInstruction": "Nicht vertrauenswürdige Daten müssen passend zum Ausgabekontext kodiert werden. Sichere Text-APIs interpretieren sie nicht als HTML oder Skript.",
+  "specializations": [
+    "FIAN"
+  ]
+}

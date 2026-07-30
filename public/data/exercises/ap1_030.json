@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Wie ist ein Gibibyte (GiB) definiert?",
+  "answerOptions": [
+    "1.000 Byte",
+    "1.024 Byte",
+    "1.000 MiB",
+    "1.024 MiB"
+  ],
+  "correct": [3],
+  "explainInstruction": "Binäre Präfixe verwenden Zweierpotenzen: `1 GiB = 1.024 MiB = 2³⁰ Byte`.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

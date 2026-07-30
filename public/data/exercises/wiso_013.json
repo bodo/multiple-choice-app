@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Wie viele Urlaubstage entsprechen dem gesetzlichen Mindesturlaub für volljährige Arbeitnehmer bei einer regelmäßigen Fünf-Tage-Woche?",
+  "correct": [20],
+  "explainInstruction": "Das Bundesurlaubsgesetz nennt 24 Werktage bei einer Sechs-Tage-Woche. Umgerechnet auf fünf Arbeitstage sind das 20 Tage.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

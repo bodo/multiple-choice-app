@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Welche Dauer darf die Probezeit eines Berufsausbildungsverhältnisses nach BBiG haben?",
+  "answerOptions": [
+    "Mindestens einen und höchstens vier Monate",
+    "Genau sechs Monate",
+    "Höchstens zwei Wochen",
+    "Beliebig lange nach Vereinbarung"
+  ],
+  "correct": [0],
+  "explainInstruction": "Nach § 20 BBiG muss die Probezeit mindestens einen Monat und darf höchstens vier Monate dauern.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

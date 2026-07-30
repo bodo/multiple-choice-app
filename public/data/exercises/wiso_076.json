@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Was zeigt die Aktivseite einer Bilanz?",
+  "answerOptions": [
+    "Die Verwendung des Kapitals in Vermögensgegenständen",
+    "Nur die Herkunft des Kapitals",
+    "Ausschließlich Umsatzerlöse",
+    "Nur künftige Bestellungen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Aktivseite zeigt, wofür Mittel eingesetzt sind, etwa Anlage- und Umlaufvermögen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

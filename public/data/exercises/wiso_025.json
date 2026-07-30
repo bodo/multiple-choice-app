@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Mitbestimmung und Tarifrecht"
+  ],
+  "instruction": "Was bedeutet Tarifautonomie?",
+  "answerOptions": [
+    "Tarifparteien handeln Arbeitsbedingungen grundsätzlich selbstständig ohne staatliche Festsetzung aus.",
+    "Jeder Betriebsrat kann Gesetze außer Kraft setzen.",
+    "Der Staat bestimmt jede einzelne Vergütung.",
+    "Tarifverträge gelten nur für Beamte."
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Tarifautonomie schützt die eigenverantwortliche Aushandlung von Tarifverträgen durch Koalitionen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

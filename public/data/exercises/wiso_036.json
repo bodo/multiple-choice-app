@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Sozialversicherung"
+  ],
+  "instruction": "Welches Risiko sichert die gesetzliche Rentenversicherung neben dem Alter ebenfalls ab?",
+  "answerOptions": [
+    "Erwerbsminderung",
+    "Beschädigung des privaten Smartphones",
+    "Aktienkursverlust",
+    "Diebstahl eines Fahrrads"
+  ],
+  "correct": [0],
+  "explainInstruction": "Zur gesetzlichen Rentenversicherung gehören unter Voraussetzungen auch Leistungen wegen Erwerbsminderung und an Hinterbliebene.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

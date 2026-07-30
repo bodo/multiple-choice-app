@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche Informationen lassen sich aus einem Anwendungsfalldiagramm ablesen?",
+  "answerOptions": [
+    "Welche externen Rollen mit dem System interagieren",
+    "Welche fachlichen Ziele beziehungsweise Systemleistungen betrachtet werden",
+    "Wo die Grenze des betrachteten Systems liegt",
+    "In welcher exakten Millisekunde eine Methode aufgerufen wird"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Das Diagramm zeigt Akteure, Anwendungsfälle und Systemumfang. Eine exakte zeitliche Aufrufreihenfolge gehört beispielsweise in ein Sequenzdiagramm.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Anwendungsfalldiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

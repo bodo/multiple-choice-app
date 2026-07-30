@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Mitbestimmung und Tarifrecht"
+  ],
+  "instruction": "Wer sind typische Parteien eines Flächentarifvertrags?",
+  "answerOptions": [
+    "Gewerkschaft und Arbeitgeberverband",
+    "Betriebsrat und einzelne Beschäftigte",
+    "Finanzamt und Unternehmen",
+    "Berufsschule und IHK"
+  ],
+  "correct": [0],
+  "explainInstruction": "Tarifverträge werden von Gewerkschaften auf Arbeitnehmerseite und Arbeitgeberverbänden oder einzelnen Arbeitgebern auf Arbeitgeberseite geschlossen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welche Maßnahmen können den Schutz eines Geschäftsgeheimnisses unterstützen?",
+  "answerOptions": [
+    "Zugriff nach Bedarf beschränken",
+    "Vertraulichkeitsregeln dokumentieren",
+    "Vertrauliche Dateien angemessen technisch schützen",
+    "Die Informationen ohne Einschränkung veröffentlichen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Der Schutz als Geschäftsgeheimnis setzt unter anderem angemessene Geheimhaltungsmaßnahmen voraus. Dazu können organisatorische, vertragliche und technische Kontrollen gehören."
+}

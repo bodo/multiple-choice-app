@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welche durchschnittliche Laufzeit hat die binäre Suche in einer sortierten Liste mit `n` Elementen?",
+  "answerOptions": [
+    "`O(1)`",
+    "`O(log n)`",
+    "`O(n)`",
+    "`O(n²)`"
+  ],
+  "correct": [1],
+  "explainInstruction": "Die binäre Suche halbiert den verbleibenden Suchbereich in jedem Schritt. Deshalb wächst die Zahl der Schritte logarithmisch.",
+  "specializations": [
+    "FIAN"
+  ]
+}

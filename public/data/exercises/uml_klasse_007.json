@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Wohin zeigt die hohle Dreiecksspitze einer Generalisierung?",
+  "answerOptions": [
+    "Zur allgemeineren Klasse beziehungsweise Oberklasse",
+    "Zur spezialisierten Unterklasse",
+    "Zum Attribut mit der höchsten Sichtbarkeit",
+    "Zum zuerst erzeugten Objekt"
+  ],
+  "correct": [0],
+  "explainInstruction": "Bei einer Generalisierung zeigt die hohle Dreiecksspitze auf den allgemeineren Klassifizierer, von dem die speziellere Klasse erbt.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

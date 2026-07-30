@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Objektorientierung und UML"
+  ],
+  "instruction": "Welchen Hauptzweck hat ein Interface?",
+  "answerOptions": [
+    "Es legt einen Vertrag fest, ohne die konkrete Implementierung vorzuschreiben.",
+    "Es speichert automatisch alle Objekte in einer Datenbank.",
+    "Es ersetzt sämtliche Tests.",
+    "Es macht jede Methode privat."
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Interface beschreibt von außen nutzbares Verhalten. Mehrere Klassen können diesen Vertrag unterschiedlich implementieren.",
+  "specializations": [
+    "FIAN"
+  ]
+}

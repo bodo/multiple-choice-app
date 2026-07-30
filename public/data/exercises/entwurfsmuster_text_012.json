@@ -1,0 +1,31 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Nenne ein Erzeugungsmuster (creational pattern) der GoF. Der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Abstrakte Fabrik (Abstract Factory)",
+    "/(?:Abstrakte[- ]+Fabrik|Abstract[- ]+Factory)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Erbauer (Builder)",
+    "/(?:Erbauer|Builder)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Fabrikmethode (Factory Method)",
+    "/(?:Fabrikmethode|Factory[- ]+Method)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Prototyp (Prototype)",
+    "/(?:Prototyp|Prototype)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Einzelstück (Singleton)",
+    "/(?:Einzelst(?:ü|ue)ck|Singleton)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Zulässig sind Abstrakte Fabrik (Abstract Factory), Erbauer (Builder), Fabrikmethode (Factory Method), Prototyp (Prototype) und Einzelstück (Singleton).",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Erzeugungsmuster"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

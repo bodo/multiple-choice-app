@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welches Schutzziel verhindert, dass Unbefugte Informationen lesen können?",
+  "answerOptions": [
+    "Vertraulichkeit",
+    "Verfügbarkeit",
+    "Integrität",
+    "Authentizität"
+  ],
+  "correct": [0],
+  "explainInstruction": "Vertraulichkeit bedeutet, dass Informationen nur berechtigten Personen oder Systemen zugänglich sind."
+}

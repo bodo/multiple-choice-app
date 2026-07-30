@@ -1,0 +1,26 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Nenne ein objektbasiertes Erzeugungsmuster (object-based creational pattern) der GoF. Der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Abstrakte Fabrik (Abstract Factory)",
+    "/(?:Abstrakte[- ]+Fabrik|Abstract[- ]+Factory)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Erbauer (Builder)",
+    "/(?:Erbauer|Builder)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Prototyp (Prototype)",
+    "/(?:Prototyp|Prototype)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Einzelstück (Singleton)",
+    "/(?:Einzelst(?:ü|ue)ck|Singleton)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Objektbasiert sind Abstrakte Fabrik (Abstract Factory), Erbauer (Builder), Prototyp (Prototype) und Einzelstück (Singleton).",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Gültigkeitsbereich"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

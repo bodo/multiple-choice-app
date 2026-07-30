@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Was bewirkt ein `LEFT JOIN` von `Kunde` auf `Bestellung`?",
+  "answerOptions": [
+    "Er liefert nur Kunden mit mindestens einer Bestellung.",
+    "Er liefert alle Bestellungen, aber nur passende Kunden.",
+    "Er liefert alle Kunden; fehlende Bestelldaten erscheinen als `NULL`.",
+    "Er verändert beide Tabellen dauerhaft."
+  ],
+  "correct": [2],
+  "explainInstruction": "Beim `LEFT JOIN` bleiben alle Zeilen der linken Tabelle erhalten. Gibt es rechts keinen Treffer, sind die rechten Spalten `NULL`.",
+  "specializations": [
+    "FIAN"
+  ]
+}

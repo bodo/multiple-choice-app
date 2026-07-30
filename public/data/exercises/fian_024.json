@@ -1,0 +1,14 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Eine Spalte `betrag` enthält die Werte `10`, `NULL`, `20`, `NULL`. Welches Ergebnis liefert `SELECT COUNT(betrag) ...`?",
+  "correct": [2],
+  "explainInstruction": "`COUNT(spalte)` zählt nur Werte, die nicht `NULL` sind. Hier sind das 10 und 20.",
+  "specializations": [
+    "FIAN"
+  ]
+}

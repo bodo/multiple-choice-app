@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Wann wird aus einem Bedürfnis volkswirtschaftlich wirksame Nachfrage?",
+  "answerOptions": [
+    "Wenn Kaufwunsch und entsprechende Kaufkraft am Markt zusammentreffen",
+    "Sobald jemand von einem Gut hört",
+    "Nur wenn das Gut kostenlos ist",
+    "Erst nach staatlicher Produktion"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Bedarf wird zur Nachfrage, wenn er mit Kaufkraft ausgestattet am Markt auftritt.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

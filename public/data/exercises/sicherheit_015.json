@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Eine angebliche Führungskraft fordert per E-Mail eine ungewöhnliche Sofortüberweisung. Was ist die beste Reaktion?",
+  "answerOptions": [
+    "Die Anweisung über einen bekannten zweiten Kommunikationsweg verifizieren",
+    "Sofort zahlen, weil die Absenderanzeige den richtigen Namen enthält",
+    "Die Nachricht an alle Beschäftigten weiterleiten",
+    "Nur prüfen, ob die E-Mail eine Signaturgrafik enthält"
+  ],
+  "correct": [0],
+  "explainInstruction": "Bei ungewöhnlichen Zahlungsanweisungen sollte die Identität über einen unabhängigen, bereits bekannten Kanal geprüft werden."
+}

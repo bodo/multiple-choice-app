@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Welche Kosten sind typischerweise kurzfristig fix?",
+  "answerOptions": [
+    "Monatliche Büromiete",
+    "Materialkosten je produziertem Stück",
+    "Versandkosten je Paket",
+    "Verkaufsprovision je Auftrag"
+  ],
+  "correct": [0],
+  "explainInstruction": "Fixkosten ändern sich innerhalb eines betrachteten Beschäftigungsbereichs nicht unmittelbar mit der Ausbringungsmenge.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was kennzeichnet einen Trojaner?",
+  "answerOptions": [
+    "Schadfunktion verbirgt sich in oder hinter scheinbar legitimer Software",
+    "Er repliziert sich zwingend ohne Benutzeraktion über jedes Netzwerk",
+    "Er ist ausschließlich ein physischer Hardwaremanipulator",
+    "Er prüft nur die Gültigkeit digitaler Zertifikate"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Trojaner täuscht einen legitimen Zweck vor, führt aber zusätzlich unerwünschte oder schädliche Funktionen aus."
+}

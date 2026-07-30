@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Aufgabe hat ein Entscheidungsknoten?",
+  "answerOptions": [
+    "Er leitet den Ablauf abhängig von Bedingungen auf alternative Pfade",
+    "Er startet alle ausgehenden Pfade zwingend parallel",
+    "Er definiert Attribute einer Klasse",
+    "Er beendet automatisch die gesamte Aktivität"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Entscheidungsknoten besitzt typischerweise einen eingehenden und mehrere bedingte ausgehende Flüsse. Gewählt wird ein passender Alternativpfad.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Aktivitätsdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

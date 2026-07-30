@@ -1,0 +1,14 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welchen Wert hat `x` nach diesem Pseudocode?\n\n```text\nx = 1\nfür i von 1 bis 4:\n    x = x * 2\n```",
+  "correct": [16],
+  "explainInstruction": "`x` wird viermal verdoppelt: 1 → 2 → 4 → 8 → 16.",
+  "specializations": [
+    "FIAN"
+  ]
+}

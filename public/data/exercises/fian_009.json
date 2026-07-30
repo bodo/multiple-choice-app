@@ -1,0 +1,23 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welche Aussagen müssen für eine klassische binäre Suche gelten?",
+  "answerOptions": [
+    "Die Daten sind nach dem Suchschlüssel sortiert.",
+    "Alle Elemente müssen eindeutig sein.",
+    "Der Suchschlüssel besitzt eine verwendbare Ordnungsrelation.",
+    "Die Liste muss genau eine Zweierpotenz lang sein."
+  ],
+  "correct": [
+    0,
+    2
+  ],
+  "explainInstruction": "Binäre Suche benötigt eine sortierte Folge und einen Vergleich, der kleiner, gleich oder größer unterscheiden kann. Eindeutigkeit und eine Zweierpotenz als Länge sind nicht nötig.",
+  "specializations": [
+    "FIAN"
+  ]
+}

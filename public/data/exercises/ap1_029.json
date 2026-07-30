@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Wie viele Bit bilden ein Byte?",
+  "answerOptions": [
+    "2",
+    "4",
+    "8",
+    "16"
+  ],
+  "correct": [2],
+  "explainInstruction": "Ein Byte besteht per Definition aus 8 Bit.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

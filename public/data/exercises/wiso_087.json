@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Welche Formel beschreibt die Gesamtkapitalrentabilität vereinfacht?",
+  "answerOptions": [
+    "`(Gewinn + Fremdkapitalzinsen) ÷ Gesamtkapital × 100`",
+    "`Gesamtkapital ÷ Umsatz × 100`",
+    "`Kosten + Erlöse`",
+    "`Stückzahl ÷ Arbeitszeit`"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Kennzahl misst, wie sich das insgesamt eingesetzte Kapital unabhängig von seiner Herkunft verzinst.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

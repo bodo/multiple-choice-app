@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Projektmanagement und Wirtschaftlichkeit"
+  ],
+  "instruction": "Was kennzeichnet den kritischen Pfad eines Projektnetzplans?",
+  "answerOptions": [
+    "Er enthält nur optionale Aufgaben.",
+    "Seine Vorgänge bestimmen die minimale Projektdauer und besitzen keinen Gesamtpuffer.",
+    "Er zeigt ausschließlich Projektkosten.",
+    "Er darf keine Abhängigkeiten enthalten."
+  ],
+  "correct": [1],
+  "explainInstruction": "Verzögert sich ein Vorgang auf dem kritischen Pfad ohne Gegenmaßnahme, verschiebt sich der Projektendtermin.",
+  "specializations": [
+    "FIAN"
+  ]
+}

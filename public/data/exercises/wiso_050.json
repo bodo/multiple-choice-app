@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Was kennzeichnet das Marktgleichgewicht?",
+  "answerOptions": [
+    "Angebotene und nachgefragte Menge stimmen beim Gleichgewichtspreis überein.",
+    "Es gibt grundsätzlich keine Preise.",
+    "Nur ein Anbieter darf verkaufen.",
+    "Der Staat produziert jedes Gut selbst."
+  ],
+  "correct": [0],
+  "explainInstruction": "Am Schnittpunkt von Angebots- und Nachfragekurve gibt es weder einen geplanten Angebots- noch Nachfrageüberschuss.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

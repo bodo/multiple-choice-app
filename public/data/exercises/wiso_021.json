@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Mitbestimmung und Tarifrecht"
+  ],
+  "instruction": "Wessen Interessen vertritt ein Betriebsrat?",
+  "answerOptions": [
+    "Die Beschäftigten des Betriebs",
+    "Ausschließlich die Anteilseigner",
+    "Nur externe Lieferanten",
+    "Die Europäische Zentralbank"
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Betriebsrat ist die gewählte betriebliche Interessenvertretung der Arbeitnehmerinnen und Arbeitnehmer.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

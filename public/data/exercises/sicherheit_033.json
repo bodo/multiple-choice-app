@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was sollte beim Ausscheiden eines Mitarbeiters mit dessen Zugängen geschehen?",
+  "answerOptions": [
+    "Konten und Berechtigungen nach einem festgelegten Offboarding-Prozess zeitnah entziehen",
+    "Das Passwort unverändert an die nachfolgende Person weitergeben",
+    "Das Konto dauerhaft aktiv lassen, falls später Fragen entstehen",
+    "Nur den Anzeigenamen des Kontos ändern"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein geregeltes Offboarding verhindert verwaiste oder weiterhin nutzbare Zugänge."
+}

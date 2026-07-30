@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Ein Objekt soll sein Verhalten ändern, wenn sich sein interner Zustand ändert, ohne große Fallunterscheidungen zu verwenden. Nenne das passende Entwurfsmuster. Die deutsche oder englische Bezeichnung genügt; der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Zustand (State)",
+    "/(?:Zustand|State)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Zustand (State) delegiert zustandsabhängiges Verhalten an Zustandsobjekte.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Verhaltensmuster"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

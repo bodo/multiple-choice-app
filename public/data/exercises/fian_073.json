@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Projektmanagement und Wirtschaftlichkeit"
+  ],
+  "instruction": "Welche Verantwortung hat der Product Owner in Scrum?",
+  "answerOptions": [
+    "Er maximiert den Produktwert und verantwortet die Ordnung des Product Backlogs.",
+    "Er weist jedem Entwickler täglich einzelne Aufgaben zu.",
+    "Er führt ausschließlich Systemtests aus.",
+    "Er genehmigt Urlaub im gesamten Unternehmen."
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Product Owner verantwortet Produktziel und Backlog-Reihenfolge mit Blick auf den Wert. Das Entwicklungsteam organisiert seine Arbeit selbst.",
+  "specializations": [
+    "FIAN"
+  ]
+}

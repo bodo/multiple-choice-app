@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Wofür wird ein kombinierter Fragment-Rahmen mit `loop` verwendet?",
+  "answerOptions": [
+    "Für eine wiederholte Nachrichtenfolge",
+    "Für die Definition einer neuen Klasse",
+    "Für die Zuordnung eines Akteurs zu einem System",
+    "Für die Angabe einer Multiplizität"
+  ],
+  "correct": [0],
+  "explainInstruction": "`loop` fasst einen Interaktionsabschnitt zusammen, der abhängig von einer Bedingung oder einer Wiederholungsangabe mehrfach ausgeführt wird.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Sequenzdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

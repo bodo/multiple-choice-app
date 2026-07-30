@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Was zeigt die Passivseite einer Bilanz?",
+  "answerOptions": [
+    "Die Herkunft des Kapitals aus Eigen- und Fremdkapital",
+    "Nur den Lagerbestand",
+    "Ausschließlich Maschinen",
+    "Nur die Zahl der Beschäftigten"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Passivseite erklärt die Finanzierung des Vermögens durch Eigenkapital und Schulden.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

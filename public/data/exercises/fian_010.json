@@ -1,0 +1,14 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welchen Wert liefert der folgende Pseudocode?\n\n```text\nsumme = 0\nfür i von 1 bis 6:\n    wenn i mod 2 == 0:\n        summe = summe + i\nausgeben(summe)\n```",
+  "correct": [12],
+  "explainInstruction": "Addiert werden die geraden Zahlen 2, 4 und 6. Ihre Summe ist 12.",
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Recht"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was regelt eine Softwarelizenz hauptsächlich?",
+  "answerOptions": [
+    "In welchem Umfang die Software genutzt, vervielfältigt oder weitergegeben werden darf",
+    "Ob der Hersteller Steuern zahlen muss",
+    "Welche IP-Adresse der Benutzer erhält",
+    "Wie hoch die Bildschirmauflösung sein muss"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Lizenz räumt Nutzungsrechte unter bestimmten Bedingungen ein. Eigentum an einem Datenträger und Nutzungsrechte sind nicht dasselbe."
+}

@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welches Muster bildet Teil-Ganzes-Hierarchien als Baum ab und behandelt einzelne Elemente und zusammengesetzte Elemente einheitlich?",
+  "answerOptions": [
+    "Kompositum (Composite)",
+    "Dekorierer (Decorator)",
+    "Brücke (Bridge)",
+    "Fliegengewicht (Flyweight)"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Kompositum (Composite) gibt Blättern und zusammengesetzten Knoten eine gemeinsame Schnittstelle.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Strukturmuster"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

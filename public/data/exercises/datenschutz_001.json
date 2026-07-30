@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welche Angaben können personenbezogene Daten sein?",
+  "answerOptions": [
+    "Name und dienstliche E-Mail-Adresse einer Person",
+    "Eine einem Benutzer zuordenbare Kundennummer",
+    "Standortdaten eines identifizierbaren Beschäftigten",
+    "Eine vollständig anonymisierte, nicht rückführbare Statistik"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Personenbezogen sind Informationen, die sich direkt oder indirekt auf eine identifizierte oder identifizierbare natürliche Person beziehen."
+}

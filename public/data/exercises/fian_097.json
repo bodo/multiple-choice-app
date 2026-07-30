@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Betriebssysteme und Netzwerke"
+  ],
+  "instruction": "Welche Hauptaufgabe hat DNS?",
+  "answerOptions": [
+    "Namen wie `example.org` in zugehörige Ressourcen wie IP-Adressen auflösen",
+    "Dateien auf der Festplatte verschlüsseln",
+    "SQL-Transaktionen sperren",
+    "Quellcode kompilieren"
+  ],
+  "correct": [0],
+  "explainInstruction": "Das Domain Name System ist ein verteiltes Namenssystem und liefert zu Namen verschiedene Ressourceneinträge, darunter A- und AAAA-Adressen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

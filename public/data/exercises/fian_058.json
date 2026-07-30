@@ -1,0 +1,24 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Welche Ziele kann ein Code-Review sinnvoll unterstützen?",
+  "answerOptions": [
+    "Fehler und Sicherheitsprobleme früh erkennen",
+    "Wissen im Team verteilen",
+    "Verständlichkeit und Wartbarkeit verbessern",
+    "Automatisch beweisen, dass die Software fehlerfrei ist"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Reviews verbessern Qualität und Wissenstransfer, liefern aber keinen mathematischen Beweis vollständiger Fehlerfreiheit.",
+  "specializations": [
+    "FIAN"
+  ]
+}

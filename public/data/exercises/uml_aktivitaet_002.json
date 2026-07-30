@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was kennzeichnet ein ausgefüllter schwarzer Kreis in einem Aktivitätsdiagramm?",
+  "answerOptions": [
+    "Den Start eines Ablaufs",
+    "Das Ende der gesamten Aktivität",
+    "Eine parallele Verzweigung",
+    "Eine externe Rolle"
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Initialknoten wird als ausgefüllter Kreis dargestellt und markiert den Beginn des Kontrollflusses.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Aktivitätsdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Wie werden vertrauliche Daten auf einem ausgemusterten Datenträger angemessen behandelt?",
+  "answerOptions": [
+    "Nach Schutzbedarf mit einem geeigneten Verfahren sicher löschen oder den Datenträger vernichten",
+    "Nur den Dateinamen ändern",
+    "Die Dateien in den Papierkorb verschieben",
+    "Den Datenträger ohne Prüfung weitergeben"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein geeignetes Lösch- oder Vernichtungsverfahren muss verhindern, dass schutzbedürftige Daten wiederhergestellt werden können."
+}

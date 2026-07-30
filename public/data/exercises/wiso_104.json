@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Staat, Verträge und Verbraucher"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welche Bedeutung hat die Abnahme bei einem Werkvertrag typischerweise?",
+  "answerOptions": [
+    "Der Besteller billigt das Werk grundsätzlich als vertragsgemäß",
+    "Der Quellcode wird automatisch Open Source",
+    "Alle Gewährleistungsrechte entfallen immer sofort",
+    "Der Vertrag wird rückwirkend zu einem Arbeitsvertrag"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Abnahme ist ein zentraler Punkt des Werkvertrags und hat unter anderem Bedeutung für Fälligkeit und Mängelrechte."
+}

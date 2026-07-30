@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Warum wird beim Speichern von Passwort-Hashes für jedes Passwort ein zufälliges Salt verwendet?",
+  "answerOptions": [
+    "Gleiche Passwörter sollen unterschiedliche Hashwerte erhalten",
+    "Das Passwort soll anschließend ohne Prüfung lesbar sein",
+    "Der Hash soll auf eine feste Länge gekürzt werden",
+    "Mehrfaktor-Authentisierung soll deaktiviert werden"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein individuelles Salt erschwert vorberechnete Angriffe und verhindert direkt erkennbare gleiche Hashwerte."
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Projektmanagement und Wirtschaftlichkeit"
+  ],
+  "instruction": "Was ist das Ziel einer Sprint-Retrospektive?",
+  "answerOptions": [
+    "Zusammenarbeit und Arbeitsweise des Teams für kommende Sprints verbessern",
+    "Nur neue Funktionen gegenüber Kunden präsentieren",
+    "Den Sprint nachträglich verlängern",
+    "Alle Einträge des Product Backlogs löschen"
+  ],
+  "correct": [0],
+  "explainInstruction": "In der Retrospektive reflektiert das Scrum-Team Zusammenarbeit, Prozesse und Werkzeuge und vereinbart konkrete Verbesserungen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

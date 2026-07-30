@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was ist ein wichtiges Ziel des Patchmanagements?",
+  "answerOptions": [
+    "Bekannte Schwachstellen kontrolliert und zeitnah schließen",
+    "Alle Systeme täglich vollständig neu installieren",
+    "Protokolldaten dauerhaft deaktivieren",
+    "Jede Softwareversion unabhängig vom Risiko sofort produktiv setzen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Patchmanagement bewertet, testet, verteilt und dokumentiert Aktualisierungen risikoorientiert."
+}

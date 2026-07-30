@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was gilt bei einem Widerspruch gegen die Verarbeitung für Direktwerbung?",
+  "answerOptions": [
+    "Die personenbezogenen Daten dürfen nicht mehr für Direktwerbung verarbeitet werden",
+    "Der Verantwortliche darf die Werbung unverändert fortsetzen",
+    "Ein Widerspruch ist nur einmal jährlich möglich",
+    "Der Widerspruch gilt ausschließlich für gedruckte Werbung"
+  ],
+  "correct": [0],
+  "explainInstruction": "Gegen Direktwerbung kann jederzeit widersprochen werden; dann ist die Verarbeitung zu diesem Zweck zu beenden."
+}

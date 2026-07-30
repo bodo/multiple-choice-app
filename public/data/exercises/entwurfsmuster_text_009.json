@@ -1,0 +1,20 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Sehr viele feingranulare Objekte sollen gemeinsamen, unveränderlichen Zustand teilen, um Speicher zu sparen. Nenne das passende Entwurfsmuster. Die deutsche oder englische Bezeichnung genügt; der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Fliegengewicht (Flyweight)",
+    "/(?:Fliegengewicht|Flyweight)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Fliegengewicht (Flyweight) teilt intrinsischen Zustand zwischen vielen Objekten.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Strukturmuster"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

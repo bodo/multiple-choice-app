@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Web, APIs und Sicherheit"
+  ],
+  "instruction": "Was ist der Unterschied zwischen Authentisierung und Autorisierung?",
+  "answerOptions": [
+    "Authentisierung prüft die Identität; Autorisierung prüft erlaubte Aktionen.",
+    "Authentisierung vergibt Rechte; Autorisierung komprimiert Daten.",
+    "Beide Begriffe bedeuten ausschließlich Verschlüsselung.",
+    "Autorisierung findet immer vor der Identitätsprüfung statt."
+  ],
+  "correct": [0],
+  "explainInstruction": "Zuerst wird festgestellt, wer jemand ist. Danach wird entschieden, auf welche Ressourcen und Aktionen diese Identität zugreifen darf.",
+  "specializations": [
+    "FIAN"
+  ]
+}

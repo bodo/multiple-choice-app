@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Server und Speicher"
+  ],
+  "instruction": "Ein RAID 5 besteht aus vier Laufwerken mit jeweils 2 TB. Wie groß ist die nutzbare Kapazität näherungsweise in TB?",
+  "correct": [6],
+  "explainInstruction": "Bei gleich großen Laufwerken gilt für RAID 5: `(Anzahl − 1) × kleinste Kapazität = 3 × 2 TB = 6 TB`.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

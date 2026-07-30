@@ -1,0 +1,24 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Welche typischen Auswirkungen hat ein zusätzlicher Datenbankindex?",
+  "answerOptions": [
+    "Geeignete Leseabfragen können schneller werden.",
+    "Schreiboperationen können zusätzlichen Aufwand verursachen.",
+    "Der Index benötigt zusätzlichen Speicher.",
+    "Jede Abfrage wird unabhängig von ihren Bedingungen schneller."
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Indizes beschleunigen passende Zugriffe, müssen aber bei Änderungen gepflegt und gespeichert werden. Unpassende Abfragen profitieren nicht automatisch.",
+  "specializations": [
+    "FIAN"
+  ]
+}

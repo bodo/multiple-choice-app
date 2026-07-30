@@ -1,0 +1,32 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche Aussagen über den klassenbasierten (class-based) und objektbasierten (object-based) Gültigkeitsbereich sind korrekt?",
+  "answerOptions": [
+    "Fabrikmethode (Factory Method) nutzt schwerpunktmäßig Vererbung und ist klassenbasiert (class-based).",
+    "Schablonenmethode (Template Method) verteilt Algorithmusschritte über Unterklassen und ist klassenbasiert (class-based).",
+    "Interpreter (Interpreter) ist in der GoF-Matrix klassenbasiert (class-based).",
+    "Strategie (Strategy) kombiniert austauschbare Strategieobjekte und ist objektbasiert (object-based).",
+    "Zustand (State) delegiert Verhalten an Zustandsobjekte und ist objektbasiert (object-based).",
+    "Adapter (Adapter) existiert als klassenbasierte und als objektbasierte Variante (class and object adapter).",
+    "Abstrakte Fabrik (Abstract Factory) ist wegen ihres Namens zwingend klassenbasiert (class-based).",
+    "Besucher (Visitor) ist in der GoF-Matrix klassenbasiert (class-based)."
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "explainInstruction": "Klassenbasierte Muster betonen statische Vererbungsbeziehungen; objektbasierte Muster betonen Komposition und Delegation. Abstrakte Fabrik (Abstract Factory) und Besucher (Visitor) sind objektbasiert.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

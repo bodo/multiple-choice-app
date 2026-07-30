@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Arbeitsplatz und Sicherheit"
+  ],
+  "instruction": "Wie wird das Least-Privilege-Prinzip bei einem Benutzerkonto umgesetzt?",
+  "answerOptions": [
+    "Das Konto erhält nur die für seine Aufgaben notwendigen Rechte.",
+    "Das Konto erhält dauerhaft lokale Administratorrechte.",
+    "Alle Benutzer verwenden dasselbe Kennwort.",
+    "Berechtigungen werden nicht dokumentiert."
+  ],
+  "correct": [0],
+  "explainInstruction": "Minimale Rechte verringern Angriffsfläche und Schadensausmaß bei Fehlbedienung oder kompromittierten Konten.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

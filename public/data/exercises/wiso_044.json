@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Was verlangt das Minimalprinzip?",
+  "answerOptions": [
+    "Ein festgelegtes Ziel mit möglichst geringem Mitteleinsatz erreichen",
+    "Mit festen Mitteln das größtmögliche Ergebnis erzielen",
+    "Ohne Ziel möglichst viel verbrauchen",
+    "Kosten grundsätzlich ignorieren"
+  ],
+  "correct": [0],
+  "explainInstruction": "Beim Minimalprinzip ist das Ergebnis vorgegeben; der notwendige Input soll minimiert werden.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Welche Subnetzmaske entspricht dem IPv4-Präfix `/24`?",
+  "answerOptions": [
+    "255.0.0.0",
+    "255.255.0.0",
+    "255.255.255.0",
+    "255.255.255.252"
+  ],
+  "correct": [2],
+  "explainInstruction": "Ein `/24` besitzt 24 gesetzte Netzbits. Das entspricht 255.255.255.0.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

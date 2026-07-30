@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Wer muss die für Ausbildung und Prüfungen erforderlichen Ausbildungsmittel grundsätzlich kostenlos bereitstellen?",
+  "answerOptions": [
+    "Die auszubildende Person",
+    "Der Ausbildungsbetrieb",
+    "Die Krankenkasse",
+    "Die Berufsschulklasse"
+  ],
+  "correct": [1],
+  "explainInstruction": "Ausbildende müssen erforderliche Werkzeuge, Werkstoffe, Fachliteratur und nötige Hard- und Software kostenlos zur Verfügung stellen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

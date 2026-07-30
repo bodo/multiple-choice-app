@@ -1,0 +1,24 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Welche Angaben gehören zu einem nachvollziehbaren Testfall?",
+  "answerOptions": [
+    "Vorbedingungen und Testdaten",
+    "Auszuführende Schritte",
+    "Erwartetes Ergebnis",
+    "Nur der Name der testenden Person"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Ein reproduzierbarer Testfall beschreibt Ausgangslage, Eingaben, Ablauf und erwartetes Ergebnis. Ein Personenname allein reicht nicht.",
+  "specializations": [
+    "FIAN"
+  ]
+}

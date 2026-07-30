@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Welche Finanzierung ist Eigenfinanzierung?",
+  "answerOptions": [
+    "Gesellschafter leisten eine zusätzliche Einlage.",
+    "Eine Bank gewährt einen Kredit.",
+    "Ein Lieferant räumt ein Zahlungsziel ein.",
+    "Eine Anleihe wird als Verbindlichkeit ausgegeben."
+  ],
+  "correct": [0],
+  "explainInstruction": "Einlagen erhöhen das Eigenkapital. Kredite, Lieferantenverbindlichkeiten und Anleihen sind Fremdfinanzierung.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

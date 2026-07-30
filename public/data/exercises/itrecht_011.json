@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Recht"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Eine Software ist pro namentlich benanntem Benutzer lizenziert. Was ist vor dem Anlegen weiterer Konten zu prüfen?",
+  "answerOptions": [
+    "Ob die vorhandene Anzahl und Art der Lizenzen die zusätzlichen Benutzer abdeckt",
+    "Nur ob genügend Festplattenspeicher vorhanden ist",
+    "Ob alle Benutzer dasselbe Passwort verwenden",
+    "Ob der Hersteller eine öffentliche Website besitzt"
+  ],
+  "correct": [0],
+  "explainInstruction": "Lizenzmetriken wie Named User, Gerät oder gleichzeitige Nutzung müssen technisch und organisatorisch eingehalten werden."
+}

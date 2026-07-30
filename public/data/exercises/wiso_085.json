@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Welchen Zweck hat eine planmäßige Abschreibung?",
+  "answerOptions": [
+    "Anschaffungskosten eines abnutzbaren Vermögensgegenstands auf seine Nutzungsperioden verteilen",
+    "Den Kaufpreis sofort vollständig zurückerstatten",
+    "Alle Schulden löschen",
+    "Die Umsatzsteuer erhöhen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Abschreibungen bilden den periodischen Werteverzehr ab und verteilen die Anschaffungskosten erfolgswirksam.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

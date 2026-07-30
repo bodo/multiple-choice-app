@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Welchen Zweck hat ein Regressionstest?",
+  "answerOptions": [
+    "Er prüft, ob bereits funktionierendes Verhalten nach Änderungen weiterhin funktioniert.",
+    "Er ersetzt die Versionsverwaltung.",
+    "Er misst ausschließlich die Prozessorauslastung.",
+    "Er löscht alte Anforderungen."
+  ],
+  "correct": [0],
+  "explainInstruction": "Regressionstests erkennen unbeabsichtigte Nebenwirkungen neuer Änderungen auf bestehendes Verhalten.",
+  "specializations": [
+    "FIAN"
+  ]
+}

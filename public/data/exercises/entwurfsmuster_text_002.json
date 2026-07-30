@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Eine Anforderung soll als Objekt gekapselt werden, damit sie protokolliert, in eine Warteschlange gestellt oder rückgängig gemacht werden kann. Nenne das passende Entwurfsmuster. Die deutsche oder englische Bezeichnung genügt; der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Befehl (Command)",
+    "/(?:Befehl|Command)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Befehl (Command) macht aus einer Anforderung ein eigenständiges Objekt.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Verhaltensmuster"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

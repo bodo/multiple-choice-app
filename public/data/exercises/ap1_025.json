@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Welche Aufgabe hat UEFI beim Start eines PCs?",
+  "answerOptions": [
+    "Hardware initialisieren und den Start eines Bootloaders vorbereiten",
+    "Anwendungsdaten dauerhaft verschlüsseln",
+    "E-Mails über SMTP zustellen",
+    "Datenbankabfragen optimieren"
+  ],
+  "correct": [0],
+  "explainInstruction": "UEFI-Firmware initialisiert zentrale Hardware, stellt Startdienste bereit und lädt einen Bootloader.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Anforderungen und UX"
+  ],
+  "instruction": "Welche Aussage ist eine funktionale Anforderung?",
+  "answerOptions": [
+    "Die Anwendung soll Bestellungen als PDF exportieren können.",
+    "Die Antwortzeit soll unter 500 ms liegen.",
+    "Der Dienst soll 99,9 % verfügbar sein.",
+    "Die Oberfläche soll die WCAG-Kontrastanforderungen erfüllen."
+  ],
+  "correct": [0],
+  "explainInstruction": "Funktionale Anforderungen beschreiben, was ein System tut. Antwortzeit, Verfügbarkeit und Barrierefreiheit sind Qualitätsanforderungen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

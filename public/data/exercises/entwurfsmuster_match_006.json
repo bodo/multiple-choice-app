@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "instruction": "Ordne jedes Entwurfsmuster seiner Aufgabe zu.",
+  "answerOptions": [
+    "Zuständigkeitskette (Chain of Responsibility)",
+    "Abstrakte Fabrik (Abstract Factory)",
+    "Fliegengewicht (Flyweight)"
+  ],
+  "matchOptions": [
+    "Erzeugungsmuster (creational pattern)",
+    "Strukturmuster (structural pattern)",
+    "Verhaltensmuster (behavioral pattern)"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Erzeugungsmuster (creational patterns) betreffen die Objekterzeugung, Strukturmuster (structural patterns) die Zusammensetzung und Verhaltensmuster (behavioral patterns) die Zusammenarbeit und Verantwortungsverteilung.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

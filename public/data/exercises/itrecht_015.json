@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Recht"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Darf ein im Internet gefundenes Foto grundsätzlich ohne Prüfung auf einer Unternehmenswebsite verwendet werden?",
+  "answerOptions": [
+    "Nein, Nutzungsrechte und gegebenenfalls weitere Rechte müssen geprüft werden",
+    "Ja, sobald es ohne Anmeldung sichtbar ist",
+    "Ja, wenn die Datei kleiner als ein Megabyte ist",
+    "Ja, wenn kein Wasserzeichen enthalten ist"
+  ],
+  "correct": [0],
+  "explainInstruction": "Öffentliche Abrufbarkeit bedeutet nicht, dass ein Foto beliebig vervielfältigt oder öffentlich zugänglich gemacht werden darf."
+}

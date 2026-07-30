@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Objektorientierung und UML"
+  ],
+  "instruction": "Wann passt Komposition besser als eine lose Assoziation?",
+  "answerOptions": [
+    "Wenn Teil und Ganzes unabhängig voneinander beliebig weiterleben",
+    "Wenn das Teil fest zum Ganzen gehört und sein Lebenszyklus daran gebunden ist",
+    "Wenn zwei Klassen keinerlei Beziehung haben",
+    "Wenn nur primitive Datentypen verwendet werden"
+  ],
+  "correct": [1],
+  "explainInstruction": "Komposition ist eine starke Ganzes-Teil-Beziehung. Das Teil gehört exklusiv zum Ganzen und besteht typischerweise nicht unabhängig weiter.",
+  "specializations": [
+    "FIAN"
+  ]
+}

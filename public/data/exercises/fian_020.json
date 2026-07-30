@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Welche Zeilen liefert ein `INNER JOIN` zweier Tabellen?",
+  "answerOptions": [
+    "Alle Zeilen beider Tabellen, auch ohne Treffer",
+    "Nur Zeilen, für die die Join-Bedingung auf beiden Seiten erfüllt ist",
+    "Nur Zeilen der linken Tabelle ohne Treffer",
+    "Ausschließlich doppelte Zeilen innerhalb einer Tabelle"
+  ],
+  "correct": [1],
+  "explainInstruction": "Ein `INNER JOIN` enthält nur passende Kombinationen. Nicht zuordenbare Zeilen beider Seiten fallen aus dem Ergebnis.",
+  "specializations": [
+    "FIAN"
+  ]
+}

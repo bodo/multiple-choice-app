@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welche Operation entnimmt beim Stack das zuletzt eingefügte Element?",
+  "answerOptions": [
+    "`enqueue`",
+    "`dequeue`",
+    "`pop`",
+    "`peekLast`"
+  ],
+  "correct": [2],
+  "explainInstruction": "Ein Stack arbeitet nach LIFO. `push` legt ein Element oben ab, `pop` entfernt das oberste Element.",
+  "specializations": [
+    "FIAN"
+  ]
+}

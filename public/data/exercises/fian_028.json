@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Welche Maßnahme schützt eine Anwendung am wirksamsten vor SQL-Injection durch Benutzereingaben?",
+  "answerOptions": [
+    "SQL-Befehle mit String-Verkettung aufbauen",
+    "Nur die Schriftart des Eingabefelds ändern",
+    "Parametrisierte Abfragen oder Prepared Statements verwenden",
+    "Fehlermeldungen länger formulieren"
+  ],
+  "correct": [2],
+  "explainInstruction": "Parametrisierte Abfragen trennen SQL-Struktur und Daten. Eingaben werden nicht als ausführbarer Teil des Befehls interpretiert.",
+  "specializations": [
+    "FIAN"
+  ]
+}

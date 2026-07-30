@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Projektmanagement und Wirtschaftlichkeit"
+  ],
+  "instruction": "Welchen Zweck haben WIP-Limits in Kanban?",
+  "answerOptions": [
+    "Sie begrenzen parallele Arbeit, machen Engpässe sichtbar und fördern das Fertigstellen.",
+    "Sie erhöhen automatisch die Zahl begonnener Aufgaben.",
+    "Sie ersetzen jede Priorisierung.",
+    "Sie legen die Programmiersprache fest."
+  ],
+  "correct": [0],
+  "explainInstruction": "Begrenzte Work-in-Progress-Mengen verringern Multitasking und helfen, Flussprobleme sichtbar zu machen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

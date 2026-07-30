@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Welche ACID-Eigenschaft schützt gleichzeitig laufende Transaktionen davor, sich unkontrolliert gegenseitig zu beeinflussen?",
+  "answerOptions": [
+    "Atomarität",
+    "Konsistenz",
+    "Isolation",
+    "Dauerhaftigkeit"
+  ],
+  "correct": [2],
+  "explainInstruction": "Isolation sorgt dafür, dass parallele Transaktionen je nach Isolationsniveau so voneinander abgeschirmt werden, dass unerwünschte Nebenwirkungen vermieden werden.",
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Wann ist eine integrierte GPU häufig ausreichend?",
+  "answerOptions": [
+    "Für Büroanwendungen und normale Desktopdarstellung ohne hohe 3D-Anforderungen",
+    "Nur für ausgeschaltete Computer",
+    "Ausschließlich für RAID-Berechnungen",
+    "Nie, weil jeder PC zwingend eine dedizierte Grafikkarte benötigt"
+  ],
+  "correct": [0],
+  "explainInstruction": "Für typische Büro- und Multimediaaufgaben reicht integrierte Grafik oft aus und spart Kosten sowie Energie.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

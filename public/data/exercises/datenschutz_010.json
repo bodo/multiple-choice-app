@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was verlangt der Grundsatz der Speicherbegrenzung?",
+  "answerOptions": [
+    "Personenbeziehbare Daten nur so lange speichern, wie es für den Zweck erforderlich ist",
+    "Alle Daten mindestens 30 Jahre aufbewahren",
+    "Nach Zweckfortfall lediglich den Dateinamen ändern",
+    "Sicherheitskopien grundsätzlich unbegrenzt behalten"
+  ],
+  "correct": [0],
+  "explainInstruction": "Nach Wegfall des Zwecks und entgegenstehender Pflichten müssen Daten nach einem geregelten Löschkonzept entfernt werden."
+}

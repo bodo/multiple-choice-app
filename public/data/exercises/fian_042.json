@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster"
+  ],
+  "instruction": "Welchen Zweck hat das Repository-Muster?",
+  "answerOptions": [
+    "Es kapselt den Zugriff auf persistierte fachliche Objekte hinter einer Sammlungsschnittstelle.",
+    "Es ersetzt ein Versionskontrollsystem.",
+    "Es zeichnet ausschließlich UML-Diagramme.",
+    "Es verschlüsselt automatisch jede Netzwerkverbindung."
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Repository verbirgt Details der Datenhaltung und bietet der Fachlogik eine auf Domänenobjekte ausgerichtete Schnittstelle.",
+  "specializations": [
+    "FIAN"
+  ]
+}

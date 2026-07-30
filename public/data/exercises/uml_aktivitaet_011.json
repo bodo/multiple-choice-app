@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche Aussagen über Aktivitätsdiagramme sind richtig?",
+  "answerOptions": [
+    "Entscheidungsknoten modellieren bedingte Alternativen",
+    "Fork und Join können Parallelität ausdrücken",
+    "Swimlanes können Verantwortlichkeiten sichtbar machen",
+    "Aktivitätsdiagramme dürfen ausschließlich Klassen und deren Attribute enthalten"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Aktivitätsdiagramme beschreiben Abläufe mit Alternativen, Parallelität und Verantwortlichkeiten. Klassenattribute sind Elemente eines Klassendiagramms.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Aktivitätsdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was bedeutet die Multiplizität `1..*`?",
+  "answerOptions": [
+    "Mindestens ein Objekt, nach oben ohne feste Grenze",
+    "Kein oder genau ein Objekt",
+    "Genau ein Objekt",
+    "Höchstens ein Objekt, aber niemals null"
+  ],
+  "correct": [0],
+  "explainInstruction": "`1..*` bedeutet eins bis beliebig viele. Die Beziehung muss also mindestens einmal bestehen.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

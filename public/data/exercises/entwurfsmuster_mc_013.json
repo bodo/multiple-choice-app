@@ -1,0 +1,35 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche GoF-Strukturmuster (GoF structural patterns) besitzen einen objektbasierten Gültigkeitsbereich (object-based scope)? Berücksichtige die Objektadapter-Variante (object adapter).",
+  "answerOptions": [
+    "Adapter (Adapter)",
+    "Brücke (Bridge)",
+    "Kompositum (Composite)",
+    "Dekorierer (Decorator)",
+    "Fassade (Facade)",
+    "Fliegengewicht (Flyweight)",
+    "Stellvertreter (Proxy)",
+    "Fabrikmethode (Factory Method)",
+    "Interpreter (Interpreter)",
+    "Zustand (State)"
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "explainInstruction": "Alle sieben aufgeführten Strukturmuster besitzen eine objektbasierte Form. Beim Adapter (Adapter) ist hier ausdrücklich der Objektadapter (object adapter) gemeint.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

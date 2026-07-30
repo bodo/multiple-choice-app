@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welche Vorgänge zählen zur Verarbeitung personenbezogener Daten?",
+  "answerOptions": [
+    "Erheben und Speichern",
+    "Übermitteln und Verknüpfen",
+    "Löschen und Vernichten",
+    "Nur das erstmalige Erfassen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Der Verarbeitungsbegriff der DSGVO umfasst praktisch jeden Umgang mit personenbezogenen Daten, einschließlich Löschung."
+}

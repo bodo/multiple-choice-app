@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Sozialversicherung"
+  ],
+  "instruction": "Welche Abzüge können das Nettoentgelt gegenüber dem Bruttoentgelt vermindern?",
+  "answerOptions": [
+    "Lohnsteuer",
+    "Arbeitnehmeranteile zur Sozialversicherung",
+    "Gegebenenfalls Kirchensteuer",
+    "Umsatz des Arbeitgebers"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Steuern und Arbeitnehmerbeiträge werden vom Bruttoentgelt abgezogen. Der Unternehmensumsatz ist kein persönlicher Entgeltabzug.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

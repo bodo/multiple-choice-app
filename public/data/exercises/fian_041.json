@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster"
+  ],
+  "instruction": "Welche Verantwortungen trennt das MVC-Muster?",
+  "answerOptions": [
+    "Speicher, Netzwerk und CPU",
+    "Model, View und Controller",
+    "Build, Test und Deployment",
+    "Client, Router und DNS"
+  ],
+  "correct": [1],
+  "explainInstruction": "MVC trennt Daten und Fachlogik im Model, Darstellung in der View und Eingabesteuerung im Controller.",
+  "specializations": [
+    "FIAN"
+  ]
+}

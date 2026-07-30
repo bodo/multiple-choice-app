@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was bewirkt ein Join-Knoten?",
+  "answerOptions": [
+    "Er synchronisiert parallele Pfade, bevor der Ablauf weitergeht",
+    "Er wählt zufällig einen von mehreren alternativen Pfaden",
+    "Er beschreibt eine optionale Systemfunktion",
+    "Er legt die Multiplizität einer Beziehung fest"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Join wartet auf die erforderlichen eingehenden parallelen Flüsse und führt den Ablauf anschließend gemeinsam fort.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Aktivitätsdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

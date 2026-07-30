@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welche Merkmale gehören zu einer wirksamen Einwilligung?",
+  "answerOptions": [
+    "Freiwillig",
+    "Für bestimmte Zwecke informiert",
+    "Durch eine eindeutige bestätigende Handlung",
+    "Unwiderruflich für alle zukünftigen Verarbeitungen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Eine Einwilligung muss freiwillig, informiert, bestimmt und eindeutig sein. Sie kann für die Zukunft widerrufen werden."
+}

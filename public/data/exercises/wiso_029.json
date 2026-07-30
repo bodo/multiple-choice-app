@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Mitbestimmung und Tarifrecht"
+  ],
+  "instruction": "Bei welchen sozialen Angelegenheiten kann der Betriebsrat typischerweise mitbestimmen?",
+  "answerOptions": [
+    "Beginn und Ende der täglichen Arbeitszeit",
+    "Urlaubsgrundsätze",
+    "Einführung technischer Einrichtungen zur Verhaltens- oder Leistungskontrolle",
+    "Festlegung des Einkommensteuertarifs"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Arbeitszeit, Urlaubsgrundsätze und kontrollgeeignete Technik sind klassische Mitbestimmungsthemen. Steuertarife legt der Gesetzgeber fest.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

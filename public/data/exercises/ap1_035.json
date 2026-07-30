@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Was kennzeichnet einen Thin Client?",
+  "answerOptions": [
+    "Er verlagert einen großen Teil von Verarbeitung und Datenhaltung auf zentrale Systeme.",
+    "Er besitzt zwingend die leistungsstärkste lokale GPU.",
+    "Er arbeitet immer ohne Netzwerk.",
+    "Er ist ein RAID-Controller."
+  ],
+  "correct": [0],
+  "explainInstruction": "Thin Clients sind auf zentrale Desktop- oder Anwendungsdienste ausgerichtet und benötigen lokal oft weniger Ressourcen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

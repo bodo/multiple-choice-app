@@ -1,0 +1,23 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welche Eigenschaften gehören zu einem korrekt beschriebenen Algorithmus?",
+  "answerOptions": [
+    "Die Schritte sind eindeutig ausführbar.",
+    "Er benötigt zwingend eine grafische Oberfläche.",
+    "Er endet für die vorgesehenen Eingaben nach endlich vielen Schritten.",
+    "Er darf nur eine einzige Variable verwenden."
+  ],
+  "correct": [
+    0,
+    2
+  ],
+  "explainInstruction": "Ein Algorithmus braucht eindeutig ausführbare Schritte und muss für seinen definierten Eingabebereich terminieren. Oberfläche und Variablenanzahl sind unerheblich.",
+  "specializations": [
+    "FIAN"
+  ]
+}

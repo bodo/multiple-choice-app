@@ -1,0 +1,35 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Nenne ein Strukturmuster (structural pattern) der GoF. Der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Adapter (Adapter)",
+    "/Adapter(?:[- ]?(?:Muster|Pattern))?/u",
+    "Brücke (Bridge)",
+    "/(?:Br(?:ü|ue)cke|Bridge)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Kompositum (Composite)",
+    "/(?:Kompositum|Composite)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Dekorierer (Decorator)",
+    "/(?:Dekorierer|Decorator)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Fassade (Facade)",
+    "/(?:Fassade|Facade|Façade)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Fliegengewicht (Flyweight)",
+    "/(?:Fliegengewicht|Flyweight)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Stellvertreter (Proxy)",
+    "/(?:Stellvertreter|Proxy)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Zulässig sind Adapter (Adapter), Brücke (Bridge), Kompositum (Composite), Dekorierer (Decorator), Fassade (Facade), Fliegengewicht (Flyweight) und Stellvertreter (Proxy).",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Strukturmuster"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

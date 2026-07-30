@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Recht"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Ein externer Entwickler erstellt Individualsoftware. Warum sollten die Nutzungsrechte ausdrücklich vertraglich geregelt werden?",
+  "answerOptions": [
+    "Damit Umfang, Dauer, Gebiet und erlaubte Nutzungsarten eindeutig feststehen",
+    "Damit Urheberrecht an Software grundsätzlich nicht gilt",
+    "Damit jeder Dritte die Software automatisch verkaufen darf",
+    "Damit keine Leistungsbeschreibung mehr erforderlich ist"
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine klare Rechteklausel verhindert Unklarheiten darüber, ob Software etwa bearbeitet, vervielfältigt, weitergegeben oder ausschließlich genutzt werden darf."
+}

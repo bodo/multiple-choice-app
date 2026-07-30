@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster"
+  ],
+  "instruction": "Welches Muster informiert mehrere abhängige Objekte über eine Zustandsänderung?",
+  "answerOptions": [
+    "Factory",
+    "Observer",
+    "Adapter",
+    "Builder"
+  ],
+  "correct": [1],
+  "explainInstruction": "Beim Observer-Muster melden sich Beobachter an einem Subjekt an und werden bei relevanten Änderungen benachrichtigt.",
+  "specializations": [
+    "FIAN"
+  ]
+}

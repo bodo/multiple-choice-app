@@ -1,0 +1,30 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche Zuordnungen zur Aufgabe eines Musters sind korrekt?",
+  "answerOptions": [
+    "Abstrakte Fabrik (Abstract Factory) – Erzeugungsmuster (creational pattern)",
+    "Kompositum (Composite) – Strukturmuster (structural pattern)",
+    "Befehl (Command) – Verhaltensmuster (behavioral pattern)",
+    "Besucher (Visitor) – Strukturmuster (structural pattern)",
+    "Erbauer (Builder) – Verhaltensmuster (behavioral pattern)",
+    "Stellvertreter (Proxy) – Erzeugungsmuster (creational pattern)"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Abstrakte Fabrik (Abstract Factory) erzeugt Objektfamilien, Kompositum (Composite) strukturiert Teil-Ganzes-Bäume und Befehl (Command) kapselt eine Anforderung als Objekt.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

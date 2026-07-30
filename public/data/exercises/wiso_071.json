@@ -1,0 +1,30 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "instruction": "Welche Gruppen können Stakeholder eines Unternehmens sein?",
+  "answerOptions": [
+    "Beschäftigte",
+    "Kunden",
+    "Lieferanten",
+    "Kapitalgeber",
+    "Staat und Öffentlichkeit"
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "explainInstruction": "Stakeholder sind Gruppen, die das Unternehmen beeinflussen oder von seinen Entscheidungen betroffen sind.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

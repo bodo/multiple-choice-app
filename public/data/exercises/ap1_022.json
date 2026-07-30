@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Was ist ein CPU-Kern?",
+  "answerOptions": [
+    "Eine weitgehend eigenständige Verarbeitungseinheit innerhalb eines Prozessors",
+    "Ein dauerhaftes Dateisystem",
+    "Ein Anschluss für Monitorkabel",
+    "Eine Sicherungskopie des Betriebssystems"
+  ],
+  "correct": [0],
+  "explainInstruction": "Mehrere Kerne können Befehlsfolgen parallel bearbeiten, sofern Software und Arbeitslast dies zulassen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

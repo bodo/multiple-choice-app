@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Welche Eigenschaften stellt TCP bereit?",
+  "answerOptions": [
+    "Verbindungsorientierte Kommunikation",
+    "Geordnete Übertragung",
+    "Erneute Übertragung erkannter Verluste",
+    "Garantierte Zustellung innerhalb einer festen Zeit"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "TCP sorgt für einen zuverlässigen, geordneten Bytestrom. Eine feste maximale Übertragungszeit garantiert es nicht.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

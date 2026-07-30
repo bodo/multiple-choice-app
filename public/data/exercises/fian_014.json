@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welche Worst-Case-Laufzeit hat Quicksort bei einer ungünstigen Pivot-Wahl?",
+  "answerOptions": [
+    "`O(1)`",
+    "`O(log n)`",
+    "`O(n log n)`",
+    "`O(n²)`"
+  ],
+  "correct": [3],
+  "explainInstruction": "Teilt das Pivot die Folge wiederholt in Größen 0 und `n−1`, entstehen quadratisch viele Vergleiche.",
+  "specializations": [
+    "FIAN"
+  ]
+}

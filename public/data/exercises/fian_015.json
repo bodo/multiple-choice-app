@@ -1,0 +1,14 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Eine unsortierte Liste enthält 8 Elemente. Wie viele Elemente prüft eine lineare Suche im schlechtesten Fall?",
+  "correct": [8],
+  "explainInstruction": "Steht das gesuchte Element zuletzt oder fehlt es, muss die lineare Suche alle 8 Elemente prüfen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Objektorientierung und UML"
+  ],
+  "instruction": "Was fordert das Dependency-Inversion-Prinzip?",
+  "answerOptions": [
+    "Fachlogik soll direkt von konkreten Datenbanktreibern abhängen.",
+    "Abhängigkeiten sollen sich an stabilen Abstraktionen statt an konkreten Details orientieren.",
+    "Alle Abhängigkeiten müssen global sein.",
+    "Schnittstellen dürfen keine Implementierung besitzen."
+  ],
+  "correct": [1],
+  "explainInstruction": "High-Level- und Low-Level-Module sollen von Abstraktionen abhängen. Dadurch lassen sich technische Details leichter austauschen und testen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

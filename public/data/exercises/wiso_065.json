@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "instruction": "Welche Rollen unterscheidet eine Kommanditgesellschaft (KG)?",
+  "answerOptions": [
+    "Komplementäre mit grundsätzlich unbeschränkter Haftung und Kommanditisten mit beschränkter Haftung",
+    "Nur Aktionäre und Vorstand",
+    "Ausschließlich Geschäftsführer ohne Gesellschafter",
+    "Arbeitgeber und Betriebsrat"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die KG verbindet mindestens einen persönlich haftenden Komplementär mit mindestens einem beschränkt haftenden Kommanditisten.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

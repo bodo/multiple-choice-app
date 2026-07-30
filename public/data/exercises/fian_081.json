@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Web, APIs und Sicherheit"
+  ],
+  "instruction": "Welche Schutzziele unterstützt HTTPS durch TLS hauptsächlich?",
+  "answerOptions": [
+    "Vertraulichkeit und Integrität der Übertragung sowie Authentisierung des Servers",
+    "Automatische Fehlerfreiheit der Anwendung",
+    "Unbegrenzten Speicherplatz",
+    "Anonymität gegenüber dem Zielserver"
+  ],
+  "correct": [0],
+  "explainInstruction": "TLS verschlüsselt die Verbindung, erkennt Manipulationen und weist über Zertifikate die Serveridentität nach. Anwendungsfehler verhindert es nicht.",
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Recht"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was gilt für eine Sicherungskopie eines Computerprogramms nach § 69d UrhG grundsätzlich?",
+  "answerOptions": [
+    "Ein berechtigter Nutzer darf sie erstellen, wenn sie für die Sicherung der künftigen Benutzung erforderlich ist",
+    "Jede Person darf beliebig viele Kopien verkaufen",
+    "Eine Sicherungskopie ist nur nach Veröffentlichung des Quellcodes erlaubt",
+    "Sie darf ausschließlich auf demselben defekten Datenträger liegen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine erforderliche Sicherungskopie durch eine zur Benutzung berechtigte Person darf nicht vertraglich untersagt werden."
+}

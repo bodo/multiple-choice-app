@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Welche Kosten sind typischerweise variabel?",
+  "answerOptions": [
+    "Materialverbrauch je hergestelltem Produkt",
+    "Jährliche Grundmiete",
+    "Festes Gehalt der Geschäftsführung",
+    "Lineare Abschreibung eines vorhandenen Gebäudes"
+  ],
+  "correct": [0],
+  "explainInstruction": "Variable Kosten verändern sich mit der Beschäftigungs- oder Produktionsmenge.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

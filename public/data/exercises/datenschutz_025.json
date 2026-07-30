@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was kann eine betroffene Person mit einem Auskunftsersuchen verlangen?",
+  "answerOptions": [
+    "Bestätigung, ob sie betreffende Daten verarbeitet werden, sowie Auskunft über Daten und Verarbeitungsinformationen",
+    "Den vollständigen Quellcode jeder eingesetzten Anwendung",
+    "Die Passwörter aller Administratoren",
+    "Die Löschung gesetzlich aufzubewahrender Daten ohne Ausnahmeprüfung"
+  ],
+  "correct": [0],
+  "explainInstruction": "Das Auskunftsrecht umfasst personenbezogene Daten und Informationen etwa zu Zwecken, Kategorien, Empfängern und Speicherdauer."
+}

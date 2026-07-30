@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was kennzeichnet einen Computerwurm?",
+  "answerOptions": [
+    "Er kann sich selbstständig über Systeme oder Netze verbreiten",
+    "Er benötigt immer ein Office-Makro und manuelle Weitergabe",
+    "Er verschlüsselt ausschließlich lokale Sicherungskopien",
+    "Er ist ein legitimes Werkzeug zur Netzüberwachung"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Wurm verbreitet sich selbstständig, häufig durch ausnutzbare Schwachstellen oder automatisierte Netzwerkmechanismen."
+}

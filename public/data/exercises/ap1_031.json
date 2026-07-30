@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Welcher Vorteil ist mit einem 64-Bit-Betriebssystem auf passender Hardware typischerweise verbunden?",
+  "answerOptions": [
+    "Es kann einen wesentlich größeren Adressraum als ein 32-Bit-System nutzen.",
+    "Es benötigt grundsätzlich keine Treiber.",
+    "Es macht jede Anwendung automatisch doppelt so schnell.",
+    "Es verhindert sämtliche Sicherheitslücken."
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein größerer Adressraum erlaubt insbesondere die Nutzung großer Speichermengen. Geschwindigkeit und Sicherheit steigen nicht automatisch.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Ein Unternehmen bewahrt steuerlich relevante Belege aufgrund gesetzlicher Vorgaben auf. Welche Rechtsgrundlage liegt typischerweise nahe?",
+  "answerOptions": [
+    "Erfüllung einer rechtlichen Verpflichtung",
+    "Einwilligung jeder auf dem Beleg genannten Person",
+    "Ausschließlich lebenswichtige Interessen",
+    "Die Datenminimierung ersetzt die Rechtsgrundlage"
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine gesetzlich vorgeschriebene Aufbewahrung kann die Verarbeitung zur Erfüllung einer rechtlichen Verpflichtung erforderlich machen."
+}

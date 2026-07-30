@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was verlangt der Grundsatz der Zweckbindung?",
+  "answerOptions": [
+    "Daten werden für festgelegte, eindeutige und legitime Zwecke erhoben und nicht unvereinbar weiterverarbeitet",
+    "Einmal erhobene Daten dürfen für jeden späteren Zweck verwendet werden",
+    "Der Verarbeitungszweck muss nur intern bekannt sein",
+    "Jede Verarbeitung muss ausschließlich auf einer Einwilligung beruhen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Zweck muss vor der Verarbeitung bestimmt sein. Eine spätere Nutzung braucht Vereinbarkeit oder eine passende Rechtsgrundlage."
+}

@@ -1,0 +1,35 @@
+{
+  "inputMode": "MATCH",
+  "instruction": "Ordne die Elemente eines Anwendungsfalldiagramms ihrer Bedeutung zu.",
+  "answerOptions": [
+    "Akteur",
+    "Anwendungsfall",
+    "Systemgrenze",
+    "`«include»`"
+  ],
+  "matchOptions": [
+    "Eingebundener wiederverwendbarer Teilablauf",
+    "Externe Rolle",
+    "Fachliches Ziel beziehungsweise Systemleistung",
+    "Abgrenzung des betrachteten Systems"
+  ],
+  "correct": [
+    1,
+    2,
+    3,
+    0
+  ],
+  "explainInstruction": "Akteure sind externe Rollen, Anwendungsfälle beschreiben Ziele, die Systemgrenze definiert den Umfang und `«include»` bindet wiederverwendbares Verhalten ein.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Anwendungsfalldiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

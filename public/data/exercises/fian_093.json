@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Versionsverwaltung und DevOps"
+  ],
+  "instruction": "Was ist das Kernziel von Continuous Integration?",
+  "answerOptions": [
+    "Änderungen häufig zusammenführen und automatisiert bauen sowie testen",
+    "Produktivsysteme ohne Tests ändern",
+    "Nur einmal jährlich einen Release erzeugen",
+    "Quellcode nicht versionieren"
+  ],
+  "correct": [0],
+  "explainInstruction": "CI gibt durch automatisierte Builds, Prüfungen und Tests schnelles Feedback zu integrierten Änderungen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

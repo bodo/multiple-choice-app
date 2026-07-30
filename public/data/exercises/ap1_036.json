@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Server und Speicher"
+  ],
+  "instruction": "Welche Eigenschaft besitzt RAID 0?",
+  "answerOptions": [
+    "Daten werden verteilt, die Leistung kann steigen, aber es gibt keine Redundanz.",
+    "Alle Daten werden dreifach gespiegelt.",
+    "Zwei Laufwerksausfälle sind immer tolerierbar.",
+    "Es ist automatisch eine externe Datensicherung."
+  ],
+  "correct": [0],
+  "explainInstruction": "RAID 0 verteilt Daten über Laufwerke. Fällt eines aus, ist der gesamte Verbund gefährdet.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

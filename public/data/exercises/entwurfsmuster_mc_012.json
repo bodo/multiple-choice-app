@@ -1,0 +1,29 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche GoF-Erzeugungsmuster (GoF creational patterns) sind objektbasiert (object-based)?",
+  "answerOptions": [
+    "Abstrakte Fabrik (Abstract Factory)",
+    "Erbauer (Builder)",
+    "Fabrikmethode (Factory Method)",
+    "Prototyp (Prototype)",
+    "Einzelstück (Singleton)",
+    "Kompositum (Composite)",
+    "Beobachter (Observer)"
+  ],
+  "correct": [
+    0,
+    1,
+    3,
+    4
+  ],
+  "explainInstruction": "Objektbasiert sind Abstrakte Fabrik (Abstract Factory), Erbauer (Builder), Prototyp (Prototype) und Einzelstück (Singleton). Nur die Fabrikmethode (Factory Method) ist klassenbasiert.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

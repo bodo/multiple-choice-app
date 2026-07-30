@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welchen Hauptzweck hat ein UML-Anwendungsfalldiagramm?",
+  "answerOptions": [
+    "Ziele und von außen sichtbare Funktionen eines Systems aus Sicht seiner Akteure darstellen",
+    "Die genaue Reihenfolge aller Methodenaufrufe festlegen",
+    "Die physische Verkabelung eines Netzwerks dokumentieren",
+    "Die Tabellen einer relationalen Datenbank normalisieren"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Anwendungsfalldiagramm zeigt, welche fachlichen Ziele externe Rollen mit dem betrachteten System erreichen können.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Anwendungsfalldiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

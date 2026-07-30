@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Sozialversicherung"
+  ],
+  "instruction": "Welchen Zweck hat die Arbeitslosenversicherung?",
+  "answerOptions": [
+    "Einkommensersatz und Unterstützung bei Vermittlung sowie Wiedereingliederung unter gesetzlichen Voraussetzungen",
+    "Finanzierung betrieblicher Maschinen",
+    "Ersatz von Gewährleistungsansprüchen",
+    "Absicherung von Gebäudebränden"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Arbeitslosenversicherung finanziert insbesondere Arbeitslosengeld und arbeitsmarktpolitische Leistungen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

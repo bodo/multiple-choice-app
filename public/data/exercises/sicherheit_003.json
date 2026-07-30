@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welches Schutzziel steht im Vordergrund, wenn ein Dienst auch bei einem Hardwareausfall erreichbar bleiben soll?",
+  "answerOptions": [
+    "Verfügbarkeit",
+    "Vertraulichkeit",
+    "Anonymität",
+    "Nachweisbarkeit"
+  ],
+  "correct": [0],
+  "explainInstruction": "Verfügbarkeit beschreibt, dass Systeme und Daten bei Bedarf nutzbar sind."
+}

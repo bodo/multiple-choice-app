@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster"
+  ],
+  "instruction": "Wozu dient ein Data Transfer Object (DTO)?",
+  "answerOptions": [
+    "Es transportiert gezielt strukturierte Daten zwischen Grenzen oder Schichten.",
+    "Es führt immer die gesamte Fachlogik aus.",
+    "Es ersetzt die Datenbanktransaktion.",
+    "Es kompiliert Quellcode."
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein DTO beschreibt die für einen Transport benötigten Daten, etwa an einer API-Grenze, ohne das interne Domänenmodell vollständig offenzulegen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

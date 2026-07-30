@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Wie wird mengenmäßige Produktivität grundsätzlich berechnet?",
+  "answerOptions": [
+    "Ausbringungsmenge ÷ Einsatzmenge",
+    "Einsatzmenge ÷ Preis",
+    "Gewinn ÷ Umsatz",
+    "Kosten + Erlöse"
+  ],
+  "correct": [0],
+  "explainInstruction": "Produktivität setzt eine mengenmäßige Leistung zum mengenmäßigen Einsatz in Beziehung.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

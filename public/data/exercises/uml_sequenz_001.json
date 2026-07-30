@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Frage beantwortet ein UML-Sequenzdiagramm hauptsächlich?",
+  "answerOptions": [
+    "In welcher zeitlichen Reihenfolge Beteiligte Nachrichten austauschen",
+    "Auf welchen Servern Komponenten installiert sind",
+    "Welche Attribute alle Klassen besitzen",
+    "Welche Kosten ein Projekt verursacht"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Sequenzdiagramm beschreibt eine konkrete Interaktion: Beteiligte werden als Lebenslinien und ihre Kommunikation als zeitlich geordnete Nachrichten dargestellt.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Sequenzdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

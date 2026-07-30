@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Wie viele regulär nutzbare Hostadressen besitzt ein klassisches IPv4-Subnetz mit Präfix `/26`? Netzwerk- und Broadcastadresse sind abzuziehen.",
+  "correct": [62],
+  "explainInstruction": "Bei `/26` bleiben 6 Hostbits: `2⁶ = 64` Adressen. Nach Abzug von Netzwerk- und Broadcastadresse bleiben 62.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

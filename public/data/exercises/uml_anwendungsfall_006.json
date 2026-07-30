@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Wann ist eine `«include»`-Beziehung zwischen Anwendungsfällen sinnvoll?",
+  "answerOptions": [
+    "Wenn ein wiederverwendbarer Teilablauf in den Basis-Anwendungsfall eingefügt wird",
+    "Wenn ein vollständig optionaler Sonderfall ohne Bezug zum Basisablauf beschrieben wird",
+    "Wenn zwei Akteure dieselbe Person darstellen",
+    "Wenn die zeitliche Reihenfolge von Nachrichten festgelegt wird"
+  ],
+  "correct": [0],
+  "explainInstruction": "`«include»` lagert gemeinsam benötigtes Verhalten aus. Der Basis-Anwendungsfall bezieht dieses Verhalten in seinen Ablauf ein.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Anwendungsfalldiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Objektorientierung und UML"
+  ],
+  "instruction": "Was beschreibt Polymorphie?",
+  "answerOptions": [
+    "Dasselbe Interface kann durch verschiedene konkrete Typen unterschiedlich umgesetzt werden.",
+    "Eine Klasse besitzt zwingend mehrere Konstruktoren.",
+    "Jedes Objekt wird mehrfach im Speicher abgelegt.",
+    "Alle Methoden liefern denselben Wert."
+  ],
+  "correct": [0],
+  "explainInstruction": "Polymorphie erlaubt, Objekte verschiedener Typen über einen gemeinsamen Vertrag anzusprechen; die konkrete Implementierung bestimmt das Verhalten.",
+  "specializations": [
+    "FIAN"
+  ]
+}

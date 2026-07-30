@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Server und Speicher"
+  ],
+  "instruction": "Welche Elemente gehören zur 3-2-1-Backup-Regel?",
+  "answerOptions": [
+    "Drei Datenkopien einschließlich Original",
+    "Zwei unterschiedliche Medientypen",
+    "Eine Kopie an einem anderen Ort",
+    "Alle Kopien im selben RAID-Gehäuse"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Die 3-2-1-Regel reduziert gemeinsame Ausfallursachen durch mehrere Kopien, verschiedene Medien und räumliche Trennung.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

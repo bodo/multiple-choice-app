@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welche asymptotische Laufzeit haben zwei vollständig ineinander geschachtelte Schleifen, die jeweils `n`-mal laufen?",
+  "answerOptions": [
+    "`O(log n)`",
+    "`O(n)`",
+    "`O(n log n)`",
+    "`O(n²)`"
+  ],
+  "correct": [3],
+  "explainInstruction": "Die innere Anweisung wird `n · n`-mal ausgeführt. Konstanten werden in der O-Notation ausgeblendet.",
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Warum ist eine offline oder unveränderbar gespeicherte Sicherung gegen Ransomware hilfreich?",
+  "answerOptions": [
+    "Die Schadsoftware kann sie nicht ohne Weiteres mit den Produktivdaten verändern oder verschlüsseln",
+    "Sie verhindert jede Infektion eines Arbeitsplatzes",
+    "Sie macht Wiederherstellungstests unnötig",
+    "Sie ersetzt die Zugriffskontrolle auf Produktivsystemen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Getrennte oder unveränderbare Sicherungen reduzieren das Risiko, dass ein Angreifer gleichzeitig Produktivdaten und Backups zerstört."
+}

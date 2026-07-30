@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welche Datenstruktur eignet sich besonders für häufigen direkten Zugriff über einen numerischen Index?",
+  "answerOptions": [
+    "Array",
+    "Einfach verkettete Liste",
+    "Queue",
+    "Stack ohne Direktzugriff"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Array erlaubt den direkten Zugriff auf ein Element über seine Adresse und damit typischerweise `O(1)`. Eine verkettete Liste muss bis zur Position durchlaufen werden.",
+  "specializations": [
+    "FIAN"
+  ]
+}

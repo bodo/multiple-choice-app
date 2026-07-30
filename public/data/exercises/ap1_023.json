@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Welche Eigenschaft hat gewöhnlicher Arbeitsspeicher (RAM)?",
+  "answerOptions": [
+    "Er ist flüchtig und verliert seinen Inhalt ohne Strom.",
+    "Er speichert Daten dauerhaft wie ein Archivmedium.",
+    "Er kann nur gelesen werden.",
+    "Er ersetzt den Prozessor."
+  ],
+  "correct": [0],
+  "explainInstruction": "RAM hält aktuell benötigte Programme und Daten schnell verfügbar, ist aber üblicherweise flüchtig.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

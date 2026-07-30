@@ -1,0 +1,32 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche der folgenden Muster sind Strukturmuster (structural patterns)?",
+  "answerOptions": [
+    "Adapter (Adapter)",
+    "Prototyp (Prototype)",
+    "Brücke (Bridge)",
+    "Beobachter (Observer)",
+    "Kompositum (Composite)",
+    "Befehl (Command)",
+    "Fassade (Facade)"
+  ],
+  "correct": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "explainInstruction": "Adapter (Adapter), Brücke (Bridge), Kompositum (Composite) und Fassade (Facade) beschreiben den Aufbau aus Klassen oder Objekten.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

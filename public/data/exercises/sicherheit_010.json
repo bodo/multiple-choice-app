@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Warum gelten Passwort und PIN zusammen normalerweise nicht als echte Zwei-Faktor-Authentisierung?",
+  "answerOptions": [
+    "Beide gehören zum Faktor Wissen",
+    "Eine PIN darf nur vier Stellen haben",
+    "Passwörter können nicht verschlüsselt übertragen werden",
+    "Beide funktionieren ausschließlich offline"
+  ],
+  "correct": [0],
+  "explainInstruction": "Zwei Geheimnisse derselben Kategorie ergeben zwei Schritte, aber keine zwei unterschiedlichen Faktoren."
+}

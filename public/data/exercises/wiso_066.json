@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "instruction": "Was bedeutet es, dass eine Gesellschaft juristische Person ist?",
+  "answerOptions": [
+    "Sie kann selbst Trägerin von Rechten und Pflichten sein.",
+    "Sie ist ein einzelner Mensch.",
+    "Sie darf keine Verträge schließen.",
+    "Ihre Beschäftigten haften automatisch für alle Schulden."
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine juristische Person kann etwa Eigentum haben, Verträge schließen, klagen und verklagt werden.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

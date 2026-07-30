@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Projektmanagement und Wirtschaftlichkeit"
+  ],
+  "instruction": "Wie wird ein Risikowert in einer einfachen qualitativen Bewertung häufig gebildet?",
+  "answerOptions": [
+    "Eintrittswahrscheinlichkeit × Schadensausmaß",
+    "Projektbudget ÷ Anzahl der Dateien",
+    "Umsatz + Quellcodezeilen",
+    "Dauer − Qualität"
+  ],
+  "correct": [0],
+  "explainInstruction": "Das Produkt aus Wahrscheinlichkeit und Auswirkung liefert eine vergleichbare Priorität. Die Skalen und Schwellen müssen im Projekt festgelegt sein.",
+  "specializations": [
+    "FIAN"
+  ]
+}

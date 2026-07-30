@@ -1,0 +1,29 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Welche Angaben gehören nach dem Berufsbildungsgesetz zum wesentlichen Inhalt eines Berufsausbildungsvertrags?",
+  "answerOptions": [
+    "Art, Ziel sowie sachliche und zeitliche Gliederung der Ausbildung",
+    "Beginn und Dauer der Ausbildung",
+    "Dauer der Probezeit",
+    "Höhe und Zahlung der Vergütung",
+    "Private Social-Media-Konten der auszubildenden Person"
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "explainInstruction": "Ausbildungsziel, Ablauf, Dauer, Probezeit und Vergütung gehören zu den Pflichtangaben. Private Social-Media-Konten gehören nicht dazu.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

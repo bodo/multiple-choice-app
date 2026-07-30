@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster"
+  ],
+  "instruction": "Welcher Nachteil tritt beim unbedachten Einsatz eines Singletons häufig auf?",
+  "answerOptions": [
+    "Es verhindert jede Objekterzeugung.",
+    "Es erzeugt versteckten globalen Zustand und erschwert isolierte Tests.",
+    "Es kann keine Methoden enthalten.",
+    "Es benötigt zwingend eine relationale Datenbank."
+  ],
+  "correct": [1],
+  "explainInstruction": "Ein Singleton ist global erreichbar. Dadurch werden Abhängigkeiten unsichtbar, Tests beeinflussen sich leichter gegenseitig und Austauschbarkeit leidet.",
+  "specializations": [
+    "FIAN"
+  ]
+}

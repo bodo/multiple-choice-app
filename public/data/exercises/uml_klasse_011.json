@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche Informationen können in einem Klassendiagramm modelliert werden?",
+  "answerOptions": [
+    "Attribute und Operationen von Klassen",
+    "Beziehungen und Multiplizitäten zwischen Klassen",
+    "Generalisierungen zwischen Klassen",
+    "Die konkrete zeitliche Reihenfolge jedes Methodenaufrufs zur Laufzeit"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Klassendiagramme beschreiben die statische Struktur mit Merkmalen und Beziehungen. Konkrete zeitliche Aufrufreihenfolgen werden in Interaktionsdiagrammen dargestellt.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

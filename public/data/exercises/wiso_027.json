@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Mitbestimmung und Tarifrecht"
+  ],
+  "instruction": "Welche Voraussetzungen gehören typischerweise zu einem rechtmäßigen gewerkschaftlichen Streik?",
+  "answerOptions": [
+    "Er verfolgt ein tariflich regelbares Ziel.",
+    "Er wird von einer Gewerkschaft getragen.",
+    "Die Friedenspflicht ist beendet.",
+    "Er dient ausschließlich einem privaten Streit ohne Tarifbezug."
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Ein rechtmäßiger Arbeitskampf braucht ein tarifliches Ziel, gewerkschaftliche Trägerschaft und darf nicht gegen die Friedenspflicht verstoßen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was kennzeichnet einen Auftragsverarbeiter?",
+  "answerOptions": [
+    "Er verarbeitet personenbezogene Daten im Auftrag des Verantwortlichen",
+    "Er entscheidet immer allein über eigene, unabhängige Zwecke",
+    "Er ist automatisch Eigentümer aller verarbeiteten Daten",
+    "Er ersetzt die zuständige Aufsichtsbehörde"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Auftragsverarbeiter handelt hinsichtlich der beauftragten Verarbeitung nach dokumentierten Weisungen des Verantwortlichen."
+}

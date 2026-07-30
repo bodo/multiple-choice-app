@@ -1,0 +1,34 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche der folgenden Muster sind Verhaltensmuster (behavioral patterns)?",
+  "answerOptions": [
+    "Zuständigkeitskette (Chain of Responsibility)",
+    "Adapter (Adapter)",
+    "Befehl (Command)",
+    "Einzelstück (Singleton)",
+    "Interpreter (Interpreter)",
+    "Fassade (Facade)",
+    "Beobachter (Observer)",
+    "Strategie (Strategy)"
+  ],
+  "correct": [
+    0,
+    2,
+    4,
+    6,
+    7
+  ],
+  "explainInstruction": "Zuständigkeitskette (Chain of Responsibility), Befehl (Command), Interpreter (Interpreter), Beobachter (Observer) und Strategie (Strategy) verteilen Verhalten und Zusammenarbeit.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

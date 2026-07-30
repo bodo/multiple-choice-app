@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Mit welcher Klausel wird das Ergebnis nach einer Aggregation gefiltert?",
+  "answerOptions": [
+    "`WHERE`",
+    "`HAVING`",
+    "`SET`",
+    "`LIMIT BY`"
+  ],
+  "correct": [1],
+  "explainInstruction": "`WHERE` filtert einzelne Zeilen vor der Gruppierung. `HAVING` filtert gebildete Gruppen und kann Bedingungen über Aggregate enthalten.",
+  "specializations": [
+    "FIAN"
+  ]
+}

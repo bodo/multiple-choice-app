@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Wann muss eine meldepflichtige Datenschutzverletzung der Aufsichtsbehörde grundsätzlich gemeldet werden?",
+  "answerOptions": [
+    "Unverzüglich und möglichst binnen 72 Stunden nach Bekanntwerden",
+    "Immer erst nach Abschluss aller technischen Untersuchungen",
+    "Ausschließlich zum Ende des Geschäftsjahres",
+    "Nur wenn mindestens 10.000 Personen betroffen sind"
+  ],
+  "correct": [0],
+  "explainInstruction": "Art. 33 DSGVO nennt möglichst 72 Stunden; eine spätere Meldung ist zu begründen. Ausgenommen sind Verletzungen, die voraussichtlich kein Risiko verursachen."
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Server und Speicher"
+  ],
+  "instruction": "Was stellt ein NAS im Netzwerk typischerweise bereit?",
+  "answerOptions": [
+    "Dateifreigaben über Protokolle wie SMB oder NFS",
+    "Nur rohe CPU-Rechenkerne",
+    "Ausschließlich DNS-Zonen",
+    "Ein öffentliches Mobilfunknetz"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Network Attached Storage stellt dateibasierten Speicher über das Netzwerk zur Verfügung.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

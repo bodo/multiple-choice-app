@@ -1,0 +1,24 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Anforderungen und UX"
+  ],
+  "instruction": "Welche Eigenschaften verbessern die Qualität einer einzelnen Anforderung?",
+  "answerOptions": [
+    "Sie ist eindeutig formuliert.",
+    "Sie ist prüfbar.",
+    "Sie ist zu ihrer Quelle und Umsetzung nachvollziehbar.",
+    "Sie vermischt möglichst viele unabhängige Ziele."
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Eindeutigkeit, Prüfbarkeit und Nachverfolgbarkeit helfen bei Umsetzung und Abnahme. Unabhängige Ziele sollten getrennt werden.",
+  "specializations": [
+    "FIAN"
+  ]
+}

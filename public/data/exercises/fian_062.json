@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Was kennzeichnet einen Black-Box-Test?",
+  "answerOptions": [
+    "Testfälle werden aus Schnittstellen und Anforderungen ohne Kenntnis der internen Implementierung abgeleitet.",
+    "Es wird nur Quellcode ohne Ausführung gelesen.",
+    "Das System darf keine Eingaben besitzen.",
+    "Alle privaten Methoden werden direkt aufgerufen."
+  ],
+  "correct": [0],
+  "explainInstruction": "Black-Box-Tests betrachten beobachtbares Ein-/Ausgabeverhalten. Die interne Struktur ist für die Ableitung der Testfälle nicht maßgeblich.",
+  "specializations": [
+    "FIAN"
+  ]
+}

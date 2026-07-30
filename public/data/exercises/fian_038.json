@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Objektorientierung und UML"
+  ],
+  "instruction": "Welche Sichtbarkeit kennzeichnet in einem UML-Klassendiagramm das Zeichen `-` vor einem Attribut?",
+  "answerOptions": [
+    "öffentlich",
+    "geschützt",
+    "paketsichtbar",
+    "privat"
+  ],
+  "correct": [3],
+  "explainInstruction": "In UML steht `+` für public, `#` für protected, `~` für package und `-` für private.",
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "inputMode": "MATCH",
+  "instruction": "Ordne die UML-Sichtbarkeitssymbole ihrer Bedeutung zu.",
+  "answerOptions": [
+    "`+`",
+    "`-`",
+    "`#`",
+    "`~`"
+  ],
+  "matchOptions": [
+    "protected",
+    "package",
+    "public",
+    "private"
+  ],
+  "correct": [
+    2,
+    3,
+    0,
+    1
+  ],
+  "explainInstruction": "In UML steht `+` für public, `-` für private, `#` für protected und `~` für package.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

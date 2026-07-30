@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Recht"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welche Pflichten können bei der Weitergabe von Open-Source-Software je nach Lizenz entstehen?",
+  "answerOptions": [
+    "Lizenztext und Urheberhinweise beifügen",
+    "Quellcode oder ein entsprechendes Angebot bereitstellen",
+    "Änderungen kenntlich machen",
+    "Die Herkunft der Software verschweigen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Die konkreten Pflichten hängen von der Lizenz ab. Typisch sind Hinweise, Lizenztexte und bei bestimmten Lizenzen Quellcodepflichten."
+}

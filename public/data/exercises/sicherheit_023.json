@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was bedeutet eine Default-Deny-Regel bei einer Firewall?",
+  "answerOptions": [
+    "Nicht ausdrücklich erlaubter Verkehr wird blockiert",
+    "Alle Verbindungen sind erlaubt, solange kein Alarm entsteht",
+    "Nur verschlüsselter Verkehr wird protokolliert",
+    "Ausgehender und eingehender Verkehr werden nie geprüft"
+  ],
+  "correct": [0],
+  "explainInstruction": "Default Deny erlaubt nur die benötigten und ausdrücklich freigegebenen Kommunikationsbeziehungen."
+}

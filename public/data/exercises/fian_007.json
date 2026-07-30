@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Was ist eine Kollision in einer Hash-Tabelle?",
+  "answerOptions": [
+    "Zwei Schlüssel werden demselben Hash-Platz zugeordnet.",
+    "Ein Schlüssel wird zweimal sortiert.",
+    "Die Tabelle enthält keinen freien Speicher mehr.",
+    "Eine Suche liefert mehr als einen Datentyp."
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine Kollision entsteht, wenn die Hash-Funktion unterschiedliche Schlüssel auf denselben Tabellenplatz abbildet. Sie muss etwa durch Verkettung oder offene Adressierung behandelt werden.",
+  "specializations": [
+    "FIAN"
+  ]
+}

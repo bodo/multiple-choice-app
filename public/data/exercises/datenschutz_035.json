@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Wie sollte ein Unternehmen mit einem Auskunftsersuchen umgehen, wenn Zweifel an der Identität des Antragstellers bestehen?",
+  "answerOptions": [
+    "Angemessene zusätzliche Informationen zur Identitätsbestätigung anfordern",
+    "Alle Kundendaten ohne weitere Prüfung versenden",
+    "Das Ersuchen grundsätzlich dauerhaft ignorieren",
+    "Die Zugangsdaten anderer Benutzer als Nachweis verlangen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Vor der Herausgabe personenbezogener Daten muss verhindert werden, dass Informationen an eine unberechtigte Person gelangen."
+}

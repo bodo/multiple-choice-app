@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Web, APIs und Sicherheit"
+  ],
+  "instruction": "Was verlangt das Least-Privilege-Prinzip?",
+  "answerOptions": [
+    "Konten und Komponenten erhalten nur die für ihre Aufgabe nötigen Rechte.",
+    "Alle angemeldeten Benutzer erhalten Administratorrechte.",
+    "Rechte werden niemals entzogen.",
+    "Nur das Netzwerk darf Berechtigungen besitzen."
+  ],
+  "correct": [0],
+  "explainInstruction": "Minimale Berechtigungen begrenzen den möglichen Schaden bei Fehlern oder kompromittierten Konten.",
+  "specializations": [
+    "FIAN"
+  ]
+}

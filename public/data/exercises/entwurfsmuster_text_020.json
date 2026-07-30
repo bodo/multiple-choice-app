@@ -1,0 +1,36 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Nenne ein objektbasiertes Verhaltensmuster (object-based behavioral pattern) der GoF. Der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Zuständigkeitskette (Chain of Responsibility)",
+    "/(?:Zust(?:ä|ae)ndigkeitskette|Chain[- ]+of[- ]+Responsibility)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Befehl (Command)",
+    "/(?:Befehl|Command)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Iterator (Iterator)",
+    "/Iterator(?:[- ]?(?:Muster|Pattern))?/u",
+    "Vermittler (Mediator)",
+    "/(?:Vermittler|Mediator)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Memento (Memento)",
+    "/Memento(?:[- ]?(?:Muster|Pattern))?/u",
+    "Beobachter (Observer)",
+    "/(?:Beobachter|Observer)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Zustand (State)",
+    "/(?:Zustand|State)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Strategie (Strategy)",
+    "/(?:Strategie|Strategy)(?:[- ]?(?:Muster|Pattern))?/u",
+    "Besucher (Visitor)",
+    "/(?:Besucher|Visitor)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Objektbasiert sind Zuständigkeitskette (Chain of Responsibility), Befehl (Command), Iterator (Iterator), Vermittler (Mediator), Memento (Memento), Beobachter (Observer), Zustand (State), Strategie (Strategy) und Besucher (Visitor).",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Gültigkeitsbereich"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

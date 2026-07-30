@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welches Schutzziel ist verletzt, wenn Rechnungsbeträge unbemerkt verändert werden?",
+  "answerOptions": [
+    "Verfügbarkeit",
+    "Integrität",
+    "Redundanz",
+    "Portabilität"
+  ],
+  "correct": [1],
+  "explainInstruction": "Integrität schützt die Korrektheit und Unverändertheit von Daten und Systemen."
+}

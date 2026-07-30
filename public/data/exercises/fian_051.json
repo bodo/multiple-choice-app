@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Was prüft ein Unit-Test typischerweise?",
+  "answerOptions": [
+    "Eine kleine Programmeinheit isoliert von echten externen Abhängigkeiten",
+    "Das vollständige Produkt ausschließlich in Produktion",
+    "Nur die Netzwerkhardware",
+    "Ausschließlich die Benutzerakzeptanz"
+  ],
+  "correct": [0],
+  "explainInstruction": "Unit-Tests prüfen kleine Einheiten wie Funktionen oder Klassen schnell und möglichst isoliert.",
+  "specializations": [
+    "FIAN"
+  ]
+}

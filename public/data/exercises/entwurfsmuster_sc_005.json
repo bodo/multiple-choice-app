@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welches Muster passt eine vorhandene, inkompatible Schnittstelle an die vom Client erwartete Schnittstelle an?",
+  "answerOptions": [
+    "Adapter (Adapter)",
+    "Fassade (Facade)",
+    "Brücke (Bridge)",
+    "Stellvertreter (Proxy)"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Adapter (Adapter) übersetzt zwischen inkompatiblen Schnittstellen.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Strukturmuster"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

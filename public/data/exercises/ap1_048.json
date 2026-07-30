@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Arbeitsplatz und Sicherheit"
+  ],
+  "instruction": "Welchen Zweck hat eine USV an einem Server?",
+  "answerOptions": [
+    "Kurzzeitige Stromversorgung und geordnetes Herunterfahren bei Netzausfall ermöglichen",
+    "Die Internetbandbreite verdoppeln",
+    "Passwörter automatisch zurücksetzen",
+    "RAID 0 in RAID 6 umwandeln"
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine unterbrechungsfreie Stromversorgung überbrückt Ausfälle und schützt vor abruptem Abschalten; sie ersetzt keinen Generator für lange Ausfälle.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

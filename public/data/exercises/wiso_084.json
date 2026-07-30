@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Die Fixkosten betragen 10.000 €, der Stückdeckungsbeitrag 20 €. Wie viele Stück müssen für den Break-even verkauft werden?",
+  "correct": [500],
+  "explainInstruction": "`Break-even-Menge = Fixkosten ÷ Stückdeckungsbeitrag = 10.000 ÷ 20 = 500`.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Wie verändert sich die angebotene Menge eines Gutes typischerweise, wenn nur sein Marktpreis steigt?",
+  "answerOptions": [
+    "Sie steigt.",
+    "Sie fällt immer auf null.",
+    "Sie bleibt gesetzlich zwingend gleich.",
+    "Sie wird zur Nachfrage."
+  ],
+  "correct": [0],
+  "explainInstruction": "Entlang einer normalen Angebotskurve lohnt sich bei höherem Preis die Bereitstellung einer größeren Menge.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

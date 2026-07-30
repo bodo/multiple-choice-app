@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Reihenfolge haben die drei üblichen Bereiche eines Klassensymbols?",
+  "answerOptions": [
+    "Klassenname, Attribute, Operationen",
+    "Operationen, Klassenname, Akteure",
+    "Attribute, Nachrichten, Klassenname",
+    "Klassenname, Aktivitäten, Entscheidungen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Klassensymbol wird typischerweise in Bereiche für den Namen, die Attribute und die Operationen gegliedert.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

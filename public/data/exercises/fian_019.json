@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Welches Problem beseitigt die dritte Normalform vor allem?",
+  "answerOptions": [
+    "Fehlende Indizes",
+    "Transitive Abhängigkeiten von Nichtschlüsselattributen",
+    "Zu viele Primärschlüssel",
+    "Netzwerklatenz zwischen Datenbank und Client"
+  ],
+  "correct": [1],
+  "explainInstruction": "In der dritten Normalform hängen Nichtschlüsselattribute nicht transitiv über ein anderes Nichtschlüsselattribut vom Schlüssel ab.",
+  "specializations": [
+    "FIAN"
+  ]
+}

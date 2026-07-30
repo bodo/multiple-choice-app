@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Welchen Zweck erfüllt ein Fremdschlüssel?",
+  "answerOptions": [
+    "Er verschlüsselt sensible Spalten.",
+    "Er sortiert eine Tabelle dauerhaft.",
+    "Er stellt eine referenzielle Beziehung zu einem Schlüssel einer anderen oder derselben Tabelle her.",
+    "Er ersetzt jede Prüfung auf `NULL`."
+  ],
+  "correct": [2],
+  "explainInstruction": "Ein Fremdschlüssel verweist auf einen Kandidaten- oder Primärschlüssel und kann so referenzielle Integrität absichern.",
+  "specializations": [
+    "FIAN"
+  ]
+}

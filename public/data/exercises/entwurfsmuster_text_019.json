@@ -1,0 +1,22 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Nenne ein klassenbasiertes Verhaltensmuster (class-based behavioral pattern) der GoF. Der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Interpreter (Interpreter)",
+    "/Interpreter(?:[- ]?(?:Muster|Pattern))?/u",
+    "Schablonenmethode (Template Method)",
+    "/(?:Schablonenmethode|Template[- ]+Method)(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Klassenbasiert sind Interpreter (Interpreter) und Schablonenmethode (Template Method).",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Gültigkeitsbereich"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

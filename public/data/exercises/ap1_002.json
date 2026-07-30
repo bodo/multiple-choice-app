@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Welches Protokoll gehört zur Anwendungsschicht?",
+  "answerOptions": [
+    "Ethernet",
+    "IP",
+    "TCP",
+    "HTTP"
+  ],
+  "correct": [3],
+  "explainInstruction": "HTTP stellt Webanwendungen einen Dienst auf Anwendungsebene bereit. Ethernet, IP und TCP liegen darunter.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

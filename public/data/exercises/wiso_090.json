@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Auf einen Rechnungsbetrag von 1.000 € werden bei schneller Zahlung 2 % Skonto gewährt. Wie hoch ist der Skontobetrag in Euro?",
+  "correct": [20],
+  "explainInstruction": "`1.000 € × 0,02 = 20 €`.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

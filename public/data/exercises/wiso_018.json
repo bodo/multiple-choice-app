@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Welche zusätzlichen Angaben enthält ein qualifiziertes Arbeitszeugnis gegenüber einem einfachen Zeugnis?",
+  "answerOptions": [
+    "Bewertung von Leistung und Verhalten",
+    "Religionszugehörigkeit",
+    "Kontostand",
+    "Wahlverhalten"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein qualifiziertes Zeugnis ergänzt Art und Dauer der Tätigkeit um eine Beurteilung von Leistung und Sozialverhalten.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

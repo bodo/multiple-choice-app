@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Welche Verteilung entspricht der üblichen Testpyramide?",
+  "answerOptions": [
+    "Viele schnelle Unit-Tests, weniger Integrationstests, wenige End-to-End-Tests",
+    "Nur manuelle End-to-End-Tests",
+    "Viele langsame End-to-End-Tests und keine Unit-Tests",
+    "Gleich viele Tests jeder Art unabhängig von Aufwand und Nutzen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Testpyramide setzt auf eine breite Basis schneller, stabiler Unit-Tests und zunehmend weniger, aber umfassendere Tests nach oben.",
+  "specializations": [
+    "FIAN"
+  ]
+}

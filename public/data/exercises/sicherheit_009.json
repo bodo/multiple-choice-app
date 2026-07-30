@@ -1,0 +1,26 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welche Kombinationen verwenden zwei unterschiedliche Authentisierungsfaktoren?",
+  "answerOptions": [
+    "Passwort und Hardware-Token",
+    "PIN und Fingerabdruck",
+    "Passwort und Sicherheitsfrage",
+    "Fingerabdruck und Gesichtserkennung"
+  ],
+  "correct": [
+    0,
+    1
+  ],
+  "explainInstruction": "Passwort oder PIN sind Wissen, Token ist Besitz und biometrische Merkmale sind Inhärenz. Zwei Faktoren müssen aus unterschiedlichen Kategorien stammen."
+}

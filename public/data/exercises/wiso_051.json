@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Was liegt vor, wenn die angebotene Menge bei einem Preis größer als die nachgefragte Menge ist?",
+  "answerOptions": [
+    "Angebotsüberschuss",
+    "Nachfrageüberschuss",
+    "Vollbeschäftigung",
+    "Hyperinflation"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Angebotsüberschuss erzeugt typischerweise Druck auf Anbieter, Preise zu senken oder die Produktion anzupassen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

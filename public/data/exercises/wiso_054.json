@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Was kennzeichnet ein Angebotsoligopol?",
+  "answerOptions": [
+    "Wenige große Anbieter treffen auf viele Nachfrager.",
+    "Viele Anbieter treffen auf viele Nachfrager.",
+    "Ein Nachfrager trifft auf einen Anbieter.",
+    "Der Preis ist immer null."
+  ],
+  "correct": [0],
+  "explainInstruction": "In einem Angebotsoligopol beeinflussen sich die wenigen Anbieter mit ihren Entscheidungen stark gegenseitig.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

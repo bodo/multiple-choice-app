@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welches Muster trennt die schrittweise Konstruktion eines komplexen Objekts von dessen Repräsentation?",
+  "answerOptions": [
+    "Erbauer (Builder)",
+    "Abstrakte Fabrik (Abstract Factory)",
+    "Kompositum (Composite)",
+    "Dekorierer (Decorator)"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Erbauer (Builder) verwendet denselben Konstruktionsprozess für unterschiedliche Repräsentationen.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Erzeugungsmuster"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

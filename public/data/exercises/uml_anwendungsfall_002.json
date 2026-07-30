@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was ist ein Akteur in einem Anwendungsfalldiagramm?",
+  "answerOptions": [
+    "Eine externe Rolle, die mit dem betrachteten System interagiert",
+    "Eine private Methode innerhalb einer Klasse",
+    "Eine konkrete Bildschirmmaske",
+    "Eine Datenbankspalte mit Benutzername"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Akteur beschreibt eine Rolle außerhalb des Systems. Diese Rolle kann von Menschen, anderen Systemen oder Geräten übernommen werden.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Anwendungsfalldiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Arbeitsplatz und Sicherheit"
+  ],
+  "instruction": "Welche Schritte gehören zu einer nachvollziehbaren Übergabe eines neuen IT-Arbeitsplatzes?",
+  "answerOptions": [
+    "Funktion anhand vereinbarter Kriterien testen",
+    "Konfiguration und Testergebnis protokollieren",
+    "Nutzende zielgruppengerecht einweisen",
+    "Administratorpasswörter offen im Übergabeprotokoll veröffentlichen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Test, Dokumentation und Einweisung sichern die überprüfbare Leistungserbringung. Geheimnisse gehören nicht in offen zugängliche Protokolle.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

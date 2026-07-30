@@ -1,0 +1,30 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche weiteren Beschreibungen von Verhaltensmustern (behavioral patterns) sind korrekt zugeordnet?",
+  "answerOptions": [
+    "Beobachter (Observer) – benachrichtigt abhängige Objekte nach einer Zustandsänderung.",
+    "Zustand (State) – lässt ein Objekt sein Verhalten abhängig von seinem internen Zustand wechseln.",
+    "Strategie (Strategy) – kapselt eine Familie austauschbarer Algorithmen.",
+    "Schablonenmethode (Template Method) – legt das Skelett eines Algorithmus fest und überlässt Schritte den Unterklassen.",
+    "Besucher (Visitor) – kapselt Operationen auf Elementen einer Objektstruktur in Besucherobjekten.",
+    "Interpreter (Interpreter) – speichert primär einen Zustand für eine spätere Wiederherstellung.",
+    "Befehl (Command) – repräsentiert primär die Grammatik einer Sprache."
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "explainInstruction": "Interpreter (Interpreter) beschreibt Grammatik und Auswertung; Befehl (Command) kapselt Anforderungen. Die ersten fünf Zuordnungen sind korrekt.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

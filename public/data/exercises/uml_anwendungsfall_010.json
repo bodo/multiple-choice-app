@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Information gehört normalerweise nicht in ein Anwendungsfalldiagramm?",
+  "answerOptions": [
+    "Der detaillierte interne Algorithmus einer Methode",
+    "Externe Rollen",
+    "Fachliche Ziele der Akteure",
+    "Die Grenze des betrachteten Systems"
+  ],
+  "correct": [0],
+  "explainInstruction": "Anwendungsfalldiagramme bleiben auf der Ebene externer Ziele und Systemleistungen. Interne Algorithmen werden mit anderen Modellen oder im Quellcode beschrieben.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Anwendungsfalldiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

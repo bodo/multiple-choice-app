@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster"
+  ],
+  "instruction": "Was geschieht bei Dependency Injection?",
+  "answerOptions": [
+    "Ein Objekt erzeugt alle Abhängigkeiten fest in seinem Konstruktor.",
+    "Benötigte Abhängigkeiten werden von außen bereitgestellt.",
+    "Abhängigkeiten werden zur Laufzeit gelöscht.",
+    "Jede Abhängigkeit wird zu einer globalen Variable."
+  ],
+  "correct": [1],
+  "explainInstruction": "Bei Dependency Injection erhält ein Baustein seine Abhängigkeiten von außen. Das reduziert Kopplung und erleichtert Tests mit Ersatzimplementierungen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

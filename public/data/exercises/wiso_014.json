@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Welche Aussage beschreibt die werktägliche Höchstarbeitszeit für Erwachsene nach dem Arbeitszeitgesetz grundsätzlich richtig?",
+  "answerOptions": [
+    "Regelmäßig 8 Stunden; bis zu 10 Stunden bei gesetzlich vorgesehenem Ausgleich",
+    "Immer höchstens 4 Stunden",
+    "Beliebig lang bei Zustimmung des Arbeitgebers",
+    "Genau 12 Stunden ohne Ausnahme"
+  ],
+  "correct": [0],
+  "explainInstruction": "Grundsätzlich gelten 8 Stunden pro Werktag. Eine Verlängerung auf bis zu 10 Stunden ist zulässig, wenn der vorgeschriebene Durchschnitt wieder erreicht wird.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

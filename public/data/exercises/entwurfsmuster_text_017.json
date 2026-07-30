@@ -1,0 +1,20 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Nenne ein klassenbasiertes Strukturmuster (class-based structural pattern) der GoF. Der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Adapter (Adapter)",
+    "/Adapter(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Die einzige mögliche Antwort ist die klassenbasierte Variante des Adapters (class adapter). Als Mustername genügt Adapter (Adapter).",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Gültigkeitsbereich"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

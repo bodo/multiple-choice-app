@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Bedeutung hat der Operator `opt` in einem Sequenzdiagramm?",
+  "answerOptions": [
+    "Der eingerahmte Ablauf wird nur ausgeführt, wenn seine Bedingung erfüllt ist",
+    "Der eingerahmte Ablauf wird unendlich oft wiederholt",
+    "Alle eingerahmten Nachrichten werden gleichzeitig gesendet",
+    "Der eingerahmte Teilnehmer wird gelöscht"
+  ],
+  "correct": [0],
+  "explainInstruction": "`opt` modelliert einen optionalen Ablauf. Ist die zugehörige Bedingung falsch, wird der Inhalt übersprungen.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Sequenzdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

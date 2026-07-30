@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Ein Kredit über 10.000 € wird für ein Jahr mit 5 % p. a. einfach verzinst. Wie hoch sind die Zinsen in Euro?",
+  "correct": [500],
+  "explainInstruction": "`Zinsen = Kapital × Zinssatz × Zeit = 10.000 € × 0,05 × 1 = 500 €`.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

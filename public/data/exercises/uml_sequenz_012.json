@@ -1,0 +1,35 @@
+{
+  "inputMode": "MATCH",
+  "instruction": "Ordne die Elemente eines Sequenzdiagramms ihrer Bedeutung zu.",
+  "answerOptions": [
+    "Lebenslinie",
+    "Aktivierungsbalken",
+    "Guard",
+    "`alt`-Fragment"
+  ],
+  "matchOptions": [
+    "Bedingung in eckigen Klammern",
+    "Teilnehmer im zeitlichen Verlauf",
+    "Zeitraum einer Ausführung",
+    "Alternative Abläufe"
+  ],
+  "correct": [
+    1,
+    2,
+    0,
+    3
+  ],
+  "explainInstruction": "Lebenslinien zeigen Teilnehmer, Aktivierungsbalken Ausführungszeiträume, Guards Bedingungen und `alt` alternative Abläufe.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Sequenzdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Web, APIs und Sicherheit"
+  ],
+  "instruction": "Welcher HTTP-Statuscode passt, wenn eine angeforderte Ressource nicht gefunden wurde?",
+  "answerOptions": [
+    "200",
+    "201",
+    "404",
+    "503"
+  ],
+  "correct": [2],
+  "explainInstruction": "`404 Not Found` bedeutet, dass der Server für die angeforderte Adresse keine Ressource findet.",
+  "specializations": [
+    "FIAN"
+  ]
+}

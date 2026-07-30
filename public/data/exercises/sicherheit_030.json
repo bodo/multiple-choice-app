@@ -1,0 +1,26 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welche Eigenschaften kann eine korrekt geprüfte digitale Signatur unterstützen?",
+  "answerOptions": [
+    "Integrität der signierten Daten",
+    "Authentizität des Signierenden",
+    "Vertraulichkeit des signierten Inhalts ohne zusätzliche Verschlüsselung",
+    "Nachweis, dass der Inhalt frei von fachlichen Fehlern ist"
+  ],
+  "correct": [
+    0,
+    1
+  ],
+  "explainInstruction": "Eine digitale Signatur schützt Integrität und unterstützt die Zuordnung zum Signierenden. Sie verschlüsselt den Inhalt nicht automatisch."
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Welche Eigenschaft muss ein Primärschlüssel einer relationalen Tabelle besitzen?",
+  "answerOptions": [
+    "Er darf pro Tabelle mehrfach vorkommen.",
+    "Er identifiziert jeden Datensatz eindeutig und ist nicht `NULL`.",
+    "Er muss immer aus einer Zeichenkette bestehen.",
+    "Er verweist zwingend auf eine andere Tabelle."
+  ],
+  "correct": [1],
+  "explainInstruction": "Ein Primärschlüssel identifiziert jede Zeile eindeutig. Primärschlüsselspalten dürfen deshalb nicht `NULL` sein.",
+  "specializations": [
+    "FIAN"
+  ]
+}

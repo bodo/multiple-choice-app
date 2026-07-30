@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Was bewirkt Source NAT an einem Internetrouter typischerweise?",
+  "answerOptions": [
+    "Private Quelladressen werden für ausgehende Verbindungen in eine öffentliche Adresse umgesetzt.",
+    "DNS-Namen werden in MAC-Adressen umbenannt.",
+    "Die Festplattenkapazität wird verdoppelt.",
+    "Jeder Client erhält automatisch Administratorrechte."
+  ],
+  "correct": [0],
+  "explainInstruction": "Source NAT beziehungsweise PAT ermöglicht mehreren internen Clients, eine oder wenige öffentliche Adressen zu verwenden.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

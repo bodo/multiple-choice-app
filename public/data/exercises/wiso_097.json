@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Staat, Verträge und Verbraucher"
+  ],
+  "instruction": "Was ist der Unterschied zwischen Besitz und Eigentum?",
+  "answerOptions": [
+    "Besitz ist die tatsächliche Sachherrschaft; Eigentum die rechtliche Herrschaft.",
+    "Besitz und Eigentum sind immer identisch.",
+    "Eigentum bedeutet nur vorübergehende Nutzung.",
+    "Besitz kann ausschließlich eine juristische Person haben."
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Mieter besitzt die gemietete Sache, während der Vermieter typischerweise Eigentümer bleibt.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

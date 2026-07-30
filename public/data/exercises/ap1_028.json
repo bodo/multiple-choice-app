@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Welchen Dezimalwert hat die Hexadezimalzahl `FF₁₆`?",
+  "correct": [255],
+  "explainInstruction": "`F` steht für 15. Damit gilt `15·16 + 15 = 255`.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

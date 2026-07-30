@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Wovon hängt ein angemessenes Schutzniveau nach Art. 32 DSGVO wesentlich ab?",
+  "answerOptions": [
+    "Vom Risiko der Verarbeitung sowie dem Stand der Technik und weiteren Rahmenbedingungen",
+    "Ausschließlich von der Anzahl eingesetzter Server",
+    "Nur vom Kaufpreis der Sicherheitssoftware",
+    "Immer von derselben unveränderlichen Maßnahmenliste"
+  ],
+  "correct": [0],
+  "explainInstruction": "Technische und organisatorische Maßnahmen werden risikoorientiert gewählt und müssen zur konkreten Verarbeitung passen."
+}

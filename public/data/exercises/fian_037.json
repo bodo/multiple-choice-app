@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Objektorientierung und UML"
+  ],
+  "instruction": "Welche Aussage beschreibt das Open-Closed-Prinzip?",
+  "answerOptions": [
+    "Softwarebausteine sollen für Erweiterung offen, für Änderung möglichst geschlossen sein.",
+    "Quellcode muss immer öffentlich verfügbar sein.",
+    "Jede Datei muss nach dem Programmstart geschlossen werden.",
+    "Neue Anforderungen dürfen nie umgesetzt werden."
+  ],
+  "correct": [0],
+  "explainInstruction": "Neues Verhalten soll möglichst durch Erweiterung ergänzt werden, ohne bewährten Code ständig zu verändern.",
+  "specializations": [
+    "FIAN"
+  ]
+}

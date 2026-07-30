@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Web, APIs und Sicherheit"
+  ],
+  "instruction": "Welches Problem regelt CORS im Browser?",
+  "answerOptions": [
+    "Ob Skripte Antworten von einer anderen Origin lesen dürfen",
+    "Wie SQL-Tabellen normalisiert werden",
+    "Wie Passwörter gehasht werden",
+    "Wie ein Betriebssystem Prozesse plant"
+  ],
+  "correct": [0],
+  "explainInstruction": "CORS ist ein HTTP-basierter Mechanismus, mit dem Server kontrollieren, welche anderen Origins Browserzugriff auf Antworten erhalten.",
+  "specializations": [
+    "FIAN"
+  ]
+}

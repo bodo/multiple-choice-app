@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Versionsverwaltung und DevOps"
+  ],
+  "instruction": "Welche Versionsänderung verlangt Semantic Versioning bei einer inkompatiblen Änderung der öffentlichen API?",
+  "answerOptions": [
+    "Patch-Version erhöhen",
+    "Minor-Version erhöhen",
+    "Major-Version erhöhen",
+    "Version unverändert lassen"
+  ],
+  "correct": [2],
+  "explainInstruction": "Bei `MAJOR.MINOR.PATCH` erhöht eine inkompatible API-Änderung die Major-Version.",
+  "specializations": [
+    "FIAN"
+  ]
+}

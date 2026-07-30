@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "instruction": "Wozu dient eine Inventur?",
+  "answerOptions": [
+    "Vermögensgegenstände und Schulden zu einem Stichtag nach Art, Menge und Wert feststellen",
+    "Nur künftige Umsätze schätzen",
+    "Tarifverträge verhandeln",
+    "Mitarbeiterzeugnisse schreiben"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Inventur ist die tatsächliche Bestandsaufnahme; ihr Ergebnis wird im Inventar geordnet dargestellt.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

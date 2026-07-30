@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Welcher Algorithmus findet in einem ungewichteten Graphen einen kürzesten Weg gemessen an der Anzahl der Kanten?",
+  "answerOptions": [
+    "Tiefensuche",
+    "Breitensuche",
+    "Quicksort",
+    "Greedy Best First ohne Distanzspeicher"
+  ],
+  "correct": [1],
+  "explainInstruction": "Die Breitensuche besucht Knoten schichtweise und findet dadurch in ungewichteten Graphen einen Weg mit minimaler Kantenzahl.",
+  "specializations": [
+    "FIAN"
+  ]
+}

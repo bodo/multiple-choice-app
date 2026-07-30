@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was beschreibt das Schutzziel Authentizität?",
+  "answerOptions": [
+    "Die Echtheit und Glaubwürdigkeit einer Identität oder Information",
+    "Die dauerhafte Speicherung aller Informationen",
+    "Die vollständige Anonymisierung sämtlicher Benutzer",
+    "Die Erreichbarkeit eines Systems ohne Unterbrechung"
+  ],
+  "correct": [0],
+  "explainInstruction": "Authentizität ermöglicht die Prüfung, ob eine Identität oder Information tatsächlich von der angegebenen Quelle stammt."
+}

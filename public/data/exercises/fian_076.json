@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Projektmanagement und Wirtschaftlichkeit"
+  ],
+  "instruction": "Wie sollte ein Change Request in einem laufenden Projekt behandelt werden?",
+  "answerOptions": [
+    "Auswirkungen auf Umfang, Zeit, Kosten und Risiken analysieren und die Entscheidung dokumentieren",
+    "Sofort umsetzen, ohne Beteiligte zu informieren",
+    "Grundsätzlich ablehnen",
+    "Nur den Dateinamen des Projektplans ändern"
+  ],
+  "correct": [0],
+  "explainInstruction": "Änderungen brauchen eine nachvollziehbare Auswirkungsanalyse und Entscheidung. So bleibt die Projektplanung steuerbar.",
+  "specializations": [
+    "FIAN"
+  ]
+}

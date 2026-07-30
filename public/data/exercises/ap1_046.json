@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Arbeitsplatz und Sicherheit"
+  ],
+  "instruction": "Was gehört bei der Auswahl eines Arbeitsplatz-PCs zu den Total Cost of Ownership?",
+  "answerOptions": [
+    "Anschaffung sowie Betrieb, Wartung, Support und Entsorgung",
+    "Nur der Kaufpreis",
+    "Nur die Farbe des Gehäuses",
+    "Ausschließlich die Lieferzeit"
+  ],
+  "correct": [0],
+  "explainInstruction": "TCO betrachtet alle relevanten Kosten über den Lebenszyklus und ermöglicht einen realistischeren Angebotsvergleich.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

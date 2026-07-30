@@ -1,0 +1,26 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Ein Eingabefeld akzeptiert ganze Werte von 1 bis 100 einschließlich. Welche Werte sind besonders geeignete Grenzwert-Testdaten?",
+  "answerOptions": [
+    "0",
+    "1",
+    "50",
+    "100",
+    "101"
+  ],
+  "correct": [
+    0,
+    1,
+    3,
+    4
+  ],
+  "explainInstruction": "Grenzwertanalyse prüft direkt an und unmittelbar außerhalb der Grenzen: 0/1 sowie 100/101. Der Wert 50 liegt nicht an einer Grenze.",
+  "specializations": [
+    "FIAN"
+  ]
+}

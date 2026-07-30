@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Betriebssysteme und Netzwerke"
+  ],
+  "instruction": "Welche Regeln sind für Konfiguration und Geheimnisse einer Anwendung sinnvoll?",
+  "answerOptions": [
+    "Umgebungsspezifische Konfiguration vom Programmcode trennen.",
+    "Geheimnisse nicht in das Git-Repository einchecken.",
+    "Zugriff auf Geheimnisse nach dem Least-Privilege-Prinzip begrenzen.",
+    "Produktivpasswörter fest im Quellcode hinterlegen."
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Getrennte Konfiguration erleichtert Deployments. Geheimnisse gehören in geschützte Secret-Speicher oder geeignete Laufzeitkonfiguration und erhalten minimale Zugriffsrechte.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

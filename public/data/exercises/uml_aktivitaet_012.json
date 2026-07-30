@@ -1,0 +1,35 @@
+{
+  "inputMode": "MATCH",
+  "instruction": "Ordne die Knoten eines Aktivitätsdiagramms ihrer Funktion zu.",
+  "answerOptions": [
+    "Decision",
+    "Merge",
+    "Fork",
+    "Join"
+  ],
+  "matchOptions": [
+    "Synchronisiert parallele Pfade",
+    "Führt alternative Pfade ohne Synchronisation zusammen",
+    "Verzweigt anhand von Bedingungen",
+    "Startet parallele Pfade"
+  ],
+  "correct": [
+    2,
+    1,
+    3,
+    0
+  ],
+  "explainInstruction": "Decision wählt Alternativen, Merge führt Alternativen zusammen, Fork startet parallele Pfade und Join synchronisiert sie.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Aktivitätsdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

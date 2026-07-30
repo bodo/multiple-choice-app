@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Web, APIs und Sicherheit"
+  ],
+  "instruction": "Welcher `Content-Type` kennzeichnet eine JSON-Antwort?",
+  "answerOptions": [
+    "`text/css`",
+    "`image/png`",
+    "`application/json`",
+    "`multipart/form-data`"
+  ],
+  "correct": [2],
+  "explainInstruction": "`application/json` ist der standardisierte Medientyp für JSON-Daten.",
+  "specializations": [
+    "FIAN"
+  ]
+}

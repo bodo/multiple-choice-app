@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was bedeutet Einschränkung der Verarbeitung?",
+  "answerOptions": [
+    "Gespeicherte Daten werden markiert und dürfen grundsätzlich nur noch begrenzt verarbeitet werden",
+    "Alle Daten werden sofort öffentlich gemacht",
+    "Die Daten werden automatisch anonymisiert und verkauft",
+    "Jede Sicherheitskontrolle wird vorübergehend ausgeschaltet"
+  ],
+  "correct": [0],
+  "explainInstruction": "Bei einer Einschränkung bleiben Daten gespeichert, ihre weitere Verarbeitung ist aber nur unter bestimmten Voraussetzungen zulässig."
+}

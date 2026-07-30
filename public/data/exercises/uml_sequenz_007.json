@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was stellt eine gestrichelte Rückgabenachricht typischerweise dar?",
+  "answerOptions": [
+    "Die Antwort oder Rückgabe zu einem vorherigen Aufruf",
+    "Die Erzeugung einer neuen Klasse",
+    "Eine Vererbungsbeziehung",
+    "Den Beginn einer Schleife"
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine gestrichelte Rückgabenachricht kann den Rückfluss von Kontrolle oder eines Ergebnisses darstellen. Sie wird häufig weggelassen, wenn die Rückgabe eindeutig ist.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Sequenzdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

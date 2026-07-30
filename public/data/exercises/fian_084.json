@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Web, APIs und Sicherheit"
+  ],
+  "instruction": "Wie sollten Passwörter serverseitig gespeichert werden?",
+  "answerOptions": [
+    "Im Klartext für schnelle Vergleiche",
+    "Mit einer schnellen allgemeinen Hashfunktion ohne Salt",
+    "Mit einem individuellen Salt und einer langsamen Passwort-Hashfunktion wie Argon2id oder bcrypt",
+    "Base64-kodiert"
+  ],
+  "correct": [2],
+  "explainInstruction": "Passwort-Hashfunktionen sind absichtlich aufwendig. Ein individuelles Salt verhindert, dass gleiche Passwörter denselben gespeicherten Wert besitzen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

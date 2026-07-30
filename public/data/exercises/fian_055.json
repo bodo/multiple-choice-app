@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Was ist eine Äquivalenzklasse beim Softwaretest?",
+  "answerOptions": [
+    "Eine Menge von Eingaben, von denen ein vergleichbares Systemverhalten erwartet wird",
+    "Eine Gruppe identischer Testpersonen",
+    "Eine Liste aller Quellcodedateien",
+    "Eine Verschlüsselungsklasse"
+  ],
+  "correct": [0],
+  "explainInstruction": "Äquivalenzklassen teilen den Eingaberaum in Bereiche mit erwartet gleichartigem Verhalten. Repräsentative Werte reduzieren die Zahl nötiger Tests.",
+  "specializations": [
+    "FIAN"
+  ]
+}

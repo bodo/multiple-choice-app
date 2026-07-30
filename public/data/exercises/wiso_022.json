@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Mitbestimmung und Tarifrecht"
+  ],
+  "instruction": "Welche Aufgabe hat die Jugend- und Auszubildendenvertretung (JAV)?",
+  "answerOptions": [
+    "Die besonderen Belange jugendlicher Beschäftigter und der Auszubildenden vertreten",
+    "Unternehmenssteuern festsetzen",
+    "Tarifverträge allein abschließen",
+    "Geschäftsführer bestellen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die JAV nimmt die besonderen Interessen Jugendlicher und Auszubildender wahr und arbeitet dabei mit dem Betriebsrat zusammen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

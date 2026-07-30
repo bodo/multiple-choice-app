@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Auf welcher OSI-Schicht arbeitet ein Router hauptsächlich?",
+  "answerOptions": [
+    "Bitübertragungsschicht",
+    "Sicherungsschicht",
+    "Vermittlungsschicht",
+    "Darstellungsschicht"
+  ],
+  "correct": [2],
+  "explainInstruction": "Router leiten IP-Pakete zwischen Netzen weiter. IP gehört zur OSI-Schicht 3, der Vermittlungsschicht.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

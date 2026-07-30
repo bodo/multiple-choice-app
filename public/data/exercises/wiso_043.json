@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Was sind Opportunitätskosten?",
+  "answerOptions": [
+    "Der entgangene Nutzen der besten nicht gewählten Alternative",
+    "Nur die Kosten einer Rechnungskopie",
+    "Sämtliche bereits versunkenen Kosten",
+    "Eine gesetzlich festgelegte Steuer"
+  ],
+  "correct": [0],
+  "explainInstruction": "Wer knappe Mittel für eine Option nutzt, verzichtet auf den Nutzen der besten Alternative. Dieser Verzicht sind Opportunitätskosten.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

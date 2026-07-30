@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Objektorientierung und UML"
+  ],
+  "instruction": "Was fordert das Single-Responsibility-Prinzip?",
+  "answerOptions": [
+    "Eine Klasse soll genau einen fachlichen Grund zur Änderung haben.",
+    "Eine Anwendung darf nur aus einer Klasse bestehen.",
+    "Jede Methode muss statisch sein.",
+    "Eine Klasse soll alle technischen Schichten abdecken."
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine Klasse sollte eine klar abgegrenzte Verantwortung besitzen. Das verbessert Verständlichkeit, Testbarkeit und Änderbarkeit.",
+  "specializations": [
+    "FIAN"
+  ]
+}

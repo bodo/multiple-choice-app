@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Woran wird bei einem Abnahmetest vor allem geprüft?",
+  "answerOptions": [
+    "Ob die Lösung die vereinbarten fachlichen Anforderungen und Akzeptanzkriterien erfüllt",
+    "Ob jede private Methode direkt getestet wurde",
+    "Ob der Compiler möglichst viele Warnungen erzeugt",
+    "Ob die Datenbank keine Tabellen besitzt"
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Abnahmetest bewertet die Lösung aus fachlicher Sicht gegen die vereinbarten Kriterien und bildet eine Grundlage für die Abnahme.",
+  "specializations": [
+    "FIAN"
+  ]
+}

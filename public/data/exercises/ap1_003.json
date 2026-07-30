@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Wozu dient eine MAC-Adresse in einem Ethernet-LAN?",
+  "answerOptions": [
+    "Sie adressiert Netzwerkschnittstellen auf der Sicherungsschicht.",
+    "Sie ersetzt weltweit jeden DNS-Namen.",
+    "Sie legt die CPU-Taktfrequenz fest.",
+    "Sie verschlüsselt automatisch alle Frames."
+  ],
+  "correct": [0],
+  "explainInstruction": "Ethernet-Frames verwenden MAC-Adressen für die lokale Zustellung auf Schicht 2.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

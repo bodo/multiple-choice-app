@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was stellt eine Lebenslinie in einem Sequenzdiagramm dar?",
+  "answerOptions": [
+    "Einen an der Interaktion beteiligten Akteur oder ein beteiligtes Objekt über die Zeit",
+    "Eine dauerhaft gespeicherte Datenbanktabelle",
+    "Eine Vererbungsbeziehung zwischen Klassen",
+    "Eine Bedingung für einen alternativen Ablauf"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Lebenslinie repräsentiert einen Interaktionsteilnehmer und verläuft von dessen Kopf aus senkrecht durch den betrachteten zeitlichen Ablauf.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Sequenzdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Arbeitsplatz und Sicherheit"
+  ],
+  "instruction": "Welche Maßnahmen verbessern die Ergonomie eines Bildschirmarbeitsplatzes?",
+  "answerOptions": [
+    "Bildschirm ohne störende Reflexionen positionieren",
+    "Oberkante des Bildschirms ungefähr auf oder leicht unter Augenhöhe einstellen",
+    "Eingabegeräte gut erreichbar anordnen",
+    "Dauerhaft in einer starren Haltung arbeiten"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Günstige Positionierung und veränderbare Haltung reduzieren Belastungen. Regelmäßige Haltungswechsel sind sinnvoll.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

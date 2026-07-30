@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Warum müssen Wiederherstellungen aus Datensicherungen regelmäßig getestet werden?",
+  "answerOptions": [
+    "Nur so lässt sich praktisch prüfen, ob Daten und Verfahren im Notfall nutzbar sind",
+    "Dadurch werden Sicherungsmedien automatisch verschlüsselt",
+    "Ein Test ersetzt die Erstellung weiterer Sicherungen",
+    "Damit alle Produktivdaten öffentlich dokumentiert sind"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein vorhandenes Backup ist erst dann belastbar, wenn Wiederherstellung, Zuständigkeiten und benötigte Zeiten geprüft wurden."
+}

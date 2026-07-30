@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welches Muster kapselt eine Familie von Algorithmen und macht die Algorithmen zur Laufzeit austauschbar?",
+  "answerOptions": [
+    "Strategie (Strategy)",
+    "Schablonenmethode (Template Method)",
+    "Zustand (State)",
+    "Befehl (Command)"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Strategie (Strategy) lagert austauschbare Algorithmen in eigenständige Strategieobjekte aus.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Verhaltensmuster"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

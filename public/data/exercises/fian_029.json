@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Was bewirkt `DELETE FROM Kunde WHERE aktiv = false`?",
+  "answerOptions": [
+    "Die gesamte Tabelle einschließlich Struktur wird entfernt.",
+    "Die passenden Zeilen werden entfernt; die Tabellenstruktur bleibt bestehen.",
+    "Nur der Index der Tabelle wird entfernt.",
+    "Die Spalte `aktiv` wird gelöscht."
+  ],
+  "correct": [1],
+  "explainInstruction": "`DELETE` entfernt Zeilen. `DROP TABLE` würde dagegen die Tabelle mitsamt ihrer Struktur entfernen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

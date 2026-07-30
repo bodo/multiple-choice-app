@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Welchen Zweck hat eine Vertraulichkeitsvereinbarung (NDA)?",
+  "answerOptions": [
+    "Vertragliche Pflichten zum Umgang mit vertraulichen Informationen festlegen",
+    "Jede Information automatisch zu einem Patent machen",
+    "Gesetzliche Datenschutzpflichten vollständig ersetzen",
+    "Alle Sicherheitsmaßnahmen technisch erzwingen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein NDA beschreibt insbesondere, welche Informationen vertraulich sind und wie sie genutzt oder offengelegt werden dürfen."
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Recht"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Wer darf nach § 69b UrhG grundsätzlich die vermögensrechtlichen Befugnisse an einem im Rahmen der Arbeitsaufgaben erstellten Computerprogramm ausüben, sofern nichts anderes vereinbart ist?",
+  "answerOptions": [
+    "Der Arbeitgeber",
+    "Automatisch jeder Kunde des Arbeitgebers",
+    "Ausschließlich die Berufsschule",
+    "Jeder Beschäftigte des Unternehmens ohne Einschränkung"
+  ],
+  "correct": [0],
+  "explainInstruction": "Bei Programmen, die ein Arbeitnehmer in Wahrnehmung seiner Aufgaben oder nach Anweisung schafft, ist grundsätzlich der Arbeitgeber zur Ausübung der vermögensrechtlichen Befugnisse berechtigt."
+}

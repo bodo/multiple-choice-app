@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Ein Produkt wird für 80 € verkauft und verursacht 50 € variable Stückkosten. Wie hoch ist der Stückdeckungsbeitrag in Euro?",
+  "correct": [30],
+  "explainInstruction": "`Stückdeckungsbeitrag = Verkaufspreis − variable Stückkosten = 80 € − 50 € = 30 €`.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

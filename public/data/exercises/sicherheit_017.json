@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Ein Arbeitsplatz zeigt eine Ransomware-Meldung und verschlüsselt Dateien. Was ist eine sinnvolle erste Maßnahme?",
+  "answerOptions": [
+    "Das betroffene System nach Notfallvorgabe vom Netz isolieren und den Vorfall melden",
+    "Das System weiterbenutzen, bis alle Dateien geprüft wurden",
+    "Die Meldung fotografieren und anschließend alle Protokolle löschen",
+    "Sofort von einem angeschlossenen Backup-Laufwerk wiederherstellen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Isolation begrenzt eine mögliche Ausbreitung. Danach folgen Meldung, Analyse und Wiederherstellung nach dem Notfallplan."
+}

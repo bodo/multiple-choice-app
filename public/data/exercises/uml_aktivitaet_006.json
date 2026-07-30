@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Aufgabe hat ein Zusammenführungsknoten (Merge)?",
+  "answerOptions": [
+    "Er führt alternative Pfade ohne Synchronisation wieder zu einem Ablauf zusammen",
+    "Er wartet immer auf alle parallelen Pfade",
+    "Er erzeugt ein neues Objekt",
+    "Er stellt einen Systembenutzer dar"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Merge führt alternative Kontrollflüsse zusammen. Anders als ein Join synchronisiert er keine parallel laufenden Pfade.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Aktivitätsdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

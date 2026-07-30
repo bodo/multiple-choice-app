@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Anforderungen und UX"
+  ],
+  "instruction": "Was bedeutet Responsive Design?",
+  "answerOptions": [
+    "Die Oberfläche passt Layout und Bedienung an unterschiedliche Bildschirmgrößen und Eingabemöglichkeiten an.",
+    "Der Server antwortet immer mit derselben Dateigröße.",
+    "Jede Seite wird ausschließlich für Desktop entwickelt.",
+    "Die Datenbank repliziert jede Tabelle."
+  ],
+  "correct": [0],
+  "explainInstruction": "Responsive Design sorgt dafür, dass Inhalte und Bedienung auf verschiedenen Geräten sinnvoll dargestellt und genutzt werden können.",
+  "specializations": [
+    "FIAN"
+  ]
+}

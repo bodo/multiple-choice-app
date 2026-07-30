@@ -1,0 +1,34 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Markiere alle fünf GoF-Erzeugungsmuster (GoF creational patterns).",
+  "answerOptions": [
+    "Abstrakte Fabrik (Abstract Factory)",
+    "Erbauer (Builder)",
+    "Fabrikmethode (Factory Method)",
+    "Prototyp (Prototype)",
+    "Einzelstück (Singleton)",
+    "Kompositum (Composite)",
+    "Zustand (State)",
+    "Stellvertreter (Proxy)"
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "explainInstruction": "Die fünf GoF-Erzeugungsmuster sind Abstrakte Fabrik (Abstract Factory), Erbauer (Builder), Fabrikmethode (Factory Method), Prototyp (Prototype) und Einzelstück (Singleton).",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

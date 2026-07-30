@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Aussage passt zu einer Komposition?",
+  "answerOptions": [
+    "Sie modelliert eine starke Ganzes-Teil-Beziehung mit eng gebundenem Lebenszyklus der Teile",
+    "Sie zeigt lediglich einen einmaligen Methodenaufruf",
+    "Sie verbindet einen Akteur mit einem Anwendungsfall",
+    "Sie bedeutet, dass zwei Klassen voneinander erben"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Komposition wird mit einer ausgefüllten Raute am Ganzen dargestellt. Die Teile sind dem Ganzen stark zugeordnet und ihr Lebenszyklus ist typischerweise daran gebunden.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

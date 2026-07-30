@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was muss ein Auftragsverarbeiter tun, wenn ihm eine Verletzung des Schutzes personenbezogener Daten bekannt wird?",
+  "answerOptions": [
+    "Den Verantwortlichen unverzüglich informieren",
+    "Grundsätzlich 30 Tage warten",
+    "Ausschließlich die betroffenen Personen direkt anschreiben",
+    "Alle Nachweise des Vorfalls löschen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Auftragsverarbeiter meldet die Verletzung unverzüglich an den Verantwortlichen, damit dieser seine Pflichten erfüllen kann."
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was ist im Sicherheitskontext eine Schwachstelle?",
+  "answerOptions": [
+    "Eine ausnutzbare Schwäche in Technik, Konfiguration oder Organisation",
+    "Ein bereits eingetretener finanzieller Schaden",
+    "Eine vollständige Liste aller Benutzerkonten",
+    "Eine rechtliche Grundlage für Datenverarbeitung"
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine Schwachstelle ist eine Schwäche, die von einer Bedrohung ausgenutzt werden kann."
+}

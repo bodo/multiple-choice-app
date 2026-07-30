@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was ist der Unterschied zwischen einem Attribut und einer Operation?",
+  "answerOptions": [
+    "Ein Attribut beschreibt einen Zustand beziehungsweise eine Eigenschaft, eine Operation ein angebotenes Verhalten",
+    "Ein Attribut ist immer öffentlich, eine Operation immer privat",
+    "Attribute gehören nur zu Akteuren, Operationen nur zu Aktivitäten",
+    "Es gibt in UML keinen Unterschied"
+  ],
+  "correct": [0],
+  "explainInstruction": "Attribute modellieren Daten beziehungsweise Zustand einer Klasse. Operationen beschreiben aufrufbares Verhalten.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

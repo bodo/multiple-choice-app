@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Was misst die Preiselastizität der Nachfrage?",
+  "answerOptions": [
+    "Wie stark die nachgefragte Menge auf eine Preisänderung reagiert",
+    "Wie viele Beschäftigte ein Unternehmen hat",
+    "Wie hoch das Eigenkapital ist",
+    "Wie lange ein Tarifvertrag gilt"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Preiselastizität setzt die prozentuale Mengenänderung ins Verhältnis zur prozentualen Preisänderung.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Server und Speicher"
+  ],
+  "instruction": "Was leistet RAID 1?",
+  "answerOptions": [
+    "Es spiegelt Daten auf mindestens zwei Laufwerke.",
+    "Es verteilt Daten ohne Redundanz.",
+    "Es benötigt grundsätzlich fünf Laufwerke.",
+    "Es ersetzt ein Offline-Backup."
+  ],
+  "correct": [0],
+  "explainInstruction": "RAID 1 hält identische Datenkopien auf mehreren Laufwerken und toleriert je nach Aufbau einen Laufwerksausfall.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

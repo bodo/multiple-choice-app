@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Anforderungen und UX"
+  ],
+  "instruction": "Was beschreibt ein Use Case?",
+  "answerOptions": [
+    "Eine zielgerichtete Interaktion zwischen Akteur und System",
+    "Nur das Farbschema einer Oberfläche",
+    "Ausschließlich die physische Netzwerkverkabelung",
+    "Den Inhalt eines einzelnen Datenbankindex"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Use Case beschreibt, wie ein Akteur mit dem System interagiert, um ein fachliches Ziel zu erreichen, einschließlich Haupt- und möglicher Alternativabläufe.",
+  "specializations": [
+    "FIAN"
+  ]
+}

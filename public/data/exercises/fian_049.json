@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster"
+  ],
+  "instruction": "Welche HTTP-Methode ist für das vollständige Ersetzen einer Ressource vorgesehen und soll idempotent sein?",
+  "answerOptions": [
+    "`POST`",
+    "`PUT`",
+    "`CONNECT`",
+    "`TRACE`"
+  ],
+  "correct": [1],
+  "explainInstruction": "Mehrfaches identisches `PUT` soll denselben beabsichtigten Zustand herstellen wie ein einzelnes. Deshalb gilt die Methode als idempotent.",
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Objektorientierung und UML"
+  ],
+  "instruction": "Was bedeutet Kapselung in der objektorientierten Programmierung?",
+  "answerOptions": [
+    "Alle Attribute sind öffentlich.",
+    "Daten und zugehöriges Verhalten werden gebündelt und interne Details kontrolliert verborgen.",
+    "Jede Klasse darf nur eine Methode besitzen.",
+    "Objekte werden ausschließlich in Dateien gespeichert."
+  ],
+  "correct": [1],
+  "explainInstruction": "Kapselung schützt den internen Zustand hinter einer definierten Schnittstelle und reduziert unerwünschte Abhängigkeiten.",
+  "specializations": [
+    "FIAN"
+  ]
+}

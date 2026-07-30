@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Betriebssysteme und Netzwerke"
+  ],
+  "instruction": "Wie viele regulär nutzbare IPv4-Hostadressen bietet ein klassisches `/24`-Subnetz? Netzwerk- und Broadcastadresse sind nicht nutzbar.",
+  "correct": [254],
+  "explainInstruction": "Ein `/24` lässt 8 Hostbits und damit 256 Adressen. Nach Abzug von Netzwerk- und Broadcastadresse bleiben 254 reguläre Hostadressen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

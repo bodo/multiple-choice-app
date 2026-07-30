@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Bezeichnung eignet sich am besten für einen Anwendungsfall?",
+  "answerOptions": [
+    "Bestellung stornieren",
+    "Datenbanktabelle Bestellung",
+    "Button blau",
+    "Klasse StornoService"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Anwendungsfall wird ziel- und handlungsorientiert benannt, häufig mit Verb und fachlichem Objekt.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Anwendungsfalldiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

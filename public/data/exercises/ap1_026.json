@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Warum besitzt eine CPU Cache-Speicher?",
+  "answerOptions": [
+    "Häufig benötigte Daten und Befehle näher und schneller als im RAM bereitzuhalten",
+    "Um Monitore mit Strom zu versorgen",
+    "Um Dateien dauerhaft zu archivieren",
+    "Um IP-Adressen zu vergeben"
+  ],
+  "correct": [0],
+  "explainInstruction": "CPU-Caches überbrücken den Geschwindigkeitsunterschied zwischen Rechenkernen und Arbeitsspeicher.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Projektmanagement und Wirtschaftlichkeit"
+  ],
+  "instruction": "Wann ist der Break-even-Punkt erreicht?",
+  "answerOptions": [
+    "Wenn kumulierte Erlöse und kumulierte Kosten gleich hoch sind",
+    "Wenn noch keine variablen Kosten entstanden sind",
+    "Wenn der Umsatz erstmals null ist",
+    "Wenn jede Anforderung umgesetzt wurde"
+  ],
+  "correct": [0],
+  "explainInstruction": "Am Break-even-Punkt decken die Erlöse genau die fixen und variablen Kosten. Oberhalb beginnt unter sonst gleichen Bedingungen die Gewinnzone.",
+  "specializations": [
+    "FIAN"
+  ]
+}

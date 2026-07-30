@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Was bedeutet Inflation?",
+  "answerOptions": [
+    "Das allgemeine Preisniveau steigt anhaltend und Geld verliert Kaufkraft.",
+    "Jeder einzelne Preis sinkt.",
+    "Die Geldmenge ist immer null.",
+    "Die Arbeitsproduktivität verdoppelt sich zwingend."
+  ],
+  "correct": [0],
+  "explainInstruction": "Inflation ist ein anhaltender Anstieg des allgemeinen Preisniveaus, nicht bloß die Verteuerung eines einzelnen Produkts.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

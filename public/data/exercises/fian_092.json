@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Versionsverwaltung und DevOps"
+  ],
+  "instruction": "Wann entsteht typischerweise ein Merge-Konflikt?",
+  "answerOptions": [
+    "Wenn Git konkurrierende Änderungen nicht automatisch eindeutig zusammenführen kann",
+    "Bei jedem neuen Branch",
+    "Nur wenn keine Dateien geändert wurden",
+    "Wenn ein Commit eine kurze Nachricht besitzt"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Konflikt entsteht etwa bei inkompatiblen Änderungen an denselben Zeilen. Er muss fachlich aufgelöst und anschließend getestet werden.",
+  "specializations": [
+    "FIAN"
+  ]
+}

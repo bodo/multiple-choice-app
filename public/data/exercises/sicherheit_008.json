@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was bedeutet Defense in Depth?",
+  "answerOptions": [
+    "Mehrere voneinander ergänzende Schutzschichten einsetzen",
+    "Nur die äußere Firewall möglichst komplex konfigurieren",
+    "Alle Sicherheitsaufgaben an einen einzelnen Dienst übertragen",
+    "Sicherheitskontrollen erst nach einem Vorfall einführen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Mehrere technische, organisatorische und physische Schutzschichten reduzieren die Abhängigkeit von einer einzelnen Maßnahme."
+}

@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Betriebssysteme und Netzwerke"
+  ],
+  "instruction": "Welche Eigenschaften bietet TCP einer Anwendung?",
+  "answerOptions": [
+    "Zuverlässige, geordnete Byteübertragung",
+    "Erkennung verlorener Segmente und erneute Übertragung",
+    "Garantierte minimale Latenz",
+    "Verbindungsorientierte Kommunikation"
+  ],
+  "correct": [
+    0,
+    1,
+    3
+  ],
+  "explainInstruction": "TCP stellt einen zuverlässigen, geordneten Bytestrom über eine Verbindung bereit. Eine feste maximale Latenz garantiert das Protokoll nicht.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

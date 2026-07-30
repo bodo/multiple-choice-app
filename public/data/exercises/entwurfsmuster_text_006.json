@@ -1,0 +1,20 @@
+{
+  "inputMode": "TEXT",
+  "instruction": "Der interne Zustand eines Objekts soll erfasst und später wiederhergestellt werden, ohne seine Kapselung zu verletzen. Nenne das passende Entwurfsmuster. Die deutsche oder englische Bezeichnung genügt; der Zusatz „Muster“/„Pattern“ ist optional.",
+  "correct": [
+    "Memento (Memento)",
+    "/Memento(?:[- ]?(?:Muster|Pattern))?/u"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 0,
+  "explainInstruction": "Memento (Memento) speichert einen wiederherstellbaren Zustands-Schnappschuss.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "Verhaltensmuster"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

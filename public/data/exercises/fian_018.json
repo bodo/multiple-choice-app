@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Welche Forderung stellt die erste Normalform?",
+  "answerOptions": [
+    "Alle Attributwerte sind atomar.",
+    "Jede Tabelle besitzt genau zwei Spalten.",
+    "Es gibt keine Fremdschlüssel.",
+    "Alle Nichtschlüsselattribute sind transitiv abhängig."
+  ],
+  "correct": [0],
+  "explainInstruction": "In der ersten Normalform enthält jedes Feld genau einen atomaren Wert; Wiederholungsgruppen oder Listen in einer Zelle werden aufgelöst.",
+  "specializations": [
+    "FIAN"
+  ]
+}

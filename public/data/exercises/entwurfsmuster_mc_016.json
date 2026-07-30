@@ -1,0 +1,30 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche Beschreibungen von Erzeugungsmustern (creational patterns) sind korrekt zugeordnet?",
+  "answerOptions": [
+    "Erbauer (Builder) – konstruiert ein komplexes Objekt schrittweise und kann dabei verschiedene Repräsentationen erzeugen.",
+    "Prototyp (Prototype) – erzeugt neue Objekte durch Kopieren eines prototypischen Exemplars.",
+    "Abstrakte Fabrik (Abstract Factory) – erzeugt zusammengehörige Produktfamilien, ohne konkrete Klassen zu nennen.",
+    "Einzelstück (Singleton) – begrenzt eine Klasse auf genau ein Exemplar und bietet einen Zugriffspunkt.",
+    "Fabrikmethode (Factory Method) – lässt Unterklassen über die konkrete Produktklasse entscheiden.",
+    "Prototyp (Prototype) – stellt zwingend genau eine globale Instanz bereit.",
+    "Einzelstück (Singleton) – erzeugt vollständige Familien voneinander abhängiger Produkte."
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "explainInstruction": "Die ersten fünf Aussagen treffen die jeweiligen Aufgaben. Die letzten beiden vertauschen die Aufgaben von Prototyp (Prototype), Einzelstück (Singleton) und Abstrakter Fabrik (Abstract Factory).",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

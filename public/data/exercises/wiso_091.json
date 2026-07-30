@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Staat, Verträge und Verbraucher"
+  ],
+  "instruction": "Welche Steuer ist eine direkte Steuer?",
+  "answerOptions": [
+    "Einkommensteuer",
+    "Umsatzsteuer",
+    "Energiesteuer",
+    "Tabaksteuer"
+  ],
+  "correct": [0],
+  "explainInstruction": "Bei der Einkommensteuer sind Steuerträger und Steuerschuldner grundsätzlich dieselbe Person. Verbrauchsteuern werden typischerweise überwälzt.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

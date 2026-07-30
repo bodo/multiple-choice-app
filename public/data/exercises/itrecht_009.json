@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Recht"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was ist ein typischer Grundgedanke einer Copyleft-Lizenz?",
+  "answerOptions": [
+    "Bestimmte Weitergaben abgeleiteter Software müssen unter entsprechenden Lizenzbedingungen erfolgen",
+    "Jede Nutzung im Unternehmen ist verboten",
+    "Der Quellcode darf niemals verändert werden",
+    "Das Urheberrecht wird vollständig aufgehoben"
+  ],
+  "correct": [0],
+  "explainInstruction": "Copyleft knüpft die Weitergabe häufig an Pflichten, die Freiheiten der Lizenz auch für abgeleitete Werke zu erhalten."
+}

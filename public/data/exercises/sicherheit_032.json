@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was ist der Kerngedanke einer rollenbasierten Zugriffskontrolle?",
+  "answerOptions": [
+    "Berechtigungen werden Rollen zugeordnet und Benutzer erhalten passende Rollen",
+    "Jeder Benutzer verwaltet alle Rechte anderer Benutzer",
+    "Berechtigungen richten sich ausschließlich nach dem Gerätenamen",
+    "Alle Konten erhalten dieselben Rechte und unterscheiden sich nur im Passwort"
+  ],
+  "correct": [0],
+  "explainInstruction": "RBAC bündelt Berechtigungen in Rollen und vereinfacht dadurch konsistente Zuweisungen und Prüfungen."
+}

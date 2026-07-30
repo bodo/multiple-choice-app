@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was beschreibt ein UML-Klassendiagramm hauptsächlich?",
+  "answerOptions": [
+    "Die statische Struktur eines Systems mit Klassen, Eigenschaften, Operationen und Beziehungen",
+    "Die zeitliche Reihenfolge konkreter Nachrichten",
+    "Die Auslastung eines Netzwerks",
+    "Die Reihenfolge von Arbeitsschritten eines einzelnen Vorgangs"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Klassendiagramm ist ein Strukturdiagramm. Es beschreibt Typen und ihre statischen Beziehungen, nicht den zeitlichen Ablauf einer Interaktion.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

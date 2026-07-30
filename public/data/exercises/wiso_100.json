@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Staat, Verträge und Verbraucher"
+  ],
+  "instruction": "Wie viele Tage beträgt die regelmäßige Widerrufsfrist für Verbraucher bei einem ordnungsgemäß belehrten Fernabsatzvertrag grundsätzlich?",
+  "correct": [14],
+  "explainInstruction": "Bei Fernabsatzverträgen gilt grundsätzlich eine Widerrufsfrist von 14 Tagen. Das Gesetz kennt Ausnahmen und besondere Fristbeginne.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

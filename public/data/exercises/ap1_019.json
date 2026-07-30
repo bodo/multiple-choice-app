@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Eine Verbindung überträgt netto 80 Mbit/s. Wie vielen MB/s entspricht das rechnerisch? Gib die Zahl ohne Einheit ein.",
+  "correct": [10],
+  "explainInstruction": "Ein Byte besteht aus 8 Bit. Daher gilt `80 Mbit/s ÷ 8 = 10 MB/s`.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

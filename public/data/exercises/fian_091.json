@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Versionsverwaltung und DevOps"
+  ],
+  "instruction": "Was repräsentiert ein Git-Commit?",
+  "answerOptions": [
+    "Einen nachvollziehbaren Snapshot der versionierten Änderungen mit Metadaten",
+    "Nur eine Verbindung zum Produktionsserver",
+    "Eine gelöschte Arbeitskopie",
+    "Einen laufenden Betriebssystemprozess"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Commit hält einen Projektzustand samt Elternbezug, Autor, Zeitpunkt und Nachricht in der Versionsgeschichte fest.",
+  "specializations": [
+    "FIAN"
+  ]
+}

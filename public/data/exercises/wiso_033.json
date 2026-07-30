@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Sozialversicherung"
+  ],
+  "instruction": "Was bedeutet Umlageverfahren in der gesetzlichen Rentenversicherung?",
+  "answerOptions": [
+    "Laufende Beiträge finanzieren im Wesentlichen die laufenden Rentenzahlungen.",
+    "Jede Person spart ausschließlich ihr eigenes Geld auf einem privaten Konto.",
+    "Renten werden nur aus Umsatzsteuer bezahlt.",
+    "Beiträge werden niemals ausgezahlt."
+  ],
+  "correct": [0],
+  "explainInstruction": "Im Umlageverfahren werden die aktuellen Beitragseinnahmen im Wesentlichen für aktuelle Leistungen verwendet.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

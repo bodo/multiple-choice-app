@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was ist eine Bedrohung?",
+  "answerOptions": [
+    "Ein möglicher Umstand oder Akteur, der einen Schaden verursachen kann",
+    "Ausschließlich ein bereits installierter Computervirus",
+    "Eine erfolgreich geprüfte Schutzmaßnahme",
+    "Eine Kopie produktiver Daten"
+  ],
+  "correct": [0],
+  "explainInstruction": "Bedrohungen können beispielsweise Angreifer, Feuer, Fehlbedienung oder technische Ausfälle sein."
+}

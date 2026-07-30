@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "instruction": "Wie haften die Gesellschafter einer OHG grundsätzlich?",
+  "answerOptions": [
+    "Persönlich, unbeschränkt und gesamtschuldnerisch",
+    "Nur bis zum Wert einer einzelnen Aktie",
+    "Überhaupt nicht",
+    "Nur gegenüber Beschäftigten"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die OHG ist eine Personengesellschaft, deren Gesellschafter grundsätzlich persönlich und unbeschränkt haften.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Markiere alle elf GoF-Verhaltensmuster (GoF behavioral patterns).",
+  "answerOptions": [
+    "Zuständigkeitskette (Chain of Responsibility)",
+    "Befehl (Command)",
+    "Interpreter (Interpreter)",
+    "Iterator (Iterator)",
+    "Vermittler (Mediator)",
+    "Memento (Memento)",
+    "Beobachter (Observer)",
+    "Zustand (State)",
+    "Strategie (Strategy)",
+    "Schablonenmethode (Template Method)",
+    "Besucher (Visitor)",
+    "Erbauer (Builder)",
+    "Fassade (Facade)",
+    "Prototyp (Prototype)"
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "explainInstruction": "Die elf richtigen Antworten bilden die vollständige GoF-Gruppe der Verhaltensmuster (behavioral patterns).",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

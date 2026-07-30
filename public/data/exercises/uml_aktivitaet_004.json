@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was bedeutet der Aktivitätsendknoten mit ausgefülltem Punkt in einem Kreis?",
+  "answerOptions": [
+    "Die gesamte Aktivität wird beendet",
+    "Nur eine einzelne Klasse wird instanziiert",
+    "Eine Bedingung wird geprüft",
+    "Ein externer Akteur übernimmt den Ablauf"
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Aktivitätsendknoten beendet die gesamte laufende Aktivität, nicht nur einen einzelnen Pfad.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Aktivitätsdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

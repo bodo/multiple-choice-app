@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Kann eine IP-Adresse ein personenbezogenes Datum sein?",
+  "answerOptions": [
+    "Ja, wenn sie mit vertretbaren Mitteln einer Person zugeordnet werden kann",
+    "Nein, technische Kennungen sind grundsätzlich nie personenbezogen",
+    "Nur wenn die Adresse mit 192.168 beginnt",
+    "Nur wenn sie in ausgedruckter Form vorliegt"
+  ],
+  "correct": [0],
+  "explainInstruction": "Auch Online-Kennungen können personenbezogen sein, wenn eine Person direkt oder indirekt identifizierbar ist."
+}

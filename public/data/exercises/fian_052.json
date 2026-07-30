@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Was ist das Hauptziel eines Integrationstests?",
+  "answerOptions": [
+    "Die Zusammenarbeit mehrerer Komponenten oder Systeme prüfen",
+    "Die Schreibweise einzelner Variablennamen bewerten",
+    "Nur eine Funktion ohne Abhängigkeiten prüfen",
+    "Die Projektkosten berechnen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Integrationstests decken Fehler an Schnittstellen und im Zusammenspiel realer Komponenten auf.",
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche vollständigen Zuordnungen aus Aufgabe und Gültigkeitsbereich entsprechen der GoF-Klassifikation?",
+  "answerOptions": [
+    "Fabrikmethode (Factory Method) – klassenbasiertes Erzeugungsmuster (class-based creational pattern)",
+    "Abstrakte Fabrik (Abstract Factory) – objektbasiertes Erzeugungsmuster (object-based creational pattern)",
+    "Adapter (Adapter) – klassen- oder objektbasiertes Strukturmuster (class- or object-based structural pattern)",
+    "Interpreter (Interpreter) – klassenbasiertes Verhaltensmuster (class-based behavioral pattern)",
+    "Beobachter (Observer) – klassenbasiertes Verhaltensmuster (class-based behavioral pattern)",
+    "Brücke (Bridge) – klassenbasiertes Strukturmuster (class-based structural pattern)"
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "explainInstruction": "Beobachter (Observer) und Brücke (Bridge) sind objektbasiert. Die vier anderen Aussagen entsprechen der Zweck-und-Gültigkeitsbereich-Matrix der GoF.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Ein Kunde kann viele Bestellungen aufgeben, jede Bestellung gehört genau einem Kunden. Welche Kardinalität liegt vor?",
+  "answerOptions": [
+    "1:1",
+    "1:n",
+    "n:m",
+    "0:0"
+  ],
+  "correct": [1],
+  "explainInstruction": "Von Kunde zu Bestellung ist die Beziehung 1:n: Ein Kunde kann mehreren Bestellungen zugeordnet sein.",
+  "specializations": [
+    "FIAN"
+  ]
+}

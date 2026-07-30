@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was drückt eine einfache Assoziation zwischen zwei Klassen aus?",
+  "answerOptions": [
+    "Zwischen ihren Instanzen kann eine fachliche strukturelle Beziehung bestehen",
+    "Eine Klasse wird beim Start automatisch gelöscht",
+    "Alle Operationen werden parallel ausgeführt",
+    "Beide Klassen müssen denselben Namen besitzen"
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine Assoziation beschreibt eine strukturelle Beziehung zwischen Instanzen der beteiligten Klassen. Rollen und Multiplizitäten können sie genauer bestimmen.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

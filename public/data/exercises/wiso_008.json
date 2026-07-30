@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Wie ist die Teilnahme am Berufsschulunterricht arbeitsrechtlich zu behandeln?",
+  "answerOptions": [
+    "Der Betrieb muss Auszubildende freistellen; anrechenbare Berufsschulzeit gilt als Ausbildungszeit.",
+    "Sie ist immer reine Freizeit.",
+    "Sie ist nur bei guten Noten erlaubt.",
+    "Sie muss grundsätzlich als Urlaub beantragt werden."
+  ],
+  "correct": [0],
+  "explainInstruction": "Der Ausbildungsbetrieb muss für vorgeschriebenen Berufsschulunterricht freistellen. Das BBiG regelt auch die Anrechnung auf die Ausbildungszeit.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

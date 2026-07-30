@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Objektorientierung und UML"
+  ],
+  "instruction": "Welche Beziehung wird typischerweise durch Vererbung modelliert?",
+  "answerOptions": [
+    "has-a",
+    "uses-once",
+    "is-a",
+    "stored-in"
+  ],
+  "correct": [2],
+  "explainInstruction": "Vererbung drückt eine Spezialisierung aus: Ein Objekt der Unterklasse ist auch ein Objekt der Oberklasse.",
+  "specializations": [
+    "FIAN"
+  ]
+}

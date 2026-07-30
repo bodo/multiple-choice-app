@@ -1,0 +1,29 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Staat, Verträge und Verbraucher"
+  ],
+  "instruction": "Welche Ziele gehören zum sogenannten magischen Viereck der Wirtschaftspolitik?",
+  "answerOptions": [
+    "Stabilität des Preisniveaus",
+    "Hoher Beschäftigungsstand",
+    "Außenwirtschaftliches Gleichgewicht",
+    "Stetiges und angemessenes Wirtschaftswachstum",
+    "Gesetzlich garantierter Gewinn jedes Unternehmens"
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "explainInstruction": "Diese vier gesamtwirtschaftlichen Ziele nennt das Stabilitätsgesetz. Zwischen ihnen können Zielkonflikte entstehen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

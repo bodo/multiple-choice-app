@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Datenschutz"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was bedeutet Rechenschaftspflicht nach der DSGVO?",
+  "answerOptions": [
+    "Der Verantwortliche muss die Einhaltung der Datenschutzgrundsätze nachweisen können",
+    "Betroffene müssen jede Datenschutzverletzung selbst beweisen",
+    "Nur Auftragsverarbeiter müssen Maßnahmen dokumentieren",
+    "Eine mündliche Zusage ersetzt jede Dokumentation"
+  ],
+  "correct": [0],
+  "explainInstruction": "Zur Rechenschaftspflicht gehören geeignete Maßnahmen und nachvollziehbare Nachweise ihrer Umsetzung."
+}

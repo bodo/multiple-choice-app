@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Was unterscheidet eine außerordentliche von einer ordentlichen Kündigung?",
+  "answerOptions": [
+    "Eine außerordentliche Kündigung setzt einen wichtigen Grund voraus und erfolgt typischerweise fristlos.",
+    "Eine außerordentliche Kündigung ist immer ohne Begründung möglich.",
+    "Eine ordentliche Kündigung beendet jedes Arbeitsverhältnis sofort.",
+    "Zwischen beiden besteht kein Unterschied."
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine außerordentliche Kündigung ist nur bei einem wichtigen Grund zulässig, der die Fortsetzung bis zum Ablauf einer Frist unzumutbar macht.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

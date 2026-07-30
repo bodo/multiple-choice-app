@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Sozialversicherung"
+  ],
+  "instruction": "Welcher Fall kann unter den Schutz der gesetzlichen Unfallversicherung fallen?",
+  "answerOptions": [
+    "Unfall auf dem unmittelbaren Weg zur Arbeit",
+    "Jeder Unfall während einer privaten Urlaubsreise",
+    "Verlust eines privaten Schlüssels",
+    "Freiwilliger Aktienkauf mit Verlust"
+  ],
+  "correct": [0],
+  "explainInstruction": "Neben Arbeitsunfällen können auch Wegeunfälle auf dem versicherten unmittelbaren Weg zur oder von der Arbeit erfasst sein.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

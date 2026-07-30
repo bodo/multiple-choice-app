@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Wozu dienen Aktivitätspartitionen beziehungsweise Swimlanes?",
+  "answerOptions": [
+    "Sie ordnen Aktionen verantwortlichen Rollen, Bereichen oder Systemen zu",
+    "Sie geben die maximale Zahl von Objekten an",
+    "Sie ersetzen alle Entscheidungsknoten",
+    "Sie definieren private Klassenattribute"
+  ],
+  "correct": [0],
+  "explainInstruction": "Swimlanes strukturieren einen Ablauf nach Verantwortungsbereichen und zeigen dadurch, wer oder was eine Aktion ausführt.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Aktivitätsdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

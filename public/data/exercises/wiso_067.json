@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "instruction": "Was kennzeichnet die Prokura?",
+  "answerOptions": [
+    "Eine ausdrücklich erteilte handelsrechtliche Vollmacht mit gesetzlich weitreichendem Umfang",
+    "Eine private Vollmacht nur zum Einkauf von Büromaterial",
+    "Ein Tarifvertrag",
+    "Eine Form der Sozialversicherung"
+  ],
+  "correct": [0],
+  "explainInstruction": "Prokura ermächtigt zu nahezu allen Geschäften, die der Betrieb eines Handelsgewerbes mit sich bringt; besondere Grenzen bleiben bestehen.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

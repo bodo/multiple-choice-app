@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Welche Aussage beschreibt `«extend»` am besten?",
+  "answerOptions": [
+    "Ein zusätzlicher Ablauf erweitert einen Basis-Anwendungsfall unter bestimmten Bedingungen",
+    "Ein Anwendungsfall wird zwingend bei jedem Systemstart ausgeführt",
+    "Eine Klasse erbt Attribute einer Oberklasse",
+    "Mehrere parallele Aktivitäten werden synchronisiert"
+  ],
+  "correct": [0],
+  "explainInstruction": "`«extend»` ergänzt einen grundsätzlich eigenständig sinnvollen Basis-Anwendungsfall optional oder bedingt an vorgesehenen Erweiterungspunkten.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Anwendungsfalldiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

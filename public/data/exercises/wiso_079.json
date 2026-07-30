@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Rechnungswesen und Finanzierung"
+  ],
+  "instruction": "Was unterscheidet Ertrag und Einzahlung?",
+  "answerOptions": [
+    "Ertrag erhöht das Eigenkapital; eine Einzahlung erhöht den Zahlungsmittelbestand.",
+    "Beide Begriffe sind immer identisch.",
+    "Ertrag ist nur eine Barausgabe.",
+    "Eine Einzahlung vermindert stets das Bankguthaben."
+  ],
+  "correct": [0],
+  "explainInstruction": "Erfolgsgrößen und Zahlungsgrößen können zeitlich auseinanderfallen, etwa beim Verkauf auf Ziel.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

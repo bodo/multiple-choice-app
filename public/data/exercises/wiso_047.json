@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Wirtschaftliche Grundlagen und Markt"
+  ],
+  "instruction": "Welche Formel beschreibt die Wirtschaftlichkeit?",
+  "answerOptions": [
+    "Ertrag ÷ Aufwand",
+    "Aufwand + Ertrag",
+    "Umsatz ÷ Mitarbeiterzahl",
+    "Eigenkapital − Fremdkapital"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Wert über 1 bedeutet, dass der bewertete Ertrag den Aufwand übersteigt.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

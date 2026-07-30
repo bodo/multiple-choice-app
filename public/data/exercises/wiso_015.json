@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Wie viele Stunden ununterbrochene Ruhezeit müssen erwachsene Beschäftigte nach dem Arbeitszeitgesetz grundsätzlich nach Arbeitsende erhalten?",
+  "correct": [11],
+  "explainInstruction": "Die gesetzliche Grundregel verlangt 11 Stunden ununterbrochene Ruhezeit; für bestimmte Branchen bestehen besondere Ausgleichsregeln.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

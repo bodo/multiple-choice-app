@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Algorithmen und Datenstrukturen"
+  ],
+  "instruction": "Was kennzeichnet ein stabiles Sortierverfahren?",
+  "answerOptions": [
+    "Es benötigt immer konstanten Speicher.",
+    "Es sortiert ausschließlich Zahlen.",
+    "Elemente mit gleichem Schlüssel behalten ihre relative Reihenfolge.",
+    "Seine Laufzeit ist immer `O(n log n)`."
+  ],
+  "correct": [2],
+  "explainInstruction": "Stabilität betrifft nur Elemente mit gleichem Sortierschlüssel: Ihre ursprüngliche Reihenfolge bleibt erhalten.",
+  "specializations": [
+    "FIAN"
+  ]
+}

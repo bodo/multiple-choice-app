@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Anforderungen und UX"
+  ],
+  "instruction": "Welchen Nutzen hat ein früher klickbarer Prototyp?",
+  "answerOptions": [
+    "Bedienkonzepte und Anforderungen können mit geringem Aufwand früh validiert werden.",
+    "Er ersetzt zwingend das fertige Produkt.",
+    "Er beweist die Skalierbarkeit der Produktion.",
+    "Er macht Rückmeldungen von Nutzenden überflüssig."
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Prototyp macht Ideen früh erlebbar. Missverständnisse und Usability-Probleme können vor teurer Implementierung erkannt werden.",
+  "specializations": [
+    "FIAN"
+  ]
+}

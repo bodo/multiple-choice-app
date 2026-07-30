@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Server und Speicher"
+  ],
+  "instruction": "Warum ersetzt ein RAID keine Datensicherung?",
+  "answerOptions": [
+    "Löschen, Schadsoftware, Bedienfehler oder ein Gesamtschaden können alle RAID-Kopien zugleich betreffen.",
+    "Ein RAID kann grundsätzlich keine Daten lesen.",
+    "Backups funktionieren nur auf demselben Server.",
+    "RAID schützt ausschließlich vor Stromausfall."
+  ],
+  "correct": [0],
+  "explainInstruction": "RAID erhöht Verfügbarkeit bei Laufwerksfehlern. Eine unabhängige Sicherung ermöglicht die Wiederherstellung nach logischen und standortweiten Schäden.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

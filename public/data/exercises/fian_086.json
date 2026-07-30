@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Web, APIs und Sicherheit"
+  ],
+  "instruction": "Welche Aussage zu OAuth 2.0 und OpenID Connect ist richtig?",
+  "answerOptions": [
+    "OAuth 2.0 ist primär ein Autorisierungsrahmen; OpenID Connect ergänzt eine Identitätsschicht.",
+    "OAuth 2.0 verschlüsselt Festplatten.",
+    "OpenID Connect ersetzt HTTP.",
+    "Beide Verfahren sind Datenbank-Normalformen."
+  ],
+  "correct": [0],
+  "explainInstruction": "OAuth 2.0 delegiert Zugriff. OpenID Connect baut darauf auf und standardisiert die Anmeldung und Identitätsinformationen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

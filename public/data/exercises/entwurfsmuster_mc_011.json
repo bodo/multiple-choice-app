@@ -1,0 +1,30 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "instruction": "Welche GoF-Muster besitzen eine klassenbasierte Variante (class-based scope)? Berücksichtige beim Adapter (Adapter) ausdrücklich den Klassenadapter (class adapter).",
+  "answerOptions": [
+    "Fabrikmethode (Factory Method)",
+    "Adapter (Adapter)",
+    "Interpreter (Interpreter)",
+    "Schablonenmethode (Template Method)",
+    "Abstrakte Fabrik (Abstract Factory)",
+    "Brücke (Bridge)",
+    "Beobachter (Observer)",
+    "Strategie (Strategy)"
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "explainInstruction": "Klassenbasiert sind Fabrikmethode (Factory Method), der Klassenadapter (class adapter), Interpreter (Interpreter) und Schablonenmethode (Template Method). Ihr Schwerpunkt liegt auf statischen Klassen- und Vererbungsbeziehungen.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN"
+  ]
+}

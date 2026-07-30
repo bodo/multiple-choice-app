@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "instruction": "Ordne jedes Entwurfsmuster seiner Aufgabe zu.",
+  "answerOptions": [
+    "Kompositum (Composite)",
+    "Schablonenmethode (Template Method)",
+    "Einzelstück (Singleton)"
+  ],
+  "matchOptions": [
+    "Erzeugungsmuster (creational pattern)",
+    "Strukturmuster (structural pattern)",
+    "Verhaltensmuster (behavioral pattern)"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "Erzeugungsmuster (creational patterns) betreffen die Objekterzeugung, Strukturmuster (structural patterns) die Zusammensetzung und Verhaltensmuster (behavioral patterns) die Zusammenarbeit und Verantwortungsverteilung.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Softwarearchitektur und Entwurfsmuster",
+    "GoF-Klassifikation"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

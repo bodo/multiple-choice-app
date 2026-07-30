@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Ausbildung und Arbeitsrecht"
+  ],
+  "instruction": "Welche Hauptpflichten entstehen aus einem Arbeitsvertrag?",
+  "answerOptions": [
+    "Beschäftigte leisten vereinbarte Arbeit, Arbeitgeber zahlen vereinbartes Entgelt.",
+    "Beschäftigte zahlen Entgelt an den Arbeitgeber.",
+    "Arbeitgeber dürfen ohne Gegenleistung jede Leistung verlangen.",
+    "Es entstehen ausschließlich Pflichten gegenüber der Berufsschule."
+  ],
+  "correct": [0],
+  "explainInstruction": "Arbeitsleistung und Vergütung stehen als Hauptleistungspflichten gegenüber; hinzu kommen zahlreiche Neben- und Schutzpflichten.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

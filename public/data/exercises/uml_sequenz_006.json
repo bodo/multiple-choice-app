@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Was ist für eine asynchrone Nachricht typisch?",
+  "answerOptions": [
+    "Der Sender kann weiterarbeiten, ohne auf den Abschluss beim Empfänger zu warten",
+    "Sie darf nur an denselben Teilnehmer gesendet werden",
+    "Sie beendet automatisch die gesamte Interaktion",
+    "Sie stellt immer eine Fehlermeldung dar"
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine asynchrone Nachricht blockiert den Sender nicht bis zum Abschluss der Verarbeitung beim Empfänger.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Sequenzdiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

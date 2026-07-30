@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was bezeichnet eine Zero-Day-Schwachstelle?",
+  "answerOptions": [
+    "Eine Schwachstelle, für die zum relevanten Zeitpunkt noch kein allgemein verfügbarer Fix vorliegt",
+    "Eine Schwachstelle, die ausschließlich am ersten Tag eines Monats auftritt",
+    "Ein abgelaufenes Benutzerkonto ohne Berechtigungen",
+    "Eine bereits gepatchte Lücke mit dokumentierter Restlaufzeit"
+  ],
+  "correct": [0],
+  "explainInstruction": "Bei einer Zero-Day-Lücke besteht zwischen Bekanntwerden beziehungsweise Ausnutzung und verfügbarer Abhilfe ein besonderes Risiko."
+}

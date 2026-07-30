@@ -1,0 +1,29 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Welche Konfigurationswerte kann ein DHCP-Server einem Client typischerweise mitteilen?",
+  "answerOptions": [
+    "IP-Adresse",
+    "Subnetzmaske",
+    "Standardgateway",
+    "DNS-Server",
+    "MAC-Adresse der eingebauten Netzwerkkarte"
+  ],
+  "correct": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "explainInstruction": "DHCP verteilt IP-Konfiguration. Die Hardware-MAC-Adresse der Netzwerkkarte wird nicht vom DHCP-Server festgelegt.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

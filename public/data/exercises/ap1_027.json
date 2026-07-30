@@ -1,0 +1,17 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Computergrundlagen"
+  ],
+  "instruction": "Welchen Dezimalwert hat die Binärzahl `1010₂`?",
+  "correct": [10],
+  "explainInstruction": "`1010₂ = 1·8 + 0·4 + 1·2 + 0·1 = 10`.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

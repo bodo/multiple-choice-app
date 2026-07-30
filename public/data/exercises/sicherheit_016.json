@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "IT-Sicherheit"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ],
+  "instruction": "Was ist Social Engineering?",
+  "answerOptions": [
+    "Die Manipulation von Menschen, um Informationen oder Handlungen zu erlangen",
+    "Die automatische Komprimierung sozialer Netzwerke",
+    "Die Verschlüsselung von Datenbanken mit einem öffentlichen Schlüssel",
+    "Die Segmentierung eines Unternehmensnetzes"
+  ],
+  "correct": [0],
+  "explainInstruction": "Social Engineering nutzt Vertrauen, Hilfsbereitschaft, Angst oder Autorität aus, statt primär technische Schwachstellen anzugreifen."
+}

@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Unternehmen und Organisation"
+  ],
+  "instruction": "Welche Dimensionen umfasst nachhaltiges Wirtschaften typischerweise?",
+  "answerOptions": [
+    "Ökologische",
+    "Ökonomische",
+    "Soziale",
+    "Ausschließlich kurzfristige finanzielle"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Nachhaltigkeit betrachtet Umwelt, langfristige wirtschaftliche Tragfähigkeit und soziale Auswirkungen gemeinsam.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

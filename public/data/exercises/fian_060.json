@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Welche Aussage zur Code-Coverage ist richtig?",
+  "answerOptions": [
+    "100 % Coverage beweist vollständige Fehlerfreiheit.",
+    "Coverage zeigt ausgeführten Code, bewertet aber nicht automatisch die Qualität der Prüfungen.",
+    "Coverage ist nur bei Datenbanken möglich.",
+    "Eine niedrige Coverage garantiert korrekte Randfälle."
+  ],
+  "correct": [1],
+  "explainInstruction": "Coverage ist ein nützlicher Hinweis auf ungetestete Bereiche. Auch ausgeführter Code kann jedoch ohne sinnvolle Assertions oder Randfälle fehlerhaft bleiben.",
+  "specializations": [
+    "FIAN"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Projektmanagement und Wirtschaftlichkeit"
+  ],
+  "instruction": "Eine Investition kostet 20.000 €. Der erwartete jährliche Gewinn daraus beträgt 5.000 €. Wie hoch ist der einfache jährliche ROI in Prozent? Gib nur die Zahl ein.",
+  "correct": [25],
+  "explainInstruction": "`ROI = Gewinn / Investition × 100 = 5.000 / 20.000 × 100 = 25 %`.",
+  "specializations": [
+    "FIAN"
+  ]
+}

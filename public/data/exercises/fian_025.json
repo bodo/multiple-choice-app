@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Datenbanken und SQL"
+  ],
+  "instruction": "Welche ACID-Eigenschaft verlangt, dass eine Transaktion entweder vollständig oder gar nicht ausgeführt wird?",
+  "answerOptions": [
+    "Atomarität",
+    "Konsistenz",
+    "Isolation",
+    "Dauerhaftigkeit"
+  ],
+  "correct": [0],
+  "explainInstruction": "Atomarität bedeutet Alles-oder-nichts: Schlägt ein Teil fehl, werden die Änderungen der Transaktion zurückgerollt.",
+  "specializations": [
+    "FIAN"
+  ]
+}

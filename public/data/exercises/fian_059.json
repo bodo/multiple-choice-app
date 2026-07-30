@@ -1,0 +1,20 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP2",
+    "Testen und Qualitätssicherung"
+  ],
+  "instruction": "Wofür wird ein Mock in einem Test eingesetzt?",
+  "answerOptions": [
+    "Um eine Abhängigkeit kontrolliert zu ersetzen und Interaktionen vorzugeben oder zu prüfen",
+    "Um Produktivdaten dauerhaft zu verändern",
+    "Um den Compiler zu deaktivieren",
+    "Um Anforderungen zu verschlüsseln"
+  ],
+  "correct": [0],
+  "explainInstruction": "Ein Mock ersetzt eine echte Abhängigkeit durch ein kontrollierbares Testobjekt. So lassen sich Verhalten und Interaktionen isoliert prüfen.",
+  "specializations": [
+    "FIAN"
+  ]
+}

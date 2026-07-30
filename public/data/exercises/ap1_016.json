@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Welchen Zweck erfüllt ein VLAN?",
+  "answerOptions": [
+    "Es teilt eine physische Switch-Infrastruktur in getrennte logische Broadcast-Domänen.",
+    "Es erhöht automatisch die CPU-Taktfrequenz.",
+    "Es ersetzt jede Firewallregel.",
+    "Es verbindet ausschließlich analoge Telefone."
+  ],
+  "correct": [0],
+  "explainInstruction": "VLANs segmentieren ein Layer-2-Netz logisch. Verkehr zwischen VLANs benötigt Routing.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

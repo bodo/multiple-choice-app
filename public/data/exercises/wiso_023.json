@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "WiSo",
+    "Mitbestimmung und Tarifrecht"
+  ],
+  "instruction": "Wer schließt eine Betriebsvereinbarung?",
+  "answerOptions": [
+    "Arbeitgeber und Betriebsrat",
+    "Bundestag und Bundesrat",
+    "Krankenkasse und Finanzamt",
+    "IHK und Berufsschule"
+  ],
+  "correct": [0],
+  "explainInstruction": "Eine Betriebsvereinbarung ist eine schriftliche Regelung zwischen Arbeitgeber und Betriebsrat für den Betrieb.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

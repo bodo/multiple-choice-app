@@ -1,0 +1,24 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "instruction": "Wie verhalten sich Klasse und Objekt zueinander?",
+  "answerOptions": [
+    "Eine Klasse beschreibt einen Typ; ein Objekt ist eine konkrete Instanz dieses Typs",
+    "Eine Klasse ist immer eine Instanz eines Objekts",
+    "Objekte dürfen keine Werte für Attribute besitzen",
+    "Klasse und Objekt sind nur unterschiedliche Namen für dieselbe Diagrammlinie"
+  ],
+  "correct": [0],
+  "explainInstruction": "Die Klasse definiert gemeinsame Merkmale und Verhalten. Ein Objekt ist eine konkrete Ausprägung mit eigenen Attributwerten.",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "UML",
+    "Klassendiagramm"
+  ],
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}

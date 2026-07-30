@@ -1,0 +1,23 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "categories": [
+    "AP1",
+    "Netzwerkgrundlagen"
+  ],
+  "instruction": "Welcher Standardport wird üblicherweise für HTTPS verwendet?",
+  "answerOptions": [
+    "22",
+    "53",
+    "80",
+    "443"
+  ],
+  "correct": [3],
+  "explainInstruction": "HTTPS nutzt standardmäßig TCP-Port 443.",
+  "specializations": [
+    "FIAN",
+    "FISI",
+    "FIDP",
+    "FIDV"
+  ]
+}
