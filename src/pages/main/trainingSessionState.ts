@@ -1,6 +1,6 @@
 import { db, type StoredTrainingSession } from '../../db/db'
 import type { AnswerResult } from '../../entities/exercise/exercise'
-import type { ExerciseLoadingSource } from '../../entities/exercise/services/exerciseLoadingService'
+import type { ExerciseSetKey } from '../../entities/exercise/services/exerciseLoadingService'
 
 export interface TrainingSessionState {
   exerciseId: string
@@ -61,7 +61,7 @@ function toTrainingSessionState(
 }
 
 export async function loadTrainingSessionState(
-  source: ExerciseLoadingSource,
+  source: ExerciseSetKey,
 ): Promise<TrainingSessionState | null> {
   await pendingSave
   try {
@@ -72,7 +72,7 @@ export async function loadTrainingSessionState(
 }
 
 export function saveTrainingSessionState(
-  source: ExerciseLoadingSource,
+  source: ExerciseSetKey,
   state: TrainingSessionState,
 ): Promise<void> {
   pendingSave = pendingSave.then(async () => {

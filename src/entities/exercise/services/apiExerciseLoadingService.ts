@@ -1,4 +1,4 @@
-import type { Exercise } from '../exercise'
+import type { Exercise, ExerciseSpecialization } from '../exercise'
 import {
   type ExerciseLoadingService,
   parseExercise,
@@ -25,7 +25,9 @@ export class ApiExerciseLoadingService implements ExerciseLoadingService {
     this.fetcher = fetcher.bind(globalThis)
   }
 
-  async loadExercises(): Promise<Exercise[]> {
+  async loadExercises(
+    specialization: ExerciseSpecialization,
+  ): Promise<Exercise[]> {
     const response = await this.fetcher(`${this.apiBaseUrl}/exercises`, {
       headers: { Accept: 'application/json' },
     })
@@ -34,7 +36,7 @@ export class ApiExerciseLoadingService implements ExerciseLoadingService {
     }
 
     const payload = this.parseResponse(await response.json())
-    return payload.items.map((item, index) => {
+    const exercises = payload.items.map((item, index) => {
       try {
         return parseExercise(item)
       } catch (error) {
@@ -45,6 +47,12 @@ export class ApiExerciseLoadingService implements ExerciseLoadingService {
         )
       }
     })
+    const specializedExercises = exercises.filter(exercise =>
+      exercise.specializations.includes(specialization))
+    if (specializedExercises.length === 0) {
+      throw new Error(`Exercise API returned no ${specialization} exercises.`)
+    }
+    return specializedExercises
   }
 
   private parseResponse(value: unknown): ExerciseListResponse {

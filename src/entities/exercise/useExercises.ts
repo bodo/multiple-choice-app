@@ -6,11 +6,14 @@ import {
   type WatchStopHandle,
 } from 'vue'
 import { db, type StoredExercise } from '../../db/db'
-import type { Exercise } from './exercise'
+import type { Exercise, ExerciseSpecialization } from './exercise'
 import { ApiExerciseLoadingService } from './services/apiExerciseLoadingService'
+import { cacheExerciseImages } from './services/exerciseAssetCache'
 import {
+  getExerciseSetKey,
   type ExerciseLoadingService,
   type ExerciseLoadingSource,
+  type ExerciseSetKey,
 } from './services/exerciseLoadingService'
 import { JsonUrlExerciseLoadingService } from './services/jsonUrlExerciseLoadingService'
 import { useExerciseCatalog } from './useExerciseCatalog'
@@ -20,6 +23,7 @@ const exercises = ref<Exercise[]>([])
 const isLoading = ref(true)
 const error = ref<string | null>(null)
 const activeSource = ref<ExerciseLoadingSource>('json')
+const activeExerciseSetKey = ref<ExerciseSetKey>('json:FIAN')
 const services: Record<ExerciseLoadingSource, ExerciseLoadingService> = {
   json: new JsonUrlExerciseLoadingService(),
   api: new ApiExerciseLoadingService(),
@@ -35,7 +39,7 @@ function getErrorMessage(value: unknown): string {
 
 function toStoredExercise(
   exercise: Exercise,
-  source: ExerciseLoadingSource,
+  source: ExerciseSetKey,
   order: number,
 ): StoredExercise {
   return {
@@ -47,7 +51,7 @@ function toStoredExercise(
 }
 
 async function replaceStoredExercises(
-  source: ExerciseLoadingSource,
+  source: ExerciseSetKey,
   loadedExercises: Exercise[],
 ) {
   await db.transaction('rw', db.exercises, async () => {
@@ -59,7 +63,7 @@ async function replaceStoredExercises(
   })
 }
 
-async function readStoredExercises(source: ExerciseLoadingSource) {
+async function readStoredExercises(source: ExerciseSetKey) {
   return db.exercises.where('source').equals(source).sortBy('order')
 }
 
@@ -68,7 +72,7 @@ function publishStoredExercises(rows: StoredExercise[]) {
   useExerciseCatalog().buildFromExercises(exercises.value)
 }
 
-function subscribeToStoredExercises(source: ExerciseLoadingSource) {
+function subscribeToStoredExercises(source: ExerciseSetKey) {
   stopDatabaseSubscription?.()
   const subscription = liveQuery(
     () => readStoredExercises(source),
@@ -83,18 +87,37 @@ function subscribeToStoredExercises(source: ExerciseLoadingSource) {
   stopDatabaseSubscription = () => subscription.unsubscribe()
 }
 
-async function load(source: ExerciseLoadingSource) {
+async function load(
+  source: ExerciseLoadingSource,
+  specialization: ExerciseSpecialization,
+  online: boolean,
+) {
   const currentLoadVersion = ++loadVersion
+  const exerciseSetKey = getExerciseSetKey(source, specialization)
   activeSource.value = source
-  subscribeToStoredExercises(source)
+  activeExerciseSetKey.value = exerciseSetKey
+  subscribeToStoredExercises(exerciseSetKey)
   isLoading.value = true
   error.value = null
 
   try {
-    const loadedExercises = await services[source].loadExercises()
+    const cachedExercises = await readStoredExercises(exerciseSetKey)
     if (currentLoadVersion !== loadVersion) return
-    await replaceStoredExercises(source, loadedExercises)
-    const storedExercises = await readStoredExercises(source)
+    publishStoredExercises(cachedExercises)
+
+    if (!online) {
+      if (cachedExercises.length === 0) {
+        error.value = 'You are offline and this specialization has not been downloaded yet.'
+      }
+      return
+    }
+
+    const loadedExercises = await services[source]
+      .loadExercises(specialization)
+    if (currentLoadVersion !== loadVersion) return
+    await replaceStoredExercises(exerciseSetKey, loadedExercises)
+    await cacheExerciseImages(loadedExercises)
+    const storedExercises = await readStoredExercises(exerciseSetKey)
     if (currentLoadVersion !== loadVersion) return
     publishStoredExercises(storedExercises)
   } catch (loadError) {
@@ -110,11 +133,24 @@ async function load(source: ExerciseLoadingSource) {
 
 export function initializeExerciseLoading(
   source: Readonly<Ref<ExerciseLoadingSource>>,
+  specialization: Readonly<Ref<ExerciseSpecialization>>,
+  isOnline: Readonly<Ref<boolean>>,
 ) {
   stopSourceWatch?.()
-  stopSourceWatch = watch(source, load, { immediate: true })
+  stopSourceWatch = watch(
+    [source, specialization, isOnline],
+    ([newSource, newSpecialization, online]) =>
+      load(newSource, newSpecialization, online),
+    { immediate: true },
+  )
 }
 
 export function useExercises() {
-  return { exercises, isLoading, error, activeSource }
+  return {
+    exercises,
+    isLoading,
+    error,
+    activeSource,
+    activeExerciseSetKey,
+  }
 }

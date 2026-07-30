@@ -3,12 +3,14 @@ import { watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useSettings } from '../entities/settings/useSettings'
 import { initializeExerciseLoading } from '../entities/exercise/useExercises'
+import { useNetworkStatus } from '../entities/network/useNetworkStatus'
 import TopNav from './TopNav.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
-const { language, theme, exerciseSource } = useSettings()
+const { language, theme, exerciseSource, specialization } = useSettings()
+const { isOnline } = useNetworkStatus()
 
-initializeExerciseLoading(exerciseSource)
+initializeExerciseLoading(exerciseSource, specialization, isOnline)
 
 watch(language, (val) => { locale.value = val }, { immediate: true })
 

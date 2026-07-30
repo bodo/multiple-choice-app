@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useSettings } from '../../entities/settings/useSettings'
+import { Wifi, WifiOff } from 'lucide-vue-next'
+import {
+  specializations,
+  type Specialization,
+  useSettings,
+} from '../../entities/settings/useSettings'
+import { useNetworkStatus } from '../../entities/network/useNetworkStatus'
 
 const { t } = useI18n()
 const {
@@ -16,7 +22,13 @@ const {
   examQuestionCount,
   exerciseSource,
   mobileSolvableOnly,
+  specialization,
 } = useSettings()
+const {
+  isOnline,
+  connectionType,
+  effectiveConnectionType,
+} = useNetworkStatus()
 
 const languages = [
   { code: 'eng', label: 'English' },
@@ -27,6 +39,12 @@ const modes: Array<{ code: 'train' | 'exam', label: string }> = [
   { code: 'train', label: t('trainMode') },
   { code: 'exam', label: t('examMode') },
 ]
+const specializationLabelKeys: Record<Specialization, string> = {
+  FIAN: 'specializationFIAN',
+  FISI: 'specializationFISI',
+  FIDP: 'specializationFIDP',
+  FIDV: 'specializationFIDV',
+}
 
 const autoAdvanceDisabled = computed(() => mode.value === 'exam')
 const apiExerciseSourceEnabled = computed({
@@ -34,6 +52,22 @@ const apiExerciseSourceEnabled = computed({
   set: enabled => {
     exerciseSource.value = enabled ? 'api' : 'json'
   },
+})
+const connectionDescription = computed(() => {
+  if (!isOnline.value) return t('networkOfflineHint')
+  if (connectionType.value === 'wifi') return t('networkWifi')
+  if (connectionType.value === 'cellular') {
+    const effectiveType = effectiveConnectionType.value?.toUpperCase()
+    return effectiveType
+      ? `${t('networkCellular')} (${effectiveType})`
+      : t('networkCellular')
+  }
+  if (connectionType.value === 'ethernet') return t('networkEthernet')
+  if (
+    connectionType.value !== 'unknown'
+    && connectionType.value !== 'none'
+  ) return t('networkOther')
+  return t('networkTypeUnavailable')
 })
 
 function formatSeconds(value: number): string {
@@ -46,6 +80,55 @@ function formatSeconds(value: number): string {
     <h1 class="text-xl font-semibold">
       {{ t('settingsTitle') }}
     </h1>
+
+    <div
+      role="status"
+      class="alert"
+      :class="isOnline ? 'alert-success' : 'alert-warning'"
+    >
+      <Wifi
+        v-if="isOnline"
+        :size="20"
+      />
+      <WifiOff
+        v-else
+        :size="20"
+      />
+      <div>
+        <p class="font-medium">
+          {{ isOnline ? t('networkOnline') : t('networkOffline') }}
+        </p>
+        <p class="text-sm">
+          {{ connectionDescription }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Specialization -->
+    <div class="flex flex-col gap-2">
+      <label
+        for="specialization"
+        class="font-medium"
+      >
+        {{ t('specialization') }}
+      </label>
+      <select
+        id="specialization"
+        v-model="specialization"
+        class="select select-bordered w-full"
+      >
+        <option
+          v-for="code in specializations"
+          :key="code"
+          :value="code"
+        >
+          {{ t(specializationLabelKeys[code]) }}
+        </option>
+      </select>
+      <p class="text-sm text-base-content/60">
+        {{ t('specializationHint') }}
+      </p>
+    </div>
 
     <!-- Exercise Source -->
     <div class="flex flex-col gap-2">

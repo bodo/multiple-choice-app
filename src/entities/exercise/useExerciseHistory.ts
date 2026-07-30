@@ -193,21 +193,27 @@ export function getMasteryDistribution(): number[] {
   return dist
 }
 
-export function getCategoryAccuracy(catalog: Array<{ id: string; tags: string[] }>): Array<{ tag: string; accuracy: number; total: number }> {
-  const tagStats: Record<string, { correct: number; total: number }> = {}
+export function getCategoryAccuracy(catalog: Array<{ id: string; categories: string[] }>): Array<{ category: string; accuracy: number; total: number }> {
+  const categoryStats: Record<string, { correct: number; total: number }> = {}
   for (const entry of catalog) {
     const r = history[entry.id]
     if (!r) continue
     const total = r.correct + r.wrong
     if (total === 0) continue
-    for (const tag of entry.tags) {
-      if (!tagStats[tag]) tagStats[tag] = { correct: 0, total: 0 }
-      tagStats[tag].correct += r.correct
-      tagStats[tag].total += total
+    for (const category of entry.categories) {
+      if (!categoryStats[category]) {
+        categoryStats[category] = { correct: 0, total: 0 }
+      }
+      categoryStats[category].correct += r.correct
+      categoryStats[category].total += total
     }
   }
-  return Object.entries(tagStats)
-    .map(([tag, s]) => ({ tag, accuracy: Math.round((s.correct / s.total) * 100), total: s.total }))
+  return Object.entries(categoryStats)
+    .map(([category, stats]) => ({
+      category,
+      accuracy: Math.round((stats.correct / stats.total) * 100),
+      total: stats.total,
+    }))
     .sort((a, b) => a.accuracy - b.accuracy)
 }
 

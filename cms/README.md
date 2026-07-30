@@ -10,12 +10,14 @@ Requires [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 ### generate-index
 
-Scans `public/data/exercises/` for `*.json` files and regenerates `index.json`.
+Scans `public/data/exercises/`, validates every exercise's specialization
+metadata, and regenerates the complete `index.json` plus
+`index_fian.json`, `index_fisi.json`, `index_fidp.json`, and `index_fidv.json`.
 
-Run after adding, removing, or renaming exercise files (from `cms/`):
+Run after adding, removing, or renaming exercise files (from the project root):
 
 ```bash
-uv run python generate_index.py
+python3 cms/999_generate_index.py
 ```
 
 ### 000 — flatten-pdfs
@@ -104,11 +106,19 @@ Features:
 - SINGLE_CHOICE, MULTIPLE_CHOICE, and MATCH input modes
 - Dynamic answer options and match items
 - Per-option explanations
+- Required learning categories with multiple selection and custom values
+- One or more required IT specializations; all applicable values are selected explicitly
+- Optional author workflow tags, separate from learner-facing categories
 - `mobileSolvable` checkbox for small-screen exercises that need no external tools
 - Screenshot selection (copies to `public/data/img/`)
 - Save / Save and Next navigation
 - OCR reference panel (screenshot crops + full source PDF pages) for copy-pasting content
 - "Annotation invalid, delete" button to wipe bad annotations
+
+Every generated exercise stores `correct` as a non-empty array.
+`SINGLE_CHOICE` uses a one-element index array; `MULTIPLE_CHOICE` and `MATCH`
+keep their mode-specific number arrays. The index generator rejects files that
+violate this shared container invariant.
 
 Use `python -m streamlit` — direct `uv run streamlit` does not work without a build backend.
 

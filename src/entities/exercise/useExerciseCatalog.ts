@@ -2,7 +2,7 @@ import { ref, computed } from 'vue'
 import type { Exercise } from './exercise'
 
 /**
- * Exercise catalog — provides category/tag index and filtering.
+ * Exercise catalog — provides the learner-facing category index and filtering.
  *
  * Currently built from loaded exercise data.
  * Can be replaced later with a server-provided index
@@ -11,31 +11,34 @@ import type { Exercise } from './exercise'
 
 export interface CatalogEntry {
   id: string
-  tags: string[]
+  categories: string[]
   inputMode: string
 }
 
 const entries = ref<CatalogEntry[]>([])
-const activeTagFilter = ref<string | null>(null)
+const activeCategoryFilter = ref<string | null>(null)
 
-/** All unique tags across all exercises, sorted */
-const allTags = computed(() => {
-  const tagSet = new Set<string>()
+/** All unique categories across all exercises, sorted */
+const allCategories = computed(() => {
+  const categorySet = new Set<string>()
   for (const entry of entries.value) {
-    for (const tag of entry.tags) {
-      tagSet.add(tag)
+    for (const category of entry.categories) {
+      categorySet.add(category)
     }
   }
-  return [...tagSet].sort()
+  return [...categorySet].sort()
 })
 
 /** Exercise IDs matching the current filter (or all if no filter) */
-const filteredIds = computed(() => {
-  if (!activeTagFilter.value) return new Set(entries.value.map(e => e.id))
+const categoryFilteredIds = computed(() => {
+  if (!activeCategoryFilter.value) {
+    return new Set(entries.value.map(entry => entry.id))
+  }
   return new Set(
     entries.value
-      .filter(e => e.tags.includes(activeTagFilter.value!))
-      .map(e => e.id),
+      .filter(entry =>
+        entry.categories.includes(activeCategoryFilter.value!))
+      .map(entry => entry.id),
   )
 })
 
@@ -43,21 +46,21 @@ const filteredIds = computed(() => {
 function buildFromExercises(exercises: Exercise[]) {
   entries.value = exercises.map(ex => ({
     id: ex.id,
-    tags: ex.adminTags ?? [],
+    categories: ex.categories ?? [],
     inputMode: ex.inputMode,
   }))
 }
 
-function setTagFilter(tag: string | null) {
-  activeTagFilter.value = tag
+function setCategoryFilter(category: string | null) {
+  activeCategoryFilter.value = category
 }
 
 export function useExerciseCatalog() {
   return {
-    allTags,
-    activeTagFilter,
-    filteredIds,
+    allCategories,
+    activeCategoryFilter,
+    categoryFilteredIds,
     buildFromExercises,
-    setTagFilter,
+    setCategoryFilter,
   }
 }

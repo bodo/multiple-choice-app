@@ -20,8 +20,9 @@ A Vue 3 + TypeScript practice app with spaced repetition, optimized for mobile l
 Dexie is the runtime source of truth for exercises. A selected loading service
 refreshes its exercise set in Dexie:
 
-- `json`: `public/data/exercises/index.json` lists the JSON files. Each exercise
-  gets an `id` derived from its filename (minus `.json`).
+- `json`: one of `index_fian.json`, `index_fisi.json`, `index_fidp.json`, or
+  `index_fidv.json` lists the files for the selected specialization. Each
+  exercise gets an `id` derived from its filename (minus `.json`).
 - `api`: draft `GET /api/v1/exercises` adapter expecting
   `{ "items": Exercise[] }`. `VITE_EXERCISE_API_URL` overrides `/api/v1`.
 
@@ -34,17 +35,21 @@ boundary, runtime data flow, draft API response, and remaining migration work.
 ```typescript
 interface Exercise {
   id: string                          // Auto-assigned from filename
-  inputMode: 'SINGLE_CHOICE' | 'MULTIPLE_CHOICE' | 'TEXT' | 'NUMBER'
+  inputMode: 'SINGLE_CHOICE' | 'MULTIPLE_CHOICE' | 'TEXT' | 'NUMBER' | 'MATCH'
   mobileSolvable: boolean             // Small screen, no external tools required
-  correct: number | number[] | string // Correct answer(s)
+  categories: string[]                // At least one learner-facing subject area
+  specializations: Array<'FIAN' | 'FISI' | 'FIDP' | 'FIDV'>
+                                       // Required, non-empty positive list
+  correct: number[] | string[]          // Always a non-empty array
   instruction?: string                // Markdown-rendered question text
   images?: string[]                   // Filenames in /data/img/
   answerOptions?: string[]            // Options for choice-based inputs
+  matchOptions?: string[]             // Right-side labels for MATCH
   submitButton?: boolean              // Default true; false = auto-submit on select
   caseSensitive?: boolean             // TEXT only; default false
-  maximumStringDistance?: number       // TEXT only; auto-calculated if omitted
+  maximumStringDistance?: number       // TEXT only; per-word, default 1
   adminComment?: string               // Internal notes (not displayed)
-  adminTags?: string[]                // Categories for filtering
+  adminTags?: string[]                // Authoring and review workflow markers
 }
 ```
 
@@ -52,6 +57,7 @@ interface Exercise {
 
 ### SINGLE_CHOICE
 - Options displayed as buttons in shuffled order
+- `correct` contains exactly one option index
 - Keyboard shortcuts: number keys 1–N to select, Enter/Space to submit
 - If `submitButton: false`, submits immediately on selection
 - After submit: ✓ green for correct+selected, ✗ red for wrong+selected or correct+missed
@@ -65,19 +71,34 @@ interface Exercise {
 
 ### TEXT
 - Text input with submit button (Enter to submit)
-- **Word-by-word validation**: splits answer by spaces, checks each word with Levenshtein distance ≤ 1
-- **Auto-calculated tolerance** when `maximumStringDistance` is not set:
-  - Answer ≤ 3 chars: exact match
-  - Answer 4–6 chars: 1 typo allowed
-  - Answer 7+ chars: 2 typos allowed
-- After submit: correct words in green, wrong words in red strikethrough with correct word in brackets
-- **Close match**: if all words pass but not exact, shows warning: "Close! The exact answer is: **X**"
-- Supports HTML in close-match message via `v-html`
+- `correct` is a non-empty `string[]`; any entry may accept the answer
+- Plain entries use word-by-word Levenshtein comparison. The default maximum
+  distance is 1 per word and can be changed with `maximumStringDistance`
+- A plain answer that passes fuzzy comparison but is not equal is marked as a
+  close match
+- `/pattern/flags` entries are native JavaScript regular expressions. They
+  match the complete trimmed input, bypass fuzzy matching, and support only
+  the `i` and `u` flags
+- `caseSensitive` applies to plain entries and regular expressions. When it is
+  `false` or omitted, the matcher adds the `i` flag to regular expressions
+- Invalid expressions are rejected by the exercise loading service
+- The result view lists all plain accepted variants. If a card has only
+  regular expressions, it lists those patterns instead
 
 ### NUMBER
 - Numeric input with submit button (Enter to submit)
+- `correct` contains exactly one number
 - Exact match required
 - Shows strikethrough user answer + correct answer if wrong
+
+### MATCH
+- Every `answerOptions[i]` receives exactly one selection from `matchOptions`
+- `correct[i]` stores the index of the matching right-side option
+- Both option lists must have the same length; `correct` must be a permutation
+  containing every match-option index exactly once
+- The submit button remains disabled until every row has a unique assignment
+- After submission, each row shows the selected assignment and, when wrong,
+  the correct assignment
 
 ## Spaced Repetition
 
@@ -89,16 +110,22 @@ Per-exercise stats stored in localStorage (`bodo-mc-history`):
 - Seen before → `(1 + errorRate × 9) × (1 + hoursSinceLastSeen / 24)`
 - Time decay capped at 168 hours (1 week)
 - Current exercise excluded from selection (no immediate repeats)
-- Exercises outside active tag filter excluded
+- Exercises outside the active category filter are excluded
+- Exercises without the selected IT specialization are excluded. Every card
+  must list at least one specialization explicitly; multiple values allow
+  overlaps such as AP2 network content for both FISI and FIDV
 - If `mobileSolvableOnly` is enabled, exercises with `mobileSolvable: false` are excluded
 - An empty filtered pool shows the existing no-exercises state instead of falling back to an excluded exercise
 
 ## Exercise Catalog
 
-Separate module (`useExerciseCatalog`) that builds a tag index from loaded exercises:
-- Provides `allTags` (unique sorted tags), `filteredIds` (exercises matching active filter)
+Separate module (`useExerciseCatalog`) that builds a category index from loaded exercises:
+- Builds its learner-facing index exclusively from `categories`; `adminTags` are ignored
+- Specialization metadata is deliberately separate and does not become a
+  learner-facing category or distort category statistics
+- Provides `allCategories` (unique sorted categories) and `categoryFilteredIds`
 - Designed to be swappable with a server-provided index later
-- Integrated with exercise flow — tag and mobile filters are combined before weighted selection
+- Integrated with exercise flow — category and mobile filters are combined before weighted selection
 
 ## Settings
 
@@ -109,6 +136,14 @@ created or migrated from an older object without that field. The guess uses
 a coarse pointer and a shortest screen side of at most 1024 CSS pixels. The
 result is stored immediately. The GUI toggle writes the same field, and that
 stored manual value is authoritative on later visits.
+
+`specialization` is an explicit MVP choice in Settings and is never inferred
+from the device. Existing settings without the field default once to `FIAN` and
+the saved manual choice is then authoritative. The backend may provide this
+user preference later without changing exercise-category semantics.
+Current AP1 exercises explicitly list all four specializations. Changing the
+selection loads its own index and uses a source-and-specialization Dexie cache,
+so previously downloaded sets remain available offline.
 
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
@@ -122,6 +157,7 @@ stored manual value is authoritative on later visits.
 | `theme` | string | `'auto'` | `'auto'`, `'abschluss-light'`, `'abschluss-dark'` |
 | `exerciseSource` | `'json' \| 'api'` | `'json'` | Active exercise loading service |
 | `mobileSolvableOnly` | boolean | One-time device guess | Exclude exercises where `mobileSolvable` is false; manually configurable |
+| `specialization` | `'FIAN' \| 'FISI' \| 'FIDP' \| 'FIDV'` | `'FIAN'` | Include cards explicitly assigned to the selected IT specialization |
 
 ## Sound & Haptics
 
@@ -165,6 +201,12 @@ stored manual value is authoritative on later visits.
 - `registerType: 'autoUpdate'` — service worker auto-updates
 - `display: 'standalone'` — installable on mobile home screen
 - Precaches all built assets for offline use
+- `navigator.onLine` and the `online`/`offline` events trigger offline fallback
+  and refresh after reconnecting; failed requests still fall back to Dexie
+- `navigator.connection.type` distinguishes Wi-Fi, cellular, and Ethernet only
+  in supporting browsers; the UI reports an unavailable type elsewhere
+- Referenced exercise images are downloaded during a successful question-set
+  refresh and served cache-first from the `exercise-images` runtime cache
 
 ## Deployment
 

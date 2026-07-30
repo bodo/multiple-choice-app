@@ -4,7 +4,13 @@
   "title": "Exercise",
   "description": "A single practice exercise (flashcard) for the multiple choice app.",
   "type": "object",
-  "required": ["inputMode", "mobileSolvable", "correct"],
+  "required": [
+    "inputMode",
+    "mobileSolvable",
+    "correct",
+    "categories",
+    "specializations"
+  ],
   "properties": {
     "inputMode": {
       "type": "string",
@@ -26,19 +32,24 @@
     },
     "answerOptions": {
       "type": "array",
-      "items": { "type": "string" },
-      "description": "List of answer options for SINGLE_CHOICE and MULTIPLE_CHOICE modes. Supports Markdown."
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "description": "List of answer options for SINGLE_CHOICE, MULTIPLE_CHOICE, and MATCH modes. Supports Markdown."
+    },
+    "submitButton": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether SINGLE_CHOICE requires an explicit submit action. Defaults to true."
     },
     "correct": {
-      "description": "The correct answer. Type depends on inputMode: number index for SINGLE_CHOICE, array of indices for MULTIPLE_CHOICE, string for TEXT, number for NUMBER.",
-      "oneOf": [
-        { "type": "number" },
-        { "type": "string" },
-        {
-          "type": "array",
-          "items": { "type": "number" }
-        }
-      ]
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "Non-empty array of correct answers. Item type and cardinality depend on inputMode."
     },
     "caseSensitive": {
       "type": "boolean",
@@ -46,9 +57,9 @@
       "description": "TEXT mode only. Whether the comparison is case-sensitive."
     },
     "maximumStringDistance": {
-      "type": "number",
+      "type": "integer",
       "minimum": 0,
-      "description": "TEXT mode only. Maximum Levenshtein distance to accept as correct. If omitted, auto-calculated from answer length (0 for ≤3 chars, 1 for 4–6, 2 for 7+)."
+      "description": "TEXT mode only. Maximum Levenshtein distance allowed per word for literal answers. Defaults to 1."
     },
     "explainInstruction": {
       "type": "string",
@@ -56,8 +67,13 @@
     },
     "matchOptions": {
       "type": "array",
-      "items": { "type": "string" },
-      "description": "Right-side items for MATCH mode. Each entry pairs with the corresponding index in answerOptions as defined by correct. Supports Markdown."
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "description": "Plain-text right-side labels for MATCH mode. Each entry pairs with an answerOptions item through the indices in correct."
     },
     "explainAnswerOptions": {
       "type": "array",
@@ -68,10 +84,36 @@
       "type": "string",
       "description": "Internal note for exercise authors. Not displayed to users."
     },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "description": "One or more categories for filtering and statistics. Every exercise must have at least one category."
+    },
+    "specializations": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": ["FIAN", "FISI", "FIDP", "FIDV"]
+      },
+      "description": "One or more IT specializations for which the exercise is relevant. Every applicable specialization must be listed explicitly. Multiple entries allow overlapping scope, such as FISI and FIDV."
+    },
     "adminTags": {
       "type": "array",
-      "items": { "type": "string" },
-      "description": "Tags for categorization and filtering (e.g. topic, difficulty)."
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "description": "Optional workflow markers for authors and reviewers, such as draft, needs-review, or error-reported. Not used as learner-facing categories."
     }
   },
   "allOf": [
@@ -82,7 +124,18 @@
       "then": {
         "required": ["answerOptions"],
         "properties": {
-          "correct": { "type": "number" }
+          "answerOptions": {
+            "minItems": 1
+          },
+          "correct": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
         }
       }
     },
@@ -93,9 +146,17 @@
       "then": {
         "required": ["answerOptions"],
         "properties": {
+          "answerOptions": {
+            "minItems": 1
+          },
           "correct": {
             "type": "array",
-            "items": { "type": "number" }
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
           }
         }
       }
@@ -106,7 +167,16 @@
       },
       "then": {
         "properties": {
-          "correct": { "type": "string" }
+          "correct": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          }
         }
       }
     },
@@ -116,7 +186,14 @@
       },
       "then": {
         "properties": {
-          "correct": { "type": "number" }
+          "correct": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "number"
+            }
+          }
         }
       }
     },
@@ -127,9 +204,20 @@
       "then": {
         "required": ["answerOptions", "matchOptions"],
         "properties": {
+          "answerOptions": {
+            "minItems": 1
+          },
+          "matchOptions": {
+            "minItems": 1
+          },
           "correct": {
             "type": "array",
-            "items": { "type": "number" },
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            },
             "description": "Permutation array: correct[i] is the index into matchOptions that pairs with answerOptions[i]."
           }
         }

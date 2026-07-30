@@ -1,13 +1,22 @@
-export type InputMode = 'SINGLE_CHOICE' | 'MULTIPLE_CHOICE' | 'TEXT' | 'NUMBER'
+export type InputMode =
+  | 'SINGLE_CHOICE'
+  | 'MULTIPLE_CHOICE'
+  | 'TEXT'
+  | 'NUMBER'
+  | 'MATCH'
+export type ExerciseSpecialization = 'FIAN' | 'FISI' | 'FIDP' | 'FIDV'
 
 export interface Exercise {
   id: string
   inputMode: InputMode
   mobileSolvable: boolean
-  correct: number | number[] | string
+  categories: string[]
+  specializations: ExerciseSpecialization[]
+  correct: number[] | string[]
   instruction?: string
   images?: string[]
   answerOptions?: string[]
+  matchOptions?: string[]
   submitButton?: boolean
   caseSensitive?: boolean
   maximumStringDistance?: number
@@ -21,5 +30,6 @@ export interface AnswerResult {
   isCorrect: boolean
   isCloseMatch?: boolean
   selectedIndices?: number[]
+  submittedMatches?: number[]
   submittedValue?: string
 }

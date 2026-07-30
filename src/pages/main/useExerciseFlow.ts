@@ -29,7 +29,7 @@ const totalTimeMs = ref(0)
 // Exam state
 const examQuestionsRemaining = ref(0)
 
-const { exercises, activeSource } = useExercises()
+const { exercises, activeExerciseSetKey } = useExercises()
 const { schedule, cancel } = useAutoAdvance()
 const {
   autoAdvance,
@@ -40,8 +40,9 @@ const {
   mode,
   examQuestionCount,
   mobileSolvableOnly,
+  specialization,
 } = useSettings()
-const { filteredIds } = useExerciseCatalog()
+const { categoryFilteredIds } = useExerciseCatalog()
 
 let initializationVersion = 0
 
@@ -52,12 +53,13 @@ const currentExercise = computed(() =>
   exercises.value.find(exercise => exercise.id === currentExerciseId.value) ?? null,
 )
 const selectableIds = computed(() => {
-  const tagFilteredIds = filteredIds.value
+  const filteredIds = categoryFilteredIds.value
   return new Set(
     exercises.value
       .filter(exercise =>
-        tagFilteredIds.has(exercise.id)
-        && (!mobileSolvableOnly.value || exercise.mobileSolvable !== false),
+        filteredIds.has(exercise.id)
+        && (!mobileSolvableOnly.value || exercise.mobileSolvable !== false)
+        && exercise.specializations.includes(specialization.value),
       )
       .map(exercise => exercise.id),
   )
@@ -118,7 +120,7 @@ function getTrainingSessionState(): TrainingSessionState | null {
 function persistTrainingSession() {
   const state = getTrainingSessionState()
   if (state) {
-    void saveTrainingSessionState(activeSource.value, state)
+    void saveTrainingSessionState(activeExerciseSetKey.value, state)
   }
 }
 
@@ -202,7 +204,7 @@ function restoreTrainingStats(state: TrainingSessionState | null) {
 }
 
 async function initializeTraining(list: typeof exercises.value) {
-  const source = activeSource.value
+  const source = activeExerciseSetKey.value
   const requestVersion = ++initializationVersion
   cancel()
   phase.value = 'loading'
@@ -211,7 +213,7 @@ async function initializeTraining(list: typeof exercises.value) {
   if (
     requestVersion !== initializationVersion
     || mode.value !== 'train'
-    || activeSource.value !== source
+    || activeExerciseSetKey.value !== source
     || exercises.value !== list
   ) return
 
@@ -259,7 +261,7 @@ watch(exercises, (list) => {
   }
 }, { immediate: true })
 
-watch(activeSource, () => {
+watch(activeExerciseSetKey, () => {
   initializationVersion++
   cancel()
   currentExerciseId.value = null

@@ -22,6 +22,7 @@ const selected = ref<number | null>(null)
 const isInteractive = computed(() => props.phase === 'answering')
 const showSubmit = computed(() => props.exercise.submitButton !== false)
 const optionCount = computed(() => props.exercise.answerOptions?.length ?? 0)
+const correctIndex = computed(() => (props.exercise.correct as number[])[0])
 
 function formatShortcut(value: number): string {
   return `[${value}]`
@@ -40,8 +41,7 @@ function optionClass(originalIdx: number): string {
       ? 'border-primary bg-primary/10 text-primary shadow-sm'
       : 'border-base-300 bg-base-100 text-base-content shadow-sm hover:border-base-content/30 hover:bg-base-200'
   }
-  const correctIdx = props.exercise.correct as number
-  const isCorrect = originalIdx === correctIdx
+  const isCorrect = originalIdx === correctIndex.value
   const isSelected = selected.value === originalIdx
   // Correct + selected: solid green
   if (isCorrect && isSelected) return 'border-success bg-success/10 text-success'
@@ -55,8 +55,7 @@ function optionClass(originalIdx: number): string {
 
 function optionIcon(originalIdx: number): string {
   if (isInteractive.value) return ''
-  const correctIdx = props.exercise.correct as number
-  const isCorrect = originalIdx === correctIdx
+  const isCorrect = originalIdx === correctIndex.value
   const isSelected = selected.value === originalIdx
   if (isCorrect && isSelected) return '\u2713'   // ✓ user got it right
   if (isCorrect && !isSelected) return '\u2717'  // ✗ user missed the correct answer
@@ -76,7 +75,7 @@ function select(originalIdx: number) {
 
 function submit() {
   if (selected.value === null) return
-  const isCorrect = selected.value === (props.exercise.correct as number)
+  const isCorrect = selected.value === correctIndex.value
   emit('submitted', { isCorrect, selectedIndices: [selected.value] })
 }
 

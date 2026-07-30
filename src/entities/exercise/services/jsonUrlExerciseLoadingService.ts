@@ -1,4 +1,4 @@
-import type { Exercise } from '../exercise'
+import type { Exercise, ExerciseSpecialization } from '../exercise'
 import {
   type ExerciseLoadingService,
   parseExercise,
@@ -18,35 +18,50 @@ export class JsonUrlExerciseLoadingService implements ExerciseLoadingService {
     this.fetcher = fetcher.bind(globalThis)
   }
 
-  async loadExercises(): Promise<Exercise[]> {
-    const filenames = await this.loadIndex()
+  async loadExercises(
+    specialization: ExerciseSpecialization,
+  ): Promise<Exercise[]> {
+    const filenames = await this.loadIndex(specialization)
     const exercises = await Promise.all(
-      filenames.map(filename => this.loadExercise(filename)),
+      filenames.map(filename => this.loadExercise(filename, specialization)),
     )
     const loadedExercises = exercises.filter(
       (exercise): exercise is Exercise => exercise !== null,
     )
 
-    if (filenames.length > 0 && loadedExercises.length === 0) {
+    if (filenames.length === 0 || loadedExercises.length === 0) {
       throw new Error('No exercise files could be loaded.')
     }
     return loadedExercises
   }
 
-  private async loadIndex(): Promise<string[]> {
-    const response = await this.fetcher(`${this.directoryUrl}/index.json`)
+  private async loadIndex(
+    specialization: ExerciseSpecialization,
+  ): Promise<string[]> {
+    const indexFilename = `index_${specialization.toLowerCase()}.json`
+    const response = await this.fetcher(
+      `${this.directoryUrl}/${indexFilename}`,
+    )
     if (!response.ok) {
       throw new Error(`Exercise index could not be loaded (${response.status}).`)
     }
 
     const value: unknown = await response.json()
-    if (!Array.isArray(value) || !value.every(item => typeof item === 'string')) {
+    if (
+      !Array.isArray(value)
+      || value.length === 0
+      || new Set(value).size !== value.length
+      || !value.every(item => typeof item === 'string')
+    ) {
       throw new Error('Exercise index has an invalid format.')
     }
     return value
   }
 
-  private async loadExercise(filename: string): Promise<Exercise | null> {
+  private async loadExercise(
+    filename: string,
+    specialization: ExerciseSpecialization,
+  ): Promise<Exercise | null> {
     try {
       const response = await this.fetcher(`${this.directoryUrl}/${filename}`)
       if (!response.ok) {
@@ -54,7 +69,13 @@ export class JsonUrlExerciseLoadingService implements ExerciseLoadingService {
       }
 
       const id = filename.replace(/\.json$/, '')
-      return parseExercise(await response.json(), id)
+      const exercise = parseExercise(await response.json(), id)
+      if (!exercise.specializations.includes(specialization)) {
+        throw new Error(
+          `Exercise is not assigned to ${specialization}.`,
+        )
+      }
+      return exercise
     } catch (error) {
       console.warn(`Failed to load exercise "${filename}".`, error)
       return null

@@ -2,6 +2,15 @@ import { ref, watch } from 'vue'
 
 const STORAGE_KEY = 'bodo-mc-settings'
 
+export type Specialization = 'FIAN' | 'FISI' | 'FIDP' | 'FIDV'
+
+export const specializations: Specialization[] = [
+  'FIAN',
+  'FISI',
+  'FIDP',
+  'FIDV',
+]
+
 interface StoredSettings {
   autoAdvance: boolean
   language: string
@@ -14,6 +23,7 @@ interface StoredSettings {
   examQuestionCount: number
   exerciseSource: 'json' | 'api'
   mobileSolvableOnly: boolean
+  specialization: Specialization
 }
 
 interface NavigatorWithUserAgentData extends Navigator {
@@ -30,6 +40,13 @@ function guessMobileSolvableOnly(): boolean {
     || window.matchMedia('(pointer: coarse)').matches
   const shortestScreenSide = Math.min(window.screen.width, window.screen.height)
   return hasTouchInput && shortestScreenSide <= 1024
+}
+
+function parseSpecialization(value: unknown): Specialization {
+  return typeof value === 'string'
+    && specializations.includes(value as Specialization)
+    ? value as Specialization
+    : 'FIAN'
 }
 
 function load(): StoredSettings {
@@ -51,6 +68,7 @@ function load(): StoredSettings {
         mobileSolvableOnly: typeof parsed.mobileSolvableOnly === 'boolean'
           ? parsed.mobileSolvableOnly
           : guessMobileSolvableOnly(),
+        specialization: parseSpecialization(parsed.specialization),
       }
     }
   } catch { /* ignore */ }
@@ -66,6 +84,7 @@ function load(): StoredSettings {
     examQuestionCount: 5,
     exerciseSource: 'json',
     mobileSolvableOnly: guessMobileSolvableOnly(),
+    specialization: 'FIAN',
   }
 }
 
@@ -83,6 +102,7 @@ function save() {
       examQuestionCount: examQuestionCount.value,
       exerciseSource: exerciseSource.value,
       mobileSolvableOnly: mobileSolvableOnly.value,
+      specialization: specialization.value,
     }))
   } catch { /* keep settings in memory when storage is unavailable */ }
 }
@@ -101,6 +121,7 @@ const hapticEnabled = ref<boolean>(stored.hapticEnabled)
 const examQuestionCount = ref<number>(stored.examQuestionCount)
 const exerciseSource = ref<'json' | 'api'>(stored.exerciseSource)
 const mobileSolvableOnly = ref<boolean>(stored.mobileSolvableOnly)
+const specialization = ref<Specialization>(stored.specialization)
 
 save()
 watch(autoAdvance, save)
@@ -113,6 +134,7 @@ watch(hapticEnabled, save)
 watch(examQuestionCount, save)
 watch(exerciseSource, save)
 watch(mobileSolvableOnly, save)
+watch(specialization, save)
 watch(mode, (newMode) => {
   // Exam mode auto-enables auto-advance
   if (newMode === 'exam') {
@@ -134,5 +156,6 @@ export function useSettings() {
     examQuestionCount,
     exerciseSource,
     mobileSolvableOnly,
+    specialization,
   }
 }

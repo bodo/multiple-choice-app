@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../entities/exercise/exercise'
+import { isRegexTextAnswer } from '../../entities/exercise/textAnswerMatching'
 import MarkdownRenderer from '../../dumb/MarkdownRenderer.vue'
 
 const props = defineProps<{
@@ -14,15 +15,27 @@ const { t } = useI18n()
 const isChoiceMode = computed(() =>
   props.exercise.inputMode === 'SINGLE_CHOICE' || props.exercise.inputMode === 'MULTIPLE_CHOICE',
 )
+const isMatchMode = computed(() => props.exercise.inputMode === 'MATCH')
 
-const correctSet = computed(() => {
+const correctSet = computed<Set<number>>(() => {
   const c = props.exercise.correct
-  if (Array.isArray(c)) return new Set(c)
-  if (typeof c === 'number') return new Set([c])
+  if (Array.isArray(c) && c.every(item => typeof item === 'number')) {
+    return new Set(c)
+  }
   return new Set<number>()
 })
 
 const selectedSet = computed(() => new Set(props.result.selectedIndices ?? []))
+const submittedMatches = computed(() => props.result.submittedMatches ?? [])
+const correctMatches = computed(() => props.exercise.correct as number[])
+const correctNumber = computed(() => (props.exercise.correct as number[])[0])
+const acceptedTextAnswers = computed(() => {
+  if (props.exercise.inputMode !== 'TEXT') return []
+
+  const answers = props.exercise.correct as string[]
+  const literalAnswers = answers.filter(answer => !isRegexTextAnswer(answer))
+  return literalAnswers.length > 0 ? literalAnswers : answers
+})
 
 function optionIcon(idx: number): string {
   const isCorrect = correctSet.value.has(idx)
@@ -49,10 +62,27 @@ function optionBgClass(idx: number): string {
   return 'border-base-300 bg-base-200/50 opacity-60'
 }
 
+function isCorrectMatch(rowIndex: number): boolean {
+  return submittedMatches.value[rowIndex] === correctMatches.value[rowIndex]
+}
+
+function matchOption(matchIndex: number | undefined): string {
+  if (matchIndex === undefined) return ''
+  return props.exercise.matchOptions?.[matchIndex] ?? ''
+}
+
 const isPartlyIncorrect = computed(() => {
-  if (props.result.isCorrect || props.exercise.inputMode !== 'MULTIPLE_CHOICE') return false
-  const selected = selectedSet.value
-  return [...selected].some(i => correctSet.value.has(i))
+  if (props.result.isCorrect) return false
+  if (props.exercise.inputMode === 'MULTIPLE_CHOICE') {
+    const selected = selectedSet.value
+    return [...selected].some(i => correctSet.value.has(i))
+  }
+  if (isMatchMode.value) {
+    return submittedMatches.value.some(
+      (matchIndex, rowIndex) => matchIndex === correctMatches.value[rowIndex],
+    )
+  }
+  return false
 })
 
 const resultLabel = computed(() => {
@@ -111,6 +141,47 @@ const hasExplanation = computed(() =>
       </div>
     </template>
 
+    <!-- Matching result -->
+    <template v-else-if="isMatchMode && exercise.answerOptions">
+      <div
+        v-for="(answerOption, rowIndex) in exercise.answerOptions"
+        :key="rowIndex"
+        class="rounded-lg border p-3"
+        :class="isCorrectMatch(rowIndex) ? 'border-success bg-success/10' : 'border-error bg-error/10'"
+      >
+        <div class="mb-2 text-sm font-medium">
+          <MarkdownRenderer :content="answerOption" />
+        </div>
+        <div class="grid gap-2 sm:grid-cols-2">
+          <div>
+            <p class="mb-1 text-xs text-base-content/50">
+              {{ t('yourAnswer') }}
+            </p>
+            <div
+              class="text-sm"
+              :class="isCorrectMatch(rowIndex) ? 'text-success' : 'text-error line-through'"
+            >
+              <MarkdownRenderer :content="matchOption(submittedMatches[rowIndex])" />
+            </div>
+          </div>
+          <div v-if="!isCorrectMatch(rowIndex)">
+            <p class="mb-1 text-xs text-base-content/50">
+              {{ t('correct') }}
+            </p>
+            <div class="text-sm text-success">
+              <MarkdownRenderer :content="matchOption(correctMatches[rowIndex])" />
+            </div>
+          </div>
+        </div>
+        <div
+          v-if="exercise.explainAnswerOptions?.[rowIndex]"
+          class="mt-2 border-t border-base-300/30 pt-2 text-xs text-base-content/60"
+        >
+          <MarkdownRenderer :content="exercise.explainAnswerOptions[rowIndex]" />
+        </div>
+      </div>
+    </template>
+
     <!-- Text-based result -->
     <template v-else-if="exercise.inputMode === 'TEXT'">
       <div
@@ -121,7 +192,17 @@ const hasExplanation = computed(() =>
           v-if="!result.isCorrect"
           class="text-error line-through"
         >{{ result.submittedValue }}</span>
-        <span :class="result.isCorrect ? 'text-success font-medium' : 'text-success font-medium block mt-1'">{{ exercise.correct }}</span>
+        <ul
+          class="text-success font-medium"
+          :class="{ 'mt-1': !result.isCorrect }"
+        >
+          <li
+            v-for="answer in acceptedTextAnswers"
+            :key="answer"
+          >
+            {{ answer }}
+          </li>
+        </ul>
       </div>
     </template>
 
@@ -135,7 +216,7 @@ const hasExplanation = computed(() =>
           v-if="!result.isCorrect"
           class="text-error line-through"
         >{{ result.submittedValue }}</span>
-        <span :class="result.isCorrect ? 'text-success font-medium' : 'text-success font-medium block mt-1'">{{ exercise.correct }}</span>
+        <span :class="result.isCorrect ? 'text-success font-medium' : 'text-success font-medium block mt-1'">{{ correctNumber }}</span>
       </div>
     </template>
 
@@ -153,7 +234,7 @@ const hasExplanation = computed(() =>
     </div>
 
     <!-- Fallback: no explanation data -->
-    <template v-if="!hasExplanation && !isChoiceMode">
+    <template v-if="!hasExplanation && !isChoiceMode && !isMatchMode">
       <p class="text-sm text-base-content/40 text-center">
         {{ result.isCorrect ? t('correct') : t('incorrect') }}
       </p>

@@ -9,13 +9,13 @@ source usable while the new backend contract is being designed.
 ## Runtime data flow
 
 ```text
-Settings (`exerciseSource`)
+Settings (`exerciseSource`, `specialization`)
         |
         v
 ExerciseLoadingService (`json` or `api`)
         |
         v
-Validate and replace the source-specific set in Dexie
+Validate and replace the source-and-specialization set in Dexie
         |
         v
 Dexie `liveQuery`
@@ -28,24 +28,49 @@ Pages
 ```
 
 Dexie is the runtime source of truth. A successful refresh replaces only the
-records belonging to the active source in one transaction. JSON and API records
-therefore have separate caches, even if they use the same exercise IDs.
+records belonging to the active source and specialization in one transaction.
+JSON and API records and every downloaded specialization therefore have
+separate caches, even if they use the same exercise IDs.
 
-Changing the source in the settings takes effect immediately and is persisted
-as `exerciseSource` in `bodo-mc-settings`.
+Dexie version 4 initializes missing `categories` fields in legacy cached cards
+as an empty list. Version 5 migrates the temporary `FIAN AP1`/`FIAN AP2`
+categories into explicit specialization metadata and removes `FIAN` plus the
+combined labels from learner-facing categories. Version 6 normalizes caches
+that had already completed an older version 5 migration: FIAN AP2 cards remain
+`FIAN`, while other legacy cards receive the four explicitly supported IT
+specializations. This prevents empty metadata from becoming an open-ended
+catch-all. Workflow markers from `adminTags` are never copied into categories.
+Version 7 splits legacy `json` and `api` caches into source-and-specialization
+sets such as `json:FIAN`. It also gives every specialization its own persisted
+training session. Existing offline cards are retained during the migration.
+Version 8 converts the former single-string `correct` value of cached `TEXT`
+cards to a one-element array, preserving those cards while offline.
+Version 9 does the same for the former numeric scalar used by `SINGLE_CHOICE`
+and `NUMBER`.
+
+Changing the source or specialization in the settings takes effect immediately.
+Both choices are persisted in `bodo-mc-settings`.
 
 ## JSON file service
 
 `JsonUrlExerciseLoadingService` preserves the existing loading sequence:
 
-1. Load `/data/exercises/index.json`.
+1. Load the selected index, for example
+   `/data/exercises/index_fian.json`.
 2. Load every filename listed in the index from `/data/exercises/`.
 3. Derive the exercise ID from the filename without `.json`.
-4. Store the successfully loaded exercises in Dexie.
+4. Confirm that every loaded card explicitly includes the selected
+   specialization.
+5. Store the successfully loaded exercises in that specialization's Dexie
+   cache.
+6. Download referenced question images into the PWA's `exercise-images` cache.
 
-An invalid index fails the complete refresh. A single invalid or unavailable
-exercise file is logged and skipped so that the remaining files stay usable.
-Images continue to be resolved from `/data/img/`.
+The index generator keeps a complete `index.json` for authoring and produces
+one runtime index for each of `FIAN`, `FISI`, `FIDP`, and `FIDV`. An invalid or
+empty runtime index fails the refresh. A single invalid or unavailable exercise
+file is logged and skipped so that the remaining files stay usable. Images
+continue to be resolved from `/data/img/`; the service worker serves previously
+downloaded images from the same cache while offline.
 
 ## Backend API service
 
@@ -72,7 +97,9 @@ The current draft response is:
       "id": "12_13_01",
       "inputMode": "SINGLE_CHOICE",
       "mobileSolvable": true,
-      "correct": 1,
+      "categories": ["Arbeitsrecht"],
+      "specializations": ["FIAN", "FISI", "FIDP", "FIDV"],
+      "correct": [1],
       "instruction": "Question text",
       "answerOptions": ["A", "B"]
     }
@@ -83,18 +110,59 @@ The current draft response is:
 Each API item follows the `Exercise` model. Unlike the JSON source, the API must
 provide a stable `id`; it cannot be derived from a filename.
 
+`correct` is invariantly a non-empty array. `SINGLE_CHOICE` and `NUMBER`
+require exactly one numeric item; all other cardinality and item-type rules are
+defined by their input mode.
+
+For `MATCH`, `answerOptions` contains the left-side items and `matchOptions`
+contains the selectable right-side labels. `correct[i]` is the index in
+`matchOptions` assigned to `answerOptions[i]`. Both lists must have equal
+length, and `correct` must contain every index exactly once.
+
+For `TEXT`, `correct` is a non-empty array of accepted strings. Plain entries
+use the app's fuzzy word comparison. Entries in `/pattern/flags` form use
+native JavaScript regular expressions and must match the complete trimmed
+input; only `i` and `u` are accepted as flags. The loading service compiles
+each pattern during validation and rejects invalid answer data. These patterns
+are trusted authoring content. If a future API lets end users supply patterns,
+the matcher must move to a bounded engine such as RE2 before enabling that
+input.
+
+`specializations` may contain one or more of `FIAN`, `FISI`, `FIDP`, and
+`FIDV`. Multiple values model overlapping scope, such as AP2 network content
+for both `FISI` and `FIDV`. Current AP1 cards explicitly contain all four
+values. Missing and empty lists are invalid: every applicable specialization
+must be listed so later occupations do not inherit older cards accidentally.
+The MVP stores the selected specialization locally. The JSON service selects
+the matching index before downloading; the draft API adapter still filters its
+complete response locally. A future backend may apply the filter server-side
+or supply the user's selection without overloading learner-facing categories.
+
 The current adapter deliberately does not define authentication, pagination,
 incremental synchronization, or API-provided image URLs. Those belong to the
 backend contract and can be added inside the adapter without changing pages.
 
 ## Loading and error behavior
 
-- A source switch starts a refresh immediately.
+- A source or specialization switch selects its own cache and starts a refresh
+  immediately when the browser reports that it is online.
+- `navigator.onLine` plus the `online` and `offline` events provide the
+  connection hint. A reconnect refreshes the active set automatically.
+- If the browser reports offline, no refresh is attempted and an existing
+  source-and-specialization cache remains available.
 - Cards are exposed to the UI through Dexie `liveQuery`.
-- A successful response transactionally replaces that source's cached set.
-- A failed request does not delete an already cached set for that source.
+- A successful response transactionally replaces only the active cached set.
+- A failed request does not delete an already cached set.
 - If no cached cards are available, the practice page shows the load error.
-- Switching back to JSON files restores their independently cached set.
+- Switching back to a downloaded source or specialization restores its
+  independently cached set.
+
+`navigator.onLine` is only a browser/operating-system hint: `true` does not
+guarantee that the server is reachable, so request failures still use the
+cached set. When available, the experimental Network Information API supplies
+`wifi`, `cellular`, or `ethernet` for the Settings display. Unsupported
+browsers show an unknown connection type instead of guessing from `4g` or
+similar effective-speed labels.
 
 ## Backend migration checklist
 

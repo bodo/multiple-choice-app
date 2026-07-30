@@ -23,7 +23,7 @@ const longest = ref(getLongestStreak())
 const rank = ref(getRank())
 const mastery = ref(getMasteryDistribution())
 const weakest = ref(getWeakestExercises(10))
-const categoryAcc = ref<Array<{ tag: string; accuracy: number; total: number }>>([])
+const categoryAcc = ref<Array<{ category: string; accuracy: number; total: number }>>([])
 
 onMounted(() => {
   stats.value = getStats()
@@ -32,7 +32,10 @@ onMounted(() => {
   rank.value = getRank()
   mastery.value = getMasteryDistribution()
   weakest.value = getWeakestExercises(10)
-  const catalog = exercises.value.map(ex => ({ id: ex.id, tags: ex.adminTags ?? [] }))
+  const catalog = exercises.value.map(ex => ({
+    id: ex.id,
+    categories: ex.categories ?? [],
+  }))
   categoryAcc.value = getCategoryAccuracy(catalog)
 })
 
@@ -256,10 +259,10 @@ function trendClass(trend: number): string {
         </h2>
         <div
           v-for="cat in categoryAcc"
-          :key="cat.tag"
+          :key="cat.category"
           class="flex items-center gap-3"
         >
-          <span class="text-sm flex-1 truncate">{{ cat.tag }}</span>
+          <span class="text-sm flex-1 truncate">{{ cat.category }}</span>
           <div class="w-28 bg-base-300 rounded-full h-2.5 overflow-hidden">
             <div
               class="h-full rounded-full transition-all"

@@ -6,18 +6,22 @@ import { useSettings } from '../entities/settings/useSettings'
 import { useExerciseCatalog } from '../entities/exercise/useExerciseCatalog'
 
 const { theme, mode } = useSettings()
-const { allTags, activeTagFilter, setTagFilter } = useExerciseCatalog()
+const {
+  allCategories,
+  activeCategoryFilter,
+  setCategoryFilter,
+} = useExerciseCatalog()
 
 const isExam = computed(() => mode.value === 'exam')
 
 // Force "All" in exam mode
 watch(isExam, (exam) => {
-  if (exam) setTagFilter(null)
+  if (exam) setCategoryFilter(null)
 })
 
-function onTagChange(e: Event) {
-  const val = (e.target as HTMLSelectElement).value
-  setTagFilter(val || null)
+function onCategoryChange(event: Event) {
+  const category = (event.target as HTMLSelectElement).value
+  setCategoryFilter(category || null)
 }
 
 const isDark = computed(() => {
@@ -68,22 +72,22 @@ function toggleTheme() {
     </RouterLink>
     <div class="flex-1" />
     <select
-      v-if="allTags.length > 0"
+      v-if="allCategories.length > 0"
       class="select select-sm select-bordered text-xs max-w-32"
-      :value="activeTagFilter ?? ''"
+      :value="activeCategoryFilter ?? ''"
       :disabled="isExam"
       :title="isExam ? $t('categoryDisabledExam') : ''"
-      @change="onTagChange"
+      @change="onCategoryChange"
     >
       <option value="">
         {{ $t('allCategories') }}
       </option>
       <option
-        v-for="tag in allTags"
-        :key="tag"
-        :value="tag"
+        v-for="category in allCategories"
+        :key="category"
+        :value="category"
       >
-        {{ tag }}
+        {{ category }}
       </option>
     </select>
     <button

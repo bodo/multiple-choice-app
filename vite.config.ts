@@ -9,6 +9,24 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      workbox: {
+        runtimeCaching: [
+          {
+            urlPattern: /\/data\/img\//,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'exercise-images',
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+              expiration: {
+                maxEntries: 200,
+                maxAgeSeconds: 60 * 60 * 24 * 365,
+              },
+            },
+          },
+        ],
+      },
       manifest: {
         name: "Bodo's Multiple Choice",
         short_name: 'Practice',

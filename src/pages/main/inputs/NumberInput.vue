@@ -20,6 +20,7 @@ const input = ref<number | null>(null)
 const inputEl = ref<HTMLInputElement>()
 const isInteractive = computed(() => props.phase === 'answering')
 const isSubmitted = computed(() => props.phase === 'submitted')
+const correctValue = computed(() => (props.exercise.correct as number[])[0])
 
 watch(() => props.exercise, () => { input.value = null })
 
@@ -36,7 +37,7 @@ onMounted(() => { if (isInteractive.value) focusInput() })
 
 function submit() {
   if (input.value === null) return
-  const isCorrect = input.value === (props.exercise.correct as number)
+  const isCorrect = input.value === correctValue.value
   emit('submitted', { isCorrect, submittedValue: String(input.value) })
 }
 
@@ -73,14 +74,14 @@ onUnmounted(() => {
         v-if="result.isCorrect"
         class="rounded p-3 bg-success/20 border border-success text-success font-medium"
       >
-        {{ exercise.correct }}
+        {{ correctValue }}
       </div>
       <div
         v-else
         class="flex flex-col gap-1"
       >
         <s class="text-base-content/60">{{ result.submittedValue }}</s>
-        <span class="text-success font-medium">{{ exercise.correct }}</span>
+        <span class="text-success font-medium">{{ correctValue }}</span>
       </div>
     </template>
     <template v-else>

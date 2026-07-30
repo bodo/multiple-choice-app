@@ -1,11 +1,16 @@
 <script setup lang="ts">
 import type { Component } from 'vue'
-import type { Exercise, AnswerResult } from '../../entities/exercise/exercise'
+import type {
+  AnswerResult,
+  Exercise,
+  InputMode,
+} from '../../entities/exercise/exercise'
 import type { FlowPhase } from './useExerciseFlow'
 import SingleChoiceInput from './inputs/SingleChoiceInput.vue'
 import MultipleChoiceInput from './inputs/MultipleChoiceInput.vue'
 import TextInput from './inputs/TextInput.vue'
 import NumberInput from './inputs/NumberInput.vue'
+import MatchInput from './inputs/MatchInput.vue'
 
 const props = defineProps<{
   exercise: Exercise
@@ -18,11 +23,12 @@ const emit = defineEmits<{
   advance: []
 }>()
 
-const inputComponents: Record<string, Component> = {
+const inputComponents: Record<InputMode, Component> = {
   SINGLE_CHOICE: SingleChoiceInput,
   MULTIPLE_CHOICE: MultipleChoiceInput,
   TEXT: TextInput,
   NUMBER: NumberInput,
+  MATCH: MatchInput,
 }
 </script>
 

@@ -25,6 +25,7 @@ IMG_DIR       = (Path(__file__).parent / ".." / "public" / "data" / "img").resol
 INDEX_PATH    = EXERCISES_DIR / "index.json"
 
 MODES = ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "MATCH"]
+SPECIALIZATIONS = ["FIAN", "FISI", "FIDP", "FIDV"]
 
 st.set_page_config(layout="wide", page_title="Exercise Editor")
 
@@ -70,6 +71,22 @@ def load_exercise_json(stem: str) -> dict | None:
     p = EXERCISES_DIR / f"{stem}.json"
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
 
+def available_categories(current: list[str] | None = None) -> list[str]:
+    """Return all categories already used by exercise JSON files."""
+    categories = set(current or [])
+    for path in EXERCISES_DIR.glob("*.json"):
+        if path.name == "index.json" or path.name.startswith("index_"):
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(data, dict):
+            continue
+        categories.update(
+            category
+            for category in data.get("categories", [])
+            if isinstance(category, str) and category.strip()
+        )
+    return sorted(categories)
+
 def completion_pct(stem: str) -> int:
     """Rough % of key text fields that are filled in the saved exercise JSON."""
     data = load_exercise_json(stem)
@@ -85,14 +102,36 @@ def completion_pct(stem: str) -> int:
         checks.append(bool(exp) and all(e.strip() for e in exp))
     return round(100 * sum(checks) / len(checks))
 
-def load_index() -> list[str]:
-    return json.loads(INDEX_PATH.read_text(encoding="utf-8")) if INDEX_PATH.exists() else []
-
-def save_index(entries: list[str]) -> None:
+def save_indexes() -> None:
+    exercise_paths = sorted(
+        path
+        for path in EXERCISES_DIR.glob("*.json")
+        if path.name != "index.json" and not path.name.startswith("index_")
+    )
+    exercise_files = [path.name for path in exercise_paths]
     INDEX_PATH.write_text(
-        json.dumps(sorted(entries), ensure_ascii=False, indent=2),
+        json.dumps(exercise_files, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+
+    exercise_specializations = {
+        path.name: json.loads(path.read_text(encoding="utf-8")).get(
+            "specializations",
+            [],
+        )
+        for path in exercise_paths
+    }
+    for specialization in SPECIALIZATIONS:
+        specialized_files = [
+            filename
+            for filename, values in exercise_specializations.items()
+            if specialization in values
+        ]
+        index_path = EXERCISES_DIR / f"index_{specialization.lower()}.json"
+        index_path.write_text(
+            json.dumps(specialized_files, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
 
 # ---------------------------------------------------------------------------
 # Form state helpers
@@ -122,7 +161,15 @@ def init_form_state(exam: str, ex: str, sub_idx: int, screenshot_files: list[Pat
     correct_match    = [0] * n_opts
 
     raw_correct = data.get("correct")
-    if mode == "SINGLE_CHOICE" and isinstance(raw_correct, int):
+    if (
+        mode == "SINGLE_CHOICE"
+        and isinstance(raw_correct, list)
+        and len(raw_correct) == 1
+        and isinstance(raw_correct[0], int)
+    ):
+        correct_single = raw_correct[0]
+    elif mode == "SINGLE_CHOICE" and isinstance(raw_correct, int):
+        # Read legacy files long enough to save them in the array format.
         correct_single = raw_correct
     elif mode == "MULTIPLE_CHOICE" and isinstance(raw_correct, list):
         for idx in raw_correct:
@@ -150,6 +197,8 @@ def init_form_state(exam: str, ex: str, sub_idx: int, screenshot_files: list[Pat
         "ef_correct_match":      correct_match,
         "ef_explain_instruction":data.get("explainInstruction", ""),
         "ef_explain_options":    list(data.get("explainAnswerOptions", [""] * n_opts)),
+        "ef_categories":         list(data.get("categories", [])),
+        "ef_specializations":    list(data.get("specializations", [])),
         "ef_admin_comment":      data.get("adminComment", ""),
         "ef_admin_tags":         ", ".join(data.get("adminTags", [])),
         "ef_selected_screenshots": sel_shots,
@@ -242,6 +291,26 @@ def save_exercise(screenshot_files: list[Path]) -> None:
         "mobileSolvable": ss["ef_mobile_solvable"],
     }
 
+    categories = list(dict.fromkeys(
+        category.strip()
+        for category in ss["ef_categories"]
+        if category.strip()
+    ))
+    if not categories:
+        ss["ef_save_message"] = "error:Select at least one category."
+        return
+    data["categories"] = categories
+
+    specializations = list(dict.fromkeys(
+        specialization
+        for specialization in ss["ef_specializations"]
+        if specialization in SPECIALIZATIONS
+    ))
+    if not specializations:
+        ss["ef_save_message"] = "error:Select at least one specialization."
+        return
+    data["specializations"] = specializations
+
     if ss["ef_instruction"].strip():
         data["instruction"] = ss["ef_instruction"]
 
@@ -267,11 +336,23 @@ def save_exercise(screenshot_files: list[Path]) -> None:
         data["matchOptions"] = mopts
 
     if mode == "SINGLE_CHOICE":
-        data["correct"] = ss["ef_correct_single"]
+        data["correct"] = [ss["ef_correct_single"]]
     elif mode == "MULTIPLE_CHOICE":
         data["correct"] = [i for i, v in enumerate(ss["ef_correct_multiple"]) if v]
     elif mode == "MATCH":
-        data["correct"] = list(ss["ef_correct_match"])
+        correct_matches = list(ss["ef_correct_match"])
+        if (
+            not opts
+            or not mopts
+            or len(opts) != len(mopts)
+            or sorted(correct_matches) != list(range(len(mopts)))
+        ):
+            ss["ef_save_message"] = (
+                "error:MATCH requires equally sized option lists and each "
+                "match option exactly once."
+            )
+            return
+        data["correct"] = correct_matches
 
     if ss["ef_explain_instruction"].strip():
         data["explainInstruction"] = ss["ef_explain_instruction"]
@@ -290,11 +371,8 @@ def save_exercise(screenshot_files: list[Path]) -> None:
     EXERCISES_DIR.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(data, ensure_ascii=False, indent=4), encoding="utf-8")
 
-    entries = load_index()
     entry = f"{stem}.json"
-    if entry not in entries:
-        entries.append(entry)
-    save_index(entries)
+    save_indexes()
 
     ss["ef_save_message"] = f"ok:Saved → {entry}"
 
@@ -488,11 +566,29 @@ def render_exercise_form(screenshot_files: list[Path]) -> None:
                  placeholder="Shown after answering (Markdown supported)")
     st.divider()
 
-    with st.expander("Admin"):
+    st.multiselect(
+        "Categories",
+        options=available_categories(_ss().get("ef_categories")),
+        key="ef_categories",
+        placeholder="Select or add at least one learning category",
+        accept_new_options=True,
+    )
+    st.multiselect(
+        "Specializations",
+        options=SPECIALIZATIONS,
+        key="ef_specializations",
+        placeholder="Select at least one specialization",
+    )
+    st.divider()
+
+    with st.expander("Author workflow"):
         st.text_area("Comment", key="ef_admin_comment", height=80,
                      placeholder="Internal note — not shown to users")
-        st.text_input("Tags", key="ef_admin_tags",
-                      placeholder="comma-separated, e.g. wiso, arbeitsrecht")
+        st.text_input(
+            "Workflow tags",
+            key="ef_admin_tags",
+            placeholder="comma-separated, e.g. draft, needs-review",
+        )
 
     st.divider()
     col_save, col_next, col_del = st.columns([2, 2, 3])

@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { distance } from 'fastest-levenshtein'
 import type { Exercise, AnswerResult } from '../../../entities/exercise/exercise'
+import {
+  evaluateTextAnswer,
+  isRegexTextAnswer,
+} from '../../../entities/exercise/textAnswerMatching'
 import type { FlowPhase } from '../useExerciseFlow'
 
 const props = defineProps<{
@@ -21,12 +24,15 @@ const input = ref('')
 const inputEl = ref<HTMLInputElement>()
 const isInteractive = computed(() => props.phase === 'answering')
 const isSubmitted = computed(() => props.phase === 'submitted')
+const acceptedAnswers = computed(() => props.exercise.correct as string[])
+const displayedAnswers = computed(() => {
+  const literalAnswers = acceptedAnswers.value.filter(
+    answer => !isRegexTextAnswer(answer),
+  )
+  return literalAnswers.length > 0 ? literalAnswers : acceptedAnswers.value
+})
 
-function formatCorrection(value: string): string {
-  return `[${value}]`
-}
-
-watch(() => props.exercise, () => { input.value = ''; wordChecks.value = [] })
+watch(() => props.exercise, () => { input.value = '' })
 
 // Auto-focus when entering answering phase or when exercise changes
 async function focusInput() {
@@ -39,40 +45,13 @@ watch(isInteractive, (interactive) => { if (interactive) focusInput() })
 watch(() => props.exercise, () => { if (isInteractive.value) focusInput() })
 onMounted(() => { if (isInteractive.value) focusInput() })
 
-function normalize(s: string): string {
-  return props.exercise.caseSensitive ? s : s.toLowerCase()
-}
-
-interface WordCheck {
-  given: string
-  correct: string
-  ok: boolean
-}
-
-const wordChecks = ref<WordCheck[]>([])
-
-function checkWords(given: string, correct: string): WordCheck[] {
-  const givenWords = given.trim().split(/\s+/)
-  const correctWords = correct.trim().split(/\s+/)
-  const maxLen = Math.max(givenWords.length, correctWords.length)
-  const results: WordCheck[] = []
-  for (let i = 0; i < maxLen; i++) {
-    const g = givenWords[i] ?? ''
-    const c = correctWords[i] ?? ''
-    const ok = g !== '' && c !== '' && distance(normalize(g), normalize(c)) <= 1
-    results.push({ given: g, correct: c, ok })
-  }
-  return results
-}
-
 function submit() {
   if (!input.value.trim()) return
-  const correct = props.exercise.correct as string
-  const checks = checkWords(input.value, correct)
-  wordChecks.value = checks
-  const allCorrect = checks.every(w => w.ok)
-  const isExact = normalize(input.value.trim()) === normalize(correct.trim())
-  emit('submitted', { isCorrect: allCorrect, isCloseMatch: allCorrect && !isExact, submittedValue: input.value })
+  const evaluation = evaluateTextAnswer(input.value, acceptedAnswers.value, {
+    caseSensitive: props.exercise.caseSensitive,
+    maximumStringDistance: props.exercise.maximumStringDistance,
+  })
+  emit('submitted', { ...evaluation, submittedValue: input.value })
 }
 
 let submitTime = 0
@@ -104,28 +83,30 @@ onUnmounted(() => {
 <template>
   <div class="flex flex-col gap-3 w-full">
     <template v-if="result">
-      <!-- User's answer with per-word feedback -->
       <div
         class="rounded p-3 border font-medium"
         :class="result.isCorrect ? 'bg-success/20 border-success' : 'bg-error/20 border-error'"
       >
-        <span
-          v-for="(w, i) in wordChecks"
-          :key="i"
-        ><span :class="w.ok ? 'text-success' : 'text-error line-through'">{{ w.given }}</span><span
-          v-if="!w.ok && w.correct"
-          class="text-success ml-1"
-        >{{ formatCorrection(w.correct) }}</span>{{ ' ' }}</span>
+        {{ result.submittedValue }}
       </div>
-      <!-- Close match hint -->
       <div
-        v-if="result.isCorrect && result.isCloseMatch"
+        v-if="!result.isCorrect || result.isCloseMatch"
         class="rounded p-3 bg-warning/20 border border-warning text-warning font-medium"
       >
-        <p>{{ t('closeMatch') }}</p>
-        <p>
-          {{ t('exactAnswer') }} <strong>{{ exercise.correct }}</strong>
+        <p v-if="result.isCloseMatch">
+          {{ t('closeMatch') }}
         </p>
+        <p>
+          {{ t('exactAnswer') }}
+        </p>
+        <ul class="list-disc list-inside">
+          <li
+            v-for="answer in displayedAnswers"
+            :key="answer"
+          >
+            {{ answer }}
+          </li>
+        </ul>
       </div>
     </template>
     <template v-else>
