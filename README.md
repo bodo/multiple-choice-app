@@ -197,6 +197,16 @@ The result is written to localStorage immediately. The toggle under **Settings â
 Mobile-solvable exercises only** changes that stored value and is authoritative
 on subsequent visits; the device guess is not reapplied.
 
+## Browser storage durability
+
+Before opening Dexie, the app checks the origin's browser-storage durability and
+requests persistent storage through `navigator.storage.persist()` when needed.
+The browser makes the final decision. If it denies the request or does not
+support the API, IndexedDB remains best-effort storage and the app logs a clear
+warning. Persistent storage protects against automatic eviction under storage
+pressure, but user-initiated site-data removal still requires an export or
+server-side backup for recovery.
+
 ## Development
 
 ```bash

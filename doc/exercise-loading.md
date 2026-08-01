@@ -48,6 +48,13 @@ cards to a one-element array, preserving those cards while offline.
 Version 9 does the same for the former numeric scalar used by `SINGLE_CHOICE`
 and `NUMBER`.
 
+Before the database is opened, the application checks
+`navigator.storage.persisted()` and requests origin-wide persistent storage with
+`navigator.storage.persist()` when necessary. Browsers may deny this request;
+in that case the application continues with best-effort IndexedDB storage and
+logs a warning. Persistence prevents automatic storage-pressure eviction, but
+does not prevent users from explicitly clearing site data.
+
 Changing the source or specialization in the settings takes effect immediately.
 Both choices are persisted in `bodo-mc-settings`.
 
