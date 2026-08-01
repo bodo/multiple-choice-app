@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Anwendungs- und Infrastrukturdienste"
+  ],
+  "instruction": "Welche Vorteile bietet ein zentraler Reverse Proxy? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Zentrale TLS- und Header-Richtlinien",
+    "Routing anhand von Hostnamen oder Pfaden",
+    "Health-basierte Lastverteilung",
+    "Automatische Behebung jedes Anwendungsfehlers"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Ein Proxy zentralisiert Eintrittspunkt und Weiterleitung, kann aber fachliche Fehler im Backend nicht automatisch beheben.",
+  "specializations": [
+    "FISI"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv6"
+  ],
+  "instruction": "Ordne die IPv6-Adresse ihrem Typ zu.",
+  "answerOptions": [
+    "::1",
+    "fe80::20c:29ff:fe12:3456",
+    "ff02::1"
+  ],
+  "matchOptions": [
+    "Link-Local-Unicast",
+    "Link-lokaler Multicast an alle Knoten",
+    "Loopback"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "::1 ist Loopback, fe80::/10 Link-Local und ff02::1 ein link-lokaler Multicast.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

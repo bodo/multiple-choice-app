@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Routing und NAT"
+  ],
+  "instruction": "Ordne den Eintrag seinem typischen Zweck zu.",
+  "answerOptions": [
+    "0.0.0.0/0 via 192.0.2.1",
+    "10.40.0.0/16 via 10.1.0.2",
+    "Source NAT overload am WAN-Port"
+  ],
+  "matchOptions": [
+    "Viele private Verbindungen über eine öffentliche Adresse",
+    "Auffangroute für unbekannte IPv4-Ziele",
+    "Statischer Weg zu einem internen Zielnetz"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "Die /0-Route ist die Default-Route; das konkrete Präfix beschreibt einen statischen Zielweg; NAT overload ist PAT.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

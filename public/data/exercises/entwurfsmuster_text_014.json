@@ -29,6 +29,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Zulässig sind alle elf GoF-Verhaltensmuster (GoF behavioral patterns).",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

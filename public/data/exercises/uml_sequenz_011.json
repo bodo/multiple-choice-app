@@ -13,6 +13,8 @@
   ],
   "explainInstruction": "Sequenzdiagramme modellieren Interaktionen über Lebenslinien und Nachrichten. Speichergrößen gehören nicht zu ihrem Zweck; die vertikale Anordnung unterstützt die zeitliche Lesart.",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "UML",

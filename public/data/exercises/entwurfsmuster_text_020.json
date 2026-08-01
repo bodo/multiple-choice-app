@@ -25,6 +25,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Objektbasiert sind Zuständigkeitskette (Chain of Responsibility), Befehl (Command), Iterator (Iterator), Vermittler (Mediator), Memento (Memento), Beobachter (Observer), Zustand (State), Strategie (Strategy) und Besucher (Visitor).",
   "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

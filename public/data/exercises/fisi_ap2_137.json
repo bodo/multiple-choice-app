@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Patch-, Konfigurations- und Lizenzmanagement"
+  ],
+  "instruction": "Welche Informationen gehören in einen belastbaren Change-Plan? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Ziel und betroffene Systeme",
+    "Test- und Abnahmekriterien",
+    "Rollback-Auslöser und Rückfallweg",
+    "Nur der Name der ausführenden Person"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Scope, Erfolgskriterien und Rückfallentscheidung machen eine Änderung steuer- und prüfbar.",
+  "specializations": [
+    "FISI"
+  ]
+}

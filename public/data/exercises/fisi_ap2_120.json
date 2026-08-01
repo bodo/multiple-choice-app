@@ -1,0 +1,22 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Betriebssystem- und Dienstverwaltung"
+  ],
+  "instruction": "Wie heißt die Fähigkeit, einen Dienst nach einem Fehler kontrolliert auf den letzten funktionierenden Stand zurückzusetzen?",
+  "correct": [
+    "Rollback",
+    "Rückfall"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Ein Rollback stellt die zuvor bekannte funktionierende Version oder Konfiguration wieder her.",
+  "specializations": [
+    "FISI"
+  ]
+}

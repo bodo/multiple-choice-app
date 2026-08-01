@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Systematische Netzwerkdiagnose"
+  ],
+  "instruction": "Welche Angaben gehören in eine belastbare Störungsdokumentation? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Zeitpunkt und betroffene Systeme",
+    "Reproduktionsweg und Messwerte",
+    "Durchgeführte Änderungen mit Ergebnis",
+    "Nur die Vermutung „Netz kaputt“"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Zeit, Scope, Reproduktion, Messwerte und Änderungen ermöglichen Korrelation und nachvollziehbare Übergabe.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

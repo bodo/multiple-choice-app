@@ -1,0 +1,19 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": false,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "RAID und Datenträgerverbünde"
+  ],
+  "instruction": "Ein RAID 6 besteht aus 8 gleich großen Datenträgern mit je 2 TB. Wie viele TB Nettokapazität stehen idealisiert zur Verfügung? Gib nur die Zahl ein.",
+  "correct": [
+    12
+  ],
+  "explainInstruction": "Bei RAID 6 entspricht die Nettokapazität (n - 2) × kleinste Plattengröße.",
+  "specializations": [
+    "FISI"
+  ]
+}

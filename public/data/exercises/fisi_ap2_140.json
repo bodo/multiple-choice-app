@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Patch-, Konfigurations- und Lizenzmanagement"
+  ],
+  "instruction": "Wie heißt die unerwünschte Abweichung einer laufenden Systemkonfiguration vom definierten Sollzustand?",
+  "correct": [
+    "Konfigurationsdrift",
+    "Configuration Drift",
+    "Drift"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Configuration Drift entsteht durch nicht reproduzierte oder nicht zentral nachgeführte Änderungen.",
+  "specializations": [
+    "FISI"
+  ]
+}

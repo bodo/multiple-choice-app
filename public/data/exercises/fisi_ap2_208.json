@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Logs, Traces und SNMP"
+  ],
+  "instruction": "Welche Angaben sind für die Korrelation verteilter Requests nützlich? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Zeitstempel mit Zeitzone",
+    "Korrelations- oder Trace-ID",
+    "Dienst- und Hostkennung",
+    "Klartextpasswort des Benutzers"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Zeit, Trace-ID und Herkunft verbinden Ereignisse. Geheimnisse gehören nicht in Logs.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Metriken und Alarmierung"
+  ],
+  "instruction": "Warum ist eine dynamische Baseline bei stark tageszeitabhängiger Last hilfreich?",
+  "answerOptions": [
+    "Sie vergleicht Werte mit dem üblichen Muster für diesen Zeitpunkt.",
+    "Sie verhindert jede Lastspitze.",
+    "Sie ersetzt das Speichern von Zeitreihen.",
+    "Sie verschlüsselt Metriken."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein kontextbezogener Vergleich erkennt Abweichungen besser als ein starrer Grenzwert allein.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

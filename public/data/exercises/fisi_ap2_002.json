@@ -1,0 +1,20 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "learningLevel": 5,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Wie viele regulär nutzbare Hostadressen besitzt ein IPv4-Subnetz mit Präfix /24? Gib nur die Anzahl ein.",
+  "correct": [
+    254
+  ],
+  "explainInstruction": "Ein /24-Netz hat 8 Hostbits und damit 2^8 = 256 Adressen. Nach Abzug von Netz- und Broadcastadresse bleiben 254 Hostadressen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

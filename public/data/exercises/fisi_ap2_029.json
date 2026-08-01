@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Switching und VLAN"
+  ],
+  "instruction": "Welche Aussagen zu einem LACP-Bündel sind richtig? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Die beteiligten Ports benötigen zueinander passende Parameter.",
+    "Der Ausfall eines Mitgliedslinks kann durch verbleibende Links aufgefangen werden.",
+    "Jeder einzelne Datenstrom nutzt zwangsläufig die Summe aller Linkraten.",
+    "Eine Hash-Funktion verteilt Datenströme auf Mitgliedslinks."
+  ],
+  "correct": [
+    0,
+    1,
+    3
+  ],
+  "explainInstruction": "Ein Bündel verlangt konsistente Portparameter und verteilt Flows per Hash. Ein einzelner Flow bleibt üblicherweise auf einem Mitgliedslink.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Schwachstellen- und Incident-Management"
+  ],
+  "instruction": "Was ist nach der Eindämmung eines Sicherheitsvorfalls das Ziel der Eradication-Phase?",
+  "answerOptions": [
+    "Ursache, Schadcode und persistente Zugänge entfernen",
+    "Alle Alarme dauerhaft deaktivieren",
+    "Nur die Statusseite aktualisieren",
+    "Beweise ohne Freigabe veröffentlichen"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Eradication beseitigt die Ursache und Persistenz, bevor Systeme kontrolliert wiederhergestellt werden.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

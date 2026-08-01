@@ -21,6 +21,8 @@
   ],
   "explainInstruction": "Decision wählt Alternativen, Merge führt Alternativen zusammen, Fork startet parallele Pfade und Join synchronisiert sie.",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "UML",

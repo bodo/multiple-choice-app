@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Robuster und sicherer Betrieb"
+  ],
+  "instruction": "Ordne die Schutzmaßnahme dem Hauptrisiko zu.",
+  "answerOptions": [
+    "Timeout",
+    "Lock",
+    "Idempotency Key"
+  ],
+  "matchOptions": [
+    "Doppelte Wirkung bei wiederholtem Request",
+    "Unbegrenzt hängender Aufruf",
+    "Parallel laufende Jobinstanzen"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "Timeouts begrenzen Dauer, Locks Parallelität und Idempotency Keys doppelte API-Wirkungen.",
+  "specializations": [
+    "FISI"
+  ]
+}

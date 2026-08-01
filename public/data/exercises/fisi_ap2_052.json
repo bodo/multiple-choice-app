@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "DNS, DHCP und Zeitdienste"
+  ],
+  "instruction": "Welche Maßnahmen reduzieren das Risiko einer ungewollten dynamischen DNS-Aktualisierung? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Authentisierte Updates verwenden",
+    "Updateberechtigungen auf benötigte Clients oder DHCP-Server beschränken",
+    "Beliebige Updates aus jedem Netz zulassen",
+    "Änderungen protokollieren und überwachen"
+  ],
+  "correct": [
+    0,
+    1,
+    3
+  ],
+  "explainInstruction": "Authentisierung, minimale Berechtigungen und Monitoring schützen dynamische Zonen vor unautorisierten Änderungen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

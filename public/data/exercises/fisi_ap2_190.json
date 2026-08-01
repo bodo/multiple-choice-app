@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Robuster und sicherer Betrieb"
+  ],
+  "instruction": "Was ist bei einem Dry Run zu erwarten?",
+  "answerOptions": [
+    "Geplante Änderungen werden ermittelt, aber nicht dauerhaft angewendet.",
+    "Alle Zielsysteme werden neu gestartet.",
+    "Backups werden gelöscht.",
+    "Fehlercodes werden ignoriert."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein Dry Run macht Wirkung und Scope sichtbar, ohne den Zielzustand tatsächlich zu verändern.",
+  "specializations": [
+    "FISI"
+  ]
+}

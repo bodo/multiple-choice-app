@@ -19,6 +19,8 @@
   ],
   "explainInstruction": "Die ersten fünf Aussagen treffen die jeweiligen Aufgaben. Die letzten beiden vertauschen die Aufgaben von Prototyp (Prototype), Einzelstück (Singleton) und Abstrakter Fabrik (Abstract Factory).",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

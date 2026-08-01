@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "DNS, DHCP und Zeitdienste"
+  ],
+  "instruction": "Ein DHCP-Client erhält nach DORA eine Adresse. Welche Nachricht sendet der Client unmittelbar nach einem DHCPOFFER typischerweise?",
+  "answerOptions": [
+    "DHCPDISCOVER",
+    "DHCPREQUEST",
+    "DHCPACK",
+    "DHCPRELEASE"
+  ],
+  "correct": [
+    1
+  ],
+  "explainInstruction": "Der typische Ablauf ist Discover, Offer, Request, Acknowledge.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

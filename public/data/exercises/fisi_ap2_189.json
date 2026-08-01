@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Robuster und sicherer Betrieb"
+  ],
+  "instruction": "Warum sollten Logs eine Korrelations-ID enthalten?",
+  "answerOptions": [
+    "Zusammengehörige Schritte über Prozesse und Dienste lassen sich verfolgen.",
+    "Die ID ersetzt Authentisierung.",
+    "Sie verschlüsselt personenbezogene Daten.",
+    "Sie erhöht automatisch die Netzwerkbandbreite."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Eine Korrelations-ID verbindet Ereignisse eines Laufs oder Requests in verteilten Logs.",
+  "specializations": [
+    "FISI"
+  ]
+}

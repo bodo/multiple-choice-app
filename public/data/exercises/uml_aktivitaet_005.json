@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Ein Entscheidungsknoten besitzt typischerweise einen eingehenden und mehrere bedingte ausgehende Flüsse. Gewählt wird ein passender Alternativpfad.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

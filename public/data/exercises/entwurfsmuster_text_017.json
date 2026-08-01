@@ -9,6 +9,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Die einzige mögliche Antwort ist die klassenbasierte Variante des Adapters (class adapter). Als Mustername genügt Adapter (Adapter).",
   "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

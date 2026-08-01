@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Die Komposition wird mit einer ausgefüllten Raute am Ganzen dargestellt. Die Teile sind dem Ganzen stark zugeordnet und ihr Lebenszyklus ist typischerweise daran gebunden.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

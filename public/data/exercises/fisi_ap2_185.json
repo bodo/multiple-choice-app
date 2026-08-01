@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "APIs und Datenformate"
+  ],
+  "instruction": "Wie heißt die Technik, Wiederholungsversuche nach Fehlern mit zunehmend längeren Wartezeiten auszuführen? Deutsch oder Englisch genügt.",
+  "correct": [
+    "Exponentieller Backoff",
+    "Exponential Backoff",
+    "Backoff"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Exponentieller Backoff entlastet einen gestörten oder gedrosselten Dienst und verteilt Wiederholungen zeitlich.",
+  "specializations": [
+    "FISI"
+  ]
+}

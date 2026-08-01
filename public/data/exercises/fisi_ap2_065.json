@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv6"
+  ],
+  "instruction": "Welche Funktion übernimmt Neighbor Discovery in IPv6 unter anderem?",
+  "answerOptions": [
+    "Auflösung von IPv6-Nachbarn zu Link-Layer-Adressen",
+    "Vergabe von DNSSEC-Schlüsseln",
+    "Komprimierung von TCP-Daten",
+    "RAID-Paritätsberechnung"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Neighbor Discovery übernimmt unter anderem die Nachbarerkennung und ersetzt dafür die ARP-Funktion von IPv4.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

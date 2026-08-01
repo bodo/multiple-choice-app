@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Cluster und Failover"
+  ],
+  "instruction": "Welche Voraussetzungen braucht ein belastbarer Failover-Test? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Erwartetes Verhalten und Erfolgskriterien",
+    "Beobachtung von Dienst, Daten und Clients",
+    "Definierter Rückweg bzw. Abbruch",
+    "Nur die Prüfung, ob ein Host pingbar bleibt"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Ein Failover-Test prüft End-to-End-Funktion, Datenintegrität und Betriebsablauf mit klaren Stop-Kriterien.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

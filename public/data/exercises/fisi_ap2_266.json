@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Hardening und privilegierte Zugriffe"
+  ],
+  "instruction": "Ein lokaler Administratoraccount besitzt auf allen Servern dasselbe Passwort. Welches Risiko entsteht?",
+  "answerOptions": [
+    "Die Kompromittierung eines Systems erleichtert laterale Bewegung auf weitere Systeme.",
+    "DNS kann keine CNAMEs mehr speichern.",
+    "RAID-Rebuilds werden langsamer.",
+    "NTP verliert die Zeitzone."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Wiederverwendete privilegierte Zugangsdaten vergrößern den Schadensradius eines einzelnen Leaks.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

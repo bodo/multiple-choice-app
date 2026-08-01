@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Recovery und Notfallvorsorge"
+  ],
+  "instruction": "Ein Restore ist technisch erfolgreich, die Anwendung startet aber nicht wegen eines fehlenden Schlüssels. Welche Lehre folgt?",
+  "answerOptions": [
+    "Schlüssel, Secrets und externe Abhängigkeiten gehören in den Recovery-Plan.",
+    "Verschlüsselung darf nie verwendet werden.",
+    "Das Datenbackup war dadurch zwingend leer.",
+    "Der DNS-Server muss ersetzt werden."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein Datenbestand ist ohne notwendige Schlüssel und Konfiguration nicht nutzbar; diese müssen gesichert und separat geschützt werden.",
+  "specializations": [
+    "FISI"
+  ]
+}

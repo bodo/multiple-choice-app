@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Patch-, Konfigurations- und Lizenzmanagement"
+  ],
+  "instruction": "Ein Update erfordert ein neues Konfigurationsformat. Was gehört zwingend in den Änderungsplan?",
+  "answerOptions": [
+    "Migrations- und Rückfallweg für Konfiguration und Daten",
+    "Nur die Download-URL",
+    "Eine neue VLAN-ID ohne Bezug",
+    "Das Löschen aller alten Logs vor dem Test"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Daten- und Konfigurationsmigration müssen ebenso rückfallfähig geplant werden wie das Programmpaket.",
+  "specializations": [
+    "FISI"
+  ]
+}

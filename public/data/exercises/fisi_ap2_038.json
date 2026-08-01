@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Routing und NAT"
+  ],
+  "instruction": "Ein Router hat für dasselbe Präfix Routen aus zwei Quellen. Welches Kriterium bewertet üblicherweise zuerst die Vertrauenswürdigkeit der Quellen?",
+  "answerOptions": [
+    "Administrative Distanz bzw. Route Preference",
+    "TCP-Fenstergröße",
+    "DNS-TTL",
+    "VLAN-ID des Clients"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Administrative Distanz oder Route Preference priorisiert Routen unterschiedlicher Quellen; danach kann eine Protokollmetrik entscheiden.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

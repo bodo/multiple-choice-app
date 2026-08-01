@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Shellskripte"
+  ],
+  "instruction": "Ein Skript soll beliebig oft laufen, ohne denselben Benutzer mehrfach anzulegen. Welche Eigenschaft ist gefragt?",
+  "answerOptions": [
+    "Idempotenz",
+    "Rekursion",
+    "Polymorphie",
+    "Fragmentierung"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Eine idempotente Automation führt bei wiederholter Ausführung zum selben gewünschten Zustand.",
+  "specializations": [
+    "FISI"
+  ]
+}

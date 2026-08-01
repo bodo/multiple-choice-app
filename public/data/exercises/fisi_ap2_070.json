@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv6"
+  ],
+  "instruction": "Wie heißt der IPv6-Mechanismus, mit dem ein Host aus Router Advertisements selbstständig eine Adresse bilden kann? Gib die Abkürzung oder den ausgeschriebenen englischen Namen an.",
+  "correct": [
+    "SLAAC",
+    "Stateless Address Autoconfiguration"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "SLAAC steht für Stateless Address Autoconfiguration.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

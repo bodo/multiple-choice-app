@@ -1,12 +1,23 @@
 import { ref, computed, watch } from 'vue'
 import type { AnswerResult } from '../../entities/exercise/exercise'
+import type { LearningLevel } from '../../entities/exercise/learningLevel'
 import { useSettings } from '../../entities/settings/useSettings'
 import { useAutoAdvance } from './useAutoAdvance'
 import { playCorrectSound, playIncorrectSound } from '../../utils/sound'
 import { vibrateCorrect, vibrateIncorrect } from '../../utils/haptics'
-import { recordAnswer, getWeight } from '../../entities/exercise/useExerciseHistory'
+import {
+  flagPendingAutomaticWeakspots,
+  getWeight,
+  isExerciseWeakspot,
+  recordAnswer,
+} from '../../entities/exercise/useExerciseHistory'
 import { useExerciseCatalog } from '../../entities/exercise/useExerciseCatalog'
 import { useExercises } from '../../entities/exercise/useExercises'
+import { assessLearningLevel } from '../../entities/exercise/services/learningLevelService'
+import {
+  isInExamScope,
+  isWithinLearningLevel,
+} from '../../entities/exercise/services/exerciseScopeService'
 import {
   loadTrainingSessionState,
   saveTrainingSessionState,
@@ -28,6 +39,11 @@ const totalTimeMs = ref(0)
 
 // Exam state
 const examQuestionsRemaining = ref(0)
+const examQuestionTotal = ref(0)
+const newWeakspotExerciseId = ref<string | null>(null)
+const examNewWeakspotCount = ref(0)
+const newLearningLevel = ref<LearningLevel | null>(null)
+const examSeenExerciseIds = new Set<string>()
 
 const { exercises, activeExerciseSetKey } = useExercises()
 const { schedule, cancel } = useAutoAdvance()
@@ -41,6 +57,8 @@ const {
   examQuestionCount,
   mobileSolvableOnly,
   specialization,
+  learningLevel,
+  automaticLevelProgression,
 } = useSettings()
 const { categoryFilteredIds } = useExerciseCatalog()
 
@@ -57,9 +75,12 @@ const selectableIds = computed(() => {
   return new Set(
     exercises.value
       .filter(exercise =>
-        filteredIds.has(exercise.id)
+        (mode.value === 'exam' || filteredIds.has(exercise.id))
         && (!mobileSolvableOnly.value || exercise.mobileSolvable !== false)
-        && exercise.specializations.includes(specialization.value),
+        && exercise.specializations.includes(specialization.value)
+        && isWithinLearningLevel(exercise, learningLevel.value)
+        && (mode.value !== 'exam' || isInExamScope(exercise, learningLevel.value))
+        && (mode.value === 'exam' || !isExerciseWeakspot(exercise.id)),
       )
       .map(exercise => exercise.id),
   )
@@ -69,7 +90,7 @@ const accuracy = computed(() => totalAnswered.value === 0 ? 0 : Math.round((tota
 const averageTimeSeconds = computed(() => totalAnswered.value === 0 ? 0 : totalTimeMs.value / totalAnswered.value / 1000)
 const isExamActive = computed(() => mode.value === 'exam' && phase.value !== 'finished')
 const isExamFinished = computed(() => mode.value === 'exam' && phase.value === 'finished')
-const examTotal = computed(() => examQuestionCount.value)
+const examTotal = computed(() => examQuestionTotal.value)
 
 /** Pick a random exercise index weighted by spaced repetition and active filters. */
 function pickNextIndex(): number {
@@ -81,7 +102,22 @@ function pickNextIndex(): number {
   if (eligibleIndices.length === 0) return -1
 
   const alternatives = eligibleIndices.filter(index => index !== currentIndex.value)
-  const candidates = alternatives.length > 0 ? alternatives : eligibleIndices
+  let candidates = alternatives.length > 0 ? alternatives : eligibleIndices
+  if (mode.value === 'exam') {
+    candidates = candidates.filter(index =>
+      !examSeenExerciseIds.has(list[index].id))
+    if (candidates.length === 0) return -1
+  } else {
+    const currentLevelCandidates = candidates.filter(index =>
+      list[index].learningLevel === learningLevel.value)
+    const prerequisiteCandidates = candidates.filter(index =>
+      list[index].learningLevel < learningLevel.value)
+    if (currentLevelCandidates.length > 0 && prerequisiteCandidates.length > 0) {
+      candidates = Math.random() < 0.6
+        ? currentLevelCandidates
+        : prerequisiteCandidates
+    }
+  }
   const weights = candidates.map(index => getWeight(list[index].id))
   const totalWeight = weights.reduce((sum, weight) => sum + weight, 0)
   if (totalWeight === 0) return candidates[0]
@@ -131,7 +167,7 @@ function scheduleAutoAdvance(result: AnswerResult) {
   schedule(delay, advance)
 }
 
-function submitAnswer(result: AnswerResult) {
+async function submitAnswer(result: AnswerResult) {
   lastResult.value = result
   phase.value = 'submitted'
 
@@ -142,7 +178,25 @@ function submitAnswer(result: AnswerResult) {
   totalTimeMs.value += answerTimeMs
 
   if (currentExercise.value) {
-    recordAnswer(currentExercise.value.id, result.isCorrect, answerTimeMs)
+    const recorded = await recordAnswer(
+      currentExercise.value,
+      result.isCorrect,
+      answerTimeMs,
+      mode.value,
+    )
+    if (recorded.becameWeakspot) {
+      newWeakspotExerciseId.value = currentExercise.value.id
+    }
+    if (mode.value === 'exam') {
+      examSeenExerciseIds.add(currentExercise.value.id)
+    }
+    if (mode.value === 'train' && automaticLevelProgression.value) {
+      const assessment = assessLearningLevel(exercises.value, learningLevel.value)
+      if (assessment.recommendedLevel > learningLevel.value) {
+        learningLevel.value = assessment.recommendedLevel
+        newLearningLevel.value = assessment.recommendedLevel
+      }
+    }
   }
   if (soundEnabled.value) {
     if (result.isCorrect) {
@@ -165,16 +219,23 @@ function submitAnswer(result: AnswerResult) {
   }
 
   persistTrainingSession()
-  scheduleAutoAdvance(result)
+  if (!newWeakspotExerciseId.value && !newLearningLevel.value) {
+    scheduleAutoAdvance(result)
+  }
 }
 
 function advance() {
   cancel()
+  newWeakspotExerciseId.value = null
+  newLearningLevel.value = null
   if (exercises.value.length === 0) return
 
   // In exam mode, check if exam is done
   if (mode.value === 'exam' && examQuestionsRemaining.value <= 0) {
     phase.value = 'finished'
+    void flagPendingAutomaticWeakspots().then((count) => {
+      examNewWeakspotCount.value = count
+    })
     return
   }
 
@@ -190,7 +251,11 @@ function startExam() {
   totalAnswered.value = 0
   totalCorrect.value = 0
   totalTimeMs.value = 0
-  examQuestionsRemaining.value = examQuestionCount.value
+  examSeenExerciseIds.clear()
+  examQuestionTotal.value = Math.min(examQuestionCount.value, selectableIds.value.size)
+  examQuestionsRemaining.value = examQuestionTotal.value
+  examNewWeakspotCount.value = 0
+  newWeakspotExerciseId.value = null
   setCurrentIndex(pickNextIndex())
   lastResult.value = null
   phase.value = 'answering'
@@ -275,6 +340,7 @@ watch(selectableIds, (ids) => {
   if (
     phase.value === 'loading'
     || phase.value === 'finished'
+    || phase.value === 'submitted'
     || (ex && ids.has(ex.id))
   ) return
 
@@ -308,11 +374,17 @@ watch(mode, (newMode) => {
   }
 })
 
+watch(learningLevel, () => {
+  if (mode.value === 'exam' && exercises.value.length > 0) startExam()
+})
+
 export function useExerciseFlow() {
   return {
     phase, currentExercise, currentIndex, totalExercises, lastResult,
     submitAnswer, advance, startExam,
     totalAnswered, totalCorrect, accuracy, averageTimeSeconds,
     isExamActive, isExamFinished, examQuestionsRemaining, examTotal,
+    newWeakspotExerciseId, examNewWeakspotCount,
+    newLearningLevel,
   }
 }

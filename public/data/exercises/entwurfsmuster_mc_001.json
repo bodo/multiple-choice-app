@@ -16,6 +16,8 @@
   ],
   "explainInstruction": "Abstrakte Fabrik (Abstract Factory), Fabrikmethode (Factory Method) und Prototyp (Prototype) lösen Probleme der Objekterzeugung.",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

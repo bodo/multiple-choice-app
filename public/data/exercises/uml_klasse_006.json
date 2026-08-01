@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "`1..*` bedeutet eins bis beliebig viele. Die Beziehung muss also mindestens einmal bestehen.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

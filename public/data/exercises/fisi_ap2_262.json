@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Firewall und Segmentierung"
+  ],
+  "instruction": "Welche Schritte sind vor dem Entfernen einer scheinbar ungenutzten Firewallregel sinnvoll? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Trefferzähler und Logs über einen geeigneten Zeitraum prüfen",
+    "Verantwortliche und Dokumentation ermitteln",
+    "Rückfallmöglichkeit planen",
+    "Regel ohne Prüfung während der Hauptlast löschen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Nutzung, Abhängigkeiten und Rollback müssen vor der kontrollierten Bereinigung geklärt sein.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

@@ -37,6 +37,9 @@ interface Exercise {
   id: string                          // Auto-assigned from filename
   inputMode: 'SINGLE_CHOICE' | 'MULTIPLE_CHOICE' | 'TEXT' | 'NUMBER' | 'MATCH'
   mobileSolvable: boolean             // Small screen, no external tools required
+  learningLevel: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+                                       // Curriculum stage and maximum filter
+  difficulty: 1 | 2 | 3 | 4 | 5      // Intrinsic card difficulty for XP
   categories: string[]                // At least one learner-facing subject area
   specializations: Array<'FIAN' | 'FISI' | 'FIDP' | 'FIDV'>
                                        // Required, non-empty positive list
@@ -102,20 +105,46 @@ interface Exercise {
 
 ## Spaced Repetition
 
-Per-exercise stats stored in localStorage (`bodo-mc-history`):
-- Tracks correct/wrong counts and last-seen timestamp per exercise ID
+Per-exercise progress is stored in Dexie by stable exercise ID. It tracks
+correct/wrong counts, last-seen timestamp, a 20-entry recent answer log, average
+answer time, Leitner box, and the explicit learning status.
 
 **Weighted selection algorithm** (`getWeight`):
 - Never seen → weight 10 (highest priority)
-- Seen before → `(1 + errorRate × 9) × (1 + hoursSinceLastSeen / 24)`
-- Time decay capped at 168 hours (1 week)
+- Box 1 → weight 5–10 according to lifetime error rate
+- Box 2 → due after 4 hours
+- Box 3 → due after 24 hours
+- Box 4 → due after 72 hours
+- Box 5 → due after 168 hours
+- Overdue cards gain weight up to 10; cards not yet due keep weight 0.1
 - Current exercise excluded from selection (no immediate repeats)
 - Exercises outside the active category filter are excluded
 - Exercises without the selected IT specialization are excluded. Every card
   must list at least one specialization explicitly; multiple values allow
   overlaps such as AP2 network content for both FISI and FIDV
 - If `mobileSolvableOnly` is enabled, exercises with `mobileSolvable: false` are excluded
+- Box-0 cards are excluded from training but remain eligible in exam mode
 - An empty filtered pool shows the existing no-exercises state instead of falling back to an excluded exercise
+
+### Box 0 and manual weak spots
+
+- Four consecutive incorrect answers whose first and fourth attempts are at most
+  24 hours apart change `learningStatus` to `interventionRequired`
+- Learners can set the same status manually without recording an incorrect answer
+- The reason distinguishes `manual` from `repeatedIncorrect`
+- A global badge and an in-practice alert keep every open weak spot visible
+- The Box-0 list is not limited to the ten-card analytical weak-spot ranking
+- Returning a card is explicit, preserves its full history, resets only the
+  current failure period, and places the card in Box 1
+- Exam mode does not exclude Box-0 cards and applies newly detected Box-0
+  transitions only after the exam finishes
+- Incorrect answers and same-day repeats award no XP, preventing accumulation
+  through repeated guessing
+
+Bookmarks are a separate, neutral marker and never change scheduling. Bookmark
+and weak-spot lists resolve card data from all downloaded Dexie exercise sets,
+so switching specialization or source does not hide their entries. Their shared
+modal is read-only and does not create answer or progress events.
 
 ## Exercise Catalog
 
@@ -129,9 +158,8 @@ Separate module (`useExerciseCatalog`) that builds a category index from loaded 
 
 ## Settings
 
-Stored in localStorage (`bodo-mc-settings`), auto-saved via Vue watchers.
-`mobileSolvableOnly` is inferred once when the stored settings are first
-created or migrated from an older object without that field. The guess uses
+Stored in the Dexie `settings` table and auto-saved via Vue watchers.
+`mobileSolvableOnly` is inferred once when no stored setting exists. The guess uses
 `navigator.userAgentData.mobile` when available; otherwise it requires touch or
 a coarse pointer and a shortest screen side of at most 1024 CSS pixels. The
 result is stored immediately. The GUI toggle writes the same field, and that
@@ -158,6 +186,8 @@ so previously downloaded sets remain available offline.
 | `exerciseSource` | `'json' \| 'api'` | `'json'` | Active exercise loading service |
 | `mobileSolvableOnly` | boolean | One-time device guess | Exclude exercises where `mobileSolvable` is false; manually configurable |
 | `specialization` | `'FIAN' \| 'FISI' \| 'FIDP' \| 'FIDV'` | `'FIAN'` | Include cards explicitly assigned to the selected IT specialization |
+| `learningLevel` | integer 1–10 | `1` | Inclusive curriculum maximum used by training, exam mode, and statistics |
+| `automaticLevelProgression` | boolean | `true` | Raise the maximum after the current level meets its practice thresholds |
 
 ## Sound & Haptics
 
@@ -177,9 +207,23 @@ so previously downloaded sets remain available offline.
 - **Reduced motion**: `prefers-reduced-motion` media query disables all animations/transitions
 - **Touch**: swipe left to advance after submitting
 
-## Progress & Stats
+## Learning levels, progress & stats
 
-- **Progress bar**: "Question X of Y" with percentage, displayed full-width above content
+- Learning level is separate from intrinsic card difficulty and Leitner mastery.
+- Training applies category, specialization, device, weak-spot, and maximum-level
+  filters together. It prefers current-level cards for 60% of draws and lower
+  prerequisites for 40%, then applies Leitner weighting.
+- Adaptive progression requires 20% of the current-level pool (minimum 5,
+  maximum 20 distinct cards), at least 80% recent training accuracy, and at
+  least 60% of attempted cards in Box 2 or higher. It only raises levels.
+- Exam mode selects without replacement. Levels 1–4 use the AP1 category;
+  levels 5–10 use AP2 plus WiSo, so AP2 cannot crowd AP1 preparation.
+- **Training progress bar**: 30 distinct correct cards per local day, carried
+  across sessions, with separate counts for the source Leitner Boxes 1–5.
+- **Exam progress bar**: current exam question versus the eligible exam total.
+- The statistics page applies the same inclusive maximum-level subset.
+- Difficulty-weighted XP for the first correct answer to a card per day is
+  `1, 2, 3, 5, 8` for difficulties 1–5, plus one point for Boxes 2–5.
 - **Session stats**: accuracy % and average time per answer, shown below progress bar after first answer
 
 ## Routing
@@ -187,6 +231,8 @@ so previously downloaded sets remain available offline.
 | Path | Component | Description |
 |------|-----------|-------------|
 | `/` | MainPage | Exercise practice flow |
+| `/stats` | StatsPage | Score card, Box 0, weak spots, and mastery |
+| `/bookmarks` | BookmarksPage | Persisted bookmark list and card preview |
 | `/settings` | SettingsPage | User preferences |
 
 ## i18n

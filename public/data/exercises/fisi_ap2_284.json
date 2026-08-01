@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Schwachstellen- und Incident-Management"
+  ],
+  "instruction": "Welche Schritte gehören zur ersten Incident-Triage? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Meldung und Indikatoren verifizieren",
+    "Umfang und Kritikalität abschätzen",
+    "Beweise und Zeiten nachvollziehbar sichern",
+    "Spuren unkoordiniert bereinigen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Triage bestätigt, priorisiert und erhält Belege; Bereinigung folgt erst kontrolliert nach Analyse und Eindämmung.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

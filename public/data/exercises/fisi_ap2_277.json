@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "PKI und TLS-Betrieb"
+  ],
+  "instruction": "Ordne den PKI-Bestandteil seinem Zweck zu.",
+  "answerOptions": [
+    "Root-CA",
+    "Zwischen-CA",
+    "Serverzertifikat"
+  ],
+  "matchOptions": [
+    "Delegierte Ausstellungsebene",
+    "Bindet öffentlichen Schlüssel an einen Dienstnamen",
+    "Vertrauensanker"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Die Kette reicht vom Vertrauensanker über ausstellende Zwischenstellen bis zum Endzertifikat.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

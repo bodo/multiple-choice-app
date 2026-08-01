@@ -1,5 +1,7 @@
 {
   "mobileSolvable": true,
+  "learningLevel": 1,
+  "difficulty": 2,
   "inputMode": "TEXT",
   "caseSensitive": false,
   "correct": [

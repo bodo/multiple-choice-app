@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Logs, Traces und SNMP"
+  ],
+  "instruction": "Ordne die Beobachtungsart ihrem Beispiel zu.",
+  "answerOptions": [
+    "Metrik",
+    "Log",
+    "Trace"
+  ],
+  "matchOptions": [
+    "Pfad eines Requests durch mehrere Dienste",
+    "CPU-Auslastung als Zeitreihe",
+    "Einzelnes Authentisierungsereignis mit Kontext"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "Metriken quantifizieren Verläufe, Logs dokumentieren Ereignisse und Traces verbinden verteilte Verarbeitungsschritte.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

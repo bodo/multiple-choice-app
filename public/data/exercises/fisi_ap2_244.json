@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Backupstrategie"
+  ],
+  "instruction": "Was ist der wichtigste Nachweis für ein funktionierendes Backup?",
+  "answerOptions": [
+    "Ein erfolgreicher, geprüfter Restore",
+    "Nur die Meldung „Job gestartet“",
+    "Die Größe des Backupservers",
+    "Ein grünes Netzwerkkabel"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Erst die Wiederherstellung mit Integritäts- und Anwendungstest belegt die Nutzbarkeit der Sicherung.",
+  "specializations": [
+    "FISI"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Identitäts- und Verzeichnisdienste"
+  ],
+  "instruction": "Welche Maßnahmen gehören zu einem sauberen Offboarding? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Interaktive Anmeldung zeitnah sperren",
+    "Aktive Sitzungen und Tokens widerrufen",
+    "Verantwortete Dienste und Daten kontrolliert übergeben",
+    "Das Konto unverändert für spätere Kollegen freigeben"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Offboarding beendet Zugänge und Sitzungen, erhält aber benötigte Geschäftsdaten über einen geregelten Übergabeprozess.",
+  "specializations": [
+    "FISI"
+  ]
+}

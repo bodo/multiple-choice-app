@@ -40,6 +40,12 @@ function isValidIndex(value: unknown, optionCount: number): value is number {
     && (value as number) < optionCount
 }
 
+function isIntegerInRange(value: unknown, minimum: number, maximum: number) {
+  return Number.isInteger(value)
+    && (value as number) >= minimum
+    && (value as number) <= maximum
+}
+
 function isValidStringList(value: unknown, allowEmpty = true): value is string[] {
   return Array.isArray(value)
     && (allowEmpty || value.length > 0)
@@ -153,6 +159,12 @@ export function parseExercise(value: unknown, fallbackId?: string): Exercise {
   }
   if (typeof candidate.mobileSolvable !== 'boolean') {
     throw new Error(`Exercise "${id}" has an invalid mobile-solvable flag.`)
+  }
+  if (!isIntegerInRange(candidate.learningLevel, 1, 10)) {
+    throw new Error(`Exercise "${id}" has an invalid learning level.`)
+  }
+  if (!isIntegerInRange(candidate.difficulty, 1, 5)) {
+    throw new Error(`Exercise "${id}" has an invalid difficulty.`)
   }
   if (!isValidStringList(candidate.categories, false)) {
     throw new Error(`Exercise "${id}" must have at least one valid category.`)

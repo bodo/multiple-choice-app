@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Identitäts- und Verzeichnisdienste"
+  ],
+  "instruction": "Ein Benutzer wechselt von Vertrieb zu Einkauf. Welches Vorgehen entspricht dem Rollenprinzip?",
+  "answerOptions": [
+    "Alte Rollengruppen entfernen und passende neue Gruppen zuweisen",
+    "Alle bisherigen Rechte behalten und zusätzlich Administratorrechte vergeben",
+    "Ein zweites Konto mit identischem Passwort anlegen",
+    "Nur den Anzeigenamen ändern"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Berechtigungen müssen der aktuellen Aufgabe folgen; nicht mehr benötigte Rollen werden entzogen.",
+  "specializations": [
+    "FISI"
+  ]
+}

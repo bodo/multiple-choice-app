@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "APIs und Datenformate"
+  ],
+  "instruction": "Warum sollte eine Automation JSON über einen Parser statt über Stringsuche auswerten?",
+  "answerOptions": [
+    "Ein Parser berücksichtigt die Datenstruktur und korrektes Escaping.",
+    "JSON ist immer einzeilig.",
+    "Stringsuche validiert automatisch das Schema.",
+    "Parser machen Authentisierung unnötig."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Strukturiertes Parsen ist robust gegenüber Whitespace, Reihenfolge und korrekt kodierten Zeichen.",
+  "specializations": [
+    "FISI"
+  ]
+}

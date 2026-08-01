@@ -29,6 +29,23 @@ def load_specializations(path: pathlib.Path) -> list[str]:
     if not isinstance(correct, list) or not correct:
         raise ValueError(f"{path.name}: correct must be a non-empty array")
 
+    categories = value.get("categories")
+    if (
+        not isinstance(categories, list)
+        or not categories
+        or any(not isinstance(item, str) or not item.strip() for item in categories)
+        or len(set(categories)) != len(categories)
+    ):
+        raise ValueError(f"{path.name}: categories must be a non-empty string array")
+
+    learning_level = value.get("learningLevel")
+    if type(learning_level) is not int or not 1 <= learning_level <= 10:
+        raise ValueError(f"{path.name}: learningLevel must be an integer from 1 to 10")
+
+    difficulty = value.get("difficulty")
+    if type(difficulty) is not int or not 1 <= difficulty <= 5:
+        raise ValueError(f"{path.name}: difficulty must be an integer from 1 to 5")
+
     specializations = value.get("specializations")
     if (
         not isinstance(specializations, list)

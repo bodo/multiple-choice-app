@@ -9,6 +9,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Befehl (Command) macht aus einer Anforderung ein eigenständiges Objekt.",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Die Klasse definiert gemeinsame Merkmale und Verhalten. Ein Objekt ist eine konkrete Ausprägung mit eigenen Attributwerten.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

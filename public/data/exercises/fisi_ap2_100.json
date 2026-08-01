@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Identitäts- und Verzeichnisdienste"
+  ],
+  "instruction": "Wie heißt das Prinzip, nach dem ein Konto nur die für seine Aufgabe notwendigen Rechte erhält? Deutsch oder Englisch genügt.",
+  "correct": [
+    "Prinzip der minimalen Rechte",
+    "Least Privilege",
+    "Minimalprinzip"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Least Privilege begrenzt Rechte auf den notwendigen Umfang und Zeitraum.",
+  "specializations": [
+    "FISI"
+  ]
+}

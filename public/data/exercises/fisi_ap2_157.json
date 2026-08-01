@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Shellskripte"
+  ],
+  "instruction": "Welche Maßnahmen machen ein Administrationsskript robuster? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Eingaben validieren",
+    "Fehlercodes prüfen",
+    "Änderungen und Fehler strukturiert protokollieren",
+    "Fehler grundsätzlich ignorieren"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Validierung, explizite Fehlerbehandlung und Logs verhindern stille Teilfehler und erleichtern Diagnose.",
+  "specializations": [
+    "FISI"
+  ]
+}

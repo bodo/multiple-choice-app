@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Eine Aktion ist ein auszuführender Schritt und wird üblicherweise als abgerundetes Rechteck dargestellt.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

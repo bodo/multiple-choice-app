@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Ein Anwendungsfalldiagramm zeigt, welche fachlichen Ziele externe Rollen mit dem betrachteten System erreichen können.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

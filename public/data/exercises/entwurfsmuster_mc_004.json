@@ -15,6 +15,8 @@
   ],
   "explainInstruction": "Erbauer (Builder) und Einzelstück (Singleton) sind Erzeugungsmuster (creational patterns). Die übrigen Antworten gehören zu Struktur oder Verhalten.",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

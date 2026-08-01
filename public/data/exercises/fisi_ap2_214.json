@@ -1,0 +1,20 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": false,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "SLA und Verfügbarkeit"
+  ],
+  "instruction": "Ein Dienst wird über 1 Tage rund um die Uhr betrachtet und fällt insgesamt 15 Minuten aus. Wie hoch ist die Verfügbarkeit in Prozent, auf zwei Nachkommastellen gerundet? Gib nur die Zahl ohne Prozentzeichen ein.",
+  "correct": [
+    98.96
+  ],
+  "explainInstruction": "Der Zeitraum umfasst 1440 Minuten. Verfügbarkeit = (Gesamtzeit - Ausfallzeit) / Gesamtzeit × 100 = 98.96 %.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

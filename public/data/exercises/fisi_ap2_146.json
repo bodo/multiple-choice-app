@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Verfügbarkeit und Kapazitätsplanung"
+  ],
+  "instruction": "Warum werden Wartungen in einem Cluster oft knotenweise durchgeführt?",
+  "answerOptions": [
+    "Der Dienst kann über verbleibende Knoten verfügbar bleiben und Ergebnisse lassen sich vergleichen.",
+    "Alle Knoten benötigen unterschiedliche Betriebssysteme.",
+    "So werden Backups unnötig.",
+    "Damit Monitoring keine Alarme auslöst."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Gestaffelte Wartung begrenzt den gleichzeitigen Ausfall und erlaubt Stop-Kriterien nach jedem Schritt.",
+  "specializations": [
+    "FISI"
+  ]
+}

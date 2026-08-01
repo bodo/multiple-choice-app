@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Metriken und Alarmierung"
+  ],
+  "instruction": "Ein Server meldet 95 % CPU-Auslastung für zehn Sekunden, danach wieder 20 %. Was ist die richtige erste Bewertung?",
+  "answerOptions": [
+    "Mit Baseline, Dauer und Dienstverhalten korrelieren, bevor ein Engpass behauptet wird.",
+    "Sofort die CPU ersetzen.",
+    "Monitoring deaktivieren.",
+    "Die Messung beweist einen Hardwaredefekt."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein kurzer Peak kann normal sein. Dauer, Warteschlangen, Antwortzeiten und historische Vergleichswerte bestimmen die Bedeutung.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

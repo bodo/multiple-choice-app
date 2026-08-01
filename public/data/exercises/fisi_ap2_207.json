@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Logs, Traces und SNMP"
+  ],
+  "instruction": "Warum sollten strukturierte Logs Felder statt nur Freitext enthalten?",
+  "answerOptions": [
+    "Felder lassen sich zuverlässig filtern, aggregieren und korrelieren.",
+    "Freitext kann keine Fehler beschreiben.",
+    "Strukturierte Logs sind automatisch anonym.",
+    "Felder verhindern jeden Datenverlust."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Maschinenlesbare Felder wie Host, Dienst, Level und Request-ID ermöglichen robuste Auswertung.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

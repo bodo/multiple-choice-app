@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Hardening und privilegierte Zugriffe"
+  ],
+  "instruction": "Welche Kontrollen sind für ein Break-Glass-Administratorkonto sinnvoll? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Stark geschützte, getrennte Zugangsdaten",
+    "Nutzung alarmieren und protokollieren",
+    "Regelmäßig kontrolliert testen",
+    "Als tägliches Standardkonto verwenden"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Ein Notfallkonto muss verfügbar, besonders geschützt und jede Nutzung auffällig sein; Alltagsnutzung widerspricht dem Zweck.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

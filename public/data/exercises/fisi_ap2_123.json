@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Dateidienste und Berechtigungen"
+  ],
+  "instruction": "Eine Fachabteilung soll Dateien bearbeiten, aber keine Berechtigungen ändern. Welche Trennung ist passend?",
+  "answerOptions": [
+    "Inhaltsrechte vergeben, Eigentümer-/ACL-Änderungsrechte zurückhalten",
+    "Allen Vollzugriff geben",
+    "Nur anonyme Anmeldung erlauben",
+    "Dateisystem schreibgeschützt einbinden"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Bearbeiten von Inhalten und Administrieren der Zugriffssteuerung sind getrennte Privilegien.",
+  "specializations": [
+    "FISI"
+  ]
+}

@@ -19,6 +19,8 @@
   ],
   "explainInstruction": "Interpreter (Interpreter) beschreibt Grammatik und Auswertung; Befehl (Command) kapselt Anforderungen. Die ersten fünf Zuordnungen sind korrekt.",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

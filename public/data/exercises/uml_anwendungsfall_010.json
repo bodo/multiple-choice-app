@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Anwendungsfalldiagramme bleiben auf der Ebene externer Ziele und Systemleistungen. Interne Algorithmen werden mit anderen Modellen oder im Quellcode beschrieben.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

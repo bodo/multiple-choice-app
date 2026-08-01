@@ -32,6 +32,8 @@
   ],
   "explainInstruction": "Die elf richtigen Antworten bilden die vollständige GoF-Gruppe der Verhaltensmuster (behavioral patterns).",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

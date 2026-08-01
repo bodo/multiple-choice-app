@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Konfigurationsmanagement"
+  ],
+  "instruction": "Wie heißt die Eigenschaft, dass wiederholtes Anwenden derselben Automation denselben Zustand ohne unnötige Änderungen erhält?",
+  "correct": [
+    "Idempotenz",
+    "Idempotency",
+    "Idempotent"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Idempotenz ist für sichere Wiederholung und Driftkorrektur zentral.",
+  "specializations": [
+    "FISI"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Shellskripte"
+  ],
+  "instruction": "Ordne den Standard-Datenstrom seiner Dateideskriptornummer zu.",
+  "answerOptions": [
+    "Standardeingabe",
+    "Standardausgabe",
+    "Standardfehler"
+  ],
+  "matchOptions": [
+    "1",
+    "2",
+    "0"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Unix-artige Systeme verwenden 0 für stdin, 1 für stdout und 2 für stderr.",
+  "specializations": [
+    "FISI"
+  ]
+}

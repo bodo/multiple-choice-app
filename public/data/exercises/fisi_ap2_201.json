@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Metriken und Alarmierung"
+  ],
+  "instruction": "Welche Eigenschaften sollte ein handlungsfähiger Alarm besitzen? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Betroffenen Dienst und Auswirkung benennen",
+    "Relevanten Messwert und Zeitraum enthalten",
+    "Runbook oder nächsten Diagnoseschritt verlinken",
+    "Bei jedem normalen Peak auslösen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Ein Alarm muss Kontext und eine Handlung ermöglichen; unnötige Alarme führen zu Alarmmüdigkeit.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

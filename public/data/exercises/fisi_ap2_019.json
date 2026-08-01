@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Ein neues IPv4-Subnetz benötigt mindestens 200 regulär nutzbare Hostadressen. Welches ist das längste passende Präfix?",
+  "answerOptions": [
+    "/25",
+    "/24",
+    "/23",
+    "/22"
+  ],
+  "correct": [
+    1
+  ],
+  "explainInstruction": "/24 ist das kleinste Netz, dessen nutzbare Hostzahl mindestens 200 beträgt. Ein längeres Präfix hätte zu wenige Hostadressen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

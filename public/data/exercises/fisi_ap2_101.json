@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Anwendungs- und Infrastrukturdienste"
+  ],
+  "instruction": "Ein Reverse Proxy steht vor mehreren Webservern. Welche Aufgabe kann er übernehmen?",
+  "answerOptions": [
+    "TLS-Terminierung und Verteilung eingehender Anfragen",
+    "Physische RAID-Parität berechnen",
+    "Benutzerdateien per NTP synchronisieren",
+    "VLAN-Tags in DNS-Records speichern"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein Reverse Proxy kann TLS beenden, Requests weiterleiten, Last verteilen und zentrale Richtlinien anwenden.",
+  "specializations": [
+    "FISI"
+  ]
+}

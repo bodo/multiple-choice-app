@@ -18,6 +18,8 @@
   ],
   "explainInstruction": "Objektbasiert sind Abstrakte Fabrik (Abstract Factory), Erbauer (Builder), Prototyp (Prototype) und Einzelstück (Singleton). Nur die Fabrikmethode (Factory Method) ist klassenbasiert.",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

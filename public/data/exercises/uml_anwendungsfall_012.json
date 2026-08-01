@@ -21,6 +21,8 @@
   ],
   "explainInstruction": "Akteure sind externe Rollen, Anwendungsfälle beschreiben Ziele, die Systemgrenze definiert den Umfang und `«include»` bindet wiederverwendbares Verhalten ein.",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "UML",

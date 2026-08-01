@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Der Initialknoten wird als ausgefüllter Kreis dargestellt und markiert den Beginn des Kontrollflusses.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

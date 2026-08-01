@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": false,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Welche Netzadresse gehört zur Hostadresse 192.0.2.14/29?",
+  "answerOptions": [
+    "192.0.2.0",
+    "192.0.2.8",
+    "192.0.2.14",
+    "192.0.2.16"
+  ],
+  "correct": [
+    1
+  ],
+  "explainInstruction": "Bei /29 beträgt die Blockgröße 8. 14 liegt im Block 8 bis 15.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

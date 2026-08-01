@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Konfigurationsmanagement"
+  ],
+  "instruction": "Welche Eigenschaften sollte ein gutes Konfigurationsmodul besitzen? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Idempotent",
+    "Prüfbarer Sollzustand",
+    "Aussagekräftige Änderungs- und Fehlermeldungen",
+    "Abhängig von manuellen Eingaben bei jedem Lauf"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Wiederholbarkeit, überprüfbare Ergebnisse und klare Rückmeldungen sind Kernqualitäten automatisierter Administration.",
+  "specializations": [
+    "FISI"
+  ]
+}

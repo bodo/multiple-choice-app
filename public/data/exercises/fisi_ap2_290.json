@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Virtualisierung, Container und Cloud",
+    "Hypervisor und virtuelle Maschinen"
+  ],
+  "instruction": "Ordne die virtuelle Ressource dem Engpassrisiko zu.",
+  "answerOptions": [
+    "vCPU-Overcommitment",
+    "RAM-Overcommitment",
+    "Zu geringe Storage-IOPS"
+  ],
+  "matchOptions": [
+    "Hohe virtuelle Datenträgerlatenz",
+    "Lange CPU-Ready-Zeiten",
+    "Ballooning oder Swapping"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "Ready Time, Speicherdruck und I/O-Latenz zeigen unterschiedliche Überbuchungs- oder Kapazitätsprobleme.",
+  "specializations": [
+    "FISI"
+  ]
+}

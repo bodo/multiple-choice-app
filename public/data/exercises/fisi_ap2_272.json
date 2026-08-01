@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "PKI und TLS-Betrieb"
+  ],
+  "instruction": "Warum muss der aufgerufene DNS-Name im Zertifikat als Subject Alternative Name stehen?",
+  "answerOptions": [
+    "Der Client prüft, ob das Zertifikat für genau diesen Dienstnamen ausgestellt wurde.",
+    "Damit der Server eine IP-Adresse bekommt.",
+    "Damit TCP den Port öffnet.",
+    "Damit das Zertifikat kleiner wird."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Namensprüfung verhindert, dass ein gültiges Zertifikat für einen anderen Host akzeptiert wird.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

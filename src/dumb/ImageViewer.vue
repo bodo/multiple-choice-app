@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import OpenSeadragon from 'openseadragon'
 
 const props = defineProps<{ src: string }>()
@@ -7,7 +7,7 @@ const props = defineProps<{ src: string }>()
 const container = ref<HTMLDivElement | null>(null)
 let viewer: OpenSeadragon.Viewer | null = null
 
-function initViewer() {
+function initializeViewer() {
   if (!container.value) return
   viewer?.destroy()
   viewer = OpenSeadragon({
@@ -20,8 +20,8 @@ function initViewer() {
   })
 }
 
-onMounted(initViewer)
-watch(() => props.src, initViewer)
+onMounted(initializeViewer)
+watch(() => props.src, initializeViewer)
 onUnmounted(() => viewer?.destroy())
 </script>
 

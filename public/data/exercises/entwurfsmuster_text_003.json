@@ -9,6 +9,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Stellvertreter (Proxy) kontrolliert den Zugriff, behält aber die Schnittstelle des Zielobjekts bei.",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Verfügbarkeit und Kapazitätsplanung"
+  ],
+  "instruction": "Wie heißt eine Komponente, deren Ausfall allein den gesamten Dienst ausfallen lässt? Deutsch oder Englisch genügt.",
+  "correct": [
+    "Single Point of Failure",
+    "SPOF",
+    "Einzelausfallpunkt"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Ein Single Point of Failure besitzt keine wirksame Redundanz im betrachteten Dienstpfad.",
+  "specializations": [
+    "FISI"
+  ]
+}

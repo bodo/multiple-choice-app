@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Eine Assoziation beschreibt eine strukturelle Beziehung zwischen Instanzen der beteiligten Klassen. Rollen und Multiplizitäten können sie genauer bestimmen.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

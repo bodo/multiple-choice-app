@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Eine gestrichelte Rückgabenachricht kann den Rückfluss von Kontrolle oder eines Ergebnisses darstellen. Sie wird häufig weggelassen, wenn die Rückgabe eindeutig ist.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

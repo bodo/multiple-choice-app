@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Swimlanes strukturieren einen Ablauf nach Verantwortungsbereichen und zeigen dadurch, wer oder was eine Aktion ausführt.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

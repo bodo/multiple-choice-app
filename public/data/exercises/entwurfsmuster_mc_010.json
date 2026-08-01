@@ -16,6 +16,8 @@
   ],
   "explainInstruction": "Abstrakte Fabrik (Abstract Factory) erzeugt Objektfamilien, Kompositum (Composite) strukturiert Teil-Ganzes-Bäume und Befehl (Command) kapselt eine Anforderung als Objekt.",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

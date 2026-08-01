@@ -1,47 +1,65 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRoute } from 'vue-router'
+import { ShieldAlert } from 'lucide-vue-next'
+import type { Exercise } from '../../entities/exercise/exercise'
 import {
   getStats, getCurrentStreak, getLongestStreak, getRank,
   getMasteryDistribution, getWeakestExercises, getCategoryAccuracy,
+  getOpenWeakspots, isExerciseWeakspot, markExerciseAsWeakspot,
+  returnWeakspotToTraining,
 } from '../../entities/exercise/useExerciseHistory'
 import { useExercises } from '../../entities/exercise/useExercises'
+import { useExerciseLibrary } from '../../entities/exercise/useExerciseLibrary'
+import ExercisePreviewDialog from '../../features/exercise-view/ExercisePreviewDialog.vue'
+import { useSettings } from '../../entities/settings/useSettings'
+import { isWithinLearningLevel } from '../../entities/exercise/services/exerciseScopeService'
 
 const { t } = useI18n()
+const route = useRoute()
 const { exercises } = useExercises()
+const { getExercise } = useExerciseLibrary()
+const { learningLevel } = useSettings()
+const selectedExercise = ref<Exercise | null>(null)
+const currentExerciseIds = computed(() => new Set(
+  exercises.value.map(exercise => exercise.id),
+))
+const scopedExercises = computed(() => exercises.value.filter(exercise =>
+  isWithinLearningLevel(exercise, learningLevel.value)))
+const scopedExerciseIds = computed(() => new Set(
+  scopedExercises.value.map(exercise => exercise.id),
+))
 
-const tab = ref<'scorecard' | 'weakspots' | 'mastery'>('scorecard')
+type StatsTab = 'scorecard' | 'weakspots' | 'mastery'
+const requestedTab = route.query.tab
+const tab = ref<StatsTab>(requestedTab === 'weakspots' || requestedTab === 'mastery'
+  ? requestedTab
+  : 'scorecard')
 const tabs = [
   { key: 'scorecard' as const, label: 'tab_scorecard' },
   { key: 'weakspots' as const, label: 'tab_weakspots' },
   { key: 'mastery' as const, label: 'tab_mastery' },
 ]
 
-const stats = ref(getStats())
-const current = ref(getCurrentStreak())
-const longest = ref(getLongestStreak())
-const rank = ref(getRank())
-const mastery = ref(getMasteryDistribution())
-const weakest = ref(getWeakestExercises(10))
-const categoryAcc = ref<Array<{ category: string; accuracy: number; total: number }>>([])
-
-onMounted(() => {
-  stats.value = getStats()
-  current.value = getCurrentStreak()
-  longest.value = getLongestStreak()
-  rank.value = getRank()
-  mastery.value = getMasteryDistribution()
-  weakest.value = getWeakestExercises(10)
-  const catalog = exercises.value.map(ex => ({
+const stats = computed(() => getStats(scopedExerciseIds.value))
+const current = computed(() => getCurrentStreak(scopedExerciseIds.value))
+const longest = computed(() => getLongestStreak(scopedExerciseIds.value))
+const rank = computed(() => getRank(scopedExerciseIds.value))
+const mastery = computed(() => getMasteryDistribution(scopedExerciseIds.value))
+const weakest = computed(() => getWeakestExercises(10, scopedExerciseIds.value))
+const openWeakspots = computed(() => getOpenWeakspots())
+const categoryAcc = computed(() => {
+  const catalog = scopedExercises.value.map(ex => ({
     id: ex.id,
     categories: ex.categories ?? [],
   }))
-  categoryAcc.value = getCategoryAccuracy(catalog)
+  return getCategoryAccuracy(catalog)
 })
 
 const masteryTotal = computed(() => mastery.value.reduce((a, b) => a + b, 0))
 const masteredCount = computed(() => mastery.value[4] + mastery.value[5])
-const boxLabels = ['New', 'Box 1', 'Box 2', 'Box 3', 'Box 4', 'Box 5']
+const boxLabels = ['Box 0', 'Box 1', 'Box 2', 'Box 3', 'Box 4', 'Box 5']
 const boxColors = ['bg-base-300', 'bg-error/60', 'bg-warning/60', 'bg-warning/40', 'bg-success/40', 'bg-success/60']
 
 // XP progress to next level
@@ -75,12 +93,37 @@ function formatWeakSpotSummary(accuracy: number, total: number, averageTimeMs: n
 }
 
 function exerciseLabel(id: string): string {
-  const ex = exercises.value.find(e => e.id === id)
+  const ex = getExercise(id)
   if (ex?.instruction) {
     const text = ex.instruction.replace(/[*_#\n]/g, ' ').trim()
     return text.length > 50 ? text.slice(0, 47) + '...' : text
   }
   return id
+}
+
+function openExercise(id: string) {
+  selectedExercise.value = getExercise(id)
+}
+
+function isInCurrentExerciseSet(id: string): boolean {
+  return currentExerciseIds.value.has(id)
+}
+
+function weakspotReasonLabel(reason: 'manual' | 'repeatedIncorrect'): string {
+  return reason === 'manual'
+    ? t('weakspotReasonManual')
+    : t('weakspotReasonRepeatedIncorrect')
+}
+
+async function returnSelectedToTraining() {
+  if (!selectedExercise.value) return
+  await returnWeakspotToTraining(selectedExercise.value.id)
+  selectedExercise.value = null
+}
+
+async function markSelectedAsWeakspot() {
+  if (!selectedExercise.value) return
+  await markExerciseAsWeakspot(selectedExercise.value.id)
 }
 
 function trendArrow(trend: number): string {
@@ -249,6 +292,56 @@ function trendClass(trend: number): string {
 
     <!-- ==================== WEAK SPOTS ==================== -->
     <template v-if="tab === 'weakspots'">
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <ShieldAlert
+            :size="20"
+            class="text-warning"
+          />
+          <h2 class="text-lg font-medium">
+            {{ $t('weakspotBoxZeroTitle') }}
+          </h2>
+          <span class="badge badge-warning badge-sm">{{ openWeakspots.length }}</span>
+        </div>
+        <p class="text-sm text-base-content/60">
+          {{ $t('weakspotBoxZeroHint') }}
+        </p>
+        <p
+          v-if="openWeakspots.length === 0"
+          class="text-sm text-base-content/40"
+        >
+          {{ $t('weakspotBoxZeroEmpty') }}
+        </p>
+        <button
+          v-for="weakspot in openWeakspots"
+          :key="weakspot.id"
+          type="button"
+          class="rounded-lg border border-warning/40 bg-warning/10 px-3 py-2 flex items-center gap-3 text-left disabled:cursor-default"
+          :disabled="!getExercise(weakspot.id)"
+          @click="openExercise(weakspot.id)"
+        >
+          <div class="flex-1 min-w-0">
+            <p class="text-sm truncate">
+              {{ exerciseLabel(weakspot.id) }}
+            </p>
+            <p class="text-xs text-base-content/60">
+              {{ weakspotReasonLabel(weakspot.reason) }}
+            </p>
+            <span
+              v-if="getExercise(weakspot.id) && !isInCurrentExerciseSet(weakspot.id)"
+              class="badge badge-ghost badge-sm mt-1"
+            >{{ $t('outsideCurrentExerciseSet') }}</span>
+            <p
+              v-if="!getExercise(weakspot.id)"
+              class="text-xs text-warning"
+            >
+              {{ $t('cardUnavailable') }}
+            </p>
+          </div>
+          <span class="badge badge-warning badge-sm">{{ boxLabels[0] }}</span>
+        </button>
+      </div>
+
       <!-- Category Accuracy -->
       <div
         v-if="categoryAcc.length > 0"
@@ -285,10 +378,13 @@ function trendClass(trend: number): string {
         >
           {{ $t('statsNoWeakSpots') }}
         </p>
-        <div
+        <button
           v-for="w in weakest"
           :key="w.id"
-          class="rounded-lg border border-base-300 bg-base-200/50 px-3 py-2 flex items-center gap-3"
+          type="button"
+          class="rounded-lg border border-base-300 bg-base-200/50 px-3 py-2 flex items-center gap-3 text-left disabled:cursor-default"
+          :disabled="!getExercise(w.id)"
+          @click="openExercise(w.id)"
         >
           <div class="flex-1 min-w-0">
             <p class="text-sm truncate">
@@ -307,7 +403,7 @@ function trendClass(trend: number): string {
           <span class="text-xs font-mono bg-base-300 rounded px-1.5 py-0.5">
             {{ boxLabels[w.box] }}
           </span>
-        </div>
+        </button>
       </div>
     </template>
 
@@ -414,4 +510,29 @@ function trendClass(trend: number): string {
       </div>
     </template>
   </div>
+
+  <ExercisePreviewDialog
+    :exercise="selectedExercise"
+    @close="selectedExercise = null"
+  >
+    <template #actions>
+      <button
+        v-if="selectedExercise && isExerciseWeakspot(selectedExercise.id)"
+        type="button"
+        class="btn btn-primary btn-sm"
+        @click="returnSelectedToTraining"
+      >
+        {{ $t('returnToTraining') }}
+      </button>
+      <button
+        v-else-if="selectedExercise"
+        type="button"
+        class="btn btn-warning btn-sm"
+        @click="markSelectedAsWeakspot"
+      >
+        <ShieldAlert :size="16" />
+        {{ $t('markWeakspot') }}
+      </button>
+    </template>
+  </ExercisePreviewDialog>
 </template>

@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Firewall und Segmentierung"
+  ],
+  "instruction": "Ordne die Zone ihrem typischen Zugriffsmuster zu.",
+  "answerOptions": [
+    "Benutzerzone",
+    "DMZ",
+    "Managementzone"
+  ],
+  "matchOptions": [
+    "Öffentlich erreichbare Frontends mit eng begrenzten Backendpfaden",
+    "Administration nur über autorisierte Sprung- oder Adminsysteme",
+    "Arbeitsplätze greifen auf freigegebene Dienste zu"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Zonen trennen Nutzung, Exposition und Administration und erhalten jeweils eigene Kommunikationsregeln.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

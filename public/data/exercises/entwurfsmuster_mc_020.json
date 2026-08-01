@@ -21,6 +21,8 @@
   ],
   "explainInstruction": "Klassenbasierte Muster betonen statische Vererbungsbeziehungen; objektbasierte Muster betonen Komposition und Delegation. Abstrakte Fabrik (Abstract Factory) und Besucher (Visitor) sind objektbasiert.",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

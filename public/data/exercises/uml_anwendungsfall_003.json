@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Anwendungsfälle werden als Ellipsen innerhalb der Systemgrenze dargestellt und nach einem fachlichen Ziel benannt.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

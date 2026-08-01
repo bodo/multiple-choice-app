@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Cluster und Failover"
+  ],
+  "instruction": "Was ist ein Quorum in einem Cluster?",
+  "answerOptions": [
+    "Eine Entscheidungsmehrheit, die Split-Brain vermeiden hilft",
+    "Ein DNS-Alias für alle Knoten",
+    "Ein zusätzliches Vollbackup",
+    "Eine garantierte Verdopplung des Durchsatzes"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Quorumregeln stellen sicher, dass nur eine ausreichend legitimierte Partition Ressourcen aktiv kontrolliert.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

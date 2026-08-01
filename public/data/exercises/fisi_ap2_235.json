@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "NAS, SAN und Dateisysteme"
+  ],
+  "instruction": "Was stellt ein NAS typischerweise bereit?",
+  "answerOptions": [
+    "Dateifreigaben über Protokolle wie SMB oder NFS",
+    "CPU-Kerne für virtuelle Maschinen",
+    "VLAN-Routing ohne Switch",
+    "Kerberos-Tickets ohne Verzeichnisdienst"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein NAS verwaltet Dateisystem und Dateizugriff und stellt Freigaben über das Netzwerk bereit.",
+  "specializations": [
+    "FISI"
+  ]
+}

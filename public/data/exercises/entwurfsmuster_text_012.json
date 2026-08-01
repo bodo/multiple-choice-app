@@ -17,6 +17,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Zulässig sind Abstrakte Fabrik (Abstract Factory), Erbauer (Builder), Fabrikmethode (Factory Method), Prototyp (Prototype) und Einzelstück (Singleton).",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

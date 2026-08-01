@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Auch ein anderes technisches System kann die Rolle eines Akteurs übernehmen, wenn es außerhalb der betrachteten Systemgrenze liegt und mit dem System interagiert.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

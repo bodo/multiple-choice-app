@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Schwachstellen- und Incident-Management"
+  ],
+  "instruction": "Ordne die Incident-Phase ihrem Ziel zu.",
+  "answerOptions": [
+    "Containment",
+    "Eradication",
+    "Recovery"
+  ],
+  "matchOptions": [
+    "Ursache und Persistenz entfernen",
+    "Sauberen Betrieb kontrolliert wiederherstellen",
+    "Schadensausbreitung begrenzen"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Eindämmung, Beseitigung und Wiederherstellung sind getrennte Ziele eines strukturierten Incident-Prozesses.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

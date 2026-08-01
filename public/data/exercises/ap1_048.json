@@ -1,6 +1,8 @@
 {
   "inputMode": "SINGLE_CHOICE",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "IT-Arbeitsplatz und Sicherheit"

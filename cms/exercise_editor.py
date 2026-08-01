@@ -26,6 +26,18 @@ INDEX_PATH    = EXERCISES_DIR / "index.json"
 
 MODES = ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "MATCH"]
 SPECIALIZATIONS = ["FIAN", "FISI", "FIDP", "FIDV"]
+LEARNING_LEVELS = {
+    1: "Warm-up",
+    2: "AP1 Essentials",
+    3: "AP1 Core Practice",
+    4: "AP1 Advanced",
+    5: "AP2 Preview",
+    6: "AP2 Essentials",
+    7: "AP2 Core Practice",
+    8: "AP2 Advanced",
+    9: "Professional Practice",
+    10: "Specialization Challenge",
+}
 
 st.set_page_config(layout="wide", page_title="Exercise Editor")
 
@@ -189,6 +201,8 @@ def init_form_state(exam: str, ex: str, sub_idx: int, screenshot_files: list[Pat
         "ef_filename":           stem,
         "ef_input_mode":         mode,
         "ef_mobile_solvable":    data.get("mobileSolvable", False),
+        "ef_learning_level":     data.get("learningLevel", 1),
+        "ef_difficulty":         data.get("difficulty", 1),
         "ef_instruction":        data.get("instruction", ""),
         "ef_answer_options":     list(opts),
         "ef_match_options":      list(mopts),
@@ -289,6 +303,8 @@ def save_exercise(screenshot_files: list[Path]) -> None:
     data: dict = {
         "inputMode": ss["ef_input_mode"],
         "mobileSolvable": ss["ef_mobile_solvable"],
+        "learningLevel": ss["ef_learning_level"],
+        "difficulty": ss["ef_difficulty"],
     }
 
     categories = list(dict.fromkeys(
@@ -578,6 +594,19 @@ def render_exercise_form(screenshot_files: list[Path]) -> None:
         options=SPECIALIZATIONS,
         key="ef_specializations",
         placeholder="Select at least one specialization",
+    )
+    st.select_slider(
+        "Learning level",
+        options=list(LEARNING_LEVELS),
+        format_func=lambda level: f"{level} – {LEARNING_LEVELS[level]}",
+        key="ef_learning_level",
+    )
+    st.slider(
+        "Estimated difficulty",
+        min_value=1,
+        max_value=5,
+        step=1,
+        key="ef_difficulty",
     )
     st.divider()
 

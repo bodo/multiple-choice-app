@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Transport- und Anwendungsprotokolle"
+  ],
+  "instruction": "Welche Eigenschaften stellt TCP bereit? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Geordneter Bytestrom",
+    "Bestätigungen und Wiederholungen",
+    "Flusskontrolle",
+    "Garantierte feste Ende-zu-Ende-Latenz"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "TCP stellt Reihenfolge, Zuverlässigkeitsmechanismen und Flusskontrolle bereit, garantiert aber keine feste Latenz.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

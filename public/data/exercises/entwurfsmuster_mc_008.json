@@ -24,6 +24,8 @@
   ],
   "explainInstruction": "Die sieben GoF-Strukturmuster sind Adapter (Adapter), Brücke (Bridge), Kompositum (Composite), Dekorierer (Decorator), Fassade (Facade), Fliegengewicht (Flyweight) und Stellvertreter (Proxy).",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

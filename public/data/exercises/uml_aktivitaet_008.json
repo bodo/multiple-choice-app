@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Ein Join wartet auf die erforderlichen eingehenden parallelen Flüsse und führt den Ablauf anschließend gemeinsam fort.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

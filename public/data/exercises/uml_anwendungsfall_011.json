@@ -14,6 +14,8 @@
   ],
   "explainInstruction": "Das Diagramm zeigt Akteure, Anwendungsfälle und Systemumfang. Eine exakte zeitliche Aufrufreihenfolge gehört beispielsweise in ein Sequenzdiagramm.",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "UML",

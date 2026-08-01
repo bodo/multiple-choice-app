@@ -1,0 +1,19 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": false,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "RAID und Datenträgerverbünde"
+  ],
+  "instruction": "Ein RAID 10 besteht aus 8 gleich großen Datenträgern mit je 3 TB. Wie viele TB Nettokapazität stehen idealisiert zur Verfügung? Gib nur die Zahl ein.",
+  "correct": [
+    12
+  ],
+  "explainInstruction": "Bei RAID 10 steht bei gleich großen Spiegelpaaren die Hälfte der Rohkapazität zur Verfügung.",
+  "specializations": [
+    "FISI"
+  ]
+}

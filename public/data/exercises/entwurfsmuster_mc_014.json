@@ -28,6 +28,8 @@
   ],
   "explainInstruction": "Objektbasiert sind Zuständigkeitskette (Chain of Responsibility), Befehl (Command), Iterator (Iterator), Vermittler (Mediator), Memento (Memento), Beobachter (Observer), Zustand (State), Strategie (Strategy) und Besucher (Visitor). Interpreter (Interpreter) und Schablonenmethode (Template Method) sind klassenbasiert.",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

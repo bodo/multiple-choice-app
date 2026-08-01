@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "NAS, SAN und Dateisysteme"
+  ],
+  "instruction": "Welche Maßnahmen sind bei redundantem iSCSI-Multipathing wichtig? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Unabhängige Netzpfade planen",
+    "Multipath-Software passend konfigurieren",
+    "Pfadausfall testen",
+    "Beide Pfade über denselben einzelnen Switch führen und als unabhängig bewerten"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Redundanz verlangt getrennte Fehlerdomänen, korrekte Pfadverwaltung und einen echten Failover-Test.",
+  "specializations": [
+    "FISI"
+  ]
+}

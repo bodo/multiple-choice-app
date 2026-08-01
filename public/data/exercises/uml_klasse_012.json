@@ -21,6 +21,8 @@
   ],
   "explainInstruction": "In UML steht `+` für public, `-` für private, `#` für protected und `~` für package.",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "UML",

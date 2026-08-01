@@ -9,6 +9,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Prototyp (Prototype) erzeugt neue Objekte durch Kopieren eines prototypischen Exemplars.",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

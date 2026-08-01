@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Backupstrategie"
+  ],
+  "instruction": "Warum sollte mindestens eine Sicherung logisch oder physisch vom Produktivsystem getrennt sein?",
+  "answerOptions": [
+    "Ransomware oder Fehlbedienung soll nicht gleichzeitig alle Kopien verändern können.",
+    "Damit das Backup keine Prüfsummen benötigt.",
+    "Damit RPO und RTO identisch werden.",
+    "Damit die Sicherung nie getestet werden muss."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Offline-, immutable oder getrennte Kopien begrenzen den gemeinsamen Schadensradius.",
+  "specializations": [
+    "FISI"
+  ]
+}

@@ -28,8 +28,8 @@ export default defineConfig({
         ],
       },
       manifest: {
-        name: "Bodo's Multiple Choice",
-        short_name: 'Practice',
+        name: "BITS - Learn on the go",
+        short_name: 'BITS',
         description: 'Multiple choice practice app',
         theme_color: '#ffffff',
         background_color: '#ffffff',

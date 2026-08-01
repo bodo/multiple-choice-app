@@ -1,0 +1,24 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Routing und NAT"
+  ],
+  "instruction": "Wie heißt das Auswahlprinzip, nach dem ein Router von mehreren passenden Präfixen das spezifischste verwendet?",
+  "correct": [
+    "Longest Prefix Match",
+    "Längste Präfixübereinstimmung",
+    "Longest Prefix Matching"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Beim Longest Prefix Match gewinnt die passende Route mit den meisten festgelegten Präfixbits.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

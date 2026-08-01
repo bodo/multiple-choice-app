@@ -17,6 +17,8 @@
   ],
   "explainInstruction": "Beobachter (Observer) und Brücke (Bridge) sind objektbasiert. Die vier anderen Aussagen entsprechen der Zweck-und-Gültigkeitsbereich-Matrix der GoF.",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

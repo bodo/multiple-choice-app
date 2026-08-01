@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Virtualisierung, Container und Cloud",
+    "Containerbetrieb"
+  ],
+  "instruction": "Welche Maßnahmen härten einen Containerbetrieb? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Images aus vertrauenswürdiger Quelle scannen",
+    "Container ohne unnötige Root-Rechte betreiben",
+    "Secrets zur Laufzeit geschützt bereitstellen",
+    "Den Hostkernel ungepatcht lassen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Vertrauenswürdige Images, minimale Rechte, Secret Management und ein aktueller Host reduzieren Risiken auf mehreren Ebenen.",
+  "specializations": [
+    "FISI"
+  ]
+}

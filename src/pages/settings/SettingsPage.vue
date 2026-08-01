@@ -8,6 +8,12 @@ import {
   useSettings,
 } from '../../entities/settings/useSettings'
 import { useNetworkStatus } from '../../entities/network/useNetworkStatus'
+import {
+  learningLevelDefinitions,
+  type LearningLevel,
+} from '../../entities/exercise/learningLevel'
+import { useExercises } from '../../entities/exercise/useExercises'
+import { assessLearningLevel } from '../../entities/exercise/services/learningLevelService'
 
 const { t } = useI18n()
 const {
@@ -23,7 +29,10 @@ const {
   exerciseSource,
   mobileSolvableOnly,
   specialization,
+  learningLevel,
+  automaticLevelProgression,
 } = useSettings()
+const { exercises } = useExercises()
 const {
   isOnline,
   connectionType,
@@ -47,6 +56,16 @@ const specializationLabelKeys: Record<Specialization, string> = {
 }
 
 const autoAdvanceDisabled = computed(() => mode.value === 'exam')
+const learningLevelAssessment = computed(() =>
+  assessLearningLevel(exercises.value, learningLevel.value))
+const selectedLearningLevel = computed(() =>
+  learningLevelDefinitions.find(level => level.value === learningLevel.value))
+const learningLevelDisplay = computed(() => {
+  const label = selectedLearningLevel.value
+    ? t(selectedLearningLevel.value.labelKey)
+    : String(learningLevel.value)
+  return `${learningLevel.value} · ${label}`
+})
 const apiExerciseSourceEnabled = computed({
   get: () => exerciseSource.value === 'api',
   set: enabled => {
@@ -72,6 +91,10 @@ const connectionDescription = computed(() => {
 
 function formatSeconds(value: number): string {
   return `${value.toFixed(1)}s`
+}
+
+function setLearningLevel(value: number) {
+  learningLevel.value = value as LearningLevel
 }
 </script>
 
@@ -129,6 +152,73 @@ function formatSeconds(value: number): string {
         {{ t('specializationHint') }}
       </p>
     </div>
+
+    <!-- Learning level -->
+    <div class="flex flex-col gap-3">
+      <div>
+        <div class="flex items-baseline justify-between gap-3">
+          <label
+            for="learning-level"
+            class="font-medium"
+          >
+            {{ t('learningLevel') }}
+          </label>
+          <span class="text-sm font-semibold text-primary text-right">
+            {{ learningLevelDisplay }}
+          </span>
+        </div>
+        <p class="text-sm text-base-content/60 mt-1">
+          {{ t('learningLevelHint') }}
+        </p>
+      </div>
+      <input
+        id="learning-level"
+        :value="learningLevel"
+        type="range"
+        min="1"
+        max="10"
+        step="1"
+        class="range range-primary w-full"
+        @input="setLearningLevel(Number(($event.target as HTMLInputElement).value))"
+      >
+      <div
+        class="flex justify-between px-1"
+        aria-hidden="true"
+      >
+        <span
+          v-for="level in learningLevelDefinitions"
+          :key="level.value"
+          class="flex flex-col items-center gap-1 text-[0.65rem]"
+          :class="level.value === learningLevel ? 'text-primary font-semibold' : 'text-base-content/40'"
+        >
+          <span class="size-1.5 rounded-full bg-current" />
+          {{ level.value }}
+        </span>
+      </div>
+      <p class="text-xs text-base-content/50">
+        {{ t('learningLevelRecommendation', {
+          attempted: learningLevelAssessment.attemptedCards,
+          required: learningLevelAssessment.requiredCards,
+          accuracy: Math.round(learningLevelAssessment.recentAccuracy * 100),
+        }) }}
+      </p>
+    </div>
+
+    <label class="flex items-start gap-4 cursor-pointer">
+      <div class="flex-1">
+        <p class="font-medium">
+          {{ t('automaticLevelProgression') }}
+        </p>
+        <p class="text-sm text-base-content/60 mt-0.5">
+          {{ t('automaticLevelProgressionHint') }}
+        </p>
+      </div>
+      <input
+        v-model="automaticLevelProgression"
+        type="checkbox"
+        class="toggle toggle-primary mt-0.5 shrink-0"
+      >
+    </label>
 
     <!-- Exercise Source -->
     <div class="flex flex-col gap-2">

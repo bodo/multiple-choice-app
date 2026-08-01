@@ -19,6 +19,8 @@
   ],
   "explainInstruction": "Die letzten beiden Aussagen vertauschen Beobachter (Observer) mit Strategie (Strategy) sowie Zustand (State) mit einer Benachrichtigungsaufgabe.",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

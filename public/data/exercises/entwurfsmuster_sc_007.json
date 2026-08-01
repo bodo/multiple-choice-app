@@ -12,6 +12,8 @@
   ],
   "explainInstruction": "Dekorierer (Decorator) ergänzt Verhalten durch verschachtelte Wrapper, ohne die Zielklasse zu verändern.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

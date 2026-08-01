@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Patch-, Konfigurations- und Lizenzmanagement"
+  ],
+  "instruction": "Was ist bei einer Softwarelizenzierung nach CPU-Kernen besonders zu inventarisieren?",
+  "answerOptions": [
+    "Lizenzrelevante physische oder virtuelle Kernzuordnung gemäß Lizenzbedingungen",
+    "Nur die Anzahl der Benutzerpasswörter",
+    "Nur die MAC-Adresse des Switches",
+    "Ausschließlich die Größe des Logverzeichnisses"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Kernbasierte Lizenzmodelle verlangen korrekte technische Zuordnung nach den konkreten Herstellerregeln.",
+  "specializations": [
+    "FISI"
+  ]
+}

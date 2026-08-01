@@ -19,6 +19,8 @@
   ],
   "explainInstruction": "Klassenbasiert sind Fabrikmethode (Factory Method), der Klassenadapter (class adapter), Interpreter (Interpreter) und Schablonenmethode (Template Method). Ihr Schwerpunkt liegt auf statischen Klassen- und Vererbungsbeziehungen.",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

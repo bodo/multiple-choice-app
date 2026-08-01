@@ -12,6 +12,8 @@
   ],
   "explainInstruction": "Adapter (Adapter) übersetzt zwischen inkompatiblen Schnittstellen.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

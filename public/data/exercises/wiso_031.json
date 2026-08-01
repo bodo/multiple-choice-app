@@ -1,6 +1,8 @@
 {
   "inputMode": "MULTIPLE_CHOICE",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "WiSo",
     "Sozialversicherung"

@@ -21,6 +21,8 @@
   ],
   "explainInstruction": "Lebenslinien zeigen Teilnehmer, Aktivierungsbalken Ausführungszeiträume, Guards Bedingungen und `alt` alternative Abläufe.",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "UML",

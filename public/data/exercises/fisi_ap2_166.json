@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "PowerShell"
+  ],
+  "instruction": "Welche Elemente gehören zu kontrollierter Fehlerbehandlung in PowerShell? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "`try`/`catch` für terminierende Fehler",
+    "Aussagekräftige Fehlerprotokollierung",
+    "Geeignete Exit-Codes für aufrufende Systeme",
+    "Jeden Fehler mit leerem `catch` verschlucken"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Automation muss Fehler erkennen, Kontext protokollieren und für Scheduler oder Pipelines korrekt signalisieren.",
+  "specializations": [
+    "FISI"
+  ]
+}

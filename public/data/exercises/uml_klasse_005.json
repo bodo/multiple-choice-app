@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "`0..1` beschreibt eine optionale Einzelzuordnung: kein oder höchstens ein Objekt.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

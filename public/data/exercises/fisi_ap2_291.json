@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Virtualisierung, Container und Cloud",
+    "Containerbetrieb"
+  ],
+  "instruction": "Worin unterscheidet sich ein Container grundlegend von einer klassischen VM?",
+  "answerOptions": [
+    "Container teilen den Kernel des Hosts, VMs betreiben typischerweise eigene Gastkernel.",
+    "Container können keine Prozesse ausführen.",
+    "VMs besitzen keine virtuellen Netzwerke.",
+    "Container sind automatisch vertrauenswürdig."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Container isolieren Prozesse bei gemeinsamem Hostkernel; VMs virtualisieren eine vollständige Maschinenumgebung.",
+  "specializations": [
+    "FISI"
+  ]
+}

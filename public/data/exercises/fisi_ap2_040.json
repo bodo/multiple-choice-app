@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Routing und NAT"
+  ],
+  "instruction": "Welche Probleme kann asymmetrisches Routing bei einer zustandsbehafteten Firewall verursachen? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Antwortpakete erscheinen ohne passenden Sitzungszustand.",
+    "Ein Teil der Verbindung kann verworfen werden.",
+    "Die IP-Prüfsumme wird zwangsläufig ungültig.",
+    "Fehler treten oft nur bei bestimmten Pfaden auf."
+  ],
+  "correct": [
+    0,
+    1,
+    3
+  ],
+  "explainInstruction": "Sieht die Stateful Firewall nur eine Richtung, fehlt ihr für die Gegenrichtung gegebenenfalls der erwartete Sitzungszustand.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

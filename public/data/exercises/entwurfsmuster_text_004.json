@@ -9,6 +9,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Zustand (State) delegiert zustandsabhängiges Verhalten an Zustandsobjekte.",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

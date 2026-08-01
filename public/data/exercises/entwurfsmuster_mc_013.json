@@ -24,6 +24,8 @@
   ],
   "explainInstruction": "Alle sieben aufgeführten Strukturmuster besitzen eine objektbasierte Form. Beim Adapter (Adapter) ist hier ausdrücklich der Objektadapter (object adapter) gemeint.",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

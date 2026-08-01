@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Switching und VLAN"
+  ],
+  "instruction": "Welche Aufgabe übernimmt Link Aggregation (LACP)?",
+  "answerOptions": [
+    "Mehrere physische Links logisch bündeln",
+    "IPv4-Adressen automatisch vergeben",
+    "VLAN-Tags verschlüsseln",
+    "Hostnamen in IP-Adressen auflösen"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "LACP bündelt kompatible physische Links. Das kann Redundanz und aggregierte Bandbreite schaffen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

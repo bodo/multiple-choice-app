@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Hardening und privilegierte Zugriffe"
+  ],
+  "instruction": "Ordne die Kontrolle dem Hauptrisiko zu.",
+  "answerOptions": [
+    "MFA",
+    "Individuelle Adminkonten",
+    "Just-in-Time-Berechtigung"
+  ],
+  "matchOptions": [
+    "Dauerhaft unnötige Privilegien",
+    "Passwortdiebstahl allein",
+    "Fehlende persönliche Nachvollziehbarkeit"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "Die Kontrollen adressieren verschiedene Risiken und ergänzen einander.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

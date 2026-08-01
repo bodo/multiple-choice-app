@@ -5,11 +5,14 @@ export type InputMode =
   | 'NUMBER'
   | 'MATCH'
 export type ExerciseSpecialization = 'FIAN' | 'FISI' | 'FIDP' | 'FIDV'
+export type ExerciseDifficulty = 1 | 2 | 3 | 4 | 5
 
 export interface Exercise {
   id: string
   inputMode: InputMode
   mobileSolvable: boolean
+  learningLevel: import('./learningLevel').LearningLevel
+  difficulty: ExerciseDifficulty
   categories: string[]
   specializations: ExerciseSpecialization[]
   correct: number[] | string[]

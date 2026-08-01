@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Virtualisierung, Container und Cloud",
+    "Hypervisor und virtuelle Maschinen"
+  ],
+  "instruction": "Warum kann starkes Overcommitment von Arbeitsspeicher problematisch sein?",
+  "answerOptions": [
+    "Bei gleichzeitiger Nutzung entsteht Speicherdruck bis hin zu Swapping und hoher Latenz.",
+    "Virtuelle Maschinen erhalten automatisch mehr physisches RAM.",
+    "DNS-Antworten werden ungültig.",
+    "Snapshots werden zu Backups."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Overcommitment setzt auf nicht gleichzeitige Spitzennutzung; tritt sie doch ein, leidet die Leistung aller betroffenen Gäste.",
+  "specializations": [
+    "FISI"
+  ]
+}

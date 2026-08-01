@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Backupstrategie"
+  ],
+  "instruction": "Welche Punkte müssen für anwendungskonsistente Datenbankbackups geklärt sein? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Transaktionen bzw. Schreibzustand koordinieren",
+    "Wiederherstellung von Daten und Logs testen",
+    "Abhängige Schlüssel und Konfiguration mitsichern",
+    "Nur die Dateiendung des Backups prüfen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Konsistenz, vollständige Wiederherstellungskette und benötigte Schlüssel/Metadaten bestimmen, ob die Datenbank nutzbar zurückkommt.",
+  "specializations": [
+    "FISI"
+  ]
+}

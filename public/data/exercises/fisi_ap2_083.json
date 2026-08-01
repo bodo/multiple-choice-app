@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Systematische Netzwerkdiagnose"
+  ],
+  "instruction": "Welche Reihenfolge folgt sinnvoll dem Prinzip „vom Nahen zum Fernen“? Wähle die Schritte aus, die dazugehören.",
+  "answerOptions": [
+    "Interface-Link und lokale Konfiguration prüfen",
+    "Lokales Gateway testen",
+    "Routingpfad und Zielport prüfen",
+    "Ohne Messung alle Switches neu starten"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Eine schrittweise Prüfung von lokalem Link über Gateway und Pfad bis zum Dienst grenzt die Fehlerdomäne ein. Ungezielte Neustarts vernichten Belege.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

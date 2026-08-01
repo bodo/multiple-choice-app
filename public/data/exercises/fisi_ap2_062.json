@@ -1,0 +1,22 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Transport- und Anwendungsprotokolle"
+  ],
+  "instruction": "Wie heißt das TCP-Flag, mit dem ein Client den regulären Verbindungsaufbau beginnt?",
+  "correct": [
+    "SYN"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Der Initiator beginnt den TCP-Drei-Wege-Handshake mit einem SYN-Segment.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

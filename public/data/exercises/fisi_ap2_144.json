@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Verfügbarkeit und Kapazitätsplanung"
+  ],
+  "instruction": "Eine Aktiv/Passiv-Lösung besitzt einen Ersatzknoten, der nie getestet wird. Welches Risiko besteht?",
+  "answerOptions": [
+    "Der Failover kann im Ernstfall an Drift oder defekten Abhängigkeiten scheitern.",
+    "Der aktive Knoten wird dadurch automatisch schneller.",
+    "Das DNS-Protokoll wird ungültig.",
+    "Alle Backups werden zu Vollbackups."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ungetestete Redundanz ist nur eine Annahme. Regelmäßige Failover-Tests prüfen Technik und Ablauf.",
+  "specializations": [
+    "FISI"
+  ]
+}

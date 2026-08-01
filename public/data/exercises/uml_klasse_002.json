@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Ein Klassensymbol wird typischerweise in Bereiche für den Namen, die Attribute und die Operationen gegliedert.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

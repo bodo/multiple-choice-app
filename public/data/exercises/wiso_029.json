@@ -1,6 +1,8 @@
 {
   "inputMode": "MULTIPLE_CHOICE",
   "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
   "categories": [
     "WiSo",
     "Mitbestimmung und Tarifrecht"

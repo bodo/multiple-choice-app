@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Hardening und privilegierte Zugriffe"
+  ],
+  "instruction": "Warum sollen privilegierte Konten MFA verwenden?",
+  "answerOptions": [
+    "Ein gestohlenes Passwort allein soll nicht für den Zugriff genügen.",
+    "MFA ersetzt Berechtigungsprüfungen.",
+    "MFA verschlüsselt alle Festplatten.",
+    "MFA verhindert jeden Softwarefehler."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein zusätzlicher Faktor erschwert die Kontoübernahme, besonders bei weitreichenden Rechten.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

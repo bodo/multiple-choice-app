@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Virtualisierung, Container und Cloud",
+    "Cloud-Servicemodelle"
+  ],
+  "instruction": "Welche Aufgaben bleiben auch bei SaaS typischerweise beim Kunden? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Benutzer- und Rechteverwaltung",
+    "Sichere Konfiguration der gebuchten Funktionen",
+    "Bewertung und Schutz der eingestellten Daten",
+    "Austausch defekter Festplatten im Rechenzentrum des Anbieters"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Shared Responsibility verschiebt Infrastrukturaufgaben, nicht die Verantwortung für Identitäten, Daten und kundenseitige Konfiguration.",
+  "specializations": [
+    "FISI"
+  ]
+}

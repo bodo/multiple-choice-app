@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Backupstrategie"
+  ],
+  "instruction": "Warum sind Snapshots allein keine ausreichende Backupstrategie?",
+  "answerOptions": [
+    "Sie können von derselben Plattform, demselben Fehler oder Angreifer betroffen sein.",
+    "Snapshots enthalten nie Nutzdaten.",
+    "Snapshots funktionieren nur bei RAID 0.",
+    "Snapshots können nicht zeitgesteuert werden."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Snapshots sind nützlich für kurze Rücksprünge, brauchen aber unabhängige Kopien gegen Plattform- und Sicherheitsausfälle.",
+  "specializations": [
+    "FISI"
+  ]
+}

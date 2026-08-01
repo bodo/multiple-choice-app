@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Recovery und Notfallvorsorge"
+  ],
+  "instruction": "Warum wird ein Restore-Test möglichst isoliert durchgeführt?",
+  "answerOptions": [
+    "Produktive Daten und Dienste sollen nicht überschrieben oder gestört werden.",
+    "Isolierte Netze benötigen keine Authentisierung.",
+    "So kann auf Integritätsprüfungen verzichtet werden.",
+    "Nur isolierte Systeme unterstützen Dateisysteme."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Eine getrennte Zielumgebung schützt die Produktion und erlaubt realistische Funktions- und Integritätstests.",
+  "specializations": [
+    "FISI"
+  ]
+}

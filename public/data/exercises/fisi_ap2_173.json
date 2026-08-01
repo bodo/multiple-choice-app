@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Konfigurationsmanagement"
+  ],
+  "instruction": "Welche Gefahr entsteht, wenn Produktion und Test dieselben ungetrennten Variablendateien verwenden?",
+  "answerOptions": [
+    "Testwerte oder Geheimnisse können in die falsche Umgebung gelangen.",
+    "DNS kann keine Namen mehr auflösen.",
+    "CPU-Auslastung wird immer null.",
+    "Der Hypervisor verliert seine Lizenz."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Umgebungsspezifische Werte benötigen klare Trennung und kontrollierte Freigabe.",
+  "specializations": [
+    "FISI"
+  ]
+}

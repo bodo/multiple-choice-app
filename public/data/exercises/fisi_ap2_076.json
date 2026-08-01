@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "WLAN-Planung"
+  ],
+  "instruction": "Ordne das Symptom der wahrscheinlichsten WLAN-Ursache zu.",
+  "answerOptions": [
+    "Hoher Störpegel auch ohne eigene Nutzlast",
+    "Client bleibt trotz schwachem Signal am entfernten AP",
+    "Viele Clients teilen denselben Funkkanal und der Durchsatz sinkt"
+  ],
+  "matchOptions": [
+    "Hohe Airtime-Auslastung",
+    "Externe oder benachbarte Funkstörung",
+    "Sticky Client bzw. ungeeignete Zellplanung"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "Störpegel, Roaming-Verhalten und Airtime-Auslastung sind unterschiedliche Diagnoseachsen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

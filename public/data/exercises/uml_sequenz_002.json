@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Die Lebenslinie repräsentiert einen Interaktionsteilnehmer und verläuft von dessen Kopf aus senkrecht durch den betrachteten zeitlichen Ablauf.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

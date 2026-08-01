@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "PowerShell"
+  ],
+  "instruction": "Welche Praktiken verbessern die Wiederverwendbarkeit eines PowerShell-Skripts? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Parameter statt fest codierter Werte",
+    "Kleine Funktionen mit klarer Aufgabe",
+    "Strukturierte Objekt-Ausgaben",
+    "Umgebungsabhängige Geheimnisse im Quelltext"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Parameter, fokussierte Funktionen und Objekte halten Logik test- und kombinierbar; Secrets im Code schaden Sicherheit und Portabilität.",
+  "specializations": [
+    "FISI"
+  ]
+}

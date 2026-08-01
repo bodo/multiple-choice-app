@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Konfigurationsmanagement"
+  ],
+  "instruction": "Was ist ein Handler in einem ereignisorientierten Konfigurationslauf typischerweise?",
+  "answerOptions": [
+    "Eine Aktion, die nur bei gemeldeter Änderung ausgelöst wird, etwa ein Dienstneustart",
+    "Ein Ersatz für jede Fehlerprüfung",
+    "Ein öffentlicher Passwortspeicher",
+    "Ein RAID-Hot-Spare"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Handler bündeln Folgeaktionen und laufen nur, wenn eine relevante Aufgabe tatsächlich etwas geändert hat.",
+  "specializations": [
+    "FISI"
+  ]
+}

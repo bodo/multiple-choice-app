@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Betriebssystem- und Dienstverwaltung"
+  ],
+  "instruction": "Ordne die Ressource dem typischen Engpassindikator zu.",
+  "answerOptions": [
+    "CPU",
+    "Arbeitsspeicher",
+    "Datenträger-I/O"
+  ],
+  "matchOptions": [
+    "Swapping oder OOM-Ereignisse",
+    "Hohe Latenz und lange I/O-Warteschlange",
+    "Dauerhaft hohe Run Queue"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Run Queue, Speicherdruck und I/O-Latenz helfen unterschiedliche Ressourcenengpässe zu trennen.",
+  "specializations": [
+    "FISI"
+  ]
+}

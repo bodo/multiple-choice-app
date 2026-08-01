@@ -1,0 +1,20 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "learningLevel": 5,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Wie viele regulär nutzbare Hostadressen besitzt ein IPv4-Subnetz mit Präfix /25? Gib nur die Anzahl ein.",
+  "correct": [
+    126
+  ],
+  "explainInstruction": "Ein /25-Netz hat 7 Hostbits und damit 2^7 = 128 Adressen. Nach Abzug von Netz- und Broadcastadresse bleiben 126 Hostadressen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

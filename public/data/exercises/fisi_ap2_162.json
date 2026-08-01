@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "PowerShell"
+  ],
+  "instruction": "Warum sollte ein PowerShell-Skript für kritische Cmdlet-Fehler `-ErrorAction Stop` oder eine passende globale Einstellung verwenden?",
+  "answerOptions": [
+    "Nicht terminierende Fehler können so im `catch`-Block behandelt werden.",
+    "Das Skript läuft dadurch immer als Administrator.",
+    "Alle Ausgaben werden unterdrückt.",
+    "Die Execution Policy wird dauerhaft deaktiviert."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Viele Cmdlet-Fehler sind standardmäßig nicht terminierend. Stop wandelt sie für try/catch in terminierende Fehler um.",
+  "specializations": [
+    "FISI"
+  ]
+}

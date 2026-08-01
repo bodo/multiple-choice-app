@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Konfigurationsmanagement"
+  ],
+  "instruction": "Ordne die Ebene ihrem Beispiel zu.",
+  "answerOptions": [
+    "Inventar",
+    "Rolle bzw. Modul",
+    "Umgebungsvariable"
+  ],
+  "matchOptions": [
+    "Wie wird der Webdienst in den Sollzustand gebracht?",
+    "Welcher Backend-Endpunkt gilt in Produktion?",
+    "Welche Hosts gehören zu „webserver“?"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Inventar wählt Ziele, Rollen implementieren wiederverwendbaren Zustand und Variablen liefern Umgebungskontext.",
+  "specializations": [
+    "FISI"
+  ]
+}

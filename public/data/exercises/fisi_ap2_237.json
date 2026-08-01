@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "NAS, SAN und Dateisysteme"
+  ],
+  "instruction": "Ein Storage-Volume meldet hohe Latenz, obwohl der Durchsatz niedrig ist. Welche Ursache ist möglich?",
+  "answerOptions": [
+    "Viele kleine zufällige I/Os oder ein überlastetes Backend",
+    "Zu kurze DNS-TTL",
+    "Fehlender CNAME",
+    "Zu wenige Benutzergruppen"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Durchsatz allein zeigt die Belastung nicht; zufällige IOPS, Queue und Backend-Contention können hohe Latenz erzeugen.",
+  "specializations": [
+    "FISI"
+  ]
+}

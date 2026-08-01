@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "RAID und Datenträgerverbünde"
+  ],
+  "instruction": "Ordne das RAID-Level der idealisierten Eigenschaft zu.",
+  "answerOptions": [
+    "RAID 0",
+    "RAID 1",
+    "RAID 6"
+  ],
+  "matchOptions": [
+    "Spiegelung",
+    "Verteilte doppelte Parität",
+    "Striping ohne Redundanz"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "RAID 0 verteilt ohne Redundanz, RAID 1 spiegelt und RAID 6 toleriert durch doppelte Parität zwei Plattenausfälle.",
+  "specializations": [
+    "FISI"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Dateidienste und Berechtigungen"
+  ],
+  "instruction": "Welche Prüfungen sind sinnvoll, wenn nur ein Benutzer eine Freigabe nicht erreicht? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Gruppenmitgliedschaften und effektive Rechte",
+    "Gespeicherte Anmeldeinformationen bzw. aktive Sitzung",
+    "Namensauflösung und Pfad aus Sicht des Benutzers",
+    "Sofort alle Freigaberechte global erweitern"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Benutzerspezifische Rechte, Credentials und der konkrete Zugriffspfad sollten geprüft werden, bevor Regeln ausgeweitet werden.",
+  "specializations": [
+    "FISI"
+  ]
+}

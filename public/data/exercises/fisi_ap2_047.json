@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "DNS, DHCP und Zeitdienste"
+  ],
+  "instruction": "Welcher DNS-Record wird für die Rückwärtsauflösung einer IP-Adresse zu einem Namen verwendet?",
+  "answerOptions": [
+    "PTR",
+    "AAAA",
+    "TXT",
+    "SRV"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "PTR-Records in Reverse-Zonen ordnen IP-Adressen Namen zu.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

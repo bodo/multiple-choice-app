@@ -9,6 +9,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Besucher (Visitor) kapselt Operationen in Besucherobjekten; neue Elementtypen sind dafür vergleichsweise aufwendig.",
   "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

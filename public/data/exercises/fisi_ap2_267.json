@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Hardening und privilegierte Zugriffe"
+  ],
+  "instruction": "Warum werden Security-Baselines automatisiert geprüft?",
+  "answerOptions": [
+    "Abweichungen und neue Fehlkonfigurationen werden wiederholbar sichtbar.",
+    "Damit keine Ausnahmen dokumentiert werden müssen.",
+    "Damit Updates entfallen.",
+    "Damit jede Anwendung dieselben Ports nutzt."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Automatisierte Compliance-Prüfungen erkennen Drift; begründete Ausnahmen müssen dennoch dokumentiert werden.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Backupstrategie"
+  ],
+  "instruction": "Ordne die Sicherungsart ihrer Eigenschaft zu.",
+  "answerOptions": [
+    "Vollsicherung",
+    "Inkrementelle Sicherung",
+    "Differentielle Sicherung"
+  ],
+  "matchOptions": [
+    "Änderungen seit der letzten Vollsicherung",
+    "Alle ausgewählten Daten",
+    "Änderungen seit der letzten Sicherung beliebiger Art"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "Voll sichert alles, inkrementell seit dem letzten Sicherungslauf und differentiell seit der letzten Vollsicherung.",
+  "specializations": [
+    "FISI"
+  ]
+}

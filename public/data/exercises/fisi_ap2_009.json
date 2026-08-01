@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": false,
+  "learningLevel": 5,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Welche Netzadresse gehört zur Hostadresse 192.168.10.77/26?",
+  "answerOptions": [
+    "192.168.10.0",
+    "192.168.10.64",
+    "192.168.10.77",
+    "192.168.10.128"
+  ],
+  "correct": [
+    1
+  ],
+  "explainInstruction": "Die Blockgröße beträgt 64. Die Adresse liegt im Bereich 192.168.10.64 bis 192.168.10.127.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Ein Sequenzdiagramm beschreibt eine konkrete Interaktion: Beteiligte werden als Lebenslinien und ihre Kommunikation als zeitlich geordnete Nachrichten dargestellt.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

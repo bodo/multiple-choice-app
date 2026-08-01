@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv6"
+  ],
+  "instruction": "Ein Host soll per SLAAC ein globales Präfix lernen. Welche Nachricht eines Routers liefert die Präfixinformation?",
+  "answerOptions": [
+    "Router Advertisement",
+    "DHCPDISCOVER",
+    "TCP SYN-ACK",
+    "DNS NOTIFY"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Router Advertisements enthalten Präfix- und weitere Konfigurationsinformationen für SLAAC.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

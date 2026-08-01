@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "`loop` fasst einen Interaktionsabschnitt zusammen, der abhängig von einer Bedingung oder einer Wiederholungsangabe mehrfach ausgeführt wird.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "RAID und Datenträgerverbünde"
+  ],
+  "instruction": "Welche Faktoren sind bei der Auswahl eines RAID-Levels relevant? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Zulässige Anzahl gleichzeitiger Plattenausfälle",
+    "Schreib-/Leseprofil",
+    "Nettokapazität und Rebuild-Zeit",
+    "Nur die Gehäusefarbe"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Fehlertoleranz, Leistung, Kapazität und Wiederherstellungsrisiko müssen zum Einsatzzweck passen.",
+  "specializations": [
+    "FISI"
+  ]
+}

@@ -53,6 +53,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Alle 23 GoF-Muster sind zulässig. Der Zusatz „Muster“ beziehungsweise „Pattern“ kann entfallen.",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

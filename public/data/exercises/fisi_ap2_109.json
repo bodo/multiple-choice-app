@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Anwendungs- und Infrastrukturdienste"
+  ],
+  "instruction": "Ordne den HTTP-Status der typischen Aussage zu.",
+  "answerOptions": [
+    "401",
+    "403",
+    "503"
+  ],
+  "matchOptions": [
+    "Identität bekannt, Zugriff nicht erlaubt",
+    "Dienst vorübergehend nicht verfügbar",
+    "Authentisierung fehlt oder ist ungültig"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "401 betrifft fehlende/ungültige Authentisierung, 403 fehlende Berechtigung und 503 temporäre Nichtverfügbarkeit.",
+  "specializations": [
+    "FISI"
+  ]
+}

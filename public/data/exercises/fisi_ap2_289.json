@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Virtualisierung, Container und Cloud",
+    "Hypervisor und virtuelle Maschinen"
+  ],
+  "instruction": "Welche Voraussetzungen braucht eine Live-Migration typischerweise? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Kompatible Quell- und Zielhosts",
+    "Erreichbarer VM-Speicher oder passende Storage-Migration",
+    "Passende virtuelle Netzwerke am Ziel",
+    "Identischer Anzeigename jedes Administrators"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "CPU-/Plattformkompatibilität, Storage und Netzwerk müssen die VM am Ziel ohne Funktionsverlust tragen.",
+  "specializations": [
+    "FISI"
+  ]
+}

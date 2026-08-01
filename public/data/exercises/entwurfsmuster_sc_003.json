@@ -12,6 +12,8 @@
   ],
   "explainInstruction": "Fabrikmethode (Factory Method) verschiebt die Wahl des konkreten Produkts in Unterklassen.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

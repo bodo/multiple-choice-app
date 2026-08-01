@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Hardening und privilegierte Zugriffe"
+  ],
+  "instruction": "Was ist eine sichere Ausgangsbasis beim Server-Hardening?",
+  "answerOptions": [
+    "Nicht benötigte Dienste, Pakete und Konten deaktivieren oder entfernen",
+    "Alle Ports für spätere Anforderungen öffnen",
+    "Standardpasswörter beibehalten",
+    "Logs abschalten"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Weniger aktive Komponenten bedeuten weniger Angriffsfläche und Pflegeaufwand.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

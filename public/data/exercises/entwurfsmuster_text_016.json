@@ -15,6 +15,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Objektbasiert sind Abstrakte Fabrik (Abstract Factory), Erbauer (Builder), Prototyp (Prototype) und Einzelstück (Singleton).",
   "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Identitäts- und Verzeichnisdienste"
+  ],
+  "instruction": "Warum sollten administrative Tätigkeiten mit einem getrennten Administratorkonto erfolgen?",
+  "answerOptions": [
+    "Alltagsnutzung und privilegierte Aktionen werden getrennt und besser nachvollziehbar.",
+    "Das Administratorkonto benötigt dann kein MFA.",
+    "So kann das Benutzerkonto nie gesperrt werden.",
+    "Damit entfällt die Protokollierung."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Separate Konten reduzieren die dauerhafte Privilegiennutzung und verbessern Zuordnung und Schutz.",
+  "specializations": [
+    "FISI"
+  ]
+}

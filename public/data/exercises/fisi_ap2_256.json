@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Firewall und Segmentierung"
+  ],
+  "instruction": "Eine Firewallregel erlaubt aus dem Benutzer-VLAN TCP 443 zu „any“. Wie lässt sich die Regel nach Least Privilege verbessern?",
+  "answerOptions": [
+    "Ziele auf benötigte Proxy- oder Dienstadressen begrenzen",
+    "Zusätzlich alle Ports erlauben",
+    "Protokollierung vollständig deaktivieren",
+    "Quellnetz auf das gesamte Internet erweitern"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Eine Freigabe sollte Quelle, Ziel, Dienst und Richtung so eng wie betrieblich möglich definieren.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

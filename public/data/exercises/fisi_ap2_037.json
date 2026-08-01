@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Routing und NAT"
+  ],
+  "instruction": "Welchen Vorteil hat dynamisches Routing gegenüber vielen manuell gepflegten statischen Routen?",
+  "answerOptions": [
+    "Topologieänderungen können automatisch neu bewertet werden.",
+    "Es ersetzt jede Firewall.",
+    "Es verschlüsselt grundsätzlich alle Nutzdaten.",
+    "Es beseitigt die Notwendigkeit von IP-Adressen."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Dynamische Routingprotokolle tauschen Erreichbarkeiten aus und können auf Änderungen reagieren.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

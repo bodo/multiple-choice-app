@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Attribute modellieren Daten beziehungsweise Zustand einer Klasse. Operationen beschreiben aufrufbares Verhalten.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

@@ -18,6 +18,8 @@
   ],
   "explainInstruction": "Adapter (Adapter), Brücke (Bridge), Kompositum (Composite) und Fassade (Facade) beschreiben den Aufbau aus Klassen oder Objekten.",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

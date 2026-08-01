@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Betriebssicherheit vernetzter Systeme",
+    "Firewall und Segmentierung"
+  ],
+  "instruction": "Warum werden Managementschnittstellen in ein separates Verwaltungsnetz gelegt?",
+  "answerOptions": [
+    "Administrationszugriffe lassen sich auf wenige Systeme und Benutzerpfade begrenzen.",
+    "Server benötigen dann keine Updates.",
+    "Das Managementnetz ersetzt MFA.",
+    "VLANs verschlüsseln automatisch alle Daten."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein getrenntes Managementnetz reduziert Exposition und ermöglicht strenge, auditierbare Zugriffsregeln.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

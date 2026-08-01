@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Dateidienste und Berechtigungen"
+  ],
+  "instruction": "Welche Wirkung hat bei POSIX-Dateirechten das Execute-Bit auf einem Verzeichnis?",
+  "answerOptions": [
+    "Es erlaubt das Durchqueren bzw. Auflösen enthaltener Pfade.",
+    "Es startet alle Dateien im Verzeichnis.",
+    "Es verschlüsselt Dateinamen.",
+    "Es synchronisiert das Verzeichnis mit DNS."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Bei Verzeichnissen bedeutet x das Betreten bzw. Traversieren, nicht das Ausführen sämtlicher Dateien.",
+  "specializations": [
+    "FISI"
+  ]
+}

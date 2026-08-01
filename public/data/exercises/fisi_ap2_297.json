@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Virtualisierung, Container und Cloud",
+    "Cloud-Servicemodelle"
+  ],
+  "instruction": "Ordne das Servicemodell dem typischen Kundenumfang zu.",
+  "answerOptions": [
+    "IaaS",
+    "PaaS",
+    "SaaS"
+  ],
+  "matchOptions": [
+    "Anwendung auf verwalteter Laufzeit betreiben",
+    "Fertige Anwendung konfigurieren und nutzen",
+    "Gastbetriebssystem und Anwendung verwalten"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Von IaaS zu SaaS übernimmt der Anbieter zunehmend Plattform- und Anwendungsbetrieb.",
+  "specializations": [
+    "FISI"
+  ]
+}

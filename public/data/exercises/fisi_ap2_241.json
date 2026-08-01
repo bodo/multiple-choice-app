@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Backupstrategie"
+  ],
+  "instruction": "Das RPO beträgt vier Stunden. Was bedeutet das?",
+  "answerOptions": [
+    "Im Störungsfall dürfen höchstens etwa vier Stunden Datenstand verloren gehen.",
+    "Der Dienst muss binnen vier Stunden neu installiert sein.",
+    "Jedes Backup muss vier Stunden dauern.",
+    "Der Server darf nur vier Stunden laufen."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Recovery Point Objective beschreibt den maximal akzeptierten Abstand zwischen Wiederherstellungspunkt und Störungszeitpunkt.",
+  "specializations": [
+    "FISI"
+  ]
+}

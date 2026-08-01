@@ -20,6 +20,8 @@
   ],
   "explainInstruction": "Zuständigkeitskette (Chain of Responsibility), Befehl (Command), Interpreter (Interpreter), Beobachter (Observer) und Strategie (Strategy) verteilen Verhalten und Zusammenarbeit.",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

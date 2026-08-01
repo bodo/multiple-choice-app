@@ -1,0 +1,19 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": false,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "RAID und Datenträgerverbünde"
+  ],
+  "instruction": "Ein RAID 1 besteht aus 2 gleich großen Datenträgern mit je 8 TB. Wie viele TB Nettokapazität stehen idealisiert zur Verfügung? Gib nur die Zahl ein.",
+  "correct": [
+    8
+  ],
+  "explainInstruction": "Bei RAID 1 enthalten beide Platten dieselben Daten; die Kapazität einer Platte ist nutzbar.",
+  "specializations": [
+    "FISI"
+  ]
+}

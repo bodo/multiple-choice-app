@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Switching und VLAN"
+  ],
+  "instruction": "Wie heißt der IEEE-Standard, der VLAN-Tags in Ethernet-Frames definiert? Gib die Kurzbezeichnung ein.",
+  "correct": [
+    "802.1Q",
+    "IEEE 802.1Q"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "IEEE 802.1Q definiert VLAN-Kennzeichnungen in Ethernet-Frames.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

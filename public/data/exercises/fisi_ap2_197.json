@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Metriken und Alarmierung"
+  ],
+  "instruction": "Welche Kennzahl zeigt bei einem Webdienst die Nutzerwirkung am direktesten?",
+  "answerOptions": [
+    "Antwortzeit und Fehlerquote erfolgreicher/fehlgeschlagener Requests",
+    "Freier Platz im DNS-Cache",
+    "Anzahl der Switch-VLANs",
+    "Alter des Servergehäuses"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Dienstbezogene Latenz und Fehlerquote beschreiben die erlebte Verfügbarkeit besser als eine isolierte Infrastrukturmetrik.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Cluster und Failover"
+  ],
+  "instruction": "Was bezeichnet Split-Brain?",
+  "answerOptions": [
+    "Getrennte Clusterteile halten sich gleichzeitig für aktiv und können widersprüchlich schreiben.",
+    "Ein Server nutzt zwei CPU-Sockel.",
+    "Logs werden in zwei Dateien rotiert.",
+    "Ein DNS-Name hat A- und AAAA-Record."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ohne Fencing oder Quorum kann parallele Aktivität denselben Zustand beschädigen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

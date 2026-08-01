@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Verfügbarkeit und Kapazitätsplanung"
+  ],
+  "instruction": "Welche Daten braucht eine Kapazitätsprognose? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Historische Last und Wachstumstrend",
+    "Geplante Projekte und Lastspitzen",
+    "Technische Grenzwerte und gewünschte Reserve",
+    "Nur die aktuelle CPU-Auslastung einer Minute"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Prognosen verbinden Zeitreihen, bekannte Änderungen, Spitzen und Limits; eine Einzelmessung reicht nicht.",
+  "specializations": [
+    "FISI"
+  ]
+}

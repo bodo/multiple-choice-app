@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "DNS, DHCP und Zeitdienste"
+  ],
+  "instruction": "Welcher DNS-Record verweist einen Namen auf einen anderen kanonischen Namen?",
+  "answerOptions": [
+    "A",
+    "PTR",
+    "CNAME",
+    "MX"
+  ],
+  "correct": [
+    2
+  ],
+  "explainInstruction": "CNAME erzeugt einen Alias auf einen kanonischen DNS-Namen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

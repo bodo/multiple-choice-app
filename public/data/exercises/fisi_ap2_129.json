@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Dateidienste und Berechtigungen"
+  ],
+  "instruction": "Ordne das POSIX-Recht am Verzeichnis seiner Hauptwirkung zu.",
+  "answerOptions": [
+    "Lesen (r)",
+    "Schreiben (w)",
+    "Ausführen (x)"
+  ],
+  "matchOptions": [
+    "Einträge anlegen oder entfernen",
+    "Verzeichnis durchqueren",
+    "Verzeichnisnamen auflisten"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Bei Verzeichnissen beziehen sich r, w und x auf Auflisten, Ändern der Einträge und Traversieren.",
+  "specializations": [
+    "FISI"
+  ]
+}

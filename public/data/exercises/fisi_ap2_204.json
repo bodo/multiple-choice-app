@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Logs, Traces und SNMP"
+  ],
+  "instruction": "Warum sollten Systeme ihre Zeit per NTP synchronisieren?",
+  "answerOptions": [
+    "Ereignisse aus verschiedenen Quellen lassen sich zeitlich korrekt korrelieren.",
+    "Logs werden automatisch komprimiert.",
+    "SNMP benötigt dann keine Zugangskontrolle.",
+    "Festplatten werden schneller."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Gemeinsame Zeit ist Voraussetzung für Ereignisketten, Audits und viele Authentisierungsmechanismen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

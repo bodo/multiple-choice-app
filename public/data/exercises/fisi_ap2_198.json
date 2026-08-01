@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Metriken und Alarmierung"
+  ],
+  "instruction": "Warum werden Warn- und Kritisch-Schwellen getrennt?",
+  "answerOptions": [
+    "Warnung erlaubt Reaktion vor einer unmittelbaren schweren Beeinträchtigung.",
+    "Kritische Alarme benötigen keine Benachrichtigung.",
+    "Warnungen zählen nicht als Messwerte.",
+    "So wird kein Schwellwert mehr benötigt."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Mehrstufige Schwellen bilden Dringlichkeit und Eskalation ab.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

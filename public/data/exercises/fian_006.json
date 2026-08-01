@@ -1,6 +1,8 @@
 {
   "inputMode": "NUMBER",
   "mobileSolvable": true,
+  "learningLevel": 5,
+  "difficulty": 2,
   "categories": [
     "AP2",
     "Algorithmen und Datenstrukturen"

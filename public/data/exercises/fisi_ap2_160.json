@@ -1,0 +1,24 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Shellskripte"
+  ],
+  "instruction": "Wie heißt der numerische Rückgabewert eines Prozesses, der Erfolg oder Fehler signalisiert? Deutsch oder Englisch genügt.",
+  "correct": [
+    "Exit-Code",
+    "Exit Code",
+    "Rückgabecode",
+    "Return Code"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Der Exit-Code ist maschinenlesbar und bildet die Grundlage kontrollierter Fehlerbehandlung.",
+  "specializations": [
+    "FISI"
+  ]
+}

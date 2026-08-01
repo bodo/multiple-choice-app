@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Systematische Netzwerkdiagnose"
+  ],
+  "instruction": "Auf einem Switchport steigen CRC-Fehler unter Last stark an. Welche Ursache ist am wahrscheinlichsten?",
+  "answerOptions": [
+    "Problem an Kabel, Stecker oder physischer Schnittstelle",
+    "Fehlender DNS-MX-Record",
+    "Zu lange DHCP-Lease",
+    "Falsches NTP-Stratum"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "CRC-Fehler entstehen auf der Übertragungsebene und sprechen typischerweise für ein physisches Medien-, Stecker- oder Portproblem.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

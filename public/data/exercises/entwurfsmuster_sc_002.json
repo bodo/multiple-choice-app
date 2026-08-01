@@ -12,6 +12,8 @@
   ],
   "explainInstruction": "Abstrakte Fabrik (Abstract Factory) stellt Erzeugungsoperationen für eine zusammenpassende Produktfamilie bereit.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

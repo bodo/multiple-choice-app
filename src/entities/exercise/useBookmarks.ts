@@ -1,50 +1,55 @@
-import { ref } from 'vue'
+import { liveQuery, type Subscription } from 'dexie'
+import { computed, ref } from 'vue'
+import { db, type StoredBookmark } from '../../db/db'
 
-const STORAGE_KEY = 'bodo-mc-bookmarks'
+const bookmarkItems = ref<StoredBookmark[]>([])
+const bookmarks = computed(() => new Set(
+  bookmarkItems.value.map(bookmark => bookmark.exerciseId),
+))
+let subscription: Subscription | undefined
 
-function load(): Set<string> {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    return raw ? new Set(JSON.parse(raw)) : new Set()
-  } catch {
-    return new Set()
-  }
+export async function initializeBookmarks(): Promise<void> {
+  bookmarkItems.value = await db.bookmarks.orderBy('createdAt').toArray()
+  subscription?.unsubscribe()
+  subscription = liveQuery(() => db.bookmarks.orderBy('createdAt').toArray())
+    .subscribe({
+      next(items) {
+        bookmarkItems.value = items
+      },
+      error(error) {
+        console.warn('Bookmarks could not be read from IndexedDB.', error)
+      },
+    })
 }
 
-function save() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify([...bookmarkSet]))
+export async function addBookmark(exerciseId: string): Promise<void> {
+  await db.bookmarks.put({ exerciseId, createdAt: Date.now() })
 }
 
-const bookmarkSet = load()
-const bookmarks = ref(new Set(bookmarkSet))
-
-function sync() {
-  bookmarks.value = new Set(bookmarkSet)
+export async function removeBookmark(exerciseId: string): Promise<void> {
+  await db.bookmarks.delete(exerciseId)
 }
 
-export function toggleBookmark(id: string) {
-  if (bookmarkSet.has(id)) {
-    bookmarkSet.delete(id)
+export async function toggleBookmark(exerciseId: string): Promise<void> {
+  const existing = await db.bookmarks.get(exerciseId)
+  if (existing) {
+    await removeBookmark(exerciseId)
   } else {
-    bookmarkSet.add(id)
+    await addBookmark(exerciseId)
   }
-  save()
-  sync()
 }
 
-export function isBookmarked(id: string): boolean {
-  return bookmarkSet.has(id)
-}
-
-export function getBookmarks(): Set<string> {
-  return new Set(bookmarkSet)
+export function isBookmarked(exerciseId: string): boolean {
+  return bookmarks.value.has(exerciseId)
 }
 
 export function useBookmarks() {
   return {
+    bookmarkItems,
     bookmarks,
+    addBookmark,
+    removeBookmark,
     toggleBookmark,
     isBookmarked,
-    getBookmarks,
   }
 }

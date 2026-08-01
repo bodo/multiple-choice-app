@@ -12,6 +12,8 @@
   ],
   "explainInstruction": "Fassade (Facade) bündelt mehrere Subsystem-Schnittstellen hinter einem übersichtlichen Zugang.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

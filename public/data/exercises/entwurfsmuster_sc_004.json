@@ -12,6 +12,8 @@
   ],
   "explainInstruction": "Erbauer (Builder) verwendet denselben Konstruktionsprozess für unterschiedliche Repräsentationen.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

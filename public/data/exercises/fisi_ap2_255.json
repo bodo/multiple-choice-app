@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Recovery und Notfallvorsorge"
+  ],
+  "instruction": "Ordne den Begriff seiner Leitfrage zu.",
+  "answerOptions": [
+    "RPO",
+    "RTO",
+    "Restore-Test"
+  ],
+  "matchOptions": [
+    "Wie schnell muss der Dienst wieder laufen?",
+    "Funktioniert die geplante Wiederherstellung tatsächlich?",
+    "Bis zu welchem Datenstand muss zurückgekehrt werden?"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "RPO bewertet Datenverlust, RTO Dauer und der Restore-Test die praktische Erfüllbarkeit.",
+  "specializations": [
+    "FISI"
+  ]
+}

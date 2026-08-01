@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Shellskripte"
+  ],
+  "instruction": "Welche Daten sollten nicht als Klartext im Skript stehen? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Passwörter",
+    "Private API-Schlüssel",
+    "Private Schlüssel",
+    "Unkritische Portnummer 443"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Secrets gehören in einen kontrollierten Secret Store oder geschützte Laufzeitvariablen, nicht in Quelltext.",
+  "specializations": [
+    "FISI"
+  ]
+}

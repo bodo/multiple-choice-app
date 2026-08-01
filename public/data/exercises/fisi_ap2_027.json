@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Switching und VLAN"
+  ],
+  "instruction": "Welche Maßnahmen trennen Broadcast-Domänen auf einem geswitchten Netz sinnvoll? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Endgeräte unterschiedlichen VLANs zuordnen",
+    "Zwischen den VLANs über einen Router oder Layer-3-Switch routen",
+    "Alle Ports demselben VLAN zuordnen",
+    "Zusätzliche Hubs in jedes Segment einbauen"
+  ],
+  "correct": [
+    0,
+    1
+  ],
+  "explainInstruction": "VLANs bilden getrennte Broadcast-Domänen. Kommunikation zwischen ihnen erfordert Routing; Hubs oder ein gemeinsames VLAN trennen sie nicht.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

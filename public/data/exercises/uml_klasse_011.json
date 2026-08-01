@@ -14,6 +14,8 @@
   ],
   "explainInstruction": "Klassendiagramme beschreiben die statische Struktur mit Merkmalen und Beziehungen. Konkrete zeitliche Aufrufreihenfolgen werden in Interaktionsdiagrammen dargestellt.",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "UML",

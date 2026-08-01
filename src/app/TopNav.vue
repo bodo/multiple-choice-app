@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { BookOpen, BarChart3, Bookmark, Settings, Sun, Moon } from 'lucide-vue-next'
 import { useSettings } from '../entities/settings/useSettings'
 import { useExerciseCatalog } from '../entities/exercise/useExerciseCatalog'
+import { openWeakspotCount } from '../entities/exercise/useExerciseHistory'
 
 const { theme, mode } = useSettings()
 const {
@@ -53,6 +54,11 @@ function toggleTheme() {
     >
       <BarChart3 :size="16" />
       {{ $t('statsTitle') }}
+      <span
+        v-if="openWeakspotCount > 0"
+        class="badge badge-warning badge-sm"
+        :aria-label="$t('openWeakspotCount', { count: openWeakspotCount })"
+      >{{ openWeakspotCount }}</span>
     </RouterLink>
     <RouterLink
       to="/bookmarks"

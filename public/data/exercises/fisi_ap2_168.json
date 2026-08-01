@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "PowerShell"
+  ],
+  "instruction": "Ordne den Pipeline-Schritt seinem Zweck zu.",
+  "answerOptions": [
+    "`Where-Object`",
+    "`Select-Object`",
+    "`ForEach-Object`"
+  ],
+  "matchOptions": [
+    "Für jedes Objekt eine Aktion ausführen",
+    "Objekte nach Bedingung filtern",
+    "Eigenschaften auswählen oder berechnen"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "Where filtert, Select projiziert Eigenschaften und ForEach verarbeitet die einzelnen Objekte.",
+  "specializations": [
+    "FISI"
+  ]
+}

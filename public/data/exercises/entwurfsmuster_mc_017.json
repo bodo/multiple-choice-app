@@ -23,6 +23,8 @@
   ],
   "explainInstruction": "Die ersten sieben Zuordnungen beschreiben die Aufgaben der sieben Strukturmuster. Die letzten beiden verwechseln Fassade (Facade) mit Adapter (Adapter) und Kompositum (Composite) mit Stellvertreter (Proxy).",
   "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

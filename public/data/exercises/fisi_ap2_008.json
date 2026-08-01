@@ -1,0 +1,20 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "learningLevel": 5,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Wie viele regulär nutzbare Hostadressen besitzt ein IPv4-Subnetz mit Präfix /30? Gib nur die Anzahl ein.",
+  "correct": [
+    2
+  ],
+  "explainInstruction": "Ein /30-Netz hat 2 Hostbits und damit 2^2 = 4 Adressen. Nach Abzug von Netz- und Broadcastadresse bleiben 2 Hostadressen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

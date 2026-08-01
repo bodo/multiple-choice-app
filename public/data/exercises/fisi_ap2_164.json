@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "PowerShell"
+  ],
+  "instruction": "Welche Funktion hat `WhatIf` bei unterstützenden PowerShell-Befehlen?",
+  "answerOptions": [
+    "Geplante Änderungen anzeigen, ohne sie auszuführen",
+    "Passwörter ausgeben",
+    "Den Server neu starten",
+    "Ein Backup automatisch verifizieren"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "WhatIf unterstützt einen sicheren Probelauf mutierender Operationen.",
+  "specializations": [
+    "FISI"
+  ]
+}

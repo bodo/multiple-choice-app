@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Patch-, Konfigurations- und Lizenzmanagement"
+  ],
+  "instruction": "Warum sollte eine Paketquelle kryptografisch verifiziert werden?",
+  "answerOptions": [
+    "Herkunft und Unverändertheit von Paketen sollen geprüft werden.",
+    "Pakete werden dadurch kleiner.",
+    "Der Server erhält automatisch mehr RAM.",
+    "Die Lizenzkosten sinken dadurch."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Signaturen und vertrauenswürdige Repository-Metadaten schützen vor manipulierten Paketen.",
+  "specializations": [
+    "FISI"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "APIs und Datenformate"
+  ],
+  "instruction": "Welche HTTP-Methode soll eine Ressource nur lesen und keine Zustandsänderung auslösen?",
+  "answerOptions": [
+    "GET",
+    "POST",
+    "DELETE",
+    "PATCH"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "GET ist für sichere, lesende Abfragen vorgesehen.",
+  "specializations": [
+    "FISI"
+  ]
+}

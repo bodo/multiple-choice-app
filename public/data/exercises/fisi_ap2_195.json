@@ -1,0 +1,23 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Robuster und sicherer Betrieb"
+  ],
+  "instruction": "Wie heißt ein Probelauf, der geplante Änderungen zeigt, sie aber nicht ausführt? Deutsch oder Englisch genügt.",
+  "correct": [
+    "Dry Run",
+    "Probelauf",
+    "Trockenlauf"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Ein Dry Run dient der sicheren Vorschau von Scope und Wirkung.",
+  "specializations": [
+    "FISI"
+  ]
+}

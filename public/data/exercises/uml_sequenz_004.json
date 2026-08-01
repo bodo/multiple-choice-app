@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Ein Aktivierungsbalken beziehungsweise eine Ausführungsspezifikation zeigt, wann ein Teilnehmer innerhalb der Interaktion Verhalten ausführt.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

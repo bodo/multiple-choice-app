@@ -1,0 +1,20 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "learningLevel": 5,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Wie viele regulär nutzbare Hostadressen besitzt ein IPv4-Subnetz mit Präfix /23? Gib nur die Anzahl ein.",
+  "correct": [
+    510
+  ],
+  "explainInstruction": "Ein /23-Netz hat 9 Hostbits und damit 2^9 = 512 Adressen. Nach Abzug von Netz- und Broadcastadresse bleiben 510 Hostadressen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

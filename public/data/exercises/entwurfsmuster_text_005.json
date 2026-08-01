@@ -9,6 +9,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Iterator (Iterator) kapselt das Durchlaufen einer Sammlung.",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

@@ -1,0 +1,20 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "learningLevel": 5,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Wie viele regulär nutzbare Hostadressen besitzt ein IPv4-Subnetz mit Präfix /28? Gib nur die Anzahl ein.",
+  "correct": [
+    14
+  ],
+  "explainInstruction": "Ein /28-Netz hat 4 Hostbits und damit 2^4 = 16 Adressen. Nach Abzug von Netz- und Broadcastadresse bleiben 14 Hostadressen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

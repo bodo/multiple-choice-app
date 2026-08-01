@@ -21,6 +21,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Zulässig sind Adapter (Adapter), Brücke (Bridge), Kompositum (Composite), Dekorierer (Decorator), Fassade (Facade), Fliegengewicht (Flyweight) und Stellvertreter (Proxy).",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

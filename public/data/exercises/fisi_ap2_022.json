@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Switching und VLAN"
+  ],
+  "instruction": "Zwei Switches sollen mehrere VLANs über eine einzelne Verbindung transportieren. Welcher Porttyp wird benötigt?",
+  "answerOptions": [
+    "Access-Port",
+    "Trunk-Port",
+    "Mirror-Port",
+    "Routed Port ohne VLAN-Tags"
+  ],
+  "correct": [
+    1
+  ],
+  "explainInstruction": "Ein Trunk transportiert Frames mehrerer VLANs, üblicherweise mit IEEE-802.1Q-Tags.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

@@ -22,6 +22,8 @@
   ],
   "explainInstruction": "Iterator (Iterator), Vermittler (Mediator), Memento (Memento), Zustand (State), Schablonenmethode (Template Method) und Besucher (Visitor) sind Verhaltensmuster (behavioral patterns).",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

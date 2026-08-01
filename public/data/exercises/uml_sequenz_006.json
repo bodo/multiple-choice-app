@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Eine asynchrone Nachricht blockiert den Sender nicht bis zum Abschluss der Verarbeitung beim Empfänger.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

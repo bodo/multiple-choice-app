@@ -16,6 +16,8 @@
   ],
   "explainInstruction": "Dekorierer (Decorator), Fliegengewicht (Flyweight) und Stellvertreter (Proxy) sind Strukturmuster (structural patterns).",
   "mobileSolvable": true,
+  "learningLevel": 4,
+  "difficulty": 3,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

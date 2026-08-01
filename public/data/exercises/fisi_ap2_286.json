@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Virtualisierung, Container und Cloud",
+    "Hypervisor und virtuelle Maschinen"
+  ],
+  "instruction": "Was kennzeichnet einen Typ-1-Hypervisor?",
+  "answerOptions": [
+    "Er läuft direkt auf der Hardware statt auf einem allgemeinen Hostbetriebssystem.",
+    "Er kann nur einen Gast starten.",
+    "Er benötigt zwingend einen Webbrowser als Host.",
+    "Er virtualisiert ausschließlich Netzwerkgeräte."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Bare-Metal- oder Typ-1-Hypervisoren bilden direkt die Virtualisierungsschicht auf der Serverhardware.",
+  "specializations": [
+    "FISI"
+  ]
+}

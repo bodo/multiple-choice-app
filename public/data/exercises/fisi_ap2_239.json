@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "NAS, SAN und Dateisysteme"
+  ],
+  "instruction": "Welche Größen unterscheiden Block- und Dateispeicher? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Wer das Dateisystem verwaltet",
+    "Wie Clients zugreifen",
+    "Welche Sperr- und Freigabemechanismen gelten",
+    "Ob Daten grundsätzlich binär gespeichert werden"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Bei Blockspeicher verwaltet der Host das Dateisystem, bei Dateispeicher der Server; Zugriff und Koordination unterscheiden sich.",
+  "specializations": [
+    "FISI"
+  ]
+}

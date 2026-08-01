@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Verfügbarkeit und Kapazitätsplanung"
+  ],
+  "instruction": "Ordne die Architektur dem primären Ziel zu.",
+  "answerOptions": [
+    "Aktiv/Passiv",
+    "Aktiv/Aktiv",
+    "N+1-Kapazität"
+  ],
+  "matchOptions": [
+    "Mehrere Instanzen bedienen gleichzeitig Last",
+    "Ein zusätzliches Element deckt den Ausfall eines benötigten Elements",
+    "Ersatzinstanz übernimmt nach Failover"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Die Begriffe beschreiben Bereitschaft, parallelen Betrieb und dimensionierte Reserve.",
+  "specializations": [
+    "FISI"
+  ]
+}

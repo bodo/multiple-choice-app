@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Shellskripte"
+  ],
+  "instruction": "Ein Skript erzeugt eine temporäre Datei mit Zugangsdaten. Was ist wesentlich?",
+  "answerOptions": [
+    "Restriktive Rechte und zuverlässiges Löschen auch im Fehlerfall",
+    "Ein sprechender Dateiname im öffentlichen Webroot",
+    "Dauerhafte Speicherung zur Fehlersuche",
+    "Freigabe für alle lokalen Benutzer"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Temporäre Geheimnisse müssen gegen Mitlesen geschützt und über Cleanup-Handler sicher entfernt werden.",
+  "specializations": [
+    "FISI"
+  ]
+}

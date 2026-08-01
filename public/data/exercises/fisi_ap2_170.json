@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Konfigurationsmanagement"
+  ],
+  "instruction": "Warum sollte Infrastrukturcode in einer Versionsverwaltung liegen?",
+  "answerOptions": [
+    "Änderungen, Reviews und Rückkehr zu bekannten Ständen werden möglich.",
+    "Server benötigen dann keine Backups.",
+    "Jede Konfiguration wird automatisch korrekt.",
+    "Geheimnisse dürfen dann im Klartext gespeichert werden."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Versionsverwaltung schafft Nachvollziehbarkeit und Zusammenarbeit, ersetzt aber weder Tests noch Secret Management.",
+  "specializations": [
+    "FISI"
+  ]
+}

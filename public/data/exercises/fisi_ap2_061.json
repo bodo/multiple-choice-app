@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Transport- und Anwendungsprotokolle"
+  ],
+  "instruction": "Ordne den Verbindungsbefund der wahrscheinlichsten Ursache zu.",
+  "answerOptions": [
+    "TCP-SYN wird wiederholt, keine Antwort",
+    "Sofortiges TCP-RST vom Ziel",
+    "Handshake gelingt, danach TLS-Alarm wegen unbekannter CA"
+  ],
+  "matchOptions": [
+    "Zielhost erreichbar, Port nicht akzeptiert",
+    "Vertrauensproblem in der Zertifikatskette",
+    "Paketverlust, Filter oder nicht erreichbarer Dienst"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Ausbleibende Antworten deuten auf Verlust oder Filter hin, RST auf aktive Ablehnung und der TLS-Alarm auf fehlendes CA-Vertrauen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

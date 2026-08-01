@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Konfigurationsmanagement"
+  ],
+  "instruction": "Warum werden Inventargruppen für Server verwendet?",
+  "answerOptions": [
+    "Gemeinsame Rollen und Variablen können zielgerichtet angewendet werden.",
+    "Jede Gruppe ersetzt ein VLAN.",
+    "Server erhalten dadurch öffentliche IP-Adressen.",
+    "Inventargruppen verschlüsseln Backups."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Gruppen strukturieren Zielsysteme nach Rolle, Umgebung oder Standort und ermöglichen konsistente Konfiguration.",
+  "specializations": [
+    "FISI"
+  ]
+}

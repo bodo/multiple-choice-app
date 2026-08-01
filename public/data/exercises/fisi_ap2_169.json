@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Konfigurationsmanagement"
+  ],
+  "instruction": "Was beschreibt in einem deklarativen Konfigurationssystem der Sollzustand?",
+  "answerOptions": [
+    "Das gewünschte Endergebnis, nicht zwingend jeden manuellen Einzelschritt",
+    "Nur die letzte Fehlermeldung",
+    "Die aktuelle MAC-Tabelle",
+    "Eine Liste interaktiver Klicks ohne Prüfung"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Deklarative Systeme vergleichen Ist und Soll und führen die erforderlichen Änderungen aus.",
+  "specializations": [
+    "FISI"
+  ]
+}

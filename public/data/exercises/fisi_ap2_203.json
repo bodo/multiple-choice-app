@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Metriken und Alarmierung"
+  ],
+  "instruction": "Ordne die Kennzahl ihrer Aussage zu.",
+  "answerOptions": [
+    "Latenz",
+    "Durchsatz",
+    "Fehlerquote"
+  ],
+  "matchOptions": [
+    "Vorgänge oder Daten pro Zeiteinheit",
+    "Anteil fehlgeschlagener Vorgänge",
+    "Zeit pro Vorgang"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Latenz, Durchsatz und Fehlerquote bilden unterschiedliche Dimensionen der Dienstqualität.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

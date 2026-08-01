@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Patch-, Konfigurations- und Lizenzmanagement"
+  ],
+  "instruction": "Was bedeutet ein definiertes Wartungsfenster?",
+  "answerOptions": [
+    "Ein abgestimmter Zeitraum für Änderungen mit geklärten Auswirkungen und Zuständigkeiten",
+    "Ein Zeitraum ohne Monitoring",
+    "Eine dauerhafte Ausnahme von Sicherheitsregeln",
+    "Die garantierte Fehlerfreiheit eines Updates"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Wartungsfenster koordinieren erwartbare Beeinträchtigung, Personal, Kommunikation und Rückfallentscheidung.",
+  "specializations": [
+    "FISI"
+  ]
+}

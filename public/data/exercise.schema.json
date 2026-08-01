@@ -8,6 +8,8 @@
     "inputMode",
     "mobileSolvable",
     "correct",
+    "learningLevel",
+    "difficulty",
     "categories",
     "specializations"
   ],
@@ -20,6 +22,18 @@
     "mobileSolvable": {
       "type": "boolean",
       "description": "Whether the exercise can be completed comfortably on a small screen without external tools such as a calculator."
+    },
+    "learningLevel": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Learner-facing curriculum stage used as an inclusive maximum filter. This is separate from card difficulty and learner mastery."
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Estimated intrinsic card difficulty used for XP weighting. May later be calibrated from answer data."
     },
     "instruction": {
       "type": "string",
@@ -125,6 +139,7 @@
         "required": ["answerOptions"],
         "properties": {
           "answerOptions": {
+            "type": "array",
             "minItems": 1
           },
           "correct": {
@@ -147,6 +162,7 @@
         "required": ["answerOptions"],
         "properties": {
           "answerOptions": {
+            "type": "array",
             "minItems": 1
           },
           "correct": {
@@ -205,9 +221,11 @@
         "required": ["answerOptions", "matchOptions"],
         "properties": {
           "answerOptions": {
+            "type": "array",
             "minItems": 1
           },
           "matchOptions": {
+            "type": "array",
             "minItems": 1
           },
           "correct": {

@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "SLA und Verfügbarkeit"
+  ],
+  "instruction": "Warum kann die reine Host-Erreichbarkeit ein Dienst-SLA falsch positiv bewerten?",
+  "answerOptions": [
+    "Der Host kann antworten, während die eigentliche Anwendung fehlerhaft ist.",
+    "SLA gilt nur für ausgeschaltete Hosts.",
+    "Ping misst immer die Datenbankkonsistenz.",
+    "Ein erreichbarer Host hat garantiert korrekte Benutzerrechte."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Service-Level-Monitoring muss die tatsächlich zugesagte Funktion aus Sicht eines geeigneten Messpunkts prüfen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Shellskripte"
+  ],
+  "instruction": "Was bewirkt eine Pipe in einer Unix-Shell grundsätzlich?",
+  "answerOptions": [
+    "Sie verbindet die Standardausgabe eines Prozesses mit der Standardeingabe des nächsten.",
+    "Sie startet automatisch einen Container.",
+    "Sie verschlüsselt den Datenstrom.",
+    "Sie legt einen DNS-CNAME an."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Pipes bilden Verarbeitungsketten, indem stdout an stdin weitergereicht wird.",
+  "specializations": [
+    "FISI"
+  ]
+}

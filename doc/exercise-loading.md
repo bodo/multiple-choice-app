@@ -47,6 +47,17 @@ Version 8 converts the former single-string `correct` value of cached `TEXT`
 cards to a one-element array, preserving those cards while offline.
 Version 9 does the same for the former numeric scalar used by `SINGLE_CHOICE`
 and `NUMBER`.
+Version 10 adds IndexedDB tables for settings, bookmarks, exercise progress,
+answer events, practice sessions, streaks, and migration metadata. A separate
+idempotent startup import copies legacy localStorage values into these tables in
+one transaction. It removes only the recognized legacy keys and only after the
+transaction succeeds.
+Version 11 adds cumulative XP to progress and learning-level, difficulty,
+session, Leitner-box, and daily-goal snapshots to new answer events. Existing
+progress receives a backward-compatible XP value. The exercise cache alone is
+cleared once and then refreshed because `learningLevel` and `difficulty` are
+new required content metadata; user settings, answers, bookmarks, and progress
+are retained.
 
 Before the database is opened, the application checks
 `navigator.storage.persisted()` and requests origin-wide persistent storage with
@@ -56,7 +67,7 @@ logs a warning. Persistence prevents automatic storage-pressure eviction, but
 does not prevent users from explicitly clearing site data.
 
 Changing the source or specialization in the settings takes effect immediately.
-Both choices are persisted in `bodo-mc-settings`.
+Both choices are persisted in the Dexie `settings` table.
 
 ## JSON file service
 
@@ -104,6 +115,8 @@ The current draft response is:
       "id": "12_13_01",
       "inputMode": "SINGLE_CHOICE",
       "mobileSolvable": true,
+      "learningLevel": 2,
+      "difficulty": 1,
       "categories": ["Arbeitsrecht"],
       "specializations": ["FIAN", "FISI", "FIDP", "FIDV"],
       "correct": [1],
@@ -115,7 +128,18 @@ The current draft response is:
 ```
 
 Each API item follows the `Exercise` model. Unlike the JSON source, the API must
-provide a stable `id`; it cannot be derived from a filename.
+provide the same stable canonical `id` used by the corresponding JSON card; it
+cannot be derived from an API response position. Exercise caches remain
+separated by source and specialization, while bookmarks, progress, and weak-spot
+state use this source-independent ID. User state therefore survives the later
+switch from `json` to `api`. A future API should add a content revision when a
+material card change needs scheduling to be reconsidered without deleting its
+answer history.
+
+`learningLevel` is a required integer from 1 through 10 and identifies the
+curriculum stage. `difficulty` is a separate required integer from 1 through 5
+and weights XP. API and JSON sources must use the same values so switching the
+source does not change the learner's available subset or scoring semantics.
 
 `correct` is invariantly a non-empty array. `SINGLE_CHOICE` and `NUMBER`
 require exactly one numeric item; all other cardinality and item-type rules are

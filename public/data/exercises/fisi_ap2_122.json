@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Dateidienste und Berechtigungen"
+  ],
+  "instruction": "Warum ist die Vererbung von Dateisystemrechten nützlich?",
+  "answerOptions": [
+    "Unterobjekte erhalten konsistente Regeln vom übergeordneten Ordner.",
+    "Jede Datei wird automatisch öffentlich.",
+    "Backups sind dann überflüssig.",
+    "Benutzer benötigen keine Gruppen mehr."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Vererbung vereinfacht konsistente Berechtigungssätze, muss bei Ausnahmen aber bewusst verwaltet werden.",
+  "specializations": [
+    "FISI"
+  ]
+}

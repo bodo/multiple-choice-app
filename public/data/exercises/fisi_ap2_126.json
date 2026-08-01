@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Dateidienste und Berechtigungen"
+  ],
+  "instruction": "Ein Benutzer kann eine Datei lesen, aber nicht überschreiben, obwohl die Datei schreibbar erscheint. Welcher zusätzliche Faktor ist zu prüfen?",
+  "answerOptions": [
+    "Rechte am Verzeichnis, ACLs und Eigentümerschaft",
+    "Nur der MX-Record",
+    "WLAN-Kanal 1",
+    "NTP-Port 123"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Neben klassischen Modusbits können Verzeichnisrechte, ACLs, Eigentümer und Attribute den Zugriff beeinflussen.",
+  "specializations": [
+    "FISI"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Cluster und Failover"
+  ],
+  "instruction": "Warum gehört Fencing zu einem zustandsbehafteten Cluster?",
+  "answerOptions": [
+    "Ein nicht mehr kontrollierbarer Knoten wird zuverlässig vom gemeinsamen Schreiben ausgeschlossen.",
+    "Der Knoten erhält mehr Arbeitsspeicher.",
+    "Clients umgehen dadurch TLS.",
+    "Backups werden automatisch dedupliziert."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Fencing verhindert, dass ein isolierter oder hängender Knoten weiter auf gemeinsam genutzte Ressourcen schreibt.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

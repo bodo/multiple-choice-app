@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Identitäts- und Verzeichnisdienste"
+  ],
+  "instruction": "Warum werden Benutzer in einem Verzeichnisdienst vorzugsweise über Gruppen berechtigt?",
+  "answerOptions": [
+    "Gruppenbasierte Rechte sind nachvollziehbarer und leichter zu pflegen.",
+    "Benutzerkonten benötigen dann keine Authentisierung.",
+    "Dateisysteme speichern keine direkten Benutzerrechte.",
+    "Gruppen verhindern automatisch jede Fehlkonfiguration."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Rollen- und gruppenbasierte Zuweisung reduziert Einzelberechtigungen und vereinfacht Eintritt, Wechsel und Austritt.",
+  "specializations": [
+    "FISI"
+  ]
+}

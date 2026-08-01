@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Switching und VLAN"
+  ],
+  "instruction": "Ordne die Beobachtung der wahrscheinlichsten Layer-2-Ursache zu.",
+  "answerOptions": [
+    "MAC-Adresse wechselt fortlaufend zwischen zwei Ports",
+    "Nur Endgeräte in VLAN 40 sind über den Uplink nicht erreichbar",
+    "Ein Mitglied eines Port-Channels bleibt suspendiert"
+  ],
+  "matchOptions": [
+    "Abweichende LACP-Portparameter",
+    "Layer-2-Schleife",
+    "VLAN 40 auf dem Trunk nicht erlaubt"
+  ],
+  "correct": [
+    1,
+    2,
+    0
+  ],
+  "explainInstruction": "MAC-Flapping weist auf eine Schleife hin; ein fehlendes VLAN auf dem Trunk betrifft dieses VLAN; unpassende Parameter verhindern die Aufnahme in das LACP-Bündel.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

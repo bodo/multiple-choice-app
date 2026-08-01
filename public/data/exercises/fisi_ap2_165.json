@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "PowerShell"
+  ],
+  "instruction": "Warum ist `Export-Csv` für strukturierte Inventardaten geeigneter als manuell zusammengesetzte Textzeilen?",
+  "answerOptions": [
+    "Eigenschaften werden konsistent in Spalten serialisiert.",
+    "CSV ist grundsätzlich verschlüsselt.",
+    "CSV kann keine Sonderzeichen enthalten.",
+    "CSV ersetzt die Datenbanktransaktion."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Strukturierte Serialisierung vermeidet fragile Stringverkettung und erleichtert Weiterverarbeitung.",
+  "specializations": [
+    "FISI"
+  ]
+}

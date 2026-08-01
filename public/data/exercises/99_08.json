@@ -1,5 +1,7 @@
 {
   "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
   "instruction": "Welche der nachstehenden Aussagen über den Betriebsrat treffen zu?",
   "answerOptions": [
     "1. Der Betriebsrat setzt sich aus Arbeitnehmern und außerbetrieblichen Beratern (z.B. Gewerkschaftsfunktionären) zusammen.",

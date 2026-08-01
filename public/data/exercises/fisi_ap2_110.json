@@ -1,0 +1,22 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Anwendungs- und Infrastrukturdienste"
+  ],
+  "instruction": "Wie heißt ein vorgeschalteter Dienst, der Anfragen entgegennimmt und an interne Webserver weiterleitet?",
+  "correct": [
+    "Reverse Proxy",
+    "Reverse-Proxy"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Ein Reverse Proxy ist der serverseitige Vermittler vor einem oder mehreren Upstreams.",
+  "specializations": [
+    "FISI"
+  ]
+}

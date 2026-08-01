@@ -12,6 +12,11 @@ A mobile-first multiple-choice practice app built with Vue 3 + TypeScript + Vite
 - Auto-advance with configurable delay
 - Device-aware filtering for exercises suited to small screens
 - Persisted IT-specialization filter
+- Ten-step learning-level filter with optional adaptive progression
+- Daily goal across sessions with difficulty-weighted XP
+- Leitner-inspired repetition with a visible Box 0 for unresolved weak spots
+- Clickable bookmark and weak-spot lists with a read-only card preview
+- IndexedDB persistence for settings, progress, sessions, and bookmarks
 - i18n support (German / English)
 - Works offline (PWA)
 
@@ -24,9 +29,9 @@ or changing the specializations of a file, regenerate the indexes:
 python3 cms/999_generate_index.py
 ```
 
-This validates the specialization metadata and writes the complete authoring
-index plus `index_fian.json`, `index_fisi.json`, `index_fidp.json`, and
-`index_fidv.json`.
+This validates categories, specializations, learning level, difficulty, and the
+answer container, then writes the complete authoring index plus
+`index_fian.json`, `index_fisi.json`, `index_fidp.json`, and `index_fidv.json`.
 
 ### Exercise format
 
@@ -35,6 +40,8 @@ index plus `index_fian.json`, `index_fisi.json`, `index_fidp.json`, and
   // Required
   "inputMode": "SINGLE_CHOICE" | "MULTIPLE_CHOICE" | "TEXT" | "NUMBER" | "MATCH",
   "mobileSolvable": true, // small screen, no external tools required
+  "learningLevel": 2,     // curriculum stage 1–10; inclusive maximum filter
+  "difficulty": 1,        // intrinsic difficulty 1–5; controls XP
   "categories": ["Arbeitsrecht", "Tarifrecht"], // at least one learning category
   "specializations": ["FISI", "FIDV"], // required; all applicable values
   "correct": [3],        // one index (SINGLE_CHOICE), [0,1,4] (MULTIPLE_CHOICE),
@@ -90,6 +97,12 @@ possible so the result view can show a learner-friendly reference answer.
 small screen without external tools such as a calculator. It is required for
 every exercise and can be maintained in the exercise editor.
 
+`learningLevel` and `difficulty` describe different things. The learning level
+places a card in the curriculum from Warm-up (1) through Specialization
+Challenge (10); the selected setting includes that level and every lower one.
+Difficulty estimates the effort of the individual card from 1 to 5 and weights
+its XP. Both values are required and editable in the exercise editor.
+
 `categories` contains one or more learner-facing subject areas. The practice
 filter and category statistics use only this list. `adminTags` is optional and
 reserved for authoring and review workflow markers.
@@ -100,7 +113,7 @@ example AP2 network questions for both `FISI` and `FIDV`. Current AP1 cards
 explicitly list all four specializations. The list is required and must not be
 empty: every applicable specialization is stated explicitly, so adding a new
 occupation cannot accidentally expose existing cards to it. The specialization
-selected in Settings is stored in `bodo-mc-settings`.
+selected in Settings is stored in Dexie/IndexedDB.
 Changing it loads the corresponding specialization index and stores that
 question set in a separate Dexie cache for offline use.
 
@@ -186,14 +199,13 @@ documented in [`doc/exercise-loading.md`](doc/exercise-loading.md).
 The `mobileSolvableOnly` setting controls whether exercises with
 `mobileSolvable: false` are excluded from the question pool.
 
-When `bodo-mc-settings` is first created, or an older stored object does not yet
-contain this setting, the app makes a one-time device guess:
+When no stored IndexedDB setting exists, the app makes a one-time device guess:
 
 1. Use `navigator.userAgentData.mobile` when the browser provides it.
 2. Otherwise, treat a touch or coarse-pointer device whose shortest screen side
    is at most 1024 CSS pixels as mobile.
 
-The result is written to localStorage immediately. The toggle under **Settings →
+The result is written to Dexie immediately. The toggle under **Settings →
 Mobile-solvable exercises only** changes that stored value and is authoritative
 on subsequent visits; the device guess is not reapplied.
 
@@ -206,6 +218,49 @@ support the API, IndexedDB remains best-effort storage and the app logs a clear
 warning. Persistent storage protects against automatic eviction under storage
 pressure, but user-initiated site-data removal still requires an export or
 server-side backup for recovery.
+
+## Local persistence and weak spots
+
+Dexie/IndexedDB is the single persistent store for exercise caches, settings,
+bookmarks, answer events, progress, streaks, practice sessions, and the current
+training session. On the first start after this migration, the app imports the
+legacy `bodo-mc-*` localStorage values in one IndexedDB transaction and removes
+only those legacy keys after the transaction succeeds.
+
+Dexie version 11 adds XP and answer-event snapshots for learning level,
+difficulty, Leitner box, session, and daily-goal credit. It retains learner
+history and settings. Only the reproducible exercise cache is cleared once so
+that cards are refreshed with the required metadata.
+
+The first start uses learning level 1. In training, 60% of selections prefer
+the current level while 40% revisit lower prerequisites, subject to Leitner
+weighting. Automatic progression is enabled by default and only moves upward:
+at least 20% of the level (minimum 5, maximum 20 distinct cards) must be
+attempted, with at least 80% recent training accuracy and 60% of attempted
+cards in Box 2 or higher. The learner can still move the maximum manually.
+Exam mode uses AP1 at levels 1–4 and AP2 including WiSo from level 5 onward.
+
+The fixed daily goal is 30 distinct correctly answered cards per local day,
+across any number of sessions. A card counts once per day, and the progress
+view shows the contribution from Leitner Boxes 1–5. Correct first answers earn
+1, 2, 3, 5, or 8 XP for difficulties 1–5, plus one XP when the card came from
+Box 2 or higher. Repeats and incorrect answers earn no XP. The calculation is
+isolated in `DailyGoalService` so a later backend can incorporate teacher
+assignments and examination dates.
+
+Four consecutive incorrect answers to one card within 24 hours move it to
+**Box 0 – Study needed**. Box-0 cards are excluded from regular training, remain
+eligible in exam mode, and stay visible through the global warning count and
+the Weak Spots tab. Learners may also mark a card as a weak spot immediately.
+Returning a card to training is an explicit learner action: its full history is
+retained, its new error period starts at that point, and its Leitner box becomes
+Box 1.
+
+Bookmarks remain independent from weak spots and do not affect scheduling. Both
+lists are driven by their IndexedDB records rather than the currently selected
+specialization. Cached cards can be opened in a read-only modal; missing or
+currently inactive cards remain listed instead of disappearing silently. See
+[`doc/weakspots.md`](doc/weakspots.md) for the lifecycle and storage details.
 
 ## Development
 

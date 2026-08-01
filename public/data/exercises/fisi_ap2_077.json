@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Systematische Netzwerkdiagnose"
+  ],
+  "instruction": "Ein Host kann 127.0.0.1 erreichen, aber nicht seine eigene Interface-Adresse. Wo ist zuerst zu suchen?",
+  "answerOptions": [
+    "Lokaler Netzwerkstack bzw. Interfacekonfiguration",
+    "Externer DNS-Provider",
+    "Remote-Firewall hinter drei Routern",
+    "Bandbibliothek des Backups"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Loopback funktioniert, aber bereits die eigene Interface-Adresse nicht. Der Fehler liegt lokal am Interface oder Protokollstack.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

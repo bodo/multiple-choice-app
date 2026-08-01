@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import type { Exercise } from '../../entities/exercise/exercise'
 import MarkdownRenderer from '../../dumb/MarkdownRenderer.vue'
-import ImageViewer from './ImageViewer.vue'
+import ImageViewer from '../../dumb/ImageViewer.vue'
 
 const props = defineProps<{ exercise: Exercise }>()
 

@@ -18,9 +18,87 @@ export interface StoredTrainingSession {
   questionStartedAt: number
 }
 
+export type LearningStatus = 'active' | 'interventionRequired'
+export type WeakspotReason = 'manual' | 'repeatedIncorrect'
+
+export interface StoredAnswerLogEntry {
+  date: number
+  correct: boolean
+  timeMs: number
+  mode?: 'train' | 'exam'
+}
+
+export interface StoredExerciseProgress {
+  exerciseId: string
+  correct: number
+  wrong: number
+  lastSeen: number
+  box: number
+  avgTimeMs: number
+  answerLog: StoredAnswerLogEntry[]
+  learningStatus: LearningStatus
+  weakspotReason: WeakspotReason | null
+  weakspotAt: number | null
+  interventionCount: number
+  lastReturnedAt: number | null
+  xp: number
+}
+
+export interface StoredBookmark {
+  exerciseId: string
+  createdAt: number
+}
+
+export interface StoredPracticeSession {
+  id: string
+  date: string
+  questions: number
+  correct: number
+  durationMs: number
+}
+
+export interface StoredStreak {
+  id: string
+  date: string
+  length: number
+}
+
+export interface StoredAnswerEvent {
+  id: string
+  exerciseId: string
+  correct: boolean
+  durationMs: number
+  occurredAt: number
+  mode: 'train' | 'exam'
+  sessionId?: string
+  boxBefore?: number
+  boxAfter?: number
+  learningLevel?: number
+  difficulty?: number
+  xpEarned?: number
+  dailyGoalCredit?: boolean
+}
+
+export interface StoredAppSettings {
+  id: 'app'
+  value: unknown
+}
+
+export interface StoredMetadata {
+  key: string
+  value: string | number | boolean
+}
+
 type MultipleChoiceDatabase = Dexie & {
   exercises: EntityTable<StoredExercise, 'key'>
   trainingSessions: EntityTable<StoredTrainingSession, 'source'>
+  exerciseProgress: EntityTable<StoredExerciseProgress, 'exerciseId'>
+  bookmarks: EntityTable<StoredBookmark, 'exerciseId'>
+  practiceSessions: EntityTable<StoredPracticeSession, 'id'>
+  streaks: EntityTable<StoredStreak, 'id'>
+  answerEvents: EntityTable<StoredAnswerEvent, 'id'>
+  settings: EntityTable<StoredAppSettings, 'id'>
+  metadata: EntityTable<StoredMetadata, 'key'>
 }
 
 const allItSpecializations = ['FIAN', 'FISI', 'FIDP', 'FIDV']
@@ -214,3 +292,38 @@ db.version(9).stores({
     }
   }),
 )
+
+db.version(10).stores({
+  exercises: '&key, source, order',
+  trainingSessions: '&source',
+  exerciseProgress: '&exerciseId, learningStatus, lastSeen',
+  bookmarks: '&exerciseId, createdAt',
+  practiceSessions: '&id, date',
+  streaks: '&id, date',
+  answerEvents: '&id, exerciseId, occurredAt',
+  settings: '&id',
+  metadata: '&key',
+})
+
+db.version(11).stores({
+  exercises: '&key, source, order',
+  trainingSessions: '&source',
+  exerciseProgress: '&exerciseId, learningStatus, lastSeen',
+  bookmarks: '&exerciseId, createdAt',
+  practiceSessions: '&id, date',
+  streaks: '&id, date',
+  answerEvents: '&id, exerciseId, occurredAt',
+  settings: '&id',
+  metadata: '&key',
+}).upgrade(async (transaction) => {
+  await transaction.table<StoredExercise>('exercises').clear()
+  await transaction
+    .table<StoredExerciseProgress>('exerciseProgress')
+    .toCollection()
+    .modify((record) => {
+      if (typeof record.xp === 'number') return
+      record.xp = Math.round(
+        record.correct * 2 + Math.min(record.wrong, 1) * 0.5 + record.box,
+      )
+    })
+})

@@ -1,0 +1,31 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Identitäts- und Verzeichnisdienste"
+  ],
+  "instruction": "Ordne den Begriff aus der Identitäts- und Rechteverwaltung seinem Zweck zu.",
+  "answerOptions": [
+    "Authentisierung",
+    "Autorisierung",
+    "Rezertifizierung"
+  ],
+  "matchOptions": [
+    "Zulässige Aktionen bestimmen",
+    "Bestehende Zugriffsrechte regelmäßig bestätigen",
+    "Identität nachweisen"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Authentisierung klärt wer, Autorisierung was erlaubt ist; Rezertifizierung prüft den fortbestehenden Bedarf.",
+  "specializations": [
+    "FISI"
+  ]
+}

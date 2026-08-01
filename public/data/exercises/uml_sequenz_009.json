@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "`opt` modelliert einen optionalen Ablauf. Ist die zugehörige Bedingung falsch, wird der Inhalt übersprungen.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

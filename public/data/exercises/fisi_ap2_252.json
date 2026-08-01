@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Speicher, Backup und Wiederherstellung",
+    "Recovery und Notfallvorsorge"
+  ],
+  "instruction": "Was ist nach dem Wiederanlauf eines replizierten Systems zu prüfen?",
+  "answerOptions": [
+    "Datenkonsistenz, Replikationsrichtung und Rückstau",
+    "Nur der Hostname",
+    "Nur die CPU-Modellnummer",
+    "Ob jedes Log gelöscht wurde"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Nach Failover oder Restore dürfen alte Knoten nicht falsche Daten zurückreplizieren; Zustand und Richtung müssen geklärt sein.",
+  "specializations": [
+    "FISI"
+  ]
+}

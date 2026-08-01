@@ -1,32 +1,59 @@
 <script setup lang="ts">
 import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Bookmark, CircleAlert } from 'lucide-vue-next'
+import { Bookmark, CircleAlert, ShieldAlert, Sparkles, Undo2 } from 'lucide-vue-next'
 import { useExercises } from '../../entities/exercise/useExercises'
 import { useExerciseFlow } from './useExerciseFlow'
 import { useSettings } from '../../entities/settings/useSettings'
 import { useSwipe } from '../../utils/useSwipe'
-import { getCurrentStreak, getLongestStreak } from '../../entities/exercise/useExerciseHistory'
+import {
+  getCurrentStreak,
+  getLongestStreak,
+  isExerciseWeakspot,
+  markExerciseAsWeakspot,
+  openWeakspotCount,
+  returnWeakspotToTraining,
+} from '../../entities/exercise/useExerciseHistory'
 import { useBookmarks } from '../../entities/exercise/useBookmarks'
 import QuestionSection from './QuestionSection.vue'
 import AnswerSection from './AnswerSection.vue'
 import FlashCard from './FlashCard.vue'
 import ExplainBack from './ExplainBack.vue'
+import { useDailyGoal } from '../../entities/daily-goal/dailyGoalService'
+import { learningLevelDefinitions } from '../../entities/exercise/learningLevel'
 
 const { t } = useI18n()
 const { isLoading, error } = useExercises()
-const { phase, currentExercise, currentIndex, totalExercises, lastResult, submitAnswer, advance, startExam, totalAnswered, totalCorrect, accuracy, averageTimeSeconds, isExamFinished, examTotal } = useExerciseFlow()
+const { phase, currentExercise, lastResult, submitAnswer, advance, startExam, totalAnswered, totalCorrect, accuracy, averageTimeSeconds, isExamFinished, examTotal, newWeakspotExerciseId, examNewWeakspotCount, newLearningLevel } = useExerciseFlow()
 const { mode } = useSettings()
+const { progress: dailyGoal } = useDailyGoal()
+const examQuestionNumber = computed(() => Math.min(
+  examTotal.value,
+  totalAnswered.value + (phase.value === 'answering' ? 1 : 0),
+))
 
 const { bookmarks, toggleBookmark } = useBookmarks()
 const isCurrentBookmarked = computed(() => currentExercise.value ? bookmarks.value.has(currentExercise.value.id) : false)
+const isCurrentWeakspot = computed(() => currentExercise.value
+  ? isExerciseWeakspot(currentExercise.value.id)
+  : false)
+const manualWeakspotExerciseId = ref<string | null>(null)
 
-const currentStreakDisplay = ref(getCurrentStreak())
-const longestStreakDisplay = ref(getLongestStreak())
-watch(totalAnswered, () => {
-  currentStreakDisplay.value = getCurrentStreak()
-  longestStreakDisplay.value = getLongestStreak()
-})
+async function markCurrentAsWeakspot() {
+  const exerciseId = currentExercise.value?.id
+  if (!exerciseId) return
+  const changed = await markExerciseAsWeakspot(exerciseId)
+  if (changed) manualWeakspotExerciseId.value = exerciseId
+}
+
+async function undoManualWeakspot() {
+  if (!manualWeakspotExerciseId.value) return
+  await returnWeakspotToTraining(manualWeakspotExerciseId.value)
+  manualWeakspotExerciseId.value = null
+}
+
+const currentStreakDisplay = computed(() => getCurrentStreak())
+const longestStreakDisplay = computed(() => getLongestStreak())
 
 // aria-live announcement for screen readers
 const liveAnnouncement = computed(() => {
@@ -48,6 +75,19 @@ function formatLabeledValue(label: string, value: string | number): string {
 
 function formatParenthetical(value: string): string {
   return `(${value})`
+}
+
+function formatDailyGoal(completed: number, target: number): string {
+  return `${t('dailyGoal')}: ${completed} ${t('of')} ${target}`
+}
+
+function formatBoxCount(box: number, count: number): string {
+  return `B${box}: ${count}`
+}
+
+function learningLevelLabel(level: number): string {
+  const definition = learningLevelDefinitions.find(entry => entry.value === level)
+  return definition ? t(definition.labelKey) : String(level)
 }
 
 // Detect landscape vs portrait to avoid mounting duplicate input components
@@ -111,9 +151,34 @@ useSwipe((dir) => {
 
   <div
     v-else-if="!currentExercise"
-    class="h-full flex items-center justify-center text-base-content/60"
+    class="h-full flex flex-col items-center justify-center gap-4 p-6 text-base-content/60"
   >
-    {{ t('noExercises') }}
+    <p>{{ openWeakspotCount > 0 ? t('allActiveExercisesPaused') : t('noExercises') }}</p>
+    <div
+      v-if="manualWeakspotExerciseId"
+      role="status"
+      class="alert alert-info max-w-lg"
+    >
+      <ShieldAlert :size="20" />
+      <span class="flex-1">{{ t('weakspotMarkedManually') }}</span>
+      <button
+        type="button"
+        class="btn btn-sm btn-ghost"
+        @click="undoManualWeakspot"
+      >
+        <Undo2 :size="16" />
+        {{ t('undo') }}
+      </button>
+    </div>
+    <RouterLink
+      v-else-if="openWeakspotCount > 0"
+      class="btn btn-warning btn-sm"
+      to="/stats?tab=weakspots"
+    >
+      <ShieldAlert :size="16" />
+      {{ t('viewWeakspots') }}
+      <span class="badge badge-sm">{{ openWeakspotCount }}</span>
+    </RouterLink>
   </div>
 
   <div
@@ -129,6 +194,91 @@ useSwipe((dir) => {
       {{ liveAnnouncement }}
     </div>
 
+    <div
+      v-if="newWeakspotExerciseId"
+      role="alert"
+      class="alert alert-warning mx-4 mt-4"
+    >
+      <ShieldAlert :size="20" />
+      <div class="flex-1">
+        <p class="font-medium">
+          {{ t('weakspotAutomaticTitle') }}
+        </p>
+        <p class="text-sm">
+          {{ t('weakspotAutomaticHint') }}
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <RouterLink
+          class="btn btn-sm btn-ghost"
+          to="/stats?tab=weakspots"
+        >
+          {{ t('viewWeakspots') }}
+        </RouterLink>
+        <button
+          type="button"
+          class="btn btn-sm btn-primary"
+          @click="advance"
+        >
+          {{ t('next') }}
+        </button>
+      </div>
+    </div>
+
+    <div
+      v-else-if="manualWeakspotExerciseId"
+      role="status"
+      class="alert alert-info mx-4 mt-4"
+    >
+      <ShieldAlert :size="20" />
+      <span class="flex-1">{{ t('weakspotMarkedManually') }}</span>
+      <button
+        type="button"
+        class="btn btn-sm btn-ghost"
+        @click="undoManualWeakspot"
+      >
+        <Undo2 :size="16" />
+        {{ t('undo') }}
+      </button>
+    </div>
+
+    <div
+      v-else-if="newLearningLevel"
+      role="status"
+      class="alert alert-success mx-4 mt-4"
+    >
+      <Sparkles :size="20" />
+      <div class="flex-1">
+        <p class="font-medium">
+          {{ t('learningLevelAdvanced') }}
+        </p>
+        <p class="text-sm">
+          {{ t('learningLevelAdvancedHint', { level: newLearningLevel, name: learningLevelLabel(newLearningLevel) }) }}
+        </p>
+      </div>
+      <button
+        type="button"
+        class="btn btn-sm btn-primary"
+        @click="advance"
+      >
+        {{ t('next') }}
+      </button>
+    </div>
+
+    <div
+      v-else-if="openWeakspotCount > 0 && mode !== 'exam'"
+      class="alert mx-4 mt-4 py-2"
+    >
+      <ShieldAlert :size="18" />
+      <span class="text-sm">{{ t('openWeakspotCount', { count: openWeakspotCount }) }}</span>
+      <RouterLink
+        class="btn btn-sm btn-ghost"
+        to="/stats?tab=weakspots"
+      >
+        {{ t('viewWeakspots') }}
+      </RouterLink>
+    </div>
+
     <!-- Progress bar (always full width on top) -->
     <div class="w-full px-4 pt-4 pb-2 flex-shrink-0">
       <div class="flex items-center justify-between mb-2">
@@ -136,13 +286,13 @@ useSwipe((dir) => {
           v-if="mode === 'exam'"
           class="text-sm font-medium text-accent"
         >
-          {{ t('examQuestion') }} {{ totalAnswered + (phase === 'submitted' ? 0 : 1) }} {{ t('of') }} {{ examTotal }}
+          {{ t('examQuestion') }} {{ examQuestionNumber }} {{ t('of') }} {{ examTotal }}
         </span>
         <span
           v-else
           class="text-sm font-medium text-base-content/70"
         >
-          {{ t('question') }} {{ currentIndex + 1 }} {{ t('of') }} {{ totalExercises }}
+          {{ formatDailyGoal(dailyGoal.completed, dailyGoal.target) }}
         </span>
         <div class="flex items-center gap-2">
           <button
@@ -157,18 +307,40 @@ useSwipe((dir) => {
               :fill="isCurrentBookmarked ? 'currentColor' : 'none'"
             />
           </button>
+          <button
+            type="button"
+            class="p-1 rounded transition-colors"
+            :class="isCurrentWeakspot ? 'text-warning' : 'text-base-content/30 hover:text-warning'"
+            :disabled="isCurrentWeakspot"
+            :aria-label="isCurrentWeakspot ? t('alreadyWeakspot') : t('markWeakspot')"
+            @click="markCurrentAsWeakspot"
+          >
+            <ShieldAlert
+              :size="16"
+              :fill="isCurrentWeakspot ? 'currentColor' : 'none'"
+            />
+          </button>
           <span
             v-if="mode !== 'exam'"
             class="text-xs text-base-content/50"
-          >{{ formatPercent(Math.round((currentIndex + 1) / totalExercises * 100)) }}</span>
+          >{{ formatPercent(dailyGoal.percentage) }}</span>
         </div>
       </div>
       <progress
         class="progress w-full"
         :class="mode === 'exam' ? 'progress-accent' : 'progress-primary'"
-        :value="mode === 'exam' ? totalAnswered + (phase === 'submitted' ? 0 : 1) : currentIndex + 1"
-        :max="mode === 'exam' ? examTotal : totalExercises"
+        :value="mode === 'exam' ? examQuestionNumber : dailyGoal.completed"
+        :max="mode === 'exam' ? examTotal : dailyGoal.target"
       />
+      <div
+        v-if="mode !== 'exam'"
+        class="flex flex-wrap gap-x-3 gap-y-1 mt-2 text-xs text-base-content/50"
+      >
+        <span
+          v-for="box in 5"
+          :key="box"
+        >{{ formatBoxCount(box, dailyGoal.boxCounts[box]) }}</span>
+      </div>
       <div
         v-if="totalAnswered > 0"
         class="flex gap-4 mt-2 text-xs text-base-content/50"
@@ -231,6 +403,19 @@ useSwipe((dir) => {
       >
         {{ t('restartExam') }}
       </button>
+      <div
+        v-if="examNewWeakspotCount > 0"
+        class="alert alert-warning max-w-md"
+      >
+        <ShieldAlert :size="20" />
+        <span>{{ t('examWeakspotsAdded', { count: examNewWeakspotCount }) }}</span>
+        <RouterLink
+          class="btn btn-sm btn-ghost"
+          to="/stats?tab=weakspots"
+        >
+          {{ t('viewWeakspots') }}
+        </RouterLink>
+      </div>
     </div>
 
     <!-- Landscape/desktop: side-by-side, right column swaps on submit -->

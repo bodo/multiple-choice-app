@@ -10,8 +10,9 @@ Requires [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 ### generate-index
 
-Scans `public/data/exercises/`, validates every exercise's specialization
-metadata, and regenerates the complete `index.json` plus
+Scans `public/data/exercises/`, validates every exercise's categories,
+specializations, learning level, difficulty, and answer container, then
+regenerates the complete `index.json` plus
 `index_fian.json`, `index_fisi.json`, `index_fidp.json`, and `index_fidv.json`.
 
 Run after adding, removing, or renaming exercise files (from the project root):
@@ -110,6 +111,7 @@ Features:
 - One or more required IT specializations; all applicable values are selected explicitly
 - Optional author workflow tags, separate from learner-facing categories
 - `mobileSolvable` checkbox for small-screen exercises that need no external tools
+- Required curriculum learning level (1–10) and intrinsic difficulty (1–5)
 - Screenshot selection (copies to `public/data/img/`)
 - Save / Save and Next navigation
 - OCR reference panel (screenshot crops + full source PDF pages) for copy-pasting content

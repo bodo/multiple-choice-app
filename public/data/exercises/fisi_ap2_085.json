@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Systematische Netzwerkdiagnose"
+  ],
+  "instruction": "Welche Befunde sprechen für ein DNS- statt für ein allgemeines Routingproblem? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Ziel-IP ist erreichbar.",
+    "Abfrage gegen den konfigurierten Resolver läuft in einen Timeout.",
+    "Ein alternativer Resolver liefert den erwarteten Record.",
+    "Auch das Standardgateway ist nicht erreichbar."
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Funktionierende IP-Erreichbarkeit bei fehlerhaften Resolverantworten grenzt die Störung auf DNS ein.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

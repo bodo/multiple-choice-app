@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Shellskripte"
+  ],
+  "instruction": "Warum ist das Parsen menschenlesbarer Konsolenausgabe für Automation riskant?",
+  "answerOptions": [
+    "Format und Sprache können sich ändern.",
+    "Konsolenausgabe kann keine Zahlen enthalten.",
+    "Text ist immer verschlüsselt.",
+    "Exit-Codes funktionieren dann nicht mehr."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Stabile Maschinenformate oder APIs sind robuster als für Menschen formatierte Tabellen und Meldungen.",
+  "specializations": [
+    "FISI"
+  ]
+}

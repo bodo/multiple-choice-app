@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Ein Merge führt alternative Kontrollflüsse zusammen. Anders als ein Join synchronisiert er keine parallel laufenden Pfade.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

@@ -1,6 +1,8 @@
 {
   "inputMode": "NUMBER",
   "mobileSolvable": true,
+  "learningLevel": 3,
+  "difficulty": 2,
   "categories": [
     "AP1",
     "Betriebssysteme und Netzwerke"

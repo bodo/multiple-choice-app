@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Eine Guard-Bedingung steuert, unter welcher Voraussetzung ein ausgehender Kontrollfluss gewählt werden kann.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

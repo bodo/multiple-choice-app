@@ -12,6 +12,8 @@
   ],
   "explainInstruction": "Kompositum (Composite) gibt Blättern und zusammengesetzten Knoten eine gemeinsame Schnittstelle.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "Softwarearchitektur und Entwurfsmuster",

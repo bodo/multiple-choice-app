@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": false,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Welche Netzadresse gehört zur Hostadresse 172.16.5.142/28?",
+  "answerOptions": [
+    "172.16.5.112",
+    "172.16.5.128",
+    "172.16.5.140",
+    "172.16.5.144"
+  ],
+  "correct": [
+    1
+  ],
+  "explainInstruction": "Bei /28 beträgt die Blockgröße 16. 142 liegt im Block 128 bis 143.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

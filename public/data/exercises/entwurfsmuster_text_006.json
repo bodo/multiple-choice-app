@@ -9,6 +9,8 @@
   "maximumStringDistance": 0,
   "explainInstruction": "Memento (Memento) speichert einen wiederherstellbaren Zustands-Schnappschuss.",
   "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
   "categories": [
     "AP2",
     "Softwarearchitektur und Entwurfsmuster",

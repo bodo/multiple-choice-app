@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "`alt` beschreibt alternative Operanden mit Bedingungen, beispielsweise einen Erfolgs- und einen Fehlerablauf.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

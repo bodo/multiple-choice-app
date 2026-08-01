@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Systematische Netzwerkdiagnose"
+  ],
+  "instruction": "Ein Dienst lauscht laut Server lokal auf 127.0.0.1:8080. Warum ist er von anderen Hosts nicht erreichbar?",
+  "answerOptions": [
+    "Er ist nur an das Loopback-Interface gebunden.",
+    "Port 8080 kann grundsätzlich nicht geroutet werden.",
+    "DNS erlaubt keine vierstelligen Ports.",
+    "TCP benötigt dafür ein VLAN-Tag im Payload."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein an 127.0.0.1 gebundener Dienst nimmt nur lokale Verbindungen an.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Die Assoziation zeigt die Beteiligung beziehungsweise Kommunikation einer externen Rolle mit dem betreffenden Anwendungsfall.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

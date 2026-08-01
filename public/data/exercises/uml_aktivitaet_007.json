@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Ein Fork wird als Balken dargestellt und vervielfacht den eingehenden Kontrollfluss auf mehrere parallel ausführbare Pfade.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

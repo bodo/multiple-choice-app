@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Bei einem synchronen Aufruf wartet der aufrufende Teilnehmer typischerweise auf den Abschluss des aufgerufenen Verhaltens, bevor sein Ablauf weitergeht.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

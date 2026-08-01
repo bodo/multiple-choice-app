@@ -1,0 +1,32 @@
+{
+  "inputMode": "MATCH",
+  "mobileSolvable": true,
+  "learningLevel": 7,
+  "difficulty": 3,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Cluster und Failover"
+  ],
+  "instruction": "Ordne den Clusterbegriff seinem Zweck zu.",
+  "answerOptions": [
+    "Health Check",
+    "Quorum",
+    "Fencing"
+  ],
+  "matchOptions": [
+    "Eindeutige aktive Clusterseite bestimmen",
+    "Unkontrollierten Zugriff eines Knotens unterbinden",
+    "Funktionsfähigkeit eines Knotens oder Dienstes bewerten"
+  ],
+  "correct": [
+    2,
+    0,
+    1
+  ],
+  "explainInstruction": "Health Checks erkennen Zustand, Quorum legitimiert Entscheidungen und Fencing erzwingt Isolation.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

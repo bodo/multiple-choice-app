@@ -1,0 +1,28 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "WLAN-Planung"
+  ],
+  "instruction": "Welche Faktoren sollten bei einer professionellen WLAN-Ausleuchtung berücksichtigt werden? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Dämpfung durch Wände und Einrichtung",
+    "Erwartete Clientdichte und Anwendungen",
+    "Störquellen und fremde WLANs",
+    "Nur die Kabelfarbe der Access Points"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Bausubstanz, Last und Funkumgebung bestimmen Zellgröße, Platzierung, Kanal- und Leistungsplanung.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

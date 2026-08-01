@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "PowerShell"
+  ],
+  "instruction": "Ein Cmdlet liefert 5.000 Objekte. Was ist für effiziente Filterung meist vorzuziehen?",
+  "answerOptions": [
+    "Wenn unterstützt, früh mit dem Cmdlet-Parameter serverseitig filtern.",
+    "Alle Objekte zuerst in Text konvertieren.",
+    "Jedes Objekt zweimal über das Netz laden.",
+    "Den Filter nur im Anzeigenamen des Skripts notieren."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Frühe Filterung reduziert Datenübertragung und lokale Verarbeitung.",
+  "specializations": [
+    "FISI"
+  ]
+}

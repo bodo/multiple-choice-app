@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "Aktivitätsdiagramme modellieren Abläufe und Kontroll- beziehungsweise Objektflüsse. Sie eignen sich beispielsweise für Geschäftsprozesse oder Algorithmen.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

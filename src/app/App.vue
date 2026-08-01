@@ -25,7 +25,6 @@ const resolvedTheme = computed(() => {
 
 watch(resolvedTheme, (val) => {
   document.documentElement.setAttribute('data-theme', val)
-  localStorage.setItem('theme', val)
 }, { immediate: true })
 </script>
 

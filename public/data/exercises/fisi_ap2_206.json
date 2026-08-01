@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Monitoring und Hochverfügbarkeit",
+    "Logs, Traces und SNMP"
+  ],
+  "instruction": "Ein zentrales Logsystem erhält plötzlich keine Logs eines Servers mehr, der Dienst läuft aber. Was ist zuerst zu prüfen?",
+  "answerOptions": [
+    "Agent/Forwarder, Queue und Transportweg",
+    "RAID-Level des DNS-Servers",
+    "Bildschirmtreiber",
+    "WLAN-Passwort eines Smartphones"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Logerzeugung und Logtransport sind getrennt. Agentstatus, Rückstau, Zertifikate und Netzwerkpfad grenzen die Ursache ein.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

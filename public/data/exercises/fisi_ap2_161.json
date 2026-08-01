@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "PowerShell"
+  ],
+  "instruction": "Welcher Vorteil der PowerShell-Pipeline unterscheidet sie von einer reinen Textpipeline?",
+  "answerOptions": [
+    "Sie transportiert typisierte Objekte mit Eigenschaften.",
+    "Sie funktioniert ohne Betriebssystem.",
+    "Sie verschlüsselt jedes Objekt automatisch.",
+    "Sie benötigt keine Fehlerbehandlung."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Cmdlets geben .NET-Objekte weiter; nachfolgende Schritte können stabil auf Eigenschaften zugreifen.",
+  "specializations": [
+    "FISI"
+  ]
+}

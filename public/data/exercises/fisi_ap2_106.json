@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Anwendungs- und Infrastrukturdienste"
+  ],
+  "instruction": "Welche Aufgabe hat ein Forward Proxy?",
+  "answerOptions": [
+    "Er vermittelt ausgehende Clientanfragen zu externen Zielen.",
+    "Er ersetzt den Bootloader.",
+    "Er stellt Blockspeicher per iSCSI bereit.",
+    "Er erzeugt Kerberos-Tickets als Domain Controller."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein Forward Proxy handelt im Auftrag von Clients und kann ausgehende Zugriffe steuern oder protokollieren.",
+  "specializations": [
+    "FISI"
+  ]
+}

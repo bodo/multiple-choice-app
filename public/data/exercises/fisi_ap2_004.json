@@ -1,0 +1,20 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": true,
+  "learningLevel": 5,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "IPv4-Subnetting"
+  ],
+  "instruction": "Wie viele regulär nutzbare Hostadressen besitzt ein IPv4-Subnetz mit Präfix /26? Gib nur die Anzahl ein.",
+  "correct": [
+    62
+  ],
+  "explainInstruction": "Ein /26-Netz hat 6 Hostbits und damit 2^6 = 64 Adressen. Nach Abzug von Netz- und Broadcastadresse bleiben 62 Hostadressen.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}

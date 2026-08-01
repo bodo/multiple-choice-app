@@ -1,0 +1,19 @@
+{
+  "inputMode": "NUMBER",
+  "mobileSolvable": false,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Virtualisierung, Container und Cloud",
+    "Kapazitäts- und Migrationsplanung"
+  ],
+  "instruction": "Ein VM-Image mit 360 GB wird über eine tatsächlich nutzbare Verbindung von konstant 600 Mbit/s übertragen. Wie viele Minuten dauert die reine Übertragung idealisiert? Verwende 1 Byte = 8 Bit und dezimale Einheiten. Gib nur die Zahl ein.",
+  "correct": [
+    80
+  ],
+  "explainInstruction": "360 GB × 8 = 2.880 Gbit. 2.880 Gbit / 0,6 Gbit/s = 4.800 s = 80 Minuten.",
+  "specializations": [
+    "FISI"
+  ]
+}

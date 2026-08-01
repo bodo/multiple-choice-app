@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Shellskripte"
+  ],
+  "instruction": "Warum sollten Variablen in Shellskripten bei der Übergabe als Argument häufig in Anführungszeichen stehen?",
+  "answerOptions": [
+    "Damit Leerzeichen und Wildcards nicht unbeabsichtigt aufgeteilt oder expandiert werden",
+    "Damit die Variable verschlüsselt wird",
+    "Damit der Befehl als root läuft",
+    "Damit die Datei ausführbar wird"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Quoting schützt Argumentgrenzen und verhindert unerwünschte Word-Splitting- und Glob-Effekte.",
+  "specializations": [
+    "FISI"
+  ]
+}

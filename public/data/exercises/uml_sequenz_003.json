@@ -10,6 +10,8 @@
   "correct": [2],
   "explainInstruction": "Später eingezeichnete Ereignisse liegen üblicherweise weiter unten. Dadurch wird die Interaktion von oben nach unten gelesen.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

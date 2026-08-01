@@ -1,0 +1,22 @@
+{
+  "inputMode": "TEXT",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Dateidienste und Berechtigungen"
+  ],
+  "instruction": "Wie heißt eine zusätzliche, feinere Liste von Zugriffsregeln neben klassischen Besitzer-/Gruppenrechten? Gib die Abkürzung oder den englischen Namen an.",
+  "correct": [
+    "ACL",
+    "Access Control List"
+  ],
+  "caseSensitive": false,
+  "maximumStringDistance": 1,
+  "explainInstruction": "Eine Access Control List ergänzt differenzierte Regeln für weitere Benutzer und Gruppen.",
+  "specializations": [
+    "FISI"
+  ]
+}

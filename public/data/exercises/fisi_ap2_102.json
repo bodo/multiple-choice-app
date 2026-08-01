@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Anwendungs- und Infrastrukturdienste"
+  ],
+  "instruction": "Warum bindet man einen internen Administrationsdienst nur an eine Management-IP?",
+  "answerOptions": [
+    "Die erreichbare Angriffsfläche wird auf das Verwaltungsnetz begrenzt.",
+    "Damit benötigt der Dienst keine Updates.",
+    "Damit kann er keine Logs erzeugen.",
+    "Dadurch wird jeder Client automatisch Administrator."
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Eine gezielte Bind-Adresse ergänzt Firewallregeln und verhindert unbeabsichtigtes Lauschen auf allen Interfaces.",
+  "specializations": [
+    "FISI"
+  ]
+}

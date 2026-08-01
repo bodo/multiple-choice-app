@@ -1,0 +1,27 @@
+{
+  "inputMode": "MULTIPLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 2,
+  "categories": [
+    "AP2",
+    "Serverdienste und Administration",
+    "Dateidienste und Berechtigungen"
+  ],
+  "instruction": "Welche Maßnahmen verbessern die Wartbarkeit von Dateifreigaben? Wähle alle richtigen Antworten.",
+  "answerOptions": [
+    "Rechte an Gruppen statt an Einzelpersonen vergeben",
+    "Ordnerstruktur und Vererbung dokumentieren",
+    "Berechtigungen regelmäßig rezertifizieren",
+    "Für jede Datei zufällige Einzelrechte setzen"
+  ],
+  "correct": [
+    0,
+    1,
+    2
+  ],
+  "explainInstruction": "Gruppen, nachvollziehbare Vererbung und regelmäßige Prüfung verhindern historisch gewachsene unübersichtliche ACLs.",
+  "specializations": [
+    "FISI"
+  ]
+}

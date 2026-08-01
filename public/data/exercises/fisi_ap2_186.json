@@ -1,0 +1,25 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Automatisierung der Systemadministration",
+    "Robuster und sicherer Betrieb"
+  ],
+  "instruction": "Ein nächtlicher Job darf nicht parallel mit sich selbst laufen. Welche technische Maßnahme ist geeignet?",
+  "answerOptions": [
+    "Lock bzw. Mutex mit verlässlicher Freigabe verwenden",
+    "DNS-TTL erhöhen",
+    "Zwei weitere Cron-Einträge anlegen",
+    "Alle Fehlerausgaben verwerfen"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Ein exklusiver Lock verhindert überlappende Läufe; Stale-Lock- und Cleanup-Verhalten müssen berücksichtigt werden.",
+  "specializations": [
+    "FISI"
+  ]
+}

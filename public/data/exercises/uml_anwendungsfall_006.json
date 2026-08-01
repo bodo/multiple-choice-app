@@ -10,6 +10,8 @@
   "correct": [0],
   "explainInstruction": "`«include»` lagert gemeinsam benötigtes Verhalten aus. Der Basis-Anwendungsfall bezieht dieses Verhalten in seinen Ablauf ein.",
   "mobileSolvable": true,
+  "learningLevel": 2,
+  "difficulty": 1,
   "categories": [
     "AP1",
     "UML",

@@ -1,0 +1,26 @@
+{
+  "inputMode": "SINGLE_CHOICE",
+  "mobileSolvable": true,
+  "learningLevel": 6,
+  "difficulty": 1,
+  "categories": [
+    "AP2",
+    "Netzwerkplanung und Diagnose",
+    "Transport- und Anwendungsprotokolle"
+  ],
+  "instruction": "Wodurch wird bei TCP der Verbindungsaufbau abgeschlossen?",
+  "answerOptions": [
+    "Drei-Wege-Handshake SYN, SYN-ACK, ACK",
+    "ARP, DNS, NTP",
+    "DISCOVER, OFFER, REQUEST",
+    "HELLO, DATA, FIN"
+  ],
+  "correct": [
+    0
+  ],
+  "explainInstruction": "Der TCP-Verbindungsaufbau erfolgt regulär mit SYN, SYN-ACK und ACK.",
+  "specializations": [
+    "FISI",
+    "FIDV"
+  ]
+}
