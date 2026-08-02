@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useSettings } from '../entities/settings/useSettings'
 import { initializeExerciseLoading } from '../entities/exercise/useExercises'
 import { useNetworkStatus } from '../entities/network/useNetworkStatus'
+import MobileDock from './MobileDock.vue'
 import TopNav from './TopNav.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
@@ -31,10 +32,11 @@ watch(resolvedTheme, (val) => {
 <template>
   <div class="flex flex-col h-dvh">
     <TopNav />
-    <main class="flex-1 min-h-0 overflow-y-auto">
+    <main class="flex-1 min-h-0 overflow-y-auto pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pb-0">
       <div class="max-w-5xl w-full mx-auto h-full">
         <RouterView />
       </div>
     </main>
+    <MobileDock />
   </div>
 </template>

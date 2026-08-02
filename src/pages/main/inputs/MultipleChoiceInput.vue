@@ -148,12 +148,15 @@ onUnmounted(() => {
       :aria-label="`Option ${displayIdx + 1} of ${optionCount}`"
       @click="toggle(originalIdx)"
     >
-      <span
-        class="font-semibold text-primary mt-0.5"
-        aria-label="keyboard shortcut"
-      >{{ formatShortcut(displayIdx + 1) }}</span>
       <div class="flex-1 min-w-0 break-words">
-        <MarkdownRenderer :content="exercise.answerOptions?.[originalIdx] ?? ''" />
+        <span
+          class="mr-2 font-semibold text-primary"
+          aria-label="keyboard shortcut"
+        >{{ formatShortcut(displayIdx + 1) }}</span>
+        <MarkdownRenderer
+          inline
+          :content="exercise.answerOptions?.[originalIdx] ?? ''"
+        />
       </div>
       <input
         v-if="isInteractive"

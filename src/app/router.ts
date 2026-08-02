@@ -3,6 +3,7 @@ import MainPage from '../pages/main/MainPage.vue'
 import SettingsPage from '../pages/settings/SettingsPage.vue'
 import StatsPage from '../pages/stats/StatsPage.vue'
 import BookmarksPage from '../pages/bookmarks/BookmarksPage.vue'
+import HelpPage from '../pages/help/HelpPage.vue'
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -11,5 +12,6 @@ export const router = createRouter({
     { path: '/settings', component: SettingsPage },
     { path: '/stats', component: StatsPage },
     { path: '/bookmarks', component: BookmarksPage },
+    { path: '/help', component: HelpPage },
   ],
 })

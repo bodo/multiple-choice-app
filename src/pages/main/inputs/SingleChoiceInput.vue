@@ -119,18 +119,23 @@ onUnmounted(() => {
       v-for="(originalIdx, displayIdx) in order"
       :key="originalIdx"
       type="button"
-      class="w-full rounded-lg border-2 px-4 py-3 text-left transition-colors duration-150 break-words focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
+      class="w-full rounded-lg border-2 px-4 py-3 flex items-start gap-3 text-left transition-colors duration-150 break-words focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
       :class="optionClass(originalIdx)"
       :disabled="!isInteractive"
       :aria-pressed="selected === originalIdx"
       :aria-label="`Option ${displayIdx + 1} of ${optionCount}`"
       @click="select(originalIdx)"
     >
-      <span
-        class="inline-block mr-2 font-semibold text-primary shrink-0"
-        aria-label="keyboard shortcut"
-      >{{ formatShortcut(displayIdx + 1) }}</span>
-      <span class="flex-1 min-w-0 break-words"><MarkdownRenderer :content="exercise.answerOptions?.[originalIdx] ?? ''" /></span>
+      <span class="flex-1 min-w-0 break-words">
+        <span
+          class="mr-2 font-semibold text-primary"
+          aria-label="keyboard shortcut"
+        >{{ formatShortcut(displayIdx + 1) }}</span>
+        <MarkdownRenderer
+          inline
+          :content="exercise.answerOptions?.[originalIdx] ?? ''"
+        />
+      </span>
       <span
         v-if="optionIcon(originalIdx)"
         class="shrink-0 text-lg font-bold"

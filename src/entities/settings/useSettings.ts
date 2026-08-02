@@ -49,15 +49,15 @@ function guessMobileSolvableOnly(): boolean {
 
 function defaultSettings(): StoredSettings {
   return {
-    autoAdvance: true,
+    autoAdvance: false,
     language: 'eng',
     theme: 'auto',
-    timeoutCorrect: 1500,
-    timeoutIncorrect: 3000,
+    timeoutCorrect: 10000,
+    timeoutIncorrect: 20000,
     mode: 'train',
-    soundEnabled: true,
+    soundEnabled: false,
     hapticEnabled: true,
-    examQuestionCount: 5,
+    examQuestionCount: 10,
     exerciseSource: 'json',
     mobileSolvableOnly: guessMobileSolvableOnly(),
     specialization: 'FIAN',
@@ -81,15 +81,21 @@ function normalizeSettings(value: unknown): StoredSettings {
   const defaults = defaultSettings()
   if (!value || typeof value !== 'object' || Array.isArray(value)) return defaults
   const candidate = value as Record<string, unknown>
+  const storedAutoAdvance = typeof candidate.autoAdvance === 'boolean'
+    ? candidate.autoAdvance
+    : undefined
+  const hasStoredAutoAdvance = storedAutoAdvance !== undefined
 
   return {
-    autoAdvance: typeof candidate.autoAdvance === 'boolean'
-      ? candidate.autoAdvance
-      : defaults.autoAdvance,
+    autoAdvance: storedAutoAdvance ?? defaults.autoAdvance,
     language: candidate.language === 'deu' ? 'deu' : 'eng',
     theme: typeof candidate.theme === 'string' ? candidate.theme : defaults.theme,
-    timeoutCorrect: finiteNumber(candidate.timeoutCorrect, defaults.timeoutCorrect),
-    timeoutIncorrect: finiteNumber(candidate.timeoutIncorrect, defaults.timeoutIncorrect),
+    timeoutCorrect: hasStoredAutoAdvance
+      ? finiteNumber(candidate.timeoutCorrect, defaults.timeoutCorrect)
+      : defaults.timeoutCorrect,
+    timeoutIncorrect: hasStoredAutoAdvance
+      ? finiteNumber(candidate.timeoutIncorrect, defaults.timeoutIncorrect)
+      : defaults.timeoutIncorrect,
     mode: candidate.mode === 'exam' ? 'exam' : 'train',
     soundEnabled: typeof candidate.soundEnabled === 'boolean'
       ? candidate.soundEnabled

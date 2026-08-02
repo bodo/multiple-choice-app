@@ -1,29 +1,20 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { BookOpen, BarChart3, Bookmark, Settings, Sun, Moon } from 'lucide-vue-next'
+import {
+  BarChart3,
+  BookOpen,
+  Bookmark,
+  CircleHelp,
+  Moon,
+  Settings,
+  Sun,
+} from 'lucide-vue-next'
 import { useSettings } from '../entities/settings/useSettings'
-import { useExerciseCatalog } from '../entities/exercise/useExerciseCatalog'
 import { openWeakspotCount } from '../entities/exercise/useExerciseHistory'
+import ExerciseCategoryFilter from '../features/exercise-filter-by-category/ExerciseCategoryFilter.vue'
 
-const { theme, mode } = useSettings()
-const {
-  allCategories,
-  activeCategoryFilter,
-  setCategoryFilter,
-} = useExerciseCatalog()
-
-const isExam = computed(() => mode.value === 'exam')
-
-// Force "All" in exam mode
-watch(isExam, (exam) => {
-  if (exam) setCategoryFilter(null)
-})
-
-function onCategoryChange(event: Event) {
-  const category = (event.target as HTMLSelectElement).value
-  setCategoryFilter(category || null)
-}
+const { theme } = useSettings()
 
 const isDark = computed(() => {
   if (theme.value === 'auto') {
@@ -38,7 +29,7 @@ function toggleTheme() {
 </script>
 
 <template>
-  <header class="flex gap-1 px-3 h-12 items-center border-b border-base-200 bg-base-100 shrink-0">
+  <header class="hidden md:flex gap-1 px-3 h-12 items-center border-b border-base-200 bg-base-100 shrink-0">
     <RouterLink
       to="/"
       class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
@@ -69,6 +60,14 @@ function toggleTheme() {
       {{ $t('bookmarksTitle') }}
     </RouterLink>
     <RouterLink
+      to="/help"
+      class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
+      :class="useRoute().path === '/help' ? 'bg-primary/10 text-primary' : 'text-base-content/60 hover:text-base-content hover:bg-base-200'"
+    >
+      <CircleHelp :size="16" />
+      {{ $t('helpTitle') }}
+    </RouterLink>
+    <RouterLink
       to="/settings"
       class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
       :class="useRoute().path === '/settings' ? 'bg-primary/10 text-primary' : 'text-base-content/60 hover:text-base-content hover:bg-base-200'"
@@ -77,25 +76,7 @@ function toggleTheme() {
       {{ $t('settingsTitle') }}
     </RouterLink>
     <div class="flex-1" />
-    <select
-      v-if="allCategories.length > 0"
-      class="select select-sm select-bordered text-xs max-w-32"
-      :value="activeCategoryFilter ?? ''"
-      :disabled="isExam"
-      :title="isExam ? $t('categoryDisabledExam') : ''"
-      @change="onCategoryChange"
-    >
-      <option value="">
-        {{ $t('allCategories') }}
-      </option>
-      <option
-        v-for="category in allCategories"
-        :key="category"
-        :value="category"
-      >
-        {{ category }}
-      </option>
-    </select>
+    <ExerciseCategoryFilter />
     <button
       type="button"
       class="p-2 rounded-lg text-base-content/60 hover:text-base-content hover:bg-base-200 transition-colors"

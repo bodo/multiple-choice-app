@@ -21,6 +21,7 @@ import FlashCard from './FlashCard.vue'
 import ExplainBack from './ExplainBack.vue'
 import { useDailyGoal } from '../../entities/daily-goal/dailyGoalService'
 import { learningLevelDefinitions } from '../../entities/exercise/learningLevel'
+import ExerciseCategoryFilter from '../../features/exercise-filter-by-category/ExerciseCategoryFilter.vue'
 
 const { t } = useI18n()
 const { isLoading, error } = useExercises()
@@ -153,6 +154,10 @@ useSwipe((dir) => {
     v-else-if="!currentExercise"
     class="h-full flex flex-col items-center justify-center gap-4 p-6 text-base-content/60"
   >
+    <ExerciseCategoryFilter
+      labeled
+      class="w-full max-w-md md:hidden"
+    />
     <p>{{ openWeakspotCount > 0 ? t('allActiveExercisesPaused') : t('noExercises') }}</p>
     <div
       v-if="manualWeakspotExerciseId"
@@ -281,6 +286,10 @@ useSwipe((dir) => {
 
     <!-- Progress bar (always full width on top) -->
     <div class="w-full px-4 pt-4 pb-2 flex-shrink-0">
+      <ExerciseCategoryFilter
+        labeled
+        class="mb-3 md:hidden"
+      />
       <div class="flex items-center justify-between mb-2">
         <span
           v-if="mode === 'exam'"
