@@ -30,6 +30,11 @@ Images used by the current JSON source remain in `public/data/img/`.
 See [Exercise loading and API migration](exercise-loading.md) for the service
 boundary, runtime data flow, draft API response, and remaining migration work.
 
+The planned session, partial-answer, streak, XP, motivation, and rhythm rules
+are specified separately in [Learning, session, streak, XP, and motivation
+logic](learning-session-xp-spec.md). They are not current runtime behavior until
+their implementation and migration have been completed.
+
 ### Exercise Format
 
 ```typescript
@@ -176,11 +181,12 @@ so previously downloaded sets remain available offline.
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
 | `mode` | `'train' \| 'exam'` | `'train'` | Exam mode forces auto-advance |
-| `autoAdvance` | boolean | `true` | Auto-advance to next question after answering |
-| `timeoutCorrect` | number (ms) | `1500` | Delay after correct answer (500–10000) |
-| `timeoutIncorrect` | number (ms) | `3000` | Delay after incorrect answer (500–10000) |
-| `soundEnabled` | boolean | `true` | Play sound effects |
+| `autoAdvance` | boolean | `false` | Auto-advance to next question after answering |
+| `timeoutCorrect` | number (ms) | `10000` | Delay after correct answer (500–20000) |
+| `timeoutIncorrect` | number (ms) | `20000` | Delay after incorrect answer (500–20000) |
+| `soundEnabled` | boolean | `false` | Play sound effects |
 | `hapticEnabled` | boolean | `true` | Vibrate on answer (mobile) |
+| `examQuestionCount` | number | `10` | Number of questions selected for an exam |
 | `language` | string | `'eng'` | `'eng'` or `'deu'` |
 | `theme` | string | `'auto'` | `'auto'`, `'abschluss-light'`, `'abschluss-dark'` |
 | `exerciseSource` | `'json' \| 'api'` | `'json'` | Active exercise loading service |
@@ -234,6 +240,7 @@ so previously downloaded sets remain available offline.
 | `/stats` | StatsPage | Score card, Box 0, weak spots, and mastery |
 | `/bookmarks` | BookmarksPage | Persisted bookmark list and card preview |
 | `/settings` | SettingsPage | User preferences |
+| `/help` | HelpPage | Localized learner help and usage guidance |
 
 ## i18n
 
