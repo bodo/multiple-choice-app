@@ -2,6 +2,7 @@
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../../entities/exercise/exercise'
+import { outcomeForScore } from '../../../entities/exercise/answerOutcome'
 import type { FlowPhase } from '../useExerciseFlow'
 import MarkdownRenderer from '../../../dumb/MarkdownRenderer.vue'
 import { shuffledIndices } from '../../../utils/shuffle'
@@ -76,7 +77,13 @@ function select(originalIdx: number) {
 function submit() {
   if (selected.value === null) return
   const isCorrect = selected.value === correctIndex.value
-  emit('submitted', { isCorrect, selectedIndices: [selected.value] })
+  const scorePermille = isCorrect ? 1000 : 0
+  emit('submitted', {
+    isCorrect,
+    scorePermille,
+    outcome: outcomeForScore(scorePermille),
+    selectedIndices: [selected.value],
+  })
 }
 
 function handleKeyDown(e: KeyboardEvent) {

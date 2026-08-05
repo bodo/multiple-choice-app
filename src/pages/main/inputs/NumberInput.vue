@@ -2,6 +2,7 @@
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../../entities/exercise/exercise'
+import { outcomeForScore } from '../../../entities/exercise/answerOutcome'
 import type { FlowPhase } from '../useExerciseFlow'
 
 const props = defineProps<{
@@ -38,7 +39,13 @@ onMounted(() => { if (isInteractive.value) focusInput() })
 function submit() {
   if (input.value === null) return
   const isCorrect = input.value === correctValue.value
-  emit('submitted', { isCorrect, submittedValue: String(input.value) })
+  const scorePermille = isCorrect ? 1000 : 0
+  emit('submitted', {
+    isCorrect,
+    scorePermille,
+    outcome: outcomeForScore(scorePermille),
+    submittedValue: String(input.value),
+  })
 }
 
 let submitTime = 0

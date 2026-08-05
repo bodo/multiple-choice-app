@@ -6,6 +6,7 @@ export type InputMode =
   | 'MATCH'
 export type ExerciseSpecialization = 'FIAN' | 'FISI' | 'FIDP' | 'FIDV'
 export type ExerciseDifficulty = 1 | 2 | 3 | 4 | 5
+export type { AnswerOutcome } from './answerOutcome'
 
 export interface Exercise {
   id: string
@@ -31,6 +32,8 @@ export interface Exercise {
 
 export interface AnswerResult {
   isCorrect: boolean
+  scorePermille?: number
+  outcome?: import('./answerOutcome').AnswerOutcome
   isCloseMatch?: boolean
   selectedIndices?: number[]
   submittedMatches?: number[]

@@ -7,6 +7,8 @@ import { playCorrectSound, playIncorrectSound } from '../../utils/sound'
 import { vibrateCorrect, vibrateIncorrect } from '../../utils/haptics'
 import {
   flagPendingAutomaticWeakspots,
+  getDueWeight,
+  getTrainingSessionCardSelectionState,
   getWeight,
   isExerciseWeakspot,
   recordAnswer,
@@ -19,6 +21,11 @@ import {
   isWithinLearningLevel,
 } from '../../entities/exercise/services/exerciseScopeService'
 import {
+  getTrainingExerciseWeight,
+  pickWeightedIndex,
+} from '../../entities/exercise/services/trainingExerciseSelectionService'
+import {
+  clearTrainingSessionState,
   loadTrainingSessionState,
   saveTrainingSessionState,
   type TrainingSessionState,
@@ -36,6 +43,8 @@ const totalAnswered = ref(0)
 const totalCorrect = ref(0)
 const questionStartTime = ref(Date.now())
 const totalTimeMs = ref(0)
+const sessionMilestone = ref<3 | 20 | 50 | null>(null)
+const trainingSelectionExhausted = ref(false)
 
 // Exam state
 const examQuestionsRemaining = ref(0)
@@ -63,6 +72,43 @@ const {
 const { categoryFilteredIds } = useExerciseCatalog()
 
 let initializationVersion = 0
+let questionActiveDurationMs = 0
+let questionVisibleSince = document.visibilityState === 'visible' ? Date.now() : null
+let milestoneTimer: number | undefined
+
+function resetQuestionTiming() {
+  questionStartTime.value = Date.now()
+  questionActiveDurationMs = 0
+  questionVisibleSince = document.visibilityState === 'visible' ? Date.now() : null
+}
+
+function activeQuestionDurationMs(): number {
+  if (questionVisibleSince !== null) {
+    questionActiveDurationMs += Date.now() - questionVisibleSince
+    questionVisibleSince = Date.now()
+  }
+  return questionActiveDurationMs
+}
+
+function handleVisibilityChange() {
+  if (document.visibilityState === 'hidden' && questionVisibleSince !== null) {
+    questionActiveDurationMs += Date.now() - questionVisibleSince
+    questionVisibleSince = null
+  } else if (document.visibilityState === 'visible' && phase.value === 'answering') {
+    questionVisibleSince = Date.now()
+  }
+}
+
+document.addEventListener('visibilitychange', handleVisibilityChange)
+
+function showSessionMilestone(milestone: 3 | 20 | 50 | null) {
+  if (milestone === null) return
+  sessionMilestone.value = milestone
+  if (milestoneTimer !== undefined) window.clearTimeout(milestoneTimer)
+  milestoneTimer = window.setTimeout(() => {
+    sessionMilestone.value = null
+  }, 5000)
+}
 
 const currentIndex = computed(() =>
   exercises.value.findIndex(exercise => exercise.id === currentExerciseId.value),
@@ -101,37 +147,39 @@ function pickNextIndex(): number {
     .map(({ index }) => index)
   if (eligibleIndices.length === 0) return -1
 
-  const alternatives = eligibleIndices.filter(index => index !== currentIndex.value)
-  let candidates = alternatives.length > 0 ? alternatives : eligibleIndices
+  let candidates: number[]
+  let weights: number[]
   if (mode.value === 'exam') {
-    candidates = candidates.filter(index =>
+    candidates = eligibleIndices.filter(index =>
       !examSeenExerciseIds.has(list[index].id))
     if (candidates.length === 0) return -1
+    weights = candidates.map(index => getWeight(list[index].id))
   } else {
-    const currentLevelCandidates = candidates.filter(index =>
-      list[index].learningLevel === learningLevel.value)
-    const prerequisiteCandidates = candidates.filter(index =>
-      list[index].learningLevel < learningLevel.value)
-    if (currentLevelCandidates.length > 0 && prerequisiteCandidates.length > 0) {
-      candidates = Math.random() < 0.6
-        ? currentLevelCandidates
-        : prerequisiteCandidates
-    }
+    candidates = eligibleIndices.filter(index => index !== currentIndex.value)
+    weights = candidates.map(index => getTrainingExerciseWeight({
+      spacedRepetitionWeight: getDueWeight(list[index].id),
+      isCurrentLevel: list[index].learningLevel === learningLevel.value,
+      sessionState: getTrainingSessionCardSelectionState(list[index].id),
+    }))
   }
-  const weights = candidates.map(index => getWeight(list[index].id))
-  const totalWeight = weights.reduce((sum, weight) => sum + weight, 0)
-  if (totalWeight === 0) return candidates[0]
 
-  let roll = Math.random() * totalWeight
-  for (let i = 0; i < weights.length; i++) {
-    roll -= weights[i]
-    if (roll <= 0) return candidates[i]
-  }
-  return candidates[0]
+  const selectedCandidateIndex = pickWeightedIndex(weights)
+  return selectedCandidateIndex < 0 ? -1 : candidates[selectedCandidateIndex]
 }
 
 function setCurrentIndex(index: number) {
   currentExerciseId.value = exercises.value[index]?.id ?? null
+}
+
+function selectNextExercise() {
+  const nextIndex = pickNextIndex()
+  setCurrentIndex(nextIndex)
+  trainingSelectionExhausted.value = mode.value === 'train'
+    && nextIndex < 0
+    && selectableIds.value.size > 0
+  if (trainingSelectionExhausted.value) {
+    void clearTrainingSessionState(activeExerciseSetKey.value)
+  }
 }
 
 function getTrainingSessionState(): TrainingSessionState | null {
@@ -173,6 +221,7 @@ async function submitAnswer(result: AnswerResult) {
 
   // Timer stops here — time between question shown and answer submitted
   const answerTimeMs = Date.now() - questionStartTime.value
+  const activeAnswerDurationMs = activeQuestionDurationMs()
   totalAnswered.value++
   if (result.isCorrect) totalCorrect.value++
   totalTimeMs.value += answerTimeMs
@@ -180,10 +229,12 @@ async function submitAnswer(result: AnswerResult) {
   if (currentExercise.value) {
     const recorded = await recordAnswer(
       currentExercise.value,
-      result.isCorrect,
+      result,
       answerTimeMs,
+      activeAnswerDurationMs,
       mode.value,
     )
+    showSessionMilestone(recorded.milestone)
     if (recorded.becameWeakspot) {
       newWeakspotExerciseId.value = currentExercise.value.id
     }
@@ -199,16 +250,16 @@ async function submitAnswer(result: AnswerResult) {
     }
   }
   if (soundEnabled.value) {
-    if (result.isCorrect) {
+    if (result.outcome === 'correct' || (result.outcome === undefined && result.isCorrect)) {
       playCorrectSound()
-    } else {
+    } else if (result.outcome !== 'partial') {
       playIncorrectSound()
     }
   }
   if (hapticEnabled.value) {
-    if (result.isCorrect) {
+    if (result.outcome === 'correct' || (result.outcome === undefined && result.isCorrect)) {
       vibrateCorrect()
-    } else {
+    } else if (result.outcome !== 'partial') {
       vibrateIncorrect()
     }
   }
@@ -239,10 +290,10 @@ function advance() {
     return
   }
 
-  setCurrentIndex(pickNextIndex())
+  selectNextExercise()
   lastResult.value = null
   phase.value = 'answering'
-  questionStartTime.value = Date.now()
+  resetQuestionTiming()
   persistTrainingSession()
 }
 
@@ -256,10 +307,10 @@ function startExam() {
   examQuestionsRemaining.value = examQuestionTotal.value
   examNewWeakspotCount.value = 0
   newWeakspotExerciseId.value = null
-  setCurrentIndex(pickNextIndex())
+  selectNextExercise()
   lastResult.value = null
   phase.value = 'answering'
-  questionStartTime.value = Date.now()
+  resetQuestionTiming()
 }
 
 function restoreTrainingStats(state: TrainingSessionState | null) {
@@ -289,17 +340,20 @@ async function initializeTraining(list: typeof exercises.value) {
     : -1
 
   if (stored && storedExerciseIndex >= 0) {
+    trainingSelectionExhausted.value = false
     setCurrentIndex(storedExerciseIndex)
     lastResult.value = stored.lastResult
     questionStartTime.value = stored.questionStartedAt
+    questionActiveDurationMs = 0
+    questionVisibleSince = document.visibilityState === 'visible' ? Date.now() : null
     phase.value = stored.phase
     if (stored.lastResult) scheduleAutoAdvance(stored.lastResult)
     return
   }
 
-  setCurrentIndex(pickNextIndex())
+  selectNextExercise()
   lastResult.value = null
-  questionStartTime.value = Date.now()
+  resetQuestionTiming()
   phase.value = 'answering'
   persistTrainingSession()
 }
@@ -309,6 +363,7 @@ watch(exercises, (list) => {
   if (list.length === 0) {
     initializationVersion++
     currentExerciseId.value = null
+    trainingSelectionExhausted.value = false
     phase.value = 'loading'
     return
   }
@@ -330,6 +385,7 @@ watch(activeExerciseSetKey, () => {
   initializationVersion++
   cancel()
   currentExerciseId.value = null
+  trainingSelectionExhausted.value = false
   lastResult.value = null
   phase.value = 'loading'
 })
@@ -347,13 +403,14 @@ watch(selectableIds, (ids) => {
   cancel()
   if (ids.size === 0) {
     currentExerciseId.value = null
+    trainingSelectionExhausted.value = false
     lastResult.value = null
     phase.value = 'answering'
   } else {
-    setCurrentIndex(pickNextIndex())
+    selectNextExercise()
     lastResult.value = null
     phase.value = 'answering'
-    questionStartTime.value = Date.now()
+    resetQuestionTiming()
     persistTrainingSession()
   }
 })
@@ -363,6 +420,7 @@ watch(mode, (newMode) => {
   cancel()
   if (exercises.value.length === 0) {
     currentExerciseId.value = null
+    trainingSelectionExhausted.value = false
     lastResult.value = null
     phase.value = 'loading'
   } else if (newMode === 'exam') {
@@ -386,5 +444,7 @@ export function useExerciseFlow() {
     isExamActive, isExamFinished, examQuestionsRemaining, examTotal,
     newWeakspotExerciseId, examNewWeakspotCount,
     newLearningLevel,
+    sessionMilestone,
+    trainingSelectionExhausted,
   }
 }

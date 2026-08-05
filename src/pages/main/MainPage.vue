@@ -25,7 +25,7 @@ import ExerciseCategoryFilter from '../../features/exercise-filter-by-category/E
 
 const { t } = useI18n()
 const { isLoading, error } = useExercises()
-const { phase, currentExercise, lastResult, submitAnswer, advance, startExam, totalAnswered, totalCorrect, accuracy, averageTimeSeconds, isExamFinished, examTotal, newWeakspotExerciseId, examNewWeakspotCount, newLearningLevel } = useExerciseFlow()
+const { phase, currentExercise, lastResult, submitAnswer, advance, startExam, totalAnswered, totalCorrect, accuracy, averageTimeSeconds, isExamFinished, examTotal, newWeakspotExerciseId, examNewWeakspotCount, newLearningLevel, sessionMilestone, trainingSelectionExhausted } = useExerciseFlow()
 const { mode } = useSettings()
 const { progress: dailyGoal } = useDailyGoal()
 const examQuestionNumber = computed(() => Math.min(
@@ -59,7 +59,21 @@ const longestStreakDisplay = computed(() => getLongestStreak())
 // aria-live announcement for screen readers
 const liveAnnouncement = computed(() => {
   if (!lastResult.value) return ''
+  if (lastResult.value.outcome === 'partial') return t('partial')
   return lastResult.value.isCorrect ? t('correct') : t('incorrect')
+})
+
+const sessionMilestoneText = computed(() => {
+  if (sessionMilestone.value === 3) return t('sessionMilestoneThree')
+  if (sessionMilestone.value === 20) return t('sessionMilestoneTwenty')
+  if (sessionMilestone.value === 50) return t('sessionMilestoneFifty')
+  return ''
+})
+
+const emptySelectionText = computed(() => {
+  if (trainingSelectionExhausted.value) return t('noExercisesDue')
+  if (openWeakspotCount.value > 0) return t('allActiveExercisesPaused')
+  return t('noExercises')
 })
 
 function formatPercent(value: number): string {
@@ -158,7 +172,7 @@ useSwipe((dir) => {
       labeled
       class="w-full max-w-md md:hidden"
     />
-    <p>{{ openWeakspotCount > 0 ? t('allActiveExercisesPaused') : t('noExercises') }}</p>
+    <p>{{ emptySelectionText }}</p>
     <div
       v-if="manualWeakspotExerciseId"
       role="status"
@@ -197,6 +211,20 @@ useSwipe((dir) => {
       aria-atomic="true"
     >
       {{ liveAnnouncement }}
+    </div>
+
+    <div
+      v-if="sessionMilestone"
+      class="toast toast-top toast-center z-30 pointer-events-none"
+    >
+      <div
+        role="status"
+        class="alert alert-info shadow-lg"
+        aria-live="polite"
+      >
+        <Sparkles :size="18" />
+        <span>{{ sessionMilestoneText }}</span>
+      </div>
     </div>
 
     <div

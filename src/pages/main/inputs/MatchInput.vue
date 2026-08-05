@@ -5,6 +5,7 @@ import type {
   AnswerResult,
   Exercise,
 } from '../../../entities/exercise/exercise'
+import { outcomeForScore } from '../../../entities/exercise/answerOutcome'
 import MarkdownRenderer from '../../../dumb/MarkdownRenderer.vue'
 import type { FlowPhase } from '../useExerciseFlow'
 
@@ -40,10 +41,16 @@ function submit() {
 
   const submittedMatches = [...selections.value]
   const correctMatches = props.exercise.correct as number[]
-  const isCorrect = submittedMatches.every(
+  const correctRows = submittedMatches.filter(
     (matchIndex, rowIndex) => matchIndex === correctMatches[rowIndex],
-  )
-  emit('submitted', { isCorrect, submittedMatches })
+  ).length
+  const scorePermille = Math.round(correctRows / submittedMatches.length * 1000)
+  emit('submitted', {
+    isCorrect: scorePermille === 1000,
+    scorePermille,
+    outcome: outcomeForScore(scorePermille),
+    submittedMatches,
+  })
 }
 </script>
 

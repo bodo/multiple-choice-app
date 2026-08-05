@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../entities/exercise/exercise'
 import { isRegexTextAnswer } from '../../entities/exercise/textAnswerMatching'
+import { outcomeForScore, normalizeScorePermille } from '../../entities/exercise/answerOutcome'
 import MarkdownRenderer from '../../dumb/MarkdownRenderer.vue'
 
 const props = defineProps<{
@@ -71,29 +72,18 @@ function matchOption(matchIndex: number | undefined): string {
   return props.exercise.matchOptions?.[matchIndex] ?? ''
 }
 
-const isPartlyIncorrect = computed(() => {
-  if (props.result.isCorrect) return false
-  if (props.exercise.inputMode === 'MULTIPLE_CHOICE') {
-    const selected = selectedSet.value
-    return [...selected].some(i => correctSet.value.has(i))
-  }
-  if (isMatchMode.value) {
-    return submittedMatches.value.some(
-      (matchIndex, rowIndex) => matchIndex === correctMatches.value[rowIndex],
-    )
-  }
-  return false
-})
+const outcome = computed(() => props.result.outcome
+  ?? outcomeForScore(normalizeScorePermille(props.result.scorePermille, props.result.isCorrect)))
 
 const resultLabel = computed(() => {
-  if (props.result.isCorrect) return t('correct')
-  if (isPartlyIncorrect.value) return t('partlyIncorrect')
+  if (outcome.value === 'correct') return t('correct')
+  if (outcome.value === 'partial') return t('partial')
   return t('incorrect')
 })
 
 const resultClass = computed(() => {
-  if (props.result.isCorrect) return 'bg-success/20 text-success'
-  if (isPartlyIncorrect.value) return 'bg-error/20 text-error'
+  if (outcome.value === 'correct') return 'bg-success/20 text-success'
+  if (outcome.value === 'partial') return 'bg-warning/20 text-warning'
   return 'bg-error/20 text-error'
 })
 

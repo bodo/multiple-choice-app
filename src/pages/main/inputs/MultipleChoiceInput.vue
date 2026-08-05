@@ -2,6 +2,7 @@
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Exercise, AnswerResult } from '../../../entities/exercise/exercise'
+import { outcomeForScore } from '../../../entities/exercise/answerOutcome'
 import type { FlowPhase } from '../useExerciseFlow'
 import MarkdownRenderer from '../../../dumb/MarkdownRenderer.vue'
 import { shuffledIndices } from '../../../utils/shuffle'
@@ -88,9 +89,18 @@ function rowIcon(idx: number): string {
 function submit() {
   const sel = [...selected.value]
   const correct = props.exercise.correct as number[]
-  const isCorrect =
-    sel.length === correct.length && sel.every((i) => correctSet.value.has(i))
-  emit('submitted', { isCorrect, selectedIndices: sel })
+  const selectedCorrect = sel.filter(index => correctSet.value.has(index)).length
+  const selectedWrong = sel.length - selectedCorrect
+  const correctShare = selectedCorrect / correct.length
+  const wrongOptionCount = Math.max(0, optionCount.value - correct.length)
+  const wrongShare = wrongOptionCount === 0 ? 0 : selectedWrong / wrongOptionCount
+  const scorePermille = Math.round(Math.max(0, correctShare - wrongShare) * 1000)
+  emit('submitted', {
+    isCorrect: scorePermille === 1000,
+    scorePermille,
+    outcome: outcomeForScore(scorePermille),
+    selectedIndices: sel,
+  })
 }
 
 function handleKeyDown(e: KeyboardEvent) {

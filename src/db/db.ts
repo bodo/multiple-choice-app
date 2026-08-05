@@ -1,4 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie'
+import type { AnswerOutcome } from '../entities/exercise/answerOutcome'
 
 export interface StoredExercise {
   key: string
@@ -26,12 +27,15 @@ export interface StoredAnswerLogEntry {
   correct: boolean
   timeMs: number
   mode?: 'train' | 'exam'
+  scorePermille?: number
+  outcome?: AnswerOutcome
 }
 
 export interface StoredExerciseProgress {
   exerciseId: string
   correct: number
   wrong: number
+  partial?: number
   lastSeen: number
   box: number
   avgTimeMs: number
@@ -55,12 +59,29 @@ export interface StoredPracticeSession {
   questions: number
   correct: number
   durationMs: number
+  startedAt?: number
+  lastActivityAt?: number
+  endedAt?: number
+  partial?: number
+  incorrect?: number
+  activeDurationMs?: number
+  qualifiedAt?: number
+  qualificationLocalDate?: string
+  bonusSessionOrdinal?: number
+  shownMilestones?: number[]
+  policyVersion?: number
 }
 
 export interface StoredStreak {
   id: string
   date: string
   length: number
+  correctCount?: number
+  partialCount?: number
+  startedAt?: number
+  endedAt?: number
+  sessionId?: string
+  completedReason?: 'incorrect' | 'sessionTimeout' | 'profileChange'
 }
 
 export interface StoredAnswerEvent {
@@ -77,6 +98,34 @@ export interface StoredAnswerEvent {
   difficulty?: number
   xpEarned?: number
   dailyGoalCredit?: boolean
+  activeDurationMs?: number
+  scorePermille?: number
+  outcome?: AnswerOutcome
+  sessionAnswerIndex?: number
+  masteryXpMilli?: number
+  momentumXpMilli?: number
+  policyVersion?: number
+}
+
+export type XpBucket = 'mastery' | 'momentum'
+export type XpReason =
+  | 'answerBase'
+  | 'sessionBonus'
+  | 'inactivityDecay'
+  | 'legacyMigration'
+
+export interface StoredXpLedgerEntry {
+  id: string
+  idempotencyKey: string
+  occurredAt: number
+  localDate: string
+  amountMilli: number
+  bucket: XpBucket
+  reason: XpReason
+  exerciseId?: string
+  answerEventId?: string
+  sessionId?: string
+  policyVersion: number
 }
 
 export interface StoredAppSettings {
@@ -97,6 +146,7 @@ type MultipleChoiceDatabase = Dexie & {
   practiceSessions: EntityTable<StoredPracticeSession, 'id'>
   streaks: EntityTable<StoredStreak, 'id'>
   answerEvents: EntityTable<StoredAnswerEvent, 'id'>
+  xpLedger: EntityTable<StoredXpLedgerEntry, 'id'>
   settings: EntityTable<StoredAppSettings, 'id'>
   metadata: EntityTable<StoredMetadata, 'key'>
 }
@@ -325,5 +375,86 @@ db.version(11).stores({
       record.xp = Math.round(
         record.correct * 2 + Math.min(record.wrong, 1) * 0.5 + record.box,
       )
+    })
+})
+
+function localDateKey(timestamp: number): string {
+  const date = new Date(timestamp)
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+db.version(12).stores({
+  exercises: '&key, source, order',
+  trainingSessions: '&source',
+  exerciseProgress: '&exerciseId, learningStatus, lastSeen',
+  bookmarks: '&exerciseId, createdAt',
+  practiceSessions: '&id, date, lastActivityAt, qualifiedAt',
+  streaks: '&id, date, sessionId',
+  answerEvents: '&id, exerciseId, occurredAt, sessionId',
+  xpLedger: '&id, &idempotencyKey, localDate, occurredAt, bucket, reason, exerciseId, answerEventId, sessionId',
+  settings: '&id',
+  metadata: '&key',
+}).upgrade(async (transaction) => {
+  const answerEvents = transaction.table<StoredAnswerEvent>('answerEvents')
+  await answerEvents.toCollection().modify((record) => {
+    const scorePermille = typeof record.scorePermille === 'number'
+      ? Math.min(1000, Math.max(0, Math.round(record.scorePermille)))
+      : record.correct ? 1000 : 0
+    record.scorePermille = scorePermille
+    record.outcome = scorePermille === 1000
+      ? 'correct'
+      : scorePermille >= 500 ? 'partial' : 'incorrect'
+    record.activeDurationMs ??= Math.min(
+      Math.max(typeof record.durationMs === 'number' ? record.durationMs : 0, 0),
+      120_000,
+    )
+    record.masteryXpMilli ??= Math.round((record.xpEarned ?? 0) * 1000)
+    record.momentumXpMilli ??= 0
+    record.policyVersion ??= 1
+  })
+
+  const progress = await transaction
+    .table<StoredExerciseProgress>('exerciseProgress')
+    .toArray()
+  const ledger = transaction.table<StoredXpLedgerEntry>('xpLedger')
+  const legacyEntries = progress.flatMap((record) => {
+    const amountMilli = Math.round((record.xp ?? 0) * 1000)
+    if (amountMilli <= 0) return []
+    const occurredAt = record.lastSeen > 0 ? record.lastSeen : Date.now()
+    const idempotencyKey = `legacy-xp:${record.exerciseId}`
+    return [{
+      id: `xp-${idempotencyKey}`,
+      idempotencyKey,
+      occurredAt,
+      localDate: localDateKey(occurredAt),
+      amountMilli,
+      bucket: 'mastery' as const,
+      reason: 'legacyMigration' as const,
+      exerciseId: record.exerciseId,
+      policyVersion: 1,
+    }]
+  })
+  if (legacyEntries.length > 0) await ledger.bulkPut(legacyEntries)
+
+  await transaction
+    .table<StoredExerciseProgress>('exerciseProgress')
+    .toCollection()
+    .modify((record) => {
+      record.partial ??= 0
+      record.answerLog = record.answerLog.map((entry) => {
+        const scorePermille = typeof entry.scorePermille === 'number'
+          ? Math.min(1000, Math.max(0, Math.round(entry.scorePermille)))
+          : entry.correct ? 1000 : 0
+        return {
+          ...entry,
+          scorePermille,
+          outcome: scorePermille === 1000
+            ? 'correct'
+            : scorePermille >= 500 ? 'partial' : 'incorrect',
+        }
+      })
     })
 })

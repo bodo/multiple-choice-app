@@ -8,7 +8,7 @@ import {
   getStats, getCurrentStreak, getLongestStreak, getRank,
   getMasteryDistribution, getWeakestExercises, getCategoryAccuracy,
   getOpenWeakspots, isExerciseWeakspot, markExerciseAsWeakspot,
-  returnWeakspotToTraining,
+  returnWeakspotToTraining, getLearningRhythm, getXpSummary,
 } from '../../entities/exercise/useExerciseHistory'
 import { useExercises } from '../../entities/exercise/useExercises'
 import { useExerciseLibrary } from '../../entities/exercise/useExerciseLibrary'
@@ -45,7 +45,9 @@ const tabs = [
 const stats = computed(() => getStats(scopedExerciseIds.value))
 const current = computed(() => getCurrentStreak(scopedExerciseIds.value))
 const longest = computed(() => getLongestStreak(scopedExerciseIds.value))
-const rank = computed(() => getRank(scopedExerciseIds.value))
+const rank = computed(() => getRank())
+const xpSummary = computed(() => getXpSummary())
+const learningRhythm = computed(() => getLearningRhythm())
 const mastery = computed(() => getMasteryDistribution(scopedExerciseIds.value))
 const weakest = computed(() => getWeakestExercises(10, scopedExerciseIds.value))
 const openWeakspots = computed(() => getOpenWeakspots())
@@ -85,8 +87,15 @@ function formatPercent(value: number): string {
 }
 
 function formatXp(value: number): string {
-  return `${value} XP`
+  return `${Number.isInteger(value) ? value : value.toFixed(1)} XP`
 }
+
+const rhythmLabel = computed(() => {
+  if (learningRhythm.value.observedDays < 14) return t('statsRhythmMoreData')
+  if (learningRhythm.value.sessionsPerWeek >= 20) return t('statsRhythmExemplary')
+  if (learningRhythm.value.sessionsPerWeek >= 15) return t('statsRhythmBalanced')
+  return ''
+})
 
 function formatWeakSpotSummary(accuracy: number, total: number, averageTimeMs: number): string {
   return `${formatPercent(Math.round(accuracy * 100))} · ${total} ${t('statsAnswers')} · ${(averageTimeMs / 1000).toFixed(1)}s`
@@ -184,6 +193,9 @@ function trendClass(trend: number): string {
               :style="{ width: xpProgress + '%' }"
             />
           </div>
+          <p class="mt-2 text-center text-xs text-base-content/50">
+            {{ $t('statsMasteryXp') }} {{ formatXp(xpSummary.mastery) }} · {{ $t('statsMomentumXp') }} {{ formatXp(xpSummary.momentum) }}
+          </p>
         </div>
 
         <!-- Big accuracy -->
@@ -265,10 +277,18 @@ function trendClass(trend: number): string {
         </div>
         <div class="rounded-lg bg-base-200 p-3">
           <p class="text-xl font-bold">
-            {{ stats.totalQuestions - stats.totalCorrect }}
+            {{ stats.totalQuestions - stats.totalCorrect - stats.totalPartial }}
           </p>
           <p class="text-xs text-base-content/60">
             {{ $t('statsTotalWrong') }}
+          </p>
+        </div>
+        <div class="rounded-lg bg-base-200 p-3">
+          <p class="text-xl font-bold text-warning">
+            {{ stats.totalPartial }}
+          </p>
+          <p class="text-xs text-base-content/60">
+            {{ $t('statsTotalPartial') }}
           </p>
         </div>
         <div class="rounded-lg bg-base-200 p-3">
@@ -288,6 +308,52 @@ function trendClass(trend: number): string {
           </p>
         </div>
       </div>
+
+      <section class="rounded-lg border border-base-300 bg-base-200/50 p-4">
+        <div class="flex items-baseline justify-between gap-3">
+          <h2 class="font-medium">
+            {{ $t('statsRhythmTitle') }}
+          </h2>
+          <span
+            v-if="rhythmLabel"
+            class="text-xs text-success"
+          >{{ rhythmLabel }}</span>
+        </div>
+        <div class="mt-3 grid grid-cols-2 gap-3 text-sm">
+          <div>
+            <p class="font-semibold">
+              {{ learningRhythm.sessionsPerWeek }}
+            </p>
+            <p class="text-xs text-base-content/60">
+              {{ $t('statsSessionsPerWeek') }}
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold">
+              {{ learningRhythm.activeDaysPerWeek }}
+            </p>
+            <p class="text-xs text-base-content/60">
+              {{ $t('statsActiveDaysPerWeek') }}
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold">
+              {{ learningRhythm.longestActiveRun }}
+            </p>
+            <p class="text-xs text-base-content/60">
+              {{ $t('statsLongestActiveRun') }}
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold">
+              {{ learningRhythm.evenness === null ? $t('notAvailable') : formatPercent(learningRhythm.evenness) }}
+            </p>
+            <p class="text-xs text-base-content/60">
+              {{ $t('statsWeekdayEvenness') }}
+            </p>
+          </div>
+        </div>
+      </section>
     </template>
 
     <!-- ==================== WEAK SPOTS ==================== -->

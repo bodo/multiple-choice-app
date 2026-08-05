@@ -6,6 +6,7 @@ import {
   evaluateTextAnswer,
   isRegexTextAnswer,
 } from '../../../entities/exercise/textAnswerMatching'
+import { outcomeForScore } from '../../../entities/exercise/answerOutcome'
 import type { FlowPhase } from '../useExerciseFlow'
 
 const props = defineProps<{
@@ -51,7 +52,13 @@ function submit() {
     caseSensitive: props.exercise.caseSensitive,
     maximumStringDistance: props.exercise.maximumStringDistance,
   })
-  emit('submitted', { ...evaluation, submittedValue: input.value })
+  const scorePermille = evaluation.isCorrect ? 1000 : 0
+  emit('submitted', {
+    ...evaluation,
+    scorePermille,
+    outcome: outcomeForScore(scorePermille),
+    submittedValue: input.value,
+  })
 }
 
 let submitTime = 0

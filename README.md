@@ -178,6 +178,13 @@ adapter.
 
 ## Exercise loading services
 
+The current source switch is a migration tool while the backend is still a
+draft. The accepted target architecture uses SQL as the productive exercise
+store, a public API for both guests and authenticated learners, and JSON only as
+a validated import/interchange format. See
+[`doc/adr/0001-shared-frontend-sql-api-and-guest-mode.md`](doc/adr/0001-shared-frontend-sql-api-and-guest-mode.md)
+and [`doc/monorepo-migration.md`](doc/monorepo-migration.md).
+
 The card source can be switched in the app settings:
 
 - **JSON files** loads the specialization-specific index, for example

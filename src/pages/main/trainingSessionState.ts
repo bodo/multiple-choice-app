@@ -23,6 +23,21 @@ function isAnswerResult(value: unknown): value is AnswerResult {
 
   const result = value as Record<string, unknown>
   if (typeof result.isCorrect !== 'boolean') return false
+  if (
+    result.scorePermille !== undefined
+    && (
+      typeof result.scorePermille !== 'number'
+      || !Number.isFinite(result.scorePermille)
+      || result.scorePermille < 0
+      || result.scorePermille > 1000
+    )
+  ) return false
+  if (
+    result.outcome !== undefined
+    && result.outcome !== 'correct'
+    && result.outcome !== 'partial'
+    && result.outcome !== 'incorrect'
+  ) return false
   if (result.isCloseMatch !== undefined && typeof result.isCloseMatch !== 'boolean') return false
   if (result.submittedValue !== undefined && typeof result.submittedValue !== 'string') return false
   if (
@@ -80,6 +95,19 @@ export function saveTrainingSessionState(
       await db.trainingSessions.put({ source, ...state })
     } catch {
       // Keep the active training session in memory if persistence is unavailable.
+    }
+  })
+  return pendingSave
+}
+
+export function clearTrainingSessionState(
+  source: ExerciseSetKey,
+): Promise<void> {
+  pendingSave = pendingSave.then(async () => {
+    try {
+      await db.trainingSessions.delete(source)
+    } catch {
+      // Keep the exhausted state in memory if persistence is unavailable.
     }
   })
   return pendingSave

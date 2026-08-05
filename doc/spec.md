@@ -30,10 +30,10 @@ Images used by the current JSON source remain in `public/data/img/`.
 See [Exercise loading and API migration](exercise-loading.md) for the service
 boundary, runtime data flow, draft API response, and remaining migration work.
 
-The planned session, partial-answer, streak, XP, motivation, and rhythm rules
-are specified separately in [Learning, session, streak, XP, and motivation
-logic](learning-session-xp-spec.md). They are not current runtime behavior until
-their implementation and migration have been completed.
+The local session, partial-answer, streak, XP, motivation, and rhythm rules
+are specified in [Learning, session, streak, XP, and motivation
+logic](learning-session-xp-spec.md). The private daily award documented there
+remains backend-only and is not part of the current runtime behavior.
 
 ### Exercise Format
 
@@ -110,9 +110,9 @@ interface Exercise {
 
 ## Spaced Repetition
 
-Per-exercise progress is stored in Dexie by stable exercise ID. It tracks
-correct/wrong counts, last-seen timestamp, a 20-entry recent answer log, average
-answer time, Leitner box, and the explicit learning status.
+Per-exercise progress is stored in Dexie by stable exercise ID. It tracks full,
+partial, and incorrect answers, last-seen timestamp, a 20-entry recent answer
+log, average answer time, Leitner box, and the explicit learning status.
 
 **Weighted selection algorithm** (`getWeight`):
 - Never seen → weight 10 (highest priority)
@@ -133,8 +133,10 @@ answer time, Leitner box, and the explicit learning status.
 
 ### Box 0 and manual weak spots
 
-- Four consecutive incorrect answers whose first and fourth attempts are at most
-  24 hours apart change `learningStatus` to `interventionRequired`
+- Four consecutive fully incorrect answers whose first and fourth attempts are
+  at most 24 hours apart change `learningStatus` to `interventionRequired`.
+  A partially correct answer resets this failure sequence but leaves its box
+  unchanged.
 - Learners can set the same status manually without recording an incorrect answer
 - The reason distinguishes `manual` from `repeatedIncorrect`
 - A global badge and an in-practice alert keep every open weak spot visible
@@ -143,8 +145,9 @@ answer time, Leitner box, and the explicit learning status.
   current failure period, and places the card in Box 1
 - Exam mode does not exclude Box-0 cards and applies newly detected Box-0
   transitions only after the exam finishes
-- Incorrect answers and same-day repeats award no XP, preventing accumulation
-  through repeated guessing
+- Fully incorrect answers award no XP. Partially and fully correct answers only
+  earn the not-yet-credited share of their daily card value, preventing
+  accumulation through repeated guessing.
 
 Bookmarks are a separate, neutral marker and never change scheduling. Bookmark
 and weak-spot lists resolve card data from all downloaded Dexie exercise sets,
@@ -228,9 +231,11 @@ so previously downloaded sets remain available offline.
   across sessions, with separate counts for the source Leitner Boxes 1–5.
 - **Exam progress bar**: current exam question versus the eligible exam total.
 - The statistics page applies the same inclusive maximum-level subset.
-- Difficulty-weighted XP for the first correct answer to a card per day is
-  `1, 2, 3, 5, 8` for difficulties 1–5, plus one point for Boxes 2–5.
-- **Session stats**: accuracy % and average time per answer, shown below progress bar after first answer
+- Difficulty-weighted basis XP use `1, 2, 3, 5, 8` for difficulties 1–5, plus
+  one point for Boxes 2–5. The session bonus, momentum-XP decay and rhythm
+  metrics are defined in the linked learning-system specification.
+- **Session stats**: accuracy %, average answer time and an answer series are
+  shown below the progress bar after the first answer.
 
 ## Routing
 

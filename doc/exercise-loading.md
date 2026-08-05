@@ -6,6 +6,13 @@ Exercise loading is isolated behind `ExerciseLoadingService`. The UI does not
 depend on JSON files or an API response directly. This keeps the existing file
 source usable while the new backend contract is being designed.
 
+This document describes the current transition implementation. The accepted
+target makes SQL the productive exercise store, delivers the catalog through a
+public API to guests and authenticated learners, and retains JSON only as a
+validated import/interchange format. See
+[ADR 0001](adr/0001-shared-frontend-sql-api-and-guest-mode.md) and the
+[monorepo migration plan](monorepo-migration.md).
+
 ## Runtime data flow
 
 ```text
@@ -199,12 +206,16 @@ similar effective-speed labels.
 
 Before making the API the default source:
 
-1. Define the endpoint, authentication, pagination, image handling, and error
-   response format.
+1. Define the public endpoint, pagination, image handling, and error response
+   format. Exercise reads do not require authentication.
 2. Capture the final contract in OpenAPI and add contract compatibility checks.
 3. Adapt the API DTO mapping and validation without changing the `Exercise`
    model consumed by the UI.
 4. Add service tests for valid, partial, empty, and invalid responses.
 5. Test source switching, offline startup, and cached-data behavior.
-6. Decide whether JSON remains an offline fallback or can be removed.
-7. Change the default `exerciseSource` only after the backend is deployed.
+6. Import the current JSON corpus into SQL with stable IDs and content revisions,
+   then verify API and source-corpus parity.
+7. Change the default source only after the backend is deployed and remove the
+   public source setting after the rollback window.
+8. Retain JSON as a versioned import format if the CMS or operations workflow
+   still needs it; do not maintain it as an independent productive catalog.

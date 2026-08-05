@@ -2,10 +2,13 @@
 
 ## Status und Zweck
 
-Dieses Dokument ist die normative Implementierungsspezifikation für die nächste
-Ausbaustufe der Lernstatistik. Die beschriebenen Regeln sind noch nicht als
-Laufzeitverhalten implementiert. Vor der Implementierung ist die Spezifikation
-als Ganzes fachlich abzunehmen; ein implementierendes Modell darf keine Werte
+Dieses Dokument ist die normative Implementierungsspezifikation für die
+Lernstatistik. Die lokalen Regeln für Antwortwerte, Sitzungen, Serien,
+Basis-/Motivations-XP, XP-Verfall, Rhythmuswerte, Hinweise und die Hilfeseite
+sind implementiert. Die private Tagesauszeichnung bleibt ausdrücklich offen,
+bis ein authentifiziertes Synchronisationsbackend vorhanden ist.
+
+Ein implementierendes Modell darf die hier festgelegten Werte nicht
 stillschweigend ändern oder zusätzliche Gamification ergänzen.
 
 Die Spezifikation verfolgt fünf Ziele:
@@ -42,6 +45,9 @@ werden erst bei der Auswertung in der Benutzerzeitzone gebildet.
 | `SESSION_MIN_ANSWERS` | `3` | Mindestzahl abgegebener Antworten für eine qualifizierte Sitzung |
 | `SESSION_MIN_ACTIVE_MS` | `2 * 60 * 1000` | Mindestmaß aktiver Lernzeit |
 | `MAX_CREDITED_ANSWER_MS` | `2 * 60 * 1000` | Obergrenze der aktiven Zeit je Antwort |
+| `CURRENT_LEVEL_WEIGHT_FACTOR` | `2` | Multiplikator je fälliger Karte auf der aktuellen Lernstufe |
+| `RETRY_DISTINCT_CARD_GAP` | `5` | Unterschiedliche Zwischenkarten vor einem erneuten Versuch |
+| `RETRY_MIN_WEIGHT` | `10` | Mindestgewicht eines freigegebenen erneuten Versuchs |
 | `SESSION_BONUS_START_INDEX` | `4` | Die ersten drei Antworten erhalten keinen Sitzungsbonus |
 | `SESSION_BONUS_FACTOR_SHORT` | `1.25` | Faktor für Antwort 4 bis 10 |
 | `SESSION_BONUS_FACTOR_ENDURANCE` | `1.10` | Faktor für Antwort 11 bis 30 |
@@ -93,6 +99,31 @@ Eine Sitzung ist **qualifiziert**, sobald beide Bedingungen erfüllt sind:
 
 Nicht qualifizierte Sitzungen bleiben als Rohdaten nachvollziehbar, zählen aber
 nicht in Rhythmusmetriken und setzen Inaktivitätsverfall nicht zurück.
+
+### Kartenauswahl innerhalb einer Sitzung
+
+Im Übungsmodus werden alle durch Fachrichtung, Kategorie, Gerät und Lernstufe
+zugelassenen Karten gemeinsam gewichtet. Eine fällige Karte auf der aktuell
+gewählten Lernstufe erhält den Faktor `CURRENT_LEVEL_WEIGHT_FACTOR`; niedrigere
+Lernstufen erhalten den Faktor 1. Es gibt keine feste Quote für die aktuelle
+Lernstufe. Damit kann eine kleine oder nur aus einer Karte bestehende Lernstufe
+nicht einen festen Anteil aller Ziehungen belegen.
+
+Nicht fällige Karten haben im Übungsmodus Gewicht 0. Zusätzlich gelten für die
+offene Sitzung folgende Regeln:
+
+- Nach einer vollständig richtigen Antwort bleibt die Karte bis zum Ende der
+  Sitzung ausgeschlossen.
+- Nach einer teilweise richtigen oder falschen Antwort bleibt die Karte
+  ausgeschlossen, bis mindestens `RETRY_DISTINCT_CARD_GAP` unterschiedliche
+  andere Karten beantwortet wurden. Danach erhält sie mindestens
+  `RETRY_MIN_WEIGHT`.
+- Gibt es keine Karte mit positivem Gewicht, zeigt die App den ausgeschöpften
+  Lernstand an. Sie wählt nicht ersatzweise die erste oder eine nicht fällige
+  Karte.
+
+Diese Regeln verändern weder Leitner-Intervalle noch Lernstufen. Im Examen gilt
+weiterhin die einmalige Auswahl ohne Wiederholung innerhalb des Examens.
 
 ### Serie
 
@@ -781,20 +812,19 @@ darf kein noch nicht verfügbares Verhalten als bereits vorhanden beschreiben.
 - Dieselbe Tagesauszeichnung kann durch Wiederholung oder erneuten Sync nicht
   doppelt gebucht werden.
 
-## Empfohlene Implementierungsreihenfolge
+## Implementierungsstand
 
-1. Antwortwert und Ergebnis als reines Modell ergänzen; Teilantwort-UI und
-   Box-0-Regeln testen.
-2. reload-feste Sitzungen und neue Seriensemantik implementieren.
-3. XP-Ledger, Tages-Differenzgutschrift und Sitzungsbonus migrieren.
-4. Rhythmusmetriken und die drei Hinweise ergänzen.
-5. Verfall der Motivations-XP nach gesondertem UX-Test aktivieren.
-6. Erst nach vorhandenem Authentifizierungs- und Synchronisationsbackend die
-   private Tagesauszeichnung implementieren.
+Die Schritte 1 bis 5 sind lokal umgesetzt: Teilantworten und Box-0-Regeln,
+reload-feste Sitzungen und Serien, XP-Ledger samt Migration, Sitzungsbonus,
+Rhythmuswerte, Hinweise und der Verfall von Motivations-XP. Die Hilfeseite
+erklärt das sichtbare Verhalten in beiden Sprachen.
 
-Jede Stufe umfasst Unit-Tests der reinen Regeln, Dexie-Migrations- und
-Transaktionstests, UI-Tests der sichtbaren Fälle, Aktualisierung der Hilfe sowie
-`npm run lint:fix` und `npm run build`.
+Offen bleibt ausschließlich Schritt 6: Erst nach vorhandenem
+Authentifizierungs- und Synchronisationsbackend darf die private
+Tagesauszeichnung implementiert werden.
+
+Jede Änderung umfasst mindestens Lint, Build, Diff-Prüfung sowie angemessene
+Tests der berührten Regeln und Migration.
 
 ## Fachliche Grundlage
 

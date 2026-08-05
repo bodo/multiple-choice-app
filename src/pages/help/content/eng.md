@@ -16,6 +16,16 @@ BITS helps you actively review exam-relevant questions. The app records more tha
 
 On desktop, using the keyboard is the fastest way to operate the app. For single- and multiple-choice questions, select answers with the corresponding number key. `Enter` confirms the answer or selected answers.
 
+## Answers, sessions, and XP
+
+For multiple-choice and matching questions, an answer can be **partly correct**. It keeps a running streak alive, but does not move the card to the next review box. Only a fully correct answer advances the box. Less than half correct is treated as incorrect.
+
+A session continues while there are fewer than 25 minutes between learning activities. A reload or app update does not end it. The rhythm statistics count sessions once they have at least three answers and two minutes of active learning time.
+
+You receive mastery XP for new correct or partly correct progress on a card. From the fourth answer of a qualified session, a small session bonus is added; answers 11 through 30 retain a smaller endurance bonus. The bonus rewards several short, regular sessions slightly more than one very long session. Momentum XP from these bonuses can expire after longer inactivity; your mastery XP and answer history remain intact.
+
+The learning-rhythm statistics cover the last 28 days. Around 15 qualified sessions per week are balanced; 20 or more are exemplary. The distribution is a prompt for your own rhythm, not a comparison with other learners.
+
 ## What do B1 to B5 mean?
 
 `B1` to `B5` are review boxes. They roughly indicate how reliably you have answered a card and when it should be prioritized again during training.
@@ -28,19 +38,19 @@ On desktop, using the keyboard is the fastest way to operate the app. For single
 | B4 | Already fairly stable | about 3 days |
 | B5 | Consolidated for longer-term recall | about 7 days |
 
-A correct answer moves the card up one box, up to B5. An incorrect answer returns it to B1. The intervals are guidelines: training does not follow a rigid calendar. Instead, due and overdue cards receive more weight during selection.
+A correct answer moves the card up one box, up to B5. A partly correct answer keeps it in its current box. An incorrect answer returns it to B1. The intervals are guidelines: training does not follow a rigid calendar. Instead, due and overdue cards receive more weight during selection.
 
 New cards and cards in B1 can appear more often. Cards in higher boxes appear less frequently but remain part of training. This directs more time toward uncertain material without completely hiding established knowledge.
 
 ### The special case B0
 
-B0 is not a regular review level. A card is paused there when you mark it as a weak spot yourself or answer it incorrectly four times in a row within 24 hours. Study the topic using other resources first. You can then return the card to training from the statistics page; it restarts in B1. Its existing learning history is preserved.
+B0 is not a regular review level. A card is paused there when you mark it as a weak spot yourself or answer it fully incorrectly four times in a row within 24 hours. A partly correct answer interrupts this failure sequence, but does not automatically return an already paused B0 card. Study the topic using other resources first. You can then return the card to training from the statistics page; it restarts in B1. Its existing learning history is preserved.
 
 ## Training and exam modes
 
 ### Training
 
-In training mode, the app selects cards using their review boxes and your filters. Due, overdue, and new cards receive a higher probability. A card may appear again during the same session. Active B0 weak spots remain paused until you return them yourself.
+In training mode, the app selects cards using their review boxes and your filters. Due, overdue, and new cards receive a higher probability; cards at your current learning level also receive a bounded boost instead of a fixed quota. A fully correct card does not appear again in the same session. After a partly correct or incorrect answer, it can return only after five distinct other cards. When no cards are due, the app stops selecting instead of forcing a mastered card. Active B0 weak spots remain paused until you return them yourself.
 
 After each answer, you can review the solution and explanation. Auto-advance is optional; when it is disabled, you decide when to continue to the next card.
 
