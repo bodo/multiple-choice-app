@@ -1,0 +1,8 @@
+.git
+.ddev/.global_commands
+node_modules
+**/node_modules
+**/dist
+apps/content-cms
+*.log
+.DS_Store

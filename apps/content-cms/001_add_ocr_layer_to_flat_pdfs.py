@@ -6,7 +6,7 @@ Add an invisible OCR text layer to every PDF in processed_data/, in-place.
 - Language: German + English (covers all exam content).
 - Requires Tesseract and Ghostscript installed on the system.
 
-Usage (from cms/):
+Usage (from apps/content-cms/):
     uv run python 001_add_ocr_layer_to_flat_pdfs.py
 """
 

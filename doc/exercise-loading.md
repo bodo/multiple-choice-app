@@ -210,7 +210,8 @@ Before making the API the default source:
 
 1. Define the public endpoint, pagination, image handling, and error response
    format. Exercise reads do not require authentication.
-2. Capture the final contract in OpenAPI and add contract compatibility checks.
+2. Evolve the demo OpenAPI contract into the final contract and add breaking-
+   change compatibility checks.
 3. Adapt the API DTO mapping and validation without changing the `Exercise`
    model consumed by the UI.
 4. Add service tests for valid, partial, empty, and invalid responses.

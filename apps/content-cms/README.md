@@ -1,16 +1,19 @@
 # CMS
 
-Content management scripts for the exercise data in `public/data/exercises/`.
+Content management scripts for the exercise data in
+`apps/frontend/public/data/exercises/`.
 
 ## Setup
 
 Requires [uv](https://docs.astral.sh/uv/getting-started/installation/).
+Run the CMS-specific commands below from `apps/content-cms/` unless a command
+explicitly starts at the repository root.
 
 ## Scripts
 
 ### generate-index
 
-Scans `public/data/exercises/`, validates every exercise's categories,
+Scans `apps/frontend/public/data/exercises/`, validates every exercise's categories,
 specializations, learning level, difficulty, and answer container, then
 regenerates the complete `index.json` plus
 `index_fian.json`, `index_fisi.json`, `index_fidp.json`, and `index_fidv.json`.
@@ -18,7 +21,7 @@ regenerates the complete `index.json` plus
 Run after adding, removing, or renaming exercise files (from the project root):
 
 ```bash
-python3 cms/999_generate_index.py
+python3 apps/content-cms/999_generate_index.py
 ```
 
 ### 000 — flatten-pdfs
@@ -101,7 +104,9 @@ uv run python app.py
 
 ### Exercise editor (`exercise_editor.py`) — Streamlit
 
-Browse annotated exercises, view their screenshots, and create/edit exercise JSON files for `public/data/exercises/`. The list view shows a completion % per exercise based on how many key text fields are filled.
+Browse annotated exercises, view their screenshots, and create/edit exercise
+JSON files for `apps/frontend/public/data/exercises/`. The list view shows a
+completion % per exercise based on how many key text fields are filled.
 
 Features:
 - SINGLE_CHOICE, MULTIPLE_CHOICE, and MATCH input modes
@@ -112,7 +117,7 @@ Features:
 - Optional author workflow tags, separate from learner-facing categories
 - `mobileSolvable` checkbox for small-screen exercises that need no external tools
 - Required curriculum learning level (1–10) and intrinsic difficulty (1–5)
-- Screenshot selection (copies to `public/data/img/`)
+- Screenshot selection (copies to `apps/frontend/public/data/img/`)
 - Save / Save and Next navigation
 - OCR reference panel (screenshot crops + full source PDF pages) for copy-pasting content
 - "Annotation invalid, delete" button to wipe bad annotations

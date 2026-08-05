@@ -7,7 +7,8 @@ without maintaining separate guest and account frontends. It separates
 behavior-preserving repository moves from data-model changes and gives frontend,
 backend, and content work explicit integration gates.
 
-This document does not select a backend framework, authentication provider, CMS
+The demo implementation selects TypeScript, Fastify, and MariaDB for the
+backend boundary. It does not yet select an authentication provider, CMS
 workflow, or new learning-level behavior.
 
 ## Target boundaries
@@ -20,7 +21,7 @@ these logical owners:
 |-- apps/
 |   |-- frontend/       Vue PWA; existing feature-sliced `src` structure
 |   |-- backend/        public catalog, authenticated sync, and import API
-|   `-- content-cms/    current CMS when it is moved into the workspace
+|   `-- content-cms/    Python exercise authoring and indexing tools
 |-- packages/
 |   |-- contracts/      OpenAPI, import schema, compatibility checks
 |   `-- exercise-content/  transition JSON packages and content validation
@@ -54,6 +55,19 @@ worker exchanges committed local changes with the backend. Guests use the same
 local domain behavior without uploading personal data.
 
 ## Delivery phases
+
+Local status on 2026-08-05: the Phase 1 workspace move and a runnable Phase 2
+demo slice are implemented. DDEV and standalone Compose start the Vue watcher,
+Fastify watcher, and MariaDB. OpenAPI describes the public health and exercise
+endpoints. A deliberately denormalized Phase 3 demo table contains 20 rows;
+the production import, revision history, assets, and compatibility checks are
+still future work. The release tag from Phase 0 remains an explicit repository
+operation and is not created by the local restructuring itself.
+
+The local Phase 1 verification covers a clean root `npm ci`, frontend lint and
+tests, the production PWA build, deterministic regeneration of all exercise
+indexes, Python compilation and CMS dependency imports, shell syntax, and HTTP
+responses for the built application, exercise index, and web manifest.
 
 ### Phase 0: Preserve and baseline the MVP
 

@@ -14,7 +14,7 @@ Conversions:
 
 All other files (e.g. .txt, .gitignore) are skipped.
 
-Usage (from cms/):
+Usage (from apps/content-cms/):
     uv run python flatten_pdfs.py
 """
 

@@ -2,7 +2,7 @@
 Generate the complete and specialization-specific exercise indexes.
 
 Usage (from the project root):
-    python3 cms/999_generate_index.py
+    python3 apps/content-cms/999_generate_index.py
 
 Scans for exercise JSON files, validates shared authoring invariants, and writes
 index.json plus one index_<specialization>.json per specialization.
@@ -12,7 +12,7 @@ import json
 import pathlib
 from typing import Any
 
-DIR = pathlib.Path(__file__).parent.parent / "public" / "data" / "exercises"
+DIR = pathlib.Path(__file__).parent.parent / "frontend" / "public" / "data" / "exercises"
 SPECIALIZATIONS = ("FIAN", "FISI", "FIDP", "FIDV")
 
 

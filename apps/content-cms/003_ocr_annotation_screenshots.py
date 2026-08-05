@@ -19,7 +19,7 @@ For every annotated exam in processed_data/flat_pdfs/:
 
 Requires: Tesseract installed (already needed for step 001).
 
-Run from cms/:
+Run from apps/content-cms/:
     uv run python 003_ocr_annotation_screenshots.py
 """
 

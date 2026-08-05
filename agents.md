@@ -1,3 +1,9 @@
+## Frontend scope
+
+The frontend lives in `apps/frontend`. The architecture rules below apply to
+`apps/frontend/src`; they do not restrict monorepo-level application and package
+folders.
+
 ## Essential Tech Stack
 
 - tailwind + Daisy UI. Actually use daisy components. Avoid manual CSS when possible.
@@ -18,7 +24,7 @@ Instead, use the following folder structure (inspired by Feature-Sliced Design)
 - `meta`: for complex features interacting in turn with multiple `features`. One folder per meta-feature. May only import from below, and not from other meta-features. Name features CLEARLY and DESCRIPTIVELY (instead of short and confusing) with full noun and full verb action.
 - `pages`: One folder per page (a page is something used by the `router.ts` file). If functionality is ONLY used on a given page, put it in the page *folder* (avoid having just a single giant page file, split it up!), do not create features or meta-features that are only used by one single page.
 
-No other high-level folders are allowed.
+No other high-level folders are allowed inside `apps/frontend/src`.
 Do not use `index.ts` file reexporting components, simply export directly.
 
 ## Guidelines

@@ -1,0 +1,51 @@
+name: multiple-choice-runtime
+
+services:
+  database:
+    image: mariadb:11.4
+    environment:
+      MARIADB_DATABASE: ${DB_NAME:-multiple_choice}
+      MARIADB_USER: ${DB_USER:-multiple_choice}
+      MARIADB_PASSWORD: ${DB_PASSWORD:-local_runtime_only}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-local_runtime_root_only}
+    healthcheck:
+      test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - runtime_database:/var/lib/mysql
+      - ./apps/backend/sql/001-create-tables.sql:/docker-entrypoint-initdb.d/001-create-tables.sql:ro
+      - ./apps/backend/sql/002-reset-content.sql:/docker-entrypoint-initdb.d/002-reset-content.sql:ro
+      - ./apps/backend/sql/003-demo-data.sql:/docker-entrypoint-initdb.d/003-demo-data.sql:ro
+
+  backend:
+    build:
+      context: .
+      dockerfile: apps/backend/Dockerfile
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+      DB_HOST: database
+      DB_PORT: 3306
+      DB_NAME: ${DB_NAME:-multiple_choice}
+      DB_USER: ${DB_USER:-multiple_choice}
+      DB_PASSWORD: ${DB_PASSWORD:-local_runtime_only}
+      FRONTEND_DIRECTORY: /workspace/apps/frontend/dist
+      OPENAPI_PATH: /workspace/packages/contracts/openapi.yaml
+    depends_on:
+      database:
+        condition: service_healthy
+    ports:
+      - "8080:3000"
+
+  frontend:
+    profiles: [standalone-frontend]
+    build:
+      context: .
+      dockerfile: apps/frontend/Dockerfile
+    ports:
+      - "${FRONTEND_PORT:-18081}:8080"
+
+volumes:
+  runtime_database:

@@ -1,0 +1,60 @@
+name: CI and runtime scaffold
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      deploy_scaffold:
+        description: Sync the prepared runtime files via SSH
+        type: boolean
+        default: false
+
+jobs:
+  verify:
+    runs-on: docker
+    container:
+      image: node:22-bookworm
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test
+      - run: npm run build
+
+  container-images:
+    runs-on: docker
+    needs: verify
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build frontend runtime image
+        run: docker build --file apps/frontend/Dockerfile --tag multiple-choice-frontend:ci .
+      - name: Build backend runtime image
+        run: docker build --file apps/backend/Dockerfile --tag multiple-choice-backend:ci .
+
+  deploy-scaffold:
+    runs-on: docker
+    container:
+      image: node:22-bookworm
+    needs: container-images
+    if: ${{ inputs.deploy_scaffold == 'true' }}
+    environment: runtime
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deployment clients
+        run: apt-get update -qq && apt-get install -y -qq openssh-client rsync
+      - name: Sync runtime scaffold
+        env:
+          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+          DEPLOY_USER: ${{ vars.DEPLOY_USER }}
+          DEPLOY_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s' "$DEPLOY_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          rsync -az --delete -e "ssh -i ~/.ssh/id_deploy" deploy/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/"
+          rsync -az -e "ssh -i ~/.ssh/id_deploy" apps/backend/sql/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/sql/"

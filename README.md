@@ -1,6 +1,72 @@
-# bodo-multiple-choice
+# Multiple Choice monorepo
 
-A mobile-first multiple-choice practice app built with Vue 3 + TypeScript + Vite.
+The repository contains the mobile-first Vue practice app, its Python content
+CMS, a TypeScript/Fastify API, MariaDB schema, and shared OpenAPI contracts.
+
+## Projects
+
+| Path | Purpose |
+|------|---------|
+| `apps/frontend` | Vue 3, TypeScript, Vite, PWA, and Dexie client |
+| `apps/content-cms` | Python authoring and exercise-index tooling |
+| `apps/backend` | TypeScript/Fastify API, SQL, and runtime image |
+| `packages/contracts` | Versioned OpenAPI and future import contracts |
+| `packages/exercise-content` | Transition boundary for import packages and validation |
+
+Root npm commands cover both npm workspaces, so development and CI use one
+stable entry point.
+
+## Local environments
+
+The preferred local entry point is DDEV 1.24.3 or newer:
+
+```bash
+ddev start
+ddev describe
+```
+
+DDEV uses its MariaDB 11.4 service and starts the frontend build watcher plus
+the TypeScript backend watcher in the web container. The application daemon
+serves both the API and the compiled frontend through the DDEV URL. Its Linux
+`node_modules` live in a named volume, so DDEV cannot replace macOS or Windows
+host-native npm binaries.
+
+The standalone Docker Compose environment provides the same live filesystem
+behavior without DDEV and works with Docker Desktop on macOS/Windows and Docker
+Engine on Linux:
+
+```bash
+docker compose -f compose.dev.yaml up --build
+```
+
+Open <http://localhost:8080/>, the API at
+<http://localhost:8080/api/v1/exercises>, or Swagger UI at
+<http://localhost:8080/api/docs/>. Source code is bind-mounted while Linux
+`node_modules`, npm cache, and MariaDB data remain in named volumes. File
+polling keeps watchers reliable across Docker Desktop host filesystems.
+
+To exercise the production build stages locally:
+
+```bash
+docker compose -f compose.runtime.yaml up --build
+docker compose -f compose.runtime.yaml --profile standalone-frontend up --build
+```
+
+The backend runtime is available on port 8080 and includes the built frontend.
+The optional standalone nginx frontend image is available on port 18081. The
+password defaults in `compose.runtime.yaml` are only for this local smoke test;
+the deployment scaffold requires explicit secrets.
+
+The three ordered SQL files in `apps/backend/sql/` create the table, reset its
+content, and load 20 demo exercises. Compose entrypoint initialization happens
+only for a new database volume. DDEV uses an idempotent post-start hook and
+loads the files only when the `exercises` table is missing. Existing DDEV data
+can be reset explicitly:
+
+```bash
+ddev mysql < apps/backend/sql/002-reset-content.sql
+ddev mysql < apps/backend/sql/003-demo-data.sql
+```
 
 ## Features
 
@@ -22,11 +88,12 @@ A mobile-first multiple-choice practice app built with Vue 3 + TypeScript + Vite
 
 ## Adding Exercises
 
-Exercises are JSON files in `public/data/exercises/`. After adding, removing,
-or changing the specializations of a file, regenerate the indexes:
+Exercises are JSON files in `apps/frontend/public/data/exercises/`. After
+adding, removing, or changing the specializations of a file, regenerate the
+indexes:
 
 ```bash
-python3 cms/999_generate_index.py
+python3 apps/content-cms/999_generate_index.py
 ```
 
 This validates categories, specializations, learning level, difficulty, and the
@@ -50,7 +117,7 @@ answer container, then writes the complete authoring index plus
 
   // Optional
   "instruction": "Markdown **supported**",
-  "images": ["2012_1.png"],          // filenames from public/data/img/
+  "images": ["2012_1.png"],          // filenames from apps/frontend/public/data/img/
   "answerOptions": ["A", "B", "C"],  // markdown supported
   "matchOptions": ["1", "2", "3"],   // MATCH right-side labels
   "submitButton": true,              // default true
@@ -65,7 +132,7 @@ answer container, then writes the complete authoring index plus
 }
 ```
 
-Images are served from `public/data/img/`.
+Images are served from `apps/frontend/public/data/img/`.
 
 `correct` is always a non-empty array. `SINGLE_CHOICE` and `NUMBER` contain
 exactly one item; the other modes may contain multiple items according to their
@@ -188,9 +255,10 @@ and [`doc/monorepo-migration.md`](doc/monorepo-migration.md).
 The card source can be switched in the app settings:
 
 - **JSON files** loads the specialization-specific index, for example
-  `public/data/exercises/index_fian.json`, and then every listed file.
-- **Backend API** is a draft adapter for the upcoming backend. It calls
-  `GET /api/v1/exercises` and currently expects `{ "items": Exercise[] }`.
+  `apps/frontend/public/data/exercises/index_fian.json`, and then every listed
+  file.
+- **Backend API** calls the implemented TypeScript backend at
+  `GET /api/v1/exercises` and expects `{ "items": Exercise[] }`.
 
 Set `VITE_EXERCISE_API_URL` to change the API base URL. The selected service
 stores its result in Dexie; the UI reads the active card set from there.
@@ -274,9 +342,19 @@ currently inactive cards remain listed instead of disappearing silently. See
 ## Development
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
+
+The root scripts delegate to `apps/frontend`:
+
+```bash
+npm run lint
+npm run test
+npm run build
+```
+
+The production frontend is written to `apps/frontend/dist/`.
 
 Build the production bundle and serve it locally:
 

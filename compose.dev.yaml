@@ -1,0 +1,52 @@
+name: multiple-choice-development
+
+services:
+  database:
+    image: mariadb:11.4
+    environment:
+      MARIADB_DATABASE: multiple_choice
+      MARIADB_USER: multiple_choice
+      MARIADB_PASSWORD: multiple_choice
+      MARIADB_ROOT_PASSWORD: local_root_only
+    healthcheck:
+      test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - development_database:/var/lib/mysql
+      - ./apps/backend/sql/001-create-tables.sql:/docker-entrypoint-initdb.d/001-create-tables.sql:ro
+      - ./apps/backend/sql/002-reset-content.sql:/docker-entrypoint-initdb.d/002-reset-content.sql:ro
+      - ./apps/backend/sql/003-demo-data.sql:/docker-entrypoint-initdb.d/003-demo-data.sql:ro
+
+  application:
+    build:
+      context: .
+      dockerfile: docker/dev.Dockerfile
+    working_dir: /workspace
+    command: sh -c "npm ci && npm run dev:full"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+      DB_HOST: database
+      DB_PORT: 3306
+      DB_NAME: multiple_choice
+      DB_USER: multiple_choice
+      DB_PASSWORD: multiple_choice
+      FRONTEND_DIRECTORY: /workspace/apps/frontend/dist
+      OPENAPI_PATH: /workspace/packages/contracts/openapi.yaml
+      CHOKIDAR_USEPOLLING: "true"
+    depends_on:
+      database:
+        condition: service_healthy
+    ports:
+      - "8080:3000"
+    volumes:
+      - .:/workspace
+      - development_node_modules:/workspace/node_modules
+      - development_npm_cache:/root/.npm
+
+volumes:
+  development_database:
+  development_node_modules:
+  development_npm_cache:

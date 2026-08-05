@@ -1,50 +1,24 @@
 {
-  "name": "bodo-multiple-choice",
+  "name": "abschluss-multiple-choice-monorepo",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "workspaces": [
+    "apps/frontend",
+    "apps/backend"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "test": "node --experimental-strip-types --test test/*.test.ts",
-    "preview": "vite preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.2.2",
-    "decimal.js": "^10.6.0",
-    "dexie": "^4.3.0",
-    "fastest-levenshtein": "^1.0.16",
-    "marked": "^17.0.5",
-    "openseadragon": "^6.0.2",
-    "tailwindcss": "^4.2.2",
-    "vite-plugin-pwa": "^1.2.0",
-    "vue": "^3.5.30",
-    "vue-i18n": "^11.3.0",
-    "vue-router": "^5.0.4"
+    "dev": "npm run dev --workspace @abschluss/multiple-choice-frontend --",
+    "dev:backend": "npm run dev --workspace @abschluss/multiple-choice-backend",
+    "dev:full": "npm run build:frontend && concurrently --kill-others-on-fail --names frontend,backend \"npm run build:watch --workspace @abschluss/multiple-choice-frontend\" \"npm run dev:backend\"",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "npm run build --workspace @abschluss/multiple-choice-frontend",
+    "build:backend": "npm run build --workspace @abschluss/multiple-choice-backend",
+    "test": "npm run test --workspaces --if-present",
+    "preview": "npm run preview --workspace @abschluss/multiple-choice-frontend --",
+    "lint": "npm run lint --workspaces --if-present",
+    "lint:fix": "npm run lint:fix --workspaces --if-present"
   },
   "devDependencies": {
-    "@abschluss/theme": "git+https://git.abschluss.jetzt/public/theme-abschluss.git#v1.0.0",
-    "@eslint/js": "^10.0.1",
-    "@intlify/eslint-plugin-vue-i18n": "^4.3.0",
-    "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^25.5.0",
-    "@types/openseadragon": "^5.0.2",
-    "@vitejs/plugin-vue": "^6.0.5",
-    "@vue/tsconfig": "^0.9.0",
-    "daisyui": "^5.5.19",
-    "eslint": "^10.1.0",
-    "eslint-plugin-vue": "^10.8.0",
-    "fake-indexeddb": "^6.2.5",
-    "globals": "^17.4.0",
-    "jsonc-eslint-parser": "^3.1.0",
-    "lucide-vue-next": "^0.577.0",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.57.1",
-    "vite": "^8.0.1",
-    "vue-eslint-parser": "^10.4.0",
-    "vue-tsc": "^3.2.6",
-    "yaml-eslint-parser": "^2.0.0"
+    "concurrently": "^10.0.4"
   }
 }

@@ -4,6 +4,8 @@ set -Eeuo pipefail
 
 readonly SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 readonly PROJECT_DIR="$(cd -- "${SCRIPT_DIR}/.." && pwd)"
+readonly FRONTEND_DIR="${PROJECT_DIR}/apps/frontend"
+readonly DIST_DIR="${FRONTEND_DIR}/dist"
 
 readonly DEPLOY_HOST="${DEPLOY_HOST:-vps3}"
 readonly DEPLOY_PATH="${DEPLOY_PATH:-/var/www/wiso.abschluss.jetzt/httpdocs}"
@@ -21,9 +23,9 @@ Usage:
   ./scripts/build-serve-deploy.sh deploy [--dry-run | --yes]
 
 Commands:
-  build   Lint and build the production bundle in dist/
-  serve   Serve the existing dist/ bundle with Vite Preview
-  deploy  Build, show an rsync dry-run, and deploy dist/ after confirmation
+  build   Lint and build the production bundle in apps/frontend/dist/
+  serve   Serve the existing frontend bundle with Vite Preview
+  deploy  Build, show an rsync dry-run, and deploy the frontend after confirmation
 
 Environment:
   SERVE_HOST   Preview bind address (default: 127.0.0.1)
@@ -59,8 +61,8 @@ build_app() {
 serve_app() {
   require_command npm
   require_dependencies
-  [[ -f dist/index.html ]] ||
-    fail "dist/ is missing. Run '$0 build' first."
+  [[ -f "${DIST_DIR}/index.html" ]] ||
+    fail "apps/frontend/dist/ is missing. Run '$0 build' first."
 
   npm run preview -- --host "${SERVE_HOST}" --port "${SERVE_PORT}"
 }
@@ -96,7 +98,7 @@ run_rsync() {
 
   rsync -avz --delete "${extra_args[@]}" \
     -e "ssh -o BatchMode=yes" \
-    dist/ \
+    "${DIST_DIR}/" \
     "${DEPLOY_HOST}:${DEPLOY_PATH}/"
 }
 
@@ -118,7 +120,7 @@ verify_deploy() {
   local local_hash remote_hash quoted_file
   quoted_file="$(remote_path_quote "${DEPLOY_PATH}/index.html")"
 
-  local_hash="$(sha256_file dist/index.html)"
+  local_hash="$(sha256_file "${DIST_DIR}/index.html")"
   remote_hash="$(
     ssh -o BatchMode=yes -- "${DEPLOY_HOST}" \
       "sha256sum ${quoted_file}" |

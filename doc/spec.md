@@ -26,7 +26,8 @@ refreshes its exercise set in Dexie:
 - `api`: draft `GET /api/v1/exercises` adapter expecting
   `{ "items": Exercise[] }`. `VITE_EXERCISE_API_URL` overrides `/api/v1`.
 
-Images used by the current JSON source remain in `public/data/img/`.
+Images used by the current JSON source remain in
+`apps/frontend/public/data/img/`.
 See [Exercise loading and API migration](exercise-loading.md) for the service
 boundary, runtime data flow, draft API response, and remaining migration work.
 
@@ -251,7 +252,7 @@ so previously downloaded sets remain available offline.
 
 - vue-i18n with `legacy: false`
 - Languages: English (`eng`), German (`deu`)
-- Locale files in `src/app/locales/`
+- Locale files in `apps/frontend/src/app/locales/`
 - Markdown rendering uses `marked` with `breaks: true` (single newlines → `<br>`)
 
 ## PWA

@@ -7,7 +7,7 @@ List view:
 
 Detail view: screenshots left (1/3) + exercise form right (2/3).
 
-Usage (from cms/):
+Usage (from apps/content-cms/):
     uv run python -m streamlit run exercise_editor.py
 """
 
@@ -19,9 +19,11 @@ from pathlib import Path
 import fitz  # PyMuPDF
 import streamlit as st
 
-FLAT_PDFS     = Path(__file__).parent / "processed_data" / "flat_pdfs"
-EXERCISES_DIR = (Path(__file__).parent / ".." / "public" / "data" / "exercises").resolve()
-IMG_DIR       = (Path(__file__).parent / ".." / "public" / "data" / "img").resolve()
+CMS_DIR       = Path(__file__).resolve().parent
+FRONTEND_DATA = CMS_DIR.parent / "frontend" / "public" / "data"
+FLAT_PDFS     = CMS_DIR / "processed_data" / "flat_pdfs"
+EXERCISES_DIR = FRONTEND_DATA / "exercises"
+IMG_DIR       = FRONTEND_DATA / "img"
 INDEX_PATH    = EXERCISES_DIR / "index.json"
 
 MODES = ["SINGLE_CHOICE", "MULTIPLE_CHOICE", "MATCH"]
@@ -330,7 +332,7 @@ def save_exercise(screenshot_files: list[Path]) -> None:
     if ss["ef_instruction"].strip():
         data["instruction"] = ss["ef_instruction"]
 
-    # Copy selected screenshots → public/data/img/
+    # Copy selected screenshots into the frontend's public data directory.
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     images = []
     for i, f in enumerate(screenshot_files):

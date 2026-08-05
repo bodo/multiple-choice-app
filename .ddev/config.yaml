@@ -1,0 +1,37 @@
+name: multiple-choice
+type: generic
+webserver_type: generic
+docroot: apps/frontend/dist
+nodejs_version: "22"
+database:
+  type: mariadb
+  version: "11.4"
+web_environment:
+  - HOST=0.0.0.0
+  - PORT=3000
+  - DB_HOST=db
+  - DB_PORT=3306
+  - DB_NAME=db
+  - DB_USER=db
+  - DB_PASSWORD=db
+  - FRONTEND_DIRECTORY=/var/www/html/apps/frontend/dist
+  - OPENAPI_PATH=/var/www/html/packages/contracts/openapi.yaml
+  - CHOKIDAR_USEPOLLING=true
+web_extra_daemons:
+  - name: application
+    command: "npm ci && npm run dev:full"
+    directory: /var/www/html
+web_extra_exposed_ports:
+  - name: application
+    container_port: 3000
+    http_port: 80
+    https_port: 443
+hooks:
+  post-start:
+    - exec: |
+        table_count="$(mysql -h db -udb -pdb db -N -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'db' AND table_name = 'exercises'")"
+        if [ "$table_count" = "0" ]; then
+          mysql -h db -udb -pdb db < /var/www/html/apps/backend/sql/001-create-tables.sql
+          mysql -h db -udb -pdb db < /var/www/html/apps/backend/sql/002-reset-content.sql
+          mysql -h db -udb -pdb db < /var/www/html/apps/backend/sql/003-demo-data.sql
+        fi
