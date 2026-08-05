@@ -75,9 +75,10 @@ API does not create a second learning history.
 `bodo-mc-settings`, `bodo-mc-bookmarks`, `bodo-mc-history`,
 `bodo-mc-sessions`, `bodo-mc-streaks`, and legacy `theme` values, validates and
 normalizes them, and writes all imported data plus its completion marker in one
-Dexie transaction. Only after that transaction succeeds are those exact keys
-removed. The importer never calls `localStorage.clear()` and never runs the
-data import twice.
+Dexie transaction. Only after that transaction succeeds and persistent browser
+storage is confirmed are those exact keys removed. If persistence is unavailable
+or denied, they remain as a migration fallback. The importer never calls
+`localStorage.clear()` and never runs the data import twice.
 
 ## API transition
 

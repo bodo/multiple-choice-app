@@ -11,8 +11,8 @@ import { initializeExerciseLibrary } from './entities/exercise/useExerciseLibrar
 import { initializeDailyGoal } from './entities/daily-goal/dailyGoalService'
 import './style.css'
 
-await requestPersistentStorage()
-await migrateLegacyLocalStorage()
+const storagePersistenceStatus = await requestPersistentStorage()
+await migrateLegacyLocalStorage(storagePersistenceStatus)
 await Promise.all([
   initializeSettings(),
   initializeBookmarks(),

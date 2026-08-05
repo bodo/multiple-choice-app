@@ -6,7 +6,8 @@ import {
   type StoredExerciseProgress,
   type StoredPracticeSession,
   type StoredStreak,
-} from './db'
+} from './db.ts'
+import type { StoragePersistenceStatus } from './storagePersistence'
 
 const MIGRATION_KEY = 'legacy-local-storage-v1'
 const SETTINGS_KEY = 'bodo-mc-settings'
@@ -166,10 +167,13 @@ function removeLegacyKeys() {
   }
 }
 
-export async function migrateLegacyLocalStorage(): Promise<void> {
+export async function migrateLegacyLocalStorage(
+  storagePersistenceStatus: StoragePersistenceStatus,
+): Promise<void> {
+  const canRemoveLegacyData = storagePersistenceStatus === 'persistent'
   const completed = await db.metadata.get(MIGRATION_KEY)
   if (completed) {
-    removeLegacyKeys()
+    if (canRemoveLegacyData) removeLegacyKeys()
     return
   }
 
@@ -204,5 +208,5 @@ export async function migrateLegacyLocalStorage(): Promise<void> {
     },
   )
 
-  removeLegacyKeys()
+  if (canRemoveLegacyData) removeLegacyKeys()
 }

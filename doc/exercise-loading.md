@@ -58,7 +58,9 @@ Version 10 adds IndexedDB tables for settings, bookmarks, exercise progress,
 answer events, practice sessions, streaks, and migration metadata. A separate
 idempotent startup import copies legacy localStorage values into these tables in
 one transaction. It removes only the recognized legacy keys and only after the
-transaction succeeds.
+transaction succeeds and `navigator.storage.persisted()` or
+`navigator.storage.persist()` confirms persistent storage. With unsupported or
+denied persistence, the legacy values remain available as a migration fallback.
 Version 11 adds cumulative XP to progress and learning-level, difficulty,
 session, Leitner-box, and daily-goal snapshots to new answer events. Existing
 progress receives a backward-compatible XP value. The exercise cache alone is

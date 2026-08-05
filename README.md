@@ -232,7 +232,9 @@ Dexie/IndexedDB is the single persistent store for exercise caches, settings,
 bookmarks, answer events, progress, streaks, practice sessions, and the current
 training session. On the first start after this migration, the app imports the
 legacy `bodo-mc-*` localStorage values in one IndexedDB transaction and removes
-only those legacy keys after the transaction succeeds.
+only those legacy keys after the transaction succeeds and persistent browser
+storage has been confirmed. If persistence is unavailable or denied, the
+legacy values remain as a migration fallback.
 
 Dexie version 11 adds XP and answer-event snapshots for learning level,
 difficulty, Leitner box, session, and daily-goal credit. It retains learner

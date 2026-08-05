@@ -36,6 +36,7 @@
     "daisyui": "^5.5.19",
     "eslint": "^10.1.0",
     "eslint-plugin-vue": "^10.8.0",
+    "fake-indexeddb": "^6.2.5",
     "globals": "^17.4.0",
     "jsonc-eslint-parser": "^3.1.0",
     "lucide-vue-next": "^0.577.0",
