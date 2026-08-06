@@ -30,6 +30,10 @@ export interface Exercise {
   adminTags?: string[]
 }
 
+export type ConfidenceLevel = 'high' | 'medium' | 'none'
+export type MetacognitiveState = 'overconfident' | 'underconfident' | 'calibrated'
+export type ErrorSelfTag = 'knowledgeGap' | 'careless' | 'confusion'
+
 export interface AnswerResult {
   isCorrect: boolean
   scorePermille?: number
@@ -38,4 +42,14 @@ export interface AnswerResult {
   selectedIndices?: number[]
   submittedMatches?: number[]
   submittedValue?: string
+  confidence?: ConfidenceLevel
+  metacognitiveState?: MetacognitiveState
+  errorSelfTag?: ErrorSelfTag
+  timeToRevealMs?: number
+  timeToSubmitMs?: number
+  timeOnExplanationMs?: number
+  optionChangeCount?: number
+  optionsCoveredMode?: boolean
+  firstSelectedIdx?: number | null
+  finalSelectedIdx?: number | null
 }

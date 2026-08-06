@@ -10,6 +10,14 @@ BITS hilft dir beim aktiven Wiederholen von prüfungsrelevanten Fragen. Die App 
 - Behandle falsche Antworten als Hinweis auf eine Wissenslücke. Arbeite das Thema nach, statt dieselbe Karte nur mehrfach zu erraten.
 - Prüfe gelegentlich deine Statistik. Entscheidend ist nicht nur die Anzahl beantworteter Karten, sondern ob schwierige Inhalte mit der Zeit sicherer werden.
 
+## Ehrliche Selbsteinschätzung
+
+Wenn die Option „Antworten zu Beginn verdecken“ aktiviert ist, wählst du beim Abgeben deinen Vertrauensgrad („bin sicher“, „bin unsicher“, „weiß gar nicht“):
+
+- **Wähle „bin unsicher“**, wenn du die richtige Antwort nicht aktiv aus dem Gedächtnis abrufen konntest, während die Optionen noch verdeckt waren, oder wenn du die Lösung im Ausschlussverfahren (Eliminationsprinzip) ermittelt hast.
+- **Wähle „weiß gar nicht“**, wenn du völlig unsicher bist. So erhältst du sofort Zeit, die Erklärung nachzulesen, und die Karte wird in der Sitzung rasch wiederholt – ohne dass sie direkt als Schwachstelle gesperrt wird.
+- **Wähle „bin sicher“** nur dann, wenn du die Lösung frei aus dem Gedächtnis wusstest. Eine ehrliche Wahl optimiert deine Wiederholungsabstände und schützt vor Fehleinschätzungen.
+
 <!-- help-action-hints -->
 
 ## Tastaturbedienung

@@ -22,6 +22,8 @@ export interface StoredTrainingSession {
 export type LearningStatus = 'active' | 'interventionRequired'
 export type WeakspotReason = 'manual' | 'repeatedIncorrect'
 
+import type { ConfidenceLevel, ErrorSelfTag, MetacognitiveState } from '../entities/exercise/exercise'
+
 export interface StoredAnswerLogEntry {
   date: number
   correct: boolean
@@ -29,6 +31,16 @@ export interface StoredAnswerLogEntry {
   mode?: 'train' | 'exam'
   scorePermille?: number
   outcome?: AnswerOutcome
+  confidence?: ConfidenceLevel
+  metacognitiveState?: MetacognitiveState
+  errorSelfTag?: ErrorSelfTag
+  timeToRevealMs?: number
+  timeToSubmitMs?: number
+  timeOnExplanationMs?: number
+  optionChangeCount?: number
+  optionsCoveredMode?: boolean
+  firstSelectedIdx?: number | null
+  finalSelectedIdx?: number | null
 }
 
 export interface StoredExerciseProgress {
@@ -105,6 +117,16 @@ export interface StoredAnswerEvent {
   masteryXpMilli?: number
   momentumXpMilli?: number
   policyVersion?: number
+  confidence?: ConfidenceLevel
+  metacognitiveState?: MetacognitiveState
+  errorSelfTag?: ErrorSelfTag
+  timeToRevealMs?: number
+  timeToSubmitMs?: number
+  timeOnExplanationMs?: number
+  optionChangeCount?: number
+  optionsCoveredMode?: boolean
+  firstSelectedIdx?: number | null
+  finalSelectedIdx?: number | null
 }
 
 export type XpBucket = 'mastery' | 'momentum'

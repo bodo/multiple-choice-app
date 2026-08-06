@@ -1,4 +1,5 @@
 import type { AnswerOutcome } from '../answerOutcome'
+import type { ConfidenceLevel } from '../exercise'
 
 export const CURRENT_LEVEL_WEIGHT_FACTOR = 2
 export const RETRY_DISTINCT_CARD_GAP = 5
@@ -7,10 +8,12 @@ export const RETRY_MIN_WEIGHT = 10
 export interface SessionAnswerForSelection {
   exerciseId: string
   outcome: AnswerOutcome
+  confidence?: ConfidenceLevel
 }
 
 export interface SessionCardSelectionState {
   lastOutcome: AnswerOutcome | null
+  lastConfidence: ConfidenceLevel | null
   distinctCardsSinceLastAnswer: number
 }
 
@@ -32,18 +35,30 @@ export function getSessionCardSelectionState(
     }
   }
   if (lastAnswerIndex < 0) {
-    return { lastOutcome: null, distinctCardsSinceLastAnswer: 0 }
+    return { lastOutcome: null, lastConfidence: null, distinctCardsSinceLastAnswer: 0 }
   }
 
+  const lastAnswer = answers[lastAnswerIndex]
   const laterExerciseIds = answers
     .slice(lastAnswerIndex + 1)
     .filter(answer => answer.exerciseId !== exerciseId)
     .map(answer => answer.exerciseId)
 
   return {
-    lastOutcome: answers[lastAnswerIndex].outcome,
+    lastOutcome: lastAnswer.outcome,
+    lastConfidence: lastAnswer.confidence ?? null,
     distinctCardsSinceLastAnswer: new Set(laterExerciseIds).size,
   }
+}
+
+function requiredRequeueGap(
+  outcome: AnswerOutcome,
+  confidence: ConfidenceLevel | null,
+): number {
+  if (outcome === 'correct' && confidence === 'medium') return 8
+  if (outcome !== 'correct' && confidence === 'high') return 6
+  if (outcome !== 'correct' && confidence === 'none') return 4
+  return RETRY_DISTINCT_CARD_GAP
 }
 
 export function getTrainingExerciseWeight({
@@ -51,12 +66,20 @@ export function getTrainingExerciseWeight({
   isCurrentLevel,
   sessionState,
 }: TrainingExerciseWeightInput): number {
-  if (sessionState.lastOutcome === 'correct') return 0
-
   if (
-    sessionState.lastOutcome !== null
-    && sessionState.distinctCardsSinceLastAnswer < RETRY_DISTINCT_CARD_GAP
-  ) return 0
+    sessionState.lastOutcome === 'correct'
+    && sessionState.lastConfidence !== 'medium'
+  ) {
+    return 0
+  }
+
+  if (sessionState.lastOutcome !== null) {
+    const minGap = requiredRequeueGap(
+      sessionState.lastOutcome,
+      sessionState.lastConfidence,
+    )
+    if (sessionState.distinctCardsSinceLastAnswer < minGap) return 0
+  }
 
   const retryWeight = sessionState.lastOutcome === null
     ? spacedRepetitionWeight

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import type { Exercise, AnswerResult } from '../../entities/exercise/exercise'
+import type { Exercise, AnswerResult, ErrorSelfTag } from '../../entities/exercise/exercise'
 import { isRegexTextAnswer } from '../../entities/exercise/textAnswerMatching'
 import { outcomeForScore, normalizeScorePermille } from '../../entities/exercise/answerOutcome'
+import { updateLastAnswerErrorSelfTag } from '../../entities/exercise/useExerciseHistory'
 import MarkdownRenderer from '../../dumb/MarkdownRenderer.vue'
 
 const props = defineProps<{
@@ -12,6 +13,13 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
+const activeErrorTag = ref<ErrorSelfTag | null>(props.result.errorSelfTag ?? null)
+
+function selectErrorTag(tag: ErrorSelfTag) {
+  if (activeErrorTag.value === tag) return
+  activeErrorTag.value = tag
+  void updateLastAnswerErrorSelfTag(tag)
+}
 
 const isChoiceMode = computed(() =>
   props.exercise.inputMode === 'SINGLE_CHOICE' || props.exercise.inputMode === 'MULTIPLE_CHOICE',
@@ -100,6 +108,42 @@ const hasExplanation = computed(() =>
       :class="resultClass"
     >
       {{ resultLabel }}
+    </div>
+
+    <!-- Error Self-Tagging Chips (for incorrect or 'none' confidence) -->
+    <div
+      v-if="outcome !== 'correct' || result.confidence === 'none'"
+      class="rounded-lg border border-base-300 bg-base-200/40 p-3 flex flex-col gap-2 transition-all"
+    >
+      <p class="text-xs font-semibold text-base-content/60">
+        {{ t('errorSelfTagTitle') }}
+      </p>
+      <div class="flex flex-wrap gap-1.5">
+        <button
+          type="button"
+          class="btn btn-xs sm:btn-sm"
+          :class="activeErrorTag === 'knowledgeGap' ? 'btn-primary' : 'btn-outline border-base-300'"
+          @click="selectErrorTag('knowledgeGap')"
+        >
+          {{ t('errorTagKnowledgeGap') }}
+        </button>
+        <button
+          type="button"
+          class="btn btn-xs sm:btn-sm"
+          :class="activeErrorTag === 'careless' ? 'btn-warning' : 'btn-outline border-base-300'"
+          @click="selectErrorTag('careless')"
+        >
+          {{ t('errorTagCareless') }}
+        </button>
+        <button
+          type="button"
+          class="btn btn-xs sm:btn-sm"
+          :class="activeErrorTag === 'confusion' ? 'btn-info' : 'btn-outline border-base-300'"
+          @click="selectErrorTag('confusion')"
+        >
+          {{ t('errorTagConfusion') }}
+        </button>
+      </div>
     </div>
 
     <!-- Choice-based: options with icons + explanations -->

@@ -29,6 +29,7 @@ interface StoredSettings {
   specialization: Specialization
   learningLevel: LearningLevel
   automaticLevelProgression: boolean
+  hideOptionsInitially: boolean
 }
 
 interface NavigatorWithUserAgentData extends Navigator {
@@ -63,6 +64,7 @@ function defaultSettings(): StoredSettings {
     specialization: 'FIAN',
     learningLevel: 1,
     automaticLevelProgression: true,
+    hideOptionsInitially: true,
   }
 }
 
@@ -117,6 +119,9 @@ function normalizeSettings(value: unknown): StoredSettings {
       typeof candidate.automaticLevelProgression === 'boolean'
         ? candidate.automaticLevelProgression
         : defaults.automaticLevelProgression,
+    hideOptionsInitially: typeof candidate.hideOptionsInitially === 'boolean'
+      ? candidate.hideOptionsInitially
+      : defaults.hideOptionsInitially,
   }
 }
 
@@ -135,6 +140,7 @@ const mobileSolvableOnly = ref(defaults.mobileSolvableOnly)
 const specialization = ref<Specialization>(defaults.specialization)
 const learningLevel = ref<LearningLevel>(defaults.learningLevel)
 const automaticLevelProgression = ref(defaults.automaticLevelProgression)
+const hideOptionsInitially = ref(defaults.hideOptionsInitially)
 
 let initialized = false
 
@@ -154,6 +160,7 @@ function currentSettings(): StoredSettings {
     specialization: specialization.value,
     learningLevel: learningLevel.value,
     automaticLevelProgression: automaticLevelProgression.value,
+    hideOptionsInitially: hideOptionsInitially.value,
   }
 }
 
@@ -172,6 +179,7 @@ function applySettings(settings: StoredSettings) {
   specialization.value = settings.specialization
   learningLevel.value = settings.learningLevel
   automaticLevelProgression.value = settings.automaticLevelProgression
+  hideOptionsInitially.value = settings.hideOptionsInitially
 }
 
 async function save() {
@@ -198,6 +206,7 @@ function startPersistence() {
       specialization,
       learningLevel,
       automaticLevelProgression,
+      hideOptionsInitially,
       mode,
     ],
     () => { void save() },
@@ -233,5 +242,6 @@ export function useSettings() {
     specialization,
     learningLevel,
     automaticLevelProgression,
+    hideOptionsInitially,
   }
 }

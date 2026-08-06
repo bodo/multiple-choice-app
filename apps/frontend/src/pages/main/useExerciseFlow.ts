@@ -12,6 +12,7 @@ import {
   getWeight,
   isExerciseWeakspot,
   recordAnswer,
+  updateLastAnswerExplanationTime,
 } from '../../entities/exercise/useExerciseHistory'
 import { useExerciseCatalog } from '../../entities/exercise/useExerciseCatalog'
 import { useExercises } from '../../entities/exercise/useExercises'
@@ -210,14 +211,19 @@ function persistTrainingSession() {
 
 function scheduleAutoAdvance(result: AnswerResult) {
   if (!autoAdvance.value || mode.value !== 'train') return
+  if (result.confidence === 'none') return
+  if (result.confidence === 'high' && !result.isCorrect) return
 
   const delay = result.isCorrect ? timeoutCorrect.value : timeoutIncorrect.value
   schedule(delay, advance)
 }
 
+let submittedAt = 0
+
 async function submitAnswer(result: AnswerResult) {
   lastResult.value = result
   phase.value = 'submitted'
+  submittedAt = Date.now()
 
   // Timer stops here — time between question shown and answer submitted
   const answerTimeMs = Date.now() - questionStartTime.value
@@ -277,6 +283,11 @@ async function submitAnswer(result: AnswerResult) {
 
 function advance() {
   cancel()
+  if (submittedAt > 0) {
+    const timeOnExplanationMs = Date.now() - submittedAt
+    void updateLastAnswerExplanationTime(timeOnExplanationMs)
+    submittedAt = 0
+  }
   newWeakspotExerciseId.value = null
   newLearningLevel.value = null
   if (exercises.value.length === 0) return

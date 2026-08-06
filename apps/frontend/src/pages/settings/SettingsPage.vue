@@ -37,6 +37,7 @@ const {
   specialization,
   learningLevel,
   automaticLevelProgression,
+  hideOptionsInitially,
 } = useSettings()
 const { exercises } = useExercises()
 const {
@@ -158,6 +159,23 @@ function setLearningLevel(value: number) {
               </div>
               <input
                 v-model="mobileSolvableOnly"
+                type="checkbox"
+                class="toggle toggle-primary mt-0.5 shrink-0"
+              >
+            </label>
+
+            <!-- Hide Options Initially Toggle -->
+            <label class="flex items-start gap-4 cursor-pointer">
+              <div class="flex-1">
+                <p class="font-medium">
+                  {{ t('hideOptionsInitially') }}
+                </p>
+                <p class="text-sm text-base-content/60 mt-0.5">
+                  {{ t('hideOptionsInitiallyHint') }}
+                </p>
+              </div>
+              <input
+                v-model="hideOptionsInitially"
                 type="checkbox"
                 class="toggle toggle-primary mt-0.5 shrink-0"
               >

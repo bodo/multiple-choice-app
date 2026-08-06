@@ -402,13 +402,42 @@ export async function initializeExerciseHistory(): Promise<void> {
   await flagPendingAutomaticWeakspots()
 }
 
+import type { ConfidenceLevel, ErrorSelfTag, MetacognitiveState } from './exercise'
+
+function computeMetacognitiveState(
+  outcome: AnswerOutcome,
+  confidence?: ConfidenceLevel,
+): MetacognitiveState | undefined {
+  if (!confidence) return undefined
+  if (confidence === 'high' && outcome === 'incorrect') return 'overconfident'
+  if (confidence === 'medium' && outcome === 'correct') return 'underconfident'
+  return 'calibrated'
+}
+
+function computeBox(
+  previousBox: number,
+  outcome: AnswerOutcome,
+  confidence?: ConfidenceLevel,
+): number {
+  if (outcome === 'correct') {
+    if (confidence === 'medium') {
+      return Math.min(previousBox, 2)
+    }
+    return Math.min(previousBox + 1, 5)
+  }
+  if (outcome === 'incorrect') {
+    return 1
+  }
+  return previousBox
+}
+
 export function getTrainingSessionCardSelectionState(
   exerciseId: string,
   now = Date.now(),
 ): SessionCardSelectionState {
   const session = getActiveSession(now)
   if (!session) {
-    return { lastOutcome: null, distinctCardsSinceLastAnswer: 0 }
+    return { lastOutcome: null, lastConfidence: null, distinctCardsSinceLastAnswer: 0 }
   }
 
   const sessionAnswers = answerEvents.value
@@ -419,6 +448,7 @@ export function getTrainingSessionCardSelectionState(
     .map(event => ({
       exerciseId: event.exerciseId,
       outcome: answerOutcome(event),
+      confidence: event.confidence,
     }))
   return getSessionCardSelectionState(exerciseId, sessionAnswers)
 }
@@ -431,6 +461,7 @@ function appendAnswer(
   mode: AnswerMode,
   occurredAt: number,
   xpEarnedMilli: number,
+  result?: AnswerResult,
 ): ExerciseRecord {
   const correct = record.correct + (outcome === 'correct' ? 1 : 0)
   const wrong = record.wrong + (outcome === 'incorrect' ? 1 : 0)
@@ -439,6 +470,7 @@ function appendAnswer(
   const avgTimeMs = total <= 1
     ? timeMs
     : Math.round(record.avgTimeMs * 0.8 + timeMs * 0.2)
+  const metacognitiveState = computeMetacognitiveState(outcome, result?.confidence)
   const answerLog = [
     ...record.answerLog,
     {
@@ -448,6 +480,14 @@ function appendAnswer(
       mode,
       scorePermille,
       outcome,
+      confidence: result?.confidence,
+      metacognitiveState,
+      timeToRevealMs: result?.timeToRevealMs,
+      timeToSubmitMs: result?.timeToSubmitMs,
+      optionChangeCount: result?.optionChangeCount,
+      optionsCoveredMode: result?.optionsCoveredMode,
+      firstSelectedIdx: result?.firstSelectedIdx,
+      finalSelectedIdx: result?.finalSelectedIdx,
     },
   ].slice(-MAX_LOG_ENTRIES)
 
@@ -457,9 +497,7 @@ function appendAnswer(
     wrong,
     partial,
     lastSeen: occurredAt,
-    box: outcome === 'correct'
-      ? Math.min(record.box + 1, 5)
-      : outcome === 'incorrect' ? 1 : record.box,
+    box: computeBox(record.box, outcome, result?.confidence),
     avgTimeMs,
     answerLog,
     xp: record.xp + xpEarnedMilli / XP_SCALE,
@@ -719,6 +757,8 @@ export async function recordAnswer(
       dailyGoalCredit = outcome === 'correct'
         && !todayEvents.some(event => event.correct && event.dailyGoalCredit !== false)
 
+      const metacognitiveState = computeMetacognitiveState(outcome, result.confidence)
+
       updated = appendAnswer(
         previous,
         outcome,
@@ -727,6 +767,7 @@ export async function recordAnswer(
         mode,
         occurredAt,
         masteryXpMilli + momentumXpMilli,
+        result,
       )
       becameWeakspot = mode === 'train'
         && updated.learningStatus === 'active'
@@ -796,6 +837,14 @@ export async function recordAnswer(
         difficulty: exercise.difficulty,
         scorePermille,
         outcome,
+        confidence: result.confidence,
+        metacognitiveState,
+        timeToRevealMs: result.timeToRevealMs,
+        timeToSubmitMs: result.timeToSubmitMs,
+        optionChangeCount: result.optionChangeCount,
+        optionsCoveredMode: result.optionsCoveredMode,
+        firstSelectedIdx: result.firstSelectedIdx,
+        finalSelectedIdx: result.finalSelectedIdx,
         masteryXpMilli,
         momentumXpMilli,
         policyVersion: XP_POLICY_VERSION,
@@ -1194,4 +1243,50 @@ export function getLearningRhythm(now = Date.now()): LearningRhythm {
     longestPause,
     evenness,
   }
+}
+
+export async function updateLastAnswerExplanationTime(
+  timeOnExplanationMs: number,
+): Promise<void> {
+  const lastEvent = answerEvents.value.at(-1)
+  if (!lastEvent || timeOnExplanationMs <= 0) return
+
+  const updatedEvent = { ...lastEvent, timeOnExplanationMs }
+  await db.answerEvents.put(updatedEvent)
+
+  const progress = progressRecords.value[lastEvent.exerciseId]
+  if (progress && progress.answerLog.length > 0) {
+    const lastLogIdx = progress.answerLog.length - 1
+    const updatedLog = [...progress.answerLog]
+    updatedLog[lastLogIdx] = { ...updatedLog[lastLogIdx], timeOnExplanationMs }
+    const updatedRecord = { ...progress, answerLog: updatedLog }
+    await db.exerciseProgress.put(updatedRecord)
+    replaceProgressRecord(updatedRecord)
+  }
+
+  const idx = answerEvents.value.length - 1
+  answerEvents.value[idx] = updatedEvent
+}
+
+export async function updateLastAnswerErrorSelfTag(
+  errorSelfTag: ErrorSelfTag,
+): Promise<void> {
+  const lastEvent = answerEvents.value.at(-1)
+  if (!lastEvent) return
+
+  const updatedEvent = { ...lastEvent, errorSelfTag }
+  await db.answerEvents.put(updatedEvent)
+
+  const progress = progressRecords.value[lastEvent.exerciseId]
+  if (progress && progress.answerLog.length > 0) {
+    const lastLogIdx = progress.answerLog.length - 1
+    const updatedLog = [...progress.answerLog]
+    updatedLog[lastLogIdx] = { ...updatedLog[lastLogIdx], errorSelfTag }
+    const updatedRecord = { ...progress, answerLog: updatedLog }
+    await db.exerciseProgress.put(updatedRecord)
+    replaceProgressRecord(updatedRecord)
+  }
+
+  const idx = answerEvents.value.length - 1
+  answerEvents.value[idx] = updatedEvent
 }

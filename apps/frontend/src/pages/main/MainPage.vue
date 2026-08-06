@@ -492,12 +492,14 @@ useSwipe((dir) => {
     <FlashCard
       v-if="!isExamFinished && !isLandscape"
       :flipped="phase === 'submitted'"
+      class="flex-1 min-h-0 overflow-y-auto"
     >
       <template #front>
-        <div class="p-4">
-          <QuestionSection :exercise="currentExercise" />
-        </div>
-        <div class="flex flex-col items-end p-4 gap-3">
+        <div class="p-4 pb-12 flex flex-col gap-4">
+          <QuestionSection
+            :exercise="currentExercise"
+            :show-categories="false"
+          />
           <AnswerSection
             :exercise="currentExercise"
             :phase="phase"
@@ -505,22 +507,48 @@ useSwipe((dir) => {
             @submitted="submitAnswer"
             @advance="advance"
           />
+          <div
+            v-if="currentExercise?.categories?.length"
+            class="w-full flex flex-wrap justify-end gap-1.5 mt-1 pt-2 border-t border-base-200/60"
+          >
+            <span
+              v-for="cat in currentExercise.categories"
+              :key="cat"
+              class="badge badge-ghost badge-xs text-base-content/50"
+            >
+              {{ cat }}
+            </span>
+          </div>
         </div>
       </template>
       <template #back>
-        <ExplainBack
-          v-if="lastResult"
-          :exercise="currentExercise"
-          :result="lastResult"
-        />
-        <div class="p-4 flex justify-end">
-          <button
-            type="button"
-            class="btn btn-primary"
-            @click="advance"
+        <div class="p-4 pb-12 flex flex-col gap-4">
+          <ExplainBack
+            v-if="lastResult"
+            :exercise="currentExercise"
+            :result="lastResult"
+          />
+          <div
+            v-if="currentExercise?.categories?.length"
+            class="w-full flex flex-wrap justify-end gap-1.5 pt-2 border-t border-base-200/60"
           >
-            {{ t('next') }}
-          </button>
+            <span
+              v-for="cat in currentExercise.categories"
+              :key="cat"
+              class="badge badge-ghost badge-xs text-base-content/50"
+            >
+              {{ cat }}
+            </span>
+          </div>
+          <div class="flex justify-end mt-1">
+            <button
+              type="button"
+              class="btn btn-primary"
+              @click="advance"
+            >
+              {{ t('next') }}
+            </button>
+          </div>
         </div>
       </template>
     </FlashCard>

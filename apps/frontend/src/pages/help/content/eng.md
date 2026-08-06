@@ -10,6 +10,14 @@ BITS helps you actively review exam-relevant questions. The app records more tha
 - Treat an incorrect answer as evidence of a knowledge gap. Study the topic instead of repeatedly guessing the same card.
 - Review your statistics occasionally. The important measure is not only how many cards you answered, but whether difficult material becomes more reliable over time.
 
+## Honest Self-Assessment
+
+When "Cover options initially" is enabled, you submit your answers with a confidence rating ("I'm sure", "I'm unsure", "Don't know"):
+
+- **Choose "I'm unsure"** if you could not actively recall the correct answer from memory while options were covered, or if you relied primarily on process of elimination.
+- **Choose "Don't know"** if you are completely uncertain. This gives you time to study the explanation immediately and queues the card for quick re-testing in your session without triggering a weakspot lock.
+- **Choose "I'm sure"** only when you knew the answer actively from memory. Honest self-assessment optimizes your repetition intervals and prevents false confidence.
+
 <!-- help-action-hints -->
 
 ## Keyboard controls

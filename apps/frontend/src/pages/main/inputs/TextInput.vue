@@ -117,16 +117,24 @@ onUnmounted(() => {
       </div>
     </template>
     <template v-else>
-      <input
-        ref="inputEl"
-        v-model="input"
-        type="text"
-        class="input input-bordered w-full"
-        :placeholder="t('yourAnswer')"
-        :disabled="!isInteractive"
-        :autofocus="isInteractive"
-        :aria-label="`Text input for answer`"
-      >
+      <div class="flex flex-col gap-1.5 w-full">
+        <input
+          ref="inputEl"
+          v-model="input"
+          type="text"
+          class="input input-bordered w-full"
+          :placeholder="t('yourAnswer')"
+          :disabled="!isInteractive"
+          :autofocus="isInteractive"
+          :aria-label="t('yourAnswer')"
+        >
+        <p
+          v-if="displayedAnswers.length > 0"
+          class="text-xs text-base-content/60"
+        >
+          {{ displayedAnswers.length === 1 ? t('textVariantsHintSingle') : t('textVariantsHintMultiple', { count: displayedAnswers.length }) }}
+        </p>
+      </div>
       <button
         class="btn btn-primary self-end"
         :disabled="!isInteractive || !input.trim()"
