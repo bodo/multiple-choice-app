@@ -26,6 +26,8 @@ export interface Exercise {
   maximumStringDistance?: number
   explainInstruction?: string
   explainAnswerOptions?: string[]
+  distractorTypes?: Record<number, string>
+  distractorAnalysis?: Record<number, string>
   adminComment?: string
   adminTags?: string[]
 }
@@ -52,4 +54,5 @@ export interface AnswerResult {
   optionsCoveredMode?: boolean
   firstSelectedIdx?: number | null
   finalSelectedIdx?: number | null
+  selectedDistractorType?: string
 }

@@ -132,6 +132,11 @@ function submit(confidence?: ConfidenceLevel) {
     : 0
   const timeToSubmitMs = Math.max(0, revealedAt !== null ? now - revealedAt : now - shownAt)
 
+  const wrongSelectedIdx = sel.find(index => !correctSet.value.has(index))
+  const selectedDistractorType = wrongSelectedIdx !== undefined && props.exercise.distractorTypes
+    ? props.exercise.distractorTypes[wrongSelectedIdx]
+    : undefined
+
   emit('submitted', {
     isCorrect: scorePermille === 1000,
     scorePermille,
@@ -144,6 +149,7 @@ function submit(confidence?: ConfidenceLevel) {
     optionsCoveredMode: hideOptionsInitially.value,
     firstSelectedIdx: firstSelectedIdx.value,
     finalSelectedIdx: sel[0] ?? null,
+    selectedDistractorType,
   })
 }
 

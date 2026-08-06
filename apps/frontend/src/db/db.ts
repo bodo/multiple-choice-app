@@ -41,6 +41,7 @@ export interface StoredAnswerLogEntry {
   optionsCoveredMode?: boolean
   firstSelectedIdx?: number | null
   finalSelectedIdx?: number | null
+  selectedDistractorType?: string
 }
 
 export interface StoredExerciseProgress {
@@ -127,6 +128,7 @@ export interface StoredAnswerEvent {
   optionsCoveredMode?: boolean
   firstSelectedIdx?: number | null
   finalSelectedIdx?: number | null
+  selectedDistractorType?: string
 }
 
 export type XpBucket = 'mastery' | 'momentum'

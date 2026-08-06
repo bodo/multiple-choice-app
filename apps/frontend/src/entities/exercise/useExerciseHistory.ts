@@ -488,6 +488,7 @@ function appendAnswer(
       optionsCoveredMode: result?.optionsCoveredMode,
       firstSelectedIdx: result?.firstSelectedIdx,
       finalSelectedIdx: result?.finalSelectedIdx,
+      selectedDistractorType: result?.selectedDistractorType,
     },
   ].slice(-MAX_LOG_ENTRIES)
 
@@ -845,6 +846,7 @@ export async function recordAnswer(
         optionsCoveredMode: result.optionsCoveredMode,
         firstSelectedIdx: result.firstSelectedIdx,
         finalSelectedIdx: result.finalSelectedIdx,
+        selectedDistractorType: result.selectedDistractorType,
         masteryXpMilli,
         momentumXpMilli,
         policyVersion: XP_POLICY_VERSION,

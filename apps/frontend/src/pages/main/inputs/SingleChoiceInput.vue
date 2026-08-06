@@ -113,6 +113,10 @@ function submit(confidence?: ConfidenceLevel) {
     : 0
   const timeToSubmitMs = Math.max(0, revealedAt !== null ? now - revealedAt : now - shownAt)
 
+  const selectedDistractorType = selected.value !== null && !isCorrect && props.exercise.distractorTypes
+    ? props.exercise.distractorTypes[selected.value]
+    : undefined
+
   emit('submitted', {
     isCorrect,
     scorePermille,
@@ -125,6 +129,7 @@ function submit(confidence?: ConfidenceLevel) {
     optionsCoveredMode: hideOptionsInitially.value,
     firstSelectedIdx: firstSelectedIdx.value,
     finalSelectedIdx: selected.value,
+    selectedDistractorType,
   })
 }
 
