@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "Cluster und Failover"
-  ],
-  "instruction": "Was ist ein Quorum in einem Cluster?",
-  "answerOptions": [
-    "Eine Entscheidungsmehrheit, die Split-Brain vermeiden hilft",
-    "Ein DNS-Alias für alle Knoten",
-    "Ein zusätzliches Vollbackup",
-    "Eine garantierte Verdopplung des Durchsatzes"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Quorumregeln stellen sicher, dass nur eine ausreichend legitimierte Partition Ressourcen aktiv kontrolliert.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "Cluster und Failover"
+    ],
+    "instruction": "Was ist ein Quorum in einem Cluster?",
+    "answerOptions": [
+        "Eine Entscheidungsmehrheit, die Split-Brain vermeiden hilft",
+        "Ein DNS-Alias für alle Knoten",
+        "Ein zusätzliches Vollbackup",
+        "Eine garantierte Verdopplung des Durchsatzes"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Quorumregeln stellen sicher, dass nur eine ausreichend legitimierte Partition Ressourcen aktiv kontrolliert.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

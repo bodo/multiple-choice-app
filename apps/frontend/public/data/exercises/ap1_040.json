@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "Server und Speicher"
-  ],
-  "instruction": "Welche Aussagen treffen auf RAID 10 zu?",
-  "answerOptions": [
-    "Es kombiniert Spiegelung und Striping.",
-    "Es benötigt mindestens vier Laufwerke.",
-    "Es bietet Redundanz und häufig gute Leistung.",
-    "Es besitzt immer die volle Rohkapazität als Nutzkapazität."
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "RAID 10 verteilt Daten über gespiegelte Paare. Wegen der Spiegelung steht typischerweise nur die Hälfte der Rohkapazität zur Verfügung.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "Server und Speicher"
+    ],
+    "instruction": "Welche Aussagen treffen auf RAID 10 zu?",
+    "answerOptions": [
+        "Es kombiniert Spiegelung und Striping.",
+        "Es benötigt mindestens vier Laufwerke.",
+        "Es bietet Redundanz und häufig gute Leistung.",
+        "Es besitzt immer die volle Rohkapazität als Nutzkapazität."
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "RAID 10 verteilt Daten über gespiegelte Paare. Wegen der Spiegelung steht typischerweise nur die Hälfte der Rohkapazität zur Verfügung.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

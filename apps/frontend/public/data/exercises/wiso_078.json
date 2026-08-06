@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Rechnungswesen und Finanzierung"
-  ],
-  "instruction": "Wie lässt sich das Eigenkapital aus einer vereinfachten Bilanz ermitteln?",
-  "answerOptions": [
-    "Vermögen − Fremdkapital",
-    "Vermögen + Fremdkapital",
-    "Umsatz − Stückzahl",
-    "Fremdkapital − Vermögen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Aus der Bilanzgleichung `Vermögen = Eigenkapital + Fremdkapital` folgt `Eigenkapital = Vermögen − Fremdkapital`.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Rechnungswesen und Finanzierung"
+    ],
+    "instruction": "Wie lässt sich das Eigenkapital aus einer vereinfachten Bilanz ermitteln?",
+    "answerOptions": [
+        "Vermögen − Fremdkapital",
+        "Vermögen + Fremdkapital",
+        "Umsatz − Stückzahl",
+        "Fremdkapital − Vermögen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Aus der Bilanzgleichung `Vermögen = Eigenkapital + Fremdkapital` folgt `Eigenkapital = Vermögen − Fremdkapital`.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

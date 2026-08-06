@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wer ist Verantwortlicher im Sinne der DSGVO?",
-  "answerOptions": [
-    "Die Stelle, die über Zwecke und Mittel der Verarbeitung entscheidet",
-    "Jede Person, deren Daten verarbeitet werden",
-    "Ausschließlich der Hersteller der eingesetzten Hardware",
-    "Nur die zuständige Datenschutzaufsichtsbehörde"
-  ],
-  "correct": [0],
-  "explainInstruction": "Der Verantwortliche bestimmt allein oder gemeinsam mit anderen, warum und wie personenbezogene Daten verarbeitet werden."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wer ist Verantwortlicher im Sinne der DSGVO?",
+    "answerOptions": [
+        "Die Stelle, die über Zwecke und Mittel der Verarbeitung entscheidet",
+        "Jede Person, deren Daten verarbeitet werden",
+        "Ausschließlich der Hersteller der eingesetzten Hardware",
+        "Nur die zuständige Datenschutzaufsichtsbehörde"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Verantwortliche bestimmt allein oder gemeinsam mit anderen, warum und wie personenbezogene Daten verarbeitet werden.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

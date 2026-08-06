@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 5,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Ausbildung und Arbeitsrecht"
-  ],
-  "instruction": "Wie ist die Teilnahme am Berufsschulunterricht arbeitsrechtlich zu behandeln?",
-  "answerOptions": [
-    "Der Betrieb muss Auszubildende freistellen; anrechenbare Berufsschulzeit gilt als Ausbildungszeit.",
-    "Sie ist immer reine Freizeit.",
-    "Sie ist nur bei guten Noten erlaubt.",
-    "Sie muss grundsätzlich als Urlaub beantragt werden."
-  ],
-  "correct": [0],
-  "explainInstruction": "Der Ausbildungsbetrieb muss für vorgeschriebenen Berufsschulunterricht freistellen. Das BBiG regelt auch die Anrechnung auf die Ausbildungszeit.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 5,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Ausbildung und Arbeitsrecht"
+    ],
+    "instruction": "Wie ist die Teilnahme am Berufsschulunterricht arbeitsrechtlich zu behandeln?",
+    "answerOptions": [
+        "Der Betrieb muss Auszubildende freistellen; anrechenbare Berufsschulzeit gilt als Ausbildungszeit.",
+        "Sie ist immer reine Freizeit.",
+        "Sie ist nur bei guten Noten erlaubt.",
+        "Sie muss grundsätzlich als Urlaub beantragt werden."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Ausbildungsbetrieb muss für vorgeschriebenen Berufsschulunterricht freistellen. Das BBiG regelt auch die Anrechnung auf die Ausbildungszeit.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

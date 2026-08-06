@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Verfügbarkeit und Kapazitätsplanung"
-  ],
-  "instruction": "Was ist bei horizontaler Skalierung eines zustandsbehafteten Webdienstes besonders zu lösen?",
-  "answerOptions": [
-    "Sitzungs- und Datenzustand muss gemeinsam oder passend verteilt werden.",
-    "Jeder Knoten braucht eine andere URL für denselben Dienst.",
-    "DNS darf keine TTL besitzen.",
-    "TCP muss durch UDP ersetzt werden."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Lokaler Zustand bindet Requests an einen Knoten; gemeinsame Stores, Replikation oder bewusstes Session Routing lösen das Problem.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Verfügbarkeit und Kapazitätsplanung"
+    ],
+    "instruction": "Was ist bei horizontaler Skalierung eines zustandsbehafteten Webdienstes besonders zu lösen?",
+    "answerOptions": [
+        "Sitzungs- und Datenzustand muss gemeinsam oder passend verteilt werden.",
+        "Jeder Knoten braucht eine andere URL für denselben Dienst.",
+        "DNS darf keine TTL besitzen.",
+        "TCP muss durch UDP ersetzt werden."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Lokaler Zustand bindet Requests an einen Knoten; gemeinsame Stores, Replikation oder bewusstes Session Routing lösen das Problem.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "negationOversight",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

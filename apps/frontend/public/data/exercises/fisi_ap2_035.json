@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Routing und NAT"
-  ],
-  "instruction": "Wozu dient Source NAT/PAT am Internetübergang typischerweise?",
-  "answerOptions": [
-    "Private Quelladressen in eine oder wenige öffentliche Adressen übersetzen",
-    "DNS-Namen signieren",
-    "VLAN-Schleifen verhindern",
-    "Ethernet-Frames komprimieren"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Source NAT ersetzt private Quelladressen; PAT unterscheidet parallele Verbindungen zusätzlich über Ports.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Routing und NAT"
+    ],
+    "instruction": "Wozu dient Source NAT/PAT am Internetübergang typischerweise?",
+    "answerOptions": [
+        "Private Quelladressen in eine oder wenige öffentliche Adressen übersetzen",
+        "DNS-Namen signieren",
+        "VLAN-Schleifen verhindern",
+        "Ethernet-Frames komprimieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Source NAT ersetzt private Quelladressen; PAT unterscheidet parallele Verbindungen zusätzlich über Ports.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

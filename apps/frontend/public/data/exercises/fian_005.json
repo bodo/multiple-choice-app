@@ -1,25 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 5,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Algorithmen und Datenstrukturen"
-  ],
-  "instruction": "Welche Voraussetzungen verhindern bei einer korrekt entworfenen rekursiven Funktion eine Endlosrekursion?",
-  "answerOptions": [
-    "Es gibt einen erreichbaren Abbruchfall.",
-    "Jeder Aufruf erzeugt zwei weitere Aufrufe.",
-    "Jeder rekursive Schritt nähert sich dem Abbruchfall.",
-    "Alle Variablen sind global."
-  ],
-  "correct": [
-    0,
-    2
-  ],
-  "explainInstruction": "Eine Rekursion benötigt einen erreichbaren Basisfall und muss ihren Zustand bei jedem Schritt in dessen Richtung verändern.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 5,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Algorithmen und Datenstrukturen"
+    ],
+    "instruction": "Welche Voraussetzungen verhindern bei einer korrekt entworfenen rekursiven Funktion eine Endlosrekursion?",
+    "answerOptions": [
+        "Es gibt einen erreichbaren Abbruchfall.",
+        "Jeder Aufruf erzeugt zwei weitere Aufrufe.",
+        "Jeder rekursive Schritt nähert sich dem Abbruchfall.",
+        "Alle Variablen sind global."
+    ],
+    "correct": [
+        0,
+        2
+    ],
+    "explainInstruction": "Eine Rekursion benötigt einen erreichbaren Basisfall und muss ihren Zustand bei jedem Schritt in dessen Richtung verändern.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

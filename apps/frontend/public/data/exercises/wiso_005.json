@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 5,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Ausbildung und Arbeitsrecht"
-  ],
-  "instruction": "Mit welcher Frist kann eine auszubildende Person nach der Probezeit kündigen, wenn sie die Berufsausbildung aufgeben oder sich für einen anderen Beruf ausbilden lassen will?",
-  "answerOptions": [
-    "Eine Woche",
-    "Zwei Wochen",
-    "Vier Wochen",
-    "Sechs Monate"
-  ],
-  "correct": [2],
-  "explainInstruction": "§ 22 BBiG erlaubt in diesem Fall eine Kündigung mit einer Frist von vier Wochen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 5,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Ausbildung und Arbeitsrecht"
+    ],
+    "instruction": "Mit welcher Frist kann eine auszubildende Person nach der Probezeit kündigen, wenn sie die Berufsausbildung aufgeben oder sich für einen anderen Beruf ausbilden lassen will?",
+    "answerOptions": [
+        "Eine Woche",
+        "Zwei Wochen",
+        "Vier Wochen",
+        "Sechs Monate"
+    ],
+    "correct": [
+        2
+    ],
+    "explainInstruction": "§ 22 BBiG erlaubt in diesem Fall eine Kündigung mit einer Frist von vier Wochen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "conceptContradiction",
+        "1": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

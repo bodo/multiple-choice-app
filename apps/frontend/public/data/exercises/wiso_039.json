@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Sozialversicherung"
-  ],
-  "instruction": "Welcher Fall kann unter den Schutz der gesetzlichen Unfallversicherung fallen?",
-  "answerOptions": [
-    "Unfall auf dem unmittelbaren Weg zur Arbeit",
-    "Jeder Unfall während einer privaten Urlaubsreise",
-    "Verlust eines privaten Schlüssels",
-    "Freiwilliger Aktienkauf mit Verlust"
-  ],
-  "correct": [0],
-  "explainInstruction": "Neben Arbeitsunfällen können auch Wegeunfälle auf dem versicherten unmittelbaren Weg zur oder von der Arbeit erfasst sein.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Sozialversicherung"
+    ],
+    "instruction": "Welcher Fall kann unter den Schutz der gesetzlichen Unfallversicherung fallen?",
+    "answerOptions": [
+        "Unfall auf dem unmittelbaren Weg zur Arbeit",
+        "Jeder Unfall während einer privaten Urlaubsreise",
+        "Verlust eines privaten Schlüssels",
+        "Freiwilliger Aktienkauf mit Verlust"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Neben Arbeitsunfällen können auch Wegeunfälle auf dem versicherten unmittelbaren Weg zur oder von der Arbeit erfasst sein.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

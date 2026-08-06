@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Routing und NAT"
-  ],
-  "instruction": "Ein Router kennt zwei passende Routen: 10.0.0.0/8 und 10.20.0.0/16. Welche Route verwendet er für 10.20.5.9?",
-  "answerOptions": [
-    "10.0.0.0/8",
-    "10.20.0.0/16",
-    "Beide gleichzeitig",
-    "Immer die Default-Route"
-  ],
-  "correct": [
-    1
-  ],
-  "explainInstruction": "Router wählen zuerst die spezifischste passende Route, also das längste Präfix.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Routing und NAT"
+    ],
+    "instruction": "Ein Router kennt zwei passende Routen: 10.0.0.0/8 und 10.20.0.0/16. Welche Route verwendet er für 10.20.5.9?",
+    "answerOptions": [
+        "10.0.0.0/8",
+        "10.20.0.0/16",
+        "Beide gleichzeitig",
+        "Immer die Default-Route"
+    ],
+    "correct": [
+        1
+    ],
+    "explainInstruction": "Router wählen zuerst die spezifischste passende Route, also das längste Präfix.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "numericalCalculationTrap",
+        "2": "conceptContradiction",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

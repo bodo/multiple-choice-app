@@ -1,36 +1,46 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "instruction": "Markiere alle fünf GoF-Erzeugungsmuster (GoF creational patterns).",
-  "answerOptions": [
-    "Abstrakte Fabrik (Abstract Factory)",
-    "Erbauer (Builder)",
-    "Fabrikmethode (Factory Method)",
-    "Prototyp (Prototype)",
-    "Einzelstück (Singleton)",
-    "Kompositum (Composite)",
-    "Zustand (State)",
-    "Stellvertreter (Proxy)"
-  ],
-  "correct": [
-    0,
-    1,
-    2,
-    3,
-    4
-  ],
-  "explainInstruction": "Die fünf GoF-Erzeugungsmuster sind Abstrakte Fabrik (Abstract Factory), Erbauer (Builder), Fabrikmethode (Factory Method), Prototyp (Prototype) und Einzelstück (Singleton).",
-  "mobileSolvable": true,
-  "learningLevel": 4,
-  "difficulty": 3,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "GoF-Klassifikation"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "instruction": "Markiere alle fünf GoF-Erzeugungsmuster (GoF creational patterns).",
+    "answerOptions": [
+        "Abstrakte Fabrik (Abstract Factory)",
+        "Erbauer (Builder)",
+        "Fabrikmethode (Factory Method)",
+        "Prototyp (Prototype)",
+        "Einzelstück (Singleton)",
+        "Kompositum (Composite)",
+        "Zustand (State)",
+        "Stellvertreter (Proxy)"
+    ],
+    "correct": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "explainInstruction": "Die fünf GoF-Erzeugungsmuster sind Abstrakte Fabrik (Abstract Factory), Erbauer (Builder), Fabrikmethode (Factory Method), Prototyp (Prototype) und Einzelstück (Singleton).",
+    "mobileSolvable": true,
+    "learningLevel": 4,
+    "difficulty": 3,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "GoF-Klassifikation"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "5": "conceptContradiction",
+        "6": "conceptContradiction",
+        "7": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "5": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "6": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "7": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

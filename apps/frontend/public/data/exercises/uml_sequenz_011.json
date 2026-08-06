@@ -1,29 +1,37 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "instruction": "Welche Aussagen über Sequenzdiagramme sind richtig?",
-  "answerOptions": [
-    "Lebenslinien repräsentieren Beteiligte einer Interaktion",
-    "Nachrichten zeigen Kommunikation zwischen Beteiligten",
-    "Ein Sequenzdiagramm legt primär die Speichergröße von Attributen fest",
-    "Die senkrechte Position einer Nachricht ist für die zeitliche Einordnung grundsätzlich bedeutungslos"
-  ],
-  "correct": [
-    0,
-    1
-  ],
-  "explainInstruction": "Sequenzdiagramme modellieren Interaktionen über Lebenslinien und Nachrichten. Speichergrößen gehören nicht zu ihrem Zweck; die vertikale Anordnung unterstützt die zeitliche Lesart.",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "UML",
-    "Sequenzdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "instruction": "Welche Aussagen über Sequenzdiagramme sind richtig?",
+    "answerOptions": [
+        "Lebenslinien repräsentieren Beteiligte einer Interaktion",
+        "Nachrichten zeigen Kommunikation zwischen Beteiligten",
+        "Ein Sequenzdiagramm legt primär die Speichergröße von Attributen fest",
+        "Die senkrechte Position einer Nachricht ist für die zeitliche Einordnung grundsätzlich bedeutungslos"
+    ],
+    "correct": [
+        0,
+        1
+    ],
+    "explainInstruction": "Sequenzdiagramme modellieren Interaktionen über Lebenslinien und Nachrichten. Speichergrößen gehören nicht zu ihrem Zweck; die vertikale Anordnung unterstützt die zeitliche Lesart.",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "UML",
+        "Sequenzdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

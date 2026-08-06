@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was bedeutet eine Default-Deny-Regel bei einer Firewall?",
-  "answerOptions": [
-    "Nicht ausdrücklich erlaubter Verkehr wird blockiert",
-    "Alle Verbindungen sind erlaubt, solange kein Alarm entsteht",
-    "Nur verschlüsselter Verkehr wird protokolliert",
-    "Ausgehender und eingehender Verkehr werden nie geprüft"
-  ],
-  "correct": [0],
-  "explainInstruction": "Default Deny erlaubt nur die benötigten und ausdrücklich freigegebenen Kommunikationsbeziehungen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was bedeutet eine Default-Deny-Regel bei einer Firewall?",
+    "answerOptions": [
+        "Nicht ausdrücklich erlaubter Verkehr wird blockiert",
+        "Alle Verbindungen sind erlaubt, solange kein Alarm entsteht",
+        "Nur verschlüsselter Verkehr wird protokolliert",
+        "Ausgehender und eingehender Verkehr werden nie geprüft"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Default Deny erlaubt nur die benötigten und ausdrücklich freigegebenen Kommunikationsbeziehungen.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

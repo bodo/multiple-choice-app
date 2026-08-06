@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Verfügbarkeit und Kapazitätsplanung"
-  ],
-  "instruction": "Ein Dienst läuft auf zwei Knoten, beide hängen aber an demselben Netzteilverteiler. Welches Problem bleibt?",
-  "answerOptions": [
-    "Ein gemeinsamer Ausfallpunkt in der Stromversorgung",
-    "Zu viele DNS-A-Records",
-    "Unzulässige TCP-Sequenznummern",
-    "Fehlendes RAID 0"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Redundante Server helfen nicht gegen einen gemeinsamen Ausfallpunkt der Energieversorgung.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Verfügbarkeit und Kapazitätsplanung"
+    ],
+    "instruction": "Ein Dienst läuft auf zwei Knoten, beide hängen aber an demselben Netzteilverteiler. Welches Problem bleibt?",
+    "answerOptions": [
+        "Ein gemeinsamer Ausfallpunkt in der Stromversorgung",
+        "Zu viele DNS-A-Records",
+        "Unzulässige TCP-Sequenznummern",
+        "Fehlendes RAID 0"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Redundante Server helfen nicht gegen einen gemeinsamen Ausfallpunkt der Energieversorgung.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

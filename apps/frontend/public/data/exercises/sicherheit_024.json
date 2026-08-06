@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welchen Sicherheitsnutzen hat die Segmentierung eines Netzes?",
-  "answerOptions": [
-    "Sie begrenzt Kommunikationswege und kann die Ausbreitung eines Angriffs erschweren",
-    "Sie ersetzt die Authentisierung aller Benutzer",
-    "Sie macht Sicherheitsupdates entbehrlich",
-    "Sie garantiert die Vertraulichkeit unverschlüsselter Daten"
-  ],
-  "correct": [0],
-  "explainInstruction": "Segmentierung trennt Bereiche nach Schutzbedarf und reduziert unerwünschte direkte Verbindungen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welchen Sicherheitsnutzen hat die Segmentierung eines Netzes?",
+    "answerOptions": [
+        "Sie begrenzt Kommunikationswege und kann die Ausbreitung eines Angriffs erschweren",
+        "Sie ersetzt die Authentisierung aller Benutzer",
+        "Sie macht Sicherheitsupdates entbehrlich",
+        "Sie garantiert die Vertraulichkeit unverschlüsselter Daten"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Segmentierung trennt Bereiche nach Schutzbedarf und reduziert unerwünschte direkte Verbindungen.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

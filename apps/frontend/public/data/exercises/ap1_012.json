@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Welche Eigenschaften stellt TCP bereit?",
-  "answerOptions": [
-    "Verbindungsorientierte Kommunikation",
-    "Geordnete Übertragung",
-    "Erneute Übertragung erkannter Verluste",
-    "Garantierte Zustellung innerhalb einer festen Zeit"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "TCP sorgt für einen zuverlässigen, geordneten Bytestrom. Eine feste maximale Übertragungszeit garantiert es nicht.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Welche Eigenschaften stellt TCP bereit?",
+    "answerOptions": [
+        "Verbindungsorientierte Kommunikation",
+        "Geordnete Übertragung",
+        "Erneute Übertragung erkannter Verluste",
+        "Garantierte Zustellung innerhalb einer festen Zeit"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "TCP sorgt für einen zuverlässigen, geordneten Bytestrom. Eine feste maximale Übertragungszeit garantiert es nicht.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

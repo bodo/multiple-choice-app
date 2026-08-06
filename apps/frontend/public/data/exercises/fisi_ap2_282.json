@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Schwachstellen- und Incident-Management"
-  ],
-  "instruction": "Was ist nach der Eindämmung eines Sicherheitsvorfalls das Ziel der Eradication-Phase?",
-  "answerOptions": [
-    "Ursache, Schadcode und persistente Zugänge entfernen",
-    "Alle Alarme dauerhaft deaktivieren",
-    "Nur die Statusseite aktualisieren",
-    "Beweise ohne Freigabe veröffentlichen"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Eradication beseitigt die Ursache und Persistenz, bevor Systeme kontrolliert wiederhergestellt werden.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Schwachstellen- und Incident-Management"
+    ],
+    "instruction": "Was ist nach der Eindämmung eines Sicherheitsvorfalls das Ziel der Eradication-Phase?",
+    "answerOptions": [
+        "Ursache, Schadcode und persistente Zugänge entfernen",
+        "Alle Alarme dauerhaft deaktivieren",
+        "Nur die Statusseite aktualisieren",
+        "Beweise ohne Freigabe veröffentlichen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eradication beseitigt die Ursache und Persistenz, bevor Systeme kontrolliert wiederhergestellt werden.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

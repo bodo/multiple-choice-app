@@ -1,31 +1,37 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "WiSo",
-    "Ausbildung und Arbeitsrecht"
-  ],
-  "instruction": "Vor Benachteiligung wegen welcher Merkmale schützt das Allgemeine Gleichbehandlungsgesetz im Arbeitsleben?",
-  "answerOptions": [
-    "Alter",
-    "Geschlecht",
-    "Religion oder Weltanschauung",
-    "Behinderung",
-    "Bevorzugte Programmiersprache"
-  ],
-  "correct": [
-    0,
-    1,
-    2,
-    3
-  ],
-  "explainInstruction": "Das AGG nennt unter anderem Alter, Geschlecht, Religion oder Weltanschauung und Behinderung. Technische Vorlieben sind kein gesetzliches Diskriminierungsmerkmal.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "WiSo",
+        "Ausbildung und Arbeitsrecht"
+    ],
+    "instruction": "Vor Benachteiligung wegen welcher Merkmale schützt das Allgemeine Gleichbehandlungsgesetz im Arbeitsleben?",
+    "answerOptions": [
+        "Alter",
+        "Geschlecht",
+        "Religion oder Weltanschauung",
+        "Behinderung",
+        "Bevorzugte Programmiersprache"
+    ],
+    "correct": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "explainInstruction": "Das AGG nennt unter anderem Alter, Geschlecht, Religion oder Weltanschauung und Behinderung. Technische Vorlieben sind kein gesetzliches Diskriminierungsmerkmal.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "4": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "4": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

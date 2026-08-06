@@ -1,40 +1,50 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "instruction": "Markiere alle sieben GoF-Strukturmuster (GoF structural patterns).",
-  "answerOptions": [
-    "Adapter (Adapter)",
-    "Brücke (Bridge)",
-    "Kompositum (Composite)",
-    "Dekorierer (Decorator)",
-    "Fassade (Facade)",
-    "Fliegengewicht (Flyweight)",
-    "Stellvertreter (Proxy)",
-    "Fabrikmethode (Factory Method)",
-    "Strategie (Strategy)",
-    "Memento (Memento)"
-  ],
-  "correct": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-  ],
-  "explainInstruction": "Die sieben GoF-Strukturmuster sind Adapter (Adapter), Brücke (Bridge), Kompositum (Composite), Dekorierer (Decorator), Fassade (Facade), Fliegengewicht (Flyweight) und Stellvertreter (Proxy).",
-  "mobileSolvable": true,
-  "learningLevel": 4,
-  "difficulty": 3,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "GoF-Klassifikation"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "instruction": "Markiere alle sieben GoF-Strukturmuster (GoF structural patterns).",
+    "answerOptions": [
+        "Adapter (Adapter)",
+        "Brücke (Bridge)",
+        "Kompositum (Composite)",
+        "Dekorierer (Decorator)",
+        "Fassade (Facade)",
+        "Fliegengewicht (Flyweight)",
+        "Stellvertreter (Proxy)",
+        "Fabrikmethode (Factory Method)",
+        "Strategie (Strategy)",
+        "Memento (Memento)"
+    ],
+    "correct": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "explainInstruction": "Die sieben GoF-Strukturmuster sind Adapter (Adapter), Brücke (Bridge), Kompositum (Composite), Dekorierer (Decorator), Fassade (Facade), Fliegengewicht (Flyweight) und Stellvertreter (Proxy).",
+    "mobileSolvable": true,
+    "learningLevel": 4,
+    "difficulty": 3,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "GoF-Klassifikation"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "7": "conceptContradiction",
+        "8": "conceptContradiction",
+        "9": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "7": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "8": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "9": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

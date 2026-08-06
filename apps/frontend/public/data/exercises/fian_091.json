@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Versionsverwaltung und DevOps"
-  ],
-  "instruction": "Was repräsentiert ein Git-Commit?",
-  "answerOptions": [
-    "Einen nachvollziehbaren Snapshot der versionierten Änderungen mit Metadaten",
-    "Nur eine Verbindung zum Produktionsserver",
-    "Eine gelöschte Arbeitskopie",
-    "Einen laufenden Betriebssystemprozess"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Commit hält einen Projektzustand samt Elternbezug, Autor, Zeitpunkt und Nachricht in der Versionsgeschichte fest.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Versionsverwaltung und DevOps"
+    ],
+    "instruction": "Was repräsentiert ein Git-Commit?",
+    "answerOptions": [
+        "Einen nachvollziehbaren Snapshot der versionierten Änderungen mit Metadaten",
+        "Nur eine Verbindung zum Produktionsserver",
+        "Eine gelöschte Arbeitskopie",
+        "Einen laufenden Betriebssystemprozess"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Commit hält einen Projektzustand samt Elternbezug, Autor, Zeitpunkt und Nachricht in der Versionsgeschichte fest.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

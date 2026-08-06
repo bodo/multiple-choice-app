@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "PKI und TLS-Betrieb"
-  ],
-  "instruction": "Welche Prüfungen gehören zum Zertifikatsmonitoring? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Restlaufzeit",
-    "Erwartete DNS-Namen im SAN",
-    "Vollständige Zertifikatskette",
-    "Nur die Dateigröße des Zertifikats"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Ablauf, Namensbindung und Kette sind typische betriebliche Fehlerquellen.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "PKI und TLS-Betrieb"
+    ],
+    "instruction": "Welche Prüfungen gehören zum Zertifikatsmonitoring? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Restlaufzeit",
+        "Erwartete DNS-Namen im SAN",
+        "Vollständige Zertifikatskette",
+        "Nur die Dateigröße des Zertifikats"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Ablauf, Namensbindung und Kette sind typische betriebliche Fehlerquellen.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "IPv6"
-  ],
-  "instruction": "Welche Aussagen zu IPv6 sind richtig? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Broadcast wurde durch Multicast-Mechanismen ersetzt.",
-    "Ein Interface besitzt häufig mehrere IPv6-Adressen.",
-    "NAT ist für grundlegende IPv6-Kommunikation technisch zwingend.",
-    "ICMPv6 ist für zentrale Steuerungsfunktionen wichtig."
-  ],
-  "correct": [
-    0,
-    1,
-    3
-  ],
-  "explainInstruction": "IPv6 nutzt keinen Broadcast, Interfaces haben oft Link-Local und globale Adressen, und ICMPv6 ist für Neighbor Discovery und Fehler wichtig. NAT ist nicht zwingend.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "IPv6"
+    ],
+    "instruction": "Welche Aussagen zu IPv6 sind richtig? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Broadcast wurde durch Multicast-Mechanismen ersetzt.",
+        "Ein Interface besitzt häufig mehrere IPv6-Adressen.",
+        "NAT ist für grundlegende IPv6-Kommunikation technisch zwingend.",
+        "ICMPv6 ist für zentrale Steuerungsfunktionen wichtig."
+    ],
+    "correct": [
+        0,
+        1,
+        3
+    ],
+    "explainInstruction": "IPv6 nutzt keinen Broadcast, Interfaces haben oft Link-Local und globale Adressen, und ICMPv6 ist für Neighbor Discovery und Fehler wichtig. NAT ist nicht zwingend.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "2": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

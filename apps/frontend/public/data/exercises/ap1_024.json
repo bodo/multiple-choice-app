@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "Computergrundlagen"
-  ],
-  "instruction": "Welche typischen Vorteile hat eine SSD gegenüber einer mechanischen HDD?",
-  "answerOptions": [
-    "Kürzere Zugriffszeiten",
-    "Keine beweglichen Schreib-Lese-Köpfe",
-    "Geringere Empfindlichkeit gegen Erschütterungen im Betrieb",
-    "Unbegrenzte Anzahl von Schreibvorgängen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "SSDs greifen elektronisch auf Flashspeicher zu. Schreibzellen besitzen dennoch eine begrenzte Lebensdauer.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "Computergrundlagen"
+    ],
+    "instruction": "Welche typischen Vorteile hat eine SSD gegenüber einer mechanischen HDD?",
+    "answerOptions": [
+        "Kürzere Zugriffszeiten",
+        "Keine beweglichen Schreib-Lese-Köpfe",
+        "Geringere Empfindlichkeit gegen Erschütterungen im Betrieb",
+        "Unbegrenzte Anzahl von Schreibvorgängen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "SSDs greifen elektronisch auf Flashspeicher zu. Schreibzellen besitzen dennoch eine begrenzte Lebensdauer.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

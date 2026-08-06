@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Voreinstellung entspricht Privacy by Default?",
-  "answerOptions": [
-    "Ein Profil ist zunächst nur im für den Zweck notwendigen Umfang sichtbar",
-    "Ein neues Profil ist automatisch weltweit öffentlich",
-    "Alle optionalen Trackingfunktionen sind zwingend aktiviert",
-    "Die längste technisch mögliche Speicherfrist ist vorausgewählt"
-  ],
-  "correct": [0],
-  "explainInstruction": "Datenschutzfreundliche Voreinstellungen beschränken Datenmenge, Verarbeitung, Speicherfrist und Zugänglichkeit auf das Erforderliche."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Voreinstellung entspricht Privacy by Default?",
+    "answerOptions": [
+        "Ein Profil ist zunächst nur im für den Zweck notwendigen Umfang sichtbar",
+        "Ein neues Profil ist automatisch weltweit öffentlich",
+        "Alle optionalen Trackingfunktionen sind zwingend aktiviert",
+        "Die längste technisch mögliche Speicherfrist ist vorausgewählt"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Datenschutzfreundliche Voreinstellungen beschränken Datenmenge, Verarbeitung, Speicherfrist und Zugänglichkeit auf das Erforderliche.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

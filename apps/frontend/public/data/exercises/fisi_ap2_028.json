@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Switching und VLAN"
-  ],
-  "instruction": "Welche Befunde sprechen für ein Native-VLAN-Mismatch auf einem 802.1Q-Trunk? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Ungetaggter Verkehr landet auf beiden Seiten in unterschiedlichen VLANs.",
-    "Der Switch meldet eine Native-VLAN-Abweichung.",
-    "Alle getaggten VLANs müssen dadurch zwingend ausfallen.",
-    "Die Abweichung kann Sicherheits- und Erreichbarkeitsprobleme verursachen."
-  ],
-  "correct": [
-    0,
-    1,
-    3
-  ],
-  "explainInstruction": "Ein Native-VLAN-Mismatch betrifft ungetaggte Frames und wird häufig protokolliert. Getaggte VLANs können dennoch funktionieren.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Switching und VLAN"
+    ],
+    "instruction": "Welche Befunde sprechen für ein Native-VLAN-Mismatch auf einem 802.1Q-Trunk? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Ungetaggter Verkehr landet auf beiden Seiten in unterschiedlichen VLANs.",
+        "Der Switch meldet eine Native-VLAN-Abweichung.",
+        "Alle getaggten VLANs müssen dadurch zwingend ausfallen.",
+        "Die Abweichung kann Sicherheits- und Erreichbarkeitsprobleme verursachen."
+    ],
+    "correct": [
+        0,
+        1,
+        3
+    ],
+    "explainInstruction": "Ein Native-VLAN-Mismatch betrifft ungetaggte Frames und wird häufig protokolliert. Getaggte VLANs können dennoch funktionieren.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "2": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

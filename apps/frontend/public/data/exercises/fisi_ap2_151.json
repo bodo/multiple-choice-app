@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "Shellskripte"
-  ],
-  "instruction": "Ein Shellskript soll bei einem fehlgeschlagenen kritischen Befehl abbrechen. Was muss das Skript auswerten?",
-  "answerOptions": [
-    "Exit-Code des Befehls",
-    "Dateigröße des Skripts",
-    "MAC-Adresse des Servers",
-    "DNS-TTL der Domain"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Konventionell signalisiert Exit-Code 0 Erfolg und ein von 0 verschiedener Wert einen Fehler.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "Shellskripte"
+    ],
+    "instruction": "Ein Shellskript soll bei einem fehlgeschlagenen kritischen Befehl abbrechen. Was muss das Skript auswerten?",
+    "answerOptions": [
+        "Exit-Code des Befehls",
+        "Dateigröße des Skripts",
+        "MAC-Adresse des Servers",
+        "DNS-TTL der Domain"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Konventionell signalisiert Exit-Code 0 Erfolg und ein von 0 verschiedener Wert einen Fehler.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

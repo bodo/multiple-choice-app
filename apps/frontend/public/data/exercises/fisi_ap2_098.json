@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Identitäts- und Verzeichnisdienste"
-  ],
-  "instruction": "Welche Eigenschaften sprechen für eine robuste Gruppenstruktur? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Gruppennamen beschreiben Rolle oder Ressourcenzugriff.",
-    "Verschachtelung bleibt dokumentiert und beherrschbar.",
-    "Direkte Einzelrechte sind die Standardlösung.",
-    "Gruppenmitgliedschaften werden regelmäßig überprüft."
-  ],
-  "correct": [
-    0,
-    1,
-    3
-  ],
-  "explainInstruction": "Sprechende Rollen, kontrollierte Verschachtelung und Rezertifizierung halten Berechtigungen wartbar.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Identitäts- und Verzeichnisdienste"
+    ],
+    "instruction": "Welche Eigenschaften sprechen für eine robuste Gruppenstruktur? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Gruppennamen beschreiben Rolle oder Ressourcenzugriff.",
+        "Verschachtelung bleibt dokumentiert und beherrschbar.",
+        "Direkte Einzelrechte sind die Standardlösung.",
+        "Gruppenmitgliedschaften werden regelmäßig überprüft."
+    ],
+    "correct": [
+        0,
+        1,
+        3
+    ],
+    "explainInstruction": "Sprechende Rollen, kontrollierte Verschachtelung und Rezertifizierung halten Berechtigungen wartbar.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "2": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welcher Schlüssel wird bei asymmetrischer Verschlüsselung verwendet, wenn nur der Besitzer des privaten Schlüssels lesen können soll?",
-  "answerOptions": [
-    "Der öffentliche Schlüssel des Empfängers zum Verschlüsseln",
-    "Der private Schlüssel des Senders zum Verschlüsseln",
-    "Der öffentliche Schlüssel des Senders zum Entschlüsseln",
-    "Ein gemeinsam veröffentlichtes Passwort"
-  ],
-  "correct": [0],
-  "explainInstruction": "Mit dem öffentlichen Schlüssel des Empfängers verschlüsselte Daten können mit dessen privatem Schlüssel entschlüsselt werden."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welcher Schlüssel wird bei asymmetrischer Verschlüsselung verwendet, wenn nur der Besitzer des privaten Schlüssels lesen können soll?",
+    "answerOptions": [
+        "Der öffentliche Schlüssel des Empfängers zum Verschlüsseln",
+        "Der private Schlüssel des Senders zum Verschlüsseln",
+        "Der öffentliche Schlüssel des Senders zum Entschlüsseln",
+        "Ein gemeinsam veröffentlichtes Passwort"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Mit dem öffentlichen Schlüssel des Empfängers verschlüsselte Daten können mit dessen privatem Schlüssel entschlüsselt werden.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

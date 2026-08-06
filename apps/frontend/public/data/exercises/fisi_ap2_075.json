@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "WLAN-Planung"
-  ],
-  "instruction": "Welche Maßnahmen fördern sauberes Roaming in einem zentral verwalteten Unternehmens-WLAN? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Passende Zellüberlappung planen",
-    "Kanal- und Sendeleistung koordinieren",
-    "Einheitliche SSID und Sicherheitsparameter verwenden",
-    "Jeden Access Point mit einem anderen IP-Protokoll betreiben"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Roaming benötigt erreichbare Nachbarzellen und konsistente Dienst-/Sicherheitsparameter; Kanal und Leistung müssen zur Funkplanung passen.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "WLAN-Planung"
+    ],
+    "instruction": "Welche Maßnahmen fördern sauberes Roaming in einem zentral verwalteten Unternehmens-WLAN? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Passende Zellüberlappung planen",
+        "Kanal- und Sendeleistung koordinieren",
+        "Einheitliche SSID und Sicherheitsparameter verwenden",
+        "Jeden Access Point mit einem anderen IP-Protokoll betreiben"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Roaming benötigt erreichbare Nachbarzellen und konsistente Dienst-/Sicherheitsparameter; Kanal und Leistung müssen zur Funkplanung passen.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

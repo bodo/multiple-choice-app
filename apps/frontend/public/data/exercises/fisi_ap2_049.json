@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "DNS, DHCP und Zeitdienste"
-  ],
-  "instruction": "Warum sollten Server und Netzwerkgeräte eine gemeinsame NTP-Quelle verwenden?",
-  "answerOptions": [
-    "Damit Zeitstempel in Logs und Zertifikatsprüfungen konsistent sind",
-    "Damit Switchports automatisch getaggt werden",
-    "Damit RAID-Rebuilds entfallen",
-    "Damit DNS keine TTL mehr braucht"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Konsistente Zeit ist für Ereigniskorrelation, Authentisierung und Zertifikatsgültigkeit wesentlich.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "DNS, DHCP und Zeitdienste"
+    ],
+    "instruction": "Warum sollten Server und Netzwerkgeräte eine gemeinsame NTP-Quelle verwenden?",
+    "answerOptions": [
+        "Damit Zeitstempel in Logs und Zertifikatsprüfungen konsistent sind",
+        "Damit Switchports automatisch getaggt werden",
+        "Damit RAID-Rebuilds entfallen",
+        "Damit DNS keine TTL mehr braucht"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Konsistente Zeit ist für Ereigniskorrelation, Authentisierung und Zertifikatsgültigkeit wesentlich.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

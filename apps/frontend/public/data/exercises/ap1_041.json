@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Server und Speicher"
-  ],
-  "instruction": "Warum ersetzt ein RAID keine Datensicherung?",
-  "answerOptions": [
-    "Löschen, Schadsoftware, Bedienfehler oder ein Gesamtschaden können alle RAID-Kopien zugleich betreffen.",
-    "Ein RAID kann grundsätzlich keine Daten lesen.",
-    "Backups funktionieren nur auf demselben Server.",
-    "RAID schützt ausschließlich vor Stromausfall."
-  ],
-  "correct": [0],
-  "explainInstruction": "RAID erhöht Verfügbarkeit bei Laufwerksfehlern. Eine unabhängige Sicherung ermöglicht die Wiederherstellung nach logischen und standortweiten Schäden.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Server und Speicher"
+    ],
+    "instruction": "Warum ersetzt ein RAID keine Datensicherung?",
+    "answerOptions": [
+        "Löschen, Schadsoftware, Bedienfehler oder ein Gesamtschaden können alle RAID-Kopien zugleich betreffen.",
+        "Ein RAID kann grundsätzlich keine Daten lesen.",
+        "Backups funktionieren nur auf demselben Server.",
+        "RAID schützt ausschließlich vor Stromausfall."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "RAID erhöht Verfügbarkeit bei Laufwerksfehlern. Eine unabhängige Sicherung ermöglicht die Wiederherstellung nach logischen und standortweiten Schäden.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Daten gehören zu besonderen Kategorien personenbezogener Daten nach Art. 9 DSGVO?",
-  "answerOptions": [
-    "Gesundheitsdaten",
-    "Biometrische Daten zur eindeutigen Identifizierung",
-    "Religiöse Überzeugungen",
-    "Inventarnummer eines Monitors ohne Personenbezug"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Besondere Kategorien genießen erhöhten Schutz. Dazu gehören unter anderem Gesundheitsdaten, bestimmte biometrische Daten und religiöse Überzeugungen."
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Daten gehören zu besonderen Kategorien personenbezogener Daten nach Art. 9 DSGVO?",
+    "answerOptions": [
+        "Gesundheitsdaten",
+        "Biometrische Daten zur eindeutigen Identifizierung",
+        "Religiöse Überzeugungen",
+        "Inventarnummer eines Monitors ohne Personenbezug"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Besondere Kategorien genießen erhöhten Schutz. Dazu gehören unter anderem Gesundheitsdaten, bestimmte biometrische Daten und religiöse Überzeugungen.",
+    "distractorTypes": {
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

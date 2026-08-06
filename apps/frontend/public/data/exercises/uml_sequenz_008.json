@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Wann eignet sich ein kombinierter Fragment-Rahmen mit dem Operator `alt`?",
-  "answerOptions": [
-    "Wenn abhängig von Bedingungen alternative Interaktionsabläufe dargestellt werden",
-    "Wenn alle Nachrichten zwingend parallel laufen",
-    "Wenn Klassen zu Paketen zusammengefasst werden",
-    "Wenn nur ein einzelner Teilnehmer existiert"
-  ],
-  "correct": [0],
-  "explainInstruction": "`alt` beschreibt alternative Operanden mit Bedingungen, beispielsweise einen Erfolgs- und einen Fehlerablauf.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Sequenzdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Wann eignet sich ein kombinierter Fragment-Rahmen mit dem Operator `alt`?",
+    "answerOptions": [
+        "Wenn abhängig von Bedingungen alternative Interaktionsabläufe dargestellt werden",
+        "Wenn alle Nachrichten zwingend parallel laufen",
+        "Wenn Klassen zu Paketen zusammengefasst werden",
+        "Wenn nur ein einzelner Teilnehmer existiert"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "`alt` beschreibt alternative Operanden mit Bedingungen, beispielsweise einen Erfolgs- und einen Fehlerablauf.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Sequenzdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

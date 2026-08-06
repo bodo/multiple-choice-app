@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wann ist nach § 25 TDDDG für das Speichern oder Auslesen von Informationen auf einem Endgerät grundsätzlich keine Einwilligung erforderlich?",
-  "answerOptions": [
-    "Wenn es unbedingt erforderlich ist, damit ein ausdrücklich gewünschter digitaler Dienst bereitgestellt werden kann",
-    "Sobald die Information für personalisierte Werbung nützlich ist",
-    "Wenn der Anbieter die Information länger als ein Jahr speichert",
-    "Immer dann, wenn das Endgerät einem Verbraucher gehört"
-  ],
-  "correct": [0],
-  "explainInstruction": "Für unbedingt erforderliche Zugriffe nennt § 25 TDDDG eine Ausnahme; optionale Zwecke benötigen grundsätzlich eine wirksame Einwilligung."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wann ist nach § 25 TDDDG für das Speichern oder Auslesen von Informationen auf einem Endgerät grundsätzlich keine Einwilligung erforderlich?",
+    "answerOptions": [
+        "Wenn es unbedingt erforderlich ist, damit ein ausdrücklich gewünschter digitaler Dienst bereitgestellt werden kann",
+        "Sobald die Information für personalisierte Werbung nützlich ist",
+        "Wenn der Anbieter die Information länger als ein Jahr speichert",
+        "Immer dann, wenn das Endgerät einem Verbraucher gehört"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Für unbedingt erforderliche Zugriffe nennt § 25 TDDDG eine Ausnahme; optionale Zwecke benötigen grundsätzlich eine wirksame Einwilligung.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

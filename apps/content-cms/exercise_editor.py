@@ -215,6 +215,8 @@ def init_form_state(exam: str, ex: str, sub_idx: int, screenshot_files: list[Pat
         "ef_explain_options":    list(data.get("explainAnswerOptions", [""] * n_opts)),
         "ef_categories":         list(data.get("categories", [])),
         "ef_specializations":    list(data.get("specializations", [])),
+        "ef_distractor_types":   dict(data.get("distractorTypes", {})),
+        "ef_distractor_analysis": dict(data.get("distractorAnalysis", {})),
         "ef_admin_comment":      data.get("adminComment", ""),
         "ef_admin_tags":         ", ".join(data.get("adminTags", [])),
         "ef_selected_screenshots": sel_shots,
@@ -378,6 +380,14 @@ def save_exercise(screenshot_files: list[Path]) -> None:
     exp_opts = ss["ef_explain_options"]
     if any(s.strip() for s in exp_opts):
         data["explainAnswerOptions"] = exp_opts
+
+    dist_types = {str(k): str(v).strip() for k, v in ss.get("ef_distractor_types", {}).items() if str(v).strip()}
+    if dist_types:
+        data["distractorTypes"] = dist_types
+
+    dist_analysis = {str(k): str(v).strip() for k, v in ss.get("ef_distractor_analysis", {}).items() if str(v).strip()}
+    if dist_analysis:
+        data["distractorAnalysis"] = dist_analysis
 
     if ss["ef_admin_comment"].strip():
         data["adminComment"] = ss["ef_admin_comment"]
@@ -558,6 +568,45 @@ def render_correct_answer() -> None:
                 key=f"ef_match_{i}",
             )
 
+def render_distractor_profiling() -> None:
+    ss = _ss()
+    opts = ss.get("ef_answer_options", [])
+    if not opts:
+        return
+    with st.expander("🎯 Distractor Profiling & Analysis (Extensible Taxonomy)"):
+        st.caption("Categorize wrong options and explain author intent. Leave blank for correct options.")
+        d_types = ss.get("ef_distractor_types", {})
+        d_analysis = ss.get("ef_distractor_analysis", {})
+
+        for i, opt in enumerate(opts):
+            key_str = str(i)
+            st.markdown(f"**Option {i + 1}**: `{opt[:40]}...`" if len(opt) > 40 else f"**Option {i + 1}**: `{opt}`")
+            c1, c2 = st.columns([1, 2])
+            with c1:
+                cur_type = d_types.get(key_str, "")
+                new_type = st.text_input(
+                    f"Distractor type (Option {i + 1})",
+                    value=cur_type,
+                    key=f"ef_dist_type_{i}",
+                    placeholder="e.g. similarTermConfusion",
+                )
+                if new_type.strip():
+                    d_types[key_str] = new_type.strip()
+                elif key_str in d_types:
+                    del d_types[key_str]
+            with c2:
+                cur_ana = d_analysis.get(key_str, "")
+                new_ana = st.text_input(
+                    f"Distractor analysis (Option {i + 1})",
+                    value=cur_ana,
+                    key=f"ef_dist_ana_{i}",
+                    placeholder="Why this option tricks learners",
+                )
+                if new_ana.strip():
+                    d_analysis[key_str] = new_ana.strip()
+                elif key_str in d_analysis:
+                    del d_analysis[key_str]
+
 def _save_btn(key: str, files: list[Path]) -> None:
     if st.button("💾 Save", key=key, type="primary"):
         save_exercise(files)
@@ -611,6 +660,8 @@ def render_exercise_form(screenshot_files: list[Path]) -> None:
         key="ef_difficulty",
     )
     st.divider()
+
+    render_distractor_profiling()
 
     with st.expander("Author workflow"):
         st.text_area("Comment", key="ef_admin_comment", height=80,

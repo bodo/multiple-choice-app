@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Welchen Zweck hat das Handelsregister?",
-  "answerOptions": [
-    "Es veröffentlicht rechtlich wichtige Tatsachen über eingetragene Unternehmen.",
-    "Es speichert private Krankenakten.",
-    "Es ersetzt die Finanzbuchhaltung.",
-    "Es legt Tariflöhne fest."
-  ],
-  "correct": [0],
-  "explainInstruction": "Das öffentliche Register schafft Transparenz etwa über Firma, Rechtsform, Vertretung und bestimmte Vollmachten.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Welchen Zweck hat das Handelsregister?",
+    "answerOptions": [
+        "Es veröffentlicht rechtlich wichtige Tatsachen über eingetragene Unternehmen.",
+        "Es speichert private Krankenakten.",
+        "Es ersetzt die Finanzbuchhaltung.",
+        "Es legt Tariflöhne fest."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Das öffentliche Register schafft Transparenz etwa über Firma, Rechtsform, Vertretung und bestimmte Vollmachten.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

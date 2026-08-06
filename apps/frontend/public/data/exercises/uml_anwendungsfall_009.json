@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Ein externes Bezahlsystem wird von einem Onlineshop aufgerufen. Wie wird es im Anwendungsfalldiagramm des Onlineshops modelliert?",
-  "answerOptions": [
-    "Als externer Akteur",
-    "Als Attribut des Kunden",
-    "Als Aktivierungsbalken",
-    "Als Multiplizität"
-  ],
-  "correct": [0],
-  "explainInstruction": "Auch ein anderes technisches System kann die Rolle eines Akteurs übernehmen, wenn es außerhalb der betrachteten Systemgrenze liegt und mit dem System interagiert.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Anwendungsfalldiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Ein externes Bezahlsystem wird von einem Onlineshop aufgerufen. Wie wird es im Anwendungsfalldiagramm des Onlineshops modelliert?",
+    "answerOptions": [
+        "Als externer Akteur",
+        "Als Attribut des Kunden",
+        "Als Aktivierungsbalken",
+        "Als Multiplizität"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Auch ein anderes technisches System kann die Rolle eines Akteurs übernehmen, wenn es außerhalb der betrachteten Systemgrenze liegt und mit dem System interagiert.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Anwendungsfalldiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

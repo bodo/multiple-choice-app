@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 5,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Algorithmen und Datenstrukturen"
-  ],
-  "instruction": "Was kennzeichnet ein stabiles Sortierverfahren?",
-  "answerOptions": [
-    "Es benötigt immer konstanten Speicher.",
-    "Es sortiert ausschließlich Zahlen.",
-    "Elemente mit gleichem Schlüssel behalten ihre relative Reihenfolge.",
-    "Seine Laufzeit ist immer `O(n log n)`."
-  ],
-  "correct": [2],
-  "explainInstruction": "Stabilität betrifft nur Elemente mit gleichem Sortierschlüssel: Ihre ursprüngliche Reihenfolge bleibt erhalten.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 5,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Algorithmen und Datenstrukturen"
+    ],
+    "instruction": "Was kennzeichnet ein stabiles Sortierverfahren?",
+    "answerOptions": [
+        "Es benötigt immer konstanten Speicher.",
+        "Es sortiert ausschließlich Zahlen.",
+        "Elemente mit gleichem Schlüssel behalten ihre relative Reihenfolge.",
+        "Seine Laufzeit ist immer `O(n log n)`."
+    ],
+    "correct": [
+        2
+    ],
+    "explainInstruction": "Stabilität betrifft nur Elemente mit gleichem Sortierschlüssel: Ihre ursprüngliche Reihenfolge bleibt erhalten.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "0": "absoluteStatementTrap",
+        "1": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

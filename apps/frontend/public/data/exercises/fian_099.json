@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Betriebssysteme und Netzwerke"
-  ],
-  "instruction": "Welcher Unterschied zwischen Prozess und Thread ist richtig?",
-  "answerOptions": [
-    "Threads desselben Prozesses teilen typischerweise den Adressraum; Prozesse sind stärker voneinander isoliert.",
-    "Jeder Thread besitzt immer einen vollständig getrennten Adressraum.",
-    "Prozesse können keinen Programmcode ausführen.",
-    "Ein Prozess besteht zwingend aus genau zehn Threads."
-  ],
-  "correct": [0],
-  "explainInstruction": "Threads eines Prozesses teilen Ressourcen und Speicher, besitzen aber eigene Ausführungszustände. Prozesse trennen Adressräume typischerweise stärker.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Betriebssysteme und Netzwerke"
+    ],
+    "instruction": "Welcher Unterschied zwischen Prozess und Thread ist richtig?",
+    "answerOptions": [
+        "Threads desselben Prozesses teilen typischerweise den Adressraum; Prozesse sind stärker voneinander isoliert.",
+        "Jeder Thread besitzt immer einen vollständig getrennten Adressraum.",
+        "Prozesse können keinen Programmcode ausführen.",
+        "Ein Prozess besteht zwingend aus genau zehn Threads."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Threads eines Prozesses teilen Ressourcen und Speicher, besitzen aber eigene Ausführungszustände. Prozesse trennen Adressräume typischerweise stärker.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "negationOversight",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

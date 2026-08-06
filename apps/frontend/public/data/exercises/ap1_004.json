@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Anhand welcher Information entscheidet ein gewöhnlicher Ethernet-Switch, an welchen Port er einen Frame weiterleitet?",
-  "answerOptions": [
-    "Ziel-MAC-Adresse",
-    "Ziel-TCP-Port",
-    "Benutzername",
-    "Dateiendung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Der Switch lernt MAC-Adressen pro Port und nutzt die Ziel-MAC-Adresse seiner Switching-Tabelle.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Anhand welcher Information entscheidet ein gewöhnlicher Ethernet-Switch, an welchen Port er einen Frame weiterleitet?",
+    "answerOptions": [
+        "Ziel-MAC-Adresse",
+        "Ziel-TCP-Port",
+        "Benutzername",
+        "Dateiendung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Switch lernt MAC-Adressen pro Port und nutzt die Ziel-MAC-Adresse seiner Switching-Tabelle.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

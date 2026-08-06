@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "NAS, SAN und Dateisysteme"
-  ],
-  "instruction": "Was stellt ein SAN einem Server typischerweise bereit?",
-  "answerOptions": [
-    "Blockgeräte über ein Speichernetz",
-    "Ausschließlich HTTP-Seiten",
-    "DNS-Zonen als Dateifreigabe",
-    "Nur Druckerwarteschlangen"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "SAN-Protokolle wie Fibre Channel oder iSCSI präsentieren Blockspeicher, den der Server selbst mit einem Dateisystem versehen kann.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "NAS, SAN und Dateisysteme"
+    ],
+    "instruction": "Was stellt ein SAN einem Server typischerweise bereit?",
+    "answerOptions": [
+        "Blockgeräte über ein Speichernetz",
+        "Ausschließlich HTTP-Seiten",
+        "DNS-Zonen als Dateifreigabe",
+        "Nur Druckerwarteschlangen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "SAN-Protokolle wie Fibre Channel oder iSCSI präsentieren Blockspeicher, den der Server selbst mit einem Dateisystem versehen kann.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

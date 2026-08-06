@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Betriebssystem- und Dienstverwaltung"
-  ],
-  "instruction": "Ein Windows-Dienst startet wiederholt und beendet sich sofort. Wo ist zuerst nach der konkreten Fehlermeldung zu suchen?",
-  "answerOptions": [
-    "Ereignisanzeige und dienstspezifisches Log",
-    "Nur im DNS-Cache",
-    "Im BIOS-Passwort",
-    "In der VLAN-Tabelle des Switches"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ereignis- und Anwendungslogs liefern Startfehler, Exit-Codes und Abhängigkeitsprobleme.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Betriebssystem- und Dienstverwaltung"
+    ],
+    "instruction": "Ein Windows-Dienst startet wiederholt und beendet sich sofort. Wo ist zuerst nach der konkreten Fehlermeldung zu suchen?",
+    "answerOptions": [
+        "Ereignisanzeige und dienstspezifisches Log",
+        "Nur im DNS-Cache",
+        "Im BIOS-Passwort",
+        "In der VLAN-Tabelle des Switches"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ereignis- und Anwendungslogs liefern Startfehler, Exit-Codes und Abhängigkeitsprobleme.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

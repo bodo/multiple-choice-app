@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Betriebssystem- und Dienstverwaltung"
-  ],
-  "instruction": "Welche Wirkung hat ein zu knapp gesetztes Dateideskriptor-Limit bei einem stark genutzten Serverdienst?",
-  "answerOptions": [
-    "Neue Dateien oder Netzwerkverbindungen können fehlschlagen.",
-    "Die CPU-Taktrate verdoppelt sich.",
-    "DNS wechselt automatisch auf IPv6.",
-    "Der Hypervisor löscht Snapshots."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Sockets zählen unter Unix-artigen Systemen zu Dateideskriptoren; ein ausgeschöpftes Limit verhindert neue Handles.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Betriebssystem- und Dienstverwaltung"
+    ],
+    "instruction": "Welche Wirkung hat ein zu knapp gesetztes Dateideskriptor-Limit bei einem stark genutzten Serverdienst?",
+    "answerOptions": [
+        "Neue Dateien oder Netzwerkverbindungen können fehlschlagen.",
+        "Die CPU-Taktrate verdoppelt sich.",
+        "DNS wechselt automatisch auf IPv6.",
+        "Der Hypervisor löscht Snapshots."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Sockets zählen unter Unix-artigen Systemen zu Dateideskriptoren; ein ausgeschöpftes Limit verhindert neue Handles.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

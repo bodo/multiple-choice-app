@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Patch-, Konfigurations- und Lizenzmanagement"
-  ],
-  "instruction": "Welche Maßnahmen helfen gegen Konfigurationsdrift? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Sollzustand versioniert definieren",
-    "Abweichungen regelmäßig erkennen",
-    "Änderungen automatisiert und reproduzierbar ausrollen",
-    "Manuelle Notänderungen dauerhaft undokumentiert lassen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Ein versionierter Sollzustand, Drift-Erkennung und reproduzierbare Ausbringung halten Systeme konsistent.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Patch-, Konfigurations- und Lizenzmanagement"
+    ],
+    "instruction": "Welche Maßnahmen helfen gegen Konfigurationsdrift? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Sollzustand versioniert definieren",
+        "Abweichungen regelmäßig erkennen",
+        "Änderungen automatisiert und reproduzierbar ausrollen",
+        "Manuelle Notänderungen dauerhaft undokumentiert lassen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Ein versionierter Sollzustand, Drift-Erkennung und reproduzierbare Ausbringung halten Systeme konsistent.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

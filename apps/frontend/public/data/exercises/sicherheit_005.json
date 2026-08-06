@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was ist im Sicherheitskontext eine Schwachstelle?",
-  "answerOptions": [
-    "Eine ausnutzbare Schwäche in Technik, Konfiguration oder Organisation",
-    "Ein bereits eingetretener finanzieller Schaden",
-    "Eine vollständige Liste aller Benutzerkonten",
-    "Eine rechtliche Grundlage für Datenverarbeitung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Eine Schwachstelle ist eine Schwäche, die von einer Bedrohung ausgenutzt werden kann."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was ist im Sicherheitskontext eine Schwachstelle?",
+    "answerOptions": [
+        "Eine ausnutzbare Schwäche in Technik, Konfiguration oder Organisation",
+        "Ein bereits eingetretener finanzieller Schaden",
+        "Eine vollständige Liste aller Benutzerkonten",
+        "Eine rechtliche Grundlage für Datenverarbeitung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine Schwachstelle ist eine Schwäche, die von einer Bedrohung ausgenutzt werden kann.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

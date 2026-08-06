@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Anwendungs- und Infrastrukturdienste"
-  ],
-  "instruction": "Warum wird ein Datenbankdienst nicht direkt ins öffentliche Internet gestellt?",
-  "answerOptions": [
-    "Zugriff soll auf notwendige Anwendungssysteme und Verwaltungswege begrenzt bleiben.",
-    "SQL kann grundsätzlich nicht geroutet werden.",
-    "Datenbanken unterstützen keine Authentisierung.",
-    "Öffentliche Netze können keine TCP-Ports übertragen."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Netzsegmentierung und minimale Erreichbarkeit reduzieren Exposition und Missbrauchsmöglichkeiten.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Anwendungs- und Infrastrukturdienste"
+    ],
+    "instruction": "Warum wird ein Datenbankdienst nicht direkt ins öffentliche Internet gestellt?",
+    "answerOptions": [
+        "Zugriff soll auf notwendige Anwendungssysteme und Verwaltungswege begrenzt bleiben.",
+        "SQL kann grundsätzlich nicht geroutet werden.",
+        "Datenbanken unterstützen keine Authentisierung.",
+        "Öffentliche Netze können keine TCP-Ports übertragen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Netzsegmentierung und minimale Erreichbarkeit reduzieren Exposition und Missbrauchsmöglichkeiten.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "negationOversight",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

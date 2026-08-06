@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Virtualisierung, Container und Cloud",
-    "Containerbetrieb"
-  ],
-  "instruction": "Warum sollte ein Containerimage mit einer unveränderlichen Version oder einem Digest referenziert werden?",
-  "answerOptions": [
-    "Deployments werden reproduzierbar und ein unerwartet verschobenes Tag wird vermieden.",
-    "Der Container benötigt dann keine Updates.",
-    "Das Image wird dadurch automatisch verschlüsselt.",
-    "Der Digest ersetzt Zugriffskontrollen."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ein fester Digest bindet den Rollout an exakt denselben Imageinhalt.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Virtualisierung, Container und Cloud",
+        "Containerbetrieb"
+    ],
+    "instruction": "Warum sollte ein Containerimage mit einer unveränderlichen Version oder einem Digest referenziert werden?",
+    "answerOptions": [
+        "Deployments werden reproduzierbar und ein unerwartet verschobenes Tag wird vermieden.",
+        "Der Container benötigt dann keine Updates.",
+        "Das Image wird dadurch automatisch verschlüsselt.",
+        "Der Digest ersetzt Zugriffskontrollen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein fester Digest bindet den Rollout an exakt denselben Imageinhalt.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

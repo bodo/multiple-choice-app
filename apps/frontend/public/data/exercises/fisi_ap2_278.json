@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Schwachstellen- und Incident-Management"
-  ],
-  "instruction": "Ein Server zeigt Anzeichen einer aktiven Kompromittierung. Was ist vor einem unkoordinierten Neustart zu bedenken?",
-  "answerOptions": [
-    "Flüchtige Beweise und laufender Angriffskontext könnten verloren gehen.",
-    "Ein Neustart löscht garantiert jede Malware.",
-    "Logs sind nach Neustarts immer vollständig.",
-    "Das System wird dadurch automatisch vertrauenswürdig."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Eindämmung und Beweissicherung müssen koordiniert werden; ein Neustart kann Speicherartefakte vernichten und die Lage verändern.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Schwachstellen- und Incident-Management"
+    ],
+    "instruction": "Ein Server zeigt Anzeichen einer aktiven Kompromittierung. Was ist vor einem unkoordinierten Neustart zu bedenken?",
+    "answerOptions": [
+        "Flüchtige Beweise und laufender Angriffskontext könnten verloren gehen.",
+        "Ein Neustart löscht garantiert jede Malware.",
+        "Logs sind nach Neustarts immer vollständig.",
+        "Das System wird dadurch automatisch vertrauenswürdig."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eindämmung und Beweissicherung müssen koordiniert werden; ein Neustart kann Speicherartefakte vernichten und die Lage verändern.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

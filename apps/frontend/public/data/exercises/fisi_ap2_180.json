@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "APIs und Datenformate"
-  ],
-  "instruction": "Welche HTTP-Methode soll eine Ressource nur lesen und keine Zustandsänderung auslösen?",
-  "answerOptions": [
-    "GET",
-    "POST",
-    "DELETE",
-    "PATCH"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "GET ist für sichere, lesende Abfragen vorgesehen.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "APIs und Datenformate"
+    ],
+    "instruction": "Welche HTTP-Methode soll eine Ressource nur lesen und keine Zustandsänderung auslösen?",
+    "answerOptions": [
+        "GET",
+        "POST",
+        "DELETE",
+        "PATCH"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "GET ist für sichere, lesende Abfragen vorgesehen.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

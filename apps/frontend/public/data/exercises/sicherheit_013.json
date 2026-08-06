@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Merkmale können auf eine Phishing-Nachricht hindeuten?",
-  "answerOptions": [
-    "Unerwarteter Zeitdruck und Drohungen",
-    "Eine Zieladresse, die nur ähnlich wie die echte Domain aussieht",
-    "Eine unerwartete Aufforderung zur Eingabe von Zugangsdaten",
-    "Eine intern bekannte und zuvor abgestimmte Ticketnummer"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Phishing arbeitet häufig mit Dringlichkeit, nachgeahmten Domains und dem Versuch, Zugangsdaten oder Zahlungen zu erlangen."
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Merkmale können auf eine Phishing-Nachricht hindeuten?",
+    "answerOptions": [
+        "Unerwarteter Zeitdruck und Drohungen",
+        "Eine Zieladresse, die nur ähnlich wie die echte Domain aussieht",
+        "Eine unerwartete Aufforderung zur Eingabe von Zugangsdaten",
+        "Eine intern bekannte und zuvor abgestimmte Ticketnummer"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Phishing arbeitet häufig mit Dringlichkeit, nachgeahmten Domains und dem Versuch, Zugangsdaten oder Zahlungen zu erlangen.",
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,28 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welches Muster definiert eine Erzeugungsoperation, lässt aber Unterklassen entscheiden, welche konkrete Produktklasse instanziiert wird?",
-  "answerOptions": [
-    "Fabrikmethode (Factory Method)",
-    "Abstrakte Fabrik (Abstract Factory)",
-    "Prototyp (Prototype)",
-    "Erbauer (Builder)"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Fabrikmethode (Factory Method) verschiebt die Wahl des konkreten Produkts in Unterklassen.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "Erzeugungsmuster"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welches Muster definiert eine Erzeugungsoperation, lässt aber Unterklassen entscheiden, welche konkrete Produktklasse instanziiert wird?",
+    "answerOptions": [
+        "Fabrikmethode (Factory Method)",
+        "Abstrakte Fabrik (Abstract Factory)",
+        "Prototyp (Prototype)",
+        "Erbauer (Builder)"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Fabrikmethode (Factory Method) verschiebt die Wahl des konkreten Produkts in Unterklassen.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "Erzeugungsmuster"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

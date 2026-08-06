@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Sozialversicherung"
-  ],
-  "instruction": "Welches Risiko sichert die gesetzliche Rentenversicherung neben dem Alter ebenfalls ab?",
-  "answerOptions": [
-    "Erwerbsminderung",
-    "Beschädigung des privaten Smartphones",
-    "Aktienkursverlust",
-    "Diebstahl eines Fahrrads"
-  ],
-  "correct": [0],
-  "explainInstruction": "Zur gesetzlichen Rentenversicherung gehören unter Voraussetzungen auch Leistungen wegen Erwerbsminderung und an Hinterbliebene.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Sozialversicherung"
+    ],
+    "instruction": "Welches Risiko sichert die gesetzliche Rentenversicherung neben dem Alter ebenfalls ab?",
+    "answerOptions": [
+        "Erwerbsminderung",
+        "Beschädigung des privaten Smartphones",
+        "Aktienkursverlust",
+        "Diebstahl eines Fahrrads"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Zur gesetzlichen Rentenversicherung gehören unter Voraussetzungen auch Leistungen wegen Erwerbsminderung und an Hinterbliebene.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

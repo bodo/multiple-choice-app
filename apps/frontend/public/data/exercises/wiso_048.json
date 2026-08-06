@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Wie verändert sich die angebotene Menge eines Gutes typischerweise, wenn nur sein Marktpreis steigt?",
-  "answerOptions": [
-    "Sie steigt.",
-    "Sie fällt immer auf null.",
-    "Sie bleibt gesetzlich zwingend gleich.",
-    "Sie wird zur Nachfrage."
-  ],
-  "correct": [0],
-  "explainInstruction": "Entlang einer normalen Angebotskurve lohnt sich bei höherem Preis die Bereitstellung einer größeren Menge.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Wie verändert sich die angebotene Menge eines Gutes typischerweise, wenn nur sein Marktpreis steigt?",
+    "answerOptions": [
+        "Sie steigt.",
+        "Sie fällt immer auf null.",
+        "Sie bleibt gesetzlich zwingend gleich.",
+        "Sie wird zur Nachfrage."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Entlang einer normalen Angebotskurve lohnt sich bei höherem Preis die Bereitstellung einer größeren Menge.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Wozu dient eine Inventur?",
-  "answerOptions": [
-    "Vermögensgegenstände und Schulden zu einem Stichtag nach Art, Menge und Wert feststellen",
-    "Nur künftige Umsätze schätzen",
-    "Tarifverträge verhandeln",
-    "Mitarbeiterzeugnisse schreiben"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Inventur ist die tatsächliche Bestandsaufnahme; ihr Ergebnis wird im Inventar geordnet dargestellt.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Wozu dient eine Inventur?",
+    "answerOptions": [
+        "Vermögensgegenstände und Schulden zu einem Stichtag nach Art, Menge und Wert feststellen",
+        "Nur künftige Umsätze schätzen",
+        "Tarifverträge verhandeln",
+        "Mitarbeiterzeugnisse schreiben"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Inventur ist die tatsächliche Bestandsaufnahme; ihr Ergebnis wird im Inventar geordnet dargestellt.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "SLA und Verfügbarkeit"
-  ],
-  "instruction": "Welche Ereignisse sollten bei einer Verfügbarkeitsauswertung getrennt ausgewiesen werden? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Ungeplante Störung",
-    "Vereinbartes Wartungsfenster",
-    "Messausfall des Monitorings",
-    "Beliebiger normaler Logeintrag"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Störung, zulässige Wartung und fehlende Messdaten haben unterschiedliche Bedeutung und dürfen nicht vermischt werden.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "SLA und Verfügbarkeit"
+    ],
+    "instruction": "Welche Ereignisse sollten bei einer Verfügbarkeitsauswertung getrennt ausgewiesen werden? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Ungeplante Störung",
+        "Vereinbartes Wartungsfenster",
+        "Messausfall des Monitorings",
+        "Beliebiger normaler Logeintrag"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Störung, zulässige Wartung und fehlende Messdaten haben unterschiedliche Bedeutung und dürfen nicht vermischt werden.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

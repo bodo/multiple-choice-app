@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Aussage zu Open-Source-Software ist richtig?",
-  "answerOptions": [
-    "Ihre Nutzung ist an die Bedingungen der jeweiligen Open-Source-Lizenz gebunden",
-    "Sie ist automatisch frei von Urheberrechten",
-    "Sie darf immer ohne Lizenzhinweise weitergegeben werden",
-    "Sie darf grundsätzlich nicht kommerziell verwendet werden"
-  ],
-  "correct": [0],
-  "explainInstruction": "Open Source gewährt weitreichende Rechte, verlangt aber die Einhaltung der konkreten Lizenzbedingungen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Aussage zu Open-Source-Software ist richtig?",
+    "answerOptions": [
+        "Ihre Nutzung ist an die Bedingungen der jeweiligen Open-Source-Lizenz gebunden",
+        "Sie ist automatisch frei von Urheberrechten",
+        "Sie darf immer ohne Lizenzhinweise weitergegeben werden",
+        "Sie darf grundsätzlich nicht kommerziell verwendet werden"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Open Source gewährt weitreichende Rechte, verlangt aber die Einhaltung der konkreten Lizenzbedingungen.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Schwachstellen- und Incident-Management"
-  ],
-  "instruction": "Warum reicht ein hoher CVSS-Wert allein nicht für die Patchpriorität?",
-  "answerOptions": [
-    "Exposition, Geschäftsrelevanz, vorhandene Kontrollen und Ausnutzbarkeit gehören zur Risikobewertung.",
-    "CVSS beschreibt nur Lizenzkosten.",
-    "Kritische Lücken brauchen nie Tests.",
-    "CVSS gilt ausschließlich für Hardware."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Technische Schwere ist ein Faktor; das konkrete Risiko entsteht aus Bedrohung, Exposition, Auswirkung und Kontrollen.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Schwachstellen- und Incident-Management"
+    ],
+    "instruction": "Warum reicht ein hoher CVSS-Wert allein nicht für die Patchpriorität?",
+    "answerOptions": [
+        "Exposition, Geschäftsrelevanz, vorhandene Kontrollen und Ausnutzbarkeit gehören zur Risikobewertung.",
+        "CVSS beschreibt nur Lizenzkosten.",
+        "Kritische Lücken brauchen nie Tests.",
+        "CVSS gilt ausschließlich für Hardware."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Technische Schwere ist ein Faktor; das konkrete Risiko entsteht aus Bedrohung, Exposition, Auswirkung und Kontrollen.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was beschreibt das Schutzziel Authentizität?",
-  "answerOptions": [
-    "Die Echtheit und Glaubwürdigkeit einer Identität oder Information",
-    "Die dauerhafte Speicherung aller Informationen",
-    "Die vollständige Anonymisierung sämtlicher Benutzer",
-    "Die Erreichbarkeit eines Systems ohne Unterbrechung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Authentizität ermöglicht die Prüfung, ob eine Identität oder Information tatsächlich von der angegebenen Quelle stammt."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was beschreibt das Schutzziel Authentizität?",
+    "answerOptions": [
+        "Die Echtheit und Glaubwürdigkeit einer Identität oder Information",
+        "Die dauerhafte Speicherung aller Informationen",
+        "Die vollständige Anonymisierung sämtlicher Benutzer",
+        "Die Erreichbarkeit eines Systems ohne Unterbrechung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Authentizität ermöglicht die Prüfung, ob eine Identität oder Information tatsächlich von der angegebenen Quelle stammt.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

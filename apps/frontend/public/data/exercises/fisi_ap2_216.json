@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "SLA und Verfügbarkeit"
-  ],
-  "instruction": "Warum kann die reine Host-Erreichbarkeit ein Dienst-SLA falsch positiv bewerten?",
-  "answerOptions": [
-    "Der Host kann antworten, während die eigentliche Anwendung fehlerhaft ist.",
-    "SLA gilt nur für ausgeschaltete Hosts.",
-    "Ping misst immer die Datenbankkonsistenz.",
-    "Ein erreichbarer Host hat garantiert korrekte Benutzerrechte."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Service-Level-Monitoring muss die tatsächlich zugesagte Funktion aus Sicht eines geeigneten Messpunkts prüfen.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "SLA und Verfügbarkeit"
+    ],
+    "instruction": "Warum kann die reine Host-Erreichbarkeit ein Dienst-SLA falsch positiv bewerten?",
+    "answerOptions": [
+        "Der Host kann antworten, während die eigentliche Anwendung fehlerhaft ist.",
+        "SLA gilt nur für ausgeschaltete Hosts.",
+        "Ping misst immer die Datenbankkonsistenz.",
+        "Ein erreichbarer Host hat garantiert korrekte Benutzerrechte."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Service-Level-Monitoring muss die tatsächlich zugesagte Funktion aus Sicht eines geeigneten Messpunkts prüfen.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

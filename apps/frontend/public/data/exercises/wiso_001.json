@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 5,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Ausbildung und Arbeitsrecht"
-  ],
-  "instruction": "Was kennzeichnet das duale System der Berufsausbildung?",
-  "answerOptions": [
-    "Ausbildung findet abgestimmt im Betrieb und in der Berufsschule statt.",
-    "Die gesamte Ausbildung findet ausschließlich an einer Hochschule statt.",
-    "Nur der Betrieb legt ohne Ausbildungsordnung alle Inhalte fest.",
-    "Berufsschule und Betrieb vermitteln stets identische Aufgaben am selben Ort."
-  ],
-  "correct": [0],
-  "explainInstruction": "Betrieb und Berufsschule sind eigenständige Lernorte mit abgestimmten praktischen und theoretischen Bildungsaufträgen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 5,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Ausbildung und Arbeitsrecht"
+    ],
+    "instruction": "Was kennzeichnet das duale System der Berufsausbildung?",
+    "answerOptions": [
+        "Ausbildung findet abgestimmt im Betrieb und in der Berufsschule statt.",
+        "Die gesamte Ausbildung findet ausschließlich an einer Hochschule statt.",
+        "Nur der Betrieb legt ohne Ausbildungsordnung alle Inhalte fest.",
+        "Berufsschule und Betrieb vermitteln stets identische Aufgaben am selben Ort."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Betrieb und Berufsschule sind eigenständige Lernorte mit abgestimmten praktischen und theoretischen Bildungsaufträgen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

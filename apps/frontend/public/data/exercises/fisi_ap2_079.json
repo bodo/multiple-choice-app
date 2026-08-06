@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Systematische Netzwerkdiagnose"
-  ],
-  "instruction": "`traceroute` endet stets am selben Zwischenrouter, während lokale Ziele funktionieren. Was ist die vorsichtigste Aussage?",
-  "answerOptions": [
-    "Ab dort oder dahinter besteht ein Routing-, Filter- oder Erreichbarkeitsproblem.",
-    "Der letzte antwortende Router ist zwingend defekt.",
-    "DNS ist sicher die einzige Ursache.",
-    "Die Client-MAC-Adresse ist global gesperrt."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Traceroute grenzt den Pfad ein, beweist aber nicht allein, welches Gerät die Ursache ist; ICMP kann auch gefiltert werden.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Systematische Netzwerkdiagnose"
+    ],
+    "instruction": "`traceroute` endet stets am selben Zwischenrouter, während lokale Ziele funktionieren. Was ist die vorsichtigste Aussage?",
+    "answerOptions": [
+        "Ab dort oder dahinter besteht ein Routing-, Filter- oder Erreichbarkeitsproblem.",
+        "Der letzte antwortende Router ist zwingend defekt.",
+        "DNS ist sicher die einzige Ursache.",
+        "Die Client-MAC-Adresse ist global gesperrt."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Traceroute grenzt den Pfad ein, beweist aber nicht allein, welches Gerät die Ursache ist; ICMP kann auch gefiltert werden.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

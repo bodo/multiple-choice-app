@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Web, APIs und Sicherheit"
-  ],
-  "instruction": "Welche Aussage zu OAuth 2.0 und OpenID Connect ist richtig?",
-  "answerOptions": [
-    "OAuth 2.0 ist primär ein Autorisierungsrahmen; OpenID Connect ergänzt eine Identitätsschicht.",
-    "OAuth 2.0 verschlüsselt Festplatten.",
-    "OpenID Connect ersetzt HTTP.",
-    "Beide Verfahren sind Datenbank-Normalformen."
-  ],
-  "correct": [0],
-  "explainInstruction": "OAuth 2.0 delegiert Zugriff. OpenID Connect baut darauf auf und standardisiert die Anmeldung und Identitätsinformationen.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Web, APIs und Sicherheit"
+    ],
+    "instruction": "Welche Aussage zu OAuth 2.0 und OpenID Connect ist richtig?",
+    "answerOptions": [
+        "OAuth 2.0 ist primär ein Autorisierungsrahmen; OpenID Connect ergänzt eine Identitätsschicht.",
+        "OAuth 2.0 verschlüsselt Festplatten.",
+        "OpenID Connect ersetzt HTTP.",
+        "Beide Verfahren sind Datenbank-Normalformen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "OAuth 2.0 delegiert Zugriff. OpenID Connect baut darauf auf und standardisiert die Anmeldung und Identitätsinformationen.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "1": "numericalCalculationTrap",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

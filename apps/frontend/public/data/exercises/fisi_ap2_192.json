@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "Robuster und sicherer Betrieb"
-  ],
-  "instruction": "Wann ist ein automatischer Retry fachlich vertretbar? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Bei wahrscheinlich vorübergehenden Fehlern",
-    "Wenn die Operation idempotent ist oder einen Idempotency Key nutzt",
-    "Mit begrenzter Anzahl und Backoff",
-    "Unbegrenzt bei jedem Validierungsfehler"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Retries helfen bei transienten Fehlern, müssen aber Duplikate, Last und permanente Eingabefehler berücksichtigen.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "Robuster und sicherer Betrieb"
+    ],
+    "instruction": "Wann ist ein automatischer Retry fachlich vertretbar? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Bei wahrscheinlich vorübergehenden Fehlern",
+        "Wenn die Operation idempotent ist oder einen Idempotency Key nutzt",
+        "Mit begrenzter Anzahl und Backoff",
+        "Unbegrenzt bei jedem Validierungsfehler"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Retries helfen bei transienten Fehlern, müssen aber Duplikate, Last und permanente Eingabefehler berücksichtigen.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Mitbestimmung und Tarifrecht"
-  ],
-  "instruction": "Was bewirkt die Nachwirkung eines Tarifvertrags?",
-  "answerOptions": [
-    "Seine Regelungen gelten nach Ablauf weiter, bis sie durch eine andere Abmachung ersetzt werden.",
-    "Der Tarifvertrag wird rückwirkend unwirksam.",
-    "Alle Arbeitsverhältnisse enden sofort.",
-    "Der Betriebsrat übernimmt die Geschäftsführung."
-  ],
-  "correct": [0],
-  "explainInstruction": "Nach Ablauf wirken Tarifnormen für erfasste Arbeitsverhältnisse weiter, bis eine neue Vereinbarung sie ersetzt.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Mitbestimmung und Tarifrecht"
+    ],
+    "instruction": "Was bewirkt die Nachwirkung eines Tarifvertrags?",
+    "answerOptions": [
+        "Seine Regelungen gelten nach Ablauf weiter, bis sie durch eine andere Abmachung ersetzt werden.",
+        "Der Tarifvertrag wird rückwirkend unwirksam.",
+        "Alle Arbeitsverhältnisse enden sofort.",
+        "Der Betriebsrat übernimmt die Geschäftsführung."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Nach Ablauf wirken Tarifnormen für erfasste Arbeitsverhältnisse weiter, bis eine neue Vereinbarung sie ersetzt.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

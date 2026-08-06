@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "DNS, DHCP und Zeitdienste"
-  ],
-  "instruction": "Welche Daten gehören typischerweise zu einem DHCP-Lease? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "IP-Adresse",
-    "Subnetzmaske bzw. Präfix",
-    "Standardgateway",
-    "Hash des Benutzerpassworts"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "DHCP kann die Adresskonfiguration einschließlich Maske und Gateway liefern. Benutzerpasswörter gehören nicht in einen Lease.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "DNS, DHCP und Zeitdienste"
+    ],
+    "instruction": "Welche Daten gehören typischerweise zu einem DHCP-Lease? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "IP-Adresse",
+        "Subnetzmaske bzw. Präfix",
+        "Standardgateway",
+        "Hash des Benutzerpassworts"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "DHCP kann die Adresskonfiguration einschließlich Maske und Gateway liefern. Benutzerpasswörter gehören nicht in einen Lease.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

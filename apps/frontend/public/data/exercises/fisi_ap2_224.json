@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "Cluster und Failover"
-  ],
-  "instruction": "Welche Ursachen können trotz zweier Server zum Gesamtausfall führen? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Gemeinsame Stromversorgung",
-    "Einziger Load Balancer ohne Redundanz",
-    "Gemeinsamer fehlerhafter Konfigurations-Rollout",
-    "Unabhängige Fehlerdomänen und gestaffelte Änderungen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Hardware-, Pfad- und Änderungsabhängigkeiten können Redundanz wirkungslos machen.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "Cluster und Failover"
+    ],
+    "instruction": "Welche Ursachen können trotz zweier Server zum Gesamtausfall führen? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Gemeinsame Stromversorgung",
+        "Einziger Load Balancer ohne Redundanz",
+        "Gemeinsamer fehlerhafter Konfigurations-Rollout",
+        "Unabhängige Fehlerdomänen und gestaffelte Änderungen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Hardware-, Pfad- und Änderungsabhängigkeiten können Redundanz wirkungslos machen.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

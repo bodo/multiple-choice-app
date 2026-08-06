@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Pflichten können bei der Weitergabe von Open-Source-Software je nach Lizenz entstehen?",
-  "answerOptions": [
-    "Lizenztext und Urheberhinweise beifügen",
-    "Quellcode oder ein entsprechendes Angebot bereitstellen",
-    "Änderungen kenntlich machen",
-    "Die Herkunft der Software verschweigen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Die konkreten Pflichten hängen von der Lizenz ab. Typisch sind Hinweise, Lizenztexte und bei bestimmten Lizenzen Quellcodepflichten."
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Pflichten können bei der Weitergabe von Open-Source-Software je nach Lizenz entstehen?",
+    "answerOptions": [
+        "Lizenztext und Urheberhinweise beifügen",
+        "Quellcode oder ein entsprechendes Angebot bereitstellen",
+        "Änderungen kenntlich machen",
+        "Die Herkunft der Software verschweigen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Die konkreten Pflichten hängen von der Lizenz ab. Typisch sind Hinweise, Lizenztexte und bei bestimmten Lizenzen Quellcodepflichten.",
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

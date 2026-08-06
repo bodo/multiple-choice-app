@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Firewall und Segmentierung"
-  ],
-  "instruction": "Ein neuer Firewall-Allow-Eintrag greift nicht, weil davor eine allgemeinere Deny-Regel passt. Welche Eigenschaft ist entscheidend?",
-  "answerOptions": [
-    "Regelreihenfolge",
-    "RAID-Level",
-    "NTP-Stratum",
-    "Hostname-Länge"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Viele Firewalls werten Regeln von oben nach unten aus; die erste passende Regel entscheidet.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Firewall und Segmentierung"
+    ],
+    "instruction": "Ein neuer Firewall-Allow-Eintrag greift nicht, weil davor eine allgemeinere Deny-Regel passt. Welche Eigenschaft ist entscheidend?",
+    "answerOptions": [
+        "Regelreihenfolge",
+        "RAID-Level",
+        "NTP-Stratum",
+        "Hostname-Länge"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Viele Firewalls werten Regeln von oben nach unten aus; die erste passende Regel entscheidet.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

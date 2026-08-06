@@ -1,29 +1,47 @@
 {
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Um welche der nachstehenden Vertragsarten handelt es sich?\n\nEine Computergroßhandlung stellt einen Mitarbeiter für das Larger ein.",
-  "answerOptions": [
-    "Kaufvertrag\n",
-    "Werkvertrag",
-    "Leihvertrag",
-    "Werkliefervertrag",
-    "Mietvertrag",
-    "Darlehensvertrag",
-    "Dienstvertrag\n"
-  ],
-  "correct": [6],
-  "categories": [
-    "WiSo",
-    "Vertragsrecht",
-    "Vertragsarten"
-  ],
-  "submitButton": true,
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Um welche der nachstehenden Vertragsarten handelt es sich?\n\nEine Computergroßhandlung stellt einen Mitarbeiter für das Larger ein.",
+    "answerOptions": [
+        "Kaufvertrag\n",
+        "Werkvertrag",
+        "Leihvertrag",
+        "Werkliefervertrag",
+        "Mietvertrag",
+        "Darlehensvertrag",
+        "Dienstvertrag\n"
+    ],
+    "correct": [
+        6
+    ],
+    "categories": [
+        "WiSo",
+        "Vertragsrecht",
+        "Vertragsarten"
+    ],
+    "submitButton": true,
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "conceptContradiction",
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction",
+        "4": "conceptContradiction",
+        "5": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "4": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "5": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

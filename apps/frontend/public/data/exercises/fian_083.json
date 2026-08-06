@@ -1,26 +1,32 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Web, APIs und Sicherheit"
-  ],
-  "instruction": "Welche Maßnahmen können eine Webanwendung gegen CSRF schützen?",
-  "answerOptions": [
-    "Ein unvorhersagbares CSRF-Token prüfen",
-    "Cookies passend mit `SameSite` konfigurieren",
-    "Zustandsänderungen nicht über einfache GET-Anfragen ausführen",
-    "Jede Eingabe ungeprüft als HTML ausgeben"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "CSRF-Schutz kombiniert häufig Tokenprüfung und geeignete Cookie-Regeln. Zustandsändernde GET-Anfragen erleichtern Angriffe und sollten vermieden werden.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Web, APIs und Sicherheit"
+    ],
+    "instruction": "Welche Maßnahmen können eine Webanwendung gegen CSRF schützen?",
+    "answerOptions": [
+        "Ein unvorhersagbares CSRF-Token prüfen",
+        "Cookies passend mit `SameSite` konfigurieren",
+        "Zustandsänderungen nicht über einfache GET-Anfragen ausführen",
+        "Jede Eingabe ungeprüft als HTML ausgeben"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "CSRF-Schutz kombiniert häufig Tokenprüfung und geeignete Cookie-Regeln. Zustandsändernde GET-Anfragen erleichtern Angriffe und sollten vermieden werden.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

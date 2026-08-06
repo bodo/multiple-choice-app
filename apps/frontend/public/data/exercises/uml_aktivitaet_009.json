@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welche Bedeutung hat eine Bedingung wie `[Zahlung erfolgreich]` an einem Kontrollfluss?",
-  "answerOptions": [
-    "Der Pfad darf genommen werden, wenn die Bedingung erfüllt ist",
-    "Die Aktion wird unabhängig von der Bedingung immer ausgeführt",
-    "Der Text benennt eine Klasse",
-    "Der Pfad wird dadurch parallelisiert"
-  ],
-  "correct": [0],
-  "explainInstruction": "Eine Guard-Bedingung steuert, unter welcher Voraussetzung ein ausgehender Kontrollfluss gewählt werden kann.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Aktivitätsdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welche Bedeutung hat eine Bedingung wie `[Zahlung erfolgreich]` an einem Kontrollfluss?",
+    "answerOptions": [
+        "Der Pfad darf genommen werden, wenn die Bedingung erfüllt ist",
+        "Die Aktion wird unabhängig von der Bedingung immer ausgeführt",
+        "Der Text benennt eine Klasse",
+        "Der Pfad wird dadurch parallelisiert"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine Guard-Bedingung steuert, unter welcher Voraussetzung ein ausgehender Kontrollfluss gewählt werden kann.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Aktivitätsdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

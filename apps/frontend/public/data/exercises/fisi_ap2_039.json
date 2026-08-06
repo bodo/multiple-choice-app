@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Routing und NAT"
-  ],
-  "instruction": "Welche Angaben werden für eine statische Route zu einem entfernten Netz benötigt? Wähle alle grundsätzlich geeigneten Angaben.",
-  "answerOptions": [
-    "Zielpräfix",
-    "Next-Hop-Adresse oder Ausgangsschnittstelle",
-    "MAC-Adresse jedes entfernten Hosts",
-    "Passende Erreichbarkeit des Next Hops"
-  ],
-  "correct": [
-    0,
-    1,
-    3
-  ],
-  "explainInstruction": "Eine statische Route beschreibt Ziel und Weiterleitungsweg. Einzelne entfernte Host-MAC-Adressen sind über Routergrenzen hinweg nicht erforderlich.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Routing und NAT"
+    ],
+    "instruction": "Welche Angaben werden für eine statische Route zu einem entfernten Netz benötigt? Wähle alle grundsätzlich geeigneten Angaben.",
+    "answerOptions": [
+        "Zielpräfix",
+        "Next-Hop-Adresse oder Ausgangsschnittstelle",
+        "MAC-Adresse jedes entfernten Hosts",
+        "Passende Erreichbarkeit des Next Hops"
+    ],
+    "correct": [
+        0,
+        1,
+        3
+    ],
+    "explainInstruction": "Eine statische Route beschreibt Ziel und Weiterleitungsweg. Einzelne entfernte Host-MAC-Adressen sind über Routergrenzen hinweg nicht erforderlich.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "2": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

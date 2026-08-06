@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Routing und NAT"
-  ],
-  "instruction": "Ein Client erreicht sein eigenes Subnetz, aber kein entferntes Netz. Seine IP-Adresse und Maske stimmen. Welcher Eintrag ist zuerst zu prüfen?",
-  "answerOptions": [
-    "Standardgateway",
-    "Hostname",
-    "Bildschirmauflösung",
-    "NTP-Stratum"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Für Ziele außerhalb des lokalen Subnetzes benötigt der Client ein erreichbares Standardgateway.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Routing und NAT"
+    ],
+    "instruction": "Ein Client erreicht sein eigenes Subnetz, aber kein entferntes Netz. Seine IP-Adresse und Maske stimmen. Welcher Eintrag ist zuerst zu prüfen?",
+    "answerOptions": [
+        "Standardgateway",
+        "Hostname",
+        "Bildschirmauflösung",
+        "NTP-Stratum"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Für Ziele außerhalb des lokalen Subnetzes benötigt der Client ein erreichbares Standardgateway.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

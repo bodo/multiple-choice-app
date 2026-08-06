@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Computergrundlagen"
-  ],
-  "instruction": "Wie viele Bit bilden ein Byte?",
-  "answerOptions": [
-    "2",
-    "4",
-    "8",
-    "16"
-  ],
-  "correct": [2],
-  "explainInstruction": "Ein Byte besteht per Definition aus 8 Bit.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Computergrundlagen"
+    ],
+    "instruction": "Wie viele Bit bilden ein Byte?",
+    "answerOptions": [
+        "2",
+        "4",
+        "8",
+        "16"
+    ],
+    "correct": [
+        2
+    ],
+    "explainInstruction": "Ein Byte besteht per Definition aus 8 Bit.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "numericalCalculationTrap",
+        "1": "numericalCalculationTrap",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

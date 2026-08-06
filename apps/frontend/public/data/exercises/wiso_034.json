@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Sozialversicherung"
-  ],
-  "instruction": "Was beschreibt das Solidarprinzip der Sozialversicherung?",
-  "answerOptions": [
-    "Beiträge und Leistungen folgen sozialen Ausgleichsregeln; individuelle Risiken werden gemeinsam getragen.",
-    "Nur Personen mit hohem Risiko dürfen sich versichern.",
-    "Jede Leistung entspricht exakt den persönlich eingezahlten Münzen.",
-    "Arbeitgeber entscheiden frei über gesetzliche Leistungen."
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Versichertengemeinschaft trägt Risiken gemeinsam. Beiträge richten sich häufig nach Leistungsfähigkeit, Leistungen nach gesetzlich definiertem Bedarf.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Sozialversicherung"
+    ],
+    "instruction": "Was beschreibt das Solidarprinzip der Sozialversicherung?",
+    "answerOptions": [
+        "Beiträge und Leistungen folgen sozialen Ausgleichsregeln; individuelle Risiken werden gemeinsam getragen.",
+        "Nur Personen mit hohem Risiko dürfen sich versichern.",
+        "Jede Leistung entspricht exakt den persönlich eingezahlten Münzen.",
+        "Arbeitgeber entscheiden frei über gesetzliche Leistungen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Versichertengemeinschaft trägt Risiken gemeinsam. Beiträge richten sich häufig nach Leistungsfähigkeit, Leistungen nach gesetzlich definiertem Bedarf.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

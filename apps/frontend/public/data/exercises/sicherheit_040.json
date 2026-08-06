@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wie werden vertrauliche Daten auf einem ausgemusterten Datenträger angemessen behandelt?",
-  "answerOptions": [
-    "Nach Schutzbedarf mit einem geeigneten Verfahren sicher löschen oder den Datenträger vernichten",
-    "Nur den Dateinamen ändern",
-    "Die Dateien in den Papierkorb verschieben",
-    "Den Datenträger ohne Prüfung weitergeben"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein geeignetes Lösch- oder Vernichtungsverfahren muss verhindern, dass schutzbedürftige Daten wiederhergestellt werden können."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wie werden vertrauliche Daten auf einem ausgemusterten Datenträger angemessen behandelt?",
+    "answerOptions": [
+        "Nach Schutzbedarf mit einem geeigneten Verfahren sicher löschen oder den Datenträger vernichten",
+        "Nur den Dateinamen ändern",
+        "Die Dateien in den Papierkorb verschieben",
+        "Den Datenträger ohne Prüfung weitergeben"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein geeignetes Lösch- oder Vernichtungsverfahren muss verhindern, dass schutzbedürftige Daten wiederhergestellt werden können.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

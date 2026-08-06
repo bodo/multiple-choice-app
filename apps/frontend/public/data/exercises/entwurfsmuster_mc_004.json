@@ -1,31 +1,43 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "instruction": "Welche weiteren Muster gehören zu den Erzeugungsmustern (creational patterns)?",
-  "answerOptions": [
-    "Erbauer (Builder)",
-    "Dekorierer (Decorator)",
-    "Einzelstück (Singleton)",
-    "Zustand (State)",
-    "Stellvertreter (Proxy)",
-    "Vermittler (Mediator)"
-  ],
-  "correct": [
-    0,
-    2
-  ],
-  "explainInstruction": "Erbauer (Builder) und Einzelstück (Singleton) sind Erzeugungsmuster (creational patterns). Die übrigen Antworten gehören zu Struktur oder Verhalten.",
-  "mobileSolvable": true,
-  "learningLevel": 4,
-  "difficulty": 3,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "GoF-Klassifikation"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "instruction": "Welche weiteren Muster gehören zu den Erzeugungsmustern (creational patterns)?",
+    "answerOptions": [
+        "Erbauer (Builder)",
+        "Dekorierer (Decorator)",
+        "Einzelstück (Singleton)",
+        "Zustand (State)",
+        "Stellvertreter (Proxy)",
+        "Vermittler (Mediator)"
+    ],
+    "correct": [
+        0,
+        2
+    ],
+    "explainInstruction": "Erbauer (Builder) und Einzelstück (Singleton) sind Erzeugungsmuster (creational patterns). Die übrigen Antworten gehören zu Struktur oder Verhalten.",
+    "mobileSolvable": true,
+    "learningLevel": 4,
+    "difficulty": 3,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "GoF-Klassifikation"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "3": "conceptContradiction",
+        "4": "conceptContradiction",
+        "5": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "4": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "5": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

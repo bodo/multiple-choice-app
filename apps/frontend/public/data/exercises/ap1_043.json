@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Server und Speicher"
-  ],
-  "instruction": "Was sichert ein inkrementelles Backup nach einer Vollsicherung?",
-  "answerOptions": [
-    "Nur Änderungen seit der letzten Sicherung beliebigen Typs",
-    "Immer den vollständigen Datenbestand",
-    "Nur gelöschte Dateien",
-    "Änderungen seit der letzten Vollsicherung unabhängig von Zwischenständen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Inkrementelle Sicherungen bauen jeweils auf der zuletzt erfolgten Sicherung auf. Differentielle Sicherungen beziehen sich dagegen auf die letzte Vollsicherung.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Server und Speicher"
+    ],
+    "instruction": "Was sichert ein inkrementelles Backup nach einer Vollsicherung?",
+    "answerOptions": [
+        "Nur Änderungen seit der letzten Sicherung beliebigen Typs",
+        "Immer den vollständigen Datenbestand",
+        "Nur gelöschte Dateien",
+        "Änderungen seit der letzten Vollsicherung unabhängig von Zwischenständen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Inkrementelle Sicherungen bauen jeweils auf der zuletzt erfolgten Sicherung auf. Differentielle Sicherungen beziehen sich dagegen auf die letzte Vollsicherung.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

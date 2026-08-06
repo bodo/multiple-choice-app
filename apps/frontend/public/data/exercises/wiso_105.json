@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Warum sollten Anforderungen und Abnahmekriterien in einem IT-Vertrag möglichst eindeutig beschrieben sein?",
-  "answerOptions": [
-    "Damit Leistung und Abnahme objektiver geprüft werden können",
-    "Damit mündliche Nebenabreden automatisch unwirksam werden",
-    "Damit jede Änderung kostenlos verlangt werden kann",
-    "Damit Sicherheitsanforderungen nicht getestet werden müssen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Klare Anforderungen verringern Auslegungsspielräume und schaffen eine prüfbare Grundlage für Lieferung und Abnahme."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Warum sollten Anforderungen und Abnahmekriterien in einem IT-Vertrag möglichst eindeutig beschrieben sein?",
+    "answerOptions": [
+        "Damit Leistung und Abnahme objektiver geprüft werden können",
+        "Damit mündliche Nebenabreden automatisch unwirksam werden",
+        "Damit jede Änderung kostenlos verlangt werden kann",
+        "Damit Sicherheitsanforderungen nicht getestet werden müssen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Klare Anforderungen verringern Auslegungsspielräume und schaffen eine prüfbare Grundlage für Lieferung und Abnahme.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

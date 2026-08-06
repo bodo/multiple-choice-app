@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Was ist für eine asynchrone Nachricht typisch?",
-  "answerOptions": [
-    "Der Sender kann weiterarbeiten, ohne auf den Abschluss beim Empfänger zu warten",
-    "Sie darf nur an denselben Teilnehmer gesendet werden",
-    "Sie beendet automatisch die gesamte Interaktion",
-    "Sie stellt immer eine Fehlermeldung dar"
-  ],
-  "correct": [0],
-  "explainInstruction": "Eine asynchrone Nachricht blockiert den Sender nicht bis zum Abschluss der Verarbeitung beim Empfänger.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Sequenzdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Was ist für eine asynchrone Nachricht typisch?",
+    "answerOptions": [
+        "Der Sender kann weiterarbeiten, ohne auf den Abschluss beim Empfänger zu warten",
+        "Sie darf nur an denselben Teilnehmer gesendet werden",
+        "Sie beendet automatisch die gesamte Interaktion",
+        "Sie stellt immer eine Fehlermeldung dar"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine asynchrone Nachricht blockiert den Sender nicht bis zum Abschluss der Verarbeitung beim Empfänger.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Sequenzdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

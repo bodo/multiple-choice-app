@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Algorithmen und Datenstrukturen"
-  ],
-  "instruction": "Welche Datenstruktur eignet sich besonders für häufigen direkten Zugriff über einen numerischen Index?",
-  "answerOptions": [
-    "Array",
-    "Einfach verkettete Liste",
-    "Queue",
-    "Stack ohne Direktzugriff"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Array erlaubt den direkten Zugriff auf ein Element über seine Adresse und damit typischerweise `O(1)`. Eine verkettete Liste muss bis zur Position durchlaufen werden.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Algorithmen und Datenstrukturen"
+    ],
+    "instruction": "Welche Datenstruktur eignet sich besonders für häufigen direkten Zugriff über einen numerischen Index?",
+    "answerOptions": [
+        "Array",
+        "Einfach verkettete Liste",
+        "Queue",
+        "Stack ohne Direktzugriff"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Array erlaubt den direkten Zugriff auf ein Element über seine Adresse und damit typischerweise `O(1)`. Eine verkettete Liste muss bis zur Position durchlaufen werden.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

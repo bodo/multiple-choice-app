@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Betriebssystem- und Dienstverwaltung"
-  ],
-  "instruction": "Warum werden Konfigurationsdateien vor einer Änderung versioniert oder gesichert?",
-  "answerOptions": [
-    "Rollback und Vergleich werden möglich.",
-    "Der Dienst benötigt dann keinen Test.",
-    "Dateirechte verlieren ihre Bedeutung.",
-    "Die Konfiguration wird automatisch geheim."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Eine bekannte Vorversion reduziert Wiederherstellungszeit und macht Änderungen nachvollziehbar.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Betriebssystem- und Dienstverwaltung"
+    ],
+    "instruction": "Warum werden Konfigurationsdateien vor einer Änderung versioniert oder gesichert?",
+    "answerOptions": [
+        "Rollback und Vergleich werden möglich.",
+        "Der Dienst benötigt dann keinen Test.",
+        "Dateirechte verlieren ihre Bedeutung.",
+        "Die Konfiguration wird automatisch geheim."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine bekannte Vorversion reduziert Wiederherstellungszeit und macht Änderungen nachvollziehbar.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

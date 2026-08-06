@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "Recovery und Notfallvorsorge"
-  ],
-  "instruction": "Warum wird für eine Wiederherstellung eine Prioritätenliste der Dienste benötigt?",
-  "answerOptions": [
-    "Abhängige und geschäftskritische Funktionen müssen in sinnvoller Reihenfolge starten.",
-    "Jeder Dienst kann immer gleichzeitig starten.",
-    "Backups enthalten keine Abhängigkeiten.",
-    "Die Liste ersetzt das Monitoring."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Identität, DNS, Datenbanken und Anwendungen besitzen Abhängigkeiten; Priorisierung richtet knappe Ressourcen auf kritische Prozesse.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "Recovery und Notfallvorsorge"
+    ],
+    "instruction": "Warum wird für eine Wiederherstellung eine Prioritätenliste der Dienste benötigt?",
+    "answerOptions": [
+        "Abhängige und geschäftskritische Funktionen müssen in sinnvoller Reihenfolge starten.",
+        "Jeder Dienst kann immer gleichzeitig starten.",
+        "Backups enthalten keine Abhängigkeiten.",
+        "Die Liste ersetzt das Monitoring."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Identität, DNS, Datenbanken und Anwendungen besitzen Abhängigkeiten; Priorisierung richtet knappe Ressourcen auf kritische Prozesse.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "negationOversight",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

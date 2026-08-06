@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "Robuster und sicherer Betrieb"
-  ],
-  "instruction": "Welche Maßnahmen begrenzen den Schaden eines kompromittierten Automationskontos? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Minimaler Berechtigungsumfang",
-    "Zeitlich begrenzte Zugangsdaten",
-    "Netzwerkzugriff auf notwendige Ziele beschränken",
-    "Dauerhaft globale Administratorrechte vergeben"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Least Privilege, kurze Gültigkeit und Netzbegrenzung reduzieren Reichweite und Dauer eines Missbrauchs.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "Robuster und sicherer Betrieb"
+    ],
+    "instruction": "Welche Maßnahmen begrenzen den Schaden eines kompromittierten Automationskontos? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Minimaler Berechtigungsumfang",
+        "Zeitlich begrenzte Zugangsdaten",
+        "Netzwerkzugriff auf notwendige Ziele beschränken",
+        "Dauerhaft globale Administratorrechte vergeben"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Least Privilege, kurze Gültigkeit und Netzbegrenzung reduzieren Reichweite und Dauer eines Missbrauchs.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

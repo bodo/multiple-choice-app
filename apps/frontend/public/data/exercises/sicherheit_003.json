@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welches Schutzziel steht im Vordergrund, wenn ein Dienst auch bei einem Hardwareausfall erreichbar bleiben soll?",
-  "answerOptions": [
-    "Verfügbarkeit",
-    "Vertraulichkeit",
-    "Anonymität",
-    "Nachweisbarkeit"
-  ],
-  "correct": [0],
-  "explainInstruction": "Verfügbarkeit beschreibt, dass Systeme und Daten bei Bedarf nutzbar sind."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welches Schutzziel steht im Vordergrund, wenn ein Dienst auch bei einem Hardwareausfall erreichbar bleiben soll?",
+    "answerOptions": [
+        "Verfügbarkeit",
+        "Vertraulichkeit",
+        "Anonymität",
+        "Nachweisbarkeit"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Verfügbarkeit beschreibt, dass Systeme und Daten bei Bedarf nutzbar sind.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

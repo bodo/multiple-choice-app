@@ -1,33 +1,39 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 7,
-  "difficulty": 3,
-  "categories": [
-    "WiSo",
-    "Sozialversicherung"
-  ],
-  "instruction": "Welche Versicherungen gehören zu den fünf Zweigen der gesetzlichen Sozialversicherung?",
-  "answerOptions": [
-    "Krankenversicherung",
-    "Pflegeversicherung",
-    "Rentenversicherung",
-    "Arbeitslosenversicherung",
-    "Unfallversicherung",
-    "Hausratversicherung"
-  ],
-  "correct": [
-    0,
-    1,
-    2,
-    3,
-    4
-  ],
-  "explainInstruction": "Die fünf gesetzlichen Zweige sind Kranken-, Pflege-, Renten-, Arbeitslosen- und Unfallversicherung. Hausratversicherung ist privat.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 7,
+    "difficulty": 3,
+    "categories": [
+        "WiSo",
+        "Sozialversicherung"
+    ],
+    "instruction": "Welche Versicherungen gehören zu den fünf Zweigen der gesetzlichen Sozialversicherung?",
+    "answerOptions": [
+        "Krankenversicherung",
+        "Pflegeversicherung",
+        "Rentenversicherung",
+        "Arbeitslosenversicherung",
+        "Unfallversicherung",
+        "Hausratversicherung"
+    ],
+    "correct": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "explainInstruction": "Die fünf gesetzlichen Zweige sind Kranken-, Pflege-, Renten-, Arbeitslosen- und Unfallversicherung. Hausratversicherung ist privat.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "5": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "5": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

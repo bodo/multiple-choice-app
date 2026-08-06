@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Betriebssystem- und Dienstverwaltung"
-  ],
-  "instruction": "Warum sollte ein Dienst unter einem eigenen unprivilegierten Betriebssystemkonto laufen?",
-  "answerOptions": [
-    "Ein kompromittierter Dienst erhält nur begrenzte Systemrechte.",
-    "Der Dienst kann dann keine Dateien öffnen.",
-    "Damit werden alle Netzwerkports automatisch verschlüsselt.",
-    "Damit entfällt Patchmanagement."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ein separates Dienstkonto begrenzt die Folgen einer Schwachstelle und erleichtert Dateirechte und Auditing.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Betriebssystem- und Dienstverwaltung"
+    ],
+    "instruction": "Warum sollte ein Dienst unter einem eigenen unprivilegierten Betriebssystemkonto laufen?",
+    "answerOptions": [
+        "Ein kompromittierter Dienst erhält nur begrenzte Systemrechte.",
+        "Der Dienst kann dann keine Dateien öffnen.",
+        "Damit werden alle Netzwerkports automatisch verschlüsselt.",
+        "Damit entfällt Patchmanagement."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein separates Dienstkonto begrenzt die Folgen einer Schwachstelle und erleichtert Dateirechte und Auditing.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "absoluteStatementTrap",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

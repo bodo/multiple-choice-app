@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "Cluster und Failover"
-  ],
-  "instruction": "Warum ist ein Witness in einem Zwei-Knoten-Cluster nützlich?",
-  "answerOptions": [
-    "Er liefert eine zusätzliche Stimme zur eindeutigen Mehrheitsentscheidung.",
-    "Er ersetzt beide Datenkopien.",
-    "Er verschlüsselt automatisch den Clientverkehr.",
-    "Er übernimmt jede Anwendungslast."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Eine dritte Stimme hilft, bei getrennter Kommunikation genau eine Seite handlungsfähig zu halten.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "Cluster und Failover"
+    ],
+    "instruction": "Warum ist ein Witness in einem Zwei-Knoten-Cluster nützlich?",
+    "answerOptions": [
+        "Er liefert eine zusätzliche Stimme zur eindeutigen Mehrheitsentscheidung.",
+        "Er ersetzt beide Datenkopien.",
+        "Er verschlüsselt automatisch den Clientverkehr.",
+        "Er übernimmt jede Anwendungslast."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine dritte Stimme hilft, bei getrennter Kommunikation genau eine Seite handlungsfähig zu halten.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

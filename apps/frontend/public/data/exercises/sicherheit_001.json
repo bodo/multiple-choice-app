@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welches Schutzziel verhindert, dass Unbefugte Informationen lesen können?",
-  "answerOptions": [
-    "Vertraulichkeit",
-    "Verfügbarkeit",
-    "Integrität",
-    "Authentizität"
-  ],
-  "correct": [0],
-  "explainInstruction": "Vertraulichkeit bedeutet, dass Informationen nur berechtigten Personen oder Systemen zugänglich sind."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welches Schutzziel verhindert, dass Unbefugte Informationen lesen können?",
+    "answerOptions": [
+        "Vertraulichkeit",
+        "Verfügbarkeit",
+        "Integrität",
+        "Authentizität"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Vertraulichkeit bedeutet, dass Informationen nur berechtigten Personen oder Systemen zugänglich sind.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

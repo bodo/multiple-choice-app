@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wie sollte eine zufällig entdeckte Sicherheitslücke in einem fremden System behandelt werden?",
-  "answerOptions": [
-    "Weitere Eingriffe vermeiden und die Lücke über einen vorgesehenen oder verantwortungsvollen Meldeweg melden",
-    "Beliebige Datensätze herunterladen, um den Fund öffentlich zu beweisen",
-    "Die Lücke sofort in sozialen Medien mit Zugangsdaten veröffentlichen",
-    "Ohne Erlaubnis dauerhafte Überwachungssoftware installieren"
-  ],
-  "correct": [0],
-  "explainInstruction": "Responsible Disclosure begrenzt weitere Risiken und gibt dem Betreiber die Möglichkeit zur Prüfung und Behebung."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wie sollte eine zufällig entdeckte Sicherheitslücke in einem fremden System behandelt werden?",
+    "answerOptions": [
+        "Weitere Eingriffe vermeiden und die Lücke über einen vorgesehenen oder verantwortungsvollen Meldeweg melden",
+        "Beliebige Datensätze herunterladen, um den Fund öffentlich zu beweisen",
+        "Die Lücke sofort in sozialen Medien mit Zugangsdaten veröffentlichen",
+        "Ohne Erlaubnis dauerhafte Überwachungssoftware installieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Responsible Disclosure begrenzt weitere Risiken und gibt dem Betreiber die Möglichkeit zur Prüfung und Behebung.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

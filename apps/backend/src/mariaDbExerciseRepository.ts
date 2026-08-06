@@ -27,6 +27,8 @@ interface ExerciseRow extends RowDataPacket {
   maximumStringDistance: number
   explainInstruction: string
   explainAnswerOptions: unknown
+  distractorTypes?: unknown
+  distractorAnalysis?: unknown
   adminComment: string
   adminTags: unknown
   contentRevision: number
@@ -49,6 +51,23 @@ function parseJson(value: unknown, column: string): ExerciseValue[] {
   return parsed as ExerciseValue[]
 }
 
+function parseJsonObject(value: unknown): Record<string, string> | undefined {
+  if (!value) return undefined
+  if (typeof value === 'object' && !Array.isArray(value)) {
+    return value as Record<string, string>
+  }
+  if (typeof value !== 'string') return undefined
+  try {
+    const parsed: unknown = JSON.parse(value)
+    if (typeof parsed === 'object' && parsed !== null && !Array.isArray(parsed)) {
+      return parsed as Record<string, string>
+    }
+  } catch {
+    return undefined
+  }
+  return undefined
+}
+
 function normalizeExercise(row: ExerciseRow): Exercise {
   return {
     ...row,
@@ -65,6 +84,8 @@ function normalizeExercise(row: ExerciseRow): Exercise {
       row.explainAnswerOptions,
       'explainAnswerOptions',
     ) as string[],
+    distractorTypes: parseJsonObject(row.distractorTypes),
+    distractorAnalysis: parseJsonObject(row.distractorAnalysis),
     adminTags: parseJson(row.adminTags, 'adminTags') as string[],
     isActive: Boolean(row.isActive),
     createdAt: `${row.createdAt.replace(' ', 'T')}Z`,

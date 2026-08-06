@@ -1,28 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welches Muster benachrichtigt mehrere abhängige Objekte automatisch, wenn ein Subjekt seinen Zustand ändert?",
-  "answerOptions": [
-    "Beobachter (Observer)",
-    "Vermittler (Mediator)",
-    "Zustand (State)",
-    "Zuständigkeitskette (Chain of Responsibility)"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Beobachter (Observer) modelliert eine lose gekoppelte Eins-zu-viele-Abhängigkeit.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "Verhaltensmuster"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welches Muster benachrichtigt mehrere abhängige Objekte automatisch, wenn ein Subjekt seinen Zustand ändert?",
+    "answerOptions": [
+        "Beobachter (Observer)",
+        "Vermittler (Mediator)",
+        "Zustand (State)",
+        "Zuständigkeitskette (Chain of Responsibility)"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Beobachter (Observer) modelliert eine lose gekoppelte Eins-zu-viele-Abhängigkeit.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "Verhaltensmuster"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

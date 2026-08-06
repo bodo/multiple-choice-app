@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "PKI und TLS-Betrieb"
-  ],
-  "instruction": "Welche Maßnahmen schützen private Schlüssel? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Zugriff auf benötigte Dienstkonten begrenzen",
-    "Sichere Speicherung und Backupschlüssel regeln",
-    "Rotation und Widerrufsprozess vorbereiten",
-    "Schlüssel in Logs ausgeben"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Schlüssel brauchen minimale Zugriffe, geschützte Ablage und einen Lebenszyklus für Verlust oder Austausch.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "PKI und TLS-Betrieb"
+    ],
+    "instruction": "Welche Maßnahmen schützen private Schlüssel? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Zugriff auf benötigte Dienstkonten begrenzen",
+        "Sichere Speicherung und Backupschlüssel regeln",
+        "Rotation und Widerrufsprozess vorbereiten",
+        "Schlüssel in Logs ausgeben"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Schlüssel brauchen minimale Zugriffe, geschützte Ablage und einen Lebenszyklus für Verlust oder Austausch.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

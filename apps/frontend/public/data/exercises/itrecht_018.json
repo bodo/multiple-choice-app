@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was sollte vor einem Penetrationstest eines fremden oder kundenseitigen Systems vorliegen?",
-  "answerOptions": [
-    "Eine eindeutige Autorisierung mit festgelegtem Umfang und Regeln",
-    "Nur die Vermutung, dass der Betreiber einverstanden sein könnte",
-    "Ein privates Benutzerkonto ohne Bezug zum Auftrag",
-    "Die Zusage, keinerlei Ergebnisse zu dokumentieren"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein klarer Auftrag mit Scope, Zeitfenster, erlaubten Methoden und Ansprechpartnern schützt Betrieb und Beteiligte."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was sollte vor einem Penetrationstest eines fremden oder kundenseitigen Systems vorliegen?",
+    "answerOptions": [
+        "Eine eindeutige Autorisierung mit festgelegtem Umfang und Regeln",
+        "Nur die Vermutung, dass der Betreiber einverstanden sein könnte",
+        "Ein privates Benutzerkonto ohne Bezug zum Auftrag",
+        "Die Zusage, keinerlei Ergebnisse zu dokumentieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein klarer Auftrag mit Scope, Zeitfenster, erlaubten Methoden und Ansprechpartnern schützt Betrieb und Beteiligte.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "negationOversight",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

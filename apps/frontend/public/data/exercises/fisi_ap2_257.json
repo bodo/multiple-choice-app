@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Firewall und Segmentierung"
-  ],
-  "instruction": "Warum steht eine abschließende Deny-Regel am Ende einer Allowlist?",
-  "answerOptions": [
-    "Nicht ausdrücklich erlaubter Verkehr wird verworfen.",
-    "Damit die vorherigen Regeln nie geprüft werden.",
-    "Damit DNS automatisch funktioniert.",
-    "Damit Pakete verschlüsselt werden."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Eine Allowlist erlaubt definierte Kommunikationsbeziehungen und lehnt den Rest standardmäßig ab.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Firewall und Segmentierung"
+    ],
+    "instruction": "Warum steht eine abschließende Deny-Regel am Ende einer Allowlist?",
+    "answerOptions": [
+        "Nicht ausdrücklich erlaubter Verkehr wird verworfen.",
+        "Damit die vorherigen Regeln nie geprüft werden.",
+        "Damit DNS automatisch funktioniert.",
+        "Damit Pakete verschlüsselt werden."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine Allowlist erlaubt definierte Kommunikationsbeziehungen und lehnt den Rest standardmäßig ab.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

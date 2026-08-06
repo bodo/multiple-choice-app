@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Was bedeutet funktionale Organisation?",
-  "answerOptions": [
-    "Stellen werden nach Verrichtungen wie Einkauf, Produktion und Vertrieb gegliedert.",
-    "Jedes Produkt bildet zwingend ein eigenes rechtliches Unternehmen.",
-    "Alle Aufgaben werden zufällig verteilt.",
-    "Es gibt keine Arbeitsteilung."
-  ],
-  "correct": [0],
-  "explainInstruction": "Die funktionale Organisation bündelt gleichartige Tätigkeiten und fördert Spezialisierung.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Was bedeutet funktionale Organisation?",
+    "answerOptions": [
+        "Stellen werden nach Verrichtungen wie Einkauf, Produktion und Vertrieb gegliedert.",
+        "Jedes Produkt bildet zwingend ein eigenes rechtliches Unternehmen.",
+        "Alle Aufgaben werden zufällig verteilt.",
+        "Es gibt keine Arbeitsteilung."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die funktionale Organisation bündelt gleichartige Tätigkeiten und fördert Spezialisierung.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Betriebssystem- und Dienstverwaltung"
-  ],
-  "instruction": "Ein Linux-Prozess beendet sich wegen Speichermangel. Welche Quelle zeigt oft, ob der OOM-Killer aktiv wurde?",
-  "answerOptions": [
-    "Kernel-Log bzw. Journal",
-    "DNS-Zonendatei",
-    "ARP-Tabelle des Clients",
-    "Druckerwarteschlange"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Der Kernel protokolliert Entscheidungen des Out-of-Memory-Killers im Kernel-Log bzw. Journal.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Betriebssystem- und Dienstverwaltung"
+    ],
+    "instruction": "Ein Linux-Prozess beendet sich wegen Speichermangel. Welche Quelle zeigt oft, ob der OOM-Killer aktiv wurde?",
+    "answerOptions": [
+        "Kernel-Log bzw. Journal",
+        "DNS-Zonendatei",
+        "ARP-Tabelle des Clients",
+        "Druckerwarteschlange"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Kernel protokolliert Entscheidungen des Out-of-Memory-Killers im Kernel-Log bzw. Journal.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

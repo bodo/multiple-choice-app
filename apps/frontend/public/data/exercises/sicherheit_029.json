@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wofür eignet sich eine kryptografische Hashfunktion?",
-  "answerOptions": [
-    "Zum Erzeugen eines Prüfwerts für die Integritätskontrolle",
-    "Zum verlustfreien Wiederherstellen des ursprünglichen Klartexts",
-    "Zum Verbergen einer IP-Adresse im Netzwerk",
-    "Zum automatischen Verteilen geheimer Schlüssel"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein kryptografischer Hash bildet Daten auf einen Prüfwert ab. Kleine Änderungen sollen einen deutlich anderen Wert erzeugen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wofür eignet sich eine kryptografische Hashfunktion?",
+    "answerOptions": [
+        "Zum Erzeugen eines Prüfwerts für die Integritätskontrolle",
+        "Zum verlustfreien Wiederherstellen des ursprünglichen Klartexts",
+        "Zum Verbergen einer IP-Adresse im Netzwerk",
+        "Zum automatischen Verteilen geheimer Schlüssel"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein kryptografischer Hash bildet Daten auf einen Prüfwert ab. Kleine Änderungen sollen einen deutlich anderen Wert erzeugen.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

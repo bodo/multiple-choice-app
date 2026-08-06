@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was bezeichnet eine Zero-Day-Schwachstelle?",
-  "answerOptions": [
-    "Eine Schwachstelle, für die zum relevanten Zeitpunkt noch kein allgemein verfügbarer Fix vorliegt",
-    "Eine Schwachstelle, die ausschließlich am ersten Tag eines Monats auftritt",
-    "Ein abgelaufenes Benutzerkonto ohne Berechtigungen",
-    "Eine bereits gepatchte Lücke mit dokumentierter Restlaufzeit"
-  ],
-  "correct": [0],
-  "explainInstruction": "Bei einer Zero-Day-Lücke besteht zwischen Bekanntwerden beziehungsweise Ausnutzung und verfügbarer Abhilfe ein besonderes Risiko."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was bezeichnet eine Zero-Day-Schwachstelle?",
+    "answerOptions": [
+        "Eine Schwachstelle, für die zum relevanten Zeitpunkt noch kein allgemein verfügbarer Fix vorliegt",
+        "Eine Schwachstelle, die ausschließlich am ersten Tag eines Monats auftritt",
+        "Ein abgelaufenes Benutzerkonto ohne Berechtigungen",
+        "Eine bereits gepatchte Lücke mit dokumentierter Restlaufzeit"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Bei einer Zero-Day-Lücke besteht zwischen Bekanntwerden beziehungsweise Ausnutzung und verfügbarer Abhilfe ein besonderes Risiko.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "negationOversight",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

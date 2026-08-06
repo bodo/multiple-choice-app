@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "Recovery und Notfallvorsorge"
-  ],
-  "instruction": "Welche Abhängigkeiten sind für einen Wiederanlaufplan relevant? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Identitäts- und Namensdienste",
-    "Netzwerk und Firewallregeln",
-    "Schlüssel, Lizenzen und externe Anbieter",
-    "Nur die Reihenfolge im Inventar"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Technische und organisatorische Abhängigkeiten müssen vor der eigentlichen Anwendung verfügbar sein.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "Recovery und Notfallvorsorge"
+    ],
+    "instruction": "Welche Abhängigkeiten sind für einen Wiederanlaufplan relevant? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Identitäts- und Namensdienste",
+        "Netzwerk und Firewallregeln",
+        "Schlüssel, Lizenzen und externe Anbieter",
+        "Nur die Reihenfolge im Inventar"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Technische und organisatorische Abhängigkeiten müssen vor der eigentlichen Anwendung verfügbar sein.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

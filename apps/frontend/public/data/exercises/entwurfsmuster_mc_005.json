@@ -1,32 +1,42 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "instruction": "Welche der folgenden Muster ergänzen die Gruppe der Strukturmuster (structural patterns)?",
-  "answerOptions": [
-    "Dekorierer (Decorator)",
-    "Erbauer (Builder)",
-    "Fliegengewicht (Flyweight)",
-    "Zustand (State)",
-    "Stellvertreter (Proxy)",
-    "Strategie (Strategy)"
-  ],
-  "correct": [
-    0,
-    2,
-    4
-  ],
-  "explainInstruction": "Dekorierer (Decorator), Fliegengewicht (Flyweight) und Stellvertreter (Proxy) sind Strukturmuster (structural patterns).",
-  "mobileSolvable": true,
-  "learningLevel": 4,
-  "difficulty": 3,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "GoF-Klassifikation"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "instruction": "Welche der folgenden Muster ergänzen die Gruppe der Strukturmuster (structural patterns)?",
+    "answerOptions": [
+        "Dekorierer (Decorator)",
+        "Erbauer (Builder)",
+        "Fliegengewicht (Flyweight)",
+        "Zustand (State)",
+        "Stellvertreter (Proxy)",
+        "Strategie (Strategy)"
+    ],
+    "correct": [
+        0,
+        2,
+        4
+    ],
+    "explainInstruction": "Dekorierer (Decorator), Fliegengewicht (Flyweight) und Stellvertreter (Proxy) sind Strukturmuster (structural patterns).",
+    "mobileSolvable": true,
+    "learningLevel": 4,
+    "difficulty": 3,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "GoF-Klassifikation"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "3": "conceptContradiction",
+        "5": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "5": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

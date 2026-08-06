@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "APIs und Datenformate"
-  ],
-  "instruction": "Welche Bestandteile sollte ein robuster API-Client behandeln? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "HTTP-Statuscodes",
-    "Timeouts",
-    "Paginierung großer Ergebnismengen",
-    "Nur erfolgreiche Antworten ohne Prüfung"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Status, Zeitgrenzen und Paginierung sind für vollständige und kontrollierte Abläufe notwendig.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "APIs und Datenformate"
+    ],
+    "instruction": "Welche Bestandteile sollte ein robuster API-Client behandeln? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "HTTP-Statuscodes",
+        "Timeouts",
+        "Paginierung großer Ergebnismengen",
+        "Nur erfolgreiche Antworten ohne Prüfung"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Status, Zeitgrenzen und Paginierung sind für vollständige und kontrollierte Abläufe notwendig.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Dateidienste und Berechtigungen"
-  ],
-  "instruction": "Warum sollte eine Freigabe nicht pauschal „Jeder: Vollzugriff“ erhalten?",
-  "answerOptions": [
-    "Unnötig breite Rechte erhöhen Missbrauchs- und Fehlerrisiko.",
-    "SMB funktioniert sonst nicht mit DNS.",
-    "RAID 1 benötigt individuelle Freigaben.",
-    "Vollzugriff deaktiviert TCP."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Freigaben sollten Gruppen und Aufgaben folgen; breite Vollrechte widersprechen Least Privilege.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Dateidienste und Berechtigungen"
+    ],
+    "instruction": "Warum sollte eine Freigabe nicht pauschal „Jeder: Vollzugriff“ erhalten?",
+    "answerOptions": [
+        "Unnötig breite Rechte erhöhen Missbrauchs- und Fehlerrisiko.",
+        "SMB funktioniert sonst nicht mit DNS.",
+        "RAID 1 benötigt individuelle Freigaben.",
+        "Vollzugriff deaktiviert TCP."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Freigaben sollten Gruppen und Aufgaben folgen; breite Vollrechte widersprechen Least Privilege.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "numericalCalculationTrap",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

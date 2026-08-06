@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wie sollte mit einem unbekannten gefundenen USB-Stick umgegangen werden?",
-  "answerOptions": [
-    "Nicht an ein Produktivgerät anschließen und nach dem Sicherheitsprozess abgeben",
-    "An mehreren Geräten testen, um den Eigentümer zu finden",
-    "Den Autostart aktivieren und die Dateien öffnen",
-    "Den Inhalt in eine öffentliche Cloud kopieren"
-  ],
-  "correct": [0],
-  "explainInstruction": "Unbekannte Datenträger können Schadsoftware oder manipulierte Hardware enthalten und gehören in einen kontrollierten Prüfprozess."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wie sollte mit einem unbekannten gefundenen USB-Stick umgegangen werden?",
+    "answerOptions": [
+        "Nicht an ein Produktivgerät anschließen und nach dem Sicherheitsprozess abgeben",
+        "An mehreren Geräten testen, um den Eigentümer zu finden",
+        "Den Autostart aktivieren und die Dateien öffnen",
+        "Den Inhalt in eine öffentliche Cloud kopieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Unbekannte Datenträger können Schadsoftware oder manipulierte Hardware enthalten und gehören in einen kontrollierten Prüfprozess.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

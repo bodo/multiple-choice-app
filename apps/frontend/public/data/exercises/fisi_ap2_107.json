@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Anwendungs- und Infrastrukturdienste"
-  ],
-  "instruction": "Welche Prüfungen gehören zur Inbetriebnahme eines neuen Webdienstes? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Erreichbarkeit und Health-Endpunkt testen",
-    "TLS-Konfiguration und Zertifikatskette prüfen",
-    "Logs und Monitoring anbinden",
-    "Standardpasswörter unverändert dokumentieren"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Neben Funktion und TLS gehören Beobachtbarkeit sowie das Entfernen unsicherer Standardwerte zur Inbetriebnahme.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Anwendungs- und Infrastrukturdienste"
+    ],
+    "instruction": "Welche Prüfungen gehören zur Inbetriebnahme eines neuen Webdienstes? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Erreichbarkeit und Health-Endpunkt testen",
+        "TLS-Konfiguration und Zertifikatskette prüfen",
+        "Logs und Monitoring anbinden",
+        "Standardpasswörter unverändert dokumentieren"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Neben Funktion und TLS gehören Beobachtbarkeit sowie das Entfernen unsicherer Standardwerte zur Inbetriebnahme.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was folgt aus dem Datenschutzgrundsatz der Richtigkeit?",
-  "answerOptions": [
-    "Unrichtige personenbezogene Daten sollen berichtigt oder gelöscht werden",
-    "Alle Daten müssen unverändert für immer gespeichert bleiben",
-    "Nur handschriftlich erhobene Daten müssen geprüft werden",
-    "Richtigkeit ist allein Aufgabe der betroffenen Person"
-  ],
-  "correct": [0],
-  "explainInstruction": "Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls aktuell sein."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was folgt aus dem Datenschutzgrundsatz der Richtigkeit?",
+    "answerOptions": [
+        "Unrichtige personenbezogene Daten sollen berichtigt oder gelöscht werden",
+        "Alle Daten müssen unverändert für immer gespeichert bleiben",
+        "Nur handschriftlich erhobene Daten müssen geprüft werden",
+        "Richtigkeit ist allein Aufgabe der betroffenen Person"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls aktuell sein.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

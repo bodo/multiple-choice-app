@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Transport- und Anwendungsprotokolle"
-  ],
-  "instruction": "Was beschreibt ein Socket-Endpunkt bei TCP oder UDP im Wesentlichen?",
-  "answerOptions": [
-    "IP-Adresse plus Port und Transportprotokoll",
-    "Nur eine MAC-Adresse",
-    "Nur einen DNS-TTL-Wert",
-    "RAID-Level plus Blockgröße"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ein Transportendpunkt wird durch Protokoll, IP-Adresse und Port identifiziert.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Transport- und Anwendungsprotokolle"
+    ],
+    "instruction": "Was beschreibt ein Socket-Endpunkt bei TCP oder UDP im Wesentlichen?",
+    "answerOptions": [
+        "IP-Adresse plus Port und Transportprotokoll",
+        "Nur eine MAC-Adresse",
+        "Nur einen DNS-TTL-Wert",
+        "RAID-Level plus Blockgröße"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Transportendpunkt wird durch Protokoll, IP-Adresse und Port identifiziert.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

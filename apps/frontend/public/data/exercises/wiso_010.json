@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 5,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Ausbildung und Arbeitsrecht"
-  ],
-  "instruction": "Wann endet das Ausbildungsverhältnis, wenn die Abschlussprüfung vor dem vertraglichen Ausbildungsende bestanden wird?",
-  "answerOptions": [
-    "Mit Bekanntgabe des Ergebnisses durch den Prüfungsausschuss",
-    "Immer erst am vertraglich genannten Enddatum",
-    "Vier Wochen nach der Prüfung",
-    "Erst nach Ausstellung des Arbeitszeugnisses"
-  ],
-  "correct": [0],
-  "explainInstruction": "Nach § 21 BBiG endet die Ausbildung bei vorzeitig bestandener Abschlussprüfung mit der Bekanntgabe des Ergebnisses.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 5,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Ausbildung und Arbeitsrecht"
+    ],
+    "instruction": "Wann endet das Ausbildungsverhältnis, wenn die Abschlussprüfung vor dem vertraglichen Ausbildungsende bestanden wird?",
+    "answerOptions": [
+        "Mit Bekanntgabe des Ergebnisses durch den Prüfungsausschuss",
+        "Immer erst am vertraglich genannten Enddatum",
+        "Vier Wochen nach der Prüfung",
+        "Erst nach Ausstellung des Arbeitszeugnisses"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Nach § 21 BBiG endet die Ausbildung bei vorzeitig bestandener Abschlussprüfung mit der Bekanntgabe des Ergebnisses.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wie sollte mit einem unerwarteten ausführbaren E-Mail-Anhang umgegangen werden?",
-  "answerOptions": [
-    "Nicht öffnen und nach dem Meldeweg der Organisation prüfen lassen",
-    "Öffnen, wenn der Dateiname eine bekannte Firma enthält",
-    "Zuerst in das gemeinsame Netzlaufwerk kopieren",
-    "Die Dateiendung entfernen und anschließend starten"
-  ],
-  "correct": [0],
-  "explainInstruction": "Unerwartete ausführbare Anhänge sind ein typischer Verbreitungsweg für Schadsoftware und sollten isoliert geprüft werden."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wie sollte mit einem unerwarteten ausführbaren E-Mail-Anhang umgegangen werden?",
+    "answerOptions": [
+        "Nicht öffnen und nach dem Meldeweg der Organisation prüfen lassen",
+        "Öffnen, wenn der Dateiname eine bekannte Firma enthält",
+        "Zuerst in das gemeinsame Netzlaufwerk kopieren",
+        "Die Dateiendung entfernen und anschließend starten"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Unerwartete ausführbare Anhänge sind ein typischer Verbreitungsweg für Schadsoftware und sollten isoliert geprüft werden.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

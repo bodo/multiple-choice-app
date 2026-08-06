@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Schwachstellen- und Incident-Management"
-  ],
-  "instruction": "Welche Angaben helfen bei der Priorisierung einer Schwachstelle? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Ist das System erreichbar bzw. exponiert?",
-    "Existiert ein praktikabler Exploit?",
-    "Welche Daten und Prozesse sind betroffen?",
-    "Nur die Länge der CVE-Nummer"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Exposition, Ausnutzbarkeit und Auswirkung übertragen eine allgemeine Schwachstellenbewertung auf das konkrete System.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Schwachstellen- und Incident-Management"
+    ],
+    "instruction": "Welche Angaben helfen bei der Priorisierung einer Schwachstelle? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Ist das System erreichbar bzw. exponiert?",
+        "Existiert ein praktikabler Exploit?",
+        "Welche Daten und Prozesse sind betroffen?",
+        "Nur die Länge der CVE-Nummer"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Exposition, Ausnutzbarkeit und Auswirkung übertragen eine allgemeine Schwachstellenbewertung auf das konkrete System.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

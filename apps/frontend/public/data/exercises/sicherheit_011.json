@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welchen wesentlichen Vorteil bietet ein Passwortmanager?",
-  "answerOptions": [
-    "Für jeden Dienst können lange, einzigartige Passwörter verwendet werden",
-    "Alle Passwörter werden automatisch öffentlich dokumentiert",
-    "Mehrfaktor-Authentisierung wird grundsätzlich überflüssig",
-    "Phishing-Webseiten können keine Eingabefelder mehr anzeigen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Passwortmanager erleichtert starke, unterschiedliche Passwörter und reduziert dadurch die Folgen eines einzelnen Passwortlecks."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welchen wesentlichen Vorteil bietet ein Passwortmanager?",
+    "answerOptions": [
+        "Für jeden Dienst können lange, einzigartige Passwörter verwendet werden",
+        "Alle Passwörter werden automatisch öffentlich dokumentiert",
+        "Mehrfaktor-Authentisierung wird grundsätzlich überflüssig",
+        "Phishing-Webseiten können keine Eingabefelder mehr anzeigen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Passwortmanager erleichtert starke, unterschiedliche Passwörter und reduziert dadurch die Folgen eines einzelnen Passwortlecks.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Mitbestimmung und Tarifrecht"
-  ],
-  "instruction": "Welche Aufgabe hat die Jugend- und Auszubildendenvertretung (JAV)?",
-  "answerOptions": [
-    "Die besonderen Belange jugendlicher Beschäftigter und der Auszubildenden vertreten",
-    "Unternehmenssteuern festsetzen",
-    "Tarifverträge allein abschließen",
-    "Geschäftsführer bestellen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die JAV nimmt die besonderen Interessen Jugendlicher und Auszubildender wahr und arbeitet dabei mit dem Betriebsrat zusammen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Mitbestimmung und Tarifrecht"
+    ],
+    "instruction": "Welche Aufgabe hat die Jugend- und Auszubildendenvertretung (JAV)?",
+    "answerOptions": [
+        "Die besonderen Belange jugendlicher Beschäftigter und der Auszubildenden vertreten",
+        "Unternehmenssteuern festsetzen",
+        "Tarifverträge allein abschließen",
+        "Geschäftsführer bestellen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die JAV nimmt die besonderen Interessen Jugendlicher und Auszubildender wahr und arbeitet dabei mit dem Betriebsrat zusammen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

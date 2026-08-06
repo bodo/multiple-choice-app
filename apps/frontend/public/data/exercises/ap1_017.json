@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Welche Angaben benötigt eine zustandslose Paketfilterregel typischerweise?",
-  "answerOptions": [
-    "Quell- oder Zieladresse",
-    "Protokoll",
-    "Quell- oder Zielport",
-    "Farbe des Netzwerkkabels"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Paketfilter entscheiden anhand von Headermerkmalen wie Adressen, Protokoll und Ports. Die Kabelfarbe ist technisch ohne Bedeutung.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Welche Angaben benötigt eine zustandslose Paketfilterregel typischerweise?",
+    "answerOptions": [
+        "Quell- oder Zieladresse",
+        "Protokoll",
+        "Quell- oder Zielport",
+        "Farbe des Netzwerkkabels"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Paketfilter entscheiden anhand von Headermerkmalen wie Adressen, Protokoll und Ports. Die Kabelfarbe ist technisch ohne Bedeutung.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

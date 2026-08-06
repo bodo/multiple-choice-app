@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Datenbanken und SQL"
-  ],
-  "instruction": "Was bewirkt `DELETE FROM Kunde WHERE aktiv = false`?",
-  "answerOptions": [
-    "Die gesamte Tabelle einschließlich Struktur wird entfernt.",
-    "Die passenden Zeilen werden entfernt; die Tabellenstruktur bleibt bestehen.",
-    "Nur der Index der Tabelle wird entfernt.",
-    "Die Spalte `aktiv` wird gelöscht."
-  ],
-  "correct": [1],
-  "explainInstruction": "`DELETE` entfernt Zeilen. `DROP TABLE` würde dagegen die Tabelle mitsamt ihrer Struktur entfernen.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Datenbanken und SQL"
+    ],
+    "instruction": "Was bewirkt `DELETE FROM Kunde WHERE aktiv = false`?",
+    "answerOptions": [
+        "Die gesamte Tabelle einschließlich Struktur wird entfernt.",
+        "Die passenden Zeilen werden entfernt; die Tabellenstruktur bleibt bestehen.",
+        "Nur der Index der Tabelle wird entfernt.",
+        "Die Spalte `aktiv` wird gelöscht."
+    ],
+    "correct": [
+        1
+    ],
+    "explainInstruction": "`DELETE` entfernt Zeilen. `DROP TABLE` würde dagegen die Tabelle mitsamt ihrer Struktur entfernen.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "0": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

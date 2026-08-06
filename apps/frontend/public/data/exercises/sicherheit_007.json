@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche beiden Größen werden bei einer einfachen Risikobewertung typischerweise gemeinsam betrachtet?",
-  "answerOptions": [
-    "Eintrittswahrscheinlichkeit und Schadensausmaß",
-    "Dateigröße und Übertragungsrate",
-    "Anzahl der Benutzer und Bildschirmauflösung",
-    "Kaufpreis und Abschreibungsdauer"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Risiko wird typischerweise anhand der Wahrscheinlichkeit eines Ereignisses und der möglichen Schadenshöhe bewertet."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche beiden Größen werden bei einer einfachen Risikobewertung typischerweise gemeinsam betrachtet?",
+    "answerOptions": [
+        "Eintrittswahrscheinlichkeit und Schadensausmaß",
+        "Dateigröße und Übertragungsrate",
+        "Anzahl der Benutzer und Bildschirmauflösung",
+        "Kaufpreis und Abschreibungsdauer"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Risiko wird typischerweise anhand der Wahrscheinlichkeit eines Ereignisses und der möglichen Schadenshöhe bewertet.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

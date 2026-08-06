@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was ist bei einer Verarbeitung auf Grundlage berechtigter Interessen erforderlich?",
-  "answerOptions": [
-    "Interesse, Erforderlichkeit und entgegenstehende Rechte der Betroffenen abwägen",
-    "Nur das wirtschaftliche Interesse des Unternehmens dokumentieren",
-    "Die betroffene Person darf niemals widersprechen",
-    "Eine Einwilligung nachträglich fingieren"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Interessenabwägung prüft, ob berechtigte Interessen die Interessen oder Grundrechte der betroffenen Person überwiegen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was ist bei einer Verarbeitung auf Grundlage berechtigter Interessen erforderlich?",
+    "answerOptions": [
+        "Interesse, Erforderlichkeit und entgegenstehende Rechte der Betroffenen abwägen",
+        "Nur das wirtschaftliche Interesse des Unternehmens dokumentieren",
+        "Die betroffene Person darf niemals widersprechen",
+        "Eine Einwilligung nachträglich fingieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Interessenabwägung prüft, ob berechtigte Interessen die Interessen oder Grundrechte der betroffenen Person überwiegen.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

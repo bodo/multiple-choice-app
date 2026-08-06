@@ -94,6 +94,16 @@
       "items": { "type": "string" },
       "description": "Per-option explanations, one per entry in answerOptions. Shown after answering to explain why each option is correct or incorrect. Supports Markdown."
     },
+    "distractorTypes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Optional mapping of answer option index (as string integer key '0', '1', ...) to distractor strategy classification (e.g. 'similarTerm', 'negation', 'absoluteStatement'). Extensible open string taxonomy."
+    },
+    "distractorAnalysis": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Optional mapping of answer option index (as string integer key '0', '1', ...) to author explanation of why this option is a plausible distractor and how it tricks learners."
+    },
     "adminComment": {
       "type": "string",
       "description": "Internal note for exercise authors. Not displayed to users."

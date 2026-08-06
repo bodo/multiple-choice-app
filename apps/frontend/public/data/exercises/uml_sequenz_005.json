@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welche Aussage beschreibt einen synchronen Aufruf in einem Sequenzdiagramm am besten?",
-  "answerOptions": [
-    "Der Sender wartet typischerweise, bis der aufgerufene Ablauf abgeschlossen ist",
-    "Der Empfänger wird dadurch dauerhaft gelöscht",
-    "Der Aufruf darf keine Parameter enthalten",
-    "Sender und Empfänger müssen dieselbe Klasse besitzen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Bei einem synchronen Aufruf wartet der aufrufende Teilnehmer typischerweise auf den Abschluss des aufgerufenen Verhaltens, bevor sein Ablauf weitergeht.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Sequenzdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welche Aussage beschreibt einen synchronen Aufruf in einem Sequenzdiagramm am besten?",
+    "answerOptions": [
+        "Der Sender wartet typischerweise, bis der aufgerufene Ablauf abgeschlossen ist",
+        "Der Empfänger wird dadurch dauerhaft gelöscht",
+        "Der Aufruf darf keine Parameter enthalten",
+        "Sender und Empfänger müssen dieselbe Klasse besitzen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Bei einem synchronen Aufruf wartet der aufrufende Teilnehmer typischerweise auf den Abschluss des aufgerufenen Verhaltens, bevor sein Ablauf weitergeht.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Sequenzdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "negationOversight",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

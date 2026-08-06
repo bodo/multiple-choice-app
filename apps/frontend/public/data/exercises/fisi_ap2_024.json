@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Switching und VLAN"
-  ],
-  "instruction": "Nach dem Anschluss eines zweiten Uplinks entstehen ein Broadcast-Sturm und stark schwankende MAC-Tabellen. Was ist die wahrscheinlichste Ursache?",
-  "answerOptions": [
-    "Eine Layer-2-Schleife",
-    "Eine zu kurze DHCP-Lease",
-    "Ein abgelaufenes TLS-Zertifikat",
-    "Ein falscher DNS-Suffix"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Broadcast-Sturm und MAC-Flapping sind typische Indikatoren einer Layer-2-Schleife.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Switching und VLAN"
+    ],
+    "instruction": "Nach dem Anschluss eines zweiten Uplinks entstehen ein Broadcast-Sturm und stark schwankende MAC-Tabellen. Was ist die wahrscheinlichste Ursache?",
+    "answerOptions": [
+        "Eine Layer-2-Schleife",
+        "Eine zu kurze DHCP-Lease",
+        "Ein abgelaufenes TLS-Zertifikat",
+        "Ein falscher DNS-Suffix"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Broadcast-Sturm und MAC-Flapping sind typische Indikatoren einer Layer-2-Schleife.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

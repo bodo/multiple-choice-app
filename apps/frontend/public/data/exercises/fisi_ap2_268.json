@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Hardening und privilegierte Zugriffe"
-  ],
-  "instruction": "Welche Maßnahmen gehören zum Hardening eines neuen Servers? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Sichere Baseline anwenden",
-    "Standardkonten und -zugänge prüfen",
-    "Patchstand herstellen",
-    "Nicht benötigte Dienste vorsorglich aktivieren"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Baseline, sichere Identitäten, aktueller Patchstand und minimale Dienste bilden die technische Grundhärtung.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Hardening und privilegierte Zugriffe"
+    ],
+    "instruction": "Welche Maßnahmen gehören zum Hardening eines neuen Servers? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Sichere Baseline anwenden",
+        "Standardkonten und -zugänge prüfen",
+        "Patchstand herstellen",
+        "Nicht benötigte Dienste vorsorglich aktivieren"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Baseline, sichere Identitäten, aktueller Patchstand und minimale Dienste bilden die technische Grundhärtung.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

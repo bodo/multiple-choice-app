@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Staat, Verträge und Verbraucher"
-  ],
-  "instruction": "Was unterscheidet eine Garantie von der gesetzlichen Mängelhaftung?",
-  "answerOptions": [
-    "Eine Garantie ist eine freiwillige zusätzliche Zusage; die Mängelhaftung folgt aus dem Gesetz.",
-    "Die gesetzliche Mängelhaftung ist immer freiwillig.",
-    "Eine Garantie beseitigt automatisch alle gesetzlichen Rechte.",
-    "Beide gelten ausschließlich für Dienstleistungen."
-  ],
-  "correct": [0],
-  "explainInstruction": "Garantiebedingungen werden freiwillig zugesagt. Gesetzliche Mängelrechte gegenüber dem Verkäufer bestehen unabhängig davon.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Staat, Verträge und Verbraucher"
+    ],
+    "instruction": "Was unterscheidet eine Garantie von der gesetzlichen Mängelhaftung?",
+    "answerOptions": [
+        "Eine Garantie ist eine freiwillige zusätzliche Zusage; die Mängelhaftung folgt aus dem Gesetz.",
+        "Die gesetzliche Mängelhaftung ist immer freiwillig.",
+        "Eine Garantie beseitigt automatisch alle gesetzlichen Rechte.",
+        "Beide gelten ausschließlich für Dienstleistungen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Garantiebedingungen werden freiwillig zugesagt. Gesetzliche Mängelrechte gegenüber dem Verkäufer bestehen unabhängig davon.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "DNS, DHCP und Zeitdienste"
-  ],
-  "instruction": "Ein DNS-A-Record wird geändert, Clients sehen aber vorübergehend noch den alten Wert. Welche Einstellung beeinflusst diese Dauer hauptsächlich?",
-  "answerOptions": [
-    "TTL des Records",
-    "VLAN-ID",
-    "TCP-MSS",
-    "RAID-Level"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Resolver dürfen einen Record höchstens entsprechend seiner TTL aus dem Cache beantworten.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "DNS, DHCP und Zeitdienste"
+    ],
+    "instruction": "Ein DNS-A-Record wird geändert, Clients sehen aber vorübergehend noch den alten Wert. Welche Einstellung beeinflusst diese Dauer hauptsächlich?",
+    "answerOptions": [
+        "TTL des Records",
+        "VLAN-ID",
+        "TCP-MSS",
+        "RAID-Level"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Resolver dürfen einen Record höchstens entsprechend seiner TTL aus dem Cache beantworten.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

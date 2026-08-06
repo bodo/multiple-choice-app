@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Routing und NAT"
-  ],
-  "instruction": "Eine statische Route zeigt auf einen Next Hop, der nicht erreichbar ist. Was ist die unmittelbare Folge?",
-  "answerOptions": [
-    "Pakete über diese Route können nicht erfolgreich weitergeleitet werden.",
-    "Der DNS-Server ändert automatisch die Zone.",
-    "Der Switch deaktiviert sämtliche Access-Ports.",
-    "Die Route wird zu einer MAC-Adresse."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Der Next Hop muss über eine verbundene oder anderweitig erreichbare Route auflösbar sein.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Routing und NAT"
+    ],
+    "instruction": "Eine statische Route zeigt auf einen Next Hop, der nicht erreichbar ist. Was ist die unmittelbare Folge?",
+    "answerOptions": [
+        "Pakete über diese Route können nicht erfolgreich weitergeleitet werden.",
+        "Der DNS-Server ändert automatisch die Zone.",
+        "Der Switch deaktiviert sämtliche Access-Ports.",
+        "Die Route wird zu einer MAC-Adresse."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Next Hop muss über eine verbundene oder anderweitig erreichbare Route auflösbar sein.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

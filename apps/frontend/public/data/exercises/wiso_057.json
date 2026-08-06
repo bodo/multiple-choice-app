@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Was bedeutet Inflation?",
-  "answerOptions": [
-    "Das allgemeine Preisniveau steigt anhaltend und Geld verliert Kaufkraft.",
-    "Jeder einzelne Preis sinkt.",
-    "Die Geldmenge ist immer null.",
-    "Die Arbeitsproduktivität verdoppelt sich zwingend."
-  ],
-  "correct": [0],
-  "explainInstruction": "Inflation ist ein anhaltender Anstieg des allgemeinen Preisniveaus, nicht bloß die Verteuerung eines einzelnen Produkts.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Was bedeutet Inflation?",
+    "answerOptions": [
+        "Das allgemeine Preisniveau steigt anhaltend und Geld verliert Kaufkraft.",
+        "Jeder einzelne Preis sinkt.",
+        "Die Geldmenge ist immer null.",
+        "Die Arbeitsproduktivität verdoppelt sich zwingend."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Inflation ist ein anhaltender Anstieg des allgemeinen Preisniveaus, nicht bloß die Verteuerung eines einzelnen Produkts.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

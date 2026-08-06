@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Was ist ein Vorteil der physischen Sterntopologie mit zentralem Switch?",
-  "answerOptions": [
-    "Der Ausfall einer einzelnen Teilnehmerleitung betrifft normalerweise nur diesen Teilnehmer.",
-    "Es wird kein zentrales Gerät benötigt.",
-    "Jeder Kabelbruch legt zwangsläufig das gesamte Netz lahm.",
-    "Alle Teilnehmer teilen sich immer dasselbe Koaxialkabel."
-  ],
-  "correct": [0],
-  "explainInstruction": "In der Sterntopologie besitzt jeder Teilnehmer eine eigene Leitung zum Zentrum. Der zentrale Switch bleibt allerdings ein wichtiger Ausfallpunkt.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Was ist ein Vorteil der physischen Sterntopologie mit zentralem Switch?",
+    "answerOptions": [
+        "Der Ausfall einer einzelnen Teilnehmerleitung betrifft normalerweise nur diesen Teilnehmer.",
+        "Es wird kein zentrales Gerät benötigt.",
+        "Jeder Kabelbruch legt zwangsläufig das gesamte Netz lahm.",
+        "Alle Teilnehmer teilen sich immer dasselbe Koaxialkabel."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "In der Sterntopologie besitzt jeder Teilnehmer eine eigene Leitung zum Zentrum. Der zentrale Switch bleibt allerdings ein wichtiger Ausfallpunkt.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

@@ -18,6 +18,8 @@ export interface Exercise {
   maximumStringDistance: number
   explainInstruction: string
   explainAnswerOptions: string[]
+  distractorTypes?: Record<string, string>
+  distractorAnalysis?: Record<string, string>
   adminComment: string
   adminTags: string[]
   contentRevision: number

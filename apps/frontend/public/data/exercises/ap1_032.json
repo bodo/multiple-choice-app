@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Computergrundlagen"
-  ],
-  "instruction": "Welche Aussage zu USB-C ist richtig?",
-  "answerOptions": [
-    "USB-C beschreibt vor allem die Steckerform; unterstützte Protokolle und Leistungen können variieren.",
-    "Jedes USB-C-Kabel unterstützt automatisch dieselbe Datenrate und Ladeleistung.",
-    "USB-C kann niemals Videosignale übertragen.",
-    "USB-C ist ausschließlich ein Netzwerkprotokoll."
-  ],
-  "correct": [0],
-  "explainInstruction": "Vom Stecker allein lässt sich nicht auf Datenrate, Power Delivery oder alternative Modi schließen. Kabel und Geräte müssen die Funktionen unterstützen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Computergrundlagen"
+    ],
+    "instruction": "Welche Aussage zu USB-C ist richtig?",
+    "answerOptions": [
+        "USB-C beschreibt vor allem die Steckerform; unterstützte Protokolle und Leistungen können variieren.",
+        "Jedes USB-C-Kabel unterstützt automatisch dieselbe Datenrate und Ladeleistung.",
+        "USB-C kann niemals Videosignale übertragen.",
+        "USB-C ist ausschließlich ein Netzwerkprotokoll."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Vom Stecker allein lässt sich nicht auf Datenrate, Power Delivery oder alternative Modi schließen. Kabel und Geräte müssen die Funktionen unterstützen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

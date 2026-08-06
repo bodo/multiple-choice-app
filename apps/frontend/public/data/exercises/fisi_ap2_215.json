@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "SLA und Verfügbarkeit"
-  ],
-  "instruction": "Ein SLA schließt angekündigte Wartungsfenster aus. Was ist für die Auswertung zwingend nötig?",
-  "answerOptions": [
-    "Eine eindeutige Definition von Messpunkt, Zeitraum und Ausschlüssen",
-    "Nur die Gesamtzahl der Server",
-    "Die Farbe der Statusanzeige",
-    "Ein täglich wechselnder Grenzwert"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ohne Messdefinition und Ausschlussregeln ist die berechnete Verfügbarkeit nicht reproduzierbar.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "SLA und Verfügbarkeit"
+    ],
+    "instruction": "Ein SLA schließt angekündigte Wartungsfenster aus. Was ist für die Auswertung zwingend nötig?",
+    "answerOptions": [
+        "Eine eindeutige Definition von Messpunkt, Zeitraum und Ausschlüssen",
+        "Nur die Gesamtzahl der Server",
+        "Die Farbe der Statusanzeige",
+        "Ein täglich wechselnder Grenzwert"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ohne Messdefinition und Ausschlussregeln ist die berechnete Verfügbarkeit nicht reproduzierbar.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

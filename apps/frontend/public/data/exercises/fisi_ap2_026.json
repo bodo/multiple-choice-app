@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Switching und VLAN"
-  ],
-  "instruction": "Ein Switch lernt eine Quell-MAC-Adresse auf einem Port. Wofür verwendet er diesen Eintrag?",
-  "answerOptions": [
-    "Zur gezielten Weiterleitung künftiger Frames an diese MAC-Adresse",
-    "Zur Vergabe einer öffentlichen IP-Adresse",
-    "Zur Auswahl des DNS-Resolvers",
-    "Zur Prüfung des TLS-Zertifikats"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Die MAC-Adress-Tabelle ordnet gelernte MAC-Adressen Ports zu und reduziert unnötiges Flooding.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Switching und VLAN"
+    ],
+    "instruction": "Ein Switch lernt eine Quell-MAC-Adresse auf einem Port. Wofür verwendet er diesen Eintrag?",
+    "answerOptions": [
+        "Zur gezielten Weiterleitung künftiger Frames an diese MAC-Adresse",
+        "Zur Vergabe einer öffentlichen IP-Adresse",
+        "Zur Auswahl des DNS-Resolvers",
+        "Zur Prüfung des TLS-Zertifikats"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die MAC-Adress-Tabelle ordnet gelernte MAC-Adressen Ports zu und reduziert unnötiges Flooding.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

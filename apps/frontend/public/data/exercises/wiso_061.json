@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Wie haftet ein Einzelunternehmer grundsätzlich für betriebliche Verbindlichkeiten?",
-  "answerOptions": [
-    "Unbeschränkt auch mit seinem Privatvermögen",
-    "Nur mit einem gesetzlich festgelegten Aktienpaket",
-    "Überhaupt nicht",
-    "Ausschließlich die Kunden haften"
-  ],
-  "correct": [0],
-  "explainInstruction": "Beim Einzelunternehmen gibt es grundsätzlich keine Haftungstrennung zwischen Betriebs- und Privatvermögen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Wie haftet ein Einzelunternehmer grundsätzlich für betriebliche Verbindlichkeiten?",
+    "answerOptions": [
+        "Unbeschränkt auch mit seinem Privatvermögen",
+        "Nur mit einem gesetzlich festgelegten Aktienpaket",
+        "Überhaupt nicht",
+        "Ausschließlich die Kunden haften"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Beim Einzelunternehmen gibt es grundsätzlich keine Haftungstrennung zwischen Betriebs- und Privatvermögen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "negationOversight",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Schwachstellen- und Incident-Management"
-  ],
-  "instruction": "Warum wird ein kompromittierter Host häufig logisch isoliert statt sofort ausgeschaltet?",
-  "answerOptions": [
-    "Kommunikation wird begrenzt, während je nach Plan flüchtige Daten gesichert werden können.",
-    "Isolierung repariert automatisch alle Dateien.",
-    "Der Host braucht dann keine Untersuchung.",
-    "Damit alle Benutzer weiterarbeiten können."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Kontrollierte Isolation stoppt laterale Bewegung und kann gleichzeitig forensische Sicherung ermöglichen.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Schwachstellen- und Incident-Management"
+    ],
+    "instruction": "Warum wird ein kompromittierter Host häufig logisch isoliert statt sofort ausgeschaltet?",
+    "answerOptions": [
+        "Kommunikation wird begrenzt, während je nach Plan flüchtige Daten gesichert werden können.",
+        "Isolierung repariert automatisch alle Dateien.",
+        "Der Host braucht dann keine Untersuchung.",
+        "Damit alle Benutzer weiterarbeiten können."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Kontrollierte Isolation stoppt laterale Bewegung und kann gleichzeitig forensische Sicherung ermöglichen.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "negationOversight",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

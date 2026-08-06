@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Warum gelten Passwort und PIN zusammen normalerweise nicht als echte Zwei-Faktor-Authentisierung?",
-  "answerOptions": [
-    "Beide gehören zum Faktor Wissen",
-    "Eine PIN darf nur vier Stellen haben",
-    "Passwörter können nicht verschlüsselt übertragen werden",
-    "Beide funktionieren ausschließlich offline"
-  ],
-  "correct": [0],
-  "explainInstruction": "Zwei Geheimnisse derselben Kategorie ergeben zwei Schritte, aber keine zwei unterschiedlichen Faktoren."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Warum gelten Passwort und PIN zusammen normalerweise nicht als echte Zwei-Faktor-Authentisierung?",
+    "answerOptions": [
+        "Beide gehören zum Faktor Wissen",
+        "Eine PIN darf nur vier Stellen haben",
+        "Passwörter können nicht verschlüsselt übertragen werden",
+        "Beide funktionieren ausschließlich offline"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Zwei Geheimnisse derselben Kategorie ergeben zwei Schritte, aber keine zwei unterschiedlichen Faktoren.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "negationOversight",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

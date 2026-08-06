@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Welches Risiko kann beim Outsourcing einer wichtigen IT-Leistung entstehen?",
-  "answerOptions": [
-    "Abhängigkeit vom Dienstleister und Verlust eigenen Know-hows",
-    "Automatisch vollständige Kontrolle über alle Prozesse",
-    "Garantiert sinkende Gesamtkosten",
-    "Wegfall jeder Vertragsnotwendigkeit"
-  ],
-  "correct": [0],
-  "explainInstruction": "Outsourcing kann Vorteile bieten, aber Lock-in, Schnittstellenprobleme, Kontrollverlust und Know-how-Abbau müssen bewertet werden.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Welches Risiko kann beim Outsourcing einer wichtigen IT-Leistung entstehen?",
+    "answerOptions": [
+        "Abhängigkeit vom Dienstleister und Verlust eigenen Know-hows",
+        "Automatisch vollständige Kontrolle über alle Prozesse",
+        "Garantiert sinkende Gesamtkosten",
+        "Wegfall jeder Vertragsnotwendigkeit"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Outsourcing kann Vorteile bieten, aber Lock-in, Schnittstellenprobleme, Kontrollverlust und Know-how-Abbau müssen bewertet werden.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

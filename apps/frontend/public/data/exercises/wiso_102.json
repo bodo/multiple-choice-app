@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welchen Zweck erfüllt ein Service Level Agreement (SLA)?",
-  "answerOptions": [
-    "Messbare Leistungs- und Qualitätsziele eines Services festlegen",
-    "Das Eigentum an sämtlicher Hardware übertragen",
-    "Die Datenschutzaufsicht ersetzen",
-    "Quellcode automatisch als gemeinfrei erklären"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein SLA beschreibt beispielsweise Verfügbarkeit, Reaktionszeiten, Messverfahren und Folgen bei Abweichungen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welchen Zweck erfüllt ein Service Level Agreement (SLA)?",
+    "answerOptions": [
+        "Messbare Leistungs- und Qualitätsziele eines Services festlegen",
+        "Das Eigentum an sämtlicher Hardware übertragen",
+        "Die Datenschutzaufsicht ersetzen",
+        "Quellcode automatisch als gemeinfrei erklären"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein SLA beschreibt beispielsweise Verfügbarkeit, Reaktionszeiten, Messverfahren und Folgen bei Abweichungen.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

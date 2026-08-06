@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Staat, Verträge und Verbraucher"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Ein Anbieter unterbreitet ein verbindliches Angebot und schließt die Bindung daran nicht aus. Welche Aussage ist grundsätzlich richtig?",
-  "answerOptions": [
-    "Der Anbieter ist an seinen Vertragsantrag gebunden",
-    "Der Anbieter kann das Angebot trotz sofortiger Annahme immer ignorieren",
-    "Das Angebot ist nur wirksam, wenn es notariell beurkundet wurde",
-    "Die Bindung entsteht erst nach vollständiger Bezahlung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Nach § 145 BGB ist der Antragende grundsätzlich an seinen Antrag gebunden, sofern er die Gebundenheit nicht ausgeschlossen hat."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Staat, Verträge und Verbraucher"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Ein Anbieter unterbreitet ein verbindliches Angebot und schließt die Bindung daran nicht aus. Welche Aussage ist grundsätzlich richtig?",
+    "answerOptions": [
+        "Der Anbieter ist an seinen Vertragsantrag gebunden",
+        "Der Anbieter kann das Angebot trotz sofortiger Annahme immer ignorieren",
+        "Das Angebot ist nur wirksam, wenn es notariell beurkundet wurde",
+        "Die Bindung entsteht erst nach vollständiger Bezahlung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Nach § 145 BGB ist der Antragende grundsätzlich an seinen Antrag gebunden, sofern er die Gebundenheit nicht ausgeschlossen hat.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

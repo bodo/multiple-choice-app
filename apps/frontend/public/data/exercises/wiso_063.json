@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Welche Organe besitzt eine deutsche Aktiengesellschaft?",
-  "answerOptions": [
-    "Vorstand",
-    "Aufsichtsrat",
-    "Hauptversammlung",
-    "Betriebsrat als zwingendes Gesellschaftsorgan"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Vorstand, Aufsichtsrat und Hauptversammlung sind Organe der AG. Ein Betriebsrat kann bestehen, ist aber kein gesellschaftsrechtliches Organ.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Welche Organe besitzt eine deutsche Aktiengesellschaft?",
+    "answerOptions": [
+        "Vorstand",
+        "Aufsichtsrat",
+        "Hauptversammlung",
+        "Betriebsrat als zwingendes Gesellschaftsorgan"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Vorstand, Aufsichtsrat und Hauptversammlung sind Organe der AG. Ein Betriebsrat kann bestehen, ist aber kein gesellschaftsrechtliches Organ.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

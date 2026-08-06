@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "PowerShell"
-  ],
-  "instruction": "Welche Funktion hat `WhatIf` bei unterstützenden PowerShell-Befehlen?",
-  "answerOptions": [
-    "Geplante Änderungen anzeigen, ohne sie auszuführen",
-    "Passwörter ausgeben",
-    "Den Server neu starten",
-    "Ein Backup automatisch verifizieren"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "WhatIf unterstützt einen sicheren Probelauf mutierender Operationen.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "PowerShell"
+    ],
+    "instruction": "Welche Funktion hat `WhatIf` bei unterstützenden PowerShell-Befehlen?",
+    "answerOptions": [
+        "Geplante Änderungen anzeigen, ohne sie auszuführen",
+        "Passwörter ausgeben",
+        "Den Server neu starten",
+        "Ein Backup automatisch verifizieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "WhatIf unterstützt einen sicheren Probelauf mutierender Operationen.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

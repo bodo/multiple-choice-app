@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welche Aussage beschreibt `«extend»` am besten?",
-  "answerOptions": [
-    "Ein zusätzlicher Ablauf erweitert einen Basis-Anwendungsfall unter bestimmten Bedingungen",
-    "Ein Anwendungsfall wird zwingend bei jedem Systemstart ausgeführt",
-    "Eine Klasse erbt Attribute einer Oberklasse",
-    "Mehrere parallele Aktivitäten werden synchronisiert"
-  ],
-  "correct": [0],
-  "explainInstruction": "`«extend»` ergänzt einen grundsätzlich eigenständig sinnvollen Basis-Anwendungsfall optional oder bedingt an vorgesehenen Erweiterungspunkten.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Anwendungsfalldiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welche Aussage beschreibt `«extend»` am besten?",
+    "answerOptions": [
+        "Ein zusätzlicher Ablauf erweitert einen Basis-Anwendungsfall unter bestimmten Bedingungen",
+        "Ein Anwendungsfall wird zwingend bei jedem Systemstart ausgeführt",
+        "Eine Klasse erbt Attribute einer Oberklasse",
+        "Mehrere parallele Aktivitäten werden synchronisiert"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "`«extend»` ergänzt einen grundsätzlich eigenständig sinnvollen Basis-Anwendungsfall optional oder bedingt an vorgesehenen Erweiterungspunkten.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Anwendungsfalldiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

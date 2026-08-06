@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Für welchen Anwendungsfall ist UDP häufig geeignet?",
-  "answerOptions": [
-    "Zeitkritische Übertragung, bei der geringe Verzögerung wichtiger als jede einzelne Wiederholung ist",
-    "Eine Übertragung, die zwingend einen geordneten Bytestrom benötigt",
-    "Das Spiegeln zweier Festplatten",
-    "Das Kompilieren von Quellcode"
-  ],
-  "correct": [0],
-  "explainInstruction": "UDP hat wenig Protokollaufwand und keine eingebaute Wiederholung. Echtzeit-Anwendungen können verlorene Pakete eher tolerieren als verspätete.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Für welchen Anwendungsfall ist UDP häufig geeignet?",
+    "answerOptions": [
+        "Zeitkritische Übertragung, bei der geringe Verzögerung wichtiger als jede einzelne Wiederholung ist",
+        "Eine Übertragung, die zwingend einen geordneten Bytestrom benötigt",
+        "Das Spiegeln zweier Festplatten",
+        "Das Kompilieren von Quellcode"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "UDP hat wenig Protokollaufwand und keine eingebaute Wiederholung. Echtzeit-Anwendungen können verlorene Pakete eher tolerieren als verspätete.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

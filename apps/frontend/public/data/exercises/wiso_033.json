@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Sozialversicherung"
-  ],
-  "instruction": "Was bedeutet Umlageverfahren in der gesetzlichen Rentenversicherung?",
-  "answerOptions": [
-    "Laufende Beiträge finanzieren im Wesentlichen die laufenden Rentenzahlungen.",
-    "Jede Person spart ausschließlich ihr eigenes Geld auf einem privaten Konto.",
-    "Renten werden nur aus Umsatzsteuer bezahlt.",
-    "Beiträge werden niemals ausgezahlt."
-  ],
-  "correct": [0],
-  "explainInstruction": "Im Umlageverfahren werden die aktuellen Beitragseinnahmen im Wesentlichen für aktuelle Leistungen verwendet.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Sozialversicherung"
+    ],
+    "instruction": "Was bedeutet Umlageverfahren in der gesetzlichen Rentenversicherung?",
+    "answerOptions": [
+        "Laufende Beiträge finanzieren im Wesentlichen die laufenden Rentenzahlungen.",
+        "Jede Person spart ausschließlich ihr eigenes Geld auf einem privaten Konto.",
+        "Renten werden nur aus Umsatzsteuer bezahlt.",
+        "Beiträge werden niemals ausgezahlt."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Im Umlageverfahren werden die aktuellen Beitragseinnahmen im Wesentlichen für aktuelle Leistungen verwendet.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

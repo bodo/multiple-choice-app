@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Arbeitsplatz und Sicherheit"
-  ],
-  "instruction": "Wie wird das Least-Privilege-Prinzip bei einem Benutzerkonto umgesetzt?",
-  "answerOptions": [
-    "Das Konto erhält nur die für seine Aufgaben notwendigen Rechte.",
-    "Das Konto erhält dauerhaft lokale Administratorrechte.",
-    "Alle Benutzer verwenden dasselbe Kennwort.",
-    "Berechtigungen werden nicht dokumentiert."
-  ],
-  "correct": [0],
-  "explainInstruction": "Minimale Rechte verringern Angriffsfläche und Schadensausmaß bei Fehlbedienung oder kompromittierten Konten.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Arbeitsplatz und Sicherheit"
+    ],
+    "instruction": "Wie wird das Least-Privilege-Prinzip bei einem Benutzerkonto umgesetzt?",
+    "answerOptions": [
+        "Das Konto erhält nur die für seine Aufgaben notwendigen Rechte.",
+        "Das Konto erhält dauerhaft lokale Administratorrechte.",
+        "Alle Benutzer verwenden dasselbe Kennwort.",
+        "Berechtigungen werden nicht dokumentiert."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Minimale Rechte verringern Angriffsfläche und Schadensausmaß bei Fehlbedienung oder kompromittierten Konten.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

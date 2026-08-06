@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Betriebssystem- und Dienstverwaltung"
-  ],
-  "instruction": "Welche Schritte gehören zu einer risikoarmen Änderung an einem produktiven Dienst? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Auswirkung und Abhängigkeiten prüfen",
-    "Rollback vorbereiten",
-    "Änderung und Ergebnis dokumentieren",
-    "Ohne Wartungsfenster gleichzeitig alle Knoten ändern"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Planung, Rückfalloption und Dokumentation reduzieren Risiko; gestaffelte Änderungen erhalten Vergleichs- und Ausweichmöglichkeiten.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Betriebssystem- und Dienstverwaltung"
+    ],
+    "instruction": "Welche Schritte gehören zu einer risikoarmen Änderung an einem produktiven Dienst? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Auswirkung und Abhängigkeiten prüfen",
+        "Rollback vorbereiten",
+        "Änderung und Ergebnis dokumentieren",
+        "Ohne Wartungsfenster gleichzeitig alle Knoten ändern"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Planung, Rückfalloption und Dokumentation reduzieren Risiko; gestaffelte Änderungen erhalten Vergleichs- und Ausweichmöglichkeiten.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

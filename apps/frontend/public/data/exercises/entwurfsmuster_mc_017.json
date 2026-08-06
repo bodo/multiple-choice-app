@@ -1,36 +1,44 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "instruction": "Welche Beschreibungen von Strukturmustern (structural patterns) sind korrekt zugeordnet?",
-  "answerOptions": [
-    "Adapter (Adapter) – übersetzt eine vorhandene Schnittstelle in die vom Client erwartete Schnittstelle.",
-    "Brücke (Bridge) – entkoppelt Abstraktion und Implementierung, damit beide unabhängig variieren können.",
-    "Kompositum (Composite) – behandelt einzelne Elemente und Teil-Ganzes-Bäume einheitlich.",
-    "Dekorierer (Decorator) – ergänzt ein Objekt durch Einhüllen dynamisch um Zuständigkeiten.",
-    "Fassade (Facade) – bietet einen vereinfachten Zugang zu mehreren Subsystem-Schnittstellen.",
-    "Fliegengewicht (Flyweight) – teilt wiederverwendbaren Zustand vieler feingranularer Objekte.",
-    "Stellvertreter (Proxy) – kontrolliert über ein vorgeschaltetes Objekt den Zugriff auf ein Zielobjekt.",
-    "Fassade (Facade) – übersetzt primär eine inkompatible Einzelschnittstelle.",
-    "Kompositum (Composite) – dient primär als Fernzugriffs-Stellvertreter."
-  ],
-  "correct": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-  ],
-  "explainInstruction": "Die ersten sieben Zuordnungen beschreiben die Aufgaben der sieben Strukturmuster. Die letzten beiden verwechseln Fassade (Facade) mit Adapter (Adapter) und Kompositum (Composite) mit Stellvertreter (Proxy).",
-  "mobileSolvable": true,
-  "learningLevel": 7,
-  "difficulty": 3,
-  "categories": [
-    "AP2",
-    "Softwarearchitektur und Entwurfsmuster",
-    "GoF-Klassifikation"
-  ],
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "instruction": "Welche Beschreibungen von Strukturmustern (structural patterns) sind korrekt zugeordnet?",
+    "answerOptions": [
+        "Adapter (Adapter) – übersetzt eine vorhandene Schnittstelle in die vom Client erwartete Schnittstelle.",
+        "Brücke (Bridge) – entkoppelt Abstraktion und Implementierung, damit beide unabhängig variieren können.",
+        "Kompositum (Composite) – behandelt einzelne Elemente und Teil-Ganzes-Bäume einheitlich.",
+        "Dekorierer (Decorator) – ergänzt ein Objekt durch Einhüllen dynamisch um Zuständigkeiten.",
+        "Fassade (Facade) – bietet einen vereinfachten Zugang zu mehreren Subsystem-Schnittstellen.",
+        "Fliegengewicht (Flyweight) – teilt wiederverwendbaren Zustand vieler feingranularer Objekte.",
+        "Stellvertreter (Proxy) – kontrolliert über ein vorgeschaltetes Objekt den Zugriff auf ein Zielobjekt.",
+        "Fassade (Facade) – übersetzt primär eine inkompatible Einzelschnittstelle.",
+        "Kompositum (Composite) – dient primär als Fernzugriffs-Stellvertreter."
+    ],
+    "correct": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "explainInstruction": "Die ersten sieben Zuordnungen beschreiben die Aufgaben der sieben Strukturmuster. Die letzten beiden verwechseln Fassade (Facade) mit Adapter (Adapter) und Kompositum (Composite) mit Stellvertreter (Proxy).",
+    "mobileSolvable": true,
+    "learningLevel": 7,
+    "difficulty": 3,
+    "categories": [
+        "AP2",
+        "Softwarearchitektur und Entwurfsmuster",
+        "GoF-Klassifikation"
+    ],
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "7": "similarTermConfusion",
+        "8": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "7": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "8": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

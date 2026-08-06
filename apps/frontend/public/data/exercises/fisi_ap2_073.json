@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "WLAN-Planung"
-  ],
-  "instruction": "Welcher Sicherheitsmodus ist für ein Unternehmens-WLAN mit individuellen Benutzeridentitäten geeignet?",
-  "answerOptions": [
-    "WPA2/WPA3-Enterprise mit 802.1X",
-    "Offenes WLAN mit versteckter SSID",
-    "WEP mit gemeinsamem Schlüssel",
-    "MAC-Filter als alleinige Authentisierung"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Enterprise-Modi mit 802.1X ermöglichen individuelle Authentisierung und zentrale Richtlinien.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "WLAN-Planung"
+    ],
+    "instruction": "Welcher Sicherheitsmodus ist für ein Unternehmens-WLAN mit individuellen Benutzeridentitäten geeignet?",
+    "answerOptions": [
+        "WPA2/WPA3-Enterprise mit 802.1X",
+        "Offenes WLAN mit versteckter SSID",
+        "WEP mit gemeinsamem Schlüssel",
+        "MAC-Filter als alleinige Authentisierung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Enterprise-Modi mit 802.1X ermöglichen individuelle Authentisierung und zentrale Richtlinien.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

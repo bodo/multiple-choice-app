@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wer darf nach § 69b UrhG grundsätzlich die vermögensrechtlichen Befugnisse an einem im Rahmen der Arbeitsaufgaben erstellten Computerprogramm ausüben, sofern nichts anderes vereinbart ist?",
-  "answerOptions": [
-    "Der Arbeitgeber",
-    "Automatisch jeder Kunde des Arbeitgebers",
-    "Ausschließlich die Berufsschule",
-    "Jeder Beschäftigte des Unternehmens ohne Einschränkung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Bei Programmen, die ein Arbeitnehmer in Wahrnehmung seiner Aufgaben oder nach Anweisung schafft, ist grundsätzlich der Arbeitgeber zur Ausübung der vermögensrechtlichen Befugnisse berechtigt."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wer darf nach § 69b UrhG grundsätzlich die vermögensrechtlichen Befugnisse an einem im Rahmen der Arbeitsaufgaben erstellten Computerprogramm ausüben, sofern nichts anderes vereinbart ist?",
+    "answerOptions": [
+        "Der Arbeitgeber",
+        "Automatisch jeder Kunde des Arbeitgebers",
+        "Ausschließlich die Berufsschule",
+        "Jeder Beschäftigte des Unternehmens ohne Einschränkung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Bei Programmen, die ein Arbeitnehmer in Wahrnehmung seiner Aufgaben oder nach Anweisung schafft, ist grundsätzlich der Arbeitgeber zur Ausübung der vermögensrechtlichen Befugnisse berechtigt.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

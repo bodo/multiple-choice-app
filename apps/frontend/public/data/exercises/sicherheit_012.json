@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Passwortstrategie ist für unterschiedliche Dienste am sinnvollsten?",
-  "answerOptions": [
-    "Für jeden Dienst ein langes, einzigartiges Passwort verwenden",
-    "Ein sehr komplexes Passwort überall wiederverwenden",
-    "Passwörter monatlich nach einem vorhersehbaren Muster ändern",
-    "Passwörter im Klartext in einer gemeinsam genutzten Datei speichern"
-  ],
-  "correct": [0],
-  "explainInstruction": "Einzigartige Passwörter verhindern, dass ein kompromittiertes Kennwort direkten Zugriff auf weitere Konten ermöglicht."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Passwortstrategie ist für unterschiedliche Dienste am sinnvollsten?",
+    "answerOptions": [
+        "Für jeden Dienst ein langes, einzigartiges Passwort verwenden",
+        "Ein sehr komplexes Passwort überall wiederverwenden",
+        "Passwörter monatlich nach einem vorhersehbaren Muster ändern",
+        "Passwörter im Klartext in einer gemeinsam genutzten Datei speichern"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Einzigartige Passwörter verhindern, dass ein kompromittiertes Kennwort direkten Zugriff auf weitere Konten ermöglicht.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

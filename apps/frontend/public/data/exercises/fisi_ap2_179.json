@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "APIs und Datenformate"
-  ],
-  "instruction": "Welche HTTP-Methode wird bei REST typischerweise zum vollständigen Ersetzen einer bekannten Ressource verwendet?",
-  "answerOptions": [
-    "GET",
-    "PUT",
-    "PATCH",
-    "HEAD"
-  ],
-  "correct": [
-    1
-  ],
-  "explainInstruction": "PUT beschreibt typischerweise das vollständige und idempotente Setzen einer Ressource unter einer bekannten URI.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "APIs und Datenformate"
+    ],
+    "instruction": "Welche HTTP-Methode wird bei REST typischerweise zum vollständigen Ersetzen einer bekannten Ressource verwendet?",
+    "answerOptions": [
+        "GET",
+        "PUT",
+        "PATCH",
+        "HEAD"
+    ],
+    "correct": [
+        1
+    ],
+    "explainInstruction": "PUT beschreibt typischerweise das vollständige und idempotente Setzen einer Ressource unter einer bekannten URI.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "0": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

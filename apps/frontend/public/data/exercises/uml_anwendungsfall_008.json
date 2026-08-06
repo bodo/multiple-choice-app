@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welche Bezeichnung eignet sich am besten für einen Anwendungsfall?",
-  "answerOptions": [
-    "Bestellung stornieren",
-    "Datenbanktabelle Bestellung",
-    "Button blau",
-    "Klasse StornoService"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Anwendungsfall wird ziel- und handlungsorientiert benannt, häufig mit Verb und fachlichem Objekt.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Anwendungsfalldiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welche Bezeichnung eignet sich am besten für einen Anwendungsfall?",
+    "answerOptions": [
+        "Bestellung stornieren",
+        "Datenbanktabelle Bestellung",
+        "Button blau",
+        "Klasse StornoService"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Anwendungsfall wird ziel- und handlungsorientiert benannt, häufig mit Verb und fachlichem Objekt.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Anwendungsfalldiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

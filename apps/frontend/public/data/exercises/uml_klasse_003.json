@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Was ist der Unterschied zwischen einem Attribut und einer Operation?",
-  "answerOptions": [
-    "Ein Attribut beschreibt einen Zustand beziehungsweise eine Eigenschaft, eine Operation ein angebotenes Verhalten",
-    "Ein Attribut ist immer öffentlich, eine Operation immer privat",
-    "Attribute gehören nur zu Akteuren, Operationen nur zu Aktivitäten",
-    "Es gibt in UML keinen Unterschied"
-  ],
-  "correct": [0],
-  "explainInstruction": "Attribute modellieren Daten beziehungsweise Zustand einer Klasse. Operationen beschreiben aufrufbares Verhalten.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Klassendiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Was ist der Unterschied zwischen einem Attribut und einer Operation?",
+    "answerOptions": [
+        "Ein Attribut beschreibt einen Zustand beziehungsweise eine Eigenschaft, eine Operation ein angebotenes Verhalten",
+        "Ein Attribut ist immer öffentlich, eine Operation immer privat",
+        "Attribute gehören nur zu Akteuren, Operationen nur zu Aktivitäten",
+        "Es gibt in UML keinen Unterschied"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Attribute modellieren Daten beziehungsweise Zustand einer Klasse. Operationen beschreiben aufrufbares Verhalten.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Klassendiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

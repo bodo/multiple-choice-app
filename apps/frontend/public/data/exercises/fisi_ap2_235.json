@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "NAS, SAN und Dateisysteme"
-  ],
-  "instruction": "Was stellt ein NAS typischerweise bereit?",
-  "answerOptions": [
-    "Dateifreigaben über Protokolle wie SMB oder NFS",
-    "CPU-Kerne für virtuelle Maschinen",
-    "VLAN-Routing ohne Switch",
-    "Kerberos-Tickets ohne Verzeichnisdienst"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ein NAS verwaltet Dateisystem und Dateizugriff und stellt Freigaben über das Netzwerk bereit.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "NAS, SAN und Dateisysteme"
+    ],
+    "instruction": "Was stellt ein NAS typischerweise bereit?",
+    "answerOptions": [
+        "Dateifreigaben über Protokolle wie SMB oder NFS",
+        "CPU-Kerne für virtuelle Maschinen",
+        "VLAN-Routing ohne Switch",
+        "Kerberos-Tickets ohne Verzeichnisdienst"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein NAS verwaltet Dateisystem und Dateizugriff und stellt Freigaben über das Netzwerk bereit.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "negationOversight",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

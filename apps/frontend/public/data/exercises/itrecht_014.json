@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Handlung ist bei proprietärer Software ohne entsprechende Nutzungsrechte regelmäßig problematisch?",
-  "answerOptions": [
-    "Die Software auf mehr Geräten installieren, als die Lizenz erlaubt",
-    "Die Lizenzbedingungen vor dem Kauf prüfen",
-    "Die freigegebene Dokumentation lesen",
-    "Ein vorhandenes Supportticket eröffnen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Installation und Vervielfältigung benötigen passende Nutzungsrechte. Technische Möglichkeit bedeutet keine rechtliche Erlaubnis."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Handlung ist bei proprietärer Software ohne entsprechende Nutzungsrechte regelmäßig problematisch?",
+    "answerOptions": [
+        "Die Software auf mehr Geräten installieren, als die Lizenz erlaubt",
+        "Die Lizenzbedingungen vor dem Kauf prüfen",
+        "Die freigegebene Dokumentation lesen",
+        "Ein vorhandenes Supportticket eröffnen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Installation und Vervielfältigung benötigen passende Nutzungsrechte. Technische Möglichkeit bedeutet keine rechtliche Erlaubnis.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

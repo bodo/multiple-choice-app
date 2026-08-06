@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Identitäts- und Verzeichnisdienste"
-  ],
-  "instruction": "Ein Dienstkonto wird von einer Anwendung verwendet. Welche Eigenschaft ist besonders wichtig?",
-  "answerOptions": [
-    "Nur die benötigten Rechte und ein kontrollierter Lebenszyklus",
-    "Interaktive Anmeldung für alle Mitarbeitenden",
-    "Mitgliedschaft in jeder Administratorgruppe",
-    "Ein Passwort ohne Ablauf und ohne Überwachung"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Dienstkonten brauchen minimale Rechte, sichere Anmeldedaten, dokumentierte Besitzer und geregelte Rotation.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Identitäts- und Verzeichnisdienste"
+    ],
+    "instruction": "Ein Dienstkonto wird von einer Anwendung verwendet. Welche Eigenschaft ist besonders wichtig?",
+    "answerOptions": [
+        "Nur die benötigten Rechte und ein kontrollierter Lebenszyklus",
+        "Interaktive Anmeldung für alle Mitarbeitenden",
+        "Mitgliedschaft in jeder Administratorgruppe",
+        "Ein Passwort ohne Ablauf und ohne Überwachung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Dienstkonten brauchen minimale Rechte, sichere Anmeldedaten, dokumentierte Besitzer und geregelte Rotation.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Identitäts- und Verzeichnisdienste"
-  ],
-  "instruction": "Welchen Zweck hat LDAP-Bind bei einer Anwendung?",
-  "answerOptions": [
-    "Die Anwendung authentisiert sich bzw. einen Benutzer gegenüber dem Verzeichnisdienst.",
-    "Die Anwendung formatiert eine Festplatte.",
-    "Die Anwendung erstellt VLAN-Tags.",
-    "Die Anwendung prüft RAID-Parität."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ein Bind stellt einen authentisierten LDAP-Kontext her, mit dem anschließend Such- oder Änderungsoperationen erfolgen.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Identitäts- und Verzeichnisdienste"
+    ],
+    "instruction": "Welchen Zweck hat LDAP-Bind bei einer Anwendung?",
+    "answerOptions": [
+        "Die Anwendung authentisiert sich bzw. einen Benutzer gegenüber dem Verzeichnisdienst.",
+        "Die Anwendung formatiert eine Festplatte.",
+        "Die Anwendung erstellt VLAN-Tags.",
+        "Die Anwendung prüft RAID-Parität."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Bind stellt einen authentisierten LDAP-Kontext her, mit dem anschließend Such- oder Änderungsoperationen erfolgen.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

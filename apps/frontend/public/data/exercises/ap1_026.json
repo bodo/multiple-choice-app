@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Computergrundlagen"
-  ],
-  "instruction": "Warum besitzt eine CPU Cache-Speicher?",
-  "answerOptions": [
-    "Häufig benötigte Daten und Befehle näher und schneller als im RAM bereitzuhalten",
-    "Um Monitore mit Strom zu versorgen",
-    "Um Dateien dauerhaft zu archivieren",
-    "Um IP-Adressen zu vergeben"
-  ],
-  "correct": [0],
-  "explainInstruction": "CPU-Caches überbrücken den Geschwindigkeitsunterschied zwischen Rechenkernen und Arbeitsspeicher.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Computergrundlagen"
+    ],
+    "instruction": "Warum besitzt eine CPU Cache-Speicher?",
+    "answerOptions": [
+        "Häufig benötigte Daten und Befehle näher und schneller als im RAM bereitzuhalten",
+        "Um Monitore mit Strom zu versorgen",
+        "Um Dateien dauerhaft zu archivieren",
+        "Um IP-Adressen zu vergeben"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "CPU-Caches überbrücken den Geschwindigkeitsunterschied zwischen Rechenkernen und Arbeitsspeicher.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

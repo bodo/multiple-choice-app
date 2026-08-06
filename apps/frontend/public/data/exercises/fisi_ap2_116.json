@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Betriebssystem- und Dienstverwaltung"
-  ],
-  "instruction": "Ein Dienst läuft, lauscht aber nur auf `::1`. Welche Erreichbarkeit ist zu erwarten?",
-  "answerOptions": [
-    "Nur lokale IPv6-Verbindungen",
-    "Alle externen IPv4- und IPv6-Verbindungen",
-    "Nur Broadcast-Pakete",
-    "Ausschließlich Verbindungen aus dem Storage-Netz"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "::1 ist die IPv6-Loopback-Adresse. Eine Bindung daran stellt den Dienst nur lokal bereit.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Betriebssystem- und Dienstverwaltung"
+    ],
+    "instruction": "Ein Dienst läuft, lauscht aber nur auf `::1`. Welche Erreichbarkeit ist zu erwarten?",
+    "answerOptions": [
+        "Nur lokale IPv6-Verbindungen",
+        "Alle externen IPv4- und IPv6-Verbindungen",
+        "Nur Broadcast-Pakete",
+        "Ausschließlich Verbindungen aus dem Storage-Netz"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "::1 ist die IPv6-Loopback-Adresse. Eine Bindung daran stellt den Dienst nur lokal bereit.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

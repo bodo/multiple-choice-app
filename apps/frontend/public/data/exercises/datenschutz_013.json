@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Ein Onlineshop verarbeitet die Lieferadresse, um bestellte Ware zuzustellen. Welche Rechtsgrundlage liegt typischerweise nahe?",
-  "answerOptions": [
-    "Erforderlichkeit zur Vertragserfüllung",
-    "Ausschließlich ein öffentliches Interesse",
-    "Automatisch eine ausdrückliche Werbeeinwilligung",
-    "Eine Datenschutz-Folgenabschätzung als Rechtsgrundlage"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Lieferadresse wird benötigt, um die vertraglich geschuldete Lieferung auszuführen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Ein Onlineshop verarbeitet die Lieferadresse, um bestellte Ware zuzustellen. Welche Rechtsgrundlage liegt typischerweise nahe?",
+    "answerOptions": [
+        "Erforderlichkeit zur Vertragserfüllung",
+        "Ausschließlich ein öffentliches Interesse",
+        "Automatisch eine ausdrückliche Werbeeinwilligung",
+        "Eine Datenschutz-Folgenabschätzung als Rechtsgrundlage"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Lieferadresse wird benötigt, um die vertraglich geschuldete Lieferung auszuführen.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

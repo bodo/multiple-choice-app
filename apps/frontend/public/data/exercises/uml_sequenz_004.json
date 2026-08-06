@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Was kennzeichnet der schmale Aktivierungsbalken auf einer Lebenslinie?",
-  "answerOptions": [
-    "Den Zeitraum, in dem der Teilnehmer ein Verhalten ausführt",
-    "Die dauerhafte Löschung des Teilnehmers",
-    "Eine Netzwerkunterbrechung",
-    "Die Kardinalität einer Beziehung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Aktivierungsbalken beziehungsweise eine Ausführungsspezifikation zeigt, wann ein Teilnehmer innerhalb der Interaktion Verhalten ausführt.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Sequenzdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Was kennzeichnet der schmale Aktivierungsbalken auf einer Lebenslinie?",
+    "answerOptions": [
+        "Den Zeitraum, in dem der Teilnehmer ein Verhalten ausführt",
+        "Die dauerhafte Löschung des Teilnehmers",
+        "Eine Netzwerkunterbrechung",
+        "Die Kardinalität einer Beziehung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Aktivierungsbalken beziehungsweise eine Ausführungsspezifikation zeigt, wann ein Teilnehmer innerhalb der Interaktion Verhalten ausführt.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Sequenzdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

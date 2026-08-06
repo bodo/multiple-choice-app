@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Maßnahmen sind zu Beginn der Behandlung eines Sicherheitsvorfalls typischerweise sinnvoll?",
-  "answerOptions": [
-    "Ausbreitung nach Notfallplan begrenzen",
-    "Relevante Protokolle und Beweise sichern",
-    "Den Vorfall über den vorgesehenen Meldeweg eskalieren",
-    "Alle betroffenen Systeme ohne Dokumentation sofort löschen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Containment, beweissichere Dokumentation und geregelte Eskalation sind zentrale erste Schritte. Unkoordiniertes Löschen kann Analyse und Wiederherstellung erschweren."
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Maßnahmen sind zu Beginn der Behandlung eines Sicherheitsvorfalls typischerweise sinnvoll?",
+    "answerOptions": [
+        "Ausbreitung nach Notfallplan begrenzen",
+        "Relevante Protokolle und Beweise sichern",
+        "Den Vorfall über den vorgesehenen Meldeweg eskalieren",
+        "Alle betroffenen Systeme ohne Dokumentation sofort löschen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Containment, beweissichere Dokumentation und geregelte Eskalation sind zentrale erste Schritte. Unkoordiniertes Löschen kann Analyse und Wiederherstellung erschweren.",
+    "distractorTypes": {
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

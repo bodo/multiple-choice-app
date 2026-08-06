@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Warum ist eine einheitliche Zeitsynchronisation für Sicherheitsprotokolle wichtig?",
-  "answerOptions": [
-    "Ereignisse verschiedener Systeme lassen sich zeitlich korrekt zusammenführen",
-    "Protokolldateien werden dadurch automatisch anonymisiert",
-    "Passwörter laufen nicht mehr ab",
-    "Netzwerkpakete benötigen keine Prüfsummen mehr"
-  ],
-  "correct": [0],
-  "explainInstruction": "Konsistente Zeitstempel sind wesentlich, um Abläufe bei Störungen oder Angriffen nachvollziehen zu können."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Warum ist eine einheitliche Zeitsynchronisation für Sicherheitsprotokolle wichtig?",
+    "answerOptions": [
+        "Ereignisse verschiedener Systeme lassen sich zeitlich korrekt zusammenführen",
+        "Protokolldateien werden dadurch automatisch anonymisiert",
+        "Passwörter laufen nicht mehr ab",
+        "Netzwerkpakete benötigen keine Prüfsummen mehr"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Konsistente Zeitstempel sind wesentlich, um Abläufe bei Störungen oder Angriffen nachvollziehen zu können.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "negationOversight",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

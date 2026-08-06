@@ -59,6 +59,14 @@ export const exerciseSchema = {
     maximumStringDistance: { type: 'integer', minimum: 0 },
     explainInstruction: { type: 'string' },
     explainAnswerOptions: stringArraySchema,
+    distractorTypes: {
+      type: 'object',
+      additionalProperties: { type: 'string' },
+    },
+    distractorAnalysis: {
+      type: 'object',
+      additionalProperties: { type: 'string' },
+    },
     adminComment: { type: 'string' },
     adminTags: stringArraySchema,
     contentRevision: { type: 'integer', minimum: 1 },

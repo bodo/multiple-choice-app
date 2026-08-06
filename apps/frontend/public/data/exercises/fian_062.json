@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Testen und Qualitätssicherung"
-  ],
-  "instruction": "Was kennzeichnet einen Black-Box-Test?",
-  "answerOptions": [
-    "Testfälle werden aus Schnittstellen und Anforderungen ohne Kenntnis der internen Implementierung abgeleitet.",
-    "Es wird nur Quellcode ohne Ausführung gelesen.",
-    "Das System darf keine Eingaben besitzen.",
-    "Alle privaten Methoden werden direkt aufgerufen."
-  ],
-  "correct": [0],
-  "explainInstruction": "Black-Box-Tests betrachten beobachtbares Ein-/Ausgabeverhalten. Die interne Struktur ist für die Ableitung der Testfälle nicht maßgeblich.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Testen und Qualitätssicherung"
+    ],
+    "instruction": "Was kennzeichnet einen Black-Box-Test?",
+    "answerOptions": [
+        "Testfälle werden aus Schnittstellen und Anforderungen ohne Kenntnis der internen Implementierung abgeleitet.",
+        "Es wird nur Quellcode ohne Ausführung gelesen.",
+        "Das System darf keine Eingaben besitzen.",
+        "Alle privaten Methoden werden direkt aufgerufen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Black-Box-Tests betrachten beobachtbares Ein-/Ausgabeverhalten. Die interne Struktur ist für die Ableitung der Testfälle nicht maßgeblich.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "negationOversight",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

@@ -1,28 +1,36 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Eigenschaften kann eine korrekt geprüfte digitale Signatur unterstützen?",
-  "answerOptions": [
-    "Integrität der signierten Daten",
-    "Authentizität des Signierenden",
-    "Vertraulichkeit des signierten Inhalts ohne zusätzliche Verschlüsselung",
-    "Nachweis, dass der Inhalt frei von fachlichen Fehlern ist"
-  ],
-  "correct": [
-    0,
-    1
-  ],
-  "explainInstruction": "Eine digitale Signatur schützt Integrität und unterstützt die Zuordnung zum Signierenden. Sie verschlüsselt den Inhalt nicht automatisch."
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Eigenschaften kann eine korrekt geprüfte digitale Signatur unterstützen?",
+    "answerOptions": [
+        "Integrität der signierten Daten",
+        "Authentizität des Signierenden",
+        "Vertraulichkeit des signierten Inhalts ohne zusätzliche Verschlüsselung",
+        "Nachweis, dass der Inhalt frei von fachlichen Fehlern ist"
+    ],
+    "correct": [
+        0,
+        1
+    ],
+    "explainInstruction": "Eine digitale Signatur schützt Integrität und unterstützt die Zuordnung zum Signierenden. Sie verschlüsselt den Inhalt nicht automatisch.",
+    "distractorTypes": {
+        "2": "negationOversight",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

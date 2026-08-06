@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "NAS, SAN und Dateisysteme"
-  ],
-  "instruction": "Warum braucht ein gemeinsam beschreibbares Cluster-Dateisystem besondere Koordination?",
-  "answerOptions": [
-    "Mehrere Knoten müssen Metadaten und Schreibzugriffe konsistent synchronisieren.",
-    "Normale Dateisysteme können keine Dateien speichern.",
-    "DNS darf nur einen Record besitzen.",
-    "Jeder Knoten verwendet zwingend eine andere Blockgröße."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ein für Einzelhostzugriff gedachtes Dateisystem kann bei parallelem unkoordiniertem Schreiben beschädigt werden.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "NAS, SAN und Dateisysteme"
+    ],
+    "instruction": "Warum braucht ein gemeinsam beschreibbares Cluster-Dateisystem besondere Koordination?",
+    "answerOptions": [
+        "Mehrere Knoten müssen Metadaten und Schreibzugriffe konsistent synchronisieren.",
+        "Normale Dateisysteme können keine Dateien speichern.",
+        "DNS darf nur einen Record besitzen.",
+        "Jeder Knoten verwendet zwingend eine andere Blockgröße."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein für Einzelhostzugriff gedachtes Dateisystem kann bei parallelem unkoordiniertem Schreiben beschädigt werden.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

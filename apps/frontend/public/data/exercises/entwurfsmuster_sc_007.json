@@ -1,28 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welches Muster erweitert ein einzelnes Objekt durch Einhüllen dynamisch um zusätzliche Zuständigkeiten?",
-  "answerOptions": [
-    "Dekorierer (Decorator)",
-    "Stellvertreter (Proxy)",
-    "Adapter (Adapter)",
-    "Kompositum (Composite)"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Dekorierer (Decorator) ergänzt Verhalten durch verschachtelte Wrapper, ohne die Zielklasse zu verändern.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "Strukturmuster"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welches Muster erweitert ein einzelnes Objekt durch Einhüllen dynamisch um zusätzliche Zuständigkeiten?",
+    "answerOptions": [
+        "Dekorierer (Decorator)",
+        "Stellvertreter (Proxy)",
+        "Adapter (Adapter)",
+        "Kompositum (Composite)"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Dekorierer (Decorator) ergänzt Verhalten durch verschachtelte Wrapper, ohne die Zielklasse zu verändern.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "Strukturmuster"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

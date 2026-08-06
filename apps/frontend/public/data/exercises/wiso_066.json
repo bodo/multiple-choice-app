@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Was bedeutet es, dass eine Gesellschaft juristische Person ist?",
-  "answerOptions": [
-    "Sie kann selbst Trägerin von Rechten und Pflichten sein.",
-    "Sie ist ein einzelner Mensch.",
-    "Sie darf keine Verträge schließen.",
-    "Ihre Beschäftigten haften automatisch für alle Schulden."
-  ],
-  "correct": [0],
-  "explainInstruction": "Eine juristische Person kann etwa Eigentum haben, Verträge schließen, klagen und verklagt werden.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Was bedeutet es, dass eine Gesellschaft juristische Person ist?",
+    "answerOptions": [
+        "Sie kann selbst Trägerin von Rechten und Pflichten sein.",
+        "Sie ist ein einzelner Mensch.",
+        "Sie darf keine Verträge schließen.",
+        "Ihre Beschäftigten haften automatisch für alle Schulden."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine juristische Person kann etwa Eigentum haben, Verträge schließen, klagen und verklagt werden.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "negationOversight",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

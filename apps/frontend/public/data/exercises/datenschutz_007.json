@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was verlangt der Grundsatz der Zweckbindung?",
-  "answerOptions": [
-    "Daten werden für festgelegte, eindeutige und legitime Zwecke erhoben und nicht unvereinbar weiterverarbeitet",
-    "Einmal erhobene Daten dürfen für jeden späteren Zweck verwendet werden",
-    "Der Verarbeitungszweck muss nur intern bekannt sein",
-    "Jede Verarbeitung muss ausschließlich auf einer Einwilligung beruhen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Der Zweck muss vor der Verarbeitung bestimmt sein. Eine spätere Nutzung braucht Vereinbarkeit oder eine passende Rechtsgrundlage."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was verlangt der Grundsatz der Zweckbindung?",
+    "answerOptions": [
+        "Daten werden für festgelegte, eindeutige und legitime Zwecke erhoben und nicht unvereinbar weiterverarbeitet",
+        "Einmal erhobene Daten dürfen für jeden späteren Zweck verwendet werden",
+        "Der Verarbeitungszweck muss nur intern bekannt sein",
+        "Jede Verarbeitung muss ausschließlich auf einer Einwilligung beruhen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Zweck muss vor der Verarbeitung bestimmt sein. Eine spätere Nutzung braucht Vereinbarkeit oder eine passende Rechtsgrundlage.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

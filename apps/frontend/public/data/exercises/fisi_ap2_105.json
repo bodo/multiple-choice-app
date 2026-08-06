@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Anwendungs- und Infrastrukturdienste"
-  ],
-  "instruction": "Ein Dienst startet nach einem Reboot nicht, obwohl der manuelle Start funktioniert. Was ist zuerst zu prüfen?",
-  "answerOptions": [
-    "Aktivierung für den Systemstart und Abhängigkeiten",
-    "Monitorauflösung des Servers",
-    "MX-Record der Firmendomain",
-    "WLAN-Kanal des Clients"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Startmodus, Unit-Konfiguration und Abhängigkeiten bestimmen, ob ein Dienst beim Booten automatisch startet.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Anwendungs- und Infrastrukturdienste"
+    ],
+    "instruction": "Ein Dienst startet nach einem Reboot nicht, obwohl der manuelle Start funktioniert. Was ist zuerst zu prüfen?",
+    "answerOptions": [
+        "Aktivierung für den Systemstart und Abhängigkeiten",
+        "Monitorauflösung des Servers",
+        "MX-Record der Firmendomain",
+        "WLAN-Kanal des Clients"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Startmodus, Unit-Konfiguration und Abhängigkeiten bestimmen, ob ein Dienst beim Booten automatisch startet.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

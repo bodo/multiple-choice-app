@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Wann sendet ein Client ein IPv4-Paket typischerweise an sein Standardgateway?",
-  "answerOptions": [
-    "Wenn das Ziel außerhalb des eigenen Subnetzes liegt",
-    "Bei jedem Zugriff auf den eigenen Arbeitsspeicher",
-    "Nur wenn die Quelladresse `127.0.0.1` ist",
-    "Wenn ein lokaler Switch ausgeschaltet ist"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ziele im eigenen Subnetz erreicht der Client direkt. Für andere Netze übergibt er das Paket dem Standardgateway.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Wann sendet ein Client ein IPv4-Paket typischerweise an sein Standardgateway?",
+    "answerOptions": [
+        "Wenn das Ziel außerhalb des eigenen Subnetzes liegt",
+        "Bei jedem Zugriff auf den eigenen Arbeitsspeicher",
+        "Nur wenn die Quelladresse `127.0.0.1` ist",
+        "Wenn ein lokaler Switch ausgeschaltet ist"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ziele im eigenen Subnetz erreicht der Client direkt. Für andere Netze übergibt er das Paket dem Standardgateway.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "numericalCalculationTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

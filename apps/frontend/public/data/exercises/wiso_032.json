@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Sozialversicherung"
-  ],
-  "instruction": "Wer trägt die Beiträge zur gesetzlichen Unfallversicherung grundsätzlich?",
-  "answerOptions": [
-    "Nur die Beschäftigten",
-    "Die Arbeitgeber",
-    "Nur die Kommunen",
-    "Arbeitgeber und Kunden je zur Hälfte"
-  ],
-  "correct": [1],
-  "explainInstruction": "Die gesetzliche Unfallversicherung wird grundsätzlich durch Beiträge der Arbeitgeber finanziert.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Sozialversicherung"
+    ],
+    "instruction": "Wer trägt die Beiträge zur gesetzlichen Unfallversicherung grundsätzlich?",
+    "answerOptions": [
+        "Nur die Beschäftigten",
+        "Die Arbeitgeber",
+        "Nur die Kommunen",
+        "Arbeitgeber und Kunden je zur Hälfte"
+    ],
+    "correct": [
+        1
+    ],
+    "explainInstruction": "Die gesetzliche Unfallversicherung wird grundsätzlich durch Beiträge der Arbeitgeber finanziert.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

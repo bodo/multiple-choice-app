@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Wie wird die zeitliche Abfolge in einem Sequenzdiagramm üblicherweise gelesen?",
-  "answerOptions": [
-    "Von unten nach oben",
-    "Von rechts nach links",
-    "Von oben nach unten",
-    "Ausschließlich anhand einer Legende"
-  ],
-  "correct": [2],
-  "explainInstruction": "Später eingezeichnete Ereignisse liegen üblicherweise weiter unten. Dadurch wird die Interaktion von oben nach unten gelesen.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Sequenzdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Wie wird die zeitliche Abfolge in einem Sequenzdiagramm üblicherweise gelesen?",
+    "answerOptions": [
+        "Von unten nach oben",
+        "Von rechts nach links",
+        "Von oben nach unten",
+        "Ausschließlich anhand einer Legende"
+    ],
+    "correct": [
+        2
+    ],
+    "explainInstruction": "Später eingezeichnete Ereignisse liegen üblicherweise weiter unten. Dadurch wird die Interaktion von oben nach unten gelesen.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Sequenzdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "conceptContradiction",
+        "1": "conceptContradiction",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

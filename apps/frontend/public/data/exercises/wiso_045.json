@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Was verlangt das Maximalprinzip?",
-  "answerOptions": [
-    "Mit einem festgelegten Mitteleinsatz das größtmögliche Ergebnis erzielen",
-    "Ein festes Ziel mit unbegrenzten Mitteln erreichen",
-    "Jeden Mitteleinsatz vermeiden",
-    "Nur den Preis maximieren"
-  ],
-  "correct": [0],
-  "explainInstruction": "Beim Maximalprinzip ist der Input vorgegeben; daraus soll der größtmögliche Output entstehen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Was verlangt das Maximalprinzip?",
+    "answerOptions": [
+        "Mit einem festgelegten Mitteleinsatz das größtmögliche Ergebnis erzielen",
+        "Ein festes Ziel mit unbegrenzten Mitteln erreichen",
+        "Jeden Mitteleinsatz vermeiden",
+        "Nur den Preis maximieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Beim Maximalprinzip ist der Input vorgegeben; daraus soll der größtmögliche Output entstehen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

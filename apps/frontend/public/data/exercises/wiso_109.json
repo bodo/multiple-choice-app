@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Punkte sollten bei einem SaaS-Vertrag für das Vertragsende geregelt werden?",
-  "answerOptions": [
-    "Datenexport und unterstützte Formate",
-    "Löschung beziehungsweise Rückgabe verbleibender Kundendaten",
-    "Fristen und Unterstützung beim Wechsel",
-    "Die automatische Veröffentlichung aller Kundendaten"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Exit-Regelungen verhindern Lock-in-Risiken und klären, wie Daten geordnet übergeben und anschließend behandelt werden."
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Punkte sollten bei einem SaaS-Vertrag für das Vertragsende geregelt werden?",
+    "answerOptions": [
+        "Datenexport und unterstützte Formate",
+        "Löschung beziehungsweise Rückgabe verbleibender Kundendaten",
+        "Fristen und Unterstützung beim Wechsel",
+        "Die automatische Veröffentlichung aller Kundendaten"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Exit-Regelungen verhindern Lock-in-Risiken und klären, wie Daten geordnet übergeben und anschließend behandelt werden.",
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

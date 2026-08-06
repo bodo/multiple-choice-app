@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Was bewirkt ein Join-Knoten?",
-  "answerOptions": [
-    "Er synchronisiert parallele Pfade, bevor der Ablauf weitergeht",
-    "Er wählt zufällig einen von mehreren alternativen Pfaden",
-    "Er beschreibt eine optionale Systemfunktion",
-    "Er legt die Multiplizität einer Beziehung fest"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Join wartet auf die erforderlichen eingehenden parallelen Flüsse und führt den Ablauf anschließend gemeinsam fort.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Aktivitätsdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Was bewirkt ein Join-Knoten?",
+    "answerOptions": [
+        "Er synchronisiert parallele Pfade, bevor der Ablauf weitergeht",
+        "Er wählt zufällig einen von mehreren alternativen Pfaden",
+        "Er beschreibt eine optionale Systemfunktion",
+        "Er legt die Multiplizität einer Beziehung fest"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Join wartet auf die erforderlichen eingehenden parallelen Flüsse und führt den Ablauf anschließend gemeinsam fort.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Aktivitätsdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

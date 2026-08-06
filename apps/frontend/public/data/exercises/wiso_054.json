@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Was kennzeichnet ein Angebotsoligopol?",
-  "answerOptions": [
-    "Wenige große Anbieter treffen auf viele Nachfrager.",
-    "Viele Anbieter treffen auf viele Nachfrager.",
-    "Ein Nachfrager trifft auf einen Anbieter.",
-    "Der Preis ist immer null."
-  ],
-  "correct": [0],
-  "explainInstruction": "In einem Angebotsoligopol beeinflussen sich die wenigen Anbieter mit ihren Entscheidungen stark gegenseitig.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Was kennzeichnet ein Angebotsoligopol?",
+    "answerOptions": [
+        "Wenige große Anbieter treffen auf viele Nachfrager.",
+        "Viele Anbieter treffen auf viele Nachfrager.",
+        "Ein Nachfrager trifft auf einen Anbieter.",
+        "Der Preis ist immer null."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "In einem Angebotsoligopol beeinflussen sich die wenigen Anbieter mit ihren Entscheidungen stark gegenseitig.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

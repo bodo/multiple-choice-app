@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "Robuster und sicherer Betrieb"
-  ],
-  "instruction": "Welche Angaben sollte ein Job-Log enthalten? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Start- und Endzeit",
-    "Eindeutige Lauf-ID",
-    "Ergebnis und Fehlerkontext",
-    "Geheimnisse im Klartext zur Vollständigkeit"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Zeit, Identität des Laufs und Ergebnis ermöglichen Betrieb und Diagnose; Secrets müssen maskiert bleiben.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "Robuster und sicherer Betrieb"
+    ],
+    "instruction": "Welche Angaben sollte ein Job-Log enthalten? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Start- und Endzeit",
+        "Eindeutige Lauf-ID",
+        "Ergebnis und Fehlerkontext",
+        "Geheimnisse im Klartext zur Vollständigkeit"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Zeit, Identität des Laufs und Ergebnis ermöglichen Betrieb und Diagnose; Secrets müssen maskiert bleiben.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

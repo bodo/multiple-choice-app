@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "APIs und Datenformate"
-  ],
-  "instruction": "Warum sollte eine Automation JSON über einen Parser statt über Stringsuche auswerten?",
-  "answerOptions": [
-    "Ein Parser berücksichtigt die Datenstruktur und korrektes Escaping.",
-    "JSON ist immer einzeilig.",
-    "Stringsuche validiert automatisch das Schema.",
-    "Parser machen Authentisierung unnötig."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Strukturiertes Parsen ist robust gegenüber Whitespace, Reihenfolge und korrekt kodierten Zeichen.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "APIs und Datenformate"
+    ],
+    "instruction": "Warum sollte eine Automation JSON über einen Parser statt über Stringsuche auswerten?",
+    "answerOptions": [
+        "Ein Parser berücksichtigt die Datenstruktur und korrektes Escaping.",
+        "JSON ist immer einzeilig.",
+        "Stringsuche validiert automatisch das Schema.",
+        "Parser machen Authentisierung unnötig."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Strukturiertes Parsen ist robust gegenüber Whitespace, Reihenfolge und korrekt kodierten Zeichen.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

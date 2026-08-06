@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was ist Social Engineering?",
-  "answerOptions": [
-    "Die Manipulation von Menschen, um Informationen oder Handlungen zu erlangen",
-    "Die automatische Komprimierung sozialer Netzwerke",
-    "Die Verschlüsselung von Datenbanken mit einem öffentlichen Schlüssel",
-    "Die Segmentierung eines Unternehmensnetzes"
-  ],
-  "correct": [0],
-  "explainInstruction": "Social Engineering nutzt Vertrauen, Hilfsbereitschaft, Angst oder Autorität aus, statt primär technische Schwachstellen anzugreifen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was ist Social Engineering?",
+    "answerOptions": [
+        "Die Manipulation von Menschen, um Informationen oder Handlungen zu erlangen",
+        "Die automatische Komprimierung sozialer Netzwerke",
+        "Die Verschlüsselung von Datenbanken mit einem öffentlichen Schlüssel",
+        "Die Segmentierung eines Unternehmensnetzes"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Social Engineering nutzt Vertrauen, Hilfsbereitschaft, Angst oder Autorität aus, statt primär technische Schwachstellen anzugreifen.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

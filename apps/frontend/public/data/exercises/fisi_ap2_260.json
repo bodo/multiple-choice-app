@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Firewall und Segmentierung"
-  ],
-  "instruction": "Was ist der Sicherheitsvorteil einer DMZ für öffentlich erreichbare Server?",
-  "answerOptions": [
-    "Direkte Kommunikationswege ins interne Netz werden begrenzt und kontrolliert.",
-    "Öffentliche Server erhalten automatisch keine Schwachstellen.",
-    "Backups sind nicht mehr nötig.",
-    "Benutzer brauchen keine Authentisierung."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Die DMZ bildet eine eigene Zone; nur erforderliche Pfade zu Frontend, Backend und Verwaltung werden erlaubt.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Firewall und Segmentierung"
+    ],
+    "instruction": "Was ist der Sicherheitsvorteil einer DMZ für öffentlich erreichbare Server?",
+    "answerOptions": [
+        "Direkte Kommunikationswege ins interne Netz werden begrenzt und kontrolliert.",
+        "Öffentliche Server erhalten automatisch keine Schwachstellen.",
+        "Backups sind nicht mehr nötig.",
+        "Benutzer brauchen keine Authentisierung."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die DMZ bildet eine eigene Zone; nur erforderliche Pfade zu Frontend, Backend und Verwaltung werden erlaubt.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "negationOversight",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

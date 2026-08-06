@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Dateidienste und Berechtigungen"
-  ],
-  "instruction": "Ein Benutzer kann eine Datei lesen, aber nicht überschreiben, obwohl die Datei schreibbar erscheint. Welcher zusätzliche Faktor ist zu prüfen?",
-  "answerOptions": [
-    "Rechte am Verzeichnis, ACLs und Eigentümerschaft",
-    "Nur der MX-Record",
-    "WLAN-Kanal 1",
-    "NTP-Port 123"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Neben klassischen Modusbits können Verzeichnisrechte, ACLs, Eigentümer und Attribute den Zugriff beeinflussen.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Dateidienste und Berechtigungen"
+    ],
+    "instruction": "Ein Benutzer kann eine Datei lesen, aber nicht überschreiben, obwohl die Datei schreibbar erscheint. Welcher zusätzliche Faktor ist zu prüfen?",
+    "answerOptions": [
+        "Rechte am Verzeichnis, ACLs und Eigentümerschaft",
+        "Nur der MX-Record",
+        "WLAN-Kanal 1",
+        "NTP-Port 123"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Neben klassischen Modusbits können Verzeichnisrechte, ACLs, Eigentümer und Attribute den Zugriff beeinflussen.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "numericalCalculationTrap",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

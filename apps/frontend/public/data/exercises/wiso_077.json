@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Rechnungswesen und Finanzierung"
-  ],
-  "instruction": "Was zeigt die Passivseite einer Bilanz?",
-  "answerOptions": [
-    "Die Herkunft des Kapitals aus Eigen- und Fremdkapital",
-    "Nur den Lagerbestand",
-    "Ausschließlich Maschinen",
-    "Nur die Zahl der Beschäftigten"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Passivseite erklärt die Finanzierung des Vermögens durch Eigenkapital und Schulden.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Rechnungswesen und Finanzierung"
+    ],
+    "instruction": "Was zeigt die Passivseite einer Bilanz?",
+    "answerOptions": [
+        "Die Herkunft des Kapitals aus Eigen- und Fremdkapital",
+        "Nur den Lagerbestand",
+        "Ausschließlich Maschinen",
+        "Nur die Zahl der Beschäftigten"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Passivseite erklärt die Finanzierung des Vermögens durch Eigenkapital und Schulden.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

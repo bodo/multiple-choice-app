@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welchen Zweck hat eine Vertraulichkeitsvereinbarung (NDA)?",
-  "answerOptions": [
-    "Vertragliche Pflichten zum Umgang mit vertraulichen Informationen festlegen",
-    "Jede Information automatisch zu einem Patent machen",
-    "Gesetzliche Datenschutzpflichten vollständig ersetzen",
-    "Alle Sicherheitsmaßnahmen technisch erzwingen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein NDA beschreibt insbesondere, welche Informationen vertraulich sind und wie sie genutzt oder offengelegt werden dürfen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welchen Zweck hat eine Vertraulichkeitsvereinbarung (NDA)?",
+    "answerOptions": [
+        "Vertragliche Pflichten zum Umgang mit vertraulichen Informationen festlegen",
+        "Jede Information automatisch zu einem Patent machen",
+        "Gesetzliche Datenschutzpflichten vollständig ersetzen",
+        "Alle Sicherheitsmaßnahmen technisch erzwingen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein NDA beschreibt insbesondere, welche Informationen vertraulich sind und wie sie genutzt oder offengelegt werden dürfen.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

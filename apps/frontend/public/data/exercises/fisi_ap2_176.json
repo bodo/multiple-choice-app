@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "Konfigurationsmanagement"
-  ],
-  "instruction": "Welche Schritte gehören in eine sichere Pipeline für Infrastrukturcode? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Syntax- und Lint-Prüfung",
-    "Test in einer geeigneten Umgebung",
-    "Review und kontrollierte Freigabe",
-    "Ungeprüfter Direktlauf auf allen Produktivsystemen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Automatische Prüfungen, repräsentative Tests und Freigabe reduzieren das Risiko breiter Fehlkonfigurationen.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "Konfigurationsmanagement"
+    ],
+    "instruction": "Welche Schritte gehören in eine sichere Pipeline für Infrastrukturcode? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Syntax- und Lint-Prüfung",
+        "Test in einer geeigneten Umgebung",
+        "Review und kontrollierte Freigabe",
+        "Ungeprüfter Direktlauf auf allen Produktivsystemen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Automatische Prüfungen, repräsentative Tests und Freigabe reduzieren das Risiko breiter Fehlkonfigurationen.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

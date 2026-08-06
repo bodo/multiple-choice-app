@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Verfügbarkeit und Kapazitätsplanung"
-  ],
-  "instruction": "Welche Kennzahl zeigt, wie nahe ein Server an seiner Kapazitätsgrenze betrieben wird?",
-  "answerOptions": [
-    "Auslastung plus Trend und Reserve der relevanten Ressource",
-    "Nur die Inventarnummer",
-    "Nur die Uptime seit Installation",
-    "Die Anzahl der DNS-Aliase"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Kapazität muss ressourcenspezifisch und über Zeit mit Wachstumsreserve bewertet werden.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Verfügbarkeit und Kapazitätsplanung"
+    ],
+    "instruction": "Welche Kennzahl zeigt, wie nahe ein Server an seiner Kapazitätsgrenze betrieben wird?",
+    "answerOptions": [
+        "Auslastung plus Trend und Reserve der relevanten Ressource",
+        "Nur die Inventarnummer",
+        "Nur die Uptime seit Installation",
+        "Die Anzahl der DNS-Aliase"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Kapazität muss ressourcenspezifisch und über Zeit mit Wachstumsreserve bewertet werden.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

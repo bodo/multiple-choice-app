@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was kennzeichnet symmetrische Verschlüsselung?",
-  "answerOptions": [
-    "Zum Ver- und Entschlüsseln wird derselbe geheime Schlüssel verwendet",
-    "Zum Entschlüsseln wird grundsätzlich kein Schlüssel benötigt",
-    "Sie erzeugt nur einen nicht umkehrbaren Prüfwert",
-    "Jeder Teilnehmer veröffentlicht seinen geheimen Schlüssel"
-  ],
-  "correct": [0],
-  "explainInstruction": "Symmetrische Verfahren sind effizient, erfordern aber einen sicheren Austausch beziehungsweise Schutz des gemeinsamen Schlüssels."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was kennzeichnet symmetrische Verschlüsselung?",
+    "answerOptions": [
+        "Zum Ver- und Entschlüsseln wird derselbe geheime Schlüssel verwendet",
+        "Zum Entschlüsseln wird grundsätzlich kein Schlüssel benötigt",
+        "Sie erzeugt nur einen nicht umkehrbaren Prüfwert",
+        "Jeder Teilnehmer veröffentlicht seinen geheimen Schlüssel"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Symmetrische Verfahren sind effizient, erfordern aber einen sicheren Austausch beziehungsweise Schutz des gemeinsamen Schlüssels.",
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "negationOversight",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "IPv6"
-  ],
-  "instruction": "Welche Angaben sind bei der Diagnose einer gestörten IPv6-Verbindung sinnvoll? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Link-Local- und globale Adresse des Interfaces",
-    "Gelernte IPv6-Routen",
-    "Router Advertisements",
-    "Nur die IPv4-ARP-Tabelle"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Adresszustand, Routing und Router Advertisements grenzen IPv6-Probleme ein. Die reine IPv4-ARP-Tabelle genügt nicht.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "IPv6"
+    ],
+    "instruction": "Welche Angaben sind bei der Diagnose einer gestörten IPv6-Verbindung sinnvoll? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Link-Local- und globale Adresse des Interfaces",
+        "Gelernte IPv6-Routen",
+        "Router Advertisements",
+        "Nur die IPv4-ARP-Tabelle"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Adresszustand, Routing und Router Advertisements grenzen IPv6-Probleme ein. Die reine IPv4-ARP-Tabelle genügt nicht.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

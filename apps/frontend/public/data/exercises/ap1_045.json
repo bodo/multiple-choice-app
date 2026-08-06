@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Server und Speicher"
-  ],
-  "instruction": "Was stellt ein NAS im Netzwerk typischerweise bereit?",
-  "answerOptions": [
-    "Dateifreigaben über Protokolle wie SMB oder NFS",
-    "Nur rohe CPU-Rechenkerne",
-    "Ausschließlich DNS-Zonen",
-    "Ein öffentliches Mobilfunknetz"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Network Attached Storage stellt dateibasierten Speicher über das Netzwerk zur Verfügung.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Server und Speicher"
+    ],
+    "instruction": "Was stellt ein NAS im Netzwerk typischerweise bereit?",
+    "answerOptions": [
+        "Dateifreigaben über Protokolle wie SMB oder NFS",
+        "Nur rohe CPU-Rechenkerne",
+        "Ausschließlich DNS-Zonen",
+        "Ein öffentliches Mobilfunknetz"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Network Attached Storage stellt dateibasierten Speicher über das Netzwerk zur Verfügung.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

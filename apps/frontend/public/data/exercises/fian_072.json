@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Projektmanagement und Wirtschaftlichkeit"
-  ],
-  "instruction": "Wofür eignet sich ein Gantt-Diagramm besonders?",
-  "answerOptions": [
-    "Zeitliche Lage, Dauer und Überlappung von Vorgängen darstellen",
-    "Quellcode kompilieren",
-    "Datenbanktabellen normalisieren",
-    "Passwörter hashen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Gantt-Diagramm visualisiert Vorgänge auf einer Zeitachse und macht Dauer, Abhängigkeiten und parallele Arbeiten sichtbar.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Projektmanagement und Wirtschaftlichkeit"
+    ],
+    "instruction": "Wofür eignet sich ein Gantt-Diagramm besonders?",
+    "answerOptions": [
+        "Zeitliche Lage, Dauer und Überlappung von Vorgängen darstellen",
+        "Quellcode kompilieren",
+        "Datenbanktabellen normalisieren",
+        "Passwörter hashen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Gantt-Diagramm visualisiert Vorgänge auf einer Zeitachse und macht Dauer, Abhängigkeiten und parallele Arbeiten sichtbar.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

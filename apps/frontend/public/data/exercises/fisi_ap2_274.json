@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "PKI und TLS-Betrieb"
-  ],
-  "instruction": "Warum darf ein privater TLS-Schlüssel nicht im Konfigurationsrepository liegen?",
-  "answerOptions": [
-    "Wer ihn erlangt, kann sich je nach Kontext als Dienst ausgeben oder Verkehr entschlüsseln.",
-    "Git kann keine Binärdaten speichern.",
-    "Der Schlüssel verändert DNS-TTLs.",
-    "TLS verwendet keine privaten Schlüssel."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Private Schlüssel sind Secrets und benötigen Zugriffsschutz, Rotation und gegebenenfalls Hardwarebindung.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "PKI und TLS-Betrieb"
+    ],
+    "instruction": "Warum darf ein privater TLS-Schlüssel nicht im Konfigurationsrepository liegen?",
+    "answerOptions": [
+        "Wer ihn erlangt, kann sich je nach Kontext als Dienst ausgeben oder Verkehr entschlüsseln.",
+        "Git kann keine Binärdaten speichern.",
+        "Der Schlüssel verändert DNS-TTLs.",
+        "TLS verwendet keine privaten Schlüssel."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Private Schlüssel sind Secrets und benötigen Zugriffsschutz, Rotation und gegebenenfalls Hardwarebindung.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "conceptContradiction",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

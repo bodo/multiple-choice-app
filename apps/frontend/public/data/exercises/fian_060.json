@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Testen und Qualitätssicherung"
-  ],
-  "instruction": "Welche Aussage zur Code-Coverage ist richtig?",
-  "answerOptions": [
-    "100 % Coverage beweist vollständige Fehlerfreiheit.",
-    "Coverage zeigt ausgeführten Code, bewertet aber nicht automatisch die Qualität der Prüfungen.",
-    "Coverage ist nur bei Datenbanken möglich.",
-    "Eine niedrige Coverage garantiert korrekte Randfälle."
-  ],
-  "correct": [1],
-  "explainInstruction": "Coverage ist ein nützlicher Hinweis auf ungetestete Bereiche. Auch ausgeführter Code kann jedoch ohne sinnvolle Assertions oder Randfälle fehlerhaft bleiben.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Testen und Qualitätssicherung"
+    ],
+    "instruction": "Welche Aussage zur Code-Coverage ist richtig?",
+    "answerOptions": [
+        "100 % Coverage beweist vollständige Fehlerfreiheit.",
+        "Coverage zeigt ausgeführten Code, bewertet aber nicht automatisch die Qualität der Prüfungen.",
+        "Coverage ist nur bei Datenbanken möglich.",
+        "Eine niedrige Coverage garantiert korrekte Randfälle."
+    ],
+    "correct": [
+        1
+    ],
+    "explainInstruction": "Coverage ist ein nützlicher Hinweis auf ungetestete Bereiche. Auch ausgeführter Code kann jedoch ohne sinnvolle Assertions oder Randfälle fehlerhaft bleiben.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "0": "numericalCalculationTrap",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Rechnungswesen und Finanzierung"
-  ],
-  "instruction": "Welche Formel beschreibt die Gesamtkapitalrentabilität vereinfacht?",
-  "answerOptions": [
-    "`(Gewinn + Fremdkapitalzinsen) ÷ Gesamtkapital × 100`",
-    "`Gesamtkapital ÷ Umsatz × 100`",
-    "`Kosten + Erlöse`",
-    "`Stückzahl ÷ Arbeitszeit`"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Kennzahl misst, wie sich das insgesamt eingesetzte Kapital unabhängig von seiner Herkunft verzinst.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Rechnungswesen und Finanzierung"
+    ],
+    "instruction": "Welche Formel beschreibt die Gesamtkapitalrentabilität vereinfacht?",
+    "answerOptions": [
+        "`(Gewinn + Fremdkapitalzinsen) ÷ Gesamtkapital × 100`",
+        "`Gesamtkapital ÷ Umsatz × 100`",
+        "`Kosten + Erlöse`",
+        "`Stückzahl ÷ Arbeitszeit`"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Kennzahl misst, wie sich das insgesamt eingesetzte Kapital unabhängig von seiner Herkunft verzinst.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "numericalCalculationTrap",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

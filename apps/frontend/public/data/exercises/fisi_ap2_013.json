@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": false,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "IPv4-Subnetting"
-  ],
-  "instruction": "Welche Netzadresse gehört zur Hostadresse 198.51.100.99/25?",
-  "answerOptions": [
-    "198.51.100.0",
-    "198.51.100.64",
-    "198.51.100.99",
-    "198.51.100.128"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ein /25 teilt das /24 in die Blöcke 0 bis 127 und 128 bis 255.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": false,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "IPv4-Subnetting"
+    ],
+    "instruction": "Welche Netzadresse gehört zur Hostadresse 198.51.100.99/25?",
+    "answerOptions": [
+        "198.51.100.0",
+        "198.51.100.64",
+        "198.51.100.99",
+        "198.51.100.128"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein /25 teilt das /24 in die Blöcke 0 bis 127 und 128 bis 255.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "numericalCalculationTrap",
+        "2": "numericalCalculationTrap",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

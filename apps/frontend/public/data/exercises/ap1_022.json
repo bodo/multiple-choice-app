@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Computergrundlagen"
-  ],
-  "instruction": "Was ist ein CPU-Kern?",
-  "answerOptions": [
-    "Eine weitgehend eigenständige Verarbeitungseinheit innerhalb eines Prozessors",
-    "Ein dauerhaftes Dateisystem",
-    "Ein Anschluss für Monitorkabel",
-    "Eine Sicherungskopie des Betriebssystems"
-  ],
-  "correct": [0],
-  "explainInstruction": "Mehrere Kerne können Befehlsfolgen parallel bearbeiten, sofern Software und Arbeitslast dies zulassen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Computergrundlagen"
+    ],
+    "instruction": "Was ist ein CPU-Kern?",
+    "answerOptions": [
+        "Eine weitgehend eigenständige Verarbeitungseinheit innerhalb eines Prozessors",
+        "Ein dauerhaftes Dateisystem",
+        "Ein Anschluss für Monitorkabel",
+        "Eine Sicherungskopie des Betriebssystems"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Mehrere Kerne können Befehlsfolgen parallel bearbeiten, sofern Software und Arbeitslast dies zulassen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

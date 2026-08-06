@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was regelt eine Softwarelizenz hauptsächlich?",
-  "answerOptions": [
-    "In welchem Umfang die Software genutzt, vervielfältigt oder weitergegeben werden darf",
-    "Ob der Hersteller Steuern zahlen muss",
-    "Welche IP-Adresse der Benutzer erhält",
-    "Wie hoch die Bildschirmauflösung sein muss"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Lizenz räumt Nutzungsrechte unter bestimmten Bedingungen ein. Eigentum an einem Datenträger und Nutzungsrechte sind nicht dasselbe."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was regelt eine Softwarelizenz hauptsächlich?",
+    "answerOptions": [
+        "In welchem Umfang die Software genutzt, vervielfältigt oder weitergegeben werden darf",
+        "Ob der Hersteller Steuern zahlen muss",
+        "Welche IP-Adresse der Benutzer erhält",
+        "Wie hoch die Bildschirmauflösung sein muss"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Lizenz räumt Nutzungsrechte unter bestimmten Bedingungen ein. Eigentum an einem Datenträger und Nutzungsrechte sind nicht dasselbe.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Was kennzeichnet ein ausgefüllter schwarzer Kreis in einem Aktivitätsdiagramm?",
-  "answerOptions": [
-    "Den Start eines Ablaufs",
-    "Das Ende der gesamten Aktivität",
-    "Eine parallele Verzweigung",
-    "Eine externe Rolle"
-  ],
-  "correct": [0],
-  "explainInstruction": "Der Initialknoten wird als ausgefüllter Kreis dargestellt und markiert den Beginn des Kontrollflusses.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Aktivitätsdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Was kennzeichnet ein ausgefüllter schwarzer Kreis in einem Aktivitätsdiagramm?",
+    "answerOptions": [
+        "Den Start eines Ablaufs",
+        "Das Ende der gesamten Aktivität",
+        "Eine parallele Verzweigung",
+        "Eine externe Rolle"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Initialknoten wird als ausgefüllter Kreis dargestellt und markiert den Beginn des Kontrollflusses.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Aktivitätsdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "APIs und Datenformate"
-  ],
-  "instruction": "Welche Maßnahmen schützen API-Zugangsdaten? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Token mit minimalem Scope verwenden",
-    "Token über Secret Store bereitstellen",
-    "Token rotieren und Nutzung protokollieren",
-    "Token in die Versionsverwaltung committen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Begrenzter Scope, kontrollierte Speicherung, Rotation und Audit reduzieren Folgen eines Leaks.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "APIs und Datenformate"
+    ],
+    "instruction": "Welche Maßnahmen schützen API-Zugangsdaten? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Token mit minimalem Scope verwenden",
+        "Token über Secret Store bereitstellen",
+        "Token rotieren und Nutzung protokollieren",
+        "Token in die Versionsverwaltung committen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Begrenzter Scope, kontrollierte Speicherung, Rotation und Audit reduzieren Folgen eines Leaks.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

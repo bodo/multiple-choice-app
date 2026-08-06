@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was ist ein typischer Grundgedanke einer Copyleft-Lizenz?",
-  "answerOptions": [
-    "Bestimmte Weitergaben abgeleiteter Software müssen unter entsprechenden Lizenzbedingungen erfolgen",
-    "Jede Nutzung im Unternehmen ist verboten",
-    "Der Quellcode darf niemals verändert werden",
-    "Das Urheberrecht wird vollständig aufgehoben"
-  ],
-  "correct": [0],
-  "explainInstruction": "Copyleft knüpft die Weitergabe häufig an Pflichten, die Freiheiten der Lizenz auch für abgeleitete Werke zu erhalten."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was ist ein typischer Grundgedanke einer Copyleft-Lizenz?",
+    "answerOptions": [
+        "Bestimmte Weitergaben abgeleiteter Software müssen unter entsprechenden Lizenzbedingungen erfolgen",
+        "Jede Nutzung im Unternehmen ist verboten",
+        "Der Quellcode darf niemals verändert werden",
+        "Das Urheberrecht wird vollständig aufgehoben"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Copyleft knüpft die Weitergabe häufig an Pflichten, die Freiheiten der Lizenz auch für abgeleitete Werke zu erhalten.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

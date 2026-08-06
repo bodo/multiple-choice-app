@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Wie haften die Gesellschafter einer OHG grundsätzlich?",
-  "answerOptions": [
-    "Persönlich, unbeschränkt und gesamtschuldnerisch",
-    "Nur bis zum Wert einer einzelnen Aktie",
-    "Überhaupt nicht",
-    "Nur gegenüber Beschäftigten"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die OHG ist eine Personengesellschaft, deren Gesellschafter grundsätzlich persönlich und unbeschränkt haften.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Wie haften die Gesellschafter einer OHG grundsätzlich?",
+    "answerOptions": [
+        "Persönlich, unbeschränkt und gesamtschuldnerisch",
+        "Nur bis zum Wert einer einzelnen Aktie",
+        "Überhaupt nicht",
+        "Nur gegenüber Beschäftigten"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die OHG ist eine Personengesellschaft, deren Gesellschafter grundsätzlich persönlich und unbeschränkt haften.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "negationOversight",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

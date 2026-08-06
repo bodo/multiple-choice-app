@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "PowerShell"
-  ],
-  "instruction": "Warum ist `Export-Csv` für strukturierte Inventardaten geeigneter als manuell zusammengesetzte Textzeilen?",
-  "answerOptions": [
-    "Eigenschaften werden konsistent in Spalten serialisiert.",
-    "CSV ist grundsätzlich verschlüsselt.",
-    "CSV kann keine Sonderzeichen enthalten.",
-    "CSV ersetzt die Datenbanktransaktion."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Strukturierte Serialisierung vermeidet fragile Stringverkettung und erleichtert Weiterverarbeitung.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "PowerShell"
+    ],
+    "instruction": "Warum ist `Export-Csv` für strukturierte Inventardaten geeigneter als manuell zusammengesetzte Textzeilen?",
+    "answerOptions": [
+        "Eigenschaften werden konsistent in Spalten serialisiert.",
+        "CSV ist grundsätzlich verschlüsselt.",
+        "CSV kann keine Sonderzeichen enthalten.",
+        "CSV ersetzt die Datenbanktransaktion."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Strukturierte Serialisierung vermeidet fragile Stringverkettung und erleichtert Weiterverarbeitung.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "negationOversight",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

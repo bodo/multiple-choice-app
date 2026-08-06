@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Welches Protokoll gehört zur Anwendungsschicht?",
-  "answerOptions": [
-    "Ethernet",
-    "IP",
-    "TCP",
-    "HTTP"
-  ],
-  "correct": [3],
-  "explainInstruction": "HTTP stellt Webanwendungen einen Dienst auf Anwendungsebene bereit. Ethernet, IP und TCP liegen darunter.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Welches Protokoll gehört zur Anwendungsschicht?",
+    "answerOptions": [
+        "Ethernet",
+        "IP",
+        "TCP",
+        "HTTP"
+    ],
+    "correct": [
+        3
+    ],
+    "explainInstruction": "HTTP stellt Webanwendungen einen Dienst auf Anwendungsebene bereit. Ethernet, IP und TCP liegen darunter.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "conceptContradiction",
+        "1": "conceptContradiction",
+        "2": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

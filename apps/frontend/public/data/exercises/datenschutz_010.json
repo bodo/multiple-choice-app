@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was verlangt der Grundsatz der Speicherbegrenzung?",
-  "answerOptions": [
-    "Personenbeziehbare Daten nur so lange speichern, wie es für den Zweck erforderlich ist",
-    "Alle Daten mindestens 30 Jahre aufbewahren",
-    "Nach Zweckfortfall lediglich den Dateinamen ändern",
-    "Sicherheitskopien grundsätzlich unbegrenzt behalten"
-  ],
-  "correct": [0],
-  "explainInstruction": "Nach Wegfall des Zwecks und entgegenstehender Pflichten müssen Daten nach einem geregelten Löschkonzept entfernt werden."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was verlangt der Grundsatz der Speicherbegrenzung?",
+    "answerOptions": [
+        "Personenbeziehbare Daten nur so lange speichern, wie es für den Zweck erforderlich ist",
+        "Alle Daten mindestens 30 Jahre aufbewahren",
+        "Nach Zweckfortfall lediglich den Dateinamen ändern",
+        "Sicherheitskopien grundsätzlich unbegrenzt behalten"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Nach Wegfall des Zwecks und entgegenstehender Pflichten müssen Daten nach einem geregelten Löschkonzept entfernt werden.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

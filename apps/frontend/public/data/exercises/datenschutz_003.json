@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was unterscheidet Pseudonymisierung von Anonymisierung?",
-  "answerOptions": [
-    "Pseudonymisierte Daten können mit Zusatzinformationen wieder einer Person zugeordnet werden",
-    "Pseudonymisierte Daten fallen grundsätzlich nicht mehr unter die DSGVO",
-    "Anonymisierte Daten benötigen immer einen geheimen Zuordnungsschlüssel",
-    "Zwischen beiden Verfahren besteht kein Unterschied"
-  ],
-  "correct": [0],
-  "explainInstruction": "Pseudonymisierung reduziert die direkte Zuordenbarkeit, hebt den Personenbezug aber nicht auf. Wirksame Anonymisierung ist nicht mehr rückführbar."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was unterscheidet Pseudonymisierung von Anonymisierung?",
+    "answerOptions": [
+        "Pseudonymisierte Daten können mit Zusatzinformationen wieder einer Person zugeordnet werden",
+        "Pseudonymisierte Daten fallen grundsätzlich nicht mehr unter die DSGVO",
+        "Anonymisierte Daten benötigen immer einen geheimen Zuordnungsschlüssel",
+        "Zwischen beiden Verfahren besteht kein Unterschied"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Pseudonymisierung reduziert die direkte Zuordenbarkeit, hebt den Personenbezug aber nicht auf. Wirksame Anonymisierung ist nicht mehr rückführbar.",
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "absoluteStatementTrap",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

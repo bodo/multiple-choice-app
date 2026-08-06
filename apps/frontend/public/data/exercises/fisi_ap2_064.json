@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "IPv6"
-  ],
-  "instruction": "Welches Präfix wird für typische globale IPv6-Unicast-Adressen verwendet?",
-  "answerOptions": [
-    "2000::/3",
-    "fe80::/10",
-    "ff00::/8",
-    "::1/128"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Der aktuell allgemein verwendete globale Unicast-Bereich liegt in 2000::/3.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "IPv6"
+    ],
+    "instruction": "Welches Präfix wird für typische globale IPv6-Unicast-Adressen verwendet?",
+    "answerOptions": [
+        "2000::/3",
+        "fe80::/10",
+        "ff00::/8",
+        "::1/128"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der aktuell allgemein verwendete globale Unicast-Bereich liegt in 2000::/3.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "numericalCalculationTrap",
+        "2": "numericalCalculationTrap",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

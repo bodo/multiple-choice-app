@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Was bewirkt ein Fork-Knoten in einem Aktivitätsdiagramm?",
-  "answerOptions": [
-    "Er teilt einen Ablauf in parallel ausführbare Pfade auf",
-    "Er wählt genau einen alternativen Pfad anhand einer Bedingung",
-    "Er beendet alle laufenden Pfade",
-    "Er verbindet eine Unterklasse mit ihrer Oberklasse"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Fork wird als Balken dargestellt und vervielfacht den eingehenden Kontrollfluss auf mehrere parallel ausführbare Pfade.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Aktivitätsdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Was bewirkt ein Fork-Knoten in einem Aktivitätsdiagramm?",
+    "answerOptions": [
+        "Er teilt einen Ablauf in parallel ausführbare Pfade auf",
+        "Er wählt genau einen alternativen Pfad anhand einer Bedingung",
+        "Er beendet alle laufenden Pfade",
+        "Er verbindet eine Unterklasse mit ihrer Oberklasse"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Fork wird als Balken dargestellt und vervielfacht den eingehenden Kontrollfluss auf mehrere parallel ausführbare Pfade.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Aktivitätsdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Welche Dimensionen umfasst nachhaltiges Wirtschaften typischerweise?",
-  "answerOptions": [
-    "Ökologische",
-    "Ökonomische",
-    "Soziale",
-    "Ausschließlich kurzfristige finanzielle"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Nachhaltigkeit betrachtet Umwelt, langfristige wirtschaftliche Tragfähigkeit und soziale Auswirkungen gemeinsam.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Welche Dimensionen umfasst nachhaltiges Wirtschaften typischerweise?",
+    "answerOptions": [
+        "Ökologische",
+        "Ökonomische",
+        "Soziale",
+        "Ausschließlich kurzfristige finanzielle"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Nachhaltigkeit betrachtet Umwelt, langfristige wirtschaftliche Tragfähigkeit und soziale Auswirkungen gemeinsam.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

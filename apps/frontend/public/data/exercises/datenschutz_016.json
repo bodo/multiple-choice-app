@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Merkmale gehören zu einer wirksamen Einwilligung?",
-  "answerOptions": [
-    "Freiwillig",
-    "Für bestimmte Zwecke informiert",
-    "Durch eine eindeutige bestätigende Handlung",
-    "Unwiderruflich für alle zukünftigen Verarbeitungen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Eine Einwilligung muss freiwillig, informiert, bestimmt und eindeutig sein. Sie kann für die Zukunft widerrufen werden."
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Merkmale gehören zu einer wirksamen Einwilligung?",
+    "answerOptions": [
+        "Freiwillig",
+        "Für bestimmte Zwecke informiert",
+        "Durch eine eindeutige bestätigende Handlung",
+        "Unwiderruflich für alle zukünftigen Verarbeitungen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Eine Einwilligung muss freiwillig, informiert, bestimmt und eindeutig sein. Sie kann für die Zukunft widerrufen werden.",
+    "distractorTypes": {
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

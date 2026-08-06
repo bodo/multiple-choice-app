@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Firewall und Segmentierung"
-  ],
-  "instruction": "Welche Angaben gehören in eine prüfbare Firewallfreigabe? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Quelle und Ziel",
-    "Protokoll und Port",
-    "Fachlicher Zweck und Verantwortliche",
-    "Dauerhaft „any-any“, weil es einfacher ist"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Technischer Scope, Zweck, Eigentümer und gegebenenfalls Ablaufdatum ermöglichen Review und spätere Bereinigung.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Firewall und Segmentierung"
+    ],
+    "instruction": "Welche Angaben gehören in eine prüfbare Firewallfreigabe? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Quelle und Ziel",
+        "Protokoll und Port",
+        "Fachlicher Zweck und Verantwortliche",
+        "Dauerhaft „any-any“, weil es einfacher ist"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Technischer Scope, Zweck, Eigentümer und gegebenenfalls Ablaufdatum ermöglichen Review und spätere Bereinigung.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

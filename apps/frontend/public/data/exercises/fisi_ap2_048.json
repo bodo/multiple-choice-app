@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "DNS, DHCP und Zeitdienste"
-  ],
-  "instruction": "Ein DHCP-Relay wird benötigt, weil ...",
-  "answerOptions": [
-    "DHCP-Broadcasts Router normalerweise nicht passieren.",
-    "DNS ausschließlich TCP verwendet.",
-    "VLAN-Tags nicht über Switches laufen.",
-    "NTP keine IP-Adressen unterstützt."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Der Relay-Agent nimmt Broadcast-Anfragen im Clientnetz entgegen und leitet sie als Unicast zum DHCP-Server weiter.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "DNS, DHCP und Zeitdienste"
+    ],
+    "instruction": "Ein DHCP-Relay wird benötigt, weil ...",
+    "answerOptions": [
+        "DHCP-Broadcasts Router normalerweise nicht passieren.",
+        "DNS ausschließlich TCP verwendet.",
+        "VLAN-Tags nicht über Switches laufen.",
+        "NTP keine IP-Adressen unterstützt."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Relay-Agent nimmt Broadcast-Anfragen im Clientnetz entgegen und leitet sie als Unicast zum DHCP-Server weiter.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "negationOversight",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

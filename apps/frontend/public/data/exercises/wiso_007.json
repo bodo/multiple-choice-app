@@ -1,31 +1,37 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 5,
-  "difficulty": 2,
-  "categories": [
-    "WiSo",
-    "Ausbildung und Arbeitsrecht"
-  ],
-  "instruction": "Welche Pflichten haben Auszubildende nach dem Berufsbildungsgesetz?",
-  "answerOptions": [
-    "Sich bemühen, die berufliche Handlungsfähigkeit zu erwerben",
-    "Übertragene Aufgaben sorgfältig ausführen",
-    "Weisungen berechtigter Personen folgen",
-    "Betriebs- und Geschäftsgeheimnisse wahren",
-    "Alle privaten Kosten des Ausbildungsbetriebs übernehmen"
-  ],
-  "correct": [
-    0,
-    1,
-    2,
-    3
-  ],
-  "explainInstruction": "Lern-, Sorgfalts-, Weisungs- und Geheimhaltungspflichten gehören zu den gesetzlichen Pflichten. Private Betriebskosten müssen Auszubildende nicht tragen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 5,
+    "difficulty": 2,
+    "categories": [
+        "WiSo",
+        "Ausbildung und Arbeitsrecht"
+    ],
+    "instruction": "Welche Pflichten haben Auszubildende nach dem Berufsbildungsgesetz?",
+    "answerOptions": [
+        "Sich bemühen, die berufliche Handlungsfähigkeit zu erwerben",
+        "Übertragene Aufgaben sorgfältig ausführen",
+        "Weisungen berechtigter Personen folgen",
+        "Betriebs- und Geschäftsgeheimnisse wahren",
+        "Alle privaten Kosten des Ausbildungsbetriebs übernehmen"
+    ],
+    "correct": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "explainInstruction": "Lern-, Sorgfalts-, Weisungs- und Geheimhaltungspflichten gehören zu den gesetzlichen Pflichten. Private Betriebskosten müssen Auszubildende nicht tragen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "4": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "4": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

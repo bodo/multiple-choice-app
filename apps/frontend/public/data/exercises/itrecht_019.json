@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Handlung erfasst § 202a StGB grundsätzlich?",
-  "answerOptions": [
-    "Unbefugten Zugang zu besonders gesicherten, nicht für den Täter bestimmten Daten unter Überwindung der Zugangssicherung",
-    "Das Lesen der eigenen lokal gespeicherten Datei",
-    "Die freiwillige Veröffentlichung eigener Kontaktdaten",
-    "Die Installation eines genehmigten Sicherheitsupdates"
-  ],
-  "correct": [0],
-  "explainInstruction": "§ 202a StGB betrifft das unbefugte Verschaffen des Zugangs zu besonders gesicherten Daten, die nicht für den Täter bestimmt sind."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Handlung erfasst § 202a StGB grundsätzlich?",
+    "answerOptions": [
+        "Unbefugten Zugang zu besonders gesicherten, nicht für den Täter bestimmten Daten unter Überwindung der Zugangssicherung",
+        "Das Lesen der eigenen lokal gespeicherten Datei",
+        "Die freiwillige Veröffentlichung eigener Kontaktdaten",
+        "Die Installation eines genehmigten Sicherheitsupdates"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "§ 202a StGB betrifft das unbefugte Verschaffen des Zugangs zu besonders gesicherten Daten, die nicht für den Täter bestimmt sind.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

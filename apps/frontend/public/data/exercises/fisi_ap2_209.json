@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "Logs, Traces und SNMP"
-  ],
-  "instruction": "Welche Schutzmaßnahmen gelten für zentrale Logs? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Zugriff beschränken",
-    "Manipulation und Löschung nachvollziehbar machen",
-    "Aufbewahrung und Löschung definieren",
-    "Beliebige personenbezogene Inhalte unbegrenzt sammeln"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Logs enthalten oft sensible Daten und brauchen Zugriffsschutz, Integrität sowie begrenzte, zweckgebundene Aufbewahrung.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "Logs, Traces und SNMP"
+    ],
+    "instruction": "Welche Schutzmaßnahmen gelten für zentrale Logs? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Zugriff beschränken",
+        "Manipulation und Löschung nachvollziehbar machen",
+        "Aufbewahrung und Löschung definieren",
+        "Beliebige personenbezogene Inhalte unbegrenzt sammeln"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Logs enthalten oft sensible Daten und brauchen Zugriffsschutz, Integrität sowie begrenzte, zweckgebundene Aufbewahrung.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wann entsteht urheberrechtlicher Schutz an einem ausreichend individuellen Computerprogramm grundsätzlich?",
-  "answerOptions": [
-    "Mit seiner Schaffung, ohne dass eine Registrierung erforderlich ist",
-    "Erst nach Eintragung in das Handelsregister",
-    "Nur nach Veröffentlichung des vollständigen Quellcodes",
-    "Erst zehn Jahre nach Fertigstellung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Urheberrechtlicher Schutz entsteht grundsätzlich durch die Schöpfung des geschützten Werks, nicht durch ein Registerverfahren."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wann entsteht urheberrechtlicher Schutz an einem ausreichend individuellen Computerprogramm grundsätzlich?",
+    "answerOptions": [
+        "Mit seiner Schaffung, ohne dass eine Registrierung erforderlich ist",
+        "Erst nach Eintragung in das Handelsregister",
+        "Nur nach Veröffentlichung des vollständigen Quellcodes",
+        "Erst zehn Jahre nach Fertigstellung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Urheberrechtlicher Schutz entsteht grundsätzlich durch die Schöpfung des geschützten Werks, nicht durch ein Registerverfahren.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

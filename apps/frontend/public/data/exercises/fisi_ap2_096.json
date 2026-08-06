@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Identitäts- und Verzeichnisdienste"
-  ],
-  "instruction": "Ein Kerberos-Login scheitert nach einer starken Zeitabweichung des Clients. Warum?",
-  "answerOptions": [
-    "Kerberos prüft Zeitfenster, um Replay-Angriffe zu erschweren.",
-    "Kerberos verwendet ausschließlich die lokale MAC-Adresse.",
-    "Kerberos benötigt dieselbe Bildschirmauflösung.",
-    "Kerberos speichert Tickets nur auf RAID 0."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Kerberos-Tickets sind zeitgebunden. Größere Zeitabweichungen können ihre Gültigkeitsprüfung scheitern lassen.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Identitäts- und Verzeichnisdienste"
+    ],
+    "instruction": "Ein Kerberos-Login scheitert nach einer starken Zeitabweichung des Clients. Warum?",
+    "answerOptions": [
+        "Kerberos prüft Zeitfenster, um Replay-Angriffe zu erschweren.",
+        "Kerberos verwendet ausschließlich die lokale MAC-Adresse.",
+        "Kerberos benötigt dieselbe Bildschirmauflösung.",
+        "Kerberos speichert Tickets nur auf RAID 0."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Kerberos-Tickets sind zeitgebunden. Größere Zeitabweichungen können ihre Gültigkeitsprüfung scheitern lassen.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

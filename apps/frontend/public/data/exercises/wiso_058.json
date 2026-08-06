@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Was bedeutet Deflation?",
-  "answerOptions": [
-    "Das allgemeine Preisniveau sinkt anhaltend.",
-    "Nur ein Produkt wird teurer.",
-    "Löhne steigen immer stärker als Preise.",
-    "Der Staat erhöht zwingend die Umsatzsteuer."
-  ],
-  "correct": [0],
-  "explainInstruction": "Deflation bezeichnet einen anhaltenden Rückgang des allgemeinen Preisniveaus und kann Konsum sowie Investitionen verzögern.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Was bedeutet Deflation?",
+    "answerOptions": [
+        "Das allgemeine Preisniveau sinkt anhaltend.",
+        "Nur ein Produkt wird teurer.",
+        "Löhne steigen immer stärker als Preise.",
+        "Der Staat erhöht zwingend die Umsatzsteuer."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Deflation bezeichnet einen anhaltenden Rückgang des allgemeinen Preisniveaus und kann Konsum sowie Investitionen verzögern.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

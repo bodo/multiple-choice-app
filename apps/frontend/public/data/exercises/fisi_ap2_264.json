@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Hardening und privilegierte Zugriffe"
-  ],
-  "instruction": "Was ist eine sichere Ausgangsbasis beim Server-Hardening?",
-  "answerOptions": [
-    "Nicht benötigte Dienste, Pakete und Konten deaktivieren oder entfernen",
-    "Alle Ports für spätere Anforderungen öffnen",
-    "Standardpasswörter beibehalten",
-    "Logs abschalten"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Weniger aktive Komponenten bedeuten weniger Angriffsfläche und Pflegeaufwand.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Hardening und privilegierte Zugriffe"
+    ],
+    "instruction": "Was ist eine sichere Ausgangsbasis beim Server-Hardening?",
+    "answerOptions": [
+        "Nicht benötigte Dienste, Pakete und Konten deaktivieren oder entfernen",
+        "Alle Ports für spätere Anforderungen öffnen",
+        "Standardpasswörter beibehalten",
+        "Logs abschalten"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Weniger aktive Komponenten bedeuten weniger Angriffsfläche und Pflegeaufwand.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

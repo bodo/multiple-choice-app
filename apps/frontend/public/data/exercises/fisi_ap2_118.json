@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Betriebssystem- und Dienstverwaltung"
-  ],
-  "instruction": "Welche Signale sind für die Diagnose eines Dienststarts relevant? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Exit-Code",
-    "Standardfehler bzw. Journalmeldung",
-    "Status abhängiger Dienste",
-    "Wallpaper des angemeldeten Benutzers"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Exit-Code, Logs und Abhängigkeiten liefern technisch verwertbare Hinweise zum Startfehler.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Betriebssystem- und Dienstverwaltung"
+    ],
+    "instruction": "Welche Signale sind für die Diagnose eines Dienststarts relevant? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Exit-Code",
+        "Standardfehler bzw. Journalmeldung",
+        "Status abhängiger Dienste",
+        "Wallpaper des angemeldeten Benutzers"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Exit-Code, Logs und Abhängigkeiten liefern technisch verwertbare Hinweise zum Startfehler.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

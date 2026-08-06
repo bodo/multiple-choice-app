@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Was kennzeichnet ein Einliniensystem?",
-  "answerOptions": [
-    "Jede Stelle erhält Weisungen grundsätzlich von genau einer übergeordneten Stelle.",
-    "Jede Stelle hat beliebig viele gleichrangige Vorgesetzte.",
-    "Es gibt keine Zuständigkeiten.",
-    "Nur externe Personen dürfen entscheiden."
-  ],
-  "correct": [0],
-  "explainInstruction": "Das Einliniensystem schafft eindeutige Weisungswege, kann bei tiefen Hierarchien aber langsam werden.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Was kennzeichnet ein Einliniensystem?",
+    "answerOptions": [
+        "Jede Stelle erhält Weisungen grundsätzlich von genau einer übergeordneten Stelle.",
+        "Jede Stelle hat beliebig viele gleichrangige Vorgesetzte.",
+        "Es gibt keine Zuständigkeiten.",
+        "Nur externe Personen dürfen entscheiden."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Das Einliniensystem schafft eindeutige Weisungswege, kann bei tiefen Hierarchien aber langsam werden.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "negationOversight",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

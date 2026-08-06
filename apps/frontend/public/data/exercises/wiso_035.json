@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Sozialversicherung"
-  ],
-  "instruction": "Welche Leistung gehört typischerweise zur gesetzlichen Krankenversicherung?",
-  "answerOptions": [
-    "Medizinisch notwendige Behandlung bei Krankheit",
-    "Ersatz jedes privaten Sachschadens",
-    "Finanzierung eines Neuwagens",
-    "Ausgleich jedes Kursverlusts an der Börse"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Krankenversicherung übernimmt gesetzlich vorgesehene Leistungen zur Erhaltung, Wiederherstellung oder Verbesserung der Gesundheit.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Sozialversicherung"
+    ],
+    "instruction": "Welche Leistung gehört typischerweise zur gesetzlichen Krankenversicherung?",
+    "answerOptions": [
+        "Medizinisch notwendige Behandlung bei Krankheit",
+        "Ersatz jedes privaten Sachschadens",
+        "Finanzierung eines Neuwagens",
+        "Ausgleich jedes Kursverlusts an der Börse"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Krankenversicherung übernimmt gesetzlich vorgesehene Leistungen zur Erhaltung, Wiederherstellung oder Verbesserung der Gesundheit.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

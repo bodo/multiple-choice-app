@@ -1,29 +1,35 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Welche Elemente verbindet die soziale Marktwirtschaft?",
-  "answerOptions": [
-    "Marktlicher Wettbewerb",
-    "Privateigentum und Vertragsfreiheit innerhalb gesetzlicher Grenzen",
-    "Sozialer Ausgleich und soziale Sicherung",
-    "Vollständige zentrale Festlegung aller Produktionsmengen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Die soziale Marktwirtschaft verbindet Wettbewerbsordnung und private Initiative mit sozialem Ausgleich. Sie ist keine vollständige Zentralverwaltungswirtschaft.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Welche Elemente verbindet die soziale Marktwirtschaft?",
+    "answerOptions": [
+        "Marktlicher Wettbewerb",
+        "Privateigentum und Vertragsfreiheit innerhalb gesetzlicher Grenzen",
+        "Sozialer Ausgleich und soziale Sicherung",
+        "Vollständige zentrale Festlegung aller Produktionsmengen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Die soziale Marktwirtschaft verbindet Wettbewerbsordnung und private Initiative mit sozialem Ausgleich. Sie ist keine vollständige Zentralverwaltungswirtschaft.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

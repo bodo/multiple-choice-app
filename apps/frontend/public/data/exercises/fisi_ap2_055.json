@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Transport- und Anwendungsprotokolle"
-  ],
-  "instruction": "Warum verwendet TCP Sequenznummern?",
-  "answerOptions": [
-    "Um Daten geordnet zu bestätigen und Verluste zu erkennen",
-    "Um MAC-Adressen zu ersetzen",
-    "Um VLANs zu verschlüsseln",
-    "Um DNS-Zonen zu übertragen"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Sequenznummern ermöglichen geordnete, bestätigte Übertragung und Wiederholung verlorener Segmente.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Transport- und Anwendungsprotokolle"
+    ],
+    "instruction": "Warum verwendet TCP Sequenznummern?",
+    "answerOptions": [
+        "Um Daten geordnet zu bestätigen und Verluste zu erkennen",
+        "Um MAC-Adressen zu ersetzen",
+        "Um VLANs zu verschlüsseln",
+        "Um DNS-Zonen zu übertragen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Sequenznummern ermöglichen geordnete, bestätigte Übertragung und Wiederholung verlorener Segmente.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

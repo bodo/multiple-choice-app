@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": false,
-  "learningLevel": 5,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "IPv4-Subnetting"
-  ],
-  "instruction": "Welche Netzadresse gehört zur Hostadresse 10.20.35.200/27?",
-  "answerOptions": [
-    "10.20.35.160",
-    "10.20.35.192",
-    "10.20.35.199",
-    "10.20.35.224"
-  ],
-  "correct": [
-    1
-  ],
-  "explainInstruction": "Bei /27 beträgt die Blockgröße 32. Der Block beginnt bei 192 und endet bei 223.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": false,
+    "learningLevel": 5,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "IPv4-Subnetting"
+    ],
+    "instruction": "Welche Netzadresse gehört zur Hostadresse 10.20.35.200/27?",
+    "answerOptions": [
+        "10.20.35.160",
+        "10.20.35.192",
+        "10.20.35.199",
+        "10.20.35.224"
+    ],
+    "correct": [
+        1
+    ],
+    "explainInstruction": "Bei /27 beträgt die Blockgröße 32. Der Block beginnt bei 192 und endet bei 223.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "numericalCalculationTrap",
+        "2": "numericalCalculationTrap",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

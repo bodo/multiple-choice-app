@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "WLAN-Planung"
-  ],
-  "instruction": "Für ein 5-GHz-WLAN werden überlappungsfreie Kanäle und hohe Kapazität benötigt. Welche Planung ist sinnvoll?",
-  "answerOptions": [
-    "Kanalbelegung nach Standortmessung koordinieren",
-    "Alle Access Points stets mit maximaler Leistung auf demselben Kanal betreiben",
-    "SSID-Broadcast deaktivieren und keine weitere Maßnahme treffen",
-    "Nur die Namen der Access Points ändern"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Eine Ausleuchtung und koordinierte Kanal-/Leistungsplanung reduziert Gleich- und Nachbarkanalstörungen.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "WLAN-Planung"
+    ],
+    "instruction": "Für ein 5-GHz-WLAN werden überlappungsfreie Kanäle und hohe Kapazität benötigt. Welche Planung ist sinnvoll?",
+    "answerOptions": [
+        "Kanalbelegung nach Standortmessung koordinieren",
+        "Alle Access Points stets mit maximaler Leistung auf demselben Kanal betreiben",
+        "SSID-Broadcast deaktivieren und keine weitere Maßnahme treffen",
+        "Nur die Namen der Access Points ändern"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine Ausleuchtung und koordinierte Kanal-/Leistungsplanung reduziert Gleich- und Nachbarkanalstörungen.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "negationOversight",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Welche Reihenfolge beschreibt einen typischen Konjunkturzyklus?",
-  "answerOptions": [
-    "Aufschwung → Boom → Abschwung → Tiefphase",
-    "Boom → Tiefphase → Aufschwung → Abschwung",
-    "Inflation → Monopol → Tarifvertrag → Bilanz",
-    "Angebot → Steuer → Eigentum → Streik"
-  ],
-  "correct": [0],
-  "explainInstruction": "Konjunkturzyklen werden häufig in Aufschwung, Hochkonjunktur, Abschwung und Tiefphase gegliedert.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Welche Reihenfolge beschreibt einen typischen Konjunkturzyklus?",
+    "answerOptions": [
+        "Aufschwung → Boom → Abschwung → Tiefphase",
+        "Boom → Tiefphase → Aufschwung → Abschwung",
+        "Inflation → Monopol → Tarifvertrag → Bilanz",
+        "Angebot → Steuer → Eigentum → Streik"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Konjunkturzyklen werden häufig in Aufschwung, Hochkonjunktur, Abschwung und Tiefphase gegliedert.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

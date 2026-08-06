@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Ausbildung und Arbeitsrecht"
-  ],
-  "instruction": "Was unterscheidet eine außerordentliche von einer ordentlichen Kündigung?",
-  "answerOptions": [
-    "Eine außerordentliche Kündigung setzt einen wichtigen Grund voraus und erfolgt typischerweise fristlos.",
-    "Eine außerordentliche Kündigung ist immer ohne Begründung möglich.",
-    "Eine ordentliche Kündigung beendet jedes Arbeitsverhältnis sofort.",
-    "Zwischen beiden besteht kein Unterschied."
-  ],
-  "correct": [0],
-  "explainInstruction": "Eine außerordentliche Kündigung ist nur bei einem wichtigen Grund zulässig, der die Fortsetzung bis zum Ablauf einer Frist unzumutbar macht.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Ausbildung und Arbeitsrecht"
+    ],
+    "instruction": "Was unterscheidet eine außerordentliche von einer ordentlichen Kündigung?",
+    "answerOptions": [
+        "Eine außerordentliche Kündigung setzt einen wichtigen Grund voraus und erfolgt typischerweise fristlos.",
+        "Eine außerordentliche Kündigung ist immer ohne Begründung möglich.",
+        "Eine ordentliche Kündigung beendet jedes Arbeitsverhältnis sofort.",
+        "Zwischen beiden besteht kein Unterschied."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine außerordentliche Kündigung ist nur bei einem wichtigen Grund zulässig, der die Fortsetzung bis zum Ablauf einer Frist unzumutbar macht.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

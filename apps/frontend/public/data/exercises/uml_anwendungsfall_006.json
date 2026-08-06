@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Wann ist eine `«include»`-Beziehung zwischen Anwendungsfällen sinnvoll?",
-  "answerOptions": [
-    "Wenn ein wiederverwendbarer Teilablauf in den Basis-Anwendungsfall eingefügt wird",
-    "Wenn ein vollständig optionaler Sonderfall ohne Bezug zum Basisablauf beschrieben wird",
-    "Wenn zwei Akteure dieselbe Person darstellen",
-    "Wenn die zeitliche Reihenfolge von Nachrichten festgelegt wird"
-  ],
-  "correct": [0],
-  "explainInstruction": "`«include»` lagert gemeinsam benötigtes Verhalten aus. Der Basis-Anwendungsfall bezieht dieses Verhalten in seinen Ablauf ein.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Anwendungsfalldiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Wann ist eine `«include»`-Beziehung zwischen Anwendungsfällen sinnvoll?",
+    "answerOptions": [
+        "Wenn ein wiederverwendbarer Teilablauf in den Basis-Anwendungsfall eingefügt wird",
+        "Wenn ein vollständig optionaler Sonderfall ohne Bezug zum Basisablauf beschrieben wird",
+        "Wenn zwei Akteure dieselbe Person darstellen",
+        "Wenn die zeitliche Reihenfolge von Nachrichten festgelegt wird"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "`«include»` lagert gemeinsam benötigtes Verhalten aus. Der Basis-Anwendungsfall bezieht dieses Verhalten in seinen Ablauf ein.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Anwendungsfalldiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

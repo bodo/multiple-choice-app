@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Ausbildung und Arbeitsrecht"
-  ],
-  "instruction": "Wie lange wird das Arbeitsentgelt bei unverschuldeter Arbeitsunfähigkeit wegen derselben Krankheit grundsätzlich höchstens fortgezahlt?",
-  "answerOptions": [
-    "Eine Woche",
-    "Zwei Wochen",
-    "Sechs Wochen",
-    "Ein Jahr"
-  ],
-  "correct": [2],
-  "explainInstruction": "Nach dem Entgeltfortzahlungsgesetz besteht grundsätzlich Anspruch auf bis zu sechs Wochen Entgeltfortzahlung.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Ausbildung und Arbeitsrecht"
+    ],
+    "instruction": "Wie lange wird das Arbeitsentgelt bei unverschuldeter Arbeitsunfähigkeit wegen derselben Krankheit grundsätzlich höchstens fortgezahlt?",
+    "answerOptions": [
+        "Eine Woche",
+        "Zwei Wochen",
+        "Sechs Wochen",
+        "Ein Jahr"
+    ],
+    "correct": [
+        2
+    ],
+    "explainInstruction": "Nach dem Entgeltfortzahlungsgesetz besteht grundsätzlich Anspruch auf bis zu sechs Wochen Entgeltfortzahlung.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "conceptContradiction",
+        "1": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

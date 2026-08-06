@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Welche Hauptaufgabe hat ein Router?",
-  "answerOptions": [
-    "Pakete zwischen unterschiedlichen IP-Netzen weiterleiten",
-    "Nur lokale USB-Geräte verbinden",
-    "Dateien auf einer SSD defragmentieren",
-    "Druckaufträge formatieren"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Router wählt anhand der Ziel-IP und seiner Routingtabelle einen Weg in ein anderes Netz.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Welche Hauptaufgabe hat ein Router?",
+    "answerOptions": [
+        "Pakete zwischen unterschiedlichen IP-Netzen weiterleiten",
+        "Nur lokale USB-Geräte verbinden",
+        "Dateien auf einer SSD defragmentieren",
+        "Druckaufträge formatieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Router wählt anhand der Ziel-IP und seiner Routingtabelle einen Weg in ein anderes Netz.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

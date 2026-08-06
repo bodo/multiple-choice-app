@@ -1,28 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welches Muster stellt sicher, dass eine Klasse genau ein Exemplar besitzt, und bietet einen globalen Zugriffspunkt darauf?",
-  "answerOptions": [
-    "Einzelstück (Singleton)",
-    "Prototyp (Prototype)",
-    "Fabrikmethode (Factory Method)",
-    "Fliegengewicht (Flyweight)"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Einzelstück (Singleton) kontrolliert die Instanziierung und stellt das eine Exemplar bereit.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "Erzeugungsmuster"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welches Muster stellt sicher, dass eine Klasse genau ein Exemplar besitzt, und bietet einen globalen Zugriffspunkt darauf?",
+    "answerOptions": [
+        "Einzelstück (Singleton)",
+        "Prototyp (Prototype)",
+        "Fabrikmethode (Factory Method)",
+        "Fliegengewicht (Flyweight)"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Einzelstück (Singleton) kontrolliert die Instanziierung und stellt das eine Exemplar bereit.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "Erzeugungsmuster"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

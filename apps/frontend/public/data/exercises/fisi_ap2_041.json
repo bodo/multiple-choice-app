@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Routing und NAT"
-  ],
-  "instruction": "Welche Aussagen zur längsten Präfixübereinstimmung sind richtig? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Eine /24-Route ist für passende Ziele spezifischer als eine /16-Route.",
-    "Die Default-Route /0 ist am wenigsten spezifisch.",
-    "Die Route mit der kleinsten VLAN-ID gewinnt.",
-    "Erst unter gleich spezifischen Routen werden weitere Präferenzen relevant."
-  ],
-  "correct": [
-    0,
-    1,
-    3
-  ],
-  "explainInstruction": "Zuerst entscheidet die Präfixlänge. Nur bei gleich langen passenden Präfixen kommen Quelle, Distanz oder Metrik ins Spiel.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Routing und NAT"
+    ],
+    "instruction": "Welche Aussagen zur längsten Präfixübereinstimmung sind richtig? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Eine /24-Route ist für passende Ziele spezifischer als eine /16-Route.",
+        "Die Default-Route /0 ist am wenigsten spezifisch.",
+        "Die Route mit der kleinsten VLAN-ID gewinnt.",
+        "Erst unter gleich spezifischen Routen werden weitere Präferenzen relevant."
+    ],
+    "correct": [
+        0,
+        1,
+        3
+    ],
+    "explainInstruction": "Zuerst entscheidet die Präfixlänge. Nur bei gleich langen passenden Präfixen kommen Quelle, Distanz oder Metrik ins Spiel.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "2": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

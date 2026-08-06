@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Recht"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was sollte vor der Nutzung einer neuen Softwarebibliothek in einem Produkt geprüft werden?",
-  "answerOptions": [
-    "Lizenzbedingungen und Vereinbarkeit mit der geplanten Nutzung und Weitergabe",
-    "Nur die Farbe des Logos",
-    "Ob das Repository möglichst viele Dateien enthält",
-    "Ob die Bibliothek ohne Dokumentation kompiliert"
-  ],
-  "correct": [0],
-  "explainInstruction": "Auch frei zugängliche Bibliotheken können Pflichten aus Urheberrecht und Lizenz auslösen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Recht"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was sollte vor der Nutzung einer neuen Softwarebibliothek in einem Produkt geprüft werden?",
+    "answerOptions": [
+        "Lizenzbedingungen und Vereinbarkeit mit der geplanten Nutzung und Weitergabe",
+        "Nur die Farbe des Logos",
+        "Ob das Repository möglichst viele Dateien enthält",
+        "Ob die Bibliothek ohne Dokumentation kompiliert"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Auch frei zugängliche Bibliotheken können Pflichten aus Urheberrecht und Lizenz auslösen.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

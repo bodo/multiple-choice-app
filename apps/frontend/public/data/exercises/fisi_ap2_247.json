@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "Backupstrategie"
-  ],
-  "instruction": "Welche Eigenschaften sollte eine Backup-Aufbewahrungsregel definieren? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Sicherungsintervalle",
-    "Aufbewahrungsdauern",
-    "Speicherorte und Schutzklassen",
-    "Unbegrenzte Aufbewahrung aller Daten ohne Zweckprüfung"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Intervalle, Generationen und Speicherorte folgen Wiederherstellungs- und Schutzbedarf; Aufbewahrung muss begründet sein.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "Backupstrategie"
+    ],
+    "instruction": "Welche Eigenschaften sollte eine Backup-Aufbewahrungsregel definieren? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Sicherungsintervalle",
+        "Aufbewahrungsdauern",
+        "Speicherorte und Schutzklassen",
+        "Unbegrenzte Aufbewahrung aller Daten ohne Zweckprüfung"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Intervalle, Generationen und Speicherorte folgen Wiederherstellungs- und Schutzbedarf; Aufbewahrung muss begründet sein.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

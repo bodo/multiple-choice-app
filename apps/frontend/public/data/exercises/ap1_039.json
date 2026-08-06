@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Server und Speicher"
-  ],
-  "instruction": "Wie viele Laufwerksausfälle kann ein korrekt arbeitendes RAID 6 gleichzeitig tolerieren?",
-  "answerOptions": [
-    "Keinen",
-    "Einen",
-    "Zwei",
-    "Beliebig viele"
-  ],
-  "correct": [2],
-  "explainInstruction": "RAID 6 verwendet doppelte verteilte Parität und kann den gleichzeitigen Ausfall zweier Laufwerke verkraften.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Server und Speicher"
+    ],
+    "instruction": "Wie viele Laufwerksausfälle kann ein korrekt arbeitendes RAID 6 gleichzeitig tolerieren?",
+    "answerOptions": [
+        "Keinen",
+        "Einen",
+        "Zwei",
+        "Beliebig viele"
+    ],
+    "correct": [
+        2
+    ],
+    "explainInstruction": "RAID 6 verwendet doppelte verteilte Parität und kann den gleichzeitigen Ausfall zweier Laufwerke verkraften.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "negationOversight",
+        "1": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

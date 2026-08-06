@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Patch-, Konfigurations- und Lizenzmanagement"
-  ],
-  "instruction": "Warum werden Sicherheitsupdates zunächst in einer repräsentativen Testumgebung geprüft?",
-  "answerOptions": [
-    "Inkompatibilitäten und Betriebsrisiken werden vor der Produktion sichtbar.",
-    "Damit die Herstellerfreigabe ersetzt wird.",
-    "Damit Backups entfallen können.",
-    "Damit jede Änderung automatisch erfolgreich ist."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Tests prüfen Anwendung, Abhängigkeiten und Rollback unter Bedingungen, die der Produktion ähneln.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Patch-, Konfigurations- und Lizenzmanagement"
+    ],
+    "instruction": "Warum werden Sicherheitsupdates zunächst in einer repräsentativen Testumgebung geprüft?",
+    "answerOptions": [
+        "Inkompatibilitäten und Betriebsrisiken werden vor der Produktion sichtbar.",
+        "Damit die Herstellerfreigabe ersetzt wird.",
+        "Damit Backups entfallen können.",
+        "Damit jede Änderung automatisch erfolgreich ist."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Tests prüfen Anwendung, Abhängigkeiten und Rollback unter Bedingungen, die der Produktion ähneln.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

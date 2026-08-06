@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Was liegt vor, wenn die nachgefragte Menge bei einem Preis größer als die angebotene Menge ist?",
-  "answerOptions": [
-    "Nachfrageüberschuss",
-    "Angebotsüberschuss",
-    "Deflation",
-    "Monopolgewinn"
-  ],
-  "correct": [0],
-  "explainInstruction": "Bei einem Nachfrageüberschuss können nicht alle Kaufwünsche erfüllt werden; das erzeugt typischerweise Preisdruck nach oben.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Was liegt vor, wenn die nachgefragte Menge bei einem Preis größer als die angebotene Menge ist?",
+    "answerOptions": [
+        "Nachfrageüberschuss",
+        "Angebotsüberschuss",
+        "Deflation",
+        "Monopolgewinn"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Bei einem Nachfrageüberschuss können nicht alle Kaufwünsche erfüllt werden; das erzeugt typischerweise Preisdruck nach oben.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

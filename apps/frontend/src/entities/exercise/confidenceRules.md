@@ -48,3 +48,25 @@ Each `StoredAnswerEvent` stores the following metrics for diagnostic reports:
 To prevent XP farming:
 - Base XP and streak rules depend **solely on answer correctness** (`correct`, `partial`, `incorrect`).
 - `high` vs `medium` confidence produces **identical XP**. No extra XP bonus is granted for choosing "bin sicher".
+
+---
+
+## 4. Extensible Distractor Taxonomy & Architectural Contract
+
+The set of `distractorTypes` is **NOT closed or finite**. It represents an **open, extensible taxonomy** (`Record<number, string>`) that evolves as new subject domains, vocational specializations, and AI content ingestion pipelines are added.
+
+### Core Vocabulary (Non-exhaustive):
+- `similarTermConfusion`: Verwechslung mit inhaltlich verwandten Fachbegriffen.
+- `negationOversight`: Übersehen oder Falschdeuten von Verneinungen ("nicht", "kein").
+- `absoluteStatementTrap`: Fallstrick durch Absolutausdrücke ("immer", "nie", "generell").
+- `conceptContradiction`: Widerspruch zur geforderten fachlichen Kernaussage.
+- `exceptionRuleTrap`: Ausnahmeregelung fälschlicherweise auf den Grundfall angewandt.
+- `numericalCalculationTrap`: Rechen- oder Grenzwertfehler (z.B. Subnet-Masken).
+- `offByOneError`: Grenzfallfehler um genau 1 Einheit.
+
+### System Contract Across Layers:
+1. **JSON Schema & OpenAPI**: Must type `distractorTypes` as an open string map (`additionalProperties: { type: string }`). Hardcoded enums are strictly forbidden.
+2. **Frontend & Telemetry**: Must safely pass through any arbitrary string identifier without validation errors.
+3. **Backend & DB**: Storage columns (`distractorTypes`, `distractorAnalysis`) use flexible `JSON` columns.
+4. **CMS Editor (`exercise_editor.py`)**: Must allow free-text input for novel distractor types.
+5. **Fallback Safety**: If `distractorTypes` is omitted, all layers must fall back gracefully without breaking rendering or Leitner progression.

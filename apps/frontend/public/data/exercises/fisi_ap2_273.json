@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "PKI und TLS-Betrieb"
-  ],
-  "instruction": "Ein Server sendet sein Zertifikat, aber kein benötigtes Zwischenzertifikat. Welche Folge ist möglich?",
-  "answerOptions": [
-    "Clients können die Vertrauenskette nicht bis zu einer bekannten Root-CA bilden.",
-    "Die Festplatte wird schreibgeschützt.",
-    "DHCP vergibt keine Adresse.",
-    "Der Switch verliert seine MAC-Tabelle."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Der Server muss üblicherweise die nötigen Intermediates liefern; die Root-CA kommt aus dem Trust Store des Clients.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "PKI und TLS-Betrieb"
+    ],
+    "instruction": "Ein Server sendet sein Zertifikat, aber kein benötigtes Zwischenzertifikat. Welche Folge ist möglich?",
+    "answerOptions": [
+        "Clients können die Vertrauenskette nicht bis zu einer bekannten Root-CA bilden.",
+        "Die Festplatte wird schreibgeschützt.",
+        "DHCP vergibt keine Adresse.",
+        "Der Switch verliert seine MAC-Tabelle."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Server muss üblicherweise die nötigen Intermediates liefern; die Root-CA kommt aus dem Trust Store des Clients.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "negationOversight",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

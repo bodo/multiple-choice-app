@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Wann müssen betroffene Personen über eine Datenschutzverletzung grundsätzlich benachrichtigt werden?",
-  "answerOptions": [
-    "Wenn die Verletzung voraussichtlich ein hohes Risiko für ihre Rechte und Freiheiten zur Folge hat",
-    "Bei jeder fehlerhaften Anmeldung unabhängig von einem Datenbezug",
-    "Nur nach ausdrücklicher Anordnung durch den Auftragsverarbeiter",
-    "Erst wenn die Aufsichtsbehörde ein Bußgeld festgesetzt hat"
-  ],
-  "correct": [0],
-  "explainInstruction": "Bei voraussichtlich hohem Risiko ist grundsätzlich eine klare Benachrichtigung der betroffenen Personen erforderlich; die DSGVO nennt Ausnahmen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Wann müssen betroffene Personen über eine Datenschutzverletzung grundsätzlich benachrichtigt werden?",
+    "answerOptions": [
+        "Wenn die Verletzung voraussichtlich ein hohes Risiko für ihre Rechte und Freiheiten zur Folge hat",
+        "Bei jeder fehlerhaften Anmeldung unabhängig von einem Datenbezug",
+        "Nur nach ausdrücklicher Anordnung durch den Auftragsverarbeiter",
+        "Erst wenn die Aufsichtsbehörde ein Bußgeld festgesetzt hat"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Bei voraussichtlich hohem Risiko ist grundsätzlich eine klare Benachrichtigung der betroffenen Personen erforderlich; die DSGVO nennt Ausnahmen.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

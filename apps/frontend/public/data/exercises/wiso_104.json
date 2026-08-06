@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Staat, Verträge und Verbraucher"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Bedeutung hat die Abnahme bei einem Werkvertrag typischerweise?",
-  "answerOptions": [
-    "Der Besteller billigt das Werk grundsätzlich als vertragsgemäß",
-    "Der Quellcode wird automatisch Open Source",
-    "Alle Gewährleistungsrechte entfallen immer sofort",
-    "Der Vertrag wird rückwirkend zu einem Arbeitsvertrag"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Abnahme ist ein zentraler Punkt des Werkvertrags und hat unter anderem Bedeutung für Fälligkeit und Mängelrechte."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Staat, Verträge und Verbraucher"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Bedeutung hat die Abnahme bei einem Werkvertrag typischerweise?",
+    "answerOptions": [
+        "Der Besteller billigt das Werk grundsätzlich als vertragsgemäß",
+        "Der Quellcode wird automatisch Open Source",
+        "Alle Gewährleistungsrechte entfallen immer sofort",
+        "Der Vertrag wird rückwirkend zu einem Arbeitsvertrag"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Abnahme ist ein zentraler Punkt des Werkvertrags und hat unter anderem Bedeutung für Fälligkeit und Mängelrechte.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

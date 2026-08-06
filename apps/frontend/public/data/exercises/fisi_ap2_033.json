@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Routing und NAT"
-  ],
-  "instruction": "Wann wird eine Default-Route verwendet?",
-  "answerOptions": [
-    "Wenn keine spezifischere Route zum Ziel passt",
-    "Bei jedem lokalen Broadcast",
-    "Nur für DNS-Anfragen",
-    "Sobald ARP deaktiviert ist"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Die Default-Route ist der Auffangweg für Ziele, für die keine spezifischere Route existiert.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Routing und NAT"
+    ],
+    "instruction": "Wann wird eine Default-Route verwendet?",
+    "answerOptions": [
+        "Wenn keine spezifischere Route zum Ziel passt",
+        "Bei jedem lokalen Broadcast",
+        "Nur für DNS-Anfragen",
+        "Sobald ARP deaktiviert ist"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Default-Route ist der Auffangweg für Ziele, für die keine spezifischere Route existiert.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

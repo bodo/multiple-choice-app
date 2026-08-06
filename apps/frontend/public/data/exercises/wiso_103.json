@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Staat, Verträge und Verbraucher"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was unterscheidet einen Werkvertrag typischerweise von einem Dienstvertrag?",
-  "answerOptions": [
-    "Beim Werkvertrag wird ein bestimmter Erfolg geschuldet",
-    "Beim Dienstvertrag wird immer eine Sache übereignet",
-    "Beim Werkvertrag ist keine Vergütung möglich",
-    "Beim Dienstvertrag ist stets ein konkreter Erfolg garantiert"
-  ],
-  "correct": [0],
-  "explainInstruction": "Beim Werkvertrag steht ein vereinbarter Erfolg im Vordergrund, beim Dienstvertrag grundsätzlich die geschuldete Tätigkeit."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Staat, Verträge und Verbraucher"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was unterscheidet einen Werkvertrag typischerweise von einem Dienstvertrag?",
+    "answerOptions": [
+        "Beim Werkvertrag wird ein bestimmter Erfolg geschuldet",
+        "Beim Dienstvertrag wird immer eine Sache übereignet",
+        "Beim Werkvertrag ist keine Vergütung möglich",
+        "Beim Dienstvertrag ist stets ein konkreter Erfolg garantiert"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Beim Werkvertrag steht ein vereinbarter Erfolg im Vordergrund, beim Dienstvertrag grundsätzlich die geschuldete Tätigkeit.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "negationOversight",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

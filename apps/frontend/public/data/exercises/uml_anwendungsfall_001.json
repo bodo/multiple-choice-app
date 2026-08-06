@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welchen Hauptzweck hat ein UML-Anwendungsfalldiagramm?",
-  "answerOptions": [
-    "Ziele und von außen sichtbare Funktionen eines Systems aus Sicht seiner Akteure darstellen",
-    "Die genaue Reihenfolge aller Methodenaufrufe festlegen",
-    "Die physische Verkabelung eines Netzwerks dokumentieren",
-    "Die Tabellen einer relationalen Datenbank normalisieren"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Anwendungsfalldiagramm zeigt, welche fachlichen Ziele externe Rollen mit dem betrachteten System erreichen können.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Anwendungsfalldiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welchen Hauptzweck hat ein UML-Anwendungsfalldiagramm?",
+    "answerOptions": [
+        "Ziele und von außen sichtbare Funktionen eines Systems aus Sicht seiner Akteure darstellen",
+        "Die genaue Reihenfolge aller Methodenaufrufe festlegen",
+        "Die physische Verkabelung eines Netzwerks dokumentieren",
+        "Die Tabellen einer relationalen Datenbank normalisieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Anwendungsfalldiagramm zeigt, welche fachlichen Ziele externe Rollen mit dem betrachteten System erreichen können.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Anwendungsfalldiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

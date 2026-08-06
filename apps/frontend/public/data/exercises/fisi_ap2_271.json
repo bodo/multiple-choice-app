@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "PKI und TLS-Betrieb"
-  ],
-  "instruction": "Ein Browser meldet ein abgelaufenes Serverzertifikat. Welche Sicherheitsprüfung schlägt fehl?",
-  "answerOptions": [
-    "Zeitliche Gültigkeit des Zertifikats",
-    "RAID-Parität",
-    "DNS-Rekursion",
-    "VLAN-Zuordnung"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Zertifikate sind nur im Intervall Not Before bis Not After gültig.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "PKI und TLS-Betrieb"
+    ],
+    "instruction": "Ein Browser meldet ein abgelaufenes Serverzertifikat. Welche Sicherheitsprüfung schlägt fehl?",
+    "answerOptions": [
+        "Zeitliche Gültigkeit des Zertifikats",
+        "RAID-Parität",
+        "DNS-Rekursion",
+        "VLAN-Zuordnung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Zertifikate sind nur im Intervall Not Before bis Not After gültig.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

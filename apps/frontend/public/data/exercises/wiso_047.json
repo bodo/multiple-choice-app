@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Welche Formel beschreibt die Wirtschaftlichkeit?",
-  "answerOptions": [
-    "Ertrag ÷ Aufwand",
-    "Aufwand + Ertrag",
-    "Umsatz ÷ Mitarbeiterzahl",
-    "Eigenkapital − Fremdkapital"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Wert über 1 bedeutet, dass der bewertete Ertrag den Aufwand übersteigt.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Welche Formel beschreibt die Wirtschaftlichkeit?",
+    "answerOptions": [
+        "Ertrag ÷ Aufwand",
+        "Aufwand + Ertrag",
+        "Umsatz ÷ Mitarbeiterzahl",
+        "Eigenkapital − Fremdkapital"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Wert über 1 bedeutet, dass der bewertete Ertrag den Aufwand übersteigt.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

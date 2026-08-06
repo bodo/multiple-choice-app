@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Switching und VLAN"
-  ],
-  "instruction": "Warum blockiert das Spanning Tree Protocol einen redundanten Layer-2-Pfad?",
-  "answerOptions": [
-    "Um Broadcast-Schleifen zu verhindern",
-    "Um IP-Adressen zu verschlüsseln",
-    "Um DHCP-Leases zu verkürzen",
-    "Um die MTU automatisch zu erhöhen"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Redundante aktive Layer-2-Pfade können Schleifen und Broadcast-Stürme erzeugen. STP bildet deshalb eine schleifenfreie Topologie.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Switching und VLAN"
+    ],
+    "instruction": "Warum blockiert das Spanning Tree Protocol einen redundanten Layer-2-Pfad?",
+    "answerOptions": [
+        "Um Broadcast-Schleifen zu verhindern",
+        "Um IP-Adressen zu verschlüsseln",
+        "Um DHCP-Leases zu verkürzen",
+        "Um die MTU automatisch zu erhöhen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Redundante aktive Layer-2-Pfade können Schleifen und Broadcast-Stürme erzeugen. STP bildet deshalb eine schleifenfreie Topologie.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

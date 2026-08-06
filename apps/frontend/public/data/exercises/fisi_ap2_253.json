@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "Recovery und Notfallvorsorge"
-  ],
-  "instruction": "Welche Ergebnisse sollte ein Restore-Test dokumentieren? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Tatsächliche Wiederherstellungsdauer",
-    "Erreichter Datenstand",
-    "Fehler, Abweichungen und nächste Maßnahmen",
-    "Nur den Namen der Sicherungssoftware"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Dauer, Datenverlust und Probleme zeigen, ob RTO/RPO und Verfahren realistisch sind.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "Recovery und Notfallvorsorge"
+    ],
+    "instruction": "Welche Ergebnisse sollte ein Restore-Test dokumentieren? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Tatsächliche Wiederherstellungsdauer",
+        "Erreichter Datenstand",
+        "Fehler, Abweichungen und nächste Maßnahmen",
+        "Nur den Namen der Sicherungssoftware"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Dauer, Datenverlust und Probleme zeigen, ob RTO/RPO und Verfahren realistisch sind.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

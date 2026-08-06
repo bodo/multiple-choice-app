@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Virtualisierung, Container und Cloud",
-    "Kapazitäts- und Migrationsplanung"
-  ],
-  "instruction": "Warum wird vor einer P2V- oder Cloud-Migration eine Abhängigkeitsanalyse durchgeführt?",
-  "answerOptions": [
-    "Kommunikationspartner, Latenz-, Lizenz- und Betriebsabhängigkeiten müssen im Ziel weiter funktionieren.",
-    "Damit keine Tests nötig sind.",
-    "Damit alle Systeme dieselbe IP-Adresse erhalten.",
-    "Damit Backups automatisch gelöscht werden."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Eine technisch verschobene Maschine ist noch kein funktionierender Dienst; Abhängigkeiten und nichtfunktionale Anforderungen bestimmen die Zielarchitektur.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Virtualisierung, Container und Cloud",
+        "Kapazitäts- und Migrationsplanung"
+    ],
+    "instruction": "Warum wird vor einer P2V- oder Cloud-Migration eine Abhängigkeitsanalyse durchgeführt?",
+    "answerOptions": [
+        "Kommunikationspartner, Latenz-, Lizenz- und Betriebsabhängigkeiten müssen im Ziel weiter funktionieren.",
+        "Damit keine Tests nötig sind.",
+        "Damit alle Systeme dieselbe IP-Adresse erhalten.",
+        "Damit Backups automatisch gelöscht werden."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Eine technisch verschobene Maschine ist noch kein funktionierender Dienst; Abhängigkeiten und nichtfunktionale Anforderungen bestimmen die Zielarchitektur.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

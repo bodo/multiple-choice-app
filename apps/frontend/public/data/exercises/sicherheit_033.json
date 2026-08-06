@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was sollte beim Ausscheiden eines Mitarbeiters mit dessen Zugängen geschehen?",
-  "answerOptions": [
-    "Konten und Berechtigungen nach einem festgelegten Offboarding-Prozess zeitnah entziehen",
-    "Das Passwort unverändert an die nachfolgende Person weitergeben",
-    "Das Konto dauerhaft aktiv lassen, falls später Fragen entstehen",
-    "Nur den Anzeigenamen des Kontos ändern"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein geregeltes Offboarding verhindert verwaiste oder weiterhin nutzbare Zugänge."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was sollte beim Ausscheiden eines Mitarbeiters mit dessen Zugängen geschehen?",
+    "answerOptions": [
+        "Konten und Berechtigungen nach einem festgelegten Offboarding-Prozess zeitnah entziehen",
+        "Das Passwort unverändert an die nachfolgende Person weitergeben",
+        "Das Konto dauerhaft aktiv lassen, falls später Fragen entstehen",
+        "Nur den Anzeigenamen des Kontos ändern"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein geregeltes Offboarding verhindert verwaiste oder weiterhin nutzbare Zugänge.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

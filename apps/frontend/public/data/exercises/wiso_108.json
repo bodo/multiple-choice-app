@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Staat, Verträge und Verbraucher"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was ist für die wirksame Einbeziehung Allgemeiner Geschäftsbedingungen besonders wichtig?",
-  "answerOptions": [
-    "Der Vertragspartner wird bei Vertragsschluss auf sie hingewiesen und kann zumutbar von ihnen Kenntnis nehmen",
-    "Die Bedingungen werden erst Monate nach Vertragsschluss heimlich veröffentlicht",
-    "Der Vertragspartner darf ihren Inhalt grundsätzlich nicht sehen",
-    "AGB gelten automatisch weltweit und ohne jeden Hinweis"
-  ],
-  "correct": [0],
-  "explainInstruction": "AGB müssen wirksam in den Vertrag einbezogen werden; überraschende oder unangemessen benachteiligende Klauseln unterliegen zusätzlichen Grenzen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Staat, Verträge und Verbraucher"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was ist für die wirksame Einbeziehung Allgemeiner Geschäftsbedingungen besonders wichtig?",
+    "answerOptions": [
+        "Der Vertragspartner wird bei Vertragsschluss auf sie hingewiesen und kann zumutbar von ihnen Kenntnis nehmen",
+        "Die Bedingungen werden erst Monate nach Vertragsschluss heimlich veröffentlicht",
+        "Der Vertragspartner darf ihren Inhalt grundsätzlich nicht sehen",
+        "AGB gelten automatisch weltweit und ohne jeden Hinweis"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "AGB müssen wirksam in den Vertrag einbezogen werden; überraschende oder unangemessen benachteiligende Klauseln unterliegen zusätzlichen Grenzen.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "negationOversight",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

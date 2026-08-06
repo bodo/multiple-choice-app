@@ -1,26 +1,32 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Anforderungen und UX"
-  ],
-  "instruction": "Welche Maßnahmen fördern die Barrierefreiheit einer Weboberfläche?",
-  "answerOptions": [
-    "Alle Funktionen sind per Tastatur erreichbar.",
-    "Text und Hintergrund besitzen ausreichenden Kontrast.",
-    "Formulare besitzen verständliche Beschriftungen.",
-    "Information wird ausschließlich durch Farbe vermittelt."
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Tastaturbedienung, Kontrast und klare Labels sind zentrale Maßnahmen. Farbe darf nicht der einzige Informationsträger sein.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Anforderungen und UX"
+    ],
+    "instruction": "Welche Maßnahmen fördern die Barrierefreiheit einer Weboberfläche?",
+    "answerOptions": [
+        "Alle Funktionen sind per Tastatur erreichbar.",
+        "Text und Hintergrund besitzen ausreichenden Kontrast.",
+        "Formulare besitzen verständliche Beschriftungen.",
+        "Information wird ausschließlich durch Farbe vermittelt."
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Tastaturbedienung, Kontrast und klare Labels sind zentrale Maßnahmen. Farbe darf nicht der einzige Informationsträger sein.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

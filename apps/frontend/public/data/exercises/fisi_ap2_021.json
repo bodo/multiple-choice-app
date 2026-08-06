@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Switching und VLAN"
-  ],
-  "instruction": "Ein Access-Port eines Switches soll Endgeräte aus VLAN 30 aufnehmen. Welche Konfiguration ist dafür wesentlich?",
-  "answerOptions": [
-    "Der Port wird ungetaggt VLAN 30 zugeordnet.",
-    "Der Port transportiert alle VLANs getaggt.",
-    "Auf dem Port wird ausschließlich Routing aktiviert.",
-    "Die MAC-Adresse des Endgeräts wird als VLAN-ID verwendet."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ein Access-Port gehört genau zu einem VLAN und überträgt Frames zum Endgerät üblicherweise ungetaggt.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Switching und VLAN"
+    ],
+    "instruction": "Ein Access-Port eines Switches soll Endgeräte aus VLAN 30 aufnehmen. Welche Konfiguration ist dafür wesentlich?",
+    "answerOptions": [
+        "Der Port wird ungetaggt VLAN 30 zugeordnet.",
+        "Der Port transportiert alle VLANs getaggt.",
+        "Auf dem Port wird ausschließlich Routing aktiviert.",
+        "Die MAC-Adresse des Endgeräts wird als VLAN-ID verwendet."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Access-Port gehört genau zu einem VLAN und überträgt Frames zum Endgerät üblicherweise ungetaggt.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

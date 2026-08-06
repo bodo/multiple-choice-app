@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Verfügbarkeit und Kapazitätsplanung"
-  ],
-  "instruction": "Warum benötigt ein Load Balancer Health Checks?",
-  "answerOptions": [
-    "Er soll fehlerhafte Backends aus der Verteilung nehmen.",
-    "Er soll VLAN-Tags vergeben.",
-    "Er soll Backupmedien verschlüsseln.",
-    "Er soll Benutzerkonten lizenzieren."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Health Checks beeinflussen, welche Backends tatsächlich neue Anfragen erhalten.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Verfügbarkeit und Kapazitätsplanung"
+    ],
+    "instruction": "Warum benötigt ein Load Balancer Health Checks?",
+    "answerOptions": [
+        "Er soll fehlerhafte Backends aus der Verteilung nehmen.",
+        "Er soll VLAN-Tags vergeben.",
+        "Er soll Backupmedien verschlüsseln.",
+        "Er soll Benutzerkonten lizenzieren."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Health Checks beeinflussen, welche Backends tatsächlich neue Anfragen erhalten.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

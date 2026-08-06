@@ -1,28 +1,36 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Aussagen zu Pseudonymisierung und Verschlüsselung sind richtig?",
-  "answerOptions": [
-    "Beide können technische Schutzmaßnahmen sein",
-    "Beide beseitigen automatisch jeden Personenbezug",
-    "Der Schutz der Schlüssel beziehungsweise Zusatzinformationen bleibt wichtig",
-    "Sie ersetzen jede erforderliche Rechtsgrundlage"
-  ],
-  "correct": [
-    0,
-    2
-  ],
-  "explainInstruction": "Pseudonymisierung und Verschlüsselung senken Risiken, machen eine Verarbeitung aber nicht automatisch anonym oder ohne Rechtsgrundlage zulässig."
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Aussagen zu Pseudonymisierung und Verschlüsselung sind richtig?",
+    "answerOptions": [
+        "Beide können technische Schutzmaßnahmen sein",
+        "Beide beseitigen automatisch jeden Personenbezug",
+        "Der Schutz der Schlüssel beziehungsweise Zusatzinformationen bleibt wichtig",
+        "Sie ersetzen jede erforderliche Rechtsgrundlage"
+    ],
+    "correct": [
+        0,
+        2
+    ],
+    "explainInstruction": "Pseudonymisierung und Verschlüsselung senken Risiken, machen eine Verarbeitung aber nicht automatisch anonym oder ohne Rechtsgrundlage zulässig.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

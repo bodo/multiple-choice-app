@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "IPv6"
-  ],
-  "instruction": "Welche IPv6-Adresse ist ausschließlich auf dem lokalen Link gültig?",
-  "answerOptions": [
-    "2001:db8::1",
-    "fe80::1",
-    "ff05::1",
-    "::ffff:192.0.2.1"
-  ],
-  "correct": [
-    1
-  ],
-  "explainInstruction": "Link-Local-Adressen verwenden fe80::/10 und werden nicht über Router weitergeleitet.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "IPv6"
+    ],
+    "instruction": "Welche IPv6-Adresse ist ausschließlich auf dem lokalen Link gültig?",
+    "answerOptions": [
+        "2001:db8::1",
+        "fe80::1",
+        "ff05::1",
+        "::ffff:192.0.2.1"
+    ],
+    "correct": [
+        1
+    ],
+    "explainInstruction": "Link-Local-Adressen verwenden fe80::/10 und werden nicht über Router weitergeleitet.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "numericalCalculationTrap",
+        "2": "numericalCalculationTrap",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

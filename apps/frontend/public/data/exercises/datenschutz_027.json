@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Warum ist das Recht auf Löschung nicht ausnahmslos?",
-  "answerOptions": [
-    "Gesetzliche Pflichten oder andere in der DSGVO genannte Gründe können einer Löschung entgegenstehen",
-    "Unternehmen dürfen Daten grundsätzlich immer unbegrenzt speichern",
-    "Das Recht gilt nur für Daten auf Papier",
-    "Ein Löschersuchen ist nur bei anonymen Daten möglich"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Löschanspruch ist anhand seiner Voraussetzungen und Ausnahmen zu prüfen, beispielsweise bei gesetzlichen Aufbewahrungspflichten."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Warum ist das Recht auf Löschung nicht ausnahmslos?",
+    "answerOptions": [
+        "Gesetzliche Pflichten oder andere in der DSGVO genannte Gründe können einer Löschung entgegenstehen",
+        "Unternehmen dürfen Daten grundsätzlich immer unbegrenzt speichern",
+        "Das Recht gilt nur für Daten auf Papier",
+        "Ein Löschersuchen ist nur bei anonymen Daten möglich"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Löschanspruch ist anhand seiner Voraussetzungen und Ausnahmen zu prüfen, beispielsweise bei gesetzlichen Aufbewahrungspflichten.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welchen Zweck erfüllt ein VPN typischerweise?",
-  "answerOptions": [
-    "Es schützt die Kommunikation über ein nicht vertrauenswürdiges Netz durch einen verschlüsselten Tunnel",
-    "Es entfernt Schadsoftware automatisch von allen Endgeräten",
-    "Es ersetzt die Zugriffskontrolle des Zielsystems",
-    "Es macht jede übertragene Information anonym"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein VPN schützt den Transportweg. Berechtigungen, Endgerätesicherheit und Datenschutz müssen zusätzlich betrachtet werden."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welchen Zweck erfüllt ein VPN typischerweise?",
+    "answerOptions": [
+        "Es schützt die Kommunikation über ein nicht vertrauenswürdiges Netz durch einen verschlüsselten Tunnel",
+        "Es entfernt Schadsoftware automatisch von allen Endgeräten",
+        "Es ersetzt die Zugriffskontrolle des Zielsystems",
+        "Es macht jede übertragene Information anonym"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein VPN schützt den Transportweg. Berechtigungen, Endgerätesicherheit und Datenschutz müssen zusätzlich betrachtet werden.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

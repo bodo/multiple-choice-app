@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Transport- und Anwendungsprotokolle"
-  ],
-  "instruction": "Welche Protokoll-Port-Kombinationen sind standardmäßig korrekt? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "HTTPS – TCP 443",
-    "DNS – UDP/TCP 53",
-    "SSH – TCP 22",
-    "NTP – TCP 3389"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "HTTPS nutzt TCP 443, DNS UDP oder TCP 53 und SSH TCP 22. NTP verwendet üblicherweise UDP 123.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Transport- und Anwendungsprotokolle"
+    ],
+    "instruction": "Welche Protokoll-Port-Kombinationen sind standardmäßig korrekt? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "HTTPS – TCP 443",
+        "DNS – UDP/TCP 53",
+        "SSH – TCP 22",
+        "NTP – TCP 3389"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "HTTPS nutzt TCP 443, DNS UDP oder TCP 53 und SSH TCP 22. NTP verwendet üblicherweise UDP 123.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

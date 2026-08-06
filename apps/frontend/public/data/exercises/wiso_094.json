@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Staat, Verträge und Verbraucher"
-  ],
-  "instruction": "Was misst das Bruttoinlandsprodukt (BIP)?",
-  "answerOptions": [
-    "Den Wert der im Inland in einer Periode produzierten Endprodukte und Dienstleistungen",
-    "Nur das Vermögen aller Privathaushalte",
-    "Ausschließlich staatliche Steuereinnahmen",
-    "Die Zahl aller Unternehmen weltweit"
-  ],
-  "correct": [0],
-  "explainInstruction": "Das BIP erfasst die wirtschaftliche Leistung innerhalb der Landesgrenzen und vermeidet Doppelzählungen von Vorleistungen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Staat, Verträge und Verbraucher"
+    ],
+    "instruction": "Was misst das Bruttoinlandsprodukt (BIP)?",
+    "answerOptions": [
+        "Den Wert der im Inland in einer Periode produzierten Endprodukte und Dienstleistungen",
+        "Nur das Vermögen aller Privathaushalte",
+        "Ausschließlich staatliche Steuereinnahmen",
+        "Die Zahl aller Unternehmen weltweit"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Das BIP erfasst die wirtschaftliche Leistung innerhalb der Landesgrenzen und vermeidet Doppelzählungen von Vorleistungen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Unter welchen Voraussetzungen kann das Recht auf Datenübertragbarkeit grundsätzlich greifen?",
-  "answerOptions": [
-    "Die Verarbeitung beruht auf Einwilligung oder Vertrag und erfolgt automatisiert",
-    "Die Daten liegen ausschließlich in einem handschriftlichen Privatnotizbuch",
-    "Die Verarbeitung beruht immer auf einer gesetzlichen Behördenaufgabe",
-    "Der Verantwortliche hat die Daten vollständig anonymisiert"
-  ],
-  "correct": [0],
-  "explainInstruction": "Datenübertragbarkeit betrifft bereitgestellte Daten bei automatisierter Verarbeitung auf Grundlage von Einwilligung oder Vertrag."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Unter welchen Voraussetzungen kann das Recht auf Datenübertragbarkeit grundsätzlich greifen?",
+    "answerOptions": [
+        "Die Verarbeitung beruht auf Einwilligung oder Vertrag und erfolgt automatisiert",
+        "Die Daten liegen ausschließlich in einem handschriftlichen Privatnotizbuch",
+        "Die Verarbeitung beruht immer auf einer gesetzlichen Behördenaufgabe",
+        "Der Verantwortliche hat die Daten vollständig anonymisiert"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Datenübertragbarkeit betrifft bereitgestellte Daten bei automatisierter Verarbeitung auf Grundlage von Einwilligung oder Vertrag.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

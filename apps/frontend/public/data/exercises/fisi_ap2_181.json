@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "APIs und Datenformate"
-  ],
-  "instruction": "Eine API antwortet mit HTTP 429. Wie sollte eine Automation reagieren?",
-  "answerOptions": [
-    "Rate Limit beachten und kontrolliert mit Backoff erneut versuchen",
-    "Anfrage in einer Endlosschleife ohne Pause wiederholen",
-    "TLS dauerhaft deaktivieren",
-    "Alle lokalen Logs löschen"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "429 Too Many Requests verlangt Drosselung; Retry-After und exponentieller Backoff verhindern zusätzliche Überlastung.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "APIs und Datenformate"
+    ],
+    "instruction": "Eine API antwortet mit HTTP 429. Wie sollte eine Automation reagieren?",
+    "answerOptions": [
+        "Rate Limit beachten und kontrolliert mit Backoff erneut versuchen",
+        "Anfrage in einer Endlosschleife ohne Pause wiederholen",
+        "TLS dauerhaft deaktivieren",
+        "Alle lokalen Logs löschen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "429 Too Many Requests verlangt Drosselung; Retry-After und exponentieller Backoff verhindern zusätzliche Überlastung.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "conceptContradiction",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

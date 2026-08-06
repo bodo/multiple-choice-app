@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Datenbanken und SQL"
-  ],
-  "instruction": "Welche Maßnahme schützt eine Anwendung am wirksamsten vor SQL-Injection durch Benutzereingaben?",
-  "answerOptions": [
-    "SQL-Befehle mit String-Verkettung aufbauen",
-    "Nur die Schriftart des Eingabefelds ändern",
-    "Parametrisierte Abfragen oder Prepared Statements verwenden",
-    "Fehlermeldungen länger formulieren"
-  ],
-  "correct": [2],
-  "explainInstruction": "Parametrisierte Abfragen trennen SQL-Struktur und Daten. Eingaben werden nicht als ausführbarer Teil des Befehls interpretiert.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Datenbanken und SQL"
+    ],
+    "instruction": "Welche Maßnahme schützt eine Anwendung am wirksamsten vor SQL-Injection durch Benutzereingaben?",
+    "answerOptions": [
+        "SQL-Befehle mit String-Verkettung aufbauen",
+        "Nur die Schriftart des Eingabefelds ändern",
+        "Parametrisierte Abfragen oder Prepared Statements verwenden",
+        "Fehlermeldungen länger formulieren"
+    ],
+    "correct": [
+        2
+    ],
+    "explainInstruction": "Parametrisierte Abfragen trennen SQL-Struktur und Daten. Eingaben werden nicht als ausführbarer Teil des Befehls interpretiert.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "0": "similarTermConfusion",
+        "1": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

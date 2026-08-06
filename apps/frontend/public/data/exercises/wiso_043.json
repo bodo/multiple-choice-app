@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Was sind Opportunitätskosten?",
-  "answerOptions": [
-    "Der entgangene Nutzen der besten nicht gewählten Alternative",
-    "Nur die Kosten einer Rechnungskopie",
-    "Sämtliche bereits versunkenen Kosten",
-    "Eine gesetzlich festgelegte Steuer"
-  ],
-  "correct": [0],
-  "explainInstruction": "Wer knappe Mittel für eine Option nutzt, verzichtet auf den Nutzen der besten Alternative. Dieser Verzicht sind Opportunitätskosten.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Was sind Opportunitätskosten?",
+    "answerOptions": [
+        "Der entgangene Nutzen der besten nicht gewählten Alternative",
+        "Nur die Kosten einer Rechnungskopie",
+        "Sämtliche bereits versunkenen Kosten",
+        "Eine gesetzlich festgelegte Steuer"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Wer knappe Mittel für eine Option nutzt, verzichtet auf den Nutzen der besten Alternative. Dieser Verzicht sind Opportunitätskosten.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

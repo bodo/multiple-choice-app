@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "Robuster und sicherer Betrieb"
-  ],
-  "instruction": "Warum braucht ein automatisierter Job eine maximale Laufzeit?",
-  "answerOptions": [
-    "Hängende Prozesse werden erkannt und blockieren Ressourcen nicht unbegrenzt.",
-    "Der Job wird dadurch automatisch idempotent.",
-    "Alle Ergebnisse werden dadurch korrekt.",
-    "Das Betriebssystem benötigt keine Logs mehr."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Timeouts begrenzen Fehlerfolgen und ermöglichen Alarmierung oder kontrollierte Wiederholung.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "Robuster und sicherer Betrieb"
+    ],
+    "instruction": "Warum braucht ein automatisierter Job eine maximale Laufzeit?",
+    "answerOptions": [
+        "Hängende Prozesse werden erkannt und blockieren Ressourcen nicht unbegrenzt.",
+        "Der Job wird dadurch automatisch idempotent.",
+        "Alle Ergebnisse werden dadurch korrekt.",
+        "Das Betriebssystem benötigt keine Logs mehr."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Timeouts begrenzen Fehlerfolgen und ermöglichen Alarmierung oder kontrollierte Wiederholung.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

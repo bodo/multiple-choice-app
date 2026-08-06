@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Gestaltung entspricht am ehesten dem Grundsatz der Datenminimierung?",
-  "answerOptions": [
-    "Ein Newsletterformular fragt nur die für den Versand erforderliche E-Mail-Adresse ab",
-    "Ein Newsletterformular verlangt zusätzlich Geburtsort und Ausweisnummer",
-    "Alle verfügbaren Kundendaten werden vorsorglich kopiert",
-    "Pflichtfelder werden ohne Bezug zum Verwendungszweck ergänzt"
-  ],
-  "correct": [0],
-  "explainInstruction": "Es sollen nur Daten verarbeitet werden, die für den festgelegten Zweck angemessen und erforderlich sind."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Gestaltung entspricht am ehesten dem Grundsatz der Datenminimierung?",
+    "answerOptions": [
+        "Ein Newsletterformular fragt nur die für den Versand erforderliche E-Mail-Adresse ab",
+        "Ein Newsletterformular verlangt zusätzlich Geburtsort und Ausweisnummer",
+        "Alle verfügbaren Kundendaten werden vorsorglich kopiert",
+        "Pflichtfelder werden ohne Bezug zum Verwendungszweck ergänzt"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Es sollen nur Daten verarbeitet werden, die für den festgelegten Zweck angemessen und erforderlich sind.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

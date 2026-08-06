@@ -1,28 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welches Muster bildet Teil-Ganzes-Hierarchien als Baum ab und behandelt einzelne Elemente und zusammengesetzte Elemente einheitlich?",
-  "answerOptions": [
-    "Kompositum (Composite)",
-    "Dekorierer (Decorator)",
-    "Brücke (Bridge)",
-    "Fliegengewicht (Flyweight)"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Kompositum (Composite) gibt Blättern und zusammengesetzten Knoten eine gemeinsame Schnittstelle.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "Strukturmuster"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welches Muster bildet Teil-Ganzes-Hierarchien als Baum ab und behandelt einzelne Elemente und zusammengesetzte Elemente einheitlich?",
+    "answerOptions": [
+        "Kompositum (Composite)",
+        "Dekorierer (Decorator)",
+        "Brücke (Bridge)",
+        "Fliegengewicht (Flyweight)"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Kompositum (Composite) gibt Blättern und zusammengesetzten Knoten eine gemeinsame Schnittstelle.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "Strukturmuster"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

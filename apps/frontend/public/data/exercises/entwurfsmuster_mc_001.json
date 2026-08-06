@@ -1,32 +1,42 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "instruction": "Welche der folgenden Muster sind Erzeugungsmuster (creational patterns)?",
-  "answerOptions": [
-    "Abstrakte Fabrik (Abstract Factory)",
-    "Adapter (Adapter)",
-    "Fabrikmethode (Factory Method)",
-    "Beobachter (Observer)",
-    "Prototyp (Prototype)",
-    "Strategie (Strategy)"
-  ],
-  "correct": [
-    0,
-    2,
-    4
-  ],
-  "explainInstruction": "Abstrakte Fabrik (Abstract Factory), Fabrikmethode (Factory Method) und Prototyp (Prototype) lösen Probleme der Objekterzeugung.",
-  "mobileSolvable": true,
-  "learningLevel": 4,
-  "difficulty": 3,
-  "categories": [
-    "AP1",
-    "Softwarearchitektur und Entwurfsmuster",
-    "GoF-Klassifikation"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "instruction": "Welche der folgenden Muster sind Erzeugungsmuster (creational patterns)?",
+    "answerOptions": [
+        "Abstrakte Fabrik (Abstract Factory)",
+        "Adapter (Adapter)",
+        "Fabrikmethode (Factory Method)",
+        "Beobachter (Observer)",
+        "Prototyp (Prototype)",
+        "Strategie (Strategy)"
+    ],
+    "correct": [
+        0,
+        2,
+        4
+    ],
+    "explainInstruction": "Abstrakte Fabrik (Abstract Factory), Fabrikmethode (Factory Method) und Prototyp (Prototype) lösen Probleme der Objekterzeugung.",
+    "mobileSolvable": true,
+    "learningLevel": 4,
+    "difficulty": 3,
+    "categories": [
+        "AP1",
+        "Softwarearchitektur und Entwurfsmuster",
+        "GoF-Klassifikation"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "3": "conceptContradiction",
+        "5": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "5": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

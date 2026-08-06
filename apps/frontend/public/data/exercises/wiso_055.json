@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Was kennzeichnet ein Angebotsmonopol?",
-  "answerOptions": [
-    "Ein Anbieter trifft auf viele Nachfrager.",
-    "Viele Anbieter treffen auf einen Nachfrager.",
-    "Viele Anbieter treffen auf viele Nachfrager.",
-    "Es gibt zwingend einen staatlichen Festpreis."
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein einzelner Anbieter besitzt eine starke Marktstellung, bleibt aber dennoch durch Nachfrage, Ersatzprodukte und Regeln begrenzt.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Was kennzeichnet ein Angebotsmonopol?",
+    "answerOptions": [
+        "Ein Anbieter trifft auf viele Nachfrager.",
+        "Viele Anbieter treffen auf einen Nachfrager.",
+        "Viele Anbieter treffen auf viele Nachfrager.",
+        "Es gibt zwingend einen staatlichen Festpreis."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein einzelner Anbieter besitzt eine starke Marktstellung, bleibt aber dennoch durch Nachfrage, Ersatzprodukte und Regeln begrenzt.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

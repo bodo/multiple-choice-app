@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "Konfigurationsmanagement"
-  ],
-  "instruction": "Ein Konfigurationslauf meldet bei jeder Ausführung eine Änderung, obwohl der Zielzustand bereits besteht. Welcher Qualitätsmangel liegt nahe?",
-  "answerOptions": [
-    "Fehlende Idempotenz",
-    "Zu starke Verschlüsselung",
-    "Zu kurze DNS-TTL",
-    "Zu viele CPU-Kerne"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ein idempotentes Modul erkennt den vorhandenen Sollzustand und meldet ohne echte Änderung keinen Change.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "Konfigurationsmanagement"
+    ],
+    "instruction": "Ein Konfigurationslauf meldet bei jeder Ausführung eine Änderung, obwohl der Zielzustand bereits besteht. Welcher Qualitätsmangel liegt nahe?",
+    "answerOptions": [
+        "Fehlende Idempotenz",
+        "Zu starke Verschlüsselung",
+        "Zu kurze DNS-TTL",
+        "Zu viele CPU-Kerne"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein idempotentes Modul erkennt den vorhandenen Sollzustand und meldet ohne echte Änderung keinen Change.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

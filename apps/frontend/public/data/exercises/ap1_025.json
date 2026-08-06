@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Computergrundlagen"
-  ],
-  "instruction": "Welche Aufgabe hat UEFI beim Start eines PCs?",
-  "answerOptions": [
-    "Hardware initialisieren und den Start eines Bootloaders vorbereiten",
-    "Anwendungsdaten dauerhaft verschlüsseln",
-    "E-Mails über SMTP zustellen",
-    "Datenbankabfragen optimieren"
-  ],
-  "correct": [0],
-  "explainInstruction": "UEFI-Firmware initialisiert zentrale Hardware, stellt Startdienste bereit und lädt einen Bootloader.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Computergrundlagen"
+    ],
+    "instruction": "Welche Aufgabe hat UEFI beim Start eines PCs?",
+    "answerOptions": [
+        "Hardware initialisieren und den Start eines Bootloaders vorbereiten",
+        "Anwendungsdaten dauerhaft verschlüsseln",
+        "E-Mails über SMTP zustellen",
+        "Datenbankabfragen optimieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "UEFI-Firmware initialisiert zentrale Hardware, stellt Startdienste bereit und lädt einen Bootloader.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

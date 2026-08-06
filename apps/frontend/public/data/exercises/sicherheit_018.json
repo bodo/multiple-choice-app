@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was kennzeichnet einen Computerwurm?",
-  "answerOptions": [
-    "Er kann sich selbstständig über Systeme oder Netze verbreiten",
-    "Er benötigt immer ein Office-Makro und manuelle Weitergabe",
-    "Er verschlüsselt ausschließlich lokale Sicherungskopien",
-    "Er ist ein legitimes Werkzeug zur Netzüberwachung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Wurm verbreitet sich selbstständig, häufig durch ausnutzbare Schwachstellen oder automatisierte Netzwerkmechanismen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was kennzeichnet einen Computerwurm?",
+    "answerOptions": [
+        "Er kann sich selbstständig über Systeme oder Netze verbreiten",
+        "Er benötigt immer ein Office-Makro und manuelle Weitergabe",
+        "Er verschlüsselt ausschließlich lokale Sicherungskopien",
+        "Er ist ein legitimes Werkzeug zur Netzüberwachung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Wurm verbreitet sich selbstständig, häufig durch ausnutzbare Schwachstellen oder automatisierte Netzwerkmechanismen.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

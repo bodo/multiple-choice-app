@@ -1,22 +1,34 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Web, APIs und Sicherheit"
-  ],
-  "instruction": "Welcher HTTP-Statuscode passt, wenn eine angeforderte Ressource nicht gefunden wurde?",
-  "answerOptions": [
-    "200",
-    "201",
-    "404",
-    "503"
-  ],
-  "correct": [2],
-  "explainInstruction": "`404 Not Found` bedeutet, dass der Server für die angeforderte Adresse keine Ressource findet.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Web, APIs und Sicherheit"
+    ],
+    "instruction": "Welcher HTTP-Statuscode passt, wenn eine angeforderte Ressource nicht gefunden wurde?",
+    "answerOptions": [
+        "200",
+        "201",
+        "404",
+        "503"
+    ],
+    "correct": [
+        2
+    ],
+    "explainInstruction": "`404 Not Found` bedeutet, dass der Server für die angeforderte Adresse keine Ressource findet.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "0": "numericalCalculationTrap",
+        "1": "numericalCalculationTrap",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

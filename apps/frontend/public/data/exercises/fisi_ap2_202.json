@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "Metriken und Alarmierung"
-  ],
-  "instruction": "Welche Kennzahlen helfen, einen Datenträgerengpass zu erkennen? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "I/O-Latenz",
-    "Warteschlangentiefe",
-    "IOPS bzw. Durchsatz",
-    "Nur die nominelle Plattengröße"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Latenz, Queue und tatsächliche Arbeit zeigen Engpässe; die Kapazitätsangabe allein beschreibt keine aktuelle I/O-Leistung.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "Metriken und Alarmierung"
+    ],
+    "instruction": "Welche Kennzahlen helfen, einen Datenträgerengpass zu erkennen? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "I/O-Latenz",
+        "Warteschlangentiefe",
+        "IOPS bzw. Durchsatz",
+        "Nur die nominelle Plattengröße"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Latenz, Queue und tatsächliche Arbeit zeigen Engpässe; die Kapazitätsangabe allein beschreibt keine aktuelle I/O-Leistung.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

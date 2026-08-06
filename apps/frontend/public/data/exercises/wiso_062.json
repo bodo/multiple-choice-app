@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Welche Aussage zur GmbH ist grundsätzlich richtig?",
-  "answerOptions": [
-    "Sie ist eine juristische Person; für Verbindlichkeiten haftet grundsätzlich das Gesellschaftsvermögen.",
-    "Alle Gesellschafter haften immer unbeschränkt wie Einzelunternehmer.",
-    "Sie besitzt keine eigene Rechtspersönlichkeit.",
-    "Sie darf keine Arbeitnehmer beschäftigen."
-  ],
-  "correct": [0],
-  "explainInstruction": "Die GmbH ist rechtlich selbstständig. Persönliche Haftung kann in Sonderfällen entstehen, ist aber nicht die Grundregel.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Welche Aussage zur GmbH ist grundsätzlich richtig?",
+    "answerOptions": [
+        "Sie ist eine juristische Person; für Verbindlichkeiten haftet grundsätzlich das Gesellschaftsvermögen.",
+        "Alle Gesellschafter haften immer unbeschränkt wie Einzelunternehmer.",
+        "Sie besitzt keine eigene Rechtspersönlichkeit.",
+        "Sie darf keine Arbeitnehmer beschäftigen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die GmbH ist rechtlich selbstständig. Persönliche Haftung kann in Sonderfällen entstehen, ist aber nicht die Grundregel.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "negationOversight",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

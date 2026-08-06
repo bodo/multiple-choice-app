@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Server und Speicher"
-  ],
-  "instruction": "Welche Eigenschaft besitzt RAID 0?",
-  "answerOptions": [
-    "Daten werden verteilt, die Leistung kann steigen, aber es gibt keine Redundanz.",
-    "Alle Daten werden dreifach gespiegelt.",
-    "Zwei Laufwerksausfälle sind immer tolerierbar.",
-    "Es ist automatisch eine externe Datensicherung."
-  ],
-  "correct": [0],
-  "explainInstruction": "RAID 0 verteilt Daten über Laufwerke. Fällt eines aus, ist der gesamte Verbund gefährdet.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Server und Speicher"
+    ],
+    "instruction": "Welche Eigenschaft besitzt RAID 0?",
+    "answerOptions": [
+        "Daten werden verteilt, die Leistung kann steigen, aber es gibt keine Redundanz.",
+        "Alle Daten werden dreifach gespiegelt.",
+        "Zwei Laufwerksausfälle sind immer tolerierbar.",
+        "Es ist automatisch eine externe Datensicherung."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "RAID 0 verteilt Daten über Laufwerke. Fällt eines aus, ist der gesamte Verbund gefährdet.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

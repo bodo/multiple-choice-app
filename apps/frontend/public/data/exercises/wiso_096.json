@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Staat, Verträge und Verbraucher"
-  ],
-  "instruction": "Wie kommt ein Kaufvertrag grundsätzlich zustande?",
-  "answerOptions": [
-    "Durch zwei übereinstimmende Willenserklärungen: Angebot und Annahme",
-    "Nur durch Übergabe von Bargeld",
-    "Ausschließlich durch notarielle Beurkundung",
-    "Durch eine unverbindliche Werbung allein"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Vertrag entsteht durch inhaltlich übereinstimmendes Angebot und Annahme. Besondere Formvorschriften gelten nur für bestimmte Geschäfte.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Staat, Verträge und Verbraucher"
+    ],
+    "instruction": "Wie kommt ein Kaufvertrag grundsätzlich zustande?",
+    "answerOptions": [
+        "Durch zwei übereinstimmende Willenserklärungen: Angebot und Annahme",
+        "Nur durch Übergabe von Bargeld",
+        "Ausschließlich durch notarielle Beurkundung",
+        "Durch eine unverbindliche Werbung allein"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Vertrag entsteht durch inhaltlich übereinstimmendes Angebot und Annahme. Besondere Formvorschriften gelten nur für bestimmte Geschäfte.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

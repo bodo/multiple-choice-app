@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Was bedeutet eine Verbindung zwischen einem Akteur und einem Anwendungsfall?",
-  "answerOptions": [
-    "Der Akteur beteiligt sich an diesem Anwendungsfall beziehungsweise kommuniziert dabei mit dem System",
-    "Der Akteur erbt den Quellcode des Anwendungsfalls",
-    "Der Anwendungsfall wird immer vor allen anderen ausgeführt",
-    "Die Verbindung legt eine Datenbankbeziehung fest"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Assoziation zeigt die Beteiligung beziehungsweise Kommunikation einer externen Rolle mit dem betreffenden Anwendungsfall.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Anwendungsfalldiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Was bedeutet eine Verbindung zwischen einem Akteur und einem Anwendungsfall?",
+    "answerOptions": [
+        "Der Akteur beteiligt sich an diesem Anwendungsfall beziehungsweise kommuniziert dabei mit dem System",
+        "Der Akteur erbt den Quellcode des Anwendungsfalls",
+        "Der Anwendungsfall wird immer vor allen anderen ausgeführt",
+        "Die Verbindung legt eine Datenbankbeziehung fest"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Assoziation zeigt die Beteiligung beziehungsweise Kommunikation einer externen Rolle mit dem betreffenden Anwendungsfall.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Anwendungsfalldiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

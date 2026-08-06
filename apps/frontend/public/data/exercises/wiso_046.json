@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Wie wird mengenmäßige Produktivität grundsätzlich berechnet?",
-  "answerOptions": [
-    "Ausbringungsmenge ÷ Einsatzmenge",
-    "Einsatzmenge ÷ Preis",
-    "Gewinn ÷ Umsatz",
-    "Kosten + Erlöse"
-  ],
-  "correct": [0],
-  "explainInstruction": "Produktivität setzt eine mengenmäßige Leistung zum mengenmäßigen Einsatz in Beziehung.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Wie wird mengenmäßige Produktivität grundsätzlich berechnet?",
+    "answerOptions": [
+        "Ausbringungsmenge ÷ Einsatzmenge",
+        "Einsatzmenge ÷ Preis",
+        "Gewinn ÷ Umsatz",
+        "Kosten + Erlöse"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Produktivität setzt eine mengenmäßige Leistung zum mengenmäßigen Einsatz in Beziehung.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

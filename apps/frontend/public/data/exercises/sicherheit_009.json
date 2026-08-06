@@ -1,28 +1,36 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 3,
-  "difficulty": 2,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Kombinationen verwenden zwei unterschiedliche Authentisierungsfaktoren?",
-  "answerOptions": [
-    "Passwort und Hardware-Token",
-    "PIN und Fingerabdruck",
-    "Passwort und Sicherheitsfrage",
-    "Fingerabdruck und Gesichtserkennung"
-  ],
-  "correct": [
-    0,
-    1
-  ],
-  "explainInstruction": "Passwort oder PIN sind Wissen, Token ist Besitz und biometrische Merkmale sind Inhärenz. Zwei Faktoren müssen aus unterschiedlichen Kategorien stammen."
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 3,
+    "difficulty": 2,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Kombinationen verwenden zwei unterschiedliche Authentisierungsfaktoren?",
+    "answerOptions": [
+        "Passwort und Hardware-Token",
+        "PIN und Fingerabdruck",
+        "Passwort und Sicherheitsfrage",
+        "Fingerabdruck und Gesichtserkennung"
+    ],
+    "correct": [
+        0,
+        1
+    ],
+    "explainInstruction": "Passwort oder PIN sind Wissen, Token ist Besitz und biometrische Merkmale sind Inhärenz. Zwei Faktoren müssen aus unterschiedlichen Kategorien stammen.",
+    "distractorTypes": {
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

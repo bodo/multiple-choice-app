@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "Logs, Traces und SNMP"
-  ],
-  "instruction": "Welche SNMP-Version sollte wegen integrierter Authentisierung und optionaler Verschlüsselung bevorzugt werden?",
-  "answerOptions": [
-    "SNMPv1",
-    "SNMPv2c",
-    "SNMPv3",
-    "SNMPv0"
-  ],
-  "correct": [
-    2
-  ],
-  "explainInstruction": "SNMPv3 bietet benutzerbasierte Authentisierung und Privacy; Community Strings älterer Versionen sind schwächer.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "Logs, Traces und SNMP"
+    ],
+    "instruction": "Welche SNMP-Version sollte wegen integrierter Authentisierung und optionaler Verschlüsselung bevorzugt werden?",
+    "answerOptions": [
+        "SNMPv1",
+        "SNMPv2c",
+        "SNMPv3",
+        "SNMPv0"
+    ],
+    "correct": [
+        2
+    ],
+    "explainInstruction": "SNMPv3 bietet benutzerbasierte Authentisierung und Privacy; Community Strings älterer Versionen sind schwächer.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "conceptContradiction",
+        "1": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Patch-, Konfigurations- und Lizenzmanagement"
-  ],
-  "instruction": "Ein Update erfordert ein neues Konfigurationsformat. Was gehört zwingend in den Änderungsplan?",
-  "answerOptions": [
-    "Migrations- und Rückfallweg für Konfiguration und Daten",
-    "Nur die Download-URL",
-    "Eine neue VLAN-ID ohne Bezug",
-    "Das Löschen aller alten Logs vor dem Test"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Daten- und Konfigurationsmigration müssen ebenso rückfallfähig geplant werden wie das Programmpaket.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Patch-, Konfigurations- und Lizenzmanagement"
+    ],
+    "instruction": "Ein Update erfordert ein neues Konfigurationsformat. Was gehört zwingend in den Änderungsplan?",
+    "answerOptions": [
+        "Migrations- und Rückfallweg für Konfiguration und Daten",
+        "Nur die Download-URL",
+        "Eine neue VLAN-ID ohne Bezug",
+        "Das Löschen aller alten Logs vor dem Test"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Daten- und Konfigurationsmigration müssen ebenso rückfallfähig geplant werden wie das Programmpaket.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "negationOversight",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

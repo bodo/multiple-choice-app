@@ -22,6 +22,8 @@ CREATE TABLE IF NOT EXISTS exercises (
   maximumStringDistance SMALLINT UNSIGNED NOT NULL,
   explainInstruction TEXT NOT NULL,
   explainAnswerOptions JSON NOT NULL,
+  distractorTypes JSON NULL,
+  distractorAnalysis JSON NULL,
   adminComment TEXT NOT NULL,
   adminTags JSON NOT NULL,
   contentRevision INT UNSIGNED NOT NULL DEFAULT 1,

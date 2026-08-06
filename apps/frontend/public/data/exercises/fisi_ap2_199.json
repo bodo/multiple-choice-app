@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Monitoring und Hochverfügbarkeit",
-    "Metriken und Alarmierung"
-  ],
-  "instruction": "Ein Dateisystem ist zu 80 % belegt. Welche Zusatzinformation ist für die Prognose am wichtigsten?",
-  "answerOptions": [
-    "Wachstumsrate und erwartete Spitzen",
-    "MAC-Adresse des Storage-Controllers",
-    "Farbe des Rackkabels",
-    "Anzahl der DNS-CNAMEs"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Der zeitliche Trend zeigt, wann ein Grenzwert voraussichtlich erreicht wird.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Monitoring und Hochverfügbarkeit",
+        "Metriken und Alarmierung"
+    ],
+    "instruction": "Ein Dateisystem ist zu 80 % belegt. Welche Zusatzinformation ist für die Prognose am wichtigsten?",
+    "answerOptions": [
+        "Wachstumsrate und erwartete Spitzen",
+        "MAC-Adresse des Storage-Controllers",
+        "Farbe des Rackkabels",
+        "Anzahl der DNS-CNAMEs"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der zeitliche Trend zeigt, wann ein Grenzwert voraussichtlich erreicht wird.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

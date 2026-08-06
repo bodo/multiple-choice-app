@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Anwendungs- und Infrastrukturdienste"
-  ],
-  "instruction": "Ein Webserver liefert nach dem Deployment HTTP 502 über den Reverse Proxy. Was bedeutet das typischerweise?",
-  "answerOptions": [
-    "Der Proxy erreicht seinen Upstream nicht korrekt oder erhält eine ungültige Antwort.",
-    "Der Browser hat keine MAC-Adresse.",
-    "Das DNS-TTL ist zwingend null.",
-    "Der RAID-Controller ist im Write-through-Modus."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "502 Bad Gateway verweist auf die Kommunikation zwischen Proxy/Gateway und dem dahinterliegenden Dienst.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Anwendungs- und Infrastrukturdienste"
+    ],
+    "instruction": "Ein Webserver liefert nach dem Deployment HTTP 502 über den Reverse Proxy. Was bedeutet das typischerweise?",
+    "answerOptions": [
+        "Der Proxy erreicht seinen Upstream nicht korrekt oder erhält eine ungültige Antwort.",
+        "Der Browser hat keine MAC-Adresse.",
+        "Das DNS-TTL ist zwingend null.",
+        "Der RAID-Controller ist im Write-through-Modus."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "502 Bad Gateway verweist auf die Kommunikation zwischen Proxy/Gateway und dem dahinterliegenden Dienst.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

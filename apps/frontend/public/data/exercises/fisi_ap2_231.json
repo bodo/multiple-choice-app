@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "RAID und Datenträgerverbünde"
-  ],
-  "instruction": "Warum steigt während eines RAID-Rebuilds das Risiko eines weiteren Ausfalls?",
-  "answerOptions": [
-    "Die verbleibenden Datenträger werden intensiv gelesen und der Verbund ist bereits degradiert.",
-    "DNS-Anfragen werden größer.",
-    "Alle Benutzerrechte werden entfernt.",
-    "Der Rebuild deaktiviert jede Prüfsumme."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Der Rebuild belastet die verbleibenden Medien; bei großen Verbünden dauert die Phase eingeschränkter Redundanz entsprechend lange.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "RAID und Datenträgerverbünde"
+    ],
+    "instruction": "Warum steigt während eines RAID-Rebuilds das Risiko eines weiteren Ausfalls?",
+    "answerOptions": [
+        "Die verbleibenden Datenträger werden intensiv gelesen und der Verbund ist bereits degradiert.",
+        "DNS-Anfragen werden größer.",
+        "Alle Benutzerrechte werden entfernt.",
+        "Der Rebuild deaktiviert jede Prüfsumme."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Der Rebuild belastet die verbleibenden Medien; bei großen Verbünden dauert die Phase eingeschränkter Redundanz entsprechend lange.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

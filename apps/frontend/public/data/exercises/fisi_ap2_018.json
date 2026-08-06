@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "IPv4-Subnetting"
-  ],
-  "instruction": "Ein neues IPv4-Subnetz benötigt mindestens 100 regulär nutzbare Hostadressen. Welches ist das längste passende Präfix?",
-  "answerOptions": [
-    "/26",
-    "/25",
-    "/24",
-    "/23"
-  ],
-  "correct": [
-    1
-  ],
-  "explainInstruction": "/25 ist das kleinste Netz, dessen nutzbare Hostzahl mindestens 100 beträgt. Ein längeres Präfix hätte zu wenige Hostadressen.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "IPv4-Subnetting"
+    ],
+    "instruction": "Ein neues IPv4-Subnetz benötigt mindestens 100 regulär nutzbare Hostadressen. Welches ist das längste passende Präfix?",
+    "answerOptions": [
+        "/26",
+        "/25",
+        "/24",
+        "/23"
+    ],
+    "correct": [
+        1
+    ],
+    "explainInstruction": "/25 ist das kleinste Netz, dessen nutzbare Hostzahl mindestens 100 beträgt. Ein längeres Präfix hätte zu wenige Hostadressen.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "numericalCalculationTrap",
+        "2": "numericalCalculationTrap",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Patch-, Konfigurations- und Lizenzmanagement"
-  ],
-  "instruction": "Ein Produkt erreicht End of Support. Welche Reaktion ist fachlich richtig?",
-  "answerOptions": [
-    "Ablösung, Upgrade oder kompensierende Maßnahmen mit Frist planen",
-    "Updates dauerhaft ignorieren",
-    "Nur den Hostnamen ändern",
-    "Das Produkt ohne Risikoanalyse weiterbetreiben"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Ohne Herstellersupport steigen Sicherheits- und Betriebsrisiken; eine dokumentierte Migrationsentscheidung ist nötig.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Patch-, Konfigurations- und Lizenzmanagement"
+    ],
+    "instruction": "Ein Produkt erreicht End of Support. Welche Reaktion ist fachlich richtig?",
+    "answerOptions": [
+        "Ablösung, Upgrade oder kompensierende Maßnahmen mit Frist planen",
+        "Updates dauerhaft ignorieren",
+        "Nur den Hostnamen ändern",
+        "Das Produkt ohne Risikoanalyse weiterbetreiben"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ohne Herstellersupport steigen Sicherheits- und Betriebsrisiken; eine dokumentierte Migrationsentscheidung ist nötig.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

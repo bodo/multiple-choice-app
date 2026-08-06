@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was bedeutet Defense in Depth?",
-  "answerOptions": [
-    "Mehrere voneinander ergänzende Schutzschichten einsetzen",
-    "Nur die äußere Firewall möglichst komplex konfigurieren",
-    "Alle Sicherheitsaufgaben an einen einzelnen Dienst übertragen",
-    "Sicherheitskontrollen erst nach einem Vorfall einführen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Mehrere technische, organisatorische und physische Schutzschichten reduzieren die Abhängigkeit von einer einzelnen Maßnahme."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was bedeutet Defense in Depth?",
+    "answerOptions": [
+        "Mehrere voneinander ergänzende Schutzschichten einsetzen",
+        "Nur die äußere Firewall möglichst komplex konfigurieren",
+        "Alle Sicherheitsaufgaben an einen einzelnen Dienst übertragen",
+        "Sicherheitskontrollen erst nach einem Vorfall einführen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Mehrere technische, organisatorische und physische Schutzschichten reduzieren die Abhängigkeit von einer einzelnen Maßnahme.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

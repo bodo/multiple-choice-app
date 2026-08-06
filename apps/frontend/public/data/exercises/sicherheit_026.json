@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welche Aufgabe hat ein Serverzertifikat bei TLS?",
-  "answerOptions": [
-    "Es bindet einen öffentlichen Schlüssel an eine geprüfte Identität",
-    "Es speichert das Passwort jedes Websitebesuchers",
-    "Es garantiert, dass die Website frei von Schadcode ist",
-    "Es verschlüsselt dauerhaft alle Dateien auf dem Server"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein gültig geprüftes Zertifikat unterstützt die Authentisierung des Servers und den Aufbau einer geschützten Verbindung."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welche Aufgabe hat ein Serverzertifikat bei TLS?",
+    "answerOptions": [
+        "Es bindet einen öffentlichen Schlüssel an eine geprüfte Identität",
+        "Es speichert das Passwort jedes Websitebesuchers",
+        "Es garantiert, dass die Website frei von Schadcode ist",
+        "Es verschlüsselt dauerhaft alle Dateien auf dem Server"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein gültig geprüftes Zertifikat unterstützt die Authentisierung des Servers und den Aufbau einer geschützten Verbindung.",
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

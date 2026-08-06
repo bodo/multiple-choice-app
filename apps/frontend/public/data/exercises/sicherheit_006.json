@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was ist eine Bedrohung?",
-  "answerOptions": [
-    "Ein möglicher Umstand oder Akteur, der einen Schaden verursachen kann",
-    "Ausschließlich ein bereits installierter Computervirus",
-    "Eine erfolgreich geprüfte Schutzmaßnahme",
-    "Eine Kopie produktiver Daten"
-  ],
-  "correct": [0],
-  "explainInstruction": "Bedrohungen können beispielsweise Angreifer, Feuer, Fehlbedienung oder technische Ausfälle sein."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was ist eine Bedrohung?",
+    "answerOptions": [
+        "Ein möglicher Umstand oder Akteur, der einen Schaden verursachen kann",
+        "Ausschließlich ein bereits installierter Computervirus",
+        "Eine erfolgreich geprüfte Schutzmaßnahme",
+        "Eine Kopie produktiver Daten"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Bedrohungen können beispielsweise Angreifer, Feuer, Fehlbedienung oder technische Ausfälle sein.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

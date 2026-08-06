@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Dateidienste und Berechtigungen"
-  ],
-  "instruction": "Welche Wirkung hat bei POSIX-Dateirechten das Execute-Bit auf einem Verzeichnis?",
-  "answerOptions": [
-    "Es erlaubt das Durchqueren bzw. Auflösen enthaltener Pfade.",
-    "Es startet alle Dateien im Verzeichnis.",
-    "Es verschlüsselt Dateinamen.",
-    "Es synchronisiert das Verzeichnis mit DNS."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Bei Verzeichnissen bedeutet x das Betreten bzw. Traversieren, nicht das Ausführen sämtlicher Dateien.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Dateidienste und Berechtigungen"
+    ],
+    "instruction": "Welche Wirkung hat bei POSIX-Dateirechten das Execute-Bit auf einem Verzeichnis?",
+    "answerOptions": [
+        "Es erlaubt das Durchqueren bzw. Auflösen enthaltener Pfade.",
+        "Es startet alle Dateien im Verzeichnis.",
+        "Es verschlüsselt Dateinamen.",
+        "Es synchronisiert das Verzeichnis mit DNS."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Bei Verzeichnissen bedeutet x das Betreten bzw. Traversieren, nicht das Ausführen sämtlicher Dateien.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

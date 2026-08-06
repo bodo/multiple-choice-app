@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Identitäts- und Verzeichnisdienste"
-  ],
-  "instruction": "Warum sollten administrative Tätigkeiten mit einem getrennten Administratorkonto erfolgen?",
-  "answerOptions": [
-    "Alltagsnutzung und privilegierte Aktionen werden getrennt und besser nachvollziehbar.",
-    "Das Administratorkonto benötigt dann kein MFA.",
-    "So kann das Benutzerkonto nie gesperrt werden.",
-    "Damit entfällt die Protokollierung."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Separate Konten reduzieren die dauerhafte Privilegiennutzung und verbessern Zuordnung und Schutz.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Identitäts- und Verzeichnisdienste"
+    ],
+    "instruction": "Warum sollten administrative Tätigkeiten mit einem getrennten Administratorkonto erfolgen?",
+    "answerOptions": [
+        "Alltagsnutzung und privilegierte Aktionen werden getrennt und besser nachvollziehbar.",
+        "Das Administratorkonto benötigt dann kein MFA.",
+        "So kann das Benutzerkonto nie gesperrt werden.",
+        "Damit entfällt die Protokollierung."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Separate Konten reduzieren die dauerhafte Privilegiennutzung und verbessern Zuordnung und Schutz.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "absoluteStatementTrap",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

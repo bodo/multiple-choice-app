@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Routing und NAT"
-  ],
-  "instruction": "Welchen Vorteil hat dynamisches Routing gegenüber vielen manuell gepflegten statischen Routen?",
-  "answerOptions": [
-    "Topologieänderungen können automatisch neu bewertet werden.",
-    "Es ersetzt jede Firewall.",
-    "Es verschlüsselt grundsätzlich alle Nutzdaten.",
-    "Es beseitigt die Notwendigkeit von IP-Adressen."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Dynamische Routingprotokolle tauschen Erreichbarkeiten aus und können auf Änderungen reagieren.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Routing und NAT"
+    ],
+    "instruction": "Welchen Vorteil hat dynamisches Routing gegenüber vielen manuell gepflegten statischen Routen?",
+    "answerOptions": [
+        "Topologieänderungen können automatisch neu bewertet werden.",
+        "Es ersetzt jede Firewall.",
+        "Es verschlüsselt grundsätzlich alle Nutzdaten.",
+        "Es beseitigt die Notwendigkeit von IP-Adressen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Dynamische Routingprotokolle tauschen Erreichbarkeiten aus und können auf Änderungen reagieren.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Computergrundlagen"
-  ],
-  "instruction": "Wie ist ein Gibibyte (GiB) definiert?",
-  "answerOptions": [
-    "1.000 Byte",
-    "1.024 Byte",
-    "1.000 MiB",
-    "1.024 MiB"
-  ],
-  "correct": [3],
-  "explainInstruction": "Binäre Präfixe verwenden Zweierpotenzen: `1 GiB = 1.024 MiB = 2³⁰ Byte`.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Computergrundlagen"
+    ],
+    "instruction": "Wie ist ein Gibibyte (GiB) definiert?",
+    "answerOptions": [
+        "1.000 Byte",
+        "1.024 Byte",
+        "1.000 MiB",
+        "1.024 MiB"
+    ],
+    "correct": [
+        3
+    ],
+    "explainInstruction": "Binäre Präfixe verwenden Zweierpotenzen: `1 GiB = 1.024 MiB = 2³⁰ Byte`.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "numericalCalculationTrap",
+        "1": "numericalCalculationTrap",
+        "2": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

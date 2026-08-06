@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Betriebssicherheit vernetzter Systeme",
-    "Schwachstellen- und Incident-Management"
-  ],
-  "instruction": "Ein Schwachstellenscanner meldet eine kritische Lücke, der Dienst ist aber nicht installiert. Was ist der nächste Schritt?",
-  "answerOptions": [
-    "Befund verifizieren und tatsächliche Exposition prüfen",
-    "Ungeprüft den gesamten Server löschen",
-    "Scanner dauerhaft abschalten",
-    "Die Lücke als ausgenutzt melden"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Scannerbefunde benötigen Kontext und Verifikation; es kann sich um eine falsche Erkennung oder nicht erreichbare Komponente handeln.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Betriebssicherheit vernetzter Systeme",
+        "Schwachstellen- und Incident-Management"
+    ],
+    "instruction": "Ein Schwachstellenscanner meldet eine kritische Lücke, der Dienst ist aber nicht installiert. Was ist der nächste Schritt?",
+    "answerOptions": [
+        "Befund verifizieren und tatsächliche Exposition prüfen",
+        "Ungeprüft den gesamten Server löschen",
+        "Scanner dauerhaft abschalten",
+        "Die Lücke als ausgenutzt melden"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Scannerbefunde benötigen Kontext und Verifikation; es kann sich um eine falsche Erkennung oder nicht erreichbare Komponente handeln.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

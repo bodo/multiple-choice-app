@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Was ist das grundlegende wirtschaftliche Problem der Knappheit?",
-  "answerOptions": [
-    "Begrenzte Mittel treffen auf viele Bedürfnisse.",
-    "Alle Güter sind unbegrenzt kostenlos verfügbar.",
-    "Bedürfnisse existieren nur in Unternehmen.",
-    "Produktion benötigt keine Ressourcen."
-  ],
-  "correct": [0],
-  "explainInstruction": "Weil Ressourcen knapp sind, müssen Menschen und Unternehmen auswählen, wofür sie eingesetzt werden.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Was ist das grundlegende wirtschaftliche Problem der Knappheit?",
+    "answerOptions": [
+        "Begrenzte Mittel treffen auf viele Bedürfnisse.",
+        "Alle Güter sind unbegrenzt kostenlos verfügbar.",
+        "Bedürfnisse existieren nur in Unternehmen.",
+        "Produktion benötigt keine Ressourcen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Weil Ressourcen knapp sind, müssen Menschen und Unternehmen auswählen, wofür sie eingesetzt werden.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

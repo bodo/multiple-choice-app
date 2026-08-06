@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was kennzeichnet einen Trojaner?",
-  "answerOptions": [
-    "Schadfunktion verbirgt sich in oder hinter scheinbar legitimer Software",
-    "Er repliziert sich zwingend ohne Benutzeraktion über jedes Netzwerk",
-    "Er ist ausschließlich ein physischer Hardwaremanipulator",
-    "Er prüft nur die Gültigkeit digitaler Zertifikate"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein Trojaner täuscht einen legitimen Zweck vor, führt aber zusätzlich unerwünschte oder schädliche Funktionen aus."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was kennzeichnet einen Trojaner?",
+    "answerOptions": [
+        "Schadfunktion verbirgt sich in oder hinter scheinbar legitimer Software",
+        "Er repliziert sich zwingend ohne Benutzeraktion über jedes Netzwerk",
+        "Er ist ausschließlich ein physischer Hardwaremanipulator",
+        "Er prüft nur die Gültigkeit digitaler Zertifikate"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein Trojaner täuscht einen legitimen Zweck vor, führt aber zusätzlich unerwünschte oder schädliche Funktionen aus.",
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

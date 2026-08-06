@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Automatisierung der Systemadministration",
-    "Robuster und sicherer Betrieb"
-  ],
-  "instruction": "Ein Job verarbeitet 1.000 Konten und scheitert bei Konto 700. Welche Gestaltung erleichtert die Fortsetzung?",
-  "answerOptions": [
-    "Checkpointing bzw. nachvollziehbarer per-Element-Status",
-    "Nur eine abschließende Erfolgsmeldung",
-    "Löschen aller bisherigen Ergebnisse",
-    "Zufällige Verarbeitungsreihenfolge ohne IDs"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Checkpoints oder idempotente Einzelschritte vermeiden unnötige Wiederholung und zeigen genau, was abgeschlossen ist.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Automatisierung der Systemadministration",
+        "Robuster und sicherer Betrieb"
+    ],
+    "instruction": "Ein Job verarbeitet 1.000 Konten und scheitert bei Konto 700. Welche Gestaltung erleichtert die Fortsetzung?",
+    "answerOptions": [
+        "Checkpointing bzw. nachvollziehbarer per-Element-Status",
+        "Nur eine abschließende Erfolgsmeldung",
+        "Löschen aller bisherigen Ergebnisse",
+        "Zufällige Verarbeitungsreihenfolge ohne IDs"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Checkpoints oder idempotente Einzelschritte vermeiden unnötige Wiederholung und zeigen genau, was abgeschlossen ist.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Computergrundlagen"
-  ],
-  "instruction": "Welche Eigenschaft hat gewöhnlicher Arbeitsspeicher (RAM)?",
-  "answerOptions": [
-    "Er ist flüchtig und verliert seinen Inhalt ohne Strom.",
-    "Er speichert Daten dauerhaft wie ein Archivmedium.",
-    "Er kann nur gelesen werden.",
-    "Er ersetzt den Prozessor."
-  ],
-  "correct": [0],
-  "explainInstruction": "RAM hält aktuell benötigte Programme und Daten schnell verfügbar, ist aber üblicherweise flüchtig.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Computergrundlagen"
+    ],
+    "instruction": "Welche Eigenschaft hat gewöhnlicher Arbeitsspeicher (RAM)?",
+    "answerOptions": [
+        "Er ist flüchtig und verliert seinen Inhalt ohne Strom.",
+        "Er speichert Daten dauerhaft wie ein Archivmedium.",
+        "Er kann nur gelesen werden.",
+        "Er ersetzt den Prozessor."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "RAM hält aktuell benötigte Programme und Daten schnell verfügbar, ist aber üblicherweise flüchtig.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

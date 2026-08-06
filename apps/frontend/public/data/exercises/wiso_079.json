@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Rechnungswesen und Finanzierung"
-  ],
-  "instruction": "Was unterscheidet Ertrag und Einzahlung?",
-  "answerOptions": [
-    "Ertrag erhöht das Eigenkapital; eine Einzahlung erhöht den Zahlungsmittelbestand.",
-    "Beide Begriffe sind immer identisch.",
-    "Ertrag ist nur eine Barausgabe.",
-    "Eine Einzahlung vermindert stets das Bankguthaben."
-  ],
-  "correct": [0],
-  "explainInstruction": "Erfolgsgrößen und Zahlungsgrößen können zeitlich auseinanderfallen, etwa beim Verkauf auf Ziel.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Rechnungswesen und Finanzierung"
+    ],
+    "instruction": "Was unterscheidet Ertrag und Einzahlung?",
+    "answerOptions": [
+        "Ertrag erhöht das Eigenkapital; eine Einzahlung erhöht den Zahlungsmittelbestand.",
+        "Beide Begriffe sind immer identisch.",
+        "Ertrag ist nur eine Barausgabe.",
+        "Eine Einzahlung vermindert stets das Bankguthaben."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Erfolgsgrößen und Zahlungsgrößen können zeitlich auseinanderfallen, etwa beim Verkauf auf Ziel.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

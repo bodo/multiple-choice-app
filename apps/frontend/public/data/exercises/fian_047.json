@@ -1,26 +1,32 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Softwarearchitektur und Entwurfsmuster"
-  ],
-  "instruction": "Welche Ziele verfolgt eine saubere Schichtenarchitektur?",
-  "answerOptions": [
-    "Verantwortlichkeiten werden getrennt.",
-    "Abhängigkeiten folgen klaren Regeln.",
-    "Jede Schicht greift direkt auf jede andere zu.",
-    "Technische Details lassen sich besser austauschen."
-  ],
-  "correct": [
-    0,
-    1,
-    3
-  ],
-  "explainInstruction": "Schichten ordnen Verantwortlichkeiten und begrenzen Abhängigkeiten. Beliebige Querverbindungen würden diese Vorteile wieder aufheben.",
-  "specializations": [
-    "FIAN"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Softwarearchitektur und Entwurfsmuster"
+    ],
+    "instruction": "Welche Ziele verfolgt eine saubere Schichtenarchitektur?",
+    "answerOptions": [
+        "Verantwortlichkeiten werden getrennt.",
+        "Abhängigkeiten folgen klaren Regeln.",
+        "Jede Schicht greift direkt auf jede andere zu.",
+        "Technische Details lassen sich besser austauschen."
+    ],
+    "correct": [
+        0,
+        1,
+        3
+    ],
+    "explainInstruction": "Schichten ordnen Verantwortlichkeiten und begrenzen Abhängigkeiten. Beliebige Querverbindungen würden diese Vorteile wieder aufheben.",
+    "specializations": [
+        "FIAN"
+    ],
+    "distractorTypes": {
+        "2": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

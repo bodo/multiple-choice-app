@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Systematische Netzwerkdiagnose"
-  ],
-  "instruction": "Ein TCP-Verbindungsaufbau scheitert. Welche Daten helfen bei der Eingrenzung? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Paketmitschnitt am Client oder Server",
-    "Firewall-Logs entlang des Pfads",
-    "Lauschende Ports auf dem Ziel",
-    "Farbe des Patchkabelmantels ohne weitere Prüfung"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Mitschnitt, Filterprotokolle und Listenerstatus zeigen, ob SYN ankommt, verworfen oder abgelehnt wird.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Systematische Netzwerkdiagnose"
+    ],
+    "instruction": "Ein TCP-Verbindungsaufbau scheitert. Welche Daten helfen bei der Eingrenzung? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Paketmitschnitt am Client oder Server",
+        "Firewall-Logs entlang des Pfads",
+        "Lauschende Ports auf dem Ziel",
+        "Farbe des Patchkabelmantels ohne weitere Prüfung"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Mitschnitt, Filterprotokolle und Listenerstatus zeigen, ob SYN ankommt, verworfen oder abgelehnt wird.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

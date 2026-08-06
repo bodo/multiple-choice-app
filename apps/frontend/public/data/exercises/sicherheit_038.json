@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was unterscheidet ein Intrusion Prevention System typischerweise von einem reinen Intrusion Detection System?",
-  "answerOptions": [
-    "Ein IPS kann erkannten verdächtigen Verkehr aktiv blockieren",
-    "Ein IPS arbeitet grundsätzlich ohne Regeln oder Erkennungsmuster",
-    "Ein IDS verschlüsselt automatisch alle Netzwerkverbindungen",
-    "Ein IDS ersetzt die zentrale Protokollierung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein IDS erkennt und meldet, während ein inline betriebenes IPS zusätzlich aktiv eingreifen kann."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was unterscheidet ein Intrusion Prevention System typischerweise von einem reinen Intrusion Detection System?",
+    "answerOptions": [
+        "Ein IPS kann erkannten verdächtigen Verkehr aktiv blockieren",
+        "Ein IPS arbeitet grundsätzlich ohne Regeln oder Erkennungsmuster",
+        "Ein IDS verschlüsselt automatisch alle Netzwerkverbindungen",
+        "Ein IDS ersetzt die zentrale Protokollierung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein IDS erkennt und meldet, während ein inline betriebenes IPS zusätzlich aktiv eingreifen kann.",
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

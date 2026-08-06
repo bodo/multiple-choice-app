@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Virtualisierung, Container und Cloud",
-    "Containerbetrieb"
-  ],
-  "instruction": "Warum sollen persistente Anwendungsdaten nicht nur in der beschreibbaren Container-Schicht liegen?",
-  "answerOptions": [
-    "Die Schicht kann beim Ersetzen des Containers verloren gehen.",
-    "Container können nie Dateien schreiben.",
-    "Persistenz verhindert Netzwerkzugriff.",
-    "Volumes funktionieren nur mit Windows."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Containerinstanzen sind austauschbar; persistenter Zustand gehört in dafür vorgesehene Volumes oder externe Dienste.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Virtualisierung, Container und Cloud",
+        "Containerbetrieb"
+    ],
+    "instruction": "Warum sollen persistente Anwendungsdaten nicht nur in der beschreibbaren Container-Schicht liegen?",
+    "answerOptions": [
+        "Die Schicht kann beim Ersetzen des Containers verloren gehen.",
+        "Container können nie Dateien schreiben.",
+        "Persistenz verhindert Netzwerkzugriff.",
+        "Volumes funktionieren nur mit Windows."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Containerinstanzen sind austauschbar; persistenter Zustand gehört in dafür vorgesehene Volumes oder externe Dienste.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

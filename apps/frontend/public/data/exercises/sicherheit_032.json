@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was ist der Kerngedanke einer rollenbasierten Zugriffskontrolle?",
-  "answerOptions": [
-    "Berechtigungen werden Rollen zugeordnet und Benutzer erhalten passende Rollen",
-    "Jeder Benutzer verwaltet alle Rechte anderer Benutzer",
-    "Berechtigungen richten sich ausschließlich nach dem Gerätenamen",
-    "Alle Konten erhalten dieselben Rechte und unterscheiden sich nur im Passwort"
-  ],
-  "correct": [0],
-  "explainInstruction": "RBAC bündelt Berechtigungen in Rollen und vereinfacht dadurch konsistente Zuweisungen und Prüfungen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was ist der Kerngedanke einer rollenbasierten Zugriffskontrolle?",
+    "answerOptions": [
+        "Berechtigungen werden Rollen zugeordnet und Benutzer erhalten passende Rollen",
+        "Jeder Benutzer verwaltet alle Rechte anderer Benutzer",
+        "Berechtigungen richten sich ausschließlich nach dem Gerätenamen",
+        "Alle Konten erhalten dieselben Rechte und unterscheiden sich nur im Passwort"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "RBAC bündelt Berechtigungen in Rollen und vereinfacht dadurch konsistente Zuweisungen und Prüfungen.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

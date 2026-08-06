@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "RAID und Datenträgerverbünde"
-  ],
-  "instruction": "Warum ist ein RAID trotz Redundanz kein Backup?",
-  "answerOptions": [
-    "Logische Fehler, Löschen, Malware und Standortverlust können alle RAID-Mitglieder betreffen.",
-    "RAID kann keine Daten lesen.",
-    "Ein Backup benötigt immer weniger Datenträger.",
-    "RAID speichert ausschließlich Prüfsummen."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "RAID erhöht primär Verfügbarkeit gegen bestimmte Datenträgerausfälle, erstellt aber keine unabhängige historische Kopie.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "RAID und Datenträgerverbünde"
+    ],
+    "instruction": "Warum ist ein RAID trotz Redundanz kein Backup?",
+    "answerOptions": [
+        "Logische Fehler, Löschen, Malware und Standortverlust können alle RAID-Mitglieder betreffen.",
+        "RAID kann keine Daten lesen.",
+        "Ein Backup benötigt immer weniger Datenträger.",
+        "RAID speichert ausschließlich Prüfsummen."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "RAID erhöht primär Verfügbarkeit gegen bestimmte Datenträgerausfälle, erstellt aber keine unabhängige historische Kopie.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

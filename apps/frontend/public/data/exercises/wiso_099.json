@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Staat, Verträge und Verbraucher"
-  ],
-  "instruction": "Welches Recht kann ein Käufer bei einem Sachmangel grundsätzlich zuerst verlangen?",
-  "answerOptions": [
-    "Nacherfüllung durch Nachbesserung oder Ersatzlieferung",
-    "Sofortige Verdopplung des Kaufpreises",
-    "Automatische strafrechtliche Verurteilung des Verkäufers",
-    "Kostenlose Nutzung für immer"
-  ],
-  "correct": [0],
-  "explainInstruction": "Das Kaufrecht gibt der Nacherfüllung grundsätzlich Vorrang. Rücktritt, Minderung oder Schadensersatz folgen bei ihren jeweiligen Voraussetzungen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Staat, Verträge und Verbraucher"
+    ],
+    "instruction": "Welches Recht kann ein Käufer bei einem Sachmangel grundsätzlich zuerst verlangen?",
+    "answerOptions": [
+        "Nacherfüllung durch Nachbesserung oder Ersatzlieferung",
+        "Sofortige Verdopplung des Kaufpreises",
+        "Automatische strafrechtliche Verurteilung des Verkäufers",
+        "Kostenlose Nutzung für immer"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Das Kaufrecht gibt der Nacherfüllung grundsätzlich Vorrang. Rücktritt, Minderung oder Schadensersatz folgen bei ihren jeweiligen Voraussetzungen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "similarTermConfusion",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

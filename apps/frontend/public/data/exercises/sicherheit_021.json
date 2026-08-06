@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "IT-Sicherheit"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Was ist ein wichtiges Ziel des Patchmanagements?",
-  "answerOptions": [
-    "Bekannte Schwachstellen kontrolliert und zeitnah schließen",
-    "Alle Systeme täglich vollständig neu installieren",
-    "Protokolldaten dauerhaft deaktivieren",
-    "Jede Softwareversion unabhängig vom Risiko sofort produktiv setzen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Patchmanagement bewertet, testet, verteilt und dokumentiert Aktualisierungen risikoorientiert."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "IT-Sicherheit"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Was ist ein wichtiges Ziel des Patchmanagements?",
+    "answerOptions": [
+        "Bekannte Schwachstellen kontrolliert und zeitnah schließen",
+        "Alle Systeme täglich vollständig neu installieren",
+        "Protokolldaten dauerhaft deaktivieren",
+        "Jede Softwareversion unabhängig vom Risiko sofort produktiv setzen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Patchmanagement bewertet, testet, verteilt und dokumentiert Aktualisierungen risikoorientiert.",
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "conceptContradiction",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

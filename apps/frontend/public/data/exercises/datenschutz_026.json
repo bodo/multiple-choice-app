@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Datenschutz"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ],
-  "instruction": "Welches Betroffenenrecht ist einschlägig, wenn eine gespeicherte Anschrift falsch ist?",
-  "answerOptions": [
-    "Recht auf Berichtigung",
-    "Recht auf Portfreigabe",
-    "Recht auf Quellcodezugang",
-    "Recht auf unbegrenzte Speicherung"
-  ],
-  "correct": [0],
-  "explainInstruction": "Betroffene können die unverzügliche Berichtigung unrichtiger personenbezogener Daten verlangen."
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Datenschutz"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "instruction": "Welches Betroffenenrecht ist einschlägig, wenn eine gespeicherte Anschrift falsch ist?",
+    "answerOptions": [
+        "Recht auf Berichtigung",
+        "Recht auf Portfreigabe",
+        "Recht auf Quellcodezugang",
+        "Recht auf unbegrenzte Speicherung"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Betroffene können die unverzügliche Berichtigung unrichtiger personenbezogener Daten verlangen.",
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

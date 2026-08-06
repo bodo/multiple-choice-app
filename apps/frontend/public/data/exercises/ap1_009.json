@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Welche IPv4-Adresse liegt in einem privaten Adressbereich nach RFC 1918?",
-  "answerOptions": [
-    "8.8.8.8",
-    "172.20.5.10",
-    "169.254.1.1",
-    "224.0.0.1"
-  ],
-  "correct": [1],
-  "explainInstruction": "Der private Bereich `172.16.0.0/12` reicht von 172.16.0.0 bis 172.31.255.255.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Welche IPv4-Adresse liegt in einem privaten Adressbereich nach RFC 1918?",
+    "answerOptions": [
+        "8.8.8.8",
+        "172.20.5.10",
+        "169.254.1.1",
+        "224.0.0.1"
+    ],
+    "correct": [
+        1
+    ],
+    "explainInstruction": "Der private Bereich `172.16.0.0/12` reicht von 172.16.0.0 bis 172.31.255.255.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "0": "numericalCalculationTrap",
+        "2": "numericalCalculationTrap",
+        "3": "numericalCalculationTrap"
+    },
+    "distractorAnalysis": {
+        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
+        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
+    }
 }

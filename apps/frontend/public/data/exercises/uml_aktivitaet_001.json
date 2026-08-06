@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Welchen Hauptzweck hat ein UML-Aktivitätsdiagramm?",
-  "answerOptions": [
-    "Abläufe mit Aktionen, Entscheidungen und möglicher Parallelität darstellen",
-    "Die statische Vererbungshierarchie von Klassen festlegen",
-    "Die physische Verteilung von Servern dokumentieren",
-    "Nur die Rollen außerhalb eines Systems aufzählen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Aktivitätsdiagramme modellieren Abläufe und Kontroll- beziehungsweise Objektflüsse. Sie eignen sich beispielsweise für Geschäftsprozesse oder Algorithmen.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Aktivitätsdiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Welchen Hauptzweck hat ein UML-Aktivitätsdiagramm?",
+    "answerOptions": [
+        "Abläufe mit Aktionen, Entscheidungen und möglicher Parallelität darstellen",
+        "Die statische Vererbungshierarchie von Klassen festlegen",
+        "Die physische Verteilung von Servern dokumentieren",
+        "Nur die Rollen außerhalb eines Systems aufzählen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Aktivitätsdiagramme modellieren Abläufe und Kontroll- beziehungsweise Objektflüsse. Sie eignen sich beispielsweise für Geschäftsprozesse oder Algorithmen.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Aktivitätsdiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

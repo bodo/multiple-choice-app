@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Computergrundlagen"
-  ],
-  "instruction": "Wann ist eine integrierte GPU häufig ausreichend?",
-  "answerOptions": [
-    "Für Büroanwendungen und normale Desktopdarstellung ohne hohe 3D-Anforderungen",
-    "Nur für ausgeschaltete Computer",
-    "Ausschließlich für RAID-Berechnungen",
-    "Nie, weil jeder PC zwingend eine dedizierte Grafikkarte benötigt"
-  ],
-  "correct": [0],
-  "explainInstruction": "Für typische Büro- und Multimediaaufgaben reicht integrierte Grafik oft aus und spart Kosten sowie Energie.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Computergrundlagen"
+    ],
+    "instruction": "Wann ist eine integrierte GPU häufig ausreichend?",
+    "answerOptions": [
+        "Für Büroanwendungen und normale Desktopdarstellung ohne hohe 3D-Anforderungen",
+        "Nur für ausgeschaltete Computer",
+        "Ausschließlich für RAID-Berechnungen",
+        "Nie, weil jeder PC zwingend eine dedizierte Grafikkarte benötigt"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Für typische Büro- und Multimediaaufgaben reicht integrierte Grafik oft aus und spart Kosten sowie Energie.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "absoluteStatementTrap"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
+    }
 }

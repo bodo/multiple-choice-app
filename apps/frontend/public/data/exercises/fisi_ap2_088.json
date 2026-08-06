@@ -1,26 +1,36 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "Systematische Netzwerkdiagnose"
-  ],
-  "instruction": "Ein Interface meldet viele Drops, aber keine CRC-Fehler. Die Drops treten nur bei Verkehrsspitzen auf. Welche Hypothese ist zuerst zu prüfen?",
-  "answerOptions": [
-    "Überlastete Warteschlange oder zu geringe Schnittstellenkapazität",
-    "Defekte DNS-Zonensignatur",
-    "Falsche Benutzergruppe im Verzeichnisdienst",
-    "Abgelaufenes Code-Signing-Zertifikat"
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Drops ohne Übertragungsfehler und mit Korrelation zur Last sprechen eher für Überlastung oder Queue-Probleme als für einen Bitfehler auf dem Medium.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "Systematische Netzwerkdiagnose"
+    ],
+    "instruction": "Ein Interface meldet viele Drops, aber keine CRC-Fehler. Die Drops treten nur bei Verkehrsspitzen auf. Welche Hypothese ist zuerst zu prüfen?",
+    "answerOptions": [
+        "Überlastete Warteschlange oder zu geringe Schnittstellenkapazität",
+        "Defekte DNS-Zonensignatur",
+        "Falsche Benutzergruppe im Verzeichnisdienst",
+        "Abgelaufenes Code-Signing-Zertifikat"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Drops ohne Übertragungsfehler und mit Korrelation zur Last sprechen eher für Überlastung oder Queue-Probleme als für einen Bitfehler auf dem Medium.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "similarTermConfusion",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

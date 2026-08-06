@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Wodurch unterscheidet sich eine Aggregation typischerweise von einer Komposition?",
-  "answerOptions": [
-    "Bei der Aggregation können die Teile unabhängig vom Ganzen weiterbestehen",
-    "Bei der Aggregation sind keine Beziehungen erlaubt",
-    "Aggregation beschreibt ausschließlich Vererbung",
-    "Aggregation legt die zeitliche Reihenfolge von Nachrichten fest"
-  ],
-  "correct": [0],
-  "explainInstruction": "Die Aggregation ist eine schwächere Ganzes-Teil-Beziehung und wird mit einer ungefüllten Raute dargestellt. Teile können unabhängig existieren.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Klassendiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Wodurch unterscheidet sich eine Aggregation typischerweise von einer Komposition?",
+    "answerOptions": [
+        "Bei der Aggregation können die Teile unabhängig vom Ganzen weiterbestehen",
+        "Bei der Aggregation sind keine Beziehungen erlaubt",
+        "Aggregation beschreibt ausschließlich Vererbung",
+        "Aggregation legt die zeitliche Reihenfolge von Nachrichten fest"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Die Aggregation ist eine schwächere Ganzes-Teil-Beziehung und wird mit einer ungefüllten Raute dargestellt. Teile können unabhängig existieren.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Klassendiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "absoluteStatementTrap",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

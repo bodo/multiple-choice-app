@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Speicher, Backup und Wiederherstellung",
-    "Backupstrategie"
-  ],
-  "instruction": "Das RTO beträgt zwei Stunden. Was bedeutet das?",
-  "answerOptions": [
-    "Die vereinbarte Wiederanlaufzeit nach einer Störung beträgt höchstens zwei Stunden.",
-    "Backups werden alle zwei Stunden gelöscht.",
-    "Es dürfen zwei Stunden Daten verloren gehen.",
-    "Jeder Benutzer erhält zwei Stunden Zugriff."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Recovery Time Objective beschreibt die angestrebte maximale Dauer bis zur Wiederherstellung des Dienstes.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Speicher, Backup und Wiederherstellung",
+        "Backupstrategie"
+    ],
+    "instruction": "Das RTO beträgt zwei Stunden. Was bedeutet das?",
+    "answerOptions": [
+        "Die vereinbarte Wiederanlaufzeit nach einer Störung beträgt höchstens zwei Stunden.",
+        "Backups werden alle zwei Stunden gelöscht.",
+        "Es dürfen zwei Stunden Daten verloren gehen.",
+        "Jeder Benutzer erhält zwei Stunden Zugriff."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Recovery Time Objective beschreibt die angestrebte maximale Dauer bis zur Wiederherstellung des Dienstes.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "absoluteStatementTrap",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

@@ -1,27 +1,33 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Serverdienste und Administration",
-    "Verfügbarkeit und Kapazitätsplanung"
-  ],
-  "instruction": "Welche Elemente reduzieren gemeinsame Ausfallursachen einer Serverplattform? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Getrennte Strompfade",
-    "Redundante Netzwerkpfade über unabhängige Komponenten",
-    "Replikate in derselben einzelnen Fehlerdomäne belassen",
-    "Regelmäßige Failover-Tests"
-  ],
-  "correct": [
-    0,
-    1,
-    3
-  ],
-  "explainInstruction": "Redundanz muss Fehlerdomänen trennen und getestet werden; mehrere Instanzen in derselben Domäne schützen nicht vor deren Ausfall.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Serverdienste und Administration",
+        "Verfügbarkeit und Kapazitätsplanung"
+    ],
+    "instruction": "Welche Elemente reduzieren gemeinsame Ausfallursachen einer Serverplattform? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Getrennte Strompfade",
+        "Redundante Netzwerkpfade über unabhängige Komponenten",
+        "Replikate in derselben einzelnen Fehlerdomäne belassen",
+        "Regelmäßige Failover-Tests"
+    ],
+    "correct": [
+        0,
+        1,
+        3
+    ],
+    "explainInstruction": "Redundanz muss Fehlerdomänen trennen und getestet werden; mehrere Instanzen in derselben Domäne schützen nicht vor deren Ausfall.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "2": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

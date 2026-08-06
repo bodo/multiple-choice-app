@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Rechnungswesen und Finanzierung"
-  ],
-  "instruction": "Was bedeutet Liquidität für ein Unternehmen?",
-  "answerOptions": [
-    "Fällige Zahlungsverpflichtungen rechtzeitig erfüllen zu können",
-    "Möglichst viele Maschinen zu besitzen",
-    "Immer einen Gewinn auszuweisen",
-    "Keine Kunden zu haben"
-  ],
-  "correct": [0],
-  "explainInstruction": "Ein profitables Unternehmen kann trotzdem zahlungsunfähig werden, wenn ihm zum Fälligkeitstermin liquide Mittel fehlen.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Rechnungswesen und Finanzierung"
+    ],
+    "instruction": "Was bedeutet Liquidität für ein Unternehmen?",
+    "answerOptions": [
+        "Fällige Zahlungsverpflichtungen rechtzeitig erfüllen zu können",
+        "Möglichst viele Maschinen zu besitzen",
+        "Immer einen Gewinn auszuweisen",
+        "Keine Kunden zu haben"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Ein profitables Unternehmen kann trotzdem zahlungsunfähig werden, wenn ihm zum Fälligkeitstermin liquide Mittel fehlen.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "absoluteStatementTrap",
+        "3": "negationOversight"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
+        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
+    }
 }

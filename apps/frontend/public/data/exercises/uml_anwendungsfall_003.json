@@ -1,26 +1,38 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "instruction": "Wie wird ein Anwendungsfall üblicherweise dargestellt?",
-  "answerOptions": [
-    "Als Ellipse mit einer zielorientierten Bezeichnung",
-    "Als ausgefüllter Kreis",
-    "Als gestrichelte Lebenslinie",
-    "Als Klasse mit drei Bereichen"
-  ],
-  "correct": [0],
-  "explainInstruction": "Anwendungsfälle werden als Ellipsen innerhalb der Systemgrenze dargestellt und nach einem fachlichen Ziel benannt.",
-  "mobileSolvable": true,
-  "learningLevel": 2,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "UML",
-    "Anwendungsfalldiagramm"
-  ],
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "instruction": "Wie wird ein Anwendungsfall üblicherweise dargestellt?",
+    "answerOptions": [
+        "Als Ellipse mit einer zielorientierten Bezeichnung",
+        "Als ausgefüllter Kreis",
+        "Als gestrichelte Lebenslinie",
+        "Als Klasse mit drei Bereichen"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Anwendungsfälle werden als Ellipsen innerhalb der Systemgrenze dargestellt und nach einem fachlichen Ziel benannt.",
+    "mobileSolvable": true,
+    "learningLevel": 2,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "UML",
+        "Anwendungsfalldiagramm"
+    ],
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "conceptContradiction",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

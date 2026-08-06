@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 1,
-  "difficulty": 1,
-  "categories": [
-    "AP1",
-    "Netzwerkgrundlagen"
-  ],
-  "instruction": "Was bewirkt Source NAT an einem Internetrouter typischerweise?",
-  "answerOptions": [
-    "Private Quelladressen werden für ausgehende Verbindungen in eine öffentliche Adresse umgesetzt.",
-    "DNS-Namen werden in MAC-Adressen umbenannt.",
-    "Die Festplattenkapazität wird verdoppelt.",
-    "Jeder Client erhält automatisch Administratorrechte."
-  ],
-  "correct": [0],
-  "explainInstruction": "Source NAT beziehungsweise PAT ermöglicht mehreren internen Clients, eine oder wenige öffentliche Adressen zu verwenden.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 1,
+    "difficulty": 1,
+    "categories": [
+        "AP1",
+        "Netzwerkgrundlagen"
+    ],
+    "instruction": "Was bewirkt Source NAT an einem Internetrouter typischerweise?",
+    "answerOptions": [
+        "Private Quelladressen werden für ausgehende Verbindungen in eine öffentliche Adresse umgesetzt.",
+        "DNS-Namen werden in MAC-Adressen umbenannt.",
+        "Die Festplattenkapazität wird verdoppelt.",
+        "Jeder Client erhält automatisch Administratorrechte."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Source NAT beziehungsweise PAT ermöglicht mehreren internen Clients, eine oder wenige öffentliche Adressen zu verwenden.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "similarTermConfusion",
+        "3": "similarTermConfusion"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
+    }
 }

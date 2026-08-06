@@ -1,25 +1,35 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "AP2",
-    "Virtualisierung, Container und Cloud",
-    "Hypervisor und virtuelle Maschinen"
-  ],
-  "instruction": "Ein VM-Snapshot bleibt monatelang bestehen und wächst stark. Welches Risiko entsteht?",
-  "answerOptions": [
-    "Zusätzliche I/O-Last, Speicherverbrauch und aufwendige Konsolidierung",
-    "Die VM benötigt keine Sicherung mehr.",
-    "Der Gast wird automatisch hochverfügbar.",
-    "Das VLAN wird verschlüsselt."
-  ],
-  "correct": [
-    0
-  ],
-  "explainInstruction": "Snapshots sind kurzlebige Rückfallpunkte, keine dauerhafte Backup- oder Archivlösung.",
-  "specializations": [
-    "FISI"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "AP2",
+        "Virtualisierung, Container und Cloud",
+        "Hypervisor und virtuelle Maschinen"
+    ],
+    "instruction": "Ein VM-Snapshot bleibt monatelang bestehen und wächst stark. Welches Risiko entsteht?",
+    "answerOptions": [
+        "Zusätzliche I/O-Last, Speicherverbrauch und aufwendige Konsolidierung",
+        "Die VM benötigt keine Sicherung mehr.",
+        "Der Gast wird automatisch hochverfügbar.",
+        "Das VLAN wird verschlüsselt."
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Snapshots sind kurzlebige Rückfallpunkte, keine dauerhafte Backup- oder Archivlösung.",
+    "specializations": [
+        "FISI"
+    ],
+    "distractorTypes": {
+        "1": "negationOversight",
+        "2": "conceptContradiction",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

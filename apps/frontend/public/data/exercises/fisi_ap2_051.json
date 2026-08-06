@@ -1,28 +1,34 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "AP2",
-    "Netzwerkplanung und Diagnose",
-    "DNS, DHCP und Zeitdienste"
-  ],
-  "instruction": "Ein Name lässt sich nicht auflösen, die Ziel-IP ist aber erreichbar. Welche Prüfungen sind sinnvoll? Wähle alle richtigen Antworten.",
-  "answerOptions": [
-    "Konfigurierten Resolver prüfen",
-    "DNS-Abfrage mit einem Diagnosewerkzeug ausführen",
-    "Zone und Record auf dem autoritativen Server prüfen",
-    "Sofort die RAID-Platten ersetzen"
-  ],
-  "correct": [
-    0,
-    1,
-    2
-  ],
-  "explainInstruction": "Die funktionierende IP-Verbindung grenzt den Fehler auf Namensauflösung und deren Konfiguration ein.",
-  "specializations": [
-    "FISI",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "AP2",
+        "Netzwerkplanung und Diagnose",
+        "DNS, DHCP und Zeitdienste"
+    ],
+    "instruction": "Ein Name lässt sich nicht auflösen, die Ziel-IP ist aber erreichbar. Welche Prüfungen sind sinnvoll? Wähle alle richtigen Antworten.",
+    "answerOptions": [
+        "Konfigurierten Resolver prüfen",
+        "DNS-Abfrage mit einem Diagnosewerkzeug ausführen",
+        "Zone und Record auf dem autoritativen Server prüfen",
+        "Sofort die RAID-Platten ersetzen"
+    ],
+    "correct": [
+        0,
+        1,
+        2
+    ],
+    "explainInstruction": "Die funktionierende IP-Verbindung grenzt den Fehler auf Namensauflösung und deren Konfiguration ein.",
+    "specializations": [
+        "FISI",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

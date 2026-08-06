@@ -138,6 +138,16 @@ components:
           type: array
           items:
             type: string
+        distractorTypes:
+          type: object
+          additionalProperties:
+            type: string
+          description: Extensible mapping of option index to distractor strategy classification.
+        distractorAnalysis:
+          type: object
+          additionalProperties:
+            type: string
+          description: Pedagogical rationale for why each distractor was constructed.
         adminComment:
           type: string
         adminTags:

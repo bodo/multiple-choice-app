@@ -1,31 +1,37 @@
 {
-  "inputMode": "MULTIPLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 2,
-  "categories": [
-    "WiSo",
-    "Unternehmen und Organisation"
-  ],
-  "instruction": "Welche Kriterien gehören zu einem qualifizierten Angebotsvergleich?",
-  "answerOptions": [
-    "Bezugspreis",
-    "Qualität",
-    "Lieferzeit und Zuverlässigkeit",
-    "Service und Folgekosten",
-    "Nur die Reihenfolge im Posteingang"
-  ],
-  "correct": [
-    0,
-    1,
-    2,
-    3
-  ],
-  "explainInstruction": "Neben dem Preis sind qualitative Kriterien und Lebenszykluskosten entscheidend. Der Eingangszeitpunkt allein sagt nichts über die Eignung aus.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "MULTIPLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 2,
+    "categories": [
+        "WiSo",
+        "Unternehmen und Organisation"
+    ],
+    "instruction": "Welche Kriterien gehören zu einem qualifizierten Angebotsvergleich?",
+    "answerOptions": [
+        "Bezugspreis",
+        "Qualität",
+        "Lieferzeit und Zuverlässigkeit",
+        "Service und Folgekosten",
+        "Nur die Reihenfolge im Posteingang"
+    ],
+    "correct": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "explainInstruction": "Neben dem Preis sind qualitative Kriterien und Lebenszykluskosten entscheidend. Der Eingangszeitpunkt allein sagt nichts über die Eignung aus.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "4": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "4": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }

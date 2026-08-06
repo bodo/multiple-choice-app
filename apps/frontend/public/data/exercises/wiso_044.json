@@ -1,25 +1,37 @@
 {
-  "inputMode": "SINGLE_CHOICE",
-  "mobileSolvable": true,
-  "learningLevel": 6,
-  "difficulty": 1,
-  "categories": [
-    "WiSo",
-    "Wirtschaftliche Grundlagen und Markt"
-  ],
-  "instruction": "Was verlangt das Minimalprinzip?",
-  "answerOptions": [
-    "Ein festgelegtes Ziel mit möglichst geringem Mitteleinsatz erreichen",
-    "Mit festen Mitteln das größtmögliche Ergebnis erzielen",
-    "Ohne Ziel möglichst viel verbrauchen",
-    "Kosten grundsätzlich ignorieren"
-  ],
-  "correct": [0],
-  "explainInstruction": "Beim Minimalprinzip ist das Ergebnis vorgegeben; der notwendige Input soll minimiert werden.",
-  "specializations": [
-    "FIAN",
-    "FISI",
-    "FIDP",
-    "FIDV"
-  ]
+    "inputMode": "SINGLE_CHOICE",
+    "mobileSolvable": true,
+    "learningLevel": 6,
+    "difficulty": 1,
+    "categories": [
+        "WiSo",
+        "Wirtschaftliche Grundlagen und Markt"
+    ],
+    "instruction": "Was verlangt das Minimalprinzip?",
+    "answerOptions": [
+        "Ein festgelegtes Ziel mit möglichst geringem Mitteleinsatz erreichen",
+        "Mit festen Mitteln das größtmögliche Ergebnis erzielen",
+        "Ohne Ziel möglichst viel verbrauchen",
+        "Kosten grundsätzlich ignorieren"
+    ],
+    "correct": [
+        0
+    ],
+    "explainInstruction": "Beim Minimalprinzip ist das Ergebnis vorgegeben; der notwendige Input soll minimiert werden.",
+    "specializations": [
+        "FIAN",
+        "FISI",
+        "FIDP",
+        "FIDV"
+    ],
+    "distractorTypes": {
+        "1": "similarTermConfusion",
+        "2": "negationOversight",
+        "3": "conceptContradiction"
+    },
+    "distractorAnalysis": {
+        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
+        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
+        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
+    }
 }
