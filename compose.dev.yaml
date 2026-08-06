@@ -46,7 +46,26 @@ services:
       - development_node_modules:/workspace/node_modules
       - development_npm_cache:/root/.npm
 
+  phpmyadmin:
+    image: phpmyadmin:5
+    environment:
+      PMA_HOST: database
+      PMA_USER: multiple_choice
+      PMA_PASSWORD: multiple_choice
+    ports:
+      - "8081:80"
+    depends_on:
+      database:
+        condition: service_healthy
+
+  mailpit:
+    image: axllent/mailpit:v1.21
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+
 volumes:
   development_database:
   development_node_modules:
   development_npm_cache:
+

@@ -31,6 +31,9 @@ serves both the API and the compiled frontend through the DDEV URL. Its Linux
 `node_modules` live in a named volume, so DDEV cannot replace macOS or Windows
 host-native npm binaries.
 
+In DDEV, phpMyAdmin is available via `ddev phpmyadmin` (or `https://multiple-choice.ddev.site:8037`)
+and Mailpit is available via `ddev mailpit` (or `https://multiple-choice.ddev.site:8026`).
+
 The standalone Docker Compose environment provides the same live filesystem
 behavior without DDEV and works with Docker Desktop on macOS/Windows and Docker
 Engine on Linux:
@@ -41,9 +44,11 @@ docker compose -f compose.dev.yaml up --build
 
 Open <http://localhost:8080/>, the API at
 <http://localhost:8080/api/v1/exercises>, or Swagger UI at
-<http://localhost:8080/api/docs/>. Source code is bind-mounted while Linux
-`node_modules`, npm cache, and MariaDB data remain in named volumes. File
-polling keeps watchers reliable across Docker Desktop host filesystems.
+<http://localhost:8080/api/docs/>. phpMyAdmin is accessible at
+<http://localhost:8081> and Mailpit web interface at <http://localhost:8025>
+(SMTP port 1025). Source code is bind-mounted while Linux `node_modules`, npm
+cache, and MariaDB data remain in named volumes. File polling keeps watchers
+reliable across Docker Desktop host filesystems.
 
 To exercise the production build stages locally:
 
