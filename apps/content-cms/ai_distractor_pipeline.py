@@ -4,22 +4,26 @@ import os
 import sys
 from pathlib import Path
 from typing import Dict, Any, List
+import time
 
 from pydantic import BaseModel
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 EXERCISES_DIR = Path(__file__).parent.parent / "frontend" / "public" / "data" / "exercises"
 
 class DistractorProfile(BaseModel):
+    index: str
     distractorType: str
     distractorAnalysis: str
 
 class ExerciseEnrichment(BaseModel):
-    distractors: Dict[str, DistractorProfile]
+    distractors: List[DistractorProfile]
 
 SYSTEM_PROMPT = """Du bist ein Experte für pädagogische Diagnostik und Prüfungserstellung im IT-Bereich (Fachinformatiker, Systemelektroniker). 
 Deine Aufgabe ist es, für die falschen Antworten (Distraktoren) einer Multiple-Choice-Frage zu analysieren, warum ein Prüfling diese falsch wählen könnte.
 
-Analysiere jeden Distraktor und gib ein JSON-Objekt zurück, das einen `distractorType` (kurzer CamelCase String, offene Taxonomie) und eine `distractorAnalysis` (kurze Erklärung auf Deutsch, ca. 1-2 Sätze) enthält.
+Analysiere jeden Distraktor und gib ein JSON-Objekt zurück, das ein Array von `distractors` enthält.
+Jedes Element in diesem Array muss den `index` (als String, passend zum Index der Antwortoption), einen `distractorType` (kurzer CamelCase String, offene Taxonomie) und eine `distractorAnalysis` (kurze Erklärung auf Deutsch, ca. 1-2 Sätze) enthalten.
 Beispiele für distractorType:
 - absoluteStatementTrap (Absolutformulierung wie 'immer'/'nie')
 - negationOversight (Übersehen einer Verneinung)
@@ -42,7 +46,7 @@ def generate_user_prompt(exercise_data: dict) -> str:
     prompt += "\nBitte analysiere alle Antwortoptionen, die NICHT in der Liste der richtigen Antworten stehen (Distraktoren)."
     return prompt
 
-
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=30))
 def call_openai_sync(exercise_data: dict, api_key: str, model: str) -> ExerciseEnrichment:
     from openai import OpenAI
     client = OpenAI(api_key=api_key)
@@ -57,7 +61,7 @@ def call_openai_sync(exercise_data: dict, api_key: str, model: str) -> ExerciseE
     )
     return completion.choices[0].message.parsed
 
-
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=60))
 def call_gemini_sync(exercise_data: dict, api_key: str, model: str) -> ExerciseEnrichment:
     from google import genai
     from google.genai import types
@@ -73,7 +77,7 @@ def call_gemini_sync(exercise_data: dict, api_key: str, model: str) -> ExerciseE
     )
     return ExerciseEnrichment.model_validate_json(response.text)
 
-
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=30))
 def call_anthropic_sync(exercise_data: dict, api_key: str, model: str) -> dict:
     from anthropic import Anthropic
     client = Anthropic(api_key=api_key)
@@ -124,13 +128,17 @@ def process_file_sync(path: Path, provider: str, model: str):
     try:
         enrichment = enrich_exercise_sync(data, provider, model)
         
+        # Rate limit protection for Gemini free tier (15 RPM)
+        if provider == "gemini":
+            time.sleep(4.1)
+        
         # Apply enrichment
         dist_types = data.get("distractorTypes", {})
         dist_analysis = data.get("distractorAnalysis", {})
         
-        for idx_str, profile in enrichment.distractors.items():
-            dist_types[idx_str] = profile.distractorType
-            dist_analysis[idx_str] = profile.distractorAnalysis
+        for profile in enrichment.distractors:
+            dist_types[profile.index] = profile.distractorType
+            dist_analysis[profile.index] = profile.distractorAnalysis
             
         data["distractorTypes"] = dist_types
         data["distractorAnalysis"] = dist_analysis
@@ -157,7 +165,7 @@ def generate_openai_batch(output_file: str, model: str):
             "method": "POST",
             "url": "/v1/chat/completions",
             "body": {
-                "model": model,
+                "model": "gpt-4o",
                 "messages": [
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": generate_user_prompt(data)},
@@ -198,9 +206,9 @@ def apply_openai_batch(result_file: str):
                 data = json.loads(p.read_text(encoding="utf-8"))
                 dist_types = data.get("distractorTypes", {})
                 dist_analysis = data.get("distractorAnalysis", {})
-                for idx_str, profile in enrichment.distractors.items():
-                    dist_types[idx_str] = profile.distractorType
-                    dist_analysis[idx_str] = profile.distractorAnalysis
+                for profile in enrichment.distractors:
+                    dist_types[profile.index] = profile.distractorType
+                    dist_analysis[profile.index] = profile.distractorAnalysis
                 data["distractorTypes"] = dist_types
                 data["distractorAnalysis"] = dist_analysis
                 p.write_text(json.dumps(data, ensure_ascii=False, indent=4) + "\n", encoding="utf-8")
@@ -213,7 +221,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="AI Distractor Profiling Pipeline")
     parser.add_argument("--mode", choices=["sync", "prepare-batch", "apply-batch"], required=True)
     parser.add_argument("--provider", choices=["openai", "gemini", "anthropic"], default="openai")
-    parser.add_argument("--model", default="gpt-4o-mini")
+    parser.add_argument("--model", type=str, default="gpt-4o", help="Modell, das verwendet werden soll (z.B. gpt-4o)")
     parser.add_argument("--file", help="Specific JSON file to process (for sync mode)", type=str)
     parser.add_argument("--batch-file", help="Output or input file for batch modes", default="batch.jsonl")
     

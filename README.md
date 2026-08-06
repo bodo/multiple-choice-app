@@ -120,6 +120,8 @@ To enrich multiple-choice and single-choice exercises with pedagogical metadata 
    uv run apps/content-cms/ai_distractor_pipeline.py --mode apply-batch --batch-results /path/to/downloaded_output.jsonl
    ```
 
+Damit sind alle 647 Fragen mit echten, qualitativ hochwertigen `gpt-4o` Analysen angereichert! 
+
 Individual files can also be enriched directly within the `streamlit` CMS interface using the "🤖 KI: Analysiere Distraktoren" button.
 
 ### Exercise format

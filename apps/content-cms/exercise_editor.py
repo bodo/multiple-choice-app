@@ -602,10 +602,10 @@ def render_distractor_profiling() -> None:
                             ex_data["correct"] = list(ss["ef_correct_match"])
                             
                         try:
-                            res = enrich_exercise_sync(ex_data, provider="openai", model="gpt-4o-mini", api_key=api_key or os.getenv("OPENAI_API_KEY"))
-                            for idx_str, profile in res.distractors.items():
-                                ss.setdefault("ef_distractor_types", {})[idx_str] = profile.distractorType
-                                ss.setdefault("ef_distractor_analysis", {})[idx_str] = profile.distractorAnalysis
+                            res = enrich_exercise_sync(ex_data, provider="openai", model="gpt-4o", api_key=api_key or os.getenv("OPENAI_API_KEY"))
+                            for profile in res.distractors:
+                                ss.setdefault("ef_distractor_types", {})[profile.index] = profile.distractorType
+                                ss.setdefault("ef_distractor_analysis", {})[profile.index] = profile.distractorAnalysis
                             st.rerun()
                         except Exception as e:
                             st.error(f"KI Fehler: {e}")
