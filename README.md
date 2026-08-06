@@ -105,6 +105,23 @@ This validates categories, specializations, learning level, difficulty, and the
 answer container, then writes the complete authoring index plus
 `index_fian.json`, `index_fisi.json`, `index_fidp.json`, and `index_fidv.json`.
 
+### AI Distractor Profiling
+
+To enrich multiple-choice and single-choice exercises with pedagogical metadata for wrong answers (`distractorType` and `distractorAnalysis`), you can use the AI pipeline script. For the entire question pool, use the **OpenAI Batch API** to save 50% on token costs and avoid strict rate limits:
+
+1. Generate the `.jsonl` batch file:
+   ```bash
+   uv run apps/content-cms/ai_distractor_pipeline.py --mode prepare-batch
+   ```
+2. Upload `batch.jsonl` in the [OpenAI Platform Dashboard](https://platform.openai.com/batches) and run it using the `/v1/chat/completions` endpoint.
+3. Download the result file once the batch is completed.
+4. Apply the AI enrichments to your local exercise JSON files:
+   ```bash
+   uv run apps/content-cms/ai_distractor_pipeline.py --mode apply-batch --batch-results /path/to/downloaded_output.jsonl
+   ```
+
+Individual files can also be enriched directly within the `streamlit` CMS interface using the "🤖 KI: Analysiere Distraktoren" button.
+
 ### Exercise format
 
 ```jsonc
