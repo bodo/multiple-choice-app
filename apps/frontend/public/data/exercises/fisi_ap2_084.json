@@ -24,11 +24,5 @@
     "specializations": [
         "FISI",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

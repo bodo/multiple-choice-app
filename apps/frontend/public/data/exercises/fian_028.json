@@ -20,15 +20,5 @@
     "explainInstruction": "Parametrisierte Abfragen trennen SQL-Struktur und Daten. Eingaben werden nicht als ausführbarer Teil des Befehls interpretiert.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "similarTermConfusion",
-        "1": "similarTermConfusion",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

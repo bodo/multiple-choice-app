@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "§ 202a StGB betrifft das unbefugte Verschaffen des Zugangs zu besonders gesicherten Daten, die nicht für den Täter bestimmt sind.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "§ 202a StGB betrifft das unbefugte Verschaffen des Zugangs zu besonders gesicherten Daten, die nicht für den Täter bestimmt sind."
 }

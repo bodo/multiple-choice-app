@@ -40,17 +40,5 @@
         "FISI",
         "FIDP",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "0": "numericalCalculationTrap",
-        "1": "similarTermConfusion",
-        "2": "numericalCalculationTrap",
-        "4": "numericalCalculationTrap"
-    },
-    "distractorAnalysis": {
-        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
-        "4": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
-    }
+    ]
 }

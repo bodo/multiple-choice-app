@@ -20,15 +20,5 @@
     "explainInstruction": "Die Breitensuche besucht Knoten schichtweise und findet dadurch in ungewichteten Graphen einen Weg mit minimaler Kantenzahl.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

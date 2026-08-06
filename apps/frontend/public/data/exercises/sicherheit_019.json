@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Ein Trojaner täuscht einen legitimen Zweck vor, führt aber zusätzlich unerwünschte oder schädliche Funktionen aus.",
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "absoluteStatementTrap",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Ein Trojaner täuscht einen legitimen Zweck vor, führt aber zusätzlich unerwünschte oder schädliche Funktionen aus."
 }

@@ -23,15 +23,5 @@
         "FISI",
         "FIDP",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "0": "negationOversight",
-        "1": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

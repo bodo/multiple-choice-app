@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Für unbedingt erforderliche Zugriffe nennt § 25 TDDDG eine Ausnahme; optionale Zwecke benötigen grundsätzlich eine wirksame Einwilligung.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "similarTermConfusion",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    "explainInstruction": "Für unbedingt erforderliche Zugriffe nennt § 25 TDDDG eine Ausnahme; optionale Zwecke benötigen grundsätzlich eine wirksame Einwilligung."
 }

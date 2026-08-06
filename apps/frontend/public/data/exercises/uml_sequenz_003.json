@@ -24,15 +24,5 @@
         "FISI",
         "FIDP",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "0": "conceptContradiction",
-        "1": "conceptContradiction",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Öffentliche Abrufbarkeit bedeutet nicht, dass ein Foto beliebig vervielfältigt oder öffentlich zugänglich gemacht werden darf.",
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "similarTermConfusion",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Öffentliche Abrufbarkeit bedeutet nicht, dass ein Foto beliebig vervielfältigt oder öffentlich zugänglich gemacht werden darf."
 }

@@ -20,15 +20,5 @@
     "explainInstruction": "Kapselung schützt den internen Zustand hinter einer definierten Schnittstelle und reduziert unerwünschte Abhängigkeiten.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "absoluteStatementTrap",
-        "2": "similarTermConfusion",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "0": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

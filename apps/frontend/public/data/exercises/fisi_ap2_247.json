@@ -23,11 +23,5 @@
     "explainInstruction": "Intervalle, Generationen und Speicherorte folgen Wiederherstellungs- und Schutzbedarf; Aufbewahrung muss begründet sein.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

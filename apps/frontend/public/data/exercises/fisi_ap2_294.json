@@ -23,11 +23,5 @@
     "explainInstruction": "Vertrauenswürdige Images, minimale Rechte, Secret Management und ein aktueller Host reduzieren Risiken auf mehreren Ebenen.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

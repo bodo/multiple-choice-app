@@ -20,15 +20,5 @@
     "explainInstruction": "Beim `LEFT JOIN` bleiben alle Zeilen der linken Tabelle erhalten. Gibt es rechts keinen Treffer, sind die rechten Spalten `NULL`.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "similarTermConfusion",
-        "1": "absoluteStatementTrap",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

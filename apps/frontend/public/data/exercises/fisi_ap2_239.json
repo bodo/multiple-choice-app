@@ -23,11 +23,5 @@
     "explainInstruction": "Bei Blockspeicher verwaltet der Host das Dateisystem, bei Dateispeicher der Server; Zugriff und Koordination unterscheiden sich.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

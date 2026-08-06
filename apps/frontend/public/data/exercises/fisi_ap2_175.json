@@ -23,11 +23,5 @@
     "explainInstruction": "Wiederholbarkeit, überprüfbare Ergebnisse und klare Rückmeldungen sind Kernqualitäten automatisierter Administration.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

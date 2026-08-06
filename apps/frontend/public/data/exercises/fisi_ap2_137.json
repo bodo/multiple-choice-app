@@ -23,11 +23,5 @@
     "explainInstruction": "Scope, Erfolgskriterien und Rückfallentscheidung machen eine Änderung steuer- und prüfbar.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

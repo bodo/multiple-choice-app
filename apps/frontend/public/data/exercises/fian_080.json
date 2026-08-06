@@ -22,11 +22,5 @@
     "explainInstruction": "Eine belastbare Entscheidung betrachtet Total Cost of Ownership, Fähigkeiten, strategische Relevanz, Anpassbarkeit und Lieferantenrisiken statt nur den Einstiegspreis.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

@@ -23,11 +23,5 @@
     "explainInstruction": "Shared Responsibility verschiebt Infrastrukturaufgaben, nicht die Verantwortung für Identitäten, Daten und kundenseitige Konfiguration.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

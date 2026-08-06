@@ -20,15 +20,5 @@
     "explainInstruction": "Teilt das Pivot die Folge wiederholt in Größen 0 und `n−1`, entstehen quadratisch viele Vergleiche.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "numericalCalculationTrap",
-        "1": "conceptContradiction",
-        "2": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

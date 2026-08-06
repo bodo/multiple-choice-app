@@ -20,15 +20,5 @@
     "explainInstruction": "Continuous Delivery automatisiert bis zu einem freigabefähigen Stand. Continuous Deployment automatisiert zusätzlich die Ausbringung in Produktion.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "absoluteStatementTrap",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

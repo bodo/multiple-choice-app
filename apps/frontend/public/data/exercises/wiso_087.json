@@ -23,15 +23,5 @@
         "FISI",
         "FIDP",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "1": "numericalCalculationTrap",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

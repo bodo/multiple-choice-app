@@ -21,15 +21,5 @@
     "explainInstruction": "Lokaler Zustand bindet Requests an einen Knoten; gemeinsame Stores, Replikation oder bewusstes Session Routing lösen das Problem.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "negationOversight",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

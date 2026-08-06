@@ -21,15 +21,5 @@
     "explainInstruction": "Bei Infrastructure as a Service verantwortet der Kunde unter anderem Gastbetriebssystem und Workloads; der Anbieter betreibt die darunterliegende Plattform.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "RBAC bündelt Berechtigungen in Rollen und vereinfacht dadurch konsistente Zuweisungen und Prüfungen.",
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "absoluteStatementTrap",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    "explainInstruction": "RBAC bündelt Berechtigungen in Rollen und vereinfacht dadurch konsistente Zuweisungen und Prüfungen."
 }

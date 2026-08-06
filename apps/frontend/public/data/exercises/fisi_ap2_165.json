@@ -21,15 +21,5 @@
     "explainInstruction": "Strukturierte Serialisierung vermeidet fragile Stringverkettung und erleichtert Weiterverarbeitung.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "negationOversight",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

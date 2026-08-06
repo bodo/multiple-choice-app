@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Spear-Phishing nutzt Informationen über ein konkretes Ziel, um glaubwürdiger zu wirken.",
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "negationOversight",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    "explainInstruction": "Spear-Phishing nutzt Informationen über ein konkretes Ziel, um glaubwürdiger zu wirken."
 }

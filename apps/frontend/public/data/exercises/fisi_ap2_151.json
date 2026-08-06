@@ -21,15 +21,5 @@
     "explainInstruction": "Konventionell signalisiert Exit-Code 0 Erfolg und ein von 0 verschiedener Wert einen Fehler.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

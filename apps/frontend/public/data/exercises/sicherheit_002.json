@@ -23,15 +23,5 @@
     "correct": [
         1
     ],
-    "explainInstruction": "Integrität schützt die Korrektheit und Unverändertheit von Daten und Systemen.",
-    "distractorTypes": {
-        "0": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    "explainInstruction": "Integrität schützt die Korrektheit und Unverändertheit von Daten und Systemen."
 }

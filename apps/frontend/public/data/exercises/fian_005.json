@@ -21,13 +21,5 @@
     "explainInstruction": "Eine Rekursion benötigt einen erreichbaren Basisfall und muss ihren Zustand bei jedem Schritt in dessen Richtung verändern.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

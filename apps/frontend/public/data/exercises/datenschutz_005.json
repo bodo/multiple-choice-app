@@ -25,11 +25,5 @@
         1,
         2
     ],
-    "explainInstruction": "Der Verarbeitungsbegriff der DSGVO umfasst praktisch jeden Umgang mit personenbezogenen Daten, einschließlich Löschung.",
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    "explainInstruction": "Der Verarbeitungsbegriff der DSGVO umfasst praktisch jeden Umgang mit personenbezogenen Daten, einschließlich Löschung."
 }

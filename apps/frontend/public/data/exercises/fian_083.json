@@ -22,11 +22,5 @@
     "explainInstruction": "CSRF-Schutz kombiniert häufig Tokenprüfung und geeignete Cookie-Regeln. Zustandsändernde GET-Anfragen erleichtern Angriffe und sollten vermieden werden.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

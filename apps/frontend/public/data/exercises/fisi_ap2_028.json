@@ -24,11 +24,5 @@
     "specializations": [
         "FISI",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "2": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

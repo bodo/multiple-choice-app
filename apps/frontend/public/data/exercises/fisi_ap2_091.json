@@ -21,15 +21,5 @@
     "explainInstruction": "Rollen- und gruppenbasierte Zuweisung reduziert Einzelberechtigungen und vereinfacht Eintritt, Wechsel und Austritt.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "negationOversight",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

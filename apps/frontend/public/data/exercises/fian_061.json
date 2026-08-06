@@ -22,11 +22,5 @@
     "explainInstruction": "Ein reproduzierbarer Testfall beschreibt Ausgangslage, Eingaben, Ablauf und erwartetes Ergebnis. Ein Personenname allein reicht nicht.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

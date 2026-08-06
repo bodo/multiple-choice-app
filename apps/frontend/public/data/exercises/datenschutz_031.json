@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Art. 33 DSGVO nennt möglichst 72 Stunden; eine spätere Meldung ist zu begründen. Ausgenommen sind Verletzungen, die voraussichtlich kein Risiko verursachen.",
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "absoluteStatementTrap",
-        "3": "numericalCalculationTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
-    }
+    "explainInstruction": "Art. 33 DSGVO nennt möglichst 72 Stunden; eine spätere Meldung ist zu begründen. Ausgenommen sind Verletzungen, die voraussichtlich kein Risiko verursachen."
 }

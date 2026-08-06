@@ -27,11 +27,5 @@
         "FISI",
         "FIDP",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "4": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "4": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

@@ -20,15 +20,5 @@
     "explainInstruction": "In der dritten Normalform hängen Nichtschlüsselattribute nicht transitiv über ein anderes Nichtschlüsselattribut vom Schlüssel ab.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

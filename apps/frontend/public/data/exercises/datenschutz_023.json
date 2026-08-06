@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Technische und organisatorische Maßnahmen werden risikoorientiert gewählt und müssen zur konkreten Verarbeitung passen.",
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "similarTermConfusion",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    "explainInstruction": "Technische und organisatorische Maßnahmen werden risikoorientiert gewählt und müssen zur konkreten Verarbeitung passen."
 }

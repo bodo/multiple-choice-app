@@ -20,15 +20,5 @@
     "explainInstruction": "OAuth 2.0 delegiert Zugriff. OpenID Connect baut darauf auf und standardisiert die Anmeldung und Identitätsinformationen.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "numericalCalculationTrap",
-        "2": "conceptContradiction",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

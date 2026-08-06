@@ -23,11 +23,5 @@
     "explainInstruction": "CPU-/Plattformkompatibilität, Storage und Netzwerk müssen die VM am Ziel ohne Funktionsverlust tragen.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

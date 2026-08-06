@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Auch frei zugängliche Bibliotheken können Pflichten aus Urheberrecht und Lizenz auslösen.",
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "similarTermConfusion",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Auch frei zugängliche Bibliotheken können Pflichten aus Urheberrecht und Lizenz auslösen."
 }

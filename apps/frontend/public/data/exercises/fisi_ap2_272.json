@@ -22,15 +22,5 @@
     "specializations": [
         "FISI",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

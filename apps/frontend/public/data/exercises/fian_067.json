@@ -22,11 +22,5 @@
     "explainInstruction": "Eindeutigkeit, Prüfbarkeit und Nachverfolgbarkeit helfen bei Umsetzung und Abnahme. Unabhängige Ziele sollten getrennt werden.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

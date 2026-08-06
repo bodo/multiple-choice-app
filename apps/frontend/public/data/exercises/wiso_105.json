@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Klare Anforderungen verringern Auslegungsspielräume und schaffen eine prüfbare Grundlage für Lieferung und Abnahme.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "similarTermConfusion",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Klare Anforderungen verringern Auslegungsspielräume und schaffen eine prüfbare Grundlage für Lieferung und Abnahme."
 }

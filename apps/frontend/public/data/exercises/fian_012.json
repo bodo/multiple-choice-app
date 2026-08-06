@@ -20,15 +20,5 @@
     "explainInstruction": "Ein Array erlaubt den direkten Zugriff auf ein Element über seine Adresse und damit typischerweise `O(1)`. Eine verkettete Liste muss bis zur Position durchlaufen werden.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

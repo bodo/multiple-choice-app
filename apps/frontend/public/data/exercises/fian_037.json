@@ -20,15 +20,5 @@
     "explainInstruction": "Neues Verhalten soll möglichst durch Erweiterung ergänzt werden, ohne bewährten Code ständig zu verändern.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "similarTermConfusion",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

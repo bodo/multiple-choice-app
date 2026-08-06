@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Ein NDA beschreibt insbesondere, welche Informationen vertraulich sind und wie sie genutzt oder offengelegt werden dürfen.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "absoluteStatementTrap",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    "explainInstruction": "Ein NDA beschreibt insbesondere, welche Informationen vertraulich sind und wie sie genutzt oder offengelegt werden dürfen."
 }

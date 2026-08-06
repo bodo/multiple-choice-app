@@ -20,15 +20,5 @@
     "explainInstruction": "Atomarität bedeutet Alles-oder-nichts: Schlägt ein Teil fehl, werden die Änderungen der Transaktion zurückgerollt.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

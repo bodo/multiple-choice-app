@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Ein geregeltes Offboarding verhindert verwaiste oder weiterhin nutzbare Zugänge.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "similarTermConfusion",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    "explainInstruction": "Ein geregeltes Offboarding verhindert verwaiste oder weiterhin nutzbare Zugänge."
 }

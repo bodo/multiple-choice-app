@@ -21,15 +21,5 @@
     "explainInstruction": "Ein NAS verwaltet Dateisystem und Dateizugriff und stellt Freigaben über das Netzwerk bereit.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "negationOversight",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

@@ -24,13 +24,5 @@
         0,
         2
     ],
-    "explainInstruction": "Pseudonymisierung und Verschlüsselung senken Risiken, machen eine Verarbeitung aber nicht automatisch anonym oder ohne Rechtsgrundlage zulässig.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Pseudonymisierung und Verschlüsselung senken Risiken, machen eine Verarbeitung aber nicht automatisch anonym oder ohne Rechtsgrundlage zulässig."
 }

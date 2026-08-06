@@ -25,11 +25,5 @@
         1,
         2
     ],
-    "explainInstruction": "Phishing arbeitet häufig mit Dringlichkeit, nachgeahmten Domains und dem Versuch, Zugangsdaten oder Zahlungen zu erlangen.",
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Phishing arbeitet häufig mit Dringlichkeit, nachgeahmten Domains und dem Versuch, Zugangsdaten oder Zahlungen zu erlangen."
 }

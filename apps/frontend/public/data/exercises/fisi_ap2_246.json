@@ -23,11 +23,5 @@
     "explainInstruction": "Konsistenz, vollständige Wiederherstellungskette und benötigte Schlüssel/Metadaten bestimmen, ob die Datenbank nutzbar zurückkommt.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

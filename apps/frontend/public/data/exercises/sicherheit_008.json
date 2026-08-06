@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Mehrere technische, organisatorische und physische Schutzschichten reduzieren die Abhängigkeit von einer einzelnen Maßnahme.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "absoluteStatementTrap",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Mehrere technische, organisatorische und physische Schutzschichten reduzieren die Abhängigkeit von einer einzelnen Maßnahme."
 }

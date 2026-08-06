@@ -23,15 +23,5 @@
         "FISI",
         "FIDP",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

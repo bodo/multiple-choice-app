@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "AGB müssen wirksam in den Vertrag einbezogen werden; überraschende oder unangemessen benachteiligende Klauseln unterliegen zusätzlichen Grenzen.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "negationOversight",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "AGB müssen wirksam in den Vertrag einbezogen werden; überraschende oder unangemessen benachteiligende Klauseln unterliegen zusätzlichen Grenzen."
 }

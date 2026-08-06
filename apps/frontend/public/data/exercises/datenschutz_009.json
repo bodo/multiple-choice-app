@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls aktuell sein.",
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls aktuell sein."
 }

@@ -21,15 +21,5 @@
     "explainInstruction": "Ein exklusiver Lock verhindert überlappende Läufe; Stale-Lock- und Cleanup-Verhalten müssen berücksichtigt werden.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

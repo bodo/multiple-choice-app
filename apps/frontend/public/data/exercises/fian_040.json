@@ -20,15 +20,5 @@
     "explainInstruction": "High-Level- und Low-Level-Module sollen von Abstraktionen abhängen. Dadurch lassen sich technische Details leichter austauschen und testen.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "similarTermConfusion",
-        "2": "absoluteStatementTrap",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "0": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

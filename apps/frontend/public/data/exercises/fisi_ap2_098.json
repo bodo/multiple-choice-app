@@ -23,11 +23,5 @@
     "explainInstruction": "Sprechende Rollen, kontrollierte Verschachtelung und Rezertifizierung halten Berechtigungen wartbar.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "2": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

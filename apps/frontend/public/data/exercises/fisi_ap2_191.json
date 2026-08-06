@@ -23,11 +23,5 @@
     "explainInstruction": "Zeit, Identität des Laufs und Ergebnis ermöglichen Betrieb und Diagnose; Secrets müssen maskiert bleiben.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

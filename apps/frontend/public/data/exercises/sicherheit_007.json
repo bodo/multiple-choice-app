@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Ein Risiko wird typischerweise anhand der Wahrscheinlichkeit eines Ereignisses und der möglichen Schadenshöhe bewertet.",
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "similarTermConfusion",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    "explainInstruction": "Ein Risiko wird typischerweise anhand der Wahrscheinlichkeit eines Ereignisses und der möglichen Schadenshöhe bewertet."
 }

@@ -23,11 +23,5 @@
     "explainInstruction": "Fehlertoleranz, Leistung, Kapazität und Wiederherstellungsrisiko müssen zum Einsatzzweck passen.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

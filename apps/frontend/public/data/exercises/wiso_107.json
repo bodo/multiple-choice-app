@@ -25,11 +25,5 @@
         1,
         2
     ],
-    "explainInstruction": "Der Schutz als Geschäftsgeheimnis setzt unter anderem angemessene Geheimhaltungsmaßnahmen voraus. Dazu können organisatorische, vertragliche und technische Kontrollen gehören.",
-    "distractorTypes": {
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Der Schutz als Geschäftsgeheimnis setzt unter anderem angemessene Geheimhaltungsmaßnahmen voraus. Dazu können organisatorische, vertragliche und technische Kontrollen gehören."
 }

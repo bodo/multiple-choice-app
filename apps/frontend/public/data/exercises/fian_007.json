@@ -20,15 +20,5 @@
     "explainInstruction": "Eine Kollision entsteht, wenn die Hash-Funktion unterschiedliche Schlüssel auf denselben Tabellenplatz abbildet. Sie muss etwa durch Verkettung oder offene Adressierung behandelt werden.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "negationOversight",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

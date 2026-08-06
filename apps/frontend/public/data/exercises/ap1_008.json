@@ -27,11 +27,5 @@
         "FISI",
         "FIDP",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "4": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "4": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

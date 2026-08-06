@@ -20,15 +20,5 @@
     "explainInstruction": "Stateless bedeutet, dass der Server keinen versteckten clientbezogenen Sitzungskontext zwischen Anfragen voraussetzt. Persistente Fachdaten sind trotzdem erlaubt.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "absoluteStatementTrap",
-        "2": "negationOversight",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

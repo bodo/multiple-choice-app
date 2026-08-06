@@ -23,11 +23,5 @@
     "explainInstruction": "Automatische Prüfungen, repräsentative Tests und Freigabe reduzieren das Risiko breiter Fehlkonfigurationen.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

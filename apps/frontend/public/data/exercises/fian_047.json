@@ -22,11 +22,5 @@
     "explainInstruction": "Schichten ordnen Verantwortlichkeiten und begrenzen Abhängigkeiten. Beliebige Querverbindungen würden diese Vorteile wieder aufheben.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "2": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

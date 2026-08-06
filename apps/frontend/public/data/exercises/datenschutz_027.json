@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Ein Löschanspruch ist anhand seiner Voraussetzungen und Ausnahmen zu prüfen, beispielsweise bei gesetzlichen Aufbewahrungspflichten.",
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "conceptContradiction",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Ein Löschanspruch ist anhand seiner Voraussetzungen und Ausnahmen zu prüfen, beispielsweise bei gesetzlichen Aufbewahrungspflichten."
 }

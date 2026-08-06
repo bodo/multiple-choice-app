@@ -20,15 +20,5 @@
     "explainInstruction": "Passwort-Hashfunktionen sind absichtlich aufwendig. Ein individuelles Salt verhindert, dass gleiche Passwörter denselben gespeicherten Wert besitzen.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "conceptContradiction",
-        "1": "negationOversight",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

@@ -22,15 +22,5 @@
     "specializations": [
         "FISI",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "conceptContradiction",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

@@ -20,15 +20,5 @@
     "explainInstruction": "Stabilität betrifft nur Elemente mit gleichem Sortierschlüssel: Ihre ursprüngliche Reihenfolge bleibt erhalten.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "absoluteStatementTrap",
-        "1": "absoluteStatementTrap",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "0": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

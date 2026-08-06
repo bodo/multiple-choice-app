@@ -23,11 +23,5 @@
     "explainInstruction": "Benutzerspezifische Rechte, Credentials und der konkrete Zugriffspfad sollten geprüft werden, bevor Regeln ausgeweitet werden.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

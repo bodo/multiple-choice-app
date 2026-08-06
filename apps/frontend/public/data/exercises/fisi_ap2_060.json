@@ -24,11 +24,5 @@
     "specializations": [
         "FISI",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "3": "numericalCalculationTrap"
-    },
-    "distractorAnalysis": {
-        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
-    }
+    ]
 }

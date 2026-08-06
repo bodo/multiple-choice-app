@@ -23,11 +23,5 @@
     "explainInstruction": "Automation muss Fehler erkennen, Kontext protokollieren und für Scheduler oder Pipelines korrekt signalisieren.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

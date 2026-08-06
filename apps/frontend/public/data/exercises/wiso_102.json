@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Ein SLA beschreibt beispielsweise Verfügbarkeit, Reaktionszeiten, Messverfahren und Folgen bei Abweichungen.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "conceptContradiction",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Ein SLA beschreibt beispielsweise Verfügbarkeit, Reaktionszeiten, Messverfahren und Folgen bei Abweichungen."
 }

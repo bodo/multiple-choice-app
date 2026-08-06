@@ -20,15 +20,5 @@
     "explainInstruction": "Ein Stack arbeitet nach LIFO. `push` legt ein Element oben ab, `pop` entfernt das oberste Element.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "conceptContradiction",
-        "1": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

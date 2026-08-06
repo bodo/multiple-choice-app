@@ -25,11 +25,5 @@
         1,
         2
     ],
-    "explainInstruction": "Die konkreten Pflichten hängen von der Lizenz ab. Typisch sind Hinweise, Lizenztexte und bei bestimmten Lizenzen Quellcodepflichten.",
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    "explainInstruction": "Die konkreten Pflichten hängen von der Lizenz ab. Typisch sind Hinweise, Lizenztexte und bei bestimmten Lizenzen Quellcodepflichten."
 }

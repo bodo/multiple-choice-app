@@ -20,15 +20,5 @@
     "explainInstruction": "Ein Singleton ist global erreichbar. Dadurch werden Abhängigkeiten unsichtbar, Tests beeinflussen sich leichter gegenseitig und Austauschbarkeit leidet.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "conceptContradiction",
-        "2": "negationOversight",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

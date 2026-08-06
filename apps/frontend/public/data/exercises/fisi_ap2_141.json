@@ -21,15 +21,5 @@
     "explainInstruction": "Redundante Server helfen nicht gegen einen gemeinsamen Ausfallpunkt der Energieversorgung.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "numericalCalculationTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
-    }
+    ]
 }

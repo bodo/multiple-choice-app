@@ -21,15 +21,5 @@
     "explainInstruction": "Cmdlets geben .NET-Objekte weiter; nachfolgende Schritte können stabil auf Eigenschaften zugreifen.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "similarTermConfusion",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

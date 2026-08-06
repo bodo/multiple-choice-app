@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Es sollen nur Daten verarbeitet werden, die für den festgelegten Zweck angemessen und erforderlich sind.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "absoluteStatementTrap",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Es sollen nur Daten verarbeitet werden, die für den festgelegten Zweck angemessen und erforderlich sind."
 }

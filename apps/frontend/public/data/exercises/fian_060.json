@@ -20,15 +20,5 @@
     "explainInstruction": "Coverage ist ein nützlicher Hinweis auf ungetestete Bereiche. Auch ausgeführter Code kann jedoch ohne sinnvolle Assertions oder Randfälle fehlerhaft bleiben.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "numericalCalculationTrap",
-        "2": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "0": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

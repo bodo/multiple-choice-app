@@ -21,15 +21,5 @@
     "explainInstruction": "PUT beschreibt typischerweise das vollständige und idempotente Setzen einer Ressource unter einer bekannten URI.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "0": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

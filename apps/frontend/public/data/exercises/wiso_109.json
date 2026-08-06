@@ -25,11 +25,5 @@
         1,
         2
     ],
-    "explainInstruction": "Exit-Regelungen verhindern Lock-in-Risiken und klären, wie Daten geordnet übergeben und anschließend behandelt werden.",
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Exit-Regelungen verhindern Lock-in-Risiken und klären, wie Daten geordnet übergeben und anschließend behandelt werden."
 }

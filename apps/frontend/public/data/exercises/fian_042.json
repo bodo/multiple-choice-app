@@ -20,15 +20,5 @@
     "explainInstruction": "Ein Repository verbirgt Details der Datenhaltung und bietet der Fachlogik eine auf Domänenobjekte ausgerichtete Schnittstelle.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "absoluteStatementTrap",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

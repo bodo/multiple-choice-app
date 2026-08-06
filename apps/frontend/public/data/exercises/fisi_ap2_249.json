@@ -21,15 +21,5 @@
     "explainInstruction": "Identität, DNS, Datenbanken und Anwendungen besitzen Abhängigkeiten; Priorisierung richtet knappe Ressourcen auf kritische Prozesse.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "negationOversight",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

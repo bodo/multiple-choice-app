@@ -20,15 +20,5 @@
     "explainInstruction": "Der Product Owner verantwortet Produktziel und Backlog-Reihenfolge mit Blick auf den Wert. Das Entwicklungsteam organisiert seine Arbeit selbst.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "absoluteStatementTrap",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

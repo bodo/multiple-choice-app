@@ -20,15 +20,5 @@
     "explainInstruction": "Responsive Design sorgt dafür, dass Inhalte und Bedienung auf verschiedenen Geräten sinnvoll dargestellt und genutzt werden können.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "absoluteStatementTrap",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

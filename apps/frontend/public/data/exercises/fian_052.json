@@ -20,15 +20,5 @@
     "explainInstruction": "Integrationstests decken Fehler an Schnittstellen und im Zusammenspiel realer Komponenten auf.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "negationOversight",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

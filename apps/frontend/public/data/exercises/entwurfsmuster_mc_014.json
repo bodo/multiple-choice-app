@@ -37,15 +37,5 @@
     ],
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "2": "conceptContradiction",
-        "9": "conceptContradiction",
-        "11": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "9": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "11": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

@@ -24,11 +24,5 @@
     "explainInstruction": "Grenzwertanalyse prüft direkt an und unmittelbar außerhalb der Grenzen: 0/1 sowie 100/101. Der Wert 50 liegt nicht an einer Grenze.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "2": "numericalCalculationTrap"
-    },
-    "distractorAnalysis": {
-        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
-    }
+    ]
 }

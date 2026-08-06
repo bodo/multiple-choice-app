@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Die Interessenabwägung prüft, ob berechtigte Interessen die Interessen oder Grundrechte der betroffenen Person überwiegen.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "absoluteStatementTrap",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    "explainInstruction": "Die Interessenabwägung prüft, ob berechtigte Interessen die Interessen oder Grundrechte der betroffenen Person überwiegen."
 }

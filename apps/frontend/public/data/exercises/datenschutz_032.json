@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Der Auftragsverarbeiter meldet die Verletzung unverzüglich an den Verantwortlichen, damit dieser seine Pflichten erfüllen kann.",
-    "distractorTypes": {
-        "1": "numericalCalculationTrap",
-        "2": "absoluteStatementTrap",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    "explainInstruction": "Der Auftragsverarbeiter meldet die Verletzung unverzüglich an den Verantwortlichen, damit dieser seine Pflichten erfüllen kann."
 }

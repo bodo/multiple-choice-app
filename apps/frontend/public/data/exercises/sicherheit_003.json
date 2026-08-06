@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Verfügbarkeit beschreibt, dass Systeme und Daten bei Bedarf nutzbar sind.",
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    "explainInstruction": "Verfügbarkeit beschreibt, dass Systeme und Daten bei Bedarf nutzbar sind."
 }

@@ -23,11 +23,5 @@
     "explainInstruction": "Planung, Rückfalloption und Dokumentation reduzieren Risiko; gestaffelte Änderungen erhalten Vergleichs- und Ausweichmöglichkeiten.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

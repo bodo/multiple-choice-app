@@ -20,15 +20,5 @@
     "explainInstruction": "CORS ist ein HTTP-basierter Mechanismus, mit dem Server kontrollieren, welche anderen Origins Browserzugriff auf Antworten erhalten.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

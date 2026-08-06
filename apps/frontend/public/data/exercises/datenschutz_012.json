@@ -25,11 +25,5 @@
         1,
         2
     ],
-    "explainInstruction": "Art. 6 DSGVO nennt mehrere Rechtsgrundlagen. Die technische Möglichkeit allein erlaubt keine Verarbeitung.",
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Art. 6 DSGVO nennt mehrere Rechtsgrundlagen. Die technische Möglichkeit allein erlaubt keine Verarbeitung."
 }

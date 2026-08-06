@@ -23,11 +23,5 @@
     "explainInstruction": "Neben Funktion und TLS gehören Beobachtbarkeit sowie das Entfernen unsicherer Standardwerte zur Inbetriebnahme.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

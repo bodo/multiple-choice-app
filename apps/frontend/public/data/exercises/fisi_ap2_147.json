@@ -23,11 +23,5 @@
     "explainInstruction": "Redundanz muss Fehlerdomänen trennen und getestet werden; mehrere Instanzen in derselben Domäne schützen nicht vor deren Ausfall.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "2": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

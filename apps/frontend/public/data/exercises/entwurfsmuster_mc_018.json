@@ -28,13 +28,5 @@
     ],
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "5": "similarTermConfusion",
-        "6": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "5": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "6": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

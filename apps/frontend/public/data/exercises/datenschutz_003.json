@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Pseudonymisierung reduziert die direkte Zuordenbarkeit, hebt den Personenbezug aber nicht auf. Wirksame Anonymisierung ist nicht mehr rückführbar.",
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "absoluteStatementTrap",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Pseudonymisierung reduziert die direkte Zuordenbarkeit, hebt den Personenbezug aber nicht auf. Wirksame Anonymisierung ist nicht mehr rückführbar."
 }

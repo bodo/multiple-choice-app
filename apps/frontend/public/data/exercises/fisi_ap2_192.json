@@ -23,11 +23,5 @@
     "explainInstruction": "Retries helfen bei transienten Fehlern, müssen aber Duplikate, Last und permanente Eingabefehler berücksichtigen.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

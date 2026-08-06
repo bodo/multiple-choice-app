@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Bei Programmen, die ein Arbeitnehmer in Wahrnehmung seiner Aufgaben oder nach Anweisung schafft, ist grundsätzlich der Arbeitgeber zur Ausübung der vermögensrechtlichen Befugnisse berechtigt.",
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "absoluteStatementTrap",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Bei Programmen, die ein Arbeitnehmer in Wahrnehmung seiner Aufgaben oder nach Anweisung schafft, ist grundsätzlich der Arbeitgeber zur Ausübung der vermögensrechtlichen Befugnisse berechtigt."
 }

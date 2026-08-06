@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Ein geeignetes Lösch- oder Vernichtungsverfahren muss verhindern, dass schutzbedürftige Daten wiederhergestellt werden können.",
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "similarTermConfusion",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Ein geeignetes Lösch- oder Vernichtungsverfahren muss verhindern, dass schutzbedürftige Daten wiederhergestellt werden können."
 }

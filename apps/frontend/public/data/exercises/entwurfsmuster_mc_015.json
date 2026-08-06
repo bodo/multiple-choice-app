@@ -26,13 +26,5 @@
     ],
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "4": "similarTermConfusion",
-        "5": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "4": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "5": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

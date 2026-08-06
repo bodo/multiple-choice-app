@@ -23,11 +23,5 @@
     "explainInstruction": "Prognosen verbinden Zeitreihen, bekannte Änderungen, Spitzen und Limits; eine Einzelmessung reicht nicht.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

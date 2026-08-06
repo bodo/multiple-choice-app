@@ -23,11 +23,5 @@
     "explainInstruction": "Status, Zeitgrenzen und Paginierung sind für vollständige und kontrollierte Abläufe notwendig.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

@@ -23,11 +23,5 @@
     "explainInstruction": "Parameter, fokussierte Funktionen und Objekte halten Logik test- und kombinierbar; Secrets im Code schaden Sicherheit und Portabilität.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

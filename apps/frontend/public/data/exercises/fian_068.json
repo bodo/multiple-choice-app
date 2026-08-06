@@ -22,11 +22,5 @@
     "explainInstruction": "Tastaturbedienung, Kontrast und klare Labels sind zentrale Maßnahmen. Farbe darf nicht der einzige Informationsträger sein.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

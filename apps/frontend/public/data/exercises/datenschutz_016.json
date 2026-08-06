@@ -25,11 +25,5 @@
         1,
         2
     ],
-    "explainInstruction": "Eine Einwilligung muss freiwillig, informiert, bestimmt und eindeutig sein. Sie kann für die Zukunft widerrufen werden.",
-    "distractorTypes": {
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    "explainInstruction": "Eine Einwilligung muss freiwillig, informiert, bestimmt und eindeutig sein. Sie kann für die Zukunft widerrufen werden."
 }

@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Copyleft knüpft die Weitergabe häufig an Pflichten, die Freiheiten der Lizenz auch für abgeleitete Werke zu erhalten.",
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "absoluteStatementTrap",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    "explainInstruction": "Copyleft knüpft die Weitergabe häufig an Pflichten, die Freiheiten der Lizenz auch für abgeleitete Werke zu erhalten."
 }

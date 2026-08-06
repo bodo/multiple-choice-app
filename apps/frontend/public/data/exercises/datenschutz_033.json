@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Bei voraussichtlich hohem Risiko ist grundsätzlich eine klare Benachrichtigung der betroffenen Personen erforderlich; die DSGVO nennt Ausnahmen.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Bei voraussichtlich hohem Risiko ist grundsätzlich eine klare Benachrichtigung der betroffenen Personen erforderlich; die DSGVO nennt Ausnahmen."
 }

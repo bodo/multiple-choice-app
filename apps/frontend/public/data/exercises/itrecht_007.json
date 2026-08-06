@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Urheberrechtlicher Schutz entsteht grundsätzlich durch die Schöpfung des geschützten Werks, nicht durch ein Registerverfahren.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "similarTermConfusion",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    "explainInstruction": "Urheberrechtlicher Schutz entsteht grundsätzlich durch die Schöpfung des geschützten Werks, nicht durch ein Registerverfahren."
 }

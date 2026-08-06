@@ -22,11 +22,5 @@
     "explainInstruction": "Reviews verbessern Qualität und Wissenstransfer, liefern aber keinen mathematischen Beweis vollständiger Fehlerfreiheit.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

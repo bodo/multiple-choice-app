@@ -20,15 +20,5 @@
     "explainInstruction": "`DELETE` entfernt Zeilen. `DROP TABLE` würde dagegen die Tabelle mitsamt ihrer Struktur entfernen.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "similarTermConfusion",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "0": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

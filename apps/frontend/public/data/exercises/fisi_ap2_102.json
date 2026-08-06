@@ -21,15 +21,5 @@
     "explainInstruction": "Eine gezielte Bind-Adresse ergänzt Firewallregeln und verhindert unbeabsichtigtes Lauschen auf allen Interfaces.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "negationOversight",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

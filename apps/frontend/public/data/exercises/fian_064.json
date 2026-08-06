@@ -20,15 +20,5 @@
     "explainInstruction": "Akzeptanzkriterien übersetzen eine Anforderung in beobachtbare, überprüfbare Bedingungen für die Abnahme.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "negationOversight",
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    ]
 }

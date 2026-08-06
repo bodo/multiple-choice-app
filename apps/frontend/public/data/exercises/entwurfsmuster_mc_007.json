@@ -32,15 +32,5 @@
         "FISI",
         "FIDP",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "5": "conceptContradiction",
-        "6": "conceptContradiction",
-        "7": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "5": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "6": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "7": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

@@ -25,11 +25,5 @@
         1,
         2
     ],
-    "explainInstruction": "Personenbezogen sind Informationen, die sich direkt oder indirekt auf eine identifizierte oder identifizierbare natürliche Person beziehen.",
-    "distractorTypes": {
-        "3": "absoluteStatementTrap"
-    },
-    "distractorAnalysis": {
-        "3": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell)."
-    }
+    "explainInstruction": "Personenbezogen sind Informationen, die sich direkt oder indirekt auf eine identifizierte oder identifizierbare natürliche Person beziehen."
 }

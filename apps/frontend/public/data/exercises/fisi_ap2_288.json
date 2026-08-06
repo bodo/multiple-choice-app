@@ -21,15 +21,5 @@
     "explainInstruction": "Snapshots sind kurzlebige Rückfallpunkte, keine dauerhafte Backup- oder Archivlösung.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "conceptContradiction",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

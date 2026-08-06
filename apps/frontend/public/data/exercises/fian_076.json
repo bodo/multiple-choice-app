@@ -20,15 +20,5 @@
     "explainInstruction": "Änderungen brauchen eine nachvollziehbare Auswirkungsanalyse und Entscheidung. So bleibt die Projektplanung steuerbar.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "conceptContradiction",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

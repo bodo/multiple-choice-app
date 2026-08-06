@@ -23,11 +23,5 @@
     "explainInstruction": "Ein Proxy zentralisiert Eintrittspunkt und Weiterleitung, kann aber fachliche Fehler im Backend nicht automatisch beheben.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

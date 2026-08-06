@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Ein individuelles Salt erschwert vorberechnete Angriffe und verhindert direkt erkennbare gleiche Hashwerte.",
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Ein individuelles Salt erschwert vorberechnete Angriffe und verhindert direkt erkennbare gleiche Hashwerte."
 }

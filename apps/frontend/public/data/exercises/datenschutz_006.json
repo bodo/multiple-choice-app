@@ -25,11 +25,5 @@
         1,
         2
     ],
-    "explainInstruction": "Besondere Kategorien genießen erhöhten Schutz. Dazu gehören unter anderem Gesundheitsdaten, bestimmte biometrische Daten und religiöse Überzeugungen.",
-    "distractorTypes": {
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Besondere Kategorien genießen erhöhten Schutz. Dazu gehören unter anderem Gesundheitsdaten, bestimmte biometrische Daten und religiöse Überzeugungen."
 }

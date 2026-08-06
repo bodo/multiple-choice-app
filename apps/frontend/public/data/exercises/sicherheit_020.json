@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Unerwartete ausführbare Anhänge sind ein typischer Verbreitungsweg für Schadsoftware und sollten isoliert geprüft werden.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Unerwartete ausführbare Anhänge sind ein typischer Verbreitungsweg für Schadsoftware und sollten isoliert geprüft werden."
 }

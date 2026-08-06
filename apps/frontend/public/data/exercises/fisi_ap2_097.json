@@ -23,11 +23,5 @@
     "explainInstruction": "Offboarding beendet Zugänge und Sitzungen, erhält aber benötigte Geschäftsdaten über einen geregelten Übergabeprozess.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

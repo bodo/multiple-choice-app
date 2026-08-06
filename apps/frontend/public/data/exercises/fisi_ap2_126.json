@@ -21,15 +21,5 @@
     "explainInstruction": "Neben klassischen Modusbits können Verzeichnisrechte, ACLs, Eigentümer und Attribute den Zugriff beeinflussen.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "numericalCalculationTrap",
-        "3": "numericalCalculationTrap"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung.",
-        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
-    }
+    ]
 }

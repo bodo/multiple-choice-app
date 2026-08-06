@@ -23,11 +23,5 @@
     "explainInstruction": "Technische und organisatorische Abhängigkeiten müssen vor der eigentlichen Anwendung verfügbar sein.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

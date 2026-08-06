@@ -20,15 +20,5 @@
     "explainInstruction": "Ein Primärschlüssel identifiziert jede Zeile eindeutig. Primärschlüsselspalten dürfen deshalb nicht `NULL` sein.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "0": "conceptContradiction",
-        "2": "absoluteStatementTrap",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "0": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

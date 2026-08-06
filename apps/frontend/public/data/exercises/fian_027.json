@@ -22,11 +22,5 @@
     "explainInstruction": "Indizes beschleunigen passende Zugriffe, müssen aber bei Änderungen gepflegt und gespeichert werden. Unpassende Abfragen profitieren nicht automatisch.",
     "specializations": [
         "FIAN"
-    ],
-    "distractorTypes": {
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

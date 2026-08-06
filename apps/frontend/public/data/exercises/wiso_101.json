@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Nach § 145 BGB ist der Antragende grundsätzlich an seinen Antrag gebunden, sofern er die Gebundenheit nicht ausgeschlossen hat.",
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Nach § 145 BGB ist der Antragende grundsätzlich an seinen Antrag gebunden, sofern er die Gebundenheit nicht ausgeschlossen hat."
 }

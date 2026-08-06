@@ -23,11 +23,5 @@
     "explainInstruction": "Secrets gehören in einen kontrollierten Secret Store oder geschützte Laufzeitvariablen, nicht in Quelltext.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "numericalCalculationTrap"
-    },
-    "distractorAnalysis": {
-        "3": "Fehlerhafte Zahlenwert-, Bereichs- oder Grenzwertberechnung."
-    }
+    ]
 }

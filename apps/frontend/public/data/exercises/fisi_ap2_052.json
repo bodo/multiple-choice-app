@@ -24,11 +24,5 @@
     "specializations": [
         "FISI",
         "FIDV"
-    ],
-    "distractorTypes": {
-        "2": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    ]
 }

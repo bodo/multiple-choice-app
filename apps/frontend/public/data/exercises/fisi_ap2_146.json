@@ -21,15 +21,5 @@
     "explainInstruction": "Gestaffelte Wartung begrenzt den gleichzeitigen Ausfall und erlaubt Stop-Kriterien nach jedem Schritt.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "absoluteStatementTrap",
-        "2": "conceptContradiction",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    ]
 }

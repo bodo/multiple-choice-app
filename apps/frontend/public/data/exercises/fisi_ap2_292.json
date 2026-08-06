@@ -21,15 +21,5 @@
     "explainInstruction": "Ein fester Digest bindet den Rollout an exakt denselben Imageinhalt.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "1": "negationOversight",
-        "2": "similarTermConfusion",
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "1": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }

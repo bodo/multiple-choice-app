@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Die Lizenz räumt Nutzungsrechte unter bestimmten Bedingungen ein. Eigentum an einem Datenträger und Nutzungsrechte sind nicht dasselbe.",
-    "distractorTypes": {
-        "1": "conceptContradiction",
-        "2": "conceptContradiction",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "2": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Die Lizenz räumt Nutzungsrechte unter bestimmten Bedingungen ein. Eigentum an einem Datenträger und Nutzungsrechte sind nicht dasselbe."
 }

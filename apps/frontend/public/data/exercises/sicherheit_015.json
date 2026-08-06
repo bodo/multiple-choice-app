@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Bei ungewöhnlichen Zahlungsanweisungen sollte die Identität über einen unabhängigen, bereits bekannten Kanal geprüft werden.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "absoluteStatementTrap",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Fallstrick durch unzulässige Absolutformulierung (z.B. immer/nie/generell).",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Bei ungewöhnlichen Zahlungsanweisungen sollte die Identität über einen unabhängigen, bereits bekannten Kanal geprüft werden."
 }

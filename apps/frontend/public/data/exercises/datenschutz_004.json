@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Das bloße Entfernen direkter Merkmale genügt nicht, wenn eine Reidentifikation weiterhin realistisch möglich ist.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "similarTermConfusion",
-        "3": "similarTermConfusion"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "3": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema."
-    }
+    "explainInstruction": "Das bloße Entfernen direkter Merkmale genügt nicht, wenn eine Reidentifikation weiterhin realistisch möglich ist."
 }

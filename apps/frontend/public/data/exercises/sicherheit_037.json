@@ -23,15 +23,5 @@
     "correct": [
         0
     ],
-    "explainInstruction": "Konsistente Zeitstempel sind wesentlich, um Abläufe bei Störungen oder Angriffen nachvollziehen zu können.",
-    "distractorTypes": {
-        "1": "similarTermConfusion",
-        "2": "negationOversight",
-        "3": "negationOversight"
-    },
-    "distractorAnalysis": {
-        "1": "Verwechslung mit einem inhaltlich verwandten Fachbegriff oder Schema.",
-        "2": "Falle durch implizite oder explizite Verneinungselemente im Antworttext.",
-        "3": "Falle durch implizite oder explizite Verneinungselemente im Antworttext."
-    }
+    "explainInstruction": "Konsistente Zeitstempel sind wesentlich, um Abläufe bei Störungen oder Angriffen nachvollziehen zu können."
 }

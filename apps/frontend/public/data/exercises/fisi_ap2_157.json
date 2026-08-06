@@ -23,11 +23,5 @@
     "explainInstruction": "Validierung, explizite Fehlerbehandlung und Logs verhindern stille Teilfehler und erleichtern Diagnose.",
     "specializations": [
         "FISI"
-    ],
-    "distractorTypes": {
-        "3": "conceptContradiction"
-    },
-    "distractorAnalysis": {
-        "3": "Widerspruch zur geforderten fachlichen Kernaussage der Aufgabenstellung."
-    }
+    ]
 }
