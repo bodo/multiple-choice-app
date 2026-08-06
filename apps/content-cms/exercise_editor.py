@@ -12,12 +12,18 @@ Usage (from apps/content-cms/):
 """
 
 import json
+import os
 import re
 import shutil
 from pathlib import Path
 
 import fitz  # PyMuPDF
 import streamlit as st
+
+try:
+    from ai_distractor_pipeline import enrich_exercise_sync
+except ImportError:
+    enrich_exercise_sync = None
 
 CMS_DIR       = Path(__file__).resolve().parent
 FRONTEND_DATA = CMS_DIR.parent / "frontend" / "public" / "data"
@@ -575,6 +581,35 @@ def render_distractor_profiling() -> None:
         return
     with st.expander("🎯 Distractor Profiling & Analysis (Extensible Taxonomy)"):
         st.caption("Categorize wrong options and explain author intent. Leave blank for correct options.")
+        
+        if enrich_exercise_sync:
+            c_ai, c_key = st.columns([1, 2])
+            with c_key:
+                api_key = st.text_input("OpenAI API Key (optional if set in ENV)", type="password", key="ef_ai_key")
+            with c_ai:
+                st.write("") # alignment
+                if st.button("🤖 KI: Analysiere Distraktoren", type="primary", key="ef_ai_distractors"):
+                    with st.spinner("KI analysiert..."):
+                        ex_data = {
+                            "question": ss.get("ef_instruction", ""),
+                            "answerOptions": opts,
+                        }
+                        if ss["ef_input_mode"] == "SINGLE_CHOICE":
+                            ex_data["correct"] = [ss["ef_correct_single"]]
+                        elif ss["ef_input_mode"] == "MULTIPLE_CHOICE":
+                            ex_data["correct"] = [i for i, v in enumerate(ss["ef_correct_multiple"]) if v]
+                        elif ss["ef_input_mode"] == "MATCH":
+                            ex_data["correct"] = list(ss["ef_correct_match"])
+                            
+                        try:
+                            res = enrich_exercise_sync(ex_data, provider="openai", model="gpt-4o-mini", api_key=api_key or os.getenv("OPENAI_API_KEY"))
+                            for idx_str, profile in res.distractors.items():
+                                ss.setdefault("ef_distractor_types", {})[idx_str] = profile.distractorType
+                                ss.setdefault("ef_distractor_analysis", {})[idx_str] = profile.distractorAnalysis
+                            st.rerun()
+                        except Exception as e:
+                            st.error(f"KI Fehler: {e}")
+                            
         d_types = ss.get("ef_distractor_types", {})
         d_analysis = ss.get("ef_distractor_analysis", {})
 

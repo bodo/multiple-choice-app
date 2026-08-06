@@ -14,5 +14,8 @@ dependencies = [
     "pymupdf",
     "pyside6",
     "streamlit",
+    "openai",
+    "anthropic",
+    "google-genai",
 ]
 
