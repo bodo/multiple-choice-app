@@ -186,7 +186,43 @@ def generate_openai_batch(output_file: str, model: str):
     print(f"Generated OpenAI batch file with {len(batch_lines)} requests: {output_file}")
 
 
-def apply_openai_batch(result_file: str):
+def generate_anthropic_batch(output_file: str, model: str):
+    batch_lines = []
+    
+    for p in EXERCISES_DIR.glob("*.json"):
+        if p.name == "index.json" or p.name.startswith("index_"):
+            continue
+            
+        data = json.loads(p.read_text(encoding="utf-8"))
+        if data.get("inputMode") not in ("SINGLE_CHOICE", "MULTIPLE_CHOICE"):
+            continue
+            
+        request = {
+            "custom_id": p.name,
+            "params": {
+                "model": model,
+                "max_tokens": 1000,
+                "system": SYSTEM_PROMPT,
+                "messages": [
+                    {"role": "user", "content": generate_user_prompt(data)}
+                ],
+                "tools": [
+                    {
+                        "name": "provide_distractor_analysis",
+                        "description": "Provide the distractor analysis results.",
+                        "input_schema": ExerciseEnrichment.model_json_schema()
+                    }
+                ],
+                "tool_choice": {"type": "tool", "name": "provide_distractor_analysis"}
+            }
+        }
+        batch_lines.append(json.dumps(request))
+        
+    Path(output_file).write_text("\n".join(batch_lines) + "\n", encoding="utf-8")
+    print(f"Generated Anthropic batch file with {len(batch_lines)} requests: {output_file}")
+
+
+def apply_anthropic_batch(result_file: str):
     count = 0
     with open(result_file, "r", encoding="utf-8") as f:
         for line in f:
@@ -194,12 +230,22 @@ def apply_openai_batch(result_file: str):
             res = json.loads(line)
             file_name = res["custom_id"]
             
-            if res["response"]["status_code"] != 200:
-                print(f"Error in {file_name}: {res['response']}", file=sys.stderr)
+            # Check if the request was successful
+            if res.get("result", {}).get("type") != "succeeded":
+                print(f"Error in {file_name}: {res}", file=sys.stderr)
                 continue
                 
-            content = res["response"]["body"]["choices"][0]["message"]["content"]
-            enrichment = ExerciseEnrichment.model_validate_json(content)
+            message = res["result"]["message"]
+            
+            enrichment = None
+            for block in message.get("content", []):
+                if block.get("type") == "tool_use":
+                    enrichment = ExerciseEnrichment.model_validate(block["input"])
+                    break
+                    
+            if not enrichment:
+                print(f"Error in {file_name}: No tool use found in response", file=sys.stderr)
+                continue
             
             p = EXERCISES_DIR / file_name
             if p.exists():
@@ -214,16 +260,64 @@ def apply_openai_batch(result_file: str):
                 p.write_text(json.dumps(data, ensure_ascii=False, indent=4) + "\n", encoding="utf-8")
                 count += 1
                 
-    print(f"Successfully applied {count} results from batch file.")
+    print(f"Successfully applied {count} results from Anthropic batch file.")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="AI Distractor Profiling Pipeline")
-    parser.add_argument("--mode", choices=["sync", "prepare-batch", "apply-batch"], required=True)
-    parser.add_argument("--provider", choices=["openai", "gemini", "anthropic"], default="openai")
-    parser.add_argument("--model", type=str, default="gpt-4o", help="Modell, das verwendet werden soll (z.B. gpt-4o)")
-    parser.add_argument("--file", help="Specific JSON file to process (for sync mode)", type=str)
-    parser.add_argument("--batch-file", help="Output or input file for batch modes", default="batch.jsonl")
+    HELP_EPILOG = """
+======================================================================
+Ausführliche Workflow-Anleitung für Batch-Modi:
+======================================================================
+
+Die Batch-Modi (--mode prepare-batch / apply-batch) erlauben es, hunderte
+Aufgaben parallel und zu deutlich günstigeren Preisen (i.d.R. -50%) durch 
+die KI-Anbieter analysieren zu lassen.
+
+1. OPENAI WORKFLOW:
+-------------------
+  Schritt A: Batch-Datei erstellen
+      uv run apps/content-cms/ai_distractor_pipeline.py --mode prepare-batch --provider openai --batch-file batch_openai.jsonl
+  Schritt B: Batch hochladen und starten
+      Gehe zu: https://platform.openai.com/batches
+      Lade "batch_openai.jsonl" hoch und wähle den Endpoint "/v1/chat/completions".
+  Schritt C: Ergebnisse abholen
+      Lade die fertige "batch_output.jsonl" aus dem Dashboard herunter.
+  Schritt D: Ergebnisse einspielen
+      uv run apps/content-cms/ai_distractor_pipeline.py --mode apply-batch --provider openai --batch-file /pfad/zur/batch_output.jsonl
+
+2. ANTHROPIC WORKFLOW:
+----------------------
+  Schritt A: Batch-Datei erstellen
+      uv run apps/content-cms/ai_distractor_pipeline.py --mode prepare-batch --provider anthropic --batch-file batch_anthropic.jsonl
+  Schritt B: Batch hochladen und starten
+      Gehe zur Anthropic Console: https://console.anthropic.com/
+      (Aktuell funktioniert der Batch-Upload bei Anthropic primär per API. 
+       Siehe Doku: https://docs.anthropic.com/en/docs/build-with-claude/message-batches)
+  Schritt C: Ergebnisse abholen
+      Lade das resultierende JSONL-File herunter.
+  Schritt D: Ergebnisse einspielen
+      uv run apps/content-cms/ai_distractor_pipeline.py --mode apply-batch --provider anthropic --batch-file /pfad/zur/anthropic_output.jsonl
+
+3. GEMINI WORKFLOW:
+-------------------
+  Die direkte Generierung von .jsonl-Batch-Dateien wird aktuell für Gemini 
+  (Developer API) in diesem Skript noch nicht unterstützt. Nutze hierfür 
+  --mode sync für sequentielle Aufrufe.
+======================================================================
+"""
+
+    parser = argparse.ArgumentParser(
+        description="AI Distractor Profiling Pipeline",
+        formatter_class=argparse.RawTextHelpFormatter,
+        epilog=HELP_EPILOG
+    )
+    parser.add_argument("--mode", choices=["sync", "prepare-batch", "apply-batch"], required=True, 
+                        help="sync: Direkte Live-Abfrage\nprepare-batch: Erzeugt eine JSONL-Datei für den Upload\napply-batch: Trägt die Ergebnisse einer Batch-Verarbeitung in die .json Dateien ein.")
+    parser.add_argument("--provider", choices=["openai", "gemini", "anthropic"], default="openai",
+                        help="Welcher LLM Provider genutzt werden soll.")
+    parser.add_argument("--model", type=str, default="gpt-4o", help="Modell, das verwendet werden soll (z.B. gpt-4o oder claude-3-5-sonnet-20241022)")
+    parser.add_argument("--file", help="Spezifische JSON-Datei (nur für --mode sync)", type=str)
+    parser.add_argument("--batch-file", help="Eingabe- oder Ausgabedatei für Batch-Modi", default="batch.jsonl")
     
     args = parser.parse_args()
     
@@ -237,13 +331,22 @@ if __name__ == "__main__":
                 process_file_sync(p, args.provider, args.model)
                 
     elif args.mode == "prepare-batch":
-        if args.provider != "openai":
-            print("Batch preparation currently only implemented for OpenAI in this script.")
+        if args.provider == "openai":
+            generate_openai_batch(args.batch_file, args.model)
+        elif args.provider == "anthropic":
+            # Setze ein Default-Modell für Anthropic, falls versehentlich gpt-4o übergeben wird
+            model_to_use = "claude-3-5-sonnet-20241022" if args.model == "gpt-4o" else args.model
+            generate_anthropic_batch(args.batch_file, model_to_use)
+        else:
+            print(f"Batch preparation currently not implemented for provider: {args.provider}")
             sys.exit(1)
-        generate_openai_batch(args.batch_file, args.model)
-        
+            
     elif args.mode == "apply-batch":
-        if args.provider != "openai":
-            print("Batch application currently only implemented for OpenAI in this script.")
+        if args.provider == "openai":
+            apply_openai_batch(args.batch_file)
+        elif args.provider == "anthropic":
+            apply_anthropic_batch(args.batch_file)
+        else:
+            print(f"Batch application currently not implemented for provider: {args.provider}")
             sys.exit(1)
-        apply_openai_batch(args.batch_file)
+
