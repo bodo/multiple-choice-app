@@ -92,6 +92,20 @@ Run this after finishing annotations in the desktop app, and again whenever boxe
 uv run python 003_ocr_annotation_screenshots.py
 ```
 
+### AI Distractor Profiling Pipeline (`ai_distractor_pipeline.py`)
+
+Enriches existing multiple-choice exercises with AI-generated, pedagogical metadata (`distractorTypes` and `distractorAnalysis`), explaining why a student might fall for specific incorrect answers. Supports OpenAI, Anthropic, and Gemini.
+
+Features:
+- `sync` mode for live processing of individual files or the whole catalog.
+- `prepare-batch` / `apply-batch` modes to utilize 50%-discounted Batch APIs from OpenAI and Anthropic.
+- In-UI integration inside `exercise_editor.py` for single-click enrichment.
+
+To see the extensive help and batch-upload instructions per provider:
+```bash
+uv run python ai_distractor_pipeline.py --help
+```
+
 ## Apps
 
 ### Annotation tool (`app.py`) — PySide6 desktop app
